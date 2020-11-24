@@ -1,0 +1,88 @@
+\documentclass[a4paper,12pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[english, italian]{babel}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{tabularx}
+\usepackage{makecell}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{xurl}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage[table,dvipsnames]{xcolor}
+
+\titleformat{\chapter}[display]
+{\normalfont\bfseries}{}{0pt}{\LARGE} %QUESTO SERVE PER AVERE SOLO IL NOME DEL CAPITOLO CHE VOGLIO IO
+
+\titlespacing*{\chapter}{0cm}{0cm}{0.2cm}
+
+\geometry{
+	left=20mm,
+	right=20mm,
+}
+
+\renewcommand{\contentsname}{Indice} %QUESTO SERVE PER AVERE L'INDICE CON IL NOME CHE VOGLIO IO
+
+\pagestyle{plain}
+
+\fancypagestyle{plain}{
+\fancyhf{}
+\lhead{\includegraphics[width=3cm]{../immagini/minilogo.jpg}}
+\chead{}
+\rhead{\fontsize{12}{10}Studio di fattibilità}
+\lfoot{}
+\cfoot{\thepage\ di \pageref{LastPage}}
+\rfoot{}
+}
+
+\pagestyle{plain}
+
+\begin{document}
+\makeatletter
+\begin{titlepage}
+	\begin{center}
+	\vspace*{-4,0cm}
+	\author{Jawa Druids}
+	\title{Studio di fattibilità}
+	\date{}
+	\includegraphics[width=0.7\linewidth]{../immagini/DRUIDSLOGO.jpg}\\[4ex]
+	{\huge \bfseries  \@title }\\[2ex] 
+	{\LARGE  \@author}\\[50ex]
+	\vspace*{-8,0cm}
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{c|c}
+			\textbf{Versione} & x.x.x \\
+			\textbf{Data approvazione} & xx-xx-xxxx\\
+			\textbf{Responsabile} & Nome Cognome\\
+			\textbf{Redattori} & Margherita Mitillo \\
+			\textbf{Verificatori} & \makecell{Nome Cognome \\ Nome Cognome} \\
+			\textbf{Stato} & stato\\
+			\textbf{Lista distribuzione} & \makecell{Jawa Druids \\ Tullio \\ GGGG}\\
+			\textbf{Uso} & Interno			
+		\end{tabular}
+	\end{table}
+	\fontsize{17}{12}\textbf{Sommario} \\
+	Studio di Fattibilità dei capitolati proposti
+	\end{center}
+\end{titlepage}
+\makeatother
+
+\input{Registro}
+	
+\tableofcontents{}
+
+\input{capitoli/Introduzione}
+\input{capitoli/C3}
+\input{capitoli/C1}
+\input{capitoli/C2}
+\input{capitoli/C4}
+\input{capitoli/C5}
+\input{capitoli/C6}
+\input{capitoli/C7}
+
+% bibliography, glossary and index would go here.
+
+\end{document}
