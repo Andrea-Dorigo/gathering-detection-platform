@@ -1,0 +1,128 @@
+\documentclass[a4paper,12pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{tabularx}
+\usepackage{makecell}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{xurl}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{makeidx}
+
+\makeindex
+
+\titleformat{\chapter}[display]
+{\normalfont\bfseries}{}{0pt}{\LARGE} %QUESTO SERVE PER AVERE SOLO IL NOME DEL CAPITOLO CHE VOGLIO IO
+
+\titlespacing*{\chapter}{0cm}{0cm}{0.2cm}
+
+\geometry{
+	left=20mm,
+	right=20mm,
+}
+
+\renewcommand{\contentsname}{Indice} %QUESTO SERVE PER AVERE L'INDICE CON IL NOME CHE VOGLIO IO
+
+\pagestyle{plain}
+
+\fancypagestyle{plain}{
+	\fancyhf{}
+	\lhead{\includegraphics[width=3cm]{../../immagini/minilogo.jpg}}
+	\chead{}
+	\rhead{\fontsize{12}{10}Verbale Interno}
+	\lfoot{}
+	\cfoot{\thepage\ di \pageref{LastPage}}
+	\rfoot{}
+}
+
+\pagestyle{plain}
+\begin{document}
+	
+	\makeatletter
+	\begin{titlepage}
+		\begin{center}
+			\vspace*{-4,0cm}
+			\author{Jawa Druids} 
+			\title{Verbale Interno}
+			\date{19-11-2020} %LASCIARE QUESTO CAMPO VUOTO, SE LO TOLGO STAMPA LA DATA CORRENTE
+			\includegraphics[width=0.7\linewidth]{../../immagini/DRUIDSLOGO.jpg}\\[4ex]
+			{\huge \bfseries  \@title }\\[2ex] 
+			{\LARGE  \@author}\\[50ex]
+			\vspace*{-8,0cm}
+			\begin{table}[H]
+				\centering
+				\begin{tabular}{c|c}
+					\textbf{Verbale Numero} & x.x.x \\
+					\textbf{Data approvazione} & xx-xx-xxxx\\
+					\textbf{Responsabile} & Nome Cognome\\
+					\textbf{Redattori} & Mattia Cocco \\
+					\textbf{Verificatori} & \makecell{Nome Cognome \\ Nome Cognome} \\
+					%MAKECELL SERVE PER POI ANDARE A CAPO ALL'INTERNO DELLA CELLA
+					\textbf{Stato} & stato\\
+					\textbf{Lista distribuzione} & \makecell{Jawa Druids \\ Tullio \\ NomeAziendaProponente}\\
+					\textbf{Uso} & Interno            
+				\end{tabular}
+			\end{table}
+			\fontsize{16}{10}\textbf{Sommario} \\
+			Verbale Interno			
+		\end{center}
+	\end{titlepage}
+	\makeatother	
+	\newpage
+	\begin{enumerate}
+		\item \textbf{Luogo:} \normalfont Server Discord \textbf{Jawa Druids};
+		\item \textbf{Orario inizio:} \normalfont 15.30;
+		\item \textbf{Orario fine:} \normalfont 17.00;
+		\item \textbf{Partecipanti:}
+		\begin{itemize}
+			\item Cocco Mattia;
+			\item Dorigo Andrea;
+			\item Mitillo Margherita;
+			\item Mezini Igli;
+			\item Cecchin Andrea;
+		\end{itemize}
+		\item \textbf{Assenti:}
+		\begin{itemize}
+			\item Roveroni Emma
+			\item Graziano Alfredo
+		\end{itemize}
+	\end{enumerate}
+	\newpage
+	\tableofcontents{}
+	\chapter{Punti Di Discussione}
+	Una volta che i membri del \textbf{gruppo di lavoro} erano tutti pronti la riunione ha avuto inizio.
+	L'incontro si è incentrato su tre punti:
+	\begin{enumerate}
+		\item La revisione dei \textbf{documenti} che si dovranno consegnare al \textbf{committente} per potersi aggiudicare il \textbf{capitolato}
+		
+		\item La scelta degli \textbf{Strumenti} che si useranno per la scrittura dei \textbf{Documenti} e della gestione dei \textbf{Task}
+		
+		\item La suddivisione dei primi task quali: \textbf{Lettera di presentazione}, creazione dei \textbf{Verbali} interni ed infine lo \textbf{Studio Di Fattibilità}.
+	\end{enumerate}
+	\chapter{Revisione Dei Documenti}
+	All'inizio del meeting, come primo punto, si sono guardati i documenti da presentare alla prima \textbf{RR}.
+	
+	\chapter{Scelta Degli Strumenti Da Utilizzare}
+	I membri del gruppo hanno proposto l'utilizzo di \textbf{Strumenti} per svolgere i \textbf{Task} e \textbf{Canali Di Comunicazione} in base alla propria esperienza privata.
+	Alla fine del meeting si è deciso di utilizzare i seguenti \textbf{Strumenti}:
+	\begin{enumerate}
+		\item \textbf{Canale Di Comunicazione}: \textbf{Discord}.
+		\item \textbf{Condivisione Del Materiale}: \textbf{GitHub}.
+		\item \textbf{Gestione Task}: \textbf{Trello}.
+		\item \textbf{Stesura Dei Documenti}: \textbf{LaTeX}.
+	\end{enumerate}
+	 
+	\chapter{Suddivisione Task}
+	Come ultimo punto si è fatta la suddivisione dei \textbf{Task} per iniziare la stesura dei documenti specificati nella sezione \textbf{Punti Di Discussione}.
+	Si è così deciso:
+	\begin{enumerate}
+		\item Scrittura dei \textbf{Verbali Interni}: \textbf{Mattia Cocco}
+		\item Scrittura della \textbf{Lettera Di Presentazione}: \textbf{Igli Mezini}.
+		\item Scrittura dello \textbf{Studio Di Fattibilità}: \textbf{Margherita Mitillo}.
+		\item Gestione \textbf{Strumenti Di Utilizzo}: \textbf{Andrea Dorigo}.
+	\end{enumerate}
+
+\end{document}
