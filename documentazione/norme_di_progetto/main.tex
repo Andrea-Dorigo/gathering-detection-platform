@@ -13,6 +13,9 @@
 \usepackage{geometry}
 \usepackage[table,dvipsnames]{xcolor}
 
+\setcounter{secnumdepth}{5}% Number \subsubsection
+\setcounter{tocdepth}{5}
+
 \titleformat{\chapter}[display]
 {\normalfont\bfseries}{}{0pt}{\LARGE} %QUESTO SERVE PER AVERE SOLO IL NOME DEL CAPITOLO CHE VOGLIO IO
 
@@ -74,8 +77,8 @@
 	
 	\tableofcontents{}
 	
-	\input{capitoli/Introduzione}
-	
+	\input{capitoli/c1_Introduzione}
+	\input{capitoli/c2_Processi_Primari}
 	
 	% bibliography, glossary and index would go here.
 	
