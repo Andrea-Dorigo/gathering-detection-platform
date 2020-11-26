@@ -4,8 +4,58 @@
 \usepackage{float}
 \usepackage{tabularx}
 \usepackage{makecell}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{xurl}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage[table,dvipsnames]{xcolor}
 \setcounter{tocdepth}{5}
 \setcounter{secnumdepth}{5} %SONO I DUE COMANDI PER AVERE LE SUBSUBSECTION NUMERATE E PRESENTI NELL'INDICE
+\renewcommand{\contentsname}{Indice} %QUESTO SERVE PER AVERE L'INDICE CON IL NOME CHE VOGLIO IO
+\titleformat{\chapter}[display]
+{\normalfont\bfseries}{}{0pt}{\LARGE} %QUESTO SERVE PER AVERE SOLO IL NOME DEL CAPITOLO CHE VOGLIO IO
+\titlespacing*{\chapter}{0cm}{0cm}{0.2cm}
+\geometry{
+	left=20mm,
+	right=20mm,
+}
+\fancypagestyle{plain}{
+	\fancyhf{}
+	\lhead{\includegraphics[width=3cm]{../immagini/minilogo.jpg}}
+	\chead{}
+	\rhead{\fontsize{12}{10}Linee Guida}
+	\lfoot{}
+	\cfoot{\thepage\ di \pageref{LastPage}}
+	\rfoot{}
+}
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+	language=Java,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\small\ttfamily},
+	numbers=none,
+	numberstyle=\tiny\color{gray},
+	keywordstyle=\color{blue},
+	commentstyle=\color{dkgreen},
+	stringstyle=\color{mauve},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3
+}
+\pagestyle{plain}
+
 
 \begin{document}
     
@@ -34,9 +84,13 @@
             \textbf{Uso} & Interno            
         \end{tabular}
     \end{table}
+	\hfill \break
     \fontsize{16}{10}\textbf{Sommario} \\
     Linee guide da seguire per una sessione lavorativa standard con git flow, Trello e google sheet
     \end{center}
 \end{titlepage}
 \makeatother
+\input{registro}
+\tableofcontents{}
+\input{git-flow}
 \end{document}
