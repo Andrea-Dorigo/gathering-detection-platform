@@ -1,3 +1,48 @@
 \chapter{Norme sull'utilizzo di git flow}
 Esempio di un'aggiunta della \textbf{stesura di un verbale} a scopo esemplificativo. \\
-In questo caso, si tratta di un'aggiunta molto semplice che non richiede particolari revisioni e il cui merge e' poco rischioso (non c'e' il rischio di immettere bug); pertanto si puo' semplicemente committare e pushare sul \texttt{develop}.
+In questo caso, si tratta di un'aggiunta molto semplice che non richiede particolari revisioni e il cui merge e' poco rischioso (non c'e' il rischio di immettere bug); pertanto si puo' semplicemente committare e pushare sul \texttt{develop}.\\
+\\
+Esempio di un'aggiunta di una \textbf{funzionalita' al software} a scopo esemplificativo.\\
+Poniamo che, nel capitolato 3, noi vogliamo aggiungere una funzione al nostro software, che consideri anche i dati provenienti da Uber per calcolare il flusso di persone.\\
+Il primo passo e' creare una nuovo feature branch con il comando \\
+\texttt{git flow feature start analisi-dati-uber}\\
+Questo comando crea un branch a partire dal develop chiamato \texttt{feature/analisi-dati-uber}.
+\textbf{Per rendere pubblico il branch e rendere possibile la collaborazione,} e' possibile pubblicarlo con il comando \\
+\texttt{git flow feature publish analisi-dati-uber}\\
+A questo punto chiunque voglia lavorare sullo stesso branch puo' farlo con il comando \\
+\texttt{git flow feature track analisi-dati-uber}.\\
+Qui ora e' possibile fare i vari \texttt{commit} e \texttt{push} su questo nuovo branch, senza il rischio di aggiungere bug o errori nel develop.
+Una volta terminata e testata la nuova funzionalita', si puo' richiudere il branch nel develop ed eliminarlo tramite il comando \\
+\texttt{git flow feature finish analisi-dati-uber}.\\
+Si consiglia, nei casi di feature/hotfix/bugfix importanti di richiedere prima l'approvazione del responsabile di progetto.\\
+Il responsabile di progetto si riserva la pubblicazione delle \texttt{release}.\\
+\\
+Potete trovare un ottimo cheatsheet dei comandi di git flow e delle loro funzioni qui:
+\url{https://danielkummer.github.io/git-flow-cheatsheet/}\\
+\\
+Un buon riassunto sull'utilizzo di git flow: \\
+\url{https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow}\\
+\\
+Un altro ottimo riassunto sulle best practice dei commit qui: \\
+\url{https://www.theserverside.com/video/Follow-these-git-commit-message-guidelines}\\
+\\
+Fra le tante cose importanti nel titolo del commit si evidenzia:
+\begin{itemize}
+\item descrivi cosa hai fatto e perche', ma non come.
+\item l'utilizzo dell'imperativo;
+\end{itemize}
+Per quest'ultimo punto vi riporto un paragrafo del link qui sopra che aiuta la comprensione (c'e' un errore nel testo dell'articolo, che ho corretto qui sotto):
+\\
+\texttt{Fixed the fencepost error //bad \\
+\\
+Fixing the fencepost error //bad \\
+\\
+Fix the fencepost error //good} \\
+\\
+\textit{The imperative mood is the one git commit message guideline that developers tend to violate most often. A good rule of thumb is that a git commit message can be appended to the statement "If applied, this commit will …." The resulting sentence should make grammatical sense. As you can see from the following three examples, gerunds and past tense commits fail the test, while the imperative tense does not:}\\
+\\
+\texttt{If applied, this commit will Fixed the fencepost //error\\
+\\
+If applied,  this commit will Fixing the fencepost //error\\
+\\
+If applied,  this commit will Fix the fencepost //good}\\
