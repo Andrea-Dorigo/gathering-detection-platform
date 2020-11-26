@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.24)  25 NOV 2020 18:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.24)  26 NOV 2020 10:39
 entering extended mode
 **./main.tex
 (main.tex
@@ -331,24 +331,24 @@ File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
 ) (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Info: Redefining \it@ocap on input line 42.
-LaTeX Info: Redefining \it@ccap on input line 42.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Info: Redefining \it@ocap on input line 45.
+LaTeX Info: Redefining \it@ccap on input line 45.
 
 
 File italian.ldf warning: 
@@ -356,7 +356,7 @@ italian.ldf    With OT1 encoding guillemets are poorly faked
 italian.ldf    Use T1 encoding
 italian.ldf    or specify a font with command \CaporaliFrom
 italian.ldf    See the documentation concerning the babel-italian typesetting 
-italian.ldf    on input line 42.
+italian.ldf    on input line 45.
 
 (D:\miktex\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -378,8 +378,8 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 )
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 42.
-Package hyperref Info: Link coloring OFF on input line 42.
+(lastpage)             ! on input line 45.
+Package hyperref Info: Link coloring OFF on input line 45.
 
 (D:\miktex\tex/latex/hyperref\nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -392,9 +392,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count280
 )
-LaTeX Info: Redefining \ref on input line 42.
-LaTeX Info: Redefining \pageref on input line 42.
-LaTeX Info: Redefining \nameref on input line 42.
+LaTeX Info: Redefining \ref on input line 45.
+LaTeX Info: Redefining \pageref on input line 45.
+LaTeX Info: Redefining \nameref on input line 45.
  (main.out) (main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
@@ -434,17 +434,17 @@ LaTeX Info: Redefining \nameref on input line 42.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<../immagini/DRUIDSLOGO.jpg, id=47, 963.6pt x 963.6pt>
+<../immagini/DRUIDSLOGO.jpg, id=67, 963.6pt x 963.6pt>
 File: ../immagini/DRUIDSLOGO.jpg Graphic file (type jpg)
 <use ../immagini/DRUIDSLOGO.jpg>
-Package pdftex.def Info: ../immagini/DRUIDSLOGO.jpg  used on input line 50.
+Package pdftex.def Info: ../immagini/DRUIDSLOGO.jpg  used on input line 53.
 (pdftex.def)             Requested size: 338.58632pt x 338.57365pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 56.
+(Font)              <12> on input line 59.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 56.
+(Font)              <8> on input line 59.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 56.
+(Font)              <6> on input line 59.
 [1
 
 {C:/Users/sigma/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <../immagini/DRU
@@ -454,10 +454,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--6
  []
 
 )
-<../immagini/minilogo.jpg, id=56, 1927.2pt x 752.8125pt>
+<../immagini/minilogo.jpg, id=76, 1927.2pt x 752.8125pt>
 File: ../immagini/minilogo.jpg Graphic file (type jpg)
 <use ../immagini/minilogo.jpg>
-Package pdftex.def Info: ../immagini/minilogo.jpg  used on input line 75.
+Package pdftex.def Info: ../immagini/minilogo.jpg  used on input line 78.
 (pdftex.def)             Requested size: 85.35826pt x 33.3352pt.
 
 
@@ -470,7 +470,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.75 	\tableofcontents
+l.78 	\tableofcontents
                       {} [1 <../immagini/minilogo.jpg>] (main.toc)
 \tf@toc=\write4
 \openout4 = `main.toc'.
@@ -498,27 +498,37 @@ Package pdftex.def Info: ../immagini/minilogo.jpg  used on input line 1.
 (pdftex.def)             Requested size: 85.35826pt x 33.3352pt.
  [4]
 Capitolo 2.
-) 
-AED: lastpage setting LastPage
 File: ../immagini/minilogo.jpg Graphic file (type jpg)
 <use ../immagini/minilogo.jpg>
-Package pdftex.def Info: ../immagini/minilogo.jpg  used on input line 82.
+Package pdftex.def Info: ../immagini/minilogo.jpg  used on input line 25.
 (pdftex.def)             Requested size: 85.35826pt x 33.3352pt.
 [5
 
-] (main.aux)
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E1C41D86521F747D3A5F49B8F6F10C11;681.
+]) 
+AED: lastpage setting LastPage
+File: ../immagini/minilogo.jpg Graphic file (type jpg)
+<use ../immagini/minilogo.jpg>
+Package pdftex.def Info: ../immagini/minilogo.jpg  used on input line 85.
+(pdftex.def)             Requested size: 85.35826pt x 33.3352pt.
+[6] (main.aux)
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 610375F2E1F46F7F9C2F1526DE898558;1008
+(rerunfilecheck)             After:  F42B8BAA7C95F4082FD0A75E42C63360;1085.
  )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 8 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 8151 strings out of 479799
- 117580 string characters out of 2886242
- 462719 words of memory out of 3000000
- 24958 multiletter control sequences out of 15000+200000
+ 8171 strings out of 479799
+ 117944 string characters out of 2886242
+ 464723 words of memory out of 3000000
+ 24971 multiletter control sequences out of 15000+200000
  541407 words of font info for 50 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  66i,16n,72p,578b,585s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -527,9 +537,9 @@ ec/dpi600\tcrm1200.pk><D:/miktex/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/
 miktex/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/miktex/fonts/type1/public/a
 msfonts/cm/cmr17.pfb><D:/miktex/fonts/type1/public/amsfonts/cm/cmti12.pfb><D:/m
 iktex/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on main.pdf (6 pages, 447614 bytes).
+Output written on main.pdf (7 pages, 458732 bytes).
 PDF statistics:
- 124 PDF objects out of 1000 (max. 8388607)
- 18 named destinations out of 1000 (max. 500000)
- 99 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 160 PDF objects out of 1000 (max. 8388607)
+ 25 named destinations out of 1000 (max. 500000)
+ 139 words of extra memory for PDF output out of 10000 (max. 10000000)
 
