@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.22)  27 NOV 2020 18:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.22)  27 NOV 2020 18:59
 entering extended mode
 **"./Verbale Interno 27-11-2020.tex"
 ("Verbale Interno 27-11-2020.tex"
@@ -376,10 +376,10 @@ LaTeX Info: Redefining \nameref on input line 41.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<../immagini/DRUIDSLOGO.jpg, id=27, 963.6pt x 963.6pt>
-File: ../immagini/DRUIDSLOGO.jpg Graphic file (type jpg)
-<use ../immagini/DRUIDSLOGO.jpg>
-Package pdftex.def Info: ../immagini/DRUIDSLOGO.jpg  used on input line 50.
+<../../immagini/DRUIDSLOGO.jpg, id=27, 963.6pt x 963.6pt>
+File: ../../immagini/DRUIDSLOGO.jpg Graphic file (type jpg)
+<use ../../immagini/DRUIDSLOGO.jpg>
+Package pdftex.def Info: ../../immagini/DRUIDSLOGO.jpg  used on input line 50.
 (pdftex.def)             Requested size: 338.58632pt x 338.57365pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 56.
@@ -393,17 +393,17 @@ LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <16> not available
 
 [1
 
-{C:/Users/Mattia/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <../immagini/DR
-UIDSLOGO.jpg>]
-<../immagini/minilogo.jpg, id=36, 1029.8475pt x 402.50375pt>
-File: ../immagini/minilogo.jpg Graphic file (type jpg)
-<use ../immagini/minilogo.jpg>
-Package pdftex.def Info: ../immagini/minilogo.jpg  used on input line 88.
-(pdftex.def)             Requested size: 85.35826pt x 33.35559pt.
+{C:/Users/Mattia/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <../../immagini
+/DRUIDSLOGO.jpg>]
+<../../immagini/minilogo.jpg, id=36, 1927.2pt x 752.8125pt>
+File: ../../immagini/minilogo.jpg Graphic file (type jpg)
+<use ../../immagini/minilogo.jpg>
+Package pdftex.def Info: ../../immagini/minilogo.jpg  used on input line 91.
+(pdftex.def)             Requested size: 85.35826pt x 33.3352pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
-Make it at least 37.70563pt.
+Make it at least 37.68524pt.
 We now make it that large for the rest of the document.
 This may cause the page layout to be inconsistent, however.
 
@@ -411,66 +411,66 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.88 	\newpage
-               [1 <../immagini/minilogo.jpg>] ("Verbale Interno 27-11-2020.toc"
-)
+l.91 	\newpage
+               [1 <../../immagini/minilogo.jpg>]
+("Verbale Interno 27-11-2020.toc")
 \tf@toc=\write4
 \openout4 = `"Verbale Interno 27-11-2020.toc"'.
 
-File: ../immagini/minilogo.jpg Graphic file (type jpg)
-<use ../immagini/minilogo.jpg>
-Package pdftex.def Info: ../immagini/minilogo.jpg  used on input line 90.
-(pdftex.def)             Requested size: 85.35826pt x 33.35559pt.
+File: ../../immagini/minilogo.jpg Graphic file (type jpg)
+<use ../../immagini/minilogo.jpg>
+Package pdftex.def Info: ../../immagini/minilogo.jpg  used on input line 93.
+(pdftex.def)             Requested size: 85.35826pt x 33.3352pt.
  [2
 
 ]
 Chapter 1.
-File: ../immagini/minilogo.jpg Graphic file (type jpg)
-<use ../immagini/minilogo.jpg>
-Package pdftex.def Info: ../immagini/minilogo.jpg  used on input line 101.
-(pdftex.def)             Requested size: 85.35826pt x 33.35559pt.
+File: ../../immagini/minilogo.jpg Graphic file (type jpg)
+<use ../../immagini/minilogo.jpg>
+Package pdftex.def Info: ../../immagini/minilogo.jpg  used on input line 104.
+(pdftex.def)             Requested size: 85.35826pt x 33.3352pt.
 [3
 
 ]
 Chapter 2.
-File: ../immagini/minilogo.jpg Graphic file (type jpg)
-<use ../immagini/minilogo.jpg>
-Package pdftex.def Info: ../immagini/minilogo.jpg  used on input line 104.
-(pdftex.def)             Requested size: 85.35826pt x 33.35559pt.
+File: ../../immagini/minilogo.jpg Graphic file (type jpg)
+<use ../../immagini/minilogo.jpg>
+Package pdftex.def Info: ../../immagini/minilogo.jpg  used on input line 107.
+(pdftex.def)             Requested size: 85.35826pt x 33.3352pt.
 [4
 
 ]
 Chapter 3.
-File: ../immagini/minilogo.jpg Graphic file (type jpg)
-<use ../immagini/minilogo.jpg>
-Package pdftex.def Info: ../immagini/minilogo.jpg  used on input line 107.
-(pdftex.def)             Requested size: 85.35826pt x 33.35559pt.
+File: ../../immagini/minilogo.jpg Graphic file (type jpg)
+<use ../../immagini/minilogo.jpg>
+Package pdftex.def Info: ../../immagini/minilogo.jpg  used on input line 110.
+(pdftex.def)             Requested size: 85.35826pt x 33.3352pt.
 [5
 
 ]
 Chapter 4.
-File: ../immagini/minilogo.jpg Graphic file (type jpg)
-<use ../immagini/minilogo.jpg>
-Package pdftex.def Info: ../immagini/minilogo.jpg  used on input line 111.
-(pdftex.def)             Requested size: 85.35826pt x 33.35559pt.
+File: ../../immagini/minilogo.jpg Graphic file (type jpg)
+<use ../../immagini/minilogo.jpg>
+Package pdftex.def Info: ../../immagini/minilogo.jpg  used on input line 114.
+(pdftex.def)             Requested size: 85.35826pt x 33.3352pt.
 [6
 
 ]
 Chapter 5.
-File: ../immagini/minilogo.jpg Graphic file (type jpg)
-<use ../immagini/minilogo.jpg>
-Package pdftex.def Info: ../immagini/minilogo.jpg  used on input line 121.
-(pdftex.def)             Requested size: 85.35826pt x 33.35559pt.
+File: ../../immagini/minilogo.jpg Graphic file (type jpg)
+<use ../../immagini/minilogo.jpg>
+Package pdftex.def Info: ../../immagini/minilogo.jpg  used on input line 124.
+(pdftex.def)             Requested size: 85.35826pt x 33.3352pt.
 [7
 
 ]
 Chapter 6.
 
 AED: lastpage setting LastPage
-File: ../immagini/minilogo.jpg Graphic file (type jpg)
-<use ../immagini/minilogo.jpg>
-Package pdftex.def Info: ../immagini/minilogo.jpg  used on input line 129.
-(pdftex.def)             Requested size: 85.35826pt x 33.35559pt.
+File: ../../immagini/minilogo.jpg Graphic file (type jpg)
+<use ../../immagini/minilogo.jpg>
+Package pdftex.def Info: ../../immagini/minilogo.jpg  used on input line 132.
+(pdftex.def)             Requested size: 85.35826pt x 33.3352pt.
 [8
 
 ] ("Verbale Interno 27-11-2020.aux")
@@ -485,8 +485,8 @@ LaTeX Font Warning: Size substitutions with differences
  ) 
 Here is how much of TeX's memory you used:
  6420 strings out of 479799
- 99996 string characters out of 2869247
- 403444 words of memory out of 3000000
+ 100260 string characters out of 2869247
+ 404450 words of memory out of 3000000
  23275 multiletter control sequences out of 15000+200000
  539987 words of font info for 45 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -496,7 +496,7 @@ m1200.pk><C:/Users/Mattia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
 onts/cm/cmbx12.pfb><C:/Users/Mattia/AppData/Local/Programs/MiKTeX/fonts/type1/p
 ublic/amsfonts/cm/cmr12.pfb><C:/Users/Mattia/AppData/Local/Programs/MiKTeX/font
 s/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on "Verbale Interno 27-11-2020.pdf" (9 pages, 168386 bytes).
+Output written on "Verbale Interno 27-11-2020.pdf" (9 pages, 428190 bytes).
 PDF statistics:
  117 PDF objects out of 1000 (max. 8388607)
  25 named destinations out of 1000 (max. 500000)
