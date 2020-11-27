@@ -26,39 +26,41 @@
 \contentsline {section}{\numberline {4.1}Informazioni generali}{11}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Descrizione del capitolato}{11}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Finalità del progetto}{11}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Tecnologie interessate}{11}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Aspetti positivi}{11}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Criticità e fattori di rischio}{11}{section.4.6}%
-\contentsline {section}{\numberline {4.7}Conclusioni}{11}{section.4.7}%
-\contentsline {chapter}{\numberline {5}C4 - HD Viz: visualizzazione di dati multidimensionali}{12}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Informazioni generali}{12}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Descrizione del capitolato}{12}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Finalità del progetto}{12}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Tecnologie interessate}{12}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Aspetti positivi}{12}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Criticità e fattori di rischio}{12}{section.5.6}%
-\contentsline {section}{\numberline {5.7}Conclusioni}{12}{section.5.7}%
-\contentsline {chapter}{\numberline {6}C5 - PORTACS: piattaforma di controllo mobilità autonoma}{13}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Informazioni generali}{13}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Descrizione del capitolato}{13}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Finalità del progetto}{13}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Tecnologie interessate}{13}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Aspetti positivi}{13}{section.6.5}%
-\contentsline {section}{\numberline {6.6}Criticità e fattori di rischio}{13}{section.6.6}%
-\contentsline {section}{\numberline {6.7}Conclusioni}{13}{section.6.7}%
-\contentsline {chapter}{\numberline {7}C6 - RGP: Realtime Gaming Platform}{14}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Informazioni generali}{14}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Descrizione del capitolato}{14}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Finalità del progetto}{14}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Tecnologie interessate}{14}{section.7.4}%
-\contentsline {section}{\numberline {7.5}Aspetti positivi}{14}{section.7.5}%
-\contentsline {section}{\numberline {7.6}Criticità e fattori di rischio}{14}{section.7.6}%
-\contentsline {section}{\numberline {7.7}Conclusioni}{14}{section.7.7}%
-\contentsline {chapter}{\numberline {8}C7 - SSD: soluzioni di sincronizzazione desktop}{15}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Informazioni generali}{15}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Descrizione del capitolato}{15}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Finalità del progetto}{15}{section.8.3}%
-\contentsline {section}{\numberline {8.4}Tecnologie interessate}{15}{section.8.4}%
-\contentsline {section}{\numberline {8.5}Aspetti positivi}{15}{section.8.5}%
-\contentsline {section}{\numberline {8.6}Criticità e fattori di rischio}{15}{section.8.6}%
-\contentsline {section}{\numberline {8.7}Conclusioni}{15}{section.8.7}%
+\contentsline {section}{\numberline {4.4}Tecnologie interessate}{12}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Aspetti positivi}{12}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Criticità e fattori di rischio}{12}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Conclusioni}{13}{section.4.7}%
+\contentsline {chapter}{\numberline {5}C4 - HD Viz: visualizzazione di dati multidimensionali}{14}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Informazioni generali}{14}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Descrizione del capitolato}{14}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Finalità del progetto}{14}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Tecnologie interessate}{15}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Aspetti positivi}{15}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Criticità e fattori di rischio}{15}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Conclusioni}{15}{section.5.7}%
+\contentsline {chapter}{\numberline {6}C5 - PORTACS: piattaforma di controllo mobilità autonoma}{16}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Informazioni generali}{16}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Descrizione del capitolato}{16}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Finalità del progetto}{16}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Tecnologie interessate}{16}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Aspetti positivi}{16}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Criticità e fattori di rischio}{16}{section.6.6}%
+\contentsline {section}{\numberline {6.7}Conclusioni}{16}{section.6.7}%
+\contentsline {chapter}{\numberline {7}C6 - RGP: Realtime Gaming Platform}{17}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Informazioni generali}{17}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Descrizione del capitolato}{17}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Finalità del progetto}{17}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Tecnologie interessate}{17}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Aspetti positivi}{17}{section.7.5}%
+\contentsline {section}{\numberline {7.6}Criticità e fattori di rischio}{17}{section.7.6}%
+\contentsline {section}{\numberline {7.7}Conclusioni}{17}{section.7.7}%
+\contentsline {chapter}{\numberline {8}C7 - SSD: soluzioni di sincronizzazione desktop}{18}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Informazioni generali}{18}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Descrizione del capitolato}{18}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Finalità del progetto}{18}{section.8.3}%
+\contentsline {section}{\numberline {8.4}Tecnologie interessate}{18}{section.8.4}%
+\contentsline {section}{\numberline {8.5}Aspetti positivi}{18}{section.8.5}%
+\contentsline {section}{\numberline {8.6}Criticità e fattori di rischio}{18}{section.8.6}%
+\contentsline {section}{\numberline {8.7}Conclusioni}{18}{section.8.7}%
+\contentsline {subsection}{\numberline {8.7.1}jdjd}{18}{subsection.8.7.1}%
+\contentsline {subsubsection}{poiuhy}{18}{subsubsection*.2}%
