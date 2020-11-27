@@ -1,0 +1,6 @@
+\contentsline {chapter}{\numberline {1}Punti Di Discussione}{3}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Riassunto del lavoro svolto dal 19/11/2020}{4}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Aggiunti Task su Trello}{5}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Scelte di utilizzo del comando "commit"}{6}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Organizzazione e Suddivisione dei Task}{7}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Divisione del materiale su Git}{8}{chapter.6}%
