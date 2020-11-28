@@ -1,13 +1,11 @@
-\chapter{Norme sull'utilizzo di git flow}
-Esempio di un'aggiunta della \textbf{stesura di un verbale} a scopo esemplificativo. \\
-In questo caso, si tratta di un'aggiunta molto semplice che non richiede particolari revisioni e il cui merge è poco rischioso (non c'è il rischio di immettere bug); pertanto si può semplicemente committare e pushare sul \texttt{develop}.
-\\
-Esempio di un'aggiunta di una \textbf{funzionalita' al software} a scopo esemplificativo.\\
-Poniamo che, nel capitolato 3, noi vogliamo aggiungere una funzione al nostro software, che consideri anche i dati provenienti da Uber per calcolare il flusso di persone.\\
-Il primo passo e' creare una nuovo feature branch con il comando \\
+\chapter{Git}
+
+\section{Esempio di un'aggiunta di funzionalit\`{a} o documento}
+Poniamo che un componente del gruppo voglia aggiungere una funzionalit\`{a} o documento al progetto in corso. \\
+Il primo passo \`{e} creare una nuovo feature branch tramite il comando \\
 \texttt{git flow feature start analisi-dati-uber}\\
-Questo comando crea un branch a partire dal develop chiamato \texttt{feature/analisi-dati-uber}.
-\textbf{Per rendere pubblico il branch e rendere possibile la collaborazione,} e' possibile pubblicarlo con il comando \\
+Questo comando crea un branch a partire dal develop chiamato \texttt{feature/analisi-dati-uber} e vi sposta automaticamente su ques'ultimo. Ci\`{o} significa che tutti i prossimi commit e push avverranno su questo branch, evitando l'immissione di errori o file ancora incompleti e non verificati sul develop. \\
+\textbf{Per rendere possibile la collaborazione sullo stesso branch} \`{e} possibile pubblicarlo con il comando \\
 \texttt{git flow feature publish analisi-dati-uber}\\
 A questo punto chiunque voglia lavorare sullo stesso branch puo' farlo con il comando \\
 \texttt{git flow feature track analisi-dati-uber}.\\
