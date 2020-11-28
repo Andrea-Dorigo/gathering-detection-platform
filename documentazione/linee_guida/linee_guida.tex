@@ -10,6 +10,7 @@
 \usepackage{xurl}
 \usepackage{hyperref}
 \usepackage{geometry}
+\usepackage{color}
 \usepackage[table,dvipsnames]{xcolor}
 \setcounter{tocdepth}{5}
 \setcounter{secnumdepth}{5} %SONO I DUE COMANDI PER AVERE LE SUBSUBSECTION NUMERATE E PRESENTI NELL'INDICE
@@ -32,30 +33,55 @@
 }
 
 \usepackage{listings}
-\usepackage{color}
 
-\definecolor{dkgreen}{rgb}{0,0.6,0}
-\definecolor{gray}{rgb}{0.5,0.5,0.5}
-\definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{atomlightorange}{rgb}{0.88,0.76,0.55}
+\definecolor{atomdarkgrey}{RGB}{59,62,75}
 
-\lstset{frame=tb,
-	language=Java,
-	aboveskip=3mm,
-	belowskip=3mm,
-	showstringspaces=false,
-	columns=flexible,
-	basicstyle={\small\ttfamily},
-	numbers=none,
-	numberstyle=\tiny\color{gray},
-	keywordstyle=\color{blue},
-	commentstyle=\color{dkgreen},
-	stringstyle=\color{mauve},
-	breaklines=true,
-	breakatwhitespace=true,
-	tabsize=3
+\usepackage{tikz}
+
+% set listings
+\lstset{%
+    basicstyle=\footnotesize\ttfamily\color{atomlightorange},
+    framesep=20pt,
+		belowskip=10pt,
+		aboveskip=10pt
 }
-\pagestyle{plain}
 
+% add frame environment
+\usepackage[%
+    framemethod=tikz,
+    skipbelow=8pt,
+    skipabove=13pt
+]{mdframed}
+\mdfsetup{%
+    leftmargin=0pt,
+    rightmargin=0pt,
+    backgroundcolor=atomdarkgrey,
+    middlelinecolor=atomdarkgrey,
+    roundcorner=6
+}
+
+\usepackage{etoolbox}% >= v2.1 2011-01-03
+\BeforeBeginEnvironment{lstlisting}{\begin{mdframed}\vspace{-0.7em}}
+\AfterEndEnvironment{lstlisting}{\vspace{-0.5em}\end{mdframed}}
+
+% needed for \lstcapt
+\def\ifempty#1{\def\temparg{#1}\ifx\temparg\empty}
+
+% make new caption command for listings
+\usepackage{caption}
+\newcommand{\lstcapt}[2][]{%
+    \ifempty{#1}%
+        \captionof{lstlisting}{#2}%
+    \else%
+        \captionof{lstlisting}[#1]{#2}%
+    \fi%
+    \vspace{0.75\baselineskip}%
+}
+
+
+
+\pagestyle{plain}
 
 \begin{document}
 
