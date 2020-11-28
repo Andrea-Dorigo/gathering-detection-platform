@@ -1,5 +1,4 @@
-# ignora tutti i files della cartella linee_guida_interne ....
-documentazione/linee_guida_interne/*
-# tranne i files .tex
-!*.tex
-!/capitoli/*.tex
+/documentazione/linee_guida/*
+!/documentazione/linee_guida/*/
+!/documentazione/**/*.tex
+!/documentazione/immagini/*
