@@ -5,12 +5,11 @@
 
 \section{Aggiunta o modifica di files}
 Poniamo che un componente del gruppo voglia aggiungere o modificare uno o più files nella repository del progetto.
-
 Il primo passo è creare una nuovo feature branch tramite il comando
 \begin{lstlisting}
 git flow feature start analisi-dati-uber
 \end{lstlisting}
-Questo crea un branch locale a partire dal develop chiamato \texttt{feature/analisi-dati-uber} e vi esegue il checkout automaticamente; tutti i prossimi commit e push avverranno su questo branch, evitando l'immissione di errori o file ancora incompleti o non verificati sul develop.
+Questo crea un branch locale a partire dal develop chiamato \texttt{feature/analisi-dati-uber} e vi esegue il checkout automaticamente; tutti i prossimi commit e push avverranno su questo branch, evitando l'immissione di errori o file ancora incompleti o non verificati sul \texttt{develop}.
 \textbf{Per rendere possibile la collaborazione sullo stesso branch} è possibile pubblicarlo in remoto con il comando
 \begin{lstlisting}
 git flow feature publish analisi-dati-uber
@@ -22,22 +21,22 @@ git flow feature track analisi-dati-uber
 che crea un branch locale dallo stesso nome e lo sincronizza con quello remoto.
 Al completamento \textbf{e verifica} della nuova funzionalità, è possibile richiudere il branch nel \texttt{develop} ed eliminarlo tramite il comando
 \begin{lstlisting}
-{git flow feature finish analisi-dati-uber
+git flow feature finish analisi-dati-uber
 \end{lstlisting}
 Verrà automaticamente generato un \texttt{merge commit}.
 Il responsabile di progetto si riserva la pubblicazione delle \texttt{release}.
 
 \section{Link utili e best practices sull'utilizzo di git}
-Potete trovare un ottimo elenco dei comandi di git flow più importanti e delle loro funzioni
+Potete trovare un elenco dei comandi di git flow più importanti e relative funzioni
 \href{https://danielkummer.github.io/git-flow-cheatsheet/}{qui} \cite{GitFlowCheatseet}. \\
-Un buon riassunto sull'utilizzo di git flow \href{https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow}{qui} \cite{GitFlowWorkflowTutorial}.\\
-Un altro ottimo riassunto sulle best practice da seguire nei commit \href{https://www.theserverside.com/video/Follow-these-git-commit-message-guidelines}{qui} \cite{GitCommitGuidelines}. \\
-Fra le molte pratiche importanti da seguire nella scrittura del titolo del commit si evidenzia:
+Un buon riassunto sull'utilizzo di git flow si può trovare \href{https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow}{a questo link} \cite{GitFlowWorkflowTutorial}.\\
+Dell'altro materiale riguardante le best practice da seguire nei commit \href{https://www.theserverside.com/video/Follow-these-git-commit-message-guidelines}{a questo indirizzo} \cite{GitCommitGuidelines}. \\
+Fra le molte pratiche di cui tener conto nella scrittura del titolo del commit si evidenzia:
 \begin{itemize}
-\item descrivi cosa hai fatto e perch\'{e}, ma non come.
+\item esso deve contenere la descrizionee di cosa è stato fatto e perchè, ma non come.
 \item l'utilizzo dell'imperativo;
 \end{itemize}
-Per quest'ultimo punto vi riporto un paragrafo del link qui sopra che aiuta la comprensione (è presente un errore nel testo dell'articolo, che ho corretto qui sotto):
+Per quest'ultimo punto vi riporto un paragrafo del link qui sopra che ne facilita la comprensione (è presente un errore nel testo dell'articolo, che ho corretto qui sotto):
 \begin{lstlisting}
 Fixed the fencepost error //bad
 
