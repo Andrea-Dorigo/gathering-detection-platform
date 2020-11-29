@@ -13,6 +13,7 @@
 \usepackage{color}
 \usepackage{microtype}
 \usepackage{enumerate}
+\usepackage{listings}
 \usepackage[table,dvipsnames]{xcolor}
 \setcounter{tocdepth}{5}
 \setcounter{secnumdepth}{5} %SONO I DUE COMANDI PER AVERE LE SUBSUBSECTION NUMERATE E PRESENTI NELL'INDICE
@@ -30,11 +31,9 @@
 	\chead{}
 	\rhead{\fontsize{12}{10}Linee Guida}
 	\lfoot{}
-	\cfoot{\thepage\ di \pageref{LastPage}}
+	\cfoot{\thepage\ di \pageref*{LastPage}}
 	\rfoot{}
 }
-
-\usepackage{listings}
 
 \definecolor{atomlightorange}{rgb}{0.88,0.76,0.55}
 \definecolor{atomdarkgrey}{RGB}{59,62,75}
@@ -83,12 +82,25 @@
 
 \hypersetup{
     colorlinks=true,
-    linkcolor=blue,
-    filecolor=magenta,
-    urlcolor=cyan,
+    linkcolor=black,
+    filecolor=black,
+    urlcolor=blue,
+		citecolor=black,
 }
 
 \pagestyle{plain}
+
+\makeatletter
+	 \def\thebibliography#1{\chapter*{Bibliografia\@mkboth
+		 {Bibliografia}{Bibliografia}}\list
+		 {[\arabic{enumi}]}{\settowidth\labelwidth{[#1]}\leftmargin\labelwidth
+ \advance\leftmargin\labelsep
+ \usecounter{enumi}}
+ \def\newblock{\hskip .11em plus .33em minus .07em}
+ \sloppy\clubpenalty4000\widowpenalty4000
+ \sfcode`\.=1000\relax}
+	 \makeatother
+
 
 \begin{document}
 
@@ -132,4 +144,6 @@
 \input{capitoli/2-Git}
 \input{capitoli/3-Trello}
 \input{capitoli/4-Sessione lavorativa standard}
+\input{bibliografia}
+
 \end{document}
