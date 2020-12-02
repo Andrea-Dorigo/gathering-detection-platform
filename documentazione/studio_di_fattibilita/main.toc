@@ -60,5 +60,5 @@
 \contentsline {section}{\numberline {8.3}Finalità del progetto}{20}{section.8.3}%
 \contentsline {section}{\numberline {8.4}Tecnologie interessate}{20}{section.8.4}%
 \contentsline {section}{\numberline {8.5}Aspetti positivi}{20}{section.8.5}%
-\contentsline {section}{\numberline {8.6}Criticità e fattori di rischio}{20}{section.8.6}%
+\contentsline {section}{\numberline {8.6}Criticità e fattori di rischio}{21}{section.8.6}%
 \contentsline {section}{\numberline {8.7}Conclusioni}{21}{section.8.7}%
