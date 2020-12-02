@@ -16,9 +16,13 @@
 \usepackage{listings}
 \usepackage{tabularx}
 \usepackage[table,dvipsnames]{xcolor}
+\usepackage{caption}
+\captionsetup{labelformat=empty}
 \setcounter{tocdepth}{5}
 \setcounter{secnumdepth}{5} %SONO I DUE COMANDI PER AVERE LE SUBSUBSECTION NUMERATE E PRESENTI NELL'INDICE
 \renewcommand{\contentsname}{Indice} %QUESTO SERVE PER AVERE L'INDICE CON IL NOME CHE VOGLIO IO
+\renewcommand{\listfigurename}{Lista delle figure}
+\renewcommand{\listtablename}{Lista delle tabelle}
 \titleformat{\chapter}[display]
 {\normalfont\bfseries}{}{0pt}{\LARGE} %QUESTO SERVE PER AVERE SOLO IL NOME DEL CAPITOLO CHE VOGLIO IO
 \titlespacing*{\chapter}{0cm}{0cm}{0.2cm}
@@ -141,7 +145,9 @@
 \makeatother
 
 \input{registro}
-\tableofcontents{}
+\tableofcontents
+\listoffigures
+\listoftables
 \input{capitoli/1-Introduzione}
 \input{bibliografia}
 
