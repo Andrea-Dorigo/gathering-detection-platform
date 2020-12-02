@@ -1,0 +1,5 @@
+/documentazione/linee_guida/*
+!/documentazione/linee_guida/*/
+/documentazione/linee_guida/*/*
+!/documentazione/**/*.tex
+!/documentazione/immagini/*

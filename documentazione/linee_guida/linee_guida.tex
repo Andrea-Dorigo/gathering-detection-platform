@@ -1,0 +1,149 @@
+\documentclass[a4paper,12pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{tabularx}
+\usepackage{makecell}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{xurl}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{color}
+\usepackage{microtype}
+\usepackage{enumerate}
+\usepackage{listings}
+\usepackage[table,dvipsnames]{xcolor}
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5} %SONO I DUE COMANDI PER AVERE LE SUBSUBSECTION NUMERATE E PRESENTI NELL'INDICE
+\renewcommand{\contentsname}{Indice} %QUESTO SERVE PER AVERE L'INDICE CON IL NOME CHE VOGLIO IO
+\titleformat{\chapter}[display]
+{\normalfont\bfseries}{}{0pt}{\LARGE} %QUESTO SERVE PER AVERE SOLO IL NOME DEL CAPITOLO CHE VOGLIO IO
+\titlespacing*{\chapter}{0cm}{0cm}{0.2cm}
+\geometry{
+	left=20mm,
+	right=20mm,
+}
+\fancypagestyle{plain}{
+	\fancyhf{}
+	\lhead{\includegraphics[width=3cm]{../immagini/minilogo.jpg}}
+	\chead{}
+	\rhead{\fontsize{12}{10}Linee Guida}
+	\lfoot{}
+	\cfoot{\thepage\ di \pageref*{LastPage}}
+	\rfoot{}
+}
+
+\definecolor{atomlightorange}{rgb}{0.88,0.76,0.55}
+\definecolor{atomdarkgrey}{RGB}{59,62,75}
+
+\usepackage{tikz}
+
+% set listings
+\lstset{%
+    basicstyle=\footnotesize\ttfamily\color{atomlightorange},
+    framesep=20pt,
+		belowskip=10pt,
+		aboveskip=10pt
+}
+
+% add frame environment
+\usepackage[%
+    framemethod=tikz,
+    skipbelow=8pt,
+    skipabove=13pt
+]{mdframed}
+\mdfsetup{%
+    leftmargin=0pt,
+    rightmargin=0pt,
+    backgroundcolor=atomdarkgrey,
+    middlelinecolor=atomdarkgrey,
+    roundcorner=6
+}
+
+\usepackage{etoolbox}% >= v2.1 2011-01-03
+\BeforeBeginEnvironment{lstlisting}{\begin{mdframed}\vspace{-0.7em}}
+\AfterEndEnvironment{lstlisting}{\vspace{-0.5em}\end{mdframed}}
+
+% needed for \lstcapt
+\def\ifempty#1{\def\temparg{#1}\ifx\temparg\empty}
+
+% make new caption command for listings
+\usepackage{caption}
+\newcommand{\lstcapt}[2][]{%
+    \ifempty{#1}%
+        \captionof{lstlisting}{#2}%
+    \else%
+        \captionof{lstlisting}[#1]{#2}%
+    \fi%
+    \vspace{0.75\baselineskip}%
+}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=black,
+    urlcolor=blue,
+		citecolor=black,
+}
+
+\pagestyle{plain}
+
+\makeatletter
+	 \def\thebibliography#1{\chapter*{Bibliografia\@mkboth
+		 {Bibliografia}{Bibliografia}}\list
+		 {[\arabic{enumi}]}{\settowidth\labelwidth{[#1]}\leftmargin\labelwidth
+ \advance\leftmargin\labelsep
+ \usecounter{enumi}}
+ \def\newblock{\hskip .11em plus .33em minus .07em}
+ \sloppy\clubpenalty4000\widowpenalty4000
+ \sfcode`\.=1000\relax}
+	 \makeatother
+
+
+\begin{document}
+
+\makeatletter
+\begin{titlepage}
+    \begin{center}
+    \vspace*{-4,0cm}
+    \author{Jawa Druids}
+    \title{Linee Guida}
+    \date{} %LASCIARE QUESTO CAMPO VUOTO, SE LO TOLGO STAMPA LA DATA CORRENTE
+    \includegraphics[width=0.7\linewidth]{../immagini/DRUIDSLOGO.jpg}\\[4ex]
+    {\huge \bfseries  \@title }\\[2ex]
+    {\LARGE  \@author}\\[50ex]
+    \vspace*{-8,0cm}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{c|c}
+            \textbf{Versione} & x.x.x \\
+            \textbf{Data approvazione} & xx-xx-xxxx\\
+            \textbf{Responsabile} & Nome Cognome\\
+            \textbf{Redattori} & Andrea Dorigo \\
+            \textbf{Verificatori} & Nome Cognome \\
+        %MAKECELL SERVE PER POI ANDARE A CAPO ALL'INTERNO DELLA CELLA
+            \textbf{Stato} & Redazione in corso\\
+            \textbf{Lista distribuzione} & \makecell{Jawa Druids \\ Tullio \\ NomeAziendaProponente}\\
+            \textbf{Uso} & Interno
+        \end{tabular}
+    \end{table}
+					\vspace{.8cm}
+	\hfill \break
+    \fontsize{17}{10}\textbf{Sommario}\\
+		\vspace{.3cm}
+    Linee guide da seguire per una sessione lavorativa standard con git flow, Trello e Google Sheet.
+    \end{center}
+\end{titlepage}
+\makeatother
+
+\input{registro}
+\tableofcontents{}
+\input{capitoli/1-Introduzione}
+\input{capitoli/2-Git}
+\input{capitoli/3-Trello}
+\input{capitoli/4-Sessione lavorativa standard}
+\input{bibliografia}
+
+\end{document}
