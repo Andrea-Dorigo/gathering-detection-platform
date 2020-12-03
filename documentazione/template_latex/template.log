@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.8.25)  30 NOV 2020 16:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.8.25)  3 DEC 2020 11:16
 entering extended mode
 **./template.tex
 (template.tex
@@ -943,10 +943,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 {C:/Users/margh/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <../immagini/DRU
 IDSLOGO.jpg>]
-("Registro delle modifiche.tex"
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 11.
-)
+("Registro delle modifiche.tex")
 <../immagini/minilogo.jpg, id=16, 1927.2pt x 752.8125pt>
 File: ../immagini/minilogo.jpg Graphic file (type jpg)
 <use ../immagini/minilogo.jpg>
@@ -988,26 +985,24 @@ Package rerunfilecheck Info: File `template.out' has not changed.
  )
 (\end occurred inside a group at level 1)
 
-### simple group (level 1) entered at line 6 ({)
+### simple group (level 1) entered at line 7 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 21520 strings out of 481212
- 404579 string characters out of 2905973
- 695197 words of memory out of 3000000
- 36688 multiletter control sequences out of 15000+200000
- 541220 words of font info for 49 fonts, out of 3000000 for 9000
+ 21513 strings out of 481212
+ 404466 string characters out of 2905973
+ 697197 words of memory out of 3000000
+ 36683 multiletter control sequences out of 15000+200000
+ 539997 words of font info for 45 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,16n,60p,796b,428s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 60i,16n,60p,796b,432s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/margh/AppData/Local/Programs/MiKTeX/fonts/type1/publi
-c/amsfonts/cm/cmbx10.pfb><C:/Users/margh/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/amsfonts/cm/cmbx12.pfb><C:/Users/margh/AppData/Local/Programs/MiKTeX
-/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/margh/AppData/Local/Program
-s/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/margh/AppData/Local
-/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/margh/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on template.pdf (3 pages, 443746 bytes).
+c/amsfonts/cm/cmbx12.pfb><C:/Users/margh/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmr12.pfb><C:/Users/margh/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/margh/AppData/Local/Programs
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on template.pdf (3 pages, 418287 bytes).
 PDF statistics:
- 52 PDF objects out of 1000 (max. 8388607)
- 6 named destinations out of 1000 (max. 500000)
+ 43 PDF objects out of 1000 (max. 8388607)
+ 5 named destinations out of 1000 (max. 500000)
  23 words of extra memory for PDF output out of 10000 (max. 10000000)
 
