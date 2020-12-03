@@ -1,0 +1,199 @@
+\chapter{Processi Di Supporto}
+I processi di supporto sono documentazione, gestione della configurazione, gestione della qualità, verifica e validazione
+\section{Documentazione}
+\subsection{Descrizione}
+Questa sezione fornisce le norme per la stesura, la verifica e l'approvazione dei documenti. Tali regole vanno seguite in tutti i documenti ufficiali prodotti durante il ciclo di vita del software, garantendo cosi la coerenza e la validità degli stessi
+\subsection{Implementazione del documento}
+ Per ogni documento che si intende sviluppare è necessario identificare:
+\begin{itemize}
+\item \textbf {titolo o nome:} che sia significativo ed ufficiale; 
+	\item \textbf {scopo:} che espliciti il contenuto generale del documento e la sua funzionalità come 		documentazione di progetto; 
+		\item \textbf {destinatari:} che indichi i soggetti a cui il documento è destinato, o coloro i quali sono tenuti a prenderne visione; 
+			\item \textbf {procedure di gestione:} che guidino i responsabili nello sviluppo corretto e normato del documento, durante tutto il suo ciclo di vita; 
+				\item \textbf {versionamento:} pianificazione di versioni intermedie e finali del documento. 
+\end{itemize} 
+\subsection{Ciclo di vita di un documento}
+Ogni documento prodotto percorre le tappe del seguente ciclo di vita:
+\begin{itemize}
+\item \textbf{Creazione:} il documento viene creato partendo da un template progettato a tale
+	scopo, situato nella cartella Template del repository remoto;
+	\item \textbf{Strutturazione:} il documento viene fornito di un registro delle modifiche, di un indice dei   contenuti e, se necessario, di un indice delle figure e di un indice delle tabelle presenti nel corpo del documento;
+		\item \textbf{Stesura:} il corpo del documento viene scritto progressivamente, da più membri del gruppo, adottando un metodo incrementale;
+			\item \textbf{Revisione:} ogni singola sezione del corpo del documento viene regolarmente rivista da almeno un membro del gruppo, che deve essere obbligatoriamente diverso dal redattore della parte in verifica; se necessario, la verifica può essere svolta da più persone: in questo caso può partecipare anche chi ha scritto la sezione in verifica a patto che non si occupi della parte da esso redatta;
+				\item \textbf{Approvazione:} terminata la revisione, il Responsabile di Progetto stabilisce la validità del documento, che solo a questo punto può essere considerato completo e può essere quindi rilasciato.
+\end{itemize} 
+\subsection{Template in formato \LaTeX}
+Il gruppo ha deciso di adottare il linguaggio LATEX per la stesura dei documenti; è stato definito un template per automatizzare l’applicazione delle norme tipografiche e di formattazione, in funzione della coerenza e coesione dei prodotti finali.
+L’uso di un template comune per la strutturazione dei documenti, inoltre, permette di rendere più efficiente l’applicazione di nuove norme o di modifiche a norme già esistenti a tutti i documenti redatti fino a quel momento.
+\subsection{Documenti prodotti}
+	 \textbf{Formali:} sono i documenti che riportano le norme che regolano l’operato del gruppo e gli esiti delle attività da esso portate avanti nel corso del ciclo di vita del software. Le caratteristiche di un documento formale sono:
+\begin{itemize}
+\item storicizzazione delle version del documento prodotte durante la sua stesura;
+	\item attribuzione di nomi univoci ad ogni versione;
+		\item approvazione della versione definitiva da parte del Responsabile di Progetto.	
+\end{itemize}
+Se un documento formale ha più versioni, si considera come corrente sempre la più recente tra quelle approvate dal Responsabile di Progetto. I documenti formali possono essere classificati come Interni o Esterni: 
+\begin{itemize}
+\item \textbf {interni:} che riguardano le dinamiche interne del gruppo, di marginale interesse per committenti e proponente;
+	\item \textbf {esterni:}  che interessano i committenti ed il proponente e che vengono loro consegnati nell’ultima versione approvata.
+\end{itemize}
+Di seguito sono elencati i documenti ufficiali prodotti e la loro classificazione in uso Interno o Esterno: 
+\begin{itemize}
+\item \textbf{Norme di progetto:} documento ad uso Interno. Contiene le norme e le regole, stabilite dei membri del gruppo, alle quali ci si dovrà attenere durante l intera durata del lavoro di progetto;
+	\item \textbf{Glossario:}documento ad uso Esterno. elenco ordinato di tutti i termini usati nella documentazione che il gruppo ritiene necessitino di una definizione esplicita, al fine di rimuovere ogni ambiguità; 
+		\item \textbf{Studio di fattibilitài:} documento ad uso Interno. Lo Studio di Fattibilità ha l’obiettivo di esporre (brevemente) ogni capitolato e di elencare per ognuno gli aspetti positivi e le criticitaà che il team ha individuato; 
+			\item \textbf{Piano di progetto:} documento ad uso Esterno. Lo scopo del Piano di Progetto è organizzare le attività in modo da gestire le risorse disponibili in termini di tempo e "forza lavoro"; 
+				\item \textbf{Piano di qualifica:} documento ad uso Esterno.Lo scopo del Piano di Qualifica è presentare i metodi di verifica e validazione implementati dal gruppo, per garantire la qualità del capitolato scelto.
+					\item \textbf{Analisi dei requisiti:} documento ad uso Esterno. Lo scopo dell'analisi dei Requisiti è esporre dettagliatamente i requisiti individuati per lo sviluppo del capitolato scelto.
+\end{itemize}
+ \textbf{Informali:} un documento è informale se:
+\begin{itemize}
+\item non è stato ancora approvato dal Responsabile di Progetto;
+	\item non è soggetto a versionamento.
+\end{itemize}
+I documenti appartenenti alla seconda categoria saranno i verbali, che potranno
+essere:
+\begin{itemize}
+\item \textbf{Interni:} resoconti sintetici degli incontri dei membri del gruppo, contengono un ordine del giorno, riportano gli argomenti affrontati e le decisioni prese;
+	\item \textbf{Esterni:}rapporti degli incontri del gruppo coi committenti e/o col proponente, strutturati secondo lo schema domanda-risposta.
+\end{itemize}
+Per i verbali è prevista un’unica stesura. Tale scelta è dettata dal fatto che apportarvi modifiche significherebbe cambiare le decisioni prese in sede di riunione.
+\\
+\subsection{Struttura generale dei documenti}
+{vuoto}
+\subsubsection{Frontespizio}
+Il frontespizio è la prima pagina di ogni documento. 
+La prima pagina di ogni documento sarà composta da:
+\begin{itemize}
+	\item \textbf{Logo del gruppo}
+		\item \textbf{Indirizzo e-mail del gruppo}
+			\item \textbf{Nome del gruppo}
+\end{itemize}
+Informazioni sul documento che includono:
+\begin{itemize}
+	\item \textbf{Versione}: indica la versione attuale del documento
+		\item \textbf{Approvazione}: indica chi ha approvato il documento.
+			\item \textbf{Redazione}: indica la lista dei redattori del documento.
+				\item \textbf{Verifica}: indica la lista dei verificatori del documento. 
+					\item \textbf{Stato}: indica lo stato attuale in cui si trova il documento.
+						\item \textbf{Uso}: indica l’uso finale del documento (interno o esterno). 
+							\item \textbf{Sommario:} posto in fondo alla pagina che contiene una breve descrizione del contenuto del documento.
+\end{itemize}
+\subsubsection{Registro Modifiche}
+Il registro delle modifiche occupa la seconda pagina del documento e consiste in una tabella contenente le informazioni riguardanti il ciclo di vita del documento.
+\\Più precisamente, la tabella riporta per ogni modifica: 
+\begin{itemize}
+\item \textbf{Versione:} versione del documento relativa alla modifica effettuata;
+	\item \textbf{Descrizione:} breve descrizione della modifica effettuata;
+		\item \textbf{Data:} data in cui la modifica è stata approvata
+			\item \textbf{Autore:} nominativo della persona che ha effettuato la modifica; 
+				\item \textbf{Ruolo:} ruolo della persona che ha effettuato la modifica. 
+\end{itemize}
+\subsubsection{Indice}
+L'indice ha lo scopo di riepilogare e dare una visione generale della struttura del documento, mostrando le parti di cui è composto. L'indice ha una struttura standard: numero e titolo del capitolo, con eventuali sottosezioni, e il numero della pagina del contenuto; inoltre, ogni titolo è un link alla pagina del contenuto. L'indice dei contenuti è seguito da un eventuale indice per le tabelle e le figure presenti nel documento.
+\subsubsection{Corpo del documento}
+La struttura del contenuto principale di una pagina è cosi composta:
+\begin{itemize}
+\item In alto a sinistra è presente il logo del gruppo;
+	\item In alto a destra è riportata la sezione alla quale la pagina appartiene;
+		\item Il contenuto principale è posto tra l'intestazione e il piè di pagina;
+			\item una riga divide il contenuto principale e il piè di pagina
+				\item in basso è riportato il numero di pagina attuale ed il numero totale delle pagine che compongono il documento.
+\end{itemize}
+\subsubsection{Verbali}
+Ai verbali, sia interni che esterni, si applicano le stesse norme strutturali degli altri documenti, ad eccezione del fatto che, essendo informali, non sono soggetti a versionamento. Il contenuto di un verbale è così organizzato:
+\begin{itemize}
+\item \textbf{Luogo:} riporta il luogo in cui si è svolta la riunione (in alternativa il mezzo utilizzato es. Discord)
+	\item \textbf{Data:} riporta la data della riunione
+		\item \textbf{Ora di inizio:} riporta l'ora in cui è iniziata la riunione
+			\item \textbf{Ora di fine:} riporta l'ora in cui è terminata la riunione
+				\item \textbf{Partecipanti:} riporta l'elenco dei presenti alla riunione
+					\item \textbf{Ordine del giorno:} contiene l'elenco degli argomenti affrontati alla riunione
+						\item \textbf{Resoconto:}  contiene il resoconto delle decisioni prese durante la riunione, in forma tabellare.	
+\end{itemize}
+Ogni decisione è identificata da un codice scritto in forma: 
+\\
+{vuoto}
+\subsection{Norme Tipografiche}
+\subsubsection{Convenzioni di denominazione}
+{vuoto}
+\subsubsection{Stili di testo}
+{vuoto}
+\subsubsection{Termini del Glossario}
+{vuoto}
+\subsubsection{Elenchi puntati}
+{vuoto}
+\subsubsection{Formato di data}
+Le date vengono indicate usando il formato
+[DD] -[MM]-[YYYY] dove:
+\\
+\begin{itemize}
+\item \textbf{DD:} corrisponde al giorno;
+	\item \textbf{MM:} corrisponde al mese;
+		\item \textbf{YYYY:} corrisponde all'anno.
+\end{itemize}
+\subsubsection{Sigle}
+Si elencano una serie di sigle che possono essere utilizzate nei documento. 
+\\
+Per identificare le revisioni:
+\begin{itemize}
+\item \textbf{RR:} revisione dei requisiti
+	\item \textbf{RP:} revisione di progettazione
+	 	\item \textbf{RQ:} revisione di qualifica
+			\item \textbf{RA:} revisione di accettazione
+\end{itemize} 
+Per identificare i documenti:
+\begin{itemize}
+\item \textbf{AdR:} analisi dei requisiti
+	\item \textbf{NdP:} norme di progetto
+		\item \textbf{PdQ:} piano di qualifica
+			\item \textbf{PdP:} piano di progetto
+				\item \textbf{MU:} manuale utente
+					\item \textbf{MS:} manuale sviluppatore			
+						\item \textbf{G:} glossario
+							\item \textbf{V:} verbali
+\end{itemize}
+Per identificare i ruoli
+\begin{itemize}
+\item \textbf{Re:} Responsabile
+	\item \textbf{Am:} Amministratore
+		\item \textbf{An:} Analista
+			\item \textbf{Pgt:} Progettista
+				\item \textbf{Pgr:} Programmatore
+					\item \textbf{Ve:} Verificatore
+\end{itemize}
+\subsection{Elementi grafici}
+Questa sezione definisce le norme per l'uso di elementi grafici quali immagini, tabelle e diagrammi.
+\subsubsection{Immagini}
+{Vuoto}
+\subsubsection{Grafici}
+{Vuoto}
+\subsubsection{Tabelle}
+{Vuoto}
+\subsection{Metriche}
+\subsubsection{Immagini}
+{Vuoto}
+\subsubsection{Grafici}
+{Vuoto}
+\subsubsection{Tabelle}
+{Vuoto}
+\subsection{Metriche}
+\subsubsection{MPD03 Indice Gulpease}
+Indice che riporta il grado di leggibilità di un testo redatto in lingua italiana. 
+\\La formula adottata è:
+\begin{center}
+GULP=89+ $\frac{300*(numero frasi)-10*(numero parole)}{numero lettere}$
+\end{center}
+L'indice così calcolato può assumere valori tra 0 e 100:
+\begin{itemize}
+\item \textbf{GULP$<$ 80:} Indica una leggibilità difficile per un utente con licenza elementare
+	\item \textbf{GULP$<$ 60:} Indica una leggibilità difficile per un utente con licenza media
+		\item \textbf{GULP$<$ 40:} Indica una leggibilità difficile per un utente con licenza superiore
+\end{itemize}
+
+\subsubsection{Correttezza Ortografica}
+{vuoto}
+\subsection{Strumenti di stesura}
+\subsubsection{Latex}
+Per la stesura dei documenti, il gruppo JawaDruids ha scelto LATEX, un linguaggio compilato basato sul programma di composizione tipografica TEX, al fine di produrre documenti coerenti, ordinati, templatizzati e stesi in modo collaborativo. 
+\section{Gestione della configurazione}
