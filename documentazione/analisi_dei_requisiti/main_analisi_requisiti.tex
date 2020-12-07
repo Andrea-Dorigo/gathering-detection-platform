@@ -1,0 +1,181 @@
+%COMANDO CHE DETERMINA IL TIPO DI DOCUMENTO CHE SI VUOLE CREARE
+
+\documentclass[a4paper,12pt]{report}
+
+%ELENCO DEI PACCHETTI UTILI PER LA STESURA DEL DOCUMENTO
+
+\usepackage[utf8]{inputenc}
+\usepackage[english, italian]{babel}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{tabularx}
+\usepackage{makecell}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{xurl}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage[table,dvipsnames]{xcolor}
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+\usepackage{caption}
+\usepackage{etoolbox}% >= v2.1 2011-01-03
+\usepackage{tikz}
+\usepackage{listings}
+
+%COMANDO PER AVERE IL CAPITOLO CON IL NOME CHE VOGLIAMO NOI
+
+\titleformat{\chapter}[display]
+{\normalfont\bfseries}{}{0pt}{\LARGE}
+
+%COMANDO PER LA SPAZIATURA DEI TITOLI DAL BORDO DEL FOGLIO
+
+\titlespacing*{\chapter}{0cm}{0cm}{0.2cm}
+
+%COMANDO PER LA SPAZIATURA DEL TESTO DAI BORDI LATERALI
+
+\geometry{
+	left=20mm,
+	right=20mm,
+}
+
+%COMADNO PER AVERE L'INDICE DEL NOME CHE SI VUOLE
+
+\renewcommand{\contentsname}{Indice}
+
+%COMADNI PER OTTENERE SUBSUBSECTION NUMERATE E PRESENTI NELL'INDICE
+
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+
+%COMANDI PER OTTENERE HEADER E FOOTER
+
+\pagestyle{plain}
+
+\fancypagestyle{plain}{
+	\fancyhf{}
+	\lhead{\includegraphics[width=3cm]{../immagini/minilogo.jpg}}
+	\chead{}
+	\rhead{\fontsize{12}{10}Studio di fattibilità}
+	\lfoot{}
+	\cfoot{\thepage\ di \pageref{LastPage}}
+	\rfoot{}
+}
+
+\pagestyle{plain}
+
+%COMANDI PER LINK
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black,
+	filecolor=black,
+	urlcolor=blue,
+	citecolor=black,
+}
+
+%COMANDI PER SNIPPET DI CODICE
+
+\BeforeBeginEnvironment{lstlisting}{\begin{mdframed}\vspace{-0.7em}}
+	\AfterEndEnvironment{lstlisting}{\vspace{-0.5em}\end{mdframed}}
+
+% needed for \lstcapt
+\def\ifempty#1{\def\temparg{#1}\ifx\temparg\empty}
+
+% make new caption command for listings
+\usepackage{caption}
+\newcommand{\lstcapt}[2][]{%
+	\ifempty{#1}%
+	\captionof{lstlisting}{#2}%
+	\else%
+	\captionof{lstlisting}[#1]{#2}%
+	\fi%
+	\vspace{0.75\baselineskip}%
+}
+
+\definecolor{atomlightorange}{rgb}{0.88,0.76,0.55}
+\definecolor{atomdarkgrey}{RGB}{59,62,75}
+
+% set listings
+\lstset{%
+	basicstyle=\footnotesize\ttfamily\color{atomlightorange},
+	framesep=20pt,
+	belowskip=10pt,
+	aboveskip=10pt
+}
+
+% add frame environment
+\usepackage[%
+framemethod=tikz,
+skipbelow=8pt,
+skipabove=13pt
+]{mdframed}
+\mdfsetup{%
+	leftmargin=0pt,
+	rightmargin=0pt,
+	backgroundcolor=atomdarkgrey,
+	middlelinecolor=atomdarkgrey,
+	roundcorner=6
+}
+
+%BIBLIOGRAFIA
+
+\makeatletter
+\def\thebibliography#1{\chapter*{Bibliografia\@mkboth
+		{Bibliografia}{Bibliografia}}\list
+	{[\arabic{enumi}]}{\settowidth\labelwidth{[#1]}\leftmargin\labelwidth
+		\advance\leftmargin\labelsep
+		\usecounter{enumi}}
+	\def\newblock{\hskip .11em plus .33em minus .07em}
+	\sloppy\clubpenalty4000\widowpenalty4000
+	\sfcode`\.=1000\relax}
+\makeatother
+
+\begin{document}
+
+\makeatletter
+\begin{titlepage}
+	\begin{center}
+		\vspace*{-4,0cm}
+		\author{Jawa Druids} 
+		\title{Analisi dei Requisiti}
+		\date{} %LASCIARE QUESTO CAMPO VUOTO, SE LO TOLGO STAMPA LA DATA CORRENTE
+		\includegraphics[width=0.7\linewidth]{../immagini/DRUIDSLOGO.jpg}\\[4ex]
+		{\huge \bfseries  \@title }\\[2ex] 
+		{\LARGE  \@author}\\[50ex]
+		\vspace*{-8,0cm}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{r | l}
+				\textbf{Versione} & x.x.x \\%RIGA PER INSERIRE LA VERSIONE ULTIMA DEL DOCUMENTO
+				\textbf{Data approvazione} & xx-xx-xxxx\\
+				\textbf{Responsabile} & Nome Cognome\\
+				\textbf{Redattori} & Nome Cognome \\
+				\textbf{Verificatori} & \makecell[tl]{Nome Cognome \\ Nome Cognome} \\
+				%MAKECELL SERVE PER POI ANDARE A CAPO ALL'INTERNO DELLA CELLA
+				\textbf{Stato} & Stato\\
+				\textbf{Lista distribuzione} & \makecell[tl]{Jawa Druids \\ Nome Professori \\ Sync Lab}\\
+				\textbf{Uso} & Uso del documento            
+			\end{tabular}
+		\end{table}
+		\vspace{0.4cm}
+		\hfill \break
+		\fontsize{17}{10}\textbf{Sommario} \\
+		\vspace{0.1cm}
+		L'\emph{Analisi dei Requisiti} individua tutti i requisiti da implementare nel prodotto dal sviluppare.
+	\end{center}
+\end{titlepage}
+\makeatother
+
+\input{registro}
+\input{capitoli/c1_introduzione}
+%COMANDO PER LA CREAZIONE DELL'INDICE
+
+\tableofcontents{}
+
+%PER RENDERE PIÙ CHIARA LA STESURA DEI DOCUMENTI È MEGLIO LASCIARE SEPARATI IN FILE DIVERSI OGNI CAPITOLO
+
+% \input{esempio} -- esempio di codice per inserire un nuovo capitolo
+
+\end{document}
