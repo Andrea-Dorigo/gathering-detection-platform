@@ -58,7 +58,9 @@ essere:
 	\item \textbf{esterni:} rapporti degli incontri del gruppo coi committenti e/o col proponente, strutturati secondo lo schema domanda-risposta.
 \end{itemize}
 Per i verbali è prevista un’unica stesura. Tale scelta è dettata dal fatto che apportarvi modifiche significherebbe cambiare le decisioni prese in sede di riunione.
-\\
+\subsection{Directory di un documento}
+Ogni documento è racchiuso all'interno di una directory che prende il nome dal documento ivi trattato; essa è posizionata a sua volta all'interno della directory \textbf{Documenti Interni} o \textbf{Documenti Esterni}, a seconda della tipologia del documento. Quest'ultima, il file \TeX{} principale e il documento pdf da esso generato adottano la convenzione \textit{Snake case}; nel caso il documento sia formale, in coda al suo nome appare anche la sua versione (e.g. \textit{norme\_di\_progetto\_v1.0.0}).
+Tutti i capitoli appartenenti ad un documento sono organizzati in una subdirectory \textbf{capitoli} posta allo stesso livello del file \TeX{} principale.
 \subsection{Struttura generale dei documenti}
 \subsubsection{Frontespizio}
 Il frontespizio è la prima pagina di ogni documento. 
