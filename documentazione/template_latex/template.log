@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.8.25)  4 DEC 2020 16:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.8.25)  9 DEC 2020 10:19
 entering extended mode
 **./template.tex
 (template.tex
 LaTeX2e <2020-02-02> patch level 5
-L3 programming layer <2020-08-07>
+L3 programming layer <2020-08-07> (packages.tex
 (C:\Users\margh\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
 Document Class: report 2019/12/20 v1.4l Standard LaTeX document class
 (C:\Users\margh\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
@@ -659,7 +659,7 @@ File: pgfmodulematrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 (C:\Users\margh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
 z/libraries\tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-)))
+))))
 (C:\Users\margh\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
 \lst@mode=\count289
 \lst@gtempboxa=\box61
@@ -684,7 +684,9 @@ File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
-Package hyperref Info: Option `colorlinks' set `true' on input line 76.
+(config.tex
+Package hyperref Info: Option `colorlinks' set `true' on input line 50.
+
 (C:\Users\margh\AppData\Local\Programs\MiKTeX\tex/latex/mdframed\mdframed.sty
 Package: mdframed 2013/07/01 1.9b: mdframed
 
@@ -811,27 +813,27 @@ File: md-frame-1.mdf 2013/07/01\ 1.9b: md-frame-1
 \c@mdf@env@ii=\count307
 \c@mdf@zref@counter=\count308
 Package zref Info: New property: mdf@pagevalue on input line 895.
-) (template.aux)
+)) (template.aux)
 \openout1 = `template.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Info: Redefining \it@ocap on input line 135.
-LaTeX Info: Redefining \it@ccap on input line 135.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Info: Redefining \it@ocap on input line 4.
+LaTeX Info: Redefining \it@ccap on input line 4.
 
 
 File italian.ldf warning: 
@@ -839,7 +841,7 @@ italian.ldf    With OT1 encoding guillemets are poorly faked
 italian.ldf    Use T1 encoding
 italian.ldf    or specify a font with command \CaporaliFrom
 italian.ldf    See the documentation concerning the babel-italian typesetting 
-italian.ldf    on input line 135.
+italian.ldf    on input line 4.
 
 
 (C:\Users\margh\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
@@ -865,9 +867,9 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 )
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 135.
+(lastpage)             ! on input line 4.
 \AtBeginShipoutBox=\box70
-Package hyperref Info: Link coloring ON on input line 135.
+Package hyperref Info: Link coloring ON on input line 4.
 
 (C:\Users\margh\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -881,9 +883,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count315
 )
-LaTeX Info: Redefining \ref on input line 135.
-LaTeX Info: Redefining \pageref on input line 135.
-LaTeX Info: Redefining \nameref on input line 135.
+LaTeX Info: Redefining \ref on input line 4.
+LaTeX Info: Redefining \pageref on input line 4.
+LaTeX Info: Redefining \nameref on input line 4.
  (template.out) (template.out)
 \@outlinefile=\write4
 \openout4 = `template.out'.
@@ -931,14 +933,14 @@ ABD: EveryShipout initializing macros
 <../immagini/DRUIDSLOGO.jpg, id=6, 963.6pt x 963.6pt>
 File: ../immagini/DRUIDSLOGO.jpg Graphic file (type jpg)
 <use ../immagini/DRUIDSLOGO.jpg>
-Package pdftex.def Info: ../immagini/DRUIDSLOGO.jpg  used on input line 144.
+Package pdftex.def Info: ../immagini/DRUIDSLOGO.jpg  used on input line 13.
 (pdftex.def)             Requested size: 338.58632pt x 338.57365pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 150.
+(Font)              <12> on input line 19.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 150.
+(Font)              <8> on input line 19.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 150.
+(Font)              <6> on input line 19.
  [1
 
 {C:/Users/margh/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <../immagini/DRU
@@ -947,7 +949,7 @@ IDSLOGO.jpg>]
 <../immagini/minilogo.jpg, id=16, 1927.2pt x 752.8125pt>
 File: ../immagini/minilogo.jpg Graphic file (type jpg)
 <use ../immagini/minilogo.jpg>
-Package pdftex.def Info: ../immagini/minilogo.jpg  used on input line 175.
+Package pdftex.def Info: ../immagini/minilogo.jpg  used on input line 44.
 (pdftex.def)             Requested size: 85.35826pt x 33.3352pt.
 
 
@@ -960,8 +962,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.175 \tableofcontents
-                      {} [1 <../immagini/minilogo.jpg>] (template.toc)
+l.44 \tableofcontents
+                     {} [1 <../immagini/minilogo.jpg>] (template.toc)
 \tf@toc=\write5
 \openout5 = `template.toc'.
 
@@ -970,16 +972,16 @@ l.175 \tableofcontents
 AED: lastpage setting LastPage
 File: ../immagini/minilogo.jpg Graphic file (type jpg)
 <use ../immagini/minilogo.jpg>
-Package pdftex.def Info: ../immagini/minilogo.jpg  used on input line 181.
+Package pdftex.def Info: ../immagini/minilogo.jpg  used on input line 50.
 (pdftex.def)             Requested size: 85.35826pt x 33.3352pt.
 [2
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 181.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 181.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 50.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 50.
  (template.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 181.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 181.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 50.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 50.
 Package rerunfilecheck Info: File `template.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  )
@@ -988,13 +990,13 @@ Package rerunfilecheck Info: File `template.out' has not changed.
 ### simple group (level 1) entered at line 7 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 21513 strings out of 481212
- 404466 string characters out of 2905973
- 697197 words of memory out of 3000000
- 36683 multiletter control sequences out of 15000+200000
+ 21519 strings out of 481212
+ 404678 string characters out of 2905973
+ 697253 words of memory out of 3000000
+ 36685 multiletter control sequences out of 15000+200000
  539997 words of font info for 45 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,16n,60p,796b,432s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 63i,16n,62p,813b,432s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/margh/AppData/Local/Programs/MiKTeX/fonts/type1/publi
 c/amsfonts/cm/cmbx12.pfb><C:/Users/margh/AppData/Local/Programs/MiKTeX/fonts/ty
 pe1/public/amsfonts/cm/cmr12.pfb><C:/Users/margh/AppData/Local/Programs/MiKTeX/
