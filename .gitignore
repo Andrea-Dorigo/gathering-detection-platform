@@ -1,0 +1,15 @@
+# All'interno della cartella "documentazione":
+
+# ignora tutto dentro tutte le cartelle
+/documentazione/**/*
+
+# tranne tutte le sottocartelle,
+!/documentazione/**/*/
+
+# tranne tutti file .tex o pdf presenti in una qualsiasi sottocartella
+!/documentazione/**/*.tex
+!/documentazione/**/*.pdf
+
+# e tranne la cartella immagini e tutto ciò che v'è al suo interno
+!/documentazione/immagini/
+!/documentazione/immagini/*
