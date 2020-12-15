@@ -1,9 +1,9 @@
-\chapter{Processi Di Supporto}
+\chapter{Processi Di Supporto}\label{ProcessiDiSupporto}
 I processi di supporto sono documentazione, gestione della configurazione, gestione della qualità, verifica e validazione
-\section{Documentazione}
-\subsection{Descrizione}
+\section{Documentazione}\label{3.1}
+\subsection{Descrizione}\label{3.1.1}
 Questa sezione fornisce le norme per la stesura, la verifica e l'approvazione dei documenti. Tali regole vanno seguite in tutti i documenti ufficiali prodotti durante il ciclo di vita del software, garantendo cosi la coerenza e la validità degli stessi
-\subsection{Implementazione del documento}
+\subsection{Implementazione del documento}\label{3.1.2}
  Per ogni documento che si intende sviluppare è necessario identificare:
 \begin{itemize}
 \item \textbf {titolo o nome:} che sia significativo ed ufficiale; 
@@ -12,7 +12,7 @@ Questa sezione fornisce le norme per la stesura, la verifica e l'approvazione de
 			\item \textbf {procedure di gestione:} che guidino i responsabili nello sviluppo corretto e normato del documento, durante tutto il suo ciclo di vita; 
 				\item \textbf {versionamento:} pianificazione di versioni intermedie e finali del documento. 
 \end{itemize} 
-\subsection{Ciclo di vita di un documento}
+\subsection{Ciclo di vita di un documento}\label{3.1.3}
 Ogni documento prodotto percorre le tappe del seguente ciclo di vita:
 \begin{itemize}
 \item \textbf{creazione:} il documento viene creato partendo da un template progettato a tale
@@ -22,10 +22,10 @@ Ogni documento prodotto percorre le tappe del seguente ciclo di vita:
 			\item \textbf{revisione:} ogni singola sezione del corpo del documento viene regolarmente rivista da almeno un membro del gruppo, che deve essere obbligatoriamente diverso dal redattore della parte in verifica; se necessario, la verifica può essere svolta da più persone: in questo caso può partecipare anche chi ha scritto la sezione in verifica a patto che non si occupi della parte da esso redatta;
 				\item \textbf{approvazione:} terminata la revisione, il Responsabile di Progetto stabilisce la validità del documento, che solo a questo punto può essere considerato completo e può essere quindi rilasciato.
 \end{itemize} 
-\subsection{Template in formato \LaTeX}
+\subsection{Template in formato \LaTeX}\label{3.1.4}
 Il gruppo ha deciso di adottare il linguaggio LATEX per la stesura dei documenti. E' stato definito un template per automatizzare l’applicazione delle norme tipografiche e di formattazione, in funzione della coerenza e coesione dei prodotti finali.
 L’uso di un template comune per la strutturazione dei documenti, inoltre, permette di rendere più efficiente l’applicazione di nuove norme o di modifiche a norme già esistenti a tutti i documenti redatti fino a quel momento.
-\subsection{Documenti prodotti}
+\subsection{Documenti prodotti}\label{3.1.5}
 	 \textbf{Formali:} sono i documenti che riportano le norme che regolano l’operato del gruppo e gli esiti delle attività da esso portate avanti nel corso del ciclo di vita del software. Le caratteristiche di un documento formale sono:
 \begin{itemize}
 \item storicizzazione delle version del documento prodotte durante la sua stesura;
@@ -58,11 +58,11 @@ essere:
 	\item \textbf{esterni:} rapporti degli incontri del gruppo coi committenti e/o col proponente, strutturati secondo lo schema domanda-risposta.
 \end{itemize}
 Per i verbali è prevista un’unica stesura. Tale scelta è dettata dal fatto che apportarvi modifiche significherebbe cambiare le decisioni prese in sede di riunione.
-\subsection{Directory di un documento}
+\subsection{Directory di un documento}\label{3.1.6}
 Ogni documento è racchiuso all'interno di una directory che prende il nome dal documento ivi trattato; essa è posizionata a sua volta all'interno della directory \textbf{Documenti Interni} o \textbf{Documenti Esterni}, a seconda della tipologia del documento. Quest'ultima, il file \TeX{} principale e il documento pdf da esso generato adottano la convenzione \textit{Snake case}, come stabilito nella \autoref{sec:NormeTipografiche}; nel caso il documento sia formale, in coda al suo nome appare anche la sua versione (e.g. \textit{norme\_di\_progetto\_v1.0.0}).
 Tutti i capitoli appartenenti ad un documento sono organizzati in una subdirectory \textbf{capitoli} posta allo stesso livello del file \TeX{} principale.
-\subsection{Struttura generale dei documenti}
-\subsubsection{Frontespizio}
+\subsection{Struttura generale dei documenti}\label{3.1.7}
+\subsubsection{Frontespizio}\label{3.1.7.1}
 Il frontespizio è la prima pagina di ogni documento. 
 La prima pagina di ogni documento sarà composta da:
 \begin{itemize}
@@ -80,7 +80,7 @@ Informazioni sul documento che includono:
 						\item \textbf{uso}: indica l’uso finale del documento (interno o esterno); 
 							\item \textbf{sommario:} posto in fondo alla pagina che contiene una breve descrizione del contenuto del documento.
 \end{itemize}
-\subsubsection{Registro Modifiche}
+\subsubsection{Registro Modifiche}\label{3.1.7.2}
 Il registro delle modifiche occupa la seconda pagina del documento e consiste in una tabella contenente le informazioni riguardanti il ciclo di vita del documento.
 \\Più precisamente, la tabella riporta per ogni modifica: 
 \begin{itemize}
@@ -90,9 +90,9 @@ Il registro delle modifiche occupa la seconda pagina del documento e consiste in
 			\item \textbf{autore:} nominativo della persona che ha effettuato la modifica; 
 				\item \textbf{ruolo:} ruolo della persona che ha effettuato la modifica. 
 \end{itemize}
-\subsubsection{Indice}
+\subsubsection{Indice}\label{3.1.7.3}
 L'indice ha lo scopo di riepilogare e dare una visione generale della struttura del documento, mostrando le parti di cui è composto. L'indice ha una struttura standard: numero e titolo del capitolo, con eventuali sottosezioni, e il numero della pagina del contenuto; inoltre, ogni titolo è un link alla pagina del contenuto. L'indice dei contenuti è seguito da un eventuale indice per le tabelle e le figure presenti nel documento.
-\subsubsection{Corpo del documento}
+\subsubsection{Corpo del documento}\label{3.1.7.4}
 La struttura del contenuto principale di una pagina è cosi composta:
 \begin{itemize}
 \item in alto a sinistra è presente il logo del gruppo;
@@ -101,7 +101,7 @@ La struttura del contenuto principale di una pagina è cosi composta:
 			\item una riga divide il contenuto principale e il piè di pagina;
 				\item in basso è riportato il numero di pagina attuale ed il numero totale delle pagine che compongono il documento.
 \end{itemize}
-\subsubsection{Verbali}
+\subsubsection{Verbali}\label{3.1.7.5}
 Ai verbali, sia interni che esterni, si applicano le stesse norme strutturali degli altri documenti, ad eccezione del fatto che, essendo informali, non sono soggetti a versionamento. Il contenuto di un verbale è così organizzato:
 \begin{itemize}
 \item \textbf{luogo:} riporta il luogo in cui si è svolta la riunione (in alternativa il mezzo utilizzato es. Discord)
@@ -112,10 +112,10 @@ Ai verbali, sia interni che esterni, si applicano le stesse norme strutturali de
 					\item \textbf{ordine del giorno:} contiene l'elenco degli argomenti affrontati alla riunione
 						\item \textbf{resoconto:}  contiene il resoconto delle decisioni prese durante la riunione, in forma tabellare.	
 \end{itemize}
-\subsection{Norme Tipografiche}
+\subsection{Norme Tipografiche}\label{3.1.8}
 \label{sec:NormeTipografiche}
 Per attribuire uniformità e coerenza alla documentazione sono state concordate  delle norme tipografiche da adottare durante tutta la sua stesura, esposte nelle seguenti sezioni.
-\subsubsection{Convenzioni di denominazione}
+\subsubsection{Convenzioni di denominazione}\label{3.1.8.1}
 I nomi delle directory e dei documenti prodotti rispettano la convenzione \textit{Snake case}:%necessario il riferimento alla relativa pagina wiki
 \begin{itemize}
   \item i nomi fanno utilizzo esclusivo del minuscolo;
@@ -123,7 +123,7 @@ I nomi delle directory e dei documenti prodotti rispettano la convenzione \texti
   \item non è prevista l'omissione delle preposizioni.
 \end{itemize}
 Le estensione dei file sono ovviamente escluse da questa convenzione.
-\subsubsection{Stili di testo}
+\subsubsection{Stili di testo}\label{3.1.8.2}
 In questo paragrafo si definiscono le norme che uniformano lo stile di scrittura dei documenti:
 \begin{itemize}
 \item \textbf{Verbi in forma attiva:} i verbi devono essere in forma attiva e al tempo presente indicativo o passato prossimo. È ammesso l'uso del futuro per esprimere azioni che devono ancora avvenire;
@@ -131,20 +131,20 @@ In questo paragrafo si definiscono le norme che uniformano lo stile di scrittura
 \item \textbf{Frasi brevi e poco complesse:} i periodi devono essere il più possibile semplici e non generare incomprensioni;
 \item \textbf{Brevi blocchi testuali:} si preferisce l'utilizzo di brevi paragrafi.
 \end{itemize}
-\subsubsection{Termini del Glossario}
+\subsubsection{Termini del Glossario}\label{3.1.8.3}
 Le norme relative ai termini da inserire nel Glossario sono: 
 \begin{itemize}
 \item ogni termine del Glossario deve essere contrassegnato, in ogni sua istanza, da una G maiuscola a pedice; 
 	\item le istanze dei termini del Glossario presenti nei titoli non necessitano della G maiuscola a pedice. 
 \end{itemize}
-\subsubsection{Elenchi puntati}
+\subsubsection{Elenchi puntati}\label{3.1.8.4}
 Ogni voce di un elenco puntato deve aderire alle norme seguenti: 
 \begin{itemize}
 	\item deve iniziare con la lettera minuscola;
 	\item deve essere seguita da un ";", fatta eccezione per l’ultimo elemento che deve essere seguito da un punto; 
 	\item può iniziare con dei termini in grassetto e/o con prima lettera maiuscola nel caso in cui il resto della voce sia una descrizione di quei termini.
 \end{itemize}
-\subsubsection{Formato di data}
+\subsubsection{Formato di data}\label{3.1.8.5}
 Le date vengono indicate usando il formato
 [DD] -[MM]-[YYYY] dove:
 \begin{itemize}
@@ -152,7 +152,7 @@ Le date vengono indicate usando il formato
 	\item \textbf{MM:} corrisponde al mese;
 		\item \textbf{YYYY:} corrisponde all'anno.
 \end{itemize}
-\subsubsection{Sigle}
+\subsubsection{Sigle}\label{3.1.8.6}
 Si elencano una serie di sigle che possono essere utilizzate nei documento. 
 \\
 Per identificare le revisioni:
@@ -182,22 +182,22 @@ Per identificare i ruoli
 				\item \textbf{Pgr:} programmatore
 					\item \textbf{Ve:} verificatore
 \end{itemize}
-\subsection{Elementi grafici}
-\subsubsection{Immagini}
+\subsection{Elementi grafici}\label{3.1.9}
+\subsubsection{Immagini}\label{3.1.9.1}
+Questa sezione definisce le norme per l'uso di elementi grafici quali immagini, tabelle e diagrammi.
 Le immagini apportano un valore aggiunto alla descrizione o forniscono una rappresentazione grafica di ciò che si sta presentando. Immagini con funzione puramente estetica non sono pertanto ammesse, ad eccezione di quanto definito nel template comune. Tutte le immagini sono centrate all’interno della pagina e munite di una breve didascalia così formata:
 \begin{center}
 	\textbf {Figura X: breve descrizione dell'immagine}
 \end{center}
 Dove X indica la numerazione dell'immagine.
-\subsubsection{Grafici}
+\subsubsection{Grafici}\label{3.1.9.2}
 I grafici in linguaggio UML, usati per la modellazione dei casi d’uso e per i diagrammi della progettazione, sono inseriti come immagini.
-\subsubsection{Tabelle}
+\subsubsection{Tabelle}\label{3.1.9.3}
 L’uso di tabelle è consigliato solo quando strettamente necessario. La rappresentazione dei dati in forma tabellare è obbligatoria solo nel momento in cui risulti molto difficile organizzare informazioni aventi una struttura complessa.
 È obbligatorio l’uso di colori che abbiano un contrasto sufficiente a garantire la leggibilità. Le tabelle eccessivamente lunghe sono sconsigliate, poichè potrebbero risultare dispersive.
-\subsection{Metriche}
-\subsubsection{MPD03 Indice Gulpease}
-L'indice di Gulpease riporta il grado di leggibilità di un testo redatto in lingua italiana.
-\\La formula adottata è:
+\subsection{Metriche}\label{3.1.10}
+\subsubsection{MPD03 Indice Gulpease}\label{3.1.10.1}
+La formula adottata è:
 \begin{center}
 GULP= 89+ $\frac{300*(numero frasi)-10*(numero parole)}{numero lettere}$
 \end{center}
@@ -208,9 +208,9 @@ L'indice così calcolato può assumere valori tra 0 e 100:
 \item \textbf{GULP$<$ 40:} indica una leggibilità difficile per un utente con licenza superiore
 \end{itemize}
 
-\subsubsection{Correttezza Ortografica}
+\subsubsection{Correttezza Ortografica}\label{3.1.10.2}
 La correttezza ortografica della lingua italiana viene verificata attraverso l'apposito strumento integrato di \TeX studio, il quale sottolinea in tempo reale le parole ove ritiene sia presente un errore, consentendone la correzione.
-\subsection{Strumenti di stesura}
-\subsubsection{Latex}
-Per la stesura dei documenti, il gruppo JawaDruids ha scelto \LaTeX, un linguaggio compilato basato sul programma di composizione tipografica \TeX, al fine di produrre documenti coerenti, ordinati, templatizzati e stesi in modo collaborativo.
-\section{Gestione della configurazione}
+\subsection{Strumenti di stesura}\label{3.1.11}
+\subsubsection{Latex}\label{3.1.11.1}
+Per la stesura dei documenti, il gruppo JawaDruids ha scelto LATEX, un linguaggio compilato basato sul programma di composizione tipografica TEX, al fine di produrre documenti coerenti, ordinati, templatizzati e stesi in modo collaborativo. 
+\section{Gestione della configurazione}\label{3.2}

@@ -1,46 +1,5 @@
-\documentclass[a4paper,12pt]{report}
-\usepackage[utf8]{inputenc}
-\usepackage[english, italian]{babel}
-\usepackage{graphicx}
-\usepackage{float}
-\usepackage{tabularx}
-\usepackage{makecell}
-\usepackage{titlesec}
-\usepackage{fancyhdr}
-\usepackage{lastpage}
-\usepackage{xurl}
-\usepackage{hyperref}
-\usepackage{geometry}
-\usepackage[table,dvipsnames]{xcolor}
-
-\setcounter{secnumdepth}{5}% Number \subsubsection
-\setcounter{tocdepth}{5}
-
-\titleformat{\chapter}[display]
-{\normalfont\bfseries}{}{0pt}{\LARGE} %QUESTO SERVE PER AVERE SOLO IL NOME DEL CAPITOLO CHE VOGLIO IO
-
-\titlespacing*{\chapter}{0cm}{0cm}{0.2cm}
-
-\geometry{
-	left=20mm,
-	right=20mm,
-}
-
-\renewcommand{\contentsname}{Indice} %QUESTO SERVE PER AVERE L'INDICE CON IL NOME CHE VOGLIO IO
-
-\pagestyle{plain}
-
-\fancypagestyle{plain}{
-	\fancyhf{}
-	\lhead{\includegraphics[width=3cm]{../immagini/minilogo.jpg}}
-	\chead{}
-	\rhead{\fontsize{12}{10}Norme di Progetto}
-	\lfoot{}
-	\cfoot{\thepage\ di \pageref{LastPage}}
-	\rfoot{}
-}
-
-\pagestyle{plain}
+\input{packages}
+\input{config}
 
 \begin{document}
 	\makeatletter
