@@ -59,7 +59,7 @@ essere:
 \end{itemize}
 Per i verbali è prevista un’unica stesura. Tale scelta è dettata dal fatto che apportarvi modifiche significherebbe cambiare le decisioni prese in sede di riunione.
 \subsection{Directory di un documento}
-Ogni documento è racchiuso all'interno di una directory che prende il nome dal documento ivi trattato; essa è posizionata a sua volta all'interno della directory \textbf{Documenti Interni} o \textbf{Documenti Esterni}, a seconda della tipologia del documento. Quest'ultima, il file \TeX{} principale e il documento pdf da esso generato adottano la convenzione \textit{Snake case}; nel caso il documento sia formale, in coda al suo nome appare anche la sua versione (e.g. \textit{norme\_di\_progetto\_v1.0.0}).
+Ogni documento è racchiuso all'interno di una directory che prende il nome dal documento ivi trattato; essa è posizionata a sua volta all'interno della directory \textbf{Documenti Interni} o \textbf{Documenti Esterni}, a seconda della tipologia del documento. Quest'ultima, il file \TeX{} principale e il documento pdf da esso generato adottano la convenzione \textit{Snake case}, come stabilito nella \autoref{sec:NormeTipografiche}; nel caso il documento sia formale, in coda al suo nome appare anche la sua versione (e.g. \textit{norme\_di\_progetto\_v1.0.0}).
 Tutti i capitoli appartenenti ad un documento sono organizzati in una subdirectory \textbf{capitoli} posta allo stesso livello del file \TeX{} principale.
 \subsection{Struttura generale dei documenti}
 \subsubsection{Frontespizio}
@@ -113,13 +113,16 @@ Ai verbali, sia interni che esterni, si applicano le stesse norme strutturali de
 						\item \textbf{resoconto:}  contiene il resoconto delle decisioni prese durante la riunione, in forma tabellare.	
 \end{itemize}
 \subsection{Norme Tipografiche}
+\label{sec:NormeTipografiche}
+Per attribuire uniformità e coerenza alla documentazione sono state concordate  delle norme tipografiche da adottare durante tutta la sua stesura, esposte nelle seguenti sezioni.
 \subsubsection{Convenzioni di denominazione}
-Si è deciso di usare la convenzione CAMELCASE per i nomi di file e cartelle. Le regole seguite saranno le seguenti:
+I nomi delle directory e dei documenti prodotti rispettano la convenzione \textit{Snake case}:%necessario il riferimento alla relativa pagina wiki
 \begin{itemize}
-\item il nome dei file composti da più parole avranno la prima lettera minuscola ed ogni parola in seguito inizierà con una maiuscola; 
-	\item tra le parole non sarà presente alcun separatore; 
-		\item sono escluse da questa sintassi le estensione dei file. 
+  \item i nomi fanno utilizzo esclusivo del minuscolo;
+  \item nel caso il nome sia composto da più parole, è necessaria la presenza del carattere separatore \textit{underscore} "\_";
+  \item non è prevista l'omissione delle preposizioni.
 \end{itemize}
+Le estensione dei file sono ovviamente escluse da questa convenzione.
 \subsubsection{Stili di testo}
 In questo paragrafo si definiscono le norme che uniformano lo stile di scrittura dei documenti:
 \begin{itemize}
