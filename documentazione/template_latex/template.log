@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.8.25)  14 DEC 2020 16:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.8.25)  15 DEC 2020 11:03
 entering extended mode
 **./template.tex
 (template.tex
@@ -990,10 +990,10 @@ Package rerunfilecheck Info: File `template.out' has not changed.
 ### simple group (level 1) entered at line 7 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 21518 strings out of 481212
- 404657 string characters out of 2905973
- 697253 words of memory out of 3000000
- 36684 multiletter control sequences out of 15000+200000
+ 21519 strings out of 481212
+ 404676 string characters out of 2905973
+ 697316 words of memory out of 3000000
+ 36685 multiletter control sequences out of 15000+200000
  539997 words of font info for 45 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,16n,62p,813b,432s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1002,7 +1002,7 @@ c/amsfonts/cm/cmbx12.pfb><C:/Users/margh/AppData/Local/Programs/MiKTeX/fonts/ty
 pe1/public/amsfonts/cm/cmr12.pfb><C:/Users/margh/AppData/Local/Programs/MiKTeX/
 fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/margh/AppData/Local/Programs
 /MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on template.pdf (3 pages, 418246 bytes).
+Output written on template.pdf (3 pages, 418255 bytes).
 PDF statistics:
  43 PDF objects out of 1000 (max. 8388607)
  5 named destinations out of 1000 (max. 500000)
