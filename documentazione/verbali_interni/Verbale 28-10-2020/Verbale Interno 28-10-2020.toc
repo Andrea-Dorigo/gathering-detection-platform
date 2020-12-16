@@ -1,4 +1,7 @@
-\contentsline {chapter}{\numberline {1}Punti Di Discussione}{3}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Presenzatione Dei Membri}{4}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Decisione Capitolati}{5}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Creazione Nome e Logo}{6}{chapter.4}%
+\babel@toc {italian}{}
+\babel@toc {italian}{}
+\contentsline {chapter}{\numberline {1}Informazioni Generali}{3}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Punti Di Discussione}{4}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Presenzatione Dei Membri}{5}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Decisione Capitolati}{6}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Creazione Nome e Logo}{7}{chapter.5}%
