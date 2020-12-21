@@ -1,7 +1,0 @@
-\babel@toc {italian}{}
-\babel@toc {italian}{}
-\contentsline {chapter}{\numberline {1}Informazioni Generali}{3}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Punti Di Discussione}{4}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Revisione Dei Documenti}{5}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Scelta Degli Strumenti Da Utilizzare}{6}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Suddivisione Task}{7}{chapter.5}%
