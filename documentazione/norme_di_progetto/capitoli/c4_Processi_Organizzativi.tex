@@ -192,13 +192,67 @@ Per aiutare il gruppo viene fornita anche una rappresentazione grafica delle var
 
 \subsection{Metriche}\label{4.2.5}
 
-\subsubsection{MPR01 Budget at Completion}\label{4.2.5.1}
+\subsubsection{MQPS01 Budget at Completion}\label{4.2.5.1}
+Budget totale allocato per il progetto secondo il preventivo riportato nel \textit{Piano di Progetto 1.0.0}.
+Si possono verificare tre casi:
+\begin{itemize}
+	\item il budget preventivato è minore di quello effettivo al momento della valutazione, questo ci può indicare due cose:
+	 \begin{itemize}
+	 	\item[-] il preventivo è stato sottostimato e quindi va rivisto;
+	 	\item[-] il metodo di lavoro è sbagliato e c’è uno spreco di risorse;
+	 \end{itemize}
+ 	\item il budget preventivato e quello effettivo corrispondono, presumibilmente si sta lavorando nella maniera corretta;
+ 	\item il budget preventivato è maggiore di quello effettivo, questo nella maggior parte dei casi indica che il preventivo è stato fatto con un margine troppo ampio.
+\end{itemize}
 
-\subsubsection{MPR02 Schedule Variance}\label{4.2.5.2}
+\subsubsection{MQPS02 Planned Value}\label{4.2.5.2}
+Metrica di utilità per il calcolo della SV (spiegata successivamente).
+Si tratta del valore del lavoro pianificato al momento del calcolo: corrisponde al denaro che
+si dovrebbe aver guadagnato in quel momento.
+La formula adottata è:  
+	\begin{center}
+		PV = BAC * \textit{\% lavoro pianificato}
+	\end{center}
+\begin{itemize}
+	\item \textbf{PV} sigla di \textit{Planned Value};
+	\item \textbf{BAC} sigla di \textit{Budget at Completion}, riportato sopra;
+	\item \textit{\% lavoro pianificato} al momento del calcolo
+\end{itemize}
 
-\subsubsection{MPR03 Budget Variance}\label{4.2.5.3}
+\subsubsection{MQPS03 Actual Cost}\label{4.2.5.3}
+Il denaro speso fino al momento del calcolo per lo svolgimento del progetto.
+E’ molto importante misurare periodicamente questo valore in modo da riuscire a rendersi conto dell'andamento dei costi durante lo svolgimento del progetto e quindi di non superare la soglia del budget totale prima del completamento dello stesso.
+Per il calcolo si devono sommare tutti i costi già sostenuti.
 
-\subsubsection{MPR04 Actual Cost}\label{4.2.5.4}
+\subsubsection{MQPS04 Earned Value}\label{4.2.5.4}
+Metrica di utilità per il calcolo di SV e CV (spiegate successivamente).
+Si tratta del valore del lavoro fatto fino al momento del calcolo;
+corrisponde al denaro guadagnato fino a quel momento.
+
+\subsubsection{MQPS05 Schedule Variance}\label{4.2.5.5}
+Indica lo stato di avanzamento nello svolgimento del progetto rispetto a quanto pianificato.
+La formula adottata è: 
+	\begin{center}
+		SV = EV - PV
+	\end{center}
+\begin{itemize}
+	\item \textbf{SV} è la sigla di \textit{Schedule Variance};
+	\item \textbf{EV} è la sigla di \textit{Earned Value}, cioè il valore effettivo di quanto prodotto alla data corrente;
+	\item \textbf{PV} è la sigla di \textit{Planned Value}, cioè il valore programmato per la data corrente.	
+\end{itemize}
+
+\subsubsection{MQPS06 Cost Variance}\label{4.2.5.6}
+Indica la differenza tra il costo di lavoro effettivamente completato e quindi “ribaltabile” al cliente come valore,  ed il costo attualmente sostenuto.
+La formula adottata è:
+	\begin{center}
+		CV = EV - AC
+	\end{center}
+\begin{itemize}
+	\item \textbf{CV} sigla di \textit{Cost Variance};
+	\item \textbf{EV} sigla di \textit{Earned Value}, riportato sopra;
+	\item \textbf{AC} sigla di \textit{Actual Cost}, riportato sopra.
+\end{itemize}
+
 
 \subsection{Strumenti}\label{4.2.6}
 
