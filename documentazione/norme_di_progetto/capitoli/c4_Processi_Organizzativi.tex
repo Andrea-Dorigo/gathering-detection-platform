@@ -22,21 +22,117 @@
 
 \subsection{Scopo}\label{4.2.1}
 
+Lo scopo di questa sezione è spiegare come il gruppo intende pianificare il lavoro, dall'assegnazione dei ruoli fino alla concreta assegnazione dei compiti di ogni componente di \textit{Java Druids}. In conformità allo standard ISO/IEC 12207, il processo di pianificazione è strutturato in due parti:
+\begin{itemize}
+	\item ruoli di progetto;
+	\item assegnazione dei ruoli;
+\end{itemize}
+
 \subsection{Ruoli di progetto}\label{4.2.2}
 
-\subsubsection{Responsabile di progetto}\label{4.2.2.1}
+I vari componenti del gruppo ricopriranno i seguenti ruoli:
+\begin{itemize}
+	\item \textit{Responsabile di Progetto};
+	\item \textit{Amministratore di Progetto};
+	\item \textit{Analista};
+	\item \textit{Progettista};
+	\item \textit{Programmatore};
+	\item \textit{Verificatore}.
+\end{itemize}
 
-\subsubsection{Amministratore}\label{4.2.2.2}
+Il gruppo stabilirà un calendario in modo tale che ogni membro riesca a ricoprire almeno una volta ciascuno ruolo in un periodo di tempo omogeneo senza gravare sullo svolgimento delle attività. Come previsto dal \textit{Piano di Progetto} l'assegnazione di un ruolo comporta lo svolgimento di determinati compiti, inoltre il gruppo si impegnerà per eliminare eventuali conflitti: un componente non potrà mai redigere e successivamente verificare ciò che ha prodotto.
+
+\subsubsection{Responsabile di Progetto}\label{4.2.2.1}
+
+Il \textit{Responsabile di Progetto}, ruolo fondamentale e presente per l'intera durata del lavoro, rappresenta il gruppo presso il proponente ed i committenti. Il suo principale compito è inoltre quello di coordinare la struttura e organizzare il lavoro. In particolare questo ruolo comporta:
+\begin{itemize}
+	\item il coordinamento dei membri del gruppo e dei compiti che devono portare a termine;
+	\item la gestione della pianificazione, ossia l'attività da svolgere e le relative scadenze da rispettare;
+	\item avere la responsabilità della stima dei costi e dell'analisi dei rischi;
+	\item la gestione delle relazioni che il gruppo intrattiene con i soggetti esterni;
+	\item l'amministrazione delle risorse umane e dell'assegnazione dei ruoli;
+	\item l'approvazione dei documenti.
+\end{itemize}
+
+\subsubsection{Amministratore di Progetto}\label{4.2.2.2}
+
+L'\textit{Amministratore del Progetto} ha il compito di gestire, controllare e curare gli strumenti che il gruppo utilizza per lo svolgimento del proprio lavoro; è colui che garantisce l'affidabilità e l'efficacia dei mezzi. Questa figura persegue l'idea che la buona gestione dell'ambiente del lavoro favorisca la produttività, per questo motivo deve:
+\begin{itemize}
+	\item amministrare le infrastrutture e i servizi necessari ai processi di supporto;
+	\item gestire il versionamento e la configurazione dei prodotti;
+	\item controllare la documentazione per assicurarsi che venga corretta, verificata ed approvata;
+	\item facilitare il reperimento della documentazione;
+	\item risolvere eventuali problemi legati alla gestione dei processi;
+	\item redigere e manutenere le norme e le procedure che regolano il lavoro;
+	\item individuare gli strumenti utili all'automazione dei processi.
+\end{itemize}
 
 \subsubsection{Analista}\label{4.2.2.3}
 
-\subsubsection{Programmatore}\label{4.2.2.4}
+L'\textit{Analista} è presente nelle fasi iniziali del progetto, soprattutto quando avviene la stesura dell'\textit{Analisi dei Requisiti} e il suo compito è quello di evidenziare i punti fondamentali del problema in questione per comprenderne le sue peculiarità. Quindi la sua figura è fondamentale per la buona riuscita del lavoro, in quanto senza la sua analisi potrebbero essere presenti errori o mancanze nell'individuazione dei requisti che possono compromettere la successiva attività di progettazione.\\
+L'\textit{Analista}:
+\begin{itemize}
+	\item studia e definisce il problema in oggetto;
+	\item analizza le richieste;
+	\item fissa quali sono i requisiti studiando i bisogni impliciti ed espliciti;
+	\item analizza gli utenti e i casi d'uso;
+	\item redige lo \textit{Studio di Fattibilità} e l'\textit{Analisi dei Requisiti}. 
+\end{itemize}
 
-\subsubsection{Verificatore}\label{4.2.2.5}
+\subsubsection{Progettista}\label{4.2.2.4}
+
+Il \textit{Progettista} ha il compiti di sviluppare una soluzione che soddisfi i bisogni individuati dal lavoro dell'\textit{Analista}. Lo scopo di questo compito, di natura sintetica, è quello di produrre un'architettura che modelli il problema a partire da un insieme di requisiti. Egli deve:
+\begin{itemize}
+	\item applicare i principi noti e collaudati per produrre un'architettura coerente e consistente;
+	\item produrre una soluzione sostenibile e realizzabile che rientri nei costi stabiliti dal preventivo;
+	\item costruire una struttura che soddisfi i requisiti e che sia aperta alla comprensione;
+	\item limitare il più possibile il grado di accoppiamento tra le varie componenti;
+	\item sforzarsi di cercare l'efficienza, la flessibilità e la riusabilità;
+	\item elaborare una soluzione capace di interagire in modi diversi con l'ambiente in cui si pone e che sia sicura rispetto ad eventuali anomalie e intrusioni esterne;
+	\item ricercare la massima disponibilità e affidabilità per l'architettura proposta.
+\end{itemize}
+
+\subsubsection{Programmatore}\label{4.2.2.5}
+
+Il \textit{Programmatore} è incaricato della codifica: il suo compito è quello di implementare l'architettura prodotta dal \textit{Progettista} in modo tale che aderisca alle specifiche. Egli è responsabile della manutenzione del codice creato, infatti i suoi compiti sono:
+\begin{itemize}
+	\item codificare secondo le specifiche dettate dal \textit{Progettista}, inoltre il codice prodotto deve essere documentato, versionabile e strutturato così da agevolare la futura manutenzione;
+	\item creare le componenti che servono per la verifica e la validazione del codice;
+	\item scrivere il \textit{Manuale Utente} relativo al prodotto.
+\end{itemize}
+
+\subsubsection{Verificatore}\label{4.2.2.6}
+
+Il \textit{Verificatore} deve essere presente per tutta la durata del progetto e si occupa di controllare che le attività svolte rispettino le norme e le attese prefissate. Egli deve:
+\begin{itemize}
+	\item accertarsi che l'esecuzione delle attività di processo non provochi errori;
+	\item redigere la parte retrospettiva del \textit{Piano di Qualifica} che chiarisce le verifiche e le prove effettuate.
+\end{itemize}
 
 \subsection{Assegnazione dei compiti}\label{4.2.3}
 
-\subsection{Ciclo di vita del ticket}\label{4.2.4}
+La progressione del progetto può essere vista come il completamento sequenziale o parallelo di una serie di compiti, ognuno con scadenza temporale, i quali producono risultati utili per la realizzazione degli obiettivi. I compiti possono essere determinati da:
+\begin{itemize}
+	\item contingenza;
+	\item processi in atto;
+	\item un insieme dei fattori precedenti.
+\end{itemize}
+
+La figura che si occupa della suddivisione ed assegnazione dei compiti è il \textit{Responsabile di Progetto}, il quale:
+\begin{itemize}
+	\item individua il compito da svolgere;
+	\item se ritiene il compito complesso lo suddivide in diversi sotto-compiti;
+	\item individua uno o più componenti del gruppo a cui assegnare il compito;
+	\item crea le schede su Trello e aggiorna la Timeline di GitKraken.
+\end{itemize}
+
+Di conseguenza i membri del gruppo devono impegnarsi per svolgere il compito entro la data prefissata, avvisando nel caso in cui riscontrino problemi a rispettare le scadenze.
+
+\subsection{Trello e Gitkraken}\label{4.2.4}
+
+Dopo aver suddiviso i compiti, il \textit{Responsabile di Progetto} modificherà la pagina di Trello del gruppo. Ogni scheda avrà la descrizione del compito da svolgere, i componenti del gruppo che devono svolgerlo e la data di scadenza. \\
+Durante lo sviluppo i membri del gruppo possono aggiungere commenti ed informazioni utili allo svolgimento del compito, se quest'ultimo è suddiviso in più parti sarà presente un elenco puntato che indica ogni suddivisione che l'addetto allo svolgimento potrà spuntare quando conclusa. \\
+Per aiutare il gruppo viene fornita anche una rappresentazione grafica delle varie scadenze da rispettare grazie allo strumento Timeline di GitKraken.
 
 \subsection{Metriche}\label{4.2.5}
 
