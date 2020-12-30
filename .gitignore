@@ -13,3 +13,5 @@
 # e tranne la cartella immagini e tutto ciò che v'è al suo interno
 !/documentazione/immagini/
 !/documentazione/immagini/*
+
+documentazione/norme_di_progetto/norme_di_progetto.pdf

@@ -67,20 +67,82 @@ I requisiti possono essere individuati in diverse fonti, quali:
 	\item \textit{Capitolati d'Appalto}: i requisiti sono stati individuati attraverso la lettura del documento fornito dal proponente \textit{Sync Lab} sul capitolato proposto;
 	\item \textit{Verbali Interni}: attraverso le riunioni attuate internamente dagli \textit{Analisti} sono emersi vari requisiti;
 	\item \textit{Verbali Esterni}: attraverso contatti e discussioni effettuate con il responsabile aziendale Fabio Pallaro sono emersi requisiti, i quali vi sarà assegnato un codice presente nella tabella dei tracciamenti;
-	\item Casi d'uso: attraverso le modalità d'uso del prodotto si sono individuati dei requisiti particolari.
 \end{itemize}
 \subsubsection{Prospettive}\label{2.2.3.4}
 L'obiettivo dell'\textit{Analisi dei Requisti} è quello di redigere un documento che racchiuda al suo interno tutti i requisiti richiesti dal proponente.
-\subsubsection{Struttura}\label{2.2.3.5}
+\subsubsection{Struttura}\label{2.2.3.5} %wip non è ancora perfettamente definito ???
 L'\textit{Analisi dei requisiti} è strutturato nel seguente modo:
 \begin{itemize}
-	\item 
+	\item \textbf{Introduzione}: in questa sezione si introduce lo scopo del documento e riferimenti a documenti esterni;
+	\item \textbf{Descrizione generale}: il prodotto viene descritto, si individuano le fasi generali del progetto e l'utenza a cui è destinato il prodotto;
+	\item \textbf{Fasi del prodotto}: si elencano in gruppi le fasi del progetto, le quali vengono suddivise in parti per individuare più dettagliatamente tutti i processi di sviluppo del software;
+	\item \textbf{Requisiti}: utilizzando le fasi descritte si dettagliano tutti i requisiti obbligatori e opzionali da implementare ad ogni fase.
 \end{itemize}
-\subsubsection{Classificazione dei requisiti}\label{2.2.3.6}
-\subsubsection{Classificazione dei casi d'uso}\label{2.2.3.7}
-\subsubsection{Metriche}\label{2.2.3.8}
-
+\subsubsection{Classificazione dei requisiti}\label{2.2.3.6}% RS1.2 = rs(requisiti specifici) 1(fase generale a cui si riferiscono) 2(numero del requisito incrementale)
+I requisiti sono stati qualificati utilizzando la seguente codifica:
+\begin{center}
+	\textbf{RS[codice\_fase].[codice\_requisito]}
+\end{center} 
+La descrizione della classificazione è la seguente:
+\begin{itemize}
+	\item \textbf{RS}: è l'acronimo per Requisito Specifico;
+	\item \textbf{Codice\_fase}: individua la fase in cui è richiesto lo sviluppo del requisito;
+	\item \textbf{Codice\_requisito}: è un numero incrementale per rendere univoco il requisito.
+\end{itemize}
+Ogni requisito è strutturato nel seguente modo:
+\begin{itemize}
+	\item \textbf{Identificativo}: individua univocamente il requisito;
+	\item \textbf{Descrizione}: descrizione del requisito richiesto nella determinata fase;
+	\item \textbf{Tipo di requisito}: individua la tipologia di requisito obbligatorio, opzionale.
+\end{itemize}
+\subsubsection{Classificazione delle fasi}\label{2.2.3.7}% FC1.2 = fc(fasi capitolato) 1 (macro-fase) 2(fase precisa)
+La descrizione dettagliata delle fasi è stata incorporata nel documento per individuare la fase in cui il requisito è necessario che venga implementato o sia possibile l'implementazione.\\
+La classificazione delle fasi è definita nel seguente modo:
+\begin{center}
+	\textbf{FC[codice\_macro-fase].[codice\_fase]}
+\end{center}
+La descrizione della classificazione è la seguente:
+\begin{itemize}
+	\item \textbf{FC}: è l'acronimo per Fasi Capitolato;
+	\item \textbf{Codice\_macro-fase}: individua un numero riferito alla fase dello sviluppo del progetto;
+	\item \textbf{Codice\_fase}: individua un numero riferito ad una suddivisione della fase del progetto.
+\end{itemize}
+Ogni suddivisione delle fasi è strutturato nel seguente modo:
+\begin{itemize}
+	\item \textbf{Identificativo}: inserito prima del nome della fase per individuarla univocamente;
+	\item \textbf{Nome}: identifica il nome della fase;
+	\item \textbf{Descrizione}: descrizione dello scopo della fase in analisi;
+	\item \textbf{Input}: dati in ingresso necessari allo sviluppo della fase;
+	\item \textbf{Output}: dati in uscita elaborati o modificati durante la fase;
+	\item \textbf{Linguaggio di programmazione}: linguaggio di programmazione utilizzato per lo sviluppo della fase;
+\end{itemize}
+\subsubsection{Qualità dei requisiti}\label{2.2.3.8}
+Ogni requisito deve rispettare le seguenti qualità:
+\begin{itemize}
+	\item devono essere correttamente descritti;
+	\item non devono essere ambigui, ogni requisito fornirà un'unica interpretazione;
+	\item devono essere completi, cioè descrivere in modo completo e in tutte le sue parti la funzionalità da implementare;
+	\item ogni requisito deve essere consistente, cioè non deve avere conflitti con altri requisiti individuati;
+	\item devono essere modificabili, cioè ogni requisito nel corso dello sviluppo del progetto può essere rivalutato e modificato e bisogna mantenere uno storico dei cambiamenti;
+	\item ogni requisito deve essere tracciabile, cioè ogni requisito deve essere tracciabile ad ogni suo test o codice di implementazione o alla sua origine;
+	\item ogni requisito deve essere classificato per importanza o stabilità;
+	\item ogni requisito deve essere verificabile, cioè deve essere possibile una sua verifica attraverso un processo nel quale una persona o una macchina può controllarlo;
+\end{itemize}
 
 \subsection{Progettazione}\label{2.2.4}
 \subsubsection{Scopo}\label{2.2.4.1}
-La Progettazione è un'attività svolta dai \textit{Progettisti}. In questa fase si individuano, attraverso l'\textit{Analisi dei Requisiti}, le caratteristiche che il prodotto deve avere per soddisfare tutti i requisiti richiesti dal proponente. Lo scopo è quello di determinare la soluzione migliore per ogni requisito.
+La Progettazione è un'attività svolta dai \textit{Progettisti}. In questa fase si individuano, attraverso l'\textit{Analisi dei Requisiti}, le caratteristiche che il prodotto deve avere per soddisfare tutti i requisiti richiesti dal proponente. Lo scopo è quello di determinare la soluzione migliore per risolvere ogni requisito individuato. 
+\subsubsection{Aspettative}\label{2.2.4.2}
+Alla conclusione della stesura della progettazione si ha come risultato la realizzazione dell'architettura del software da sviluppare. Tale architettura è necessaria ai programmatori per individuare le istruzioni necessarie a sviluppare il prodotto finito.
+\subsubsection{Descrizione}\label{2.2.4.3}
+La progettazione è suddivisa principalmente in due parti:
+\begin{itemize}
+	\item \textbf{Technology baseline}: contiene tutte le specifiche adottate nella progettazione ad alto livello e delle sue componenti, i test di verifica e l'elenco dei diagrammi UML utilizzati per la definizione dell'architettura;
+	\item \textbf{Product baseline}: perfeziona ulteriormente la fase di progettazione, integrando ciò che è riportato nella technology baseline, definendo inoltre i test necessari alla verifica.
+\end{itemize}
+
+\subsubsection{Technology baseline}
+
+\subsubsection{Product baseline}
+
+\subsection{Codifica}
