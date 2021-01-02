@@ -214,3 +214,45 @@ La correttezza ortografica della lingua italiana è verificata attraverso l'appo
 \subsubsection{Latex}
 Per la stesura dei documenti, il gruppo JawaDruids ha scelto \LaTeX, un linguaggio compilato basato sul programma di composizione tipografica \TeX, al fine di produrre documenti coerenti, ordinati, templatizzati e stesi in modo collaborativo.
 \section{Gestione della configurazione}
+\subsection{Scopo}
+Lo scopo della configurazione è definire una precisa organizzazione nella produzione di documentazione e codice.
+L'implementazione di questo processo rende sistematica la produzione di codice e documenti, la loro modifica e il loro avanzamento di stato.
+Ogni elemento relativo al progetto garantisce pertanto il suo versionamento e rispetta le norme di collocazione, denominazione, modifica e assegnazione di stato descritte in seguito.
+Sono inoltre qui raggruppati e brevemente descritti gli strumenti utilizzati a supporto di tale organizzazione.
+\subsection{Versionamento}
+\subsubsection{Codice di versione di un documento}
+Ogni documento possiede una storia che dev'essere ricostruibile tramite i suoi codici di versione.
+Il registro delle modifiche, presente in ogni documento fatta eccezione per i verbali, raccoglie tutta la storia delle versioni con le modifiche ad esse associate.
+Ogni versione corrisponde ad una riga in tale registro ed è composta da tre numeri separati da punti
+%INSERIRE TESTO CENTRATO X.Y.Z
+ove, partendo dall'ultima lettera:
+\begin{itemize}
+  \item \textbf{Z} rappresenta una versione in via di sviluppo del documento, ovvero in cui i redattori hanno aggiunto dei nuovi capitoli o sezioni non ancora verificati;
+  \item \textbf{Y} rappresenta una versione in cui uno o più \textit{Verificatori} hanno proceduto alla revisione dei nuovi capitoli redatti, assicurando la correttezza sia grammaticale che strutturale;
+  \item \textbf{X} rappresenta una versione ufficiale approvata dal \textit{Responsabile di progetto}, e pertanto garantisce un particolare livello di stabilità, correttezza e professionalità.
+\end{itemize}
+Queste variabili assumono valori interi partendo da 0 con incremento di una singola unità alla volta.
+Ad ogni incremento di una variabile tutte quelle alla sua destra vengono nuovamente azzerate.
+\subsubsection{Tecnologie adottate}
+Il gruppo utilizza il sistema di controllo di versione Git con hosting sulla piattaforma Github.
+L'interazione con queste tecnologie avviene da linea di comando del terminale attraverso il wrapper Git-flow oppure tramite il software ad interfaccia grafica GitKraken.
+
+L'utilizzo di questi strumenti assicurano la progressione, collaborazione e sicurezza nello sviluppo di ogni file all'interno della repository.
+\subsubsection{Repository remoto}
+Il repository remoto utilizzato dal gruppo è disponibile al link
+\begin{center}
+ \url{https://github.com/Andrea-Dorigo/jawadruids.git}
+\end{center}
+È possibile scaricare l'intero progetto sulla propria macchina tramite il comando
+\begin{center}
+  \texttt{git clone https://github.com/Andrea-Dorigo/jawadruids.git}
+\end{center}
+%\begin{lstlisting}
+%git flow feature publish analisi-uber
+%\end{lstlisting}
+La struttura dei branch rispetta la convenzione standard comunemente accettata dalla community di Git e Git-flow. %aggiungere un riferimento farebbe bene
+Il branch \texttt{main} contiene la versione ufficiale del progetto, in cui il \textit{Responsabile} ha approvato tutti i files in esso contenuti.
+Da questo si dirama il branch \texttt{develop}, il quale contiene files nella maggior parte dei casi già revisionati dai \textit{Verificatori}; fanno eccezzione a questa norma i documenti e file di interesse comune a moltepici ambiti del progetto oppure i file che non richiedono particolare verifica (gitignore, verbali, template, \textit{Glossario}, linee guida).
+A partire dal \texttt{develop} si diramano i branch delle \texttt{feature}, \texttt{bugfix} e \texttt{hotfix}; i loro nomi devono esplicitare ciò che si sta producendo al loro interno, sempre rispettando le convenzioni di Git-flow.
+
+La cartella \textbf{documentazione} contiene tutti i documenti prodotti dal gruppo; le norme riguardanti i suoi contenuti si trovano nella sezione \S~\ref{3.1.6}}.
