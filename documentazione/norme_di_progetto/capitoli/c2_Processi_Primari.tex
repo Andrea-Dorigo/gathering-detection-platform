@@ -129,6 +129,26 @@ Ogni requisito deve rispettare le seguenti qualità:
 	\item ogni requisito deve essere verificabile, cioè deve essere possibile una sua verifica attraverso un processo nel quale una persona o una macchina può controllarlo;
 \end{itemize}
 
+\subsubsection{Metriche}\label{2.2.3.9}
+Con \textbf{MQPD01} si intende la \textbf{Totalità delle implementazioni}. Indice riportante l'interezza del prodotto software, rispetto ai requisiti posti, mediante un valore percentuale.:
+
+\begin{center}
+	\textbf{T=($1-\frac{RnI}{RI}$)*100}
+\end{center}
+Dove:
+\begin{itemize}
+	\item \textbf{T} sta per \textit{Totalità}, riferito ai requisiti da implementare.
+	\item \textbf{RnI} sta per \textit{Requisito non Implementato};
+	\item \textbf{RI} sta per \textit{Requisito Implementato};
+\end{itemize}
+I range accettabili per il risultato di \textbf{T} sono così suddivisi:
+\begin{itemize}
+	\item 90\% $<$ \textbf{T} $\leq$ 100\% indica che la copertura dei requisiti proposti è quasi totale;
+	\item 80\% $<$ \textbf{T} $\leq$ 90\% indica che la copertura dei requisiti proposti è sufficiente, buona.
+	\item \textbf{T} $\leq$ 80\% indica che la copertura dei requisiti proposti è insufficiente.
+\end{itemize}
+
+
 \subsection{Progettazione}\label{2.2.4}
 \subsubsection{Scopo}\label{2.2.4.1}
 La Progettazione è un'attività svolta dai \textit{Progettisti}. In questa fase si individuano, attraverso l'\textit{Analisi dei Requisiti}, le caratteristiche che il prodotto deve avere per soddisfare tutti i requisiti richiesti dal proponente. Lo scopo è quello di determinare la soluzione migliore per risolvere ogni requisito individuato. 

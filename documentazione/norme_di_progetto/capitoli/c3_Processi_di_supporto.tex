@@ -195,7 +195,7 @@ La rappresentazione dei dati in forma tabellare è obbligatoria solo nel momento
 È obbligatorio l’uso di colori che abbiano un contrasto sufficiente a garantire la leggibilità.
 Le tabelle eccessivamente lunghe sono sconsigliate, poichè potrebbero risultare dispersive.
 \subsection{Metriche}
-\subsubsection{MPD03 Indice Gulpease}
+\subsubsection{MQPD02 Indice Gulpease}
 L'indice di Gulpease riporta il grado di leggibilità di un testo redatto in lingua italiana.\\
 La formula adottata è:
 \begin{center}
@@ -210,6 +210,8 @@ L'indice così calcolato può pertanto assumere valori compresi tra 0 e 100, in 
 
 \subsubsection{Correttezza Ortografica}
 La correttezza ortografica della lingua italiana è verificata attraverso l'apposito strumento integrato di \TeX studio, il quale sottolinea in tempo reale le parole ove ritiene sia presente un errore, consentendone la correzione.
+
+
 \subsection{Strumenti di stesura}
 \subsubsection{Latex}
 Per la stesura dei documenti, il gruppo JawaDruids ha scelto \LaTeX, un linguaggio compilato basato sul programma di composizione tipografica \TeX, al fine di produrre documenti coerenti, ordinati, templatizzati e stesi in modo collaborativo.
@@ -271,3 +273,30 @@ dove:
 \end{itemize}
 
 \section{Verifica} \label{3.4}
+\subsection{Metriche}\label{3.4.1}
+\subsubsection{MQPD03 Rilevamento Errori}
+Indice che mostra qual è la percentuale di errore basata sui test fatti.
+Come formula viene utilizzata la seguente:
+\begin{center}
+	\textbf{RE = ($1-\frac{TE}{TT}$)*100}
+\end{center}
+\begin{itemize}
+	\item \textbf{RE} sta per \textit{Rilevamento Errori}
+	\item \textbf{TE} sta per \textit{Test con Errori};
+	\item \textbf{TT} sta per \textit{Test Totali};
+\end{itemize}
+\textit{Il gruppo JawaDruids ha valutato precoce la scelta di stabilire in questa prima fase dei valori soglia per tale metrica, di conseguenza il gruppo si riserva di integrarli successivamente in modo opportuno.}
+
+\subsubsection{MQPD04 Validità Dati}
+Questo indice misura la effettiva veridicità dei dati che arrivano in input al software. Ovviamente più i dati si avvicinano alla realtà più elevato sarà il valore dell'indice.
+Viene utilizzata la seguente formula:
+\begin{center}
+	\textbf{VD = $\frac{DIV}{DP}$ *100}
+\end{center}
+\begin{itemize}
+	\item \textbf{VD} sta per \textit{Validità Dati};
+	\item \textbf{DIV} sta per \textit{Dati Input Validati};
+	\item \textbf{DP} sta per \textit{Dati Previsti};
+\end{itemize}
+
+\textit{I range di valori accettabili non si possono ancora esprimere in quanto, concordi con l'azienda, si stabiliranno in futuro.}
