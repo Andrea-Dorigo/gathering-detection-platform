@@ -1,0 +1,99 @@
+\chapter{Qualità del prodotto} \label{Qualità del prodotto}
+
+Per valutare la qualità del prodotto il gruppo JawaDruids(corsivo) ha stabilito di usare come riferimento lo standard ISO/IEC 9126, che definisce le caratteristiche, descritte attraverso dei parametri,  da considerare affinché il prodotto finale sia di buona qualità. 
+Per un approfondimento sullo standard ISO/IEC 9126 si rimanda alla lettura del paragrafo §5 delle Norme di Progetto v1.0.0 (corsivo). 
+Si riportano di seguito i parametri dello standard ritenuti più interessanti dal gruppo, nel contesto del  progetto.
+Le metriche qui riportate si limitano a quelle individuate fino alla stesura di tale documento, dunque l’elenco di queste sarà opportunamente ampliato in futuro, se necessario per l’aumento della completezza della valutazione della qualità.
+
+\section{Funzionalità} \label{3.1}
+Si tratta della capacità del prodotto software di fornire le funzioni appropriate e necessarie per soddisfare i bisogni emersi nell’Analisi dei requisiti (corsivo) e per operare in un determinato contesto. 
+\subsection{Metriche} \label{3.1.1}
+\subsubsection{MQPD01 Totalita dell’implementazione} \label{3.1.1.1}
+Indice riportante l’interezza del prodotto software, rispetto ai requisiti posti, mediante un valore in percentuale:
+\begin{center}
+	\textbf{T=($1-\frac{RnI}{RI}$)*100}
+\end{center}
+Dove:
+\begin{itemize}
+	\item \textbf{T} sta per \textit{Totalità}, riferito ai requisiti da implementare.
+	\item \textbf{RnI} sta per \textit{Requisito non Implementato};
+	\item \textbf{RI} sta per \textit{Requisito Implementato};
+\end{itemize}
+I range accettabili per il risultato di \textbf{T} sono così suddivisi:
+\begin{itemize}
+	\item 90\% $<$ \textbf{T} $\leq$ 100\% indica che la copertura dei requisiti proposti è quasi totale;
+	\item 80\% $<$ \textbf{T} $\leq$ 90\% indica che la copertura dei requisiti proposti è sufficiente, buona.
+	\item \textbf{T} $\leq$ 80\% indica che la copertura dei requisiti proposti è insufficiente.
+\end{itemize}
+\begin{itemize}
+	\item \textbf{Valore Preferibile:} 100% %%controlla
+	\item \textbf{Valore  Accettabile:} $\leq$ 90% 
+\end{itemize}
+
+\section{Affidabilità} \label{3.2}
+Si tratta della capacità del prodotto software di mantenere il livello di prestazione elevato anche se usato in condizioni specifiche, che possono essere anomale o critiche. 
+\subsection{Metriche} \label{3.2.1}
+\subsubsection{MQPD03 Rilevamento Errori} \label{3.2.1.1}
+Indice che mostra qual’è la percentuale di errore basata sui test fatti. Come formula viene usata la seguente:
+\begin{center}
+	\textbf{RE = ($1-\frac{TE}{TT}$)*100}
+\end{center}
+\begin{itemize}
+	\item \textbf{RE} sta per \textit{Rilevamento Errori}
+	\item \textbf{TE} sta per \textit{Test con Errori};
+	\item \textbf{TT} sta per \textit{Test Totali};
+\end{itemize}
+\textit{Il gruppo JawaDruids ha valutato precoce la scelta di stabilire in questa prima fase dei valori soglia per tale metrica, di conseguenza il gruppo si riserva di integrarli successivamente in modo opportuno.}
+
+\section{Usabilità} \label{3.3}
+Si tratta della capacità del prodotto software di essere di facile comprensione e utilizzo da parte dell’utente, sotto determinate condizioni. 
+\subsection{Metriche} \label{3.3.1}
+\subsubsection{MQPD04 Validità dei dati in input} \label{3.3.1.1}
+Questo indice misura la veridicità dei dati che arrivano in input al software. Ovviamente più i dati si avvicinano alla realtà più elevato sarà il valore dell’indice.
+Viene usata la seguente formula:
+\begin{center}
+	\textbf{VD = $\frac{DIV}{DP}$ *100}
+\end{center}
+\begin{itemize}
+	\item \textbf{VD} sta per \textit{Validità Dati};
+	\item \textbf{DIV} sta per \textit{Dati Input Validati};
+	\item \textbf{DP} sta per \textit{Dati Previsti};
+\end{itemize}
+
+\textit{I range di valori accettabili non si possono ancora esprimere in quanto, concordi con l'azienda, si stabiliranno in futuro.}
+\subsubsection{Indice di Gulpease} \label{3.3.1.2}
+L’indice di Gulpease riporta il grado di leggibilità di un testo redatto in lingua italiana.
+La formula adottata è:
+\begin{center}
+	GULP= 89+ $\frac{300*(numero frasi)-10*(numero parole)}{numero lettere}$
+\end{center}
+L'indice così calcolato può pertanto assumere valori compresi tra 0 e 100, in cui:
+\begin{itemize}
+	\item \textbf{GULP$<$ 80:} indica una leggibilità difficile per un utente con licenza elementare;
+	\item \textbf{GULP$<$ 60:} indica una leggibilità difficile per un utente con licenza media;
+	\item \textbf{GULP$<$ 40:} indica una leggibilità difficile per un utente con licenza superiore.
+\end{itemize}
+\begin{itemize}
+	\item \textbf{Valore Preferibile:} $\leq$ 80 %Controlla
+	\item \textbf{Valore  Accettabile:} $\leq$ 60
+\end{itemize}
+\subsubsection{Errori Ortografici} \label{3.3.1.3}
+La correttezza ortografica della lingua italiana è verificata attraverso l’apposito strumento integrato in di TexStudio, il quale sottolinea in tempo reale le parole ove ritiene sia presente un errore, consentendone la correzione.
+\begin{itemize}
+	\item \textbf{Valore Preferibile:} 0
+	\item \textbf{Valore  Accettabile:} 0
+\end{itemize}
+
+\section{Efficienza} \label{3.4}
+Si tratta della capacità di un prodotto software di realizzare le funzioni richieste nel minor tempo possibile e sfruttando al meglio le risorse necessarie, quando opera in determinate condizioni. 
+\subsection{Valutazione sulla Carattristica} \label{3.4.1}
+I membri del gruppo non hanno valutato opportuno stabilire già delle metriche di qualità riguardo questa sezione in quanto il proponente non ha ancora espresso requisiti in termini di efficienza. Se ritenuto necessario, successivamente, dopo una conoscenza più approfondita della gestione delle risorse e dell’ambiente di rilascio del prodotto software, il gruppo si preoccuperà di integrare efficacemente la suddetta sezione.
+
+\section{Portabilità} \label{3.5}
+La portabilità è definita come la capacità di un software nell’essere “trasportato” da un ambiente di lavoro, inteso sia come organizzativo che tecnologico,  ad un altro.
+\subsection{Valutazione sulla Caratteristica} \label{3.5.1}
+(non so se dovrà essere portabile o meno, forse essendo web page ci sarà portabilità sui browser)
+
+\section{Manutenibilità} \label{3.6}
+
+\subsection{Valutazione sulla Caratteristica} \label{3.6.1}
