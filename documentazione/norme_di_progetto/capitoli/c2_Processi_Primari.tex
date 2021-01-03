@@ -162,7 +162,41 @@ La progettazione è suddivisa principalmente in due parti:
 \end{itemize}
 
 \subsubsection{Technology baseline}
-
+La technology baseline viene redatta dal \textit{Progettista} ed includerà:
+\begin{itemize}
+	\item \textbf{Diagramma UML}: diagrammi sulle classi usate, package, attività e sequenze.
+	\item \textbf{Tecnologie}: descrizione delle tecnologie utilizzate nel progetto, i loro vantaggi e svantaggi;
+	\item \textbf{Design pattern}: descrizione di ogni design pattern per la realizzazione dell'architettura, ognuno di essi viene accompagnato da un diagramma che ne espone il significato e la struttura; 
+	\item \textbf{Tracciamento delle componenti}: ogni componente viene riferito al requisito che soddisfa;
+	\item \textbf{Test di integrazione}: corrispondono a tutti i test necessari alla verifica del sistema in tutte le sue unità.
+\end{itemize}
 \subsubsection{Product baseline}
 
 \subsection{Codifica}
+
+\subsubsection{Scopo}
+La fase di codifica è la scrittura del codice per sviluppare la miglior soluzione del prodotto. In questa sezione si introdurranno tutte le norme necessarie allo sviluppo di un codice uniformato tra tutti i \textit{Programmatori} e rispettoso delle regole standard indicate nel documento.
+\subsubsection{Aspettative}
+Conclusa la fase di codifica ci si attende un codice pulito e facile da leggere, utile nelle successive validazioni, modifiche e per agevolare la sua manutenzione. L'obiettivo è quello di sviluppare un prodotto conforme alle richieste individuate con il proponente. 
+
+\subsubsection{Descrizione}
+In questa fase la programmazione del prodotto dovrà rispettare le norme descritte nel documento. Perseguendo gli obiettivi individuati nel documento \textit{Piano di qualifica v1.0.0} si produrrà un software con un'alta qualità di codice.
+
+\subsubsection{Stile di codifica}
+All'interno di questo paragrafo vengono elencate le norme da rispettare da ogni membro del gruppo per raggiungere uniformità del codice:
+
+\begin{itemize}
+	\item \textbf{Indentazione}: ogni blocco di codice scritto per il prodotto da sviluppare deve essere ben indentato e deve rispettare una misura di 4 spazi (equivalenti alla pressione del tasto \textit{tab}). Fanno eccezione a questa regola i commenti che vengono inseriti per spiegazioni di blocchi di codice;
+	\item \textbf{Parentesizzazione}: le parentesi devono essere utilizzate in linea col blocco di codice scritto e non in una linea sottostante per separarlo;
+	\item \textbf{Univocità delle variabili, metodi e funzioni}: ogni variabile, metodo e funzione utilizzata deve avere un nome significativo, esplicativo ed univoco;
+	\item \textbf{Classi}: ogni classe deve avere il proprio nome scritto con l'iniziale maiuscola;
+	\item \textbf{Metodi e funzioni}: il nome di metodi e funzioni devono iniziare per lettera minuscola e se composti da più parole le successive devono essere scritte con lettera maiuscola (stile \textit{CamelCase});
+	\item \textbf{Lingua}: i commenti devono essere scritti in lingua inglese.
+\end{itemize}
+
+\subsection{Strumenti}
+
+\subsubsection{PragmaDB}
+Programma utilizzato per il tracciamento dei requisiti.
+\subsubsection{Draw.io}
+Programma utilizzato per la stesura dei diagrammi UML.
