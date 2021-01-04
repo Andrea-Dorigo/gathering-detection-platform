@@ -15,25 +15,61 @@ Per quando riguarda la qualità dei test si usa:
 \end{itemize}
 Inoltre i test hanno la seguente nomenclatura
 \begin{center}
-	\textbf{[TipoTest][TipoRequisito][Importanza][Codice]}
+	\textbf{[TipoTest]RS[tipo\_di\_requisito][codice\_requisito]}
 \end{center}
 dove:
 \begin{itemize}
 	\item \textbf{TipoTest}: specifica il tipo di test applicato;
-	\item \textbf{TipoRequisito}: assume i seguenti valori
+	\item \textbf{tipo\_di\_requisito}: assume i seguenti valori
 		\begin{itemize}
 			\item[-] \textbf{O} per i requisiti obbligatori;
 			\item[-] \textbf{D} per i requisiti desiderabili;
 			\item[-] \textbf{F} per i requisiti facoltativi;
 		\end{itemize}
-	\item \textbf{Importanza}: come si evince, questa label indica l'importanza del requisito;
-	\item 
+	\item \textbf{codice\_requisito}: un numero incrementale per rendere univoco il requisito.
 \end{itemize}
 
-\section{Test di convalida}
-I test di convalida hanno come scopo la verifica che il software sviluppato soddisfi i requisiti presenti nel capitolato(g) d’appalto e concordati col proponente.
-Questi saranno eseguiti durante il collaudo finale del prodotto software sotto l'osservazione sia dell'azienda proponente sia del gruppo di lavoro.
+\section{Tipi di test} \label{4.1}
+I test sono che verranno effettuati sul prodotto software sono così divisi:
+\begin{itemize}
+	\item \textbf{Test di convalida}: i test di convalida hanno come scopo la verifica che il software sviluppato soddisfi i requisiti presenti nel capitolato(g) d’appalto e concordati col proponente.
+	Questi saranno eseguiti durante il collaudo finale del prodotto software sotto l'osservazione sia dell'azienda proponente sia del gruppo di lavoro.
+	Rappresentati mediante la sigla \textbf{[TC]};
+	
+	\item \textbf{Test di sistema}: i test di sistema vengono eseguiti per verificare che i requisiti, scritti nel documento \textit{Analisi dei Requisiti}, siano stati implementati e funzionanti.
+	Viene rappresentato mediante la sigla \textbf{TS};
+		
+	\item \textbf{Test di integrazione}: questa tipologia di test verifica i singoli moduli del software come fossero un gruppo unico.
+	Vengono svolti successivamente ai \textit{TU} e prima dei \textit{TS}.
+	Sono contrassegnati da \textbf{[TI]}.
+	
+	\item \textbf{Test di unità}: i test di unità servono per verificare le singole unità del software, ovvero le componenti con funzionamento autonomo.
+	Il superamento di tali test non implica il corretto funzionamento del software.
+	Viene contassegnata da \textbf{TU}.
+\end{itemize}
 
-\section{Test di sistema}
-I test di sistema vengono eseguiti per verificare che i requisiti, scritti nel documento \textit{Analisi dei Requisiti}, siano stati implementati e funzionanti.
+
+\quad
+\def\tabularxcolumn#1{m{#1}}
+{\rowcolors{2}{Gray!90!RawSienna!20}{Gray!70!RawSienna!40}
+	
+	\begin{center}
+		\renewcommand{\arraystretch}{1.3}
+		\begin{tabularx}{\textwidth}{|c|c|c}
+			\hline
+			\rowcolor{airforceblue}
+			\textbf{Requisito} & \textbf{Descrizione} & \textbf{Esito}\\
+			\hline
+			\textit{TSRSO1} & L'utente deve poter vedere la heat-map in tempo reale  & \textit{NI}\\
+			\hline
+			\textit{TSRSO2} & L'utente deve poter vedere le heat-map in un intervallo di tempo futuro & \textit{NI}\\
+			\hline
+			\textit{TSRSO3} & L'utente deve aver accesso ai dati raccolti e storicizzati nel tempo & \textit{NI}\\
+			\hline
+		\end{tabularx}
+	\captionof{table}{Elenco test di sistema}
+	\end{center}
+
+
+
 
