@@ -37,7 +37,7 @@ I test sono che verranno effettuati sul prodotto software sono così divisi:
 	Rappresentati mediante la sigla \textbf{[TC]};
 	
 	\item \textbf{Test di sistema}: i test di sistema vengono eseguiti per verificare che i requisiti, scritti nel documento \textit{Analisi dei Requisiti}, siano stati implementati e funzionanti.
-	Viene rappresentato mediante la sigla \textbf{TS};
+	Viene rappresentato mediante la sigla \textbf{[TS]};
 		
 	\item \textbf{Test di integrazione}: questa tipologia di test verifica i singoli moduli del software come fossero un gruppo unico.
 	Vengono svolti successivamente ai \textit{TU} e prima dei \textit{TS}.
@@ -45,8 +45,9 @@ I test sono che verranno effettuati sul prodotto software sono così divisi:
 	
 	\item \textbf{Test di unità}: i test di unità servono per verificare le singole unità del software, ovvero le componenti con funzionamento autonomo.
 	Il superamento di tali test non implica il corretto funzionamento del software.
-	Viene contassegnata da \textbf{TU}.
+	Viene contassegnata da \textbf{[TU]}.
 \end{itemize}
+
 
 
 \quad
@@ -54,18 +55,18 @@ I test sono che verranno effettuati sul prodotto software sono così divisi:
 {\rowcolors{2}{RawSienna!90!RawSienna!20}{RawSienna!70!RawSienna!40}
 	
 	\begin{center}
-		\renewcommand{\arraystretch}{1.3}
-		\begin{tabularx}{\textwidth}{|c|c|c}
+		\renewcommand{\arraystretch}{1.4}
+		\begin{tabularx}{\textwidth}{|c|X|c|}
 			\hline
 			\rowcolor{airforceblue}
 			\textbf{Requisito} & \textbf{Descrizione} & \textbf{Esito}\\
 			\hline
-			\textit{TSRSO1} & L'utente deve poter vedere la heat-map in tempo reale  & \textit{NI}\\
+			\textit{TSRSO1} & L'utente deve poter vedere la heat-map in tempo reale & \textit{NI}\\
 			\hline
 			\textit{TSRSO2} & L'utente deve poter vedere le heat-map in un intervallo di tempo futuro & \textit{NI}\\
 			\hline
 			\textit{TSRSO3} & L'utente deve aver accesso ai dati raccolti e storicizzati nel tempo & \textit{NI}\\
 			\hline
 		\end{tabularx}
-	\captionof{table}{Elenco test di sistema}
+	\captionof{table}{\textbf{Elenco test di sistema}}
 	\end{center}
