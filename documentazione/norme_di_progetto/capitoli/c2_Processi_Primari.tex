@@ -52,7 +52,7 @@ Le prospettive alla fine della stesura del processo in questione sono le seguent
 	\item produrre un prodotto finale che rispecchi gli obiettivi imposti nello sviluppo e che superi i test e i controlli di qualità stabiliti dal proponente.
 \end{itemize}
 \subsubsection{Analisi dei requisiti}\label{2.2.3.1}
-\subsubsection{Scopo}\label{2.2.3.2}
+\subsubsection{Scopo}\label{2.2.3.1.1}
 L'analisi dei requisiti viene redatto dagli \textit{Analisti}, lo scopo è quello di definire le funzionalità che il nuovo prodotto deve offrire, ovvero i requisiti che devono essere soddisfatti dal software sviluppato.\\
 Gli obiettivi della stesura dell'\textit{Analisi dei Requisiti} sono:
 \begin{itemize}
@@ -61,16 +61,16 @@ Gli obiettivi della stesura dell'\textit{Analisi dei Requisiti} sono:
 	\item stabilire i requisiti e le funzionalità concordate con il cliente;
 	\item individuare per i \textit{Verificatori} riferimenti per le attività di controllo dei test.
 \end{itemize}
-\subsubsection{Descrizione}\label{2.2.3.3}
+\subsubsection{Descrizione}\label{2.2.3.1.2}
 I requisiti possono essere individuati in diverse fonti, quali:
 \begin{itemize}
 	\item \textit{Capitolati d'Appalto}: i requisiti sono stati individuati attraverso la lettura del documento fornito dal proponente \textit{Sync Lab} sul capitolato proposto;
 	\item \textit{Verbali Interni}: attraverso le riunioni attuate internamente dagli \textit{Analisti} sono emersi vari requisiti;
 	\item \textit{Verbali Esterni}: attraverso contatti e discussioni effettuate con il responsabile aziendale Fabio Pallaro sono emersi requisiti, i quali vi sarà assegnato un codice presente nella tabella dei tracciamenti;
 \end{itemize}
-\subsubsection{Prospettive}\label{2.2.3.4}
+\subsubsection{Prospettive}\label{2.2.3.1.3}
 L'obiettivo dell'\textit{Analisi dei Requisti} è quello di redigere un documento che racchiuda al suo interno tutti i requisiti richiesti dal proponente.
-\subsubsection{Struttura}\label{2.2.3.5} %wip non è ancora perfettamente definito ???
+\subsubsection{Struttura}\label{2.2.3.1.4} %wip non è ancora perfettamente definito ???
 L'\textit{Analisi dei requisiti} è strutturato nel seguente modo:
 \begin{itemize}
 	\item \textbf{Introduzione}: in questa sezione si introduce lo scopo del documento e riferimenti a documenti esterni;
@@ -78,24 +78,30 @@ L'\textit{Analisi dei requisiti} è strutturato nel seguente modo:
 	\item \textbf{Fasi del prodotto}: si elencano in gruppi le fasi del progetto, le quali vengono suddivise in parti per individuare più dettagliatamente tutti i processi di sviluppo del software;
 	\item \textbf{Requisiti}: utilizzando le fasi descritte si dettagliano tutti i requisiti obbligatori e opzionali da implementare ad ogni fase.
 \end{itemize}
-\subsubsection{Classificazione dei requisiti}\label{2.2.3.6}% RS1.2 = rs(requisiti specifici) 1(fase generale a cui si riferiscono) 2(numero del requisito incrementale)
+\subsubsection{Classificazione dei requisiti}\label{2.2.3.1.5}% RS1.2 = rs(requisiti specifici) 1(fase generale a cui si riferiscono) 2(numero del requisito incrementale)
 I requisiti sono stati qualificati utilizzando la seguente codifica:
 \begin{center}
-	\textbf{RS[codice\_fase].[codice\_requisito]}
+	\textbf{RS[tipo\_di\_requisito][codice\_requisito]}
 \end{center} 
 La descrizione della classificazione è la seguente:
 \begin{itemize}
 	\item \textbf{RS}: è l'acronimo per Requisito Specifico;
-	\item \textbf{Codice\_fase}: individua la fase in cui è richiesto lo sviluppo del requisito;
+	\item \textbf{Tipo\_di\_requisito}: individua la tipologia di requisito:
+	\begin{itemize}
+		\item Obbligatorio: indicato con la lettera "O" individua un requisito essenziale allo sviluppo del progetto e necessario al suo completamento;
+		\item Desiderabile: indicato con la lettera "D" individua un requisito utile al prodotto e che dà valore aggiunto ad esso, ma non essenziale al suo completamento;
+		\item Facoltativo: indicato con la lettera "F" individua un requisito che può essere sviluppato, ma può anche non essere completato.
+	\end{itemize};
 	\item \textbf{Codice\_requisito}: è un numero incrementale per rendere univoco il requisito.
 \end{itemize}
-Ogni requisito è strutturato nel seguente modo:
+Ogni requisito è strutturato nella tabella nel seguente modo:
 \begin{itemize}
 	\item \textbf{Identificativo}: individua univocamente il requisito;
 	\item \textbf{Descrizione}: descrizione del requisito richiesto nella determinata fase;
-	\item \textbf{Tipo di requisito}: individua la tipologia di requisito obbligatorio, opzionale.
+	\item \textbf{Tipo di requisito}: individua la tipologia di requisito obbligatorio, desiderabile e facoltativo;
+	\item \textbf{Fase}: individua la fase in cui è presente il requisito;
 \end{itemize}
-\subsubsection{Classificazione delle fasi}\label{2.2.3.7}% FC1.2 = fc(fasi capitolato) 1 (macro-fase) 2(fase precisa)
+\subsubsection{Classificazione delle fasi}\label{2.2.3.1.6}% FC1.2 = fc(fasi capitolato) 1 (macro-fase) 2(fase precisa)
 La descrizione dettagliata delle fasi è stata incorporata nel documento per individuare la fase in cui il requisito è necessario che venga implementato o sia possibile l'implementazione.\\
 La classificazione delle fasi è definita nel seguente modo:
 \begin{center}
@@ -116,7 +122,7 @@ Ogni suddivisione delle fasi è strutturato nel seguente modo:
 	\item \textbf{Output}: dati in uscita elaborati o modificati durante la fase;
 	\item \textbf{Linguaggio di programmazione}: linguaggio di programmazione utilizzato per lo sviluppo della fase;
 \end{itemize}
-\subsubsection{Qualità dei requisiti}\label{2.2.3.8}
+\subsubsection{Qualità dei requisiti}\label{2.2.3.1.7}
 Ogni requisito deve rispettare le seguenti qualità:
 \begin{itemize}
 	\item devono essere correttamente descritti;
@@ -129,7 +135,7 @@ Ogni requisito deve rispettare le seguenti qualità:
 	\item ogni requisito deve essere verificabile, cioè deve essere possibile una sua verifica attraverso un processo nel quale una persona o una macchina può controllarlo;
 \end{itemize}
 
-\subsubsection{Metriche}\label{2.2.3.9}
+\subsubsection{Metriche}\label{2.2.3.1.8}
 Con \textbf{MQPD01} si intende la \textbf{Totalità delle implementazioni}. Indice riportante l'interezza del prodotto software, rispetto ai requisiti posti, mediante un valore percentuale.:
 
 \begin{center}
@@ -161,7 +167,7 @@ La progettazione è suddivisa principalmente in due parti:
 	\item \textbf{Product baseline}: perfeziona ulteriormente la fase di progettazione, integrando ciò che è riportato nella technology baseline, definendo inoltre i test necessari alla verifica.
 \end{itemize}
 
-\subsubsection{Technology baseline}
+\subsubsection{Technology baseline}\label{2.2.4.4}
 La technology baseline viene redatta dal \textit{Progettista} ed include:
 \begin{itemize}
 	\item \textbf{Diagramma UML}: diagrammi sulle classi usate, package, attività e sequenze.
@@ -170,24 +176,24 @@ La technology baseline viene redatta dal \textit{Progettista} ed include:
 	\item \textbf{Tracciamento delle componenti}: ogni componente viene riferito al requisito che soddisfa;
 	\item \textbf{Test di integrazione}: corrispondono a tutti i test necessari alla verifica del sistema in tutte le sue unità.
 \end{itemize}
-\subsubsection{Product baseline}
+\subsubsection{Product baseline}\label{2.2.4.5}
 La product baseline viene redatta dal \textit{Progettista} ed include:
 \begin{itemize}
 	\item \textbf{definizioni delle classi e funzioni}: descrizione univoca delle classi e funzioni evitando ridondanze;
 	\item \textbf{tracciamento}: ogni requisito viene tracciato attraverso le classi e funzioni, questo è necessario per individuare se è stato soddisfatto il requisito;
 	\item \textbf{test di unità}: definiscono test per la verifica delle funzionalità del prodotto.
 \end{itemize}
-\subsection{Codifica}
+\subsection{Codifica}\label{2.2.5}
 
-\subsubsection{Scopo}
+\subsubsection{Scopo}\label{2.2.5.1}
 La fase di codifica è la scrittura del codice per sviluppare la miglior soluzione del prodotto. In questa sezione si introdurranno tutte le norme necessarie allo sviluppo di un codice uniformato tra tutti i \textit{Programmatori} e rispettoso delle regole standard indicate nel documento.
-\subsubsection{Aspettative}
+\subsubsection{Aspettative}\label{2.2.5.2}
 Conclusa la fase di codifica ci si attende un codice pulito e facile da leggere, utile nelle successive validazioni, modifiche e per agevolare la sua manutenzione. L'obiettivo è quello di sviluppare un prodotto conforme alle richieste individuate con il proponente. 
 
-\subsubsection{Descrizione}
+\subsubsection{Descrizione}\label{2.2.5.3}
 In questa fase la programmazione del prodotto dovrà rispettare le norme descritte nel documento. Perseguendo gli obiettivi individuati nel documento \textit{Piano di qualifica v1.0.0} si produrrà un software con un'alta qualità di codice.
 
-\subsubsection{Stile di codifica}
+\subsubsection{Stile di codifica}\label{2.2.5.4}
 All'interno di questo paragrafo vengono elencate le norme da rispettare da ogni membro del gruppo per raggiungere uniformità del codice:
 
 \begin{itemize}
@@ -199,7 +205,7 @@ All'interno di questo paragrafo vengono elencate le norme da rispettare da ogni 
 	\item \textbf{Lingua}: i commenti devono essere scritti in lingua inglese.
 \end{itemize}
 
-\subsection{Strumenti}
+\subsection{Strumenti}\label{2.2.6}
 
 \subsubsection{PragmaDB}
 Programma utilizzato per il tracciamento dei requisiti.
