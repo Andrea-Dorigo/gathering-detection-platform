@@ -279,6 +279,7 @@ Per ogni processo si descrivono:
 \end{itemize}
 Per ogni prodotto si descrivono:
 \begin{itemize}
+	%\item obiettivi (da vedere se si scrivono sul pdq)
 	\item Metriche da applicare.
 \end{itemize}
 \subsection{Aspettative} \label{3.3.3}
@@ -316,7 +317,50 @@ dove:
 \end{itemize}
 
 \section{Verifica} \label{3.4}
-\subsection{Metriche}\label{3.4.1}
+\subsection{Scopo} \label{3.4.1}
+\subsection{Descrizione} \label{3.4.2}
+\subsection{Aspettative} \label{3.4.3}
+\subsection{Attività} \label{3.4.4}
+\subsubsection{Test} \label{3.4.4.1}
+I test sono una parte fondamentale del processo di verifica: producono una misura della qualità del prodotto. Questi hanno lo scopo di verificare che il prodotto software svolga le attività che sono state richieste dal proponente, e di permettere di individuare e rimuovere gli errori  commessi, prima di mettere il prodotto in uso. In questo modo si aumenta la qualità del software. 
+I test devono essere:
+\begin{itemize}
+	\item \textbf{Automatici:} si intende la presenza di un automazione che permette ad ogni membro del gruppo di invocare ed eseguire tutti o una parte dei test. Quest’ultimi devono essere semplici e rapidi e soprattutto non devono richiedere l’interazione umana; 
+	\item \textbf{Ripetibili:} si intende che ogni invocazione di un test deve generare sempre lo stesso risultato dato uno stesso insieme di dati in input. Per assicurare ciò serve il determinismo, che è garantito se:
+	\begin{itemize}
+		\item Non cambia stato iniziale del sistema;
+		\item Non cambia ambiente di esecuzione.
+	\end{itemize}
+\end{itemize}
+Per ogni test si specificano i seguenti parametri:
+\begin{itemize}
+	\item \textbf{Ambiente:} sistema hardware e software usato nel corso del test;
+	\item \textbf{Stato iniziale:} stato di partenza del prodotto software al momento del test;
+	\item \textbf{Input:} dati in ingresso;
+	\item \textbf{Output:} dati in uscita attesi;
+	\item \textbf{Avvisi addizionali:} eventuali ulteriori istruzioni su come eseguire il test e su come interpretare i risultati ottenuti.
+\end{itemize}
+I tipi di test sviluppati sono i seguenti. \\ 
+\begin{itemize}
+	\item[] \textbf{Test di unità} \\
+		I test di unità, detti anche unit test, hanno il compito di testare le singole unità software, dove per unità si intende il più piccolo componente del programma dotato di funzionamento autonomo.
+		Sono utilizzati prettamente dagli sviluppatori e possono essere sia manuali che automatici.
+		Questi test facilitano le modifiche del codice del modulo in momenti successivi, infatti scrivendo test case per ogni funzione e metodo, in caso di fallimento diventa facile trovare l’errore.
+		Vengono eseguiti sempre prima dell’integrazione del modulo nel software in quanto garantiscono automaticamente l’integrità del codice.
+		I test vengono fatti mediante driver e software che simulano chiamate da parte di utenti o del sistema.
+	\item[] \textbf{Test di integrazione} \\
+		I test di integrazione servono a verificare le corrette funzionalità delle interfacce rispetto al prodotto software.
+		Vengono solitamente usate due o più unità già testate in modo da poter integrare i moduli successivi, in caso di successo del test, per poi espandersi iniziando ad unire anche tutte le parti software restanti.
+	\item[] \textbf{Test di sistema} \\
+		Questa tipologia di test serve a verificare il corretto funzionamento del prodotto una volta integrato completamente, per verificare che i requisiti specificati nell’\textit{Analisi dei Requisiti} funzionino.
+	\item[] \textbf{Test di regressione} \\
+		Questa tipologia di test ha lo scopo di testare le nuove funzionalità e garantire che le funzionalità preesistenti abbiano mantenuto le loro caratteristiche qualitative dopo l’introduzione di queste ultime. Per questo è necessario rieseguire i test già esistenti sul codice modificato così da verificare se il comportamento degli elementi precedentemente funzionanti si è alterato per via delle modifiche introdotte.
+	\item[] \textbf{Test di accettazione} \\
+		Ultima tipologia di test, vengono fatti per verificare il corretto funzionamento del prodotto software una volta completato.
+		Oltre agli sviluppatori, questi test vengono eseguiti sotto l’occhio del proponente cosicché possano valutare se il prodotto soddisfi i requisiti richiesti nel capitolato d’appalto.
+		Se i test vengono superati significa che il software è pronto per il rilascio.
+\end{itemize}
+\subsection{Metriche}\label{3.4.6}
 \subsubsection{MQPD03 Rilevamento Errori}
 Indice che mostra qual è la percentuale di errore basata sui test fatti.
 Come formula viene utilizzata la seguente:
