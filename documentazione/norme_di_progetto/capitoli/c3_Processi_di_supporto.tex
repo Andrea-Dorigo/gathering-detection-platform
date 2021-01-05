@@ -317,11 +317,42 @@ dove:
 \end{itemize}
 
 \section{Verifica} \label{3.4}
-\subsection{Scopo} \label{3.4.1}
-\subsection{Descrizione} \label{3.4.2}
+
+\subsection{Descrizione} \label{3.4.1}
+Il processo di verifica prende in input ciò che è già stato prodotto, ad esempio una versione di un documento, e lo restituisce in uno stato conforme alle aspettative. Per ottenere tale risultato ci si affida a processi di analisi e test.
+
+\subsection{Scopo} \label{3.4.2}
+L'obiettivo di tale processo è di avere una sola versione dei prodotti realizzati e che essi siano corretti, coesi e
+completi. Sono soggetti a verifica sia il software che la documentazione.
+
 \subsection{Aspettative} \label{3.4.3}
+Il corretto svolgimento del processo di verifica avviene attraverso i seguenti punti:
+\begin{itemize}
+	\item viene effettuato seguendo delle procedure già definite;
+	\item la verifica segue dei criteri chiari ed affidabili;
+	\item il prodotto viene verificato nel corso di ognuna delle sue fasi;
+	\item al termine della verifica il prodotto si trova in uno stato stabile;
+	\item una volta verificato, possiamo procedere con la fase di validazione;
+\end{itemize}
+
 \subsection{Attività} \label{3.4.4}
-\subsubsection{Test} \label{3.4.4.1}
+\subsubsection{Analisi} \label{3.4.4.1}
+Il processo di analisi si suddivide in analisi statica ed analisi dinamica.
+\paragraph{Analisi statica}\label{3.4.4.1.1}\mbox{}\\
+L'analisi statica effettua controlli su documenti e codice, di cui valuta e applica la correttezza(intesa come assenza di errori e difetti), la conformità a regole e la coesione$_{\scaleto{G}{3pt}}$ dei componenti.
+Per effettuare analisi statica esistono metodi manuali di lettura(attuati da persone) e metodi formali ed automatizzati(attuati da macchine).\\
+Quelli manuali sono due:
+\begin{itemize}
+	\item \textbf{Walkthrough:} i vari componenti del team analizzano gli oggetti nella loro totalità per
+	cercare anomalie, senza sapere inizialmente se vi siano difetti, quali e dove siano;
+	\item \textbf{Inspection:} i verificatori utilizzano delle liste di controllo per fare ispezione cercando errori specifici
+	in sezioni specifiche.
+\end{itemize}
+\paragraph{Analisi dinamica}\label{3.4.4.1.2}\mbox{}\\
+L'analisi dinamica è una tecnica di analisi del prodotto software che richiede la sua esecuzione.
+Viene effettuata mediante dei test che verificano se il prodotto funziona e se ci sono anomalie.\\
+
+\subsubsection{Test} \label{3.4.4.2}
 I test sono una parte fondamentale del processo di verifica: producono una misura della qualità del prodotto. Questi hanno lo scopo di verificare che il prodotto software svolga le attività che sono state richieste dal proponente, e di permettere di individuare e rimuovere gli errori  commessi, prima di mettere il prodotto in uso. In questo modo si aumenta la qualità del software. 
 I test devono essere:
 \begin{itemize}
@@ -361,7 +392,7 @@ I tipi di test sviluppati sono i seguenti. \\
 		Se i test vengono superati significa che il software è pronto per il rilascio.
 \end{itemize}
 
-\subsubsection{Identificazione dei test}\label{3.4.4.2}
+\subsubsection{Identificazione dei test}\label{3.4.4.3}
 I test presenti nella sezione precedente sono descritti così:
 \begin{itemize}
 	\item \textbf{Id Test};
