@@ -1,5 +1,8 @@
 \chapter{Requisiti}
 In questa sezione vengono illustrati attraverso una tabella tutti i requisiti individuati dal proponente e il gruppo Jawa Druids. Ogni requisito viene individuato da un codice identificativo, una sua descrizione, la tipologia di requisito e codice della fase di riferimento, la spiegazione di ogni parte è descritta nel documento Norme del Progetto. 
+\section{Requisiti funzionali}
+
+
 
 \def\tabularxcolumn#1{m{#1}}
 {\rowcolors{2}{Apricot!90!Bittersweet!20}{Bittersweet!70!Apricot!40}
@@ -9,50 +12,97 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti in
 		\begin{tabularx}{\textwidth}{ |c|X|c|c| }
 			\hline
 			\rowcolor{Melon}
-			\textbf{Codice RS} & \textbf{Descrizione} & \textbf{Tipo di requisito} & \textbf{Codice FC} \\
+			\textbf{Codice RS} & \textbf{Descrizione} & \textbf{Tipo di requisito} & \textbf{Fonte} \\
 			%fase 1
 			\hline
 			RSO1 & Realizzazione di motori software ‘contapersone’  & Obbligatorio & FC1  \\
 			\hline
 			RSF2 & Realizzazione di simulatori di altre sorgenti dati sia dei dati storici/in monitoraggio che dati previsionali & Facoltativo & FC1 \\
 			\hline
-			RSO3 & Capacità di acquisizione continuativa nel tempo dei dati da flussi esterni & Obbligatorio & FC1   \\
+			RS  & Il sistema deve visualizzare un messaggio d'errore se il flusso di dati esterno viene a mancare  & Obbligatorio & FC1 \\
 			\hline
-			RS  & I dati acquisiti da telecamere in tempo reale devono avere data di riferimento associato  &  & FC1 \\
-			\hline
-			RS  & I dati acquisiti da telecamere in tempo reale devono avere un orario di riferimento associato &  & FC1 \\
-			\hline
-			RS  & I dati acquisiti da telecamere in tempo reale devono avere un luogo di riferimento associato &  & FC1 \\
-			\hline
-			RS  & Il sistema deve visualizzare un messaggio d'errore se il flusso di dati esterno viene a mancare  &  & FC1 \\
-			\hline
-			RSO9 & Modalità a bassa latenza dell'aquisizione di informazioni & Obbligatorio & FC1 \\
-			\hline
-			RSO8 & Archiviazione di tutti i dati acquisiti ed elaborati & Obbligatorio & FC2  \\
-			
+			RSO8 & Archiviazione di tutti i dati acquisiti nel databse & Obbligatorio & FC2  \\
+				\hline
+				RSO8 & Archiviazione di tutti i dati elaborati nel database & Obbligatorio & FC2  \\
+
 			%fase 2
 			\hline
 			RSO4 & Elaborazione in tempo reale dei dati acquisiti da flussi esterni & Obbligatorio & FC2  \\
 			\hline
-			RSO5 & Identificazione di eventi che portano alla variazione dei dati elaborati & Obbligatorio & FC2  \\
+			RSO5 & Identificazione di eventi che portano alla variazione del flusso di utenti & Obbligatorio & FC2  \\
 			\hline
 			RSD6 & Previsione dell'insorgenza futura di variazioni significative di flussi di persone & Desiderabile & FC2  \\
 			%fase 3
 			\hline
-			RSO7 & Visualizzazione dei dati elaborati attraverso heat-map & Obbligatorio & FC3  \\
+			RSO7 & Visualizzazione dei dati elaborati attraverso heat map & Obbligatorio & FC3  \\
+		\hline
+			RSO7 & Apache Kafka$_{\scaleto{G}{3pt}}$ deve poter comunicare con il database, l'applicazione web e il modello di machine learning  & Obbligatorio & FC3  \\		
 			\hline
-			RS  & Utilizzo di leaflet.js per la creazione di heat-map &  & FC3 \\
-			\hline
-			RS  & Utilizzo di angular.js per la creazione della wep-app  &  & FC1 \\
-			
-			
-			\hline
-			RSO10 &  & & \\
 	\end{tabularx}
 	\end{center}
 
+\section{Requisiti prestazionali}
+\begin{center}
+	\renewcommand{\arraystretch}{1.4}
+	\begin{tabularx}{\textwidth}{ |c|X|c|c| }
+		\hline
+		\rowcolor{Melon}
+		\textbf{Codice RS} & \textbf{Descrizione} & \textbf{Tipo di requisito} & \textbf{Fonte} \\
+		\hline
+		RSO3 & Capacità di acquisizione continuativa nel tempo dei dati da flussi esterni & Obbligatorio & FC1   \\
+		\hline
+		RSO9 & Modalità a bassa latenza dell'aquisizione di informazioni & Obbligatorio & FC1 \\
+
+	\end{tabularx}
+\end{center}
+
+\section{Requisiti di qualità}
+\begin{center}
+	\renewcommand{\arraystretch}{1.4}
+	\begin{tabularx}{\textwidth}{ |c|X|c|c| }
+		\hline
+		\rowcolor{Melon}
+		\textbf{Codice RS} & \textbf{Descrizione} & \textbf{Tipo di requisito} & \textbf{Fonte} \\
+		\hline
+		RSQ  & La progettazione e la codifica dei requisiti devono rispettare le norme e le metriche definite nel documento \textit{Norme di Progetto v1.0.0}& Obbligatorio & FC3 \\
+		\hline
+	RSQ  & Il codice sorgente del software deve essere disponibile in una repository$_G$ pubblica su Github$_G$  & Facoltativo & FC3 \\
+	\hline
+	RSQ  & Deve essere sviluppato e fornito un documento con lo schema della base di dati relazionale  & Facoltativo & FC3 \\
+%	\hline
+%	RSQ  & Fornire una documentazione sui flussi di dati esterni.... & Facoltativo & FC3 \\
+%	\hline
+	\hline
+	RSQ  & Deve essere realizzato un documento contenente tutti gli errori risolti durante la realizzazione del software & Facoltativo & FC3 \\
+		\hline
+	RSQ  & Test che dimostrino il corretto funzionamento dei servizi e delle funzionalità previste  & Obbligatorio & FC3 \\
+	\hline
+	\end{tabularx}
+\end{center}
 
 
+\section{Requisiti di vincolo}
+
+\begin{center}
+	\renewcommand{\arraystretch}{1.4}
+	\begin{tabularx}{\textwidth}{ |c|X|c|c| }
+		\hline
+		\rowcolor{Melon}
+		\textbf{Codice RS} & \textbf{Descrizione} & \textbf{Tipo di requisito} & \textbf{Fonte} \\
+			\hline
+		RS  & I dati acquisiti da telecamere in tempo reale devono avere data di riferimento associato  &Obbligatorio & FC1 \\
+		\hline
+		RS  & I dati acquisiti da telecamere in tempo reale devono avere un orario di riferimento associato &Obbligatorio & FC1 \\
+		\hline
+		RS  & I dati acquisiti da telecamere in tempo reale devono avere un luogo di riferimento associato &Obbligatorio  & FC1 \\
+		\hline
+		RS  & Utilizzo di leaflet.js per la creazione di heat-map & Facoltativo & FC3 \\
+	\hline
+		RS  & Utilizzo di angular.js per la creazione della wep-app  & Obbligatorio  & FC1 \\
+\hline
+RS  & Il sistema deve far uso dell'ecosistema Apache Kafka$_{\scaleto{G}{3pt}}$ & Obbligatorio  & FC1 \\
+	\end{tabularx}
+\end{center}
 %\subsection{Requisiti}
 
 %\subsubsection{RS1.1: Software Contapersone}%RS requisito specifico

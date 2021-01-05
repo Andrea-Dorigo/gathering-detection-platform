@@ -16,18 +16,19 @@ In questa sezione vengono descritte le fasi di acquisizione dei dati.
 
 %sono dubbioso su 1.2 e 1.3 dovrò modificare qualcosa
 
-\subsubsection{FC1.2: Creazione database}
+\subsubsection{FC1.2: Database}
 
 \begin{itemize}
-	\item \textbf{Descrizione}: attraverso lo studio dei tipi di dato acquisiti si svilupperà un database.
+	\item \textbf{Descrizione}: creazione del database e archiviazione dei dati in esso;
 	\item \textbf{Linguaggio}: mySQL.
 \end{itemize}
 
-\subsubsection{FC1.3: Salvataggio dati}
+\subsubsection{FC1.3: Apache Kafka$_G$}
 
 \begin{itemize}
-	\item \textbf{Descrizione}: i dati verranno inseriti all'interno di un database.
-	\item \textbf{Tipo di server}: ???non so cosa scrivere???
+	\item \textbf{Descrizione}: impostazione di una piattaforma di data streaming$_G$ che consente di gestire e trasferire grandi volumi di dati in tempo reale, abbassando notevolmente i tempi di latenza;
+	\item \textbf{Input}: flussi di dati dall'acquisizione con Java;
+		\item \textbf{Output}: il flusso di dati rimane immutato.
 \end{itemize}
 
 %??? I dati verranno inseriti all'interno di un database, questo sarà sviluppato usando Apache Kafka un sistema distribuito che consiste di server e client i quali comunicano tra loro attraverso un protocollo di rete performante di tipo TCP. ???(non so dove inserire)
@@ -51,13 +52,13 @@ Di seguito vengono individuate le fasi da seguire per l'elaborazione dei dati.
 	\item \textbf{Descrizione}: preparazione dei dati grezzi e renderli adatti ad un modello di machine learning. 
 	\item \textbf{Input}: i dati controllati.
 	\item \textbf{Output}: dati pronti per l'elaborazione nel modello machine learning.
-	\item \textbf{Processo}: \begin{itemize}[leftmargin = 2cm]
+	\item \textbf{Processo}: \begin{enumerate}[leftmargin = 2cm]
 		\item Cleaning: eliminazione o correzione di dati con valori invalidi o corrotti.
 		\item Trasformazione dei dati: i dati vengono normalizzati, discretizzati, aggregati, si calcolano nuove variabili etc.
 		\item Feature extraction: si ricavano attraverso i dati trasformati valori derivati, i quali sono più informativi e non ridondanti, facilitano le fasi successive di apprendimento e generalizzazione.
 		\item Filtraggio dei dati: attraverso appositi filtri eliminare i dati ridondanti e irrilevanti al training del modello.
 		\item Train / Test set splitting: si dividono i dati in due gruppi uno per il training e uno per il testing.
-	\end{itemize}
+	\end{enumerate}
 
 \end{itemize}
 
@@ -66,7 +67,7 @@ Di seguito vengono individuate le fasi da seguire per l'elaborazione dei dati.
 \begin{itemize}
 	\item \textbf{Descrizione}: in questa fase si effettua una scelta sull'algoritmo più adeguato da utilizzare per il training di dati.
 	\item \textbf{Input}: dati controllati nella fase di preprocessing per il training.
-	\item \textbf{Output}: modello di ML allenato sui dati di input.
+	\item \textbf{Output}: modello di Machine Learning$_G$ allenato sui dati di input.
 	\item \textbf{Tipi di algoritmi}: si dividono per classificazione e regressione.%???non so se va bene???	
 \end{itemize}
 
@@ -74,7 +75,7 @@ Di seguito vengono individuate le fasi da seguire per l'elaborazione dei dati.
 
 \begin{itemize}
 	\item \textbf{Descrizione}: attraverso varie metriche si valuta quanto valido è il modello nella predizione dei casi.
-	\item \textbf{Input}: risposta del modello ML dai dati di test, dati ricavati dalle sorgenti esterne effettivi.
+	\item \textbf{Input}: risposta del modello Machine Learning$_{\scaleto{G}{3pt}}$ dai dati di test, dati ricavati dalle sorgenti esterne effettivi.
 	\item \textbf{Output}: dati che superano la validazione.
 \end{itemize}
 
