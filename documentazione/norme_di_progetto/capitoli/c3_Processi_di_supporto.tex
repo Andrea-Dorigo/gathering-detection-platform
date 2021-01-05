@@ -360,7 +360,49 @@ I tipi di test sviluppati sono i seguenti. \\
 		Oltre agli sviluppatori, questi test vengono eseguiti sotto l’occhio del proponente cosicché possano valutare se il prodotto soddisfi i requisiti richiesti nel capitolato d’appalto.
 		Se i test vengono superati significa che il software è pronto per il rilascio.
 \end{itemize}
-\subsection{Metriche}\label{3.4.6}
+
+\subsubsection{Identificazione dei test}\label{3.4.4.2}
+I test presenti nella sezione precedente sono descritti così:
+\begin{itemize}
+	\item \textbf{Id Test};
+	\item \textbf{Descrizione};
+	\item \textbf{Esito}:
+	\begin{itemize}
+		\item[-] \textbf{NI}: non implementato;
+		\item[-] \textbf{I}: implementato;
+		\item[-] \textbf{NS}: non superato;
+		\item[-] \textbf{S}: superato;
+	\end{itemize}
+\end{itemize}
+
+Ogni test sui requisiti, ovvero test di \textit{sistema} e \textit{accettazione}, ha questa nomenclatura:
+\begin{center}
+	\textbf{[TipoTest]RS[tipo\_di\_requisito][codice\_requisito]}
+\end{center}
+In cui:
+\begin{itemize}
+	\item \textbf{TipoTest}: specifica il test che si sta facendo;
+	\item \textbf{RS}: specifica che il test è fatto su un requisito;
+	\item \textbf{tipo\_di\_requisito}: suddiviso in:
+	\begin{itemize}
+		\item[-] \textbf{O}: se il requisito è obbligatorio;
+		\item[-] \textbf{D}: se il requisito è desiderabile;
+		\item[-] \textbf{F}: se il requisito è facoltativo;
+	\end{itemize}
+	\item \textbf{codice\_requisito}: si tratta di un numero incrementale per rendere univoco il requisito;
+\end{itemize}
+
+Invece i test di \textit{unità}, \textit{integrazione} e \textit{regressione}, sono rappresentati nel seguente modo:
+\begin{center}
+	\textbf{[TipoTest][Id]}
+\end{center}
+Dove:
+\begin{itemize}
+	\item \textbf{Id}: rappresenta un numero incrementale partendo da 1.
+\end{itemize}
+
+
+\subsection{Metriche}\label{3.4.5}
 \subsubsection{MQPD03 Rilevamento Errori}
 Indice che mostra qual è la percentuale di errore basata sui test fatti.
 Come formula viene utilizzata la seguente:
