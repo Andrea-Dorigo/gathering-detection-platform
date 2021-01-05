@@ -13,7 +13,8 @@ Per quando riguarda la qualità dei test si usa:
 	\item \textbf{NS}: il test non ha soddisfatto la richiesta;
 	\item \textbf{S}: il test ha soddisfatto la richiesta; 
 \end{itemize}
-Inoltre i test hanno la seguente nomenclatura
+
+I test di \textit{Sistema} e \textit{Accettazione} hanno la seguente nomenclatura:
 \begin{center}
 	\textbf{[TipoTest]RS[tipo\_di\_requisito][codice\_requisito]}
 \end{center}
@@ -29,12 +30,21 @@ dove:
 	\item \textbf{codice\_requisito}: un numero incrementale per rendere univoco il requisito.
 \end{itemize}
 
-\section{Tipi di test} \label{4.1}
-I test sono che verranno effettuati sul prodotto software sono così divisi:
+Invece i test di \textit{Unità}, \textit{Integrazione} e \textit{Regressione} sono denominati nel seguente modo:
+\begin{center}
+	\textbf{[TipoTest][Id]}
+\end{center}
+dove:
 \begin{itemize}
-	\item \textbf{Test di convalida}: i test di convalida hanno come scopo la verifica che il software sviluppato soddisfi i requisiti presenti nel capitolato(g) d’appalto e concordati col proponente.
+	\item \textbf{Id} rappresenta un numero incrementale che inizia da 1.
+\end{itemize}
+
+\section{Tipi di test} \label{4.1}
+I test che verranno effettuati sul prodotto software sono così divisi:
+\begin{itemize}
+	\item \textbf{Test di accettazione}: i test di accettazione hanno come scopo la verifica che il software sviluppato soddisfi i requisiti presenti nel capitolato(g) d’appalto e concordati col proponente.
 	Questi saranno eseguiti durante il collaudo finale del prodotto software sotto l'osservazione sia dell'azienda proponente sia del gruppo di lavoro.
-	Rappresentati mediante la sigla \textbf{[TC]};
+	Rappresentati mediante la sigla \textbf{[TA]};
 	
 	\item \textbf{Test di sistema}: i test di sistema vengono eseguiti per verificare che i requisiti, scritti nel documento \textit{Analisi dei Requisiti}, siano stati implementati e funzionanti.
 	Viene rappresentato mediante la sigla \textbf{[TS]};
@@ -43,9 +53,12 @@ I test sono che verranno effettuati sul prodotto software sono così divisi:
 	Vengono svolti successivamente ai \textit{TU} e prima dei \textit{TS}.
 	Sono contrassegnati da \textbf{[TI]}.
 	
+	\item \textbf{Test di regressione}: Servono a garantire il corretto funzionamento del prodotto a seguito di modifiche del codice o di inserimento di nuove funzionalità.
+	Vengono etichettati nel seguente modo \textbf{[TR]}.
+	
 	\item \textbf{Test di unità}: i test di unità servono per verificare le singole unità del software, ovvero le componenti con funzionamento autonomo.
 	Il superamento di tali test non implica il corretto funzionamento del software.
-	Viene contassegnata da \textbf{[TU]}.
+	Viene contrassegnata da \textbf{[TU]}.
 \end{itemize}
 
 
