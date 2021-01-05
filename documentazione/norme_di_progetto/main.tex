@@ -1,0 +1,85 @@
+\documentclass[a4paper,12pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[english, italian]{babel}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{tabularx}
+\usepackage{makecell}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{xurl}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage[table,dvipsnames]{xcolor}
+
+\setcounter{secnumdepth}{5}% Number \subsubsection
+\setcounter{tocdepth}{5}
+
+\titleformat{\chapter}[display]
+{\normalfont\bfseries}{}{0pt}{\LARGE} %QUESTO SERVE PER AVERE SOLO IL NOME DEL CAPITOLO CHE VOGLIO IO
+
+\titlespacing*{\chapter}{0cm}{0cm}{0.2cm}
+
+\geometry{
+	left=20mm,
+	right=20mm,
+}
+
+\renewcommand{\contentsname}{Indice} %QUESTO SERVE PER AVERE L'INDICE CON IL NOME CHE VOGLIO IO
+
+\pagestyle{plain}
+
+\fancypagestyle{plain}{
+	\fancyhf{}
+	\lhead{\includegraphics[width=3cm]{../immagini/minilogo.jpg}}
+	\chead{}
+	\rhead{\fontsize{12}{10}Studio di fattibilità}
+	\lfoot{}
+	\cfoot{\thepage\ di \pageref{LastPage}}
+	\rfoot{}
+}
+
+\pagestyle{plain}
+
+\begin{document}
+	\makeatletter
+	\begin{titlepage}
+		\begin{center}
+			\vspace*{-4,0cm}
+			\author{Jawa Druids}
+			\title{Norme di Progetto}
+			\date{}
+			\includegraphics[width=0.7\linewidth]{../immagini/DRUIDSLOGO.jpg}\\[4ex]
+			{\huge \bfseries  \@title }\\[2ex] 
+			{\LARGE  \@author}\\[50ex]
+			\vspace*{-8,0cm}
+			\begin{table}[H]
+				\centering
+				\begin{tabular}{c|c}
+					\textbf{Versione} & x.x.x \\
+					\textbf{Data approvazione} & xx-xx-xxxx\\
+					\textbf{Responsabile} & Nome Cognome\\
+					\textbf{Redattori} & Andrea Cecchin \\
+					\textbf{Verificatori} & \makecell{Nome Cognome \\ Nome Cognome} \\
+					\textbf{Stato} & stato\\
+					\textbf{Lista distribuzione} & \makecell{Jawa Druids \\ Tullio \\ GGGG}\\
+					\textbf{Uso} & Interno			
+				\end{tabular}
+			\end{table}
+			\fontsize{17}{12}\textbf{Sommario} \\
+			Il documento redatto riferisce le regole, gli strumenti e le convenzioni a cui il gruppo JawaDruids ha stabilito di attenersi e seguire per l'intera durata dello sviluppo del progetto.
+		\end{center}
+	\end{titlepage}
+	\makeatother
+	\input{Registro}
+	
+	
+	\tableofcontents{}
+	
+	\input{capitoli/c1_Introduzione}
+	\input{capitoli/c2_Processi_Primari}
+	
+	% bibliography, glossary and index would go here.
+	
+\end{document}
