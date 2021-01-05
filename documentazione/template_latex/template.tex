@@ -1,0 +1,51 @@
+\input{packages}
+\input{config}
+
+\begin{document}
+
+\makeatletter
+\begin{titlepage}
+	\begin{center}
+		\vspace*{-4,0cm}
+		\author{Jawa Druids} 
+		\title{Nome documento}
+		\date{} %LASCIARE QUESTO CAMPO VUOTO, SE LO TOLGO STAMPA LA DATA CORRENTE
+		\includegraphics[width=0.7\linewidth]{../immagini/DRUIDSLOGO.jpg}\\[4ex]
+		{\huge \bfseries  \@title }\\[2ex] 
+		{\LARGE  \@author}\\[50ex]
+		\vspace*{-8,5cm}
+		\begin{table}[H]
+			\renewcommand{\arraystretch}{1.4}
+			\centering
+			\begin{tabular}{r | l}
+				\textbf{Versione} & x.x.x \\%RIGA PER INSERIRE LA VERSIONE ULTIMA DEL DOCUMENTO
+				\textbf{Data approvazione} & xx-xx-xxxx\\
+				\textbf{Responsabile} & Nome Cognome\\
+				\textbf{Redattori} & Nome Cognome \\
+				\textbf{Verificatori} & \makecell[tl]{Nome Cognome \\ Nome Cognome} \\
+				%MAKECELL SERVE PER POI ANDARE A CAPO ALL'INTERNO DELLA CELLA
+				\textbf{Stato} & Stato\\
+				\textbf{Lista distribuzione} & \makecell[tl]{Nome Gruppo \\ Nome Professori \\ Nome Azienda Proponente}\\
+				\textbf{Uso} & Uso del documento            
+			\end{tabular}
+		\end{table}
+		\vspace{0.1cm}
+		\hfill \break
+		\fontsize{17}{10}\textbf{Sommario} \\
+		\vspace{0.1cm}
+		Brevissima descrizione del documento 
+	\end{center}
+\end{titlepage}
+\makeatother
+
+\input{Registro delle modifiche}
+
+%COMANDO PER LA CREAZIONE DELL'INDICE
+
+\tableofcontents{}
+
+%PER RENDERE PIÙ CHIARA LA STESURA DEI DOCUMENTI È MEGLIO LASCIARE SEPARATI IN FILE DIVERSI OGNI CAPITOLO
+
+% \input{esempio} -- esempio di codice per inserire un nuovo capitolo
+
+\end{document}
