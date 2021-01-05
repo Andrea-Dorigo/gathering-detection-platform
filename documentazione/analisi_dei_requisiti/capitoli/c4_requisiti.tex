@@ -10,27 +10,44 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti in
 			\hline
 			\rowcolor{Melon}
 			\textbf{Codice RS} & \textbf{Descrizione} & \textbf{Tipo di requisito} & \textbf{Codice FC} \\
+			%fase 1
 			\hline
-			RSO1 & Realizzazione - usando eventuali librerie opensource - di motori software ‘contapersone’ che, date le
-			immagini/stream delle videocamere installate sui mezzi misurino quante persone ci sono a bordo  & Obbligatorio & FC1  \\
+			RSO1 & Realizzazione di motori software ‘contapersone’  & Obbligatorio & FC1  \\
 			\hline
 			RSF2 & Realizzazione di simulatori di altre sorgenti dati sia dei dati storici/in monitoraggio che dati previsionali & Facoltativo & FC1 \\
 			\hline
-			RSO3 & Capacità di acquisizione continuativa nel tempo dei dati  & Obbligatorio & FC1   \\
+			RSO3 & Capacità di acquisizione continuativa nel tempo dei dati da flussi esterni & Obbligatorio & FC1   \\
 			\hline
-			RSO4 & Elaborazione in tempo reale dei dati acquisiti & Obbligatorio & FC2  \\
+			RS  & I dati acquisiti da telecamere in tempo reale devono avere data di riferimento associato  &  & FC1 \\
 			\hline
-			RSO5 & Identificazione, a partire dai dati acquisiti ed elaborati, di eventi che nel tempo sono risultati aver
-			concorso ad esempio all’insorgere di alterazioni significative del flusso di utenti & Obbligatorio & FC2  \\
+			RS  & I dati acquisiti da telecamere in tempo reale devono avere un orario di riferimento associato &  & FC1 \\
 			\hline
-			RSD6 & Previsione dell’insorgenza futura di variazioni significative di flussi di persone & Desiderabile & FC2  \\
+			RS  & I dati acquisiti da telecamere in tempo reale devono avere un luogo di riferimento associato &  & FC1 \\
+			\hline
+			RS  & Il sistema deve visualizzare un messaggio d'errore se il flusso di dati esterno viene a mancare  &  & FC1 \\
+			\hline
+			RSO9 & Modalità a bassa latenza dell'aquisizione di informazioni & Obbligatorio & FC1 \\
+			\hline
+			RSO8 & Archiviazione di tutti i dati acquisiti ed elaborati & Obbligatorio & FC2  \\
+			
+			%fase 2
+			\hline
+			RSO4 & Elaborazione in tempo reale dei dati acquisiti da flussi esterni & Obbligatorio & FC2  \\
+			\hline
+			RSO5 & Identificazione di eventi che portano alla variazione dei dati elaborati & Obbligatorio & FC2  \\
+			\hline
+			RSD6 & Previsione dell'insorgenza futura di variazioni significative di flussi di persone & Desiderabile & FC2  \\
+			%fase 3
 			\hline
 			RSO7 & Visualizzazione dei dati elaborati attraverso heat-map & Obbligatorio & FC3  \\
 			\hline
-			RSO8 & Archiviazione di tutti i dati acquisiti ed elaborati & Obbligatorio & FC2  \\
+			RS  & Utilizzo di leaflet.js per la creazione di heat-map &  & FC3 \\
 			\hline
-			RSO9 & Modalità a bassa latenza dell'aquisizione di informazioni & Obbligatorio & FC1 \\
-
+			RS  & Utilizzo di angular.js per la creazione della wep-app  &  & FC1 \\
+			
+			
+			\hline
+			RSO10 &  & & \\
 	\end{tabularx}
 	\end{center}
 
