@@ -9,34 +9,35 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti in
 	
 	\begin{center}
 		\renewcommand{\arraystretch}{1.4}
-		\begin{tabularx}{\textwidth}{ |c|X|c|c| }
+		\begin{tabularx}{\textwidth}{ |c|X|c|X| }
 			\hline
 			\rowcolor{Melon}
 			\textbf{Codice RS} & \textbf{Descrizione} & \textbf{Tipo di requisito} & \textbf{Fonte} \\
 			%fase 1
 			\hline
-			RSO1 & Realizzazione di motori software ‘contapersone’  & Obbligatorio & FC1  \\
+			RSFO1 & Realizzazione di motori software ‘contapersone’  & Obbligatorio & \makecell[tcX]{Capitolato \\ Verbale esterno 17-12-2020} \\
+			% \shortstack{Capitolato\\Verbale esterno 17-12-2020}   \\
 			\hline
-			RSF2 & Realizzazione di simulatori di altre sorgenti dati sia dei dati storici/in monitoraggio che dati previsionali & Facoltativo & FC1 \\
+			RSFF2 & Realizzazione di simulatori di altre sorgenti dati sia dei dati storici/in monitoraggio che dati previsionali & Facoltativo & Capitolato \\
 			\hline
-			RS  & Il sistema deve visualizzare un messaggio d'errore se il flusso di dati esterno viene a mancare  & Obbligatorio & FC1 \\
+			RSFO3  & Il sistema deve visualizzare un messaggio d'errore se il flusso di dati esterno viene a mancare  & Obbligatorio & \makecell[tcX]{Interno\\FC1.1}  \\
 			\hline
-			RSO8 & Archiviazione di tutti i dati acquisiti nel databse & Obbligatorio & FC2  \\
+			RSFO4.1 & Archiviazione di tutti i dati acquisiti nel databse & Obbligatorio & Capitolato  \\
 				\hline
-				RSO8 & Archiviazione di tutti i dati elaborati nel database & Obbligatorio & FC2  \\
+				RSFO4.2 & Archiviazione di tutti i dati elaborati nel database & Obbligatorio & Capitolato  \\
 
 			%fase 2
 			\hline
-			RSO4 & Elaborazione in tempo reale dei dati acquisiti da flussi esterni & Obbligatorio & FC2  \\
+			RSFO5 & Elaborazione in tempo reale dei dati acquisiti da flussi esterni & Obbligatorio & Capitolato  \\
 			\hline
-			RSO5 & Identificazione di eventi che portano alla variazione del flusso di utenti & Obbligatorio & FC2  \\
+			RSFO5.1 & Identificazione di eventi che portano alla variazione del flusso di utenti & Obbligatorio & Capitolato  \\
 			\hline
-			RSD6 & Previsione dell'insorgenza futura di variazioni significative di flussi di persone & Desiderabile & FC2  \\
+			RSFD6 & Previsione dell'insorgenza futura di variazioni significative di flussi di persone & Desiderabile & Capitolato  \\
 			%fase 3
 			\hline
-			RSO7 & Visualizzazione dei dati elaborati attraverso heat map & Obbligatorio & FC3  \\
+			RSFO7 & Visualizzazione dei dati elaborati attraverso heat map & Obbligatorio & Capitolato  \\
 		\hline
-			RSO7 & Apache Kafka$_{\scaleto{G}{3pt}}$ deve poter comunicare con il database, l'applicazione web e il modello di machine learning  & Obbligatorio & FC3  \\		
+			RSFO8 & Apache Kafka$_{\scaleto{G}{3pt}}$ deve poter comunicare con il database, l'applicazione web e il modello di machine learning  & Obbligatorio &  Interno \\		
 			\hline
 	\end{tabularx}
 	\end{center}
@@ -49,9 +50,9 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti in
 		\rowcolor{Melon}
 		\textbf{Codice RS} & \textbf{Descrizione} & \textbf{Tipo di requisito} & \textbf{Fonte} \\
 		\hline
-		RSO3 & Capacità di acquisizione continuativa nel tempo dei dati da flussi esterni & Obbligatorio & FC1   \\
+		RSPO1 & Capacità di acquisizione continuativa nel tempo dei dati da flussi esterni & Obbligatorio & Capitolato  \\
 		\hline
-		RSO9 & Modalità a bassa latenza dell'aquisizione di informazioni & Obbligatorio & FC1 \\
+		RSPO2 & Modalità a bassa latenza dell'aquisizione di informazioni & Obbligatorio & Capitolato \\
 
 	\end{tabularx}
 \end{center}
@@ -64,18 +65,18 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti in
 		\rowcolor{Melon}
 		\textbf{Codice RS} & \textbf{Descrizione} & \textbf{Tipo di requisito} & \textbf{Fonte} \\
 		\hline
-		RSQ  & La progettazione e la codifica dei requisiti devono rispettare le norme e le metriche definite nel documento \textit{Norme di Progetto v1.0.0}& Obbligatorio & FC3 \\
+		RSQO1  & La progettazione e la codifica dei requisiti devono rispettare le norme e le metriche definite nel documento \textit{Norme di Progetto v1.0.0}& Obbligatorio & Interno \\
 		\hline
-	RSQ  & Il codice sorgente del software deve essere disponibile in una repository$_G$ pubblica su Github$_G$  & Facoltativo & FC3 \\
+	RSQF2  & Il codice sorgente del software deve essere disponibile in una repository$_G$ pubblica su Github$_G$  & Facoltativo & Interno \\
 	\hline
-	RSQ  & Deve essere sviluppato e fornito un documento con lo schema della base di dati relazionale  & Facoltativo & FC3 \\
+	RSQF3  & Deve essere sviluppato e fornito un documento con lo schema della base di dati relazionale  & Facoltativo & Interno \\
 %	\hline
 %	RSQ  & Fornire una documentazione sui flussi di dati esterni.... & Facoltativo & FC3 \\
 %	\hline
 	\hline
-	RSQ  & Deve essere realizzato un documento contenente tutti gli errori risolti durante la realizzazione del software & Facoltativo & FC3 \\
+	RSQF4  & Deve essere realizzato un documento contenente tutti gli errori risolti durante la realizzazione del software & Facoltativo & Interno \\
 		\hline
-	RSQ  & Test che dimostrino il corretto funzionamento dei servizi e delle funzionalità previste  & Obbligatorio & FC3 \\
+	RSQO5  & Test che dimostrino il corretto funzionamento dei servizi e delle funzionalità previste  & Obbligatorio & Capitolato \\
 	\hline
 	\end{tabularx}
 \end{center}
@@ -90,69 +91,112 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti in
 		\rowcolor{Melon}
 		\textbf{Codice RS} & \textbf{Descrizione} & \textbf{Tipo di requisito} & \textbf{Fonte} \\
 			\hline
-		RS  & I dati acquisiti da telecamere in tempo reale devono avere data di riferimento associato  &Obbligatorio & FC1 \\
+		RSVO1  & I dati acquisiti da telecamere in tempo reale devono avere data di riferimento associato  &Obbligatorio & Interni \\
 		\hline
-		RS  & I dati acquisiti da telecamere in tempo reale devono avere un orario di riferimento associato &Obbligatorio & FC1 \\
+		RSVO1.1  & I dati acquisiti da telecamere in tempo reale devono avere un orario di riferimento associato &Obbligatorio & Interni \\
 		\hline
-		RS  & I dati acquisiti da telecamere in tempo reale devono avere un luogo di riferimento associato &Obbligatorio  & FC1 \\
+		RSVO1.2  & I dati acquisiti da telecamere in tempo reale devono avere un luogo di riferimento associato &Obbligatorio  & Interni \\
 		\hline
-		RS  & Utilizzo di leaflet.js per la creazione di heat-map & Facoltativo & FC3 \\
+		RSVO2  & Il front-end del prodotto viene sviluppato utilizzando tecnologie web &Obbligatorio  & \shortstack{Capitolato\\FC3.1} \\
+		\hline
+		RSVF2.1  & Utilizzo di leaflet.js per la creazione di heat-map & Facoltativo & \shortstack{Capitolato\\FC3.1} \\
 	\hline
-		RS  & Utilizzo di angular.js per la creazione della wep-app  & Obbligatorio  & FC1 \\
+		RSVO2.2  & Utilizzo di angular.js per la creazione della wep-app  & Obbligatorio  & \shortstack{Capitolato\\FC3.1} \\
 \hline
-RS  & Il sistema deve far uso dell'ecosistema Apache Kafka$_{\scaleto{G}{3pt}}$ & Obbligatorio  & FC1 \\
+RSVO3  & Il sistema deve far uso dell'ecosistema Apache Kafka$_{\scaleto{G}{3pt}}$ & Obbligatorio  & \makecell[tcX]{Capitolato\\FC1.3} \\
+\hline
 	\end{tabularx}
 \end{center}
-%\subsection{Requisiti}
 
-%\subsubsection{RS1.1: Software Contapersone}%RS requisito specifico
+\section{Tracciamento dei requisiti}
 
-%\begin{itemize}
-%	\item \textbf{Descrizione}: durante l'acquisizione dei dati da sorgenti esterne relative a live webcam si svilupperà un software "contapersone" per il rilevamento del numero di persone nel frame dell'immagine catturato.
-%	\item \textbf{Input}: sorgente video di una webcam.
-%	\item \textbf{Output}: numero di persone rilevate per frame con orario annesso.
-%	\item \textbf{Linguaggio di programmazione}: Python.
-%	\item \textbf{Tipo di requisito}: Obbligatorio   
-%\end{itemize}
+\subsection{Requisito - fonte}
+\begin{center}
+	\renewcommand{\arraystretch}{1.4}
+	\begin{tabularx}{\textwidth}{ |X|X| }
+		\hline
+		\rowcolor{Melon}
+		\textbf{Codice RS} & \textbf{Fonte}  \\
+		\hline
+RSFO1 & \makecell[tcX]{Capitolato\\Verbale esterno 17-12-2020} \\
+\hline
+RSFF2 & Capitolato\\
+\hline
+RSFO3 & \makecell[tcX]{Interno\\FC1.1}\\
+\hline
+RSFO4.1 & Capitolato\\
+\hline
+RSFO4.2 & Capitolato\\
+\hline
+RSFO5 & Capitolato\\
+\hline
+RSFO5.1 & Capitolato\\
+\hline
+RSFD6 & Capitolato\\
+\hline
+RSFO7 & Capitolato\\
+\hline
+RSFO8 & Interno\\
+\hline
+RSPO1 & Capitolato\\
+\hline
+RSPO2 & Capitolato\\
+\hline
+RSQO1 & Interno\\
+\hline
+RSQF2 & Interno\\
+\hline
+RSQF3 & Interno\\
+\hline
+RSQF4 & Interno\\
+\hline
+RSQO5 & Capitolato\\
+\hline
+RSVO1 & Interno\\
+\hline
+RSVO1.1 & Interno\\
+\hline
+RSVO1.2 & Interno\\
+\hline
+RSVO2 & \makecell[tcX]{Capitolato\\FC3.1}\\
+\hline
+RSVF2.1 & \makecell[tcX]{Capitolato\\FC3.1}\\
+\hline
+	\end{tabularx}
+\end{center}
+\begin{center}
+	\renewcommand{\arraystretch}{1.4}
+	\begin{tabularx}{\textwidth}{ |X|X| }
+		\hline
+		\rowcolor{Melon}
+		\textbf{Codice RS} & \textbf{Fonte}  \\
+		\hline
+RSVO2.2 & \makecell[tcX]{Capitolato\\FC3.1}\\
+\hline
+RSVO3 & \makecell[tcX]{Capitolato\\FC1.3}\\
+\hline
+	\end{tabularx}
+\end{center}
 
-%\subsubsection{RS1.2: Velocità di acquisizione dei dati}
-%\begin{itemize}
-%	\item \textbf{Descrizione}: l'acquisizione dei dati deve essere fatto in modo continuativo nel tempo e a bassa latenza.
-%	\item \textbf{Tipo di requisito}: Obbligatorio.
-%\end{itemize}
-
-
-%\subsection{Requisiti}
-
-%\subsubsection{RS1.3: Elaborazione in tempo reale}
-%
-%\begin{itemize}
-%	\item \textbf{Descrizione}: sviluppato il modello dovrà essere utilizzato per l'elaborazione dei dati forniti dalle webcam in tempo reale.
-%	\item \textbf{Input}: dati rilevate dalle webcam.
-%	\item \textbf{Output}: informazioni sulle variazioni dei dati monitorati e correlazioni tra flussi di dati diversi.
-%	\item \textbf{Tipo di requisito}: Obbligatorio.
-%\end{itemize}
-%
-%\subsubsection{RS1.4: Archiviazione dei dati}
-%\begin{itemize}
-%	\item \textbf{Descrizione}: tutti i tipi di dati elaborati o grezzi dovranno essere archiviati per una possibile visione futura degli stessi.
-%	\item \textbf{Strumento di archiviazione}: database e server Kafka.
-%	\item \textbf{Tipo di requisito}: Obbligatorio.
-%\end{itemize}
-%
-%\subsubsection{RS1.5: Osservazione dei dati}
-%\begin{itemize}
-%	\item \textbf{Descrizione}: identificazione di eventi che nel corso del tempo hanno provocato un cambiamento nel flusso di utenti in una particolare zona.
-%	\item \textbf{Tipo di requisito}: Obbligatorio.
-%\end{itemize}
-
-%
-%\subsection{Requisiti}
-%
-%\subsubsection{RS1.6: Visualizzazione mappa}
-%
-%\begin{itemize}
-%	\item \textbf{Descrizione}: la mappa dovrà essere visualizzati in forma di heat-map. %non so come formulare bene la frase
-%	\item \textbf{Strumento di sviluppo}: framework javascript Leaflet.
-%	\item \textbf{Tipo di requisito}: Obbligatorio.
-%\end{itemize}
+\subsection{Fonte - requisito}
+\begin{center}
+	\renewcommand{\arraystretch}{1.4}
+	\begin{tabularx}{\textwidth}{ |X|X| }
+		\hline
+		\rowcolor{Melon}
+		\textbf{Fonte} & \textbf{Codice RS}  \\
+		\hline
+		Capitolato & \makecell[tcX]{RSFO1\\RSFF2\\RSFO4.1\\RSFO4.2\\RSFO5\\RSFO5.1\\RSFD6\\RSFO7\\RSPO1\\RSPO2\\RSQO5\\RSVO2\\RSVF2.1\\RSVO2.2\\RSVO3} \\
+		\hline
+		Interno &\makecell[tcX]{RSFO3\\RSFO8\\RSQO1\\RSQF2\\RSQF3\\RSQF4\\RSVO1\\RSVO1.1\\RSVO1.2} \\
+		\hline
+		Verbale esterno 17-12-2020 & RSFO1 \\
+		\hline
+		FC1.1 & RSFO3 \\
+		\hline
+		FC1.3 & RSVO3 \\  
+		\hline
+		FC3.1 & \makecell[tcX]{RSVO2\\RSVF2.1\\RSVO2.2} \\
+		\hline
+	\end{tabularx}
+\end{center}
