@@ -408,12 +408,19 @@ I test presenti nella sezione precedente sono descritti così:
 
 Ogni test sui requisiti, ovvero test di \textit{sistema} e \textit{accettazione}, ha questa nomenclatura:
 \begin{center}
-	\textbf{[TipoTest]RS[tipo\_di\_requisito][codice\_requisito]}
+	\textbf{[TipoTest]RS[classificazione][tipo\_di\_requisito][codice\_requisito]}
 \end{center}
 In cui:
 \begin{itemize}
 	\item \textbf{TipoTest}: specifica il test che si sta facendo;
 	\item \textbf{RS}: specifica che il test è fatto su un requisito;
+	\item \textbf{Classificazione}: individua la classificazione del requisito:
+	\begin{itemize}
+		\item \textbf{F}: indica se il requisito è funzionale;
+		\item \textbf{Q}: indica se il requisito è qualitativo;
+		\item \textbf{V}: indica se il requisito è vincolante;
+		\item \textbf{P}: indica se il requisito è prestazionale;
+	\end{itemize}
 	\item \textbf{tipo\_di\_requisito}: suddiviso in:
 	\begin{itemize}
 		\item[-] \textbf{O}: se il requisito è obbligatorio;
