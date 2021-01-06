@@ -16,11 +16,18 @@ Per quando riguarda la qualità dei test si usa:
 
 I test di \textit{Sistema} e \textit{Accettazione} hanno la seguente nomenclatura:
 \begin{center}
-	\textbf{[TipoTest]RS[tipo\_di\_requisito][codice\_requisito]}
+	\textbf{[TipoTest]RS[classificazione][tipo\_di\_requisito][codice\_requisito]}
 \end{center}
 dove:
 \begin{itemize}
 	\item \textbf{TipoTest}: specifica il tipo di test applicato;
+	\item \textbf{classificazione}:
+	\begin{itemize}
+		\item[-] \textbf{F}: indica se il requisito è funzionale;
+		\item[-] \textbf{Q}: indica se il requisito è qualitativo;
+		\item[-] \textbf{V}: indica se il requisito è vincolante;
+		\item[-] \textbf{P}: indica se il requisito è prestazionale;
+	\end{itemize}
 	\item \textbf{tipo\_di\_requisito}: assume i seguenti valori
 		\begin{itemize}
 			\item[-] \textbf{O} per i requisiti obbligatori;
@@ -74,11 +81,11 @@ I test che verranno effettuati sul prodotto software sono così divisi:
 			\rowcolor{airforceblue}
 			\textbf{Id Test} & \textbf{Descrizione} & \textbf{Esito}\\
 			\hline
-			\textit{TSRSO1} & L'utente deve poter vedere la heat-map in tempo reale & \textit{NI}\\
+			\textit{TSRSVO1} & L'utente deve poter vedere la heat-map in tempo reale & \textit{NI}\\
 			\hline
-			\textit{TSRSO2} & L'utente deve poter vedere le heat-map in un intervallo di tempo futuro & \textit{NI}\\
+			\textit{TSRSVO2} & L'utente deve poter vedere le heat-map in un intervallo di tempo futuro & \textit{NI}\\
 			\hline
-			\textit{TSRSO3} & L'utente deve aver accesso ai dati raccolti e storicizzati nel tempo & \textit{NI}\\
+			\textit{TSRSVO3} & L'utente deve aver accesso ai dati raccolti e storicizzati nel tempo & \textit{NI}\\
 			\hline
 		\end{tabularx}
 	\captionof{table}{\textbf{Elenco test di sistema}}
