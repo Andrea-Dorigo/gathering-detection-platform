@@ -79,27 +79,40 @@ L'\textit{Analisi dei requisiti} è strutturato nel seguente modo:
 	\item \textbf{Requisiti}: utilizzando le fasi descritte si dettagliano tutti i requisiti obbligatori e opzionali da implementare ad ogni fase.
 \end{itemize}
 \paragraph{Classificazione dei requisiti}\label{2.2.3.1.5}\mbox{}\\% RS1.2 = rs(requisiti specifici) 1(fase generale a cui si riferiscono) 2(numero del requisito incrementale)
-I requisiti sono stati qualificati utilizzando la seguente codifica:
+I requisiti sono stati individuati utilizzando la seguente codifica:
 \begin{center}
-	\textbf{RS[tipo\_di\_requisito][codice\_requisito]}
+	\textbf{RS[classificazione][tipo\_di\_requisito][codice\_requisito]}
 \end{center} 
 La descrizione della classificazione è la seguente:
 \begin{itemize}
 	\item \textbf{RS}: è l'acronimo per Requisito Specifico;
+	\item \textbf{Classificazione}: individua la classificazione del requisito:
+	\begin{itemize}
+		\item Funzionale: indicato dalla lettera "F";
+		\item Qualità: indicato dalla lettera "Q";
+		\item Vincolo: indicato dalla lettera "V";
+		\item Prestazionale: indicato dalla lettera "P".
+	\end{itemize}
 	\item \textbf{Tipo\_di\_requisito}: individua la tipologia di requisito:
 	\begin{itemize}
 		\item Obbligatorio: indicato con la lettera "O" individua un requisito essenziale allo sviluppo del progetto e necessario al suo completamento;
 		\item Desiderabile: indicato con la lettera "D" individua un requisito utile al prodotto e che dà valore aggiunto ad esso, ma non essenziale al suo completamento;
 		\item Facoltativo: indicato con la lettera "F" individua un requisito che può essere sviluppato, ma può anche non essere completato.
 	\end{itemize};
-	\item \textbf{Codice\_requisito}: è un numero incrementale per rendere univoco il requisito.
+	\item \textbf{Codice\_requisito}: è rappresentato da un codice identificativo univoco nella forma gerarchica padre/figlio.
 \end{itemize}
 Ogni requisito è strutturato nella tabella nel seguente modo:
 \begin{itemize}
 	\item \textbf{Identificativo}: individua univocamente il requisito;
 	\item \textbf{Descrizione}: descrizione del requisito richiesto nella determinata fase;
 	\item \textbf{Tipo di requisito}: individua la tipologia di requisito obbligatorio, desiderabile e facoltativo;
-	\item \textbf{Fase}: individua la fase in cui è presente il requisito;
+	\item \textbf{Fonte}: ogni requisito è ricavato da una delle seguenti fonti:
+	\begin{itemize}
+		\item Capitolato$_{\scaleto{G}{3pt}}$: individua il documento del capitolato$_{\scaleto{G}{3pt}}$;
+		\item Interno: il requisito è stato individuato dagli analisti;
+		\item Verbale: si tratta del documento in riferimento alla discussione con il proponente;
+		\item Fasi del capitolato: il requisito è stato individuato dalla fase del capitolato individuata con il proprio codice.
+	\end{itemize}
 \end{itemize}
 \paragraph{Classificazione delle fasi}\label{2.2.3.1.6}\mbox{}\\% FC1.2 = fc(fasi capitolato) 1 (macro-fase) 2(fase precisa)
 La descrizione dettagliata delle fasi è stata incorporata nel documento per individuare la fase in cui il requisito è necessario che venga implementato o sia possibile l'implementazione.\\
@@ -115,12 +128,23 @@ La descrizione della classificazione è la seguente:
 \end{itemize}
 Ogni suddivisione delle fasi è strutturato nel seguente modo:
 \begin{itemize}
-	\item \textbf{Identificativo}: inserito prima del nome della fase per individuarla univocamente;
-	\item \textbf{Nome}: identifica il nome della fase;
-	\item \textbf{Descrizione}: descrizione dello scopo della fase in analisi;
+	\item \textbf{Principali}:
+	\begin{itemize}
+		\item \textbf{Identificativo}: inserito prima del nome della fase per individuarla univocamente;
+		\item \textbf{Nome}: identifica il nome della fase;
+		\item \textbf{Descrizione}: descrizione dello scopo della fase in analisi.
+	\end{itemize}
+	\item \textbf{Aggiuntivi}:
+\begin{itemize}
 	\item \textbf{Input}: dati in ingresso necessari allo sviluppo della fase;
 	\item \textbf{Output}: dati in uscita elaborati o modificati durante la fase;
 	\item \textbf{Linguaggio di programmazione}: linguaggio di programmazione utilizzato per lo sviluppo della fase;
+	\item \textbf{Processo}: sono le operazioni svolte nella fase;
+	\item \textbf{Risposta ad errori}: operazione della fase nel caso di errori;
+	\item \textbf{Tipi di algoritmi}: individua gli algoritmi utilizzabili;
+	\item \textbf{Strumenti}: sono strumenti utilizzati nello svolgimento della fase;
+	\item \textbf{Vincolo}: vincoli individuati dal gruppo o dal proponente.
+\end{itemize}
 \end{itemize}
 \paragraph{Qualità dei requisiti}\label{2.2.3.1.7}\mbox{}\\
 Ogni requisito deve rispettare le seguenti qualità:
