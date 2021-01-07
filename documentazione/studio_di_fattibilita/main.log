@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.26)  2 DEC 2020 10:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.26)  7 JAN 2021 16:34
 entering extended mode
 **./main.tex
 (main.tex
 LaTeX2e <2020-10-01> patch level 2
-L3 programming layer <2020-10-27> xparse <2020-03-03>
+L3 programming layer <2020-10-27> xparse <2020-03-03> (packages.tex
 (C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/latex/base\report.cls
 Document Class: report 2020/04/10 v1.4m Standard LaTeX document class
 (C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/latex/base\size12.clo
@@ -327,32 +327,520 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 (C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/latex/graphics\dvipsnam.def
 File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
 ))
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2020/10/26 v3.5g Customizing captions (AR)
+
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
+\captionmargin=\dimen167
+\captionmargin@=\dimen168
+\captionwidth=\dimen169
+\caption@tempdima=\dimen170
+\caption@indent=\dimen171
+\caption@parindent=\dimen172
+\caption@hangindent=\dimen173
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count273
+\c@continuedfloat=\count274
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+)
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/latex/pgf/frontendlayer\tikz.sty
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/utilities\pgfutil-com
+mon.tex
+\pgfutil@everybye=\toks26
+\pgfutil@tempdima=\dimen174
+\pgfutil@tempdimb=\dimen175
+
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/utilities\pgfutil-com
+mon-lists.tex))
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/utilities\pgfutil-lat
+ex.def
+\pgfutil@abb=\box52
+)
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/utilities\pgfrcs.code
+.tex (C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf\pgf.revision.tex
+)
+Package: pgfrcs 2020/10/01 v3.1.6a (3.1.6a)
+))
+Package: pgf 2020/10/01 v3.1.6a (3.1.6a)
+
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.sty
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.sty
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/systemlayer\pgfsys.co
+de.tex
+Package: pgfsys 2020/10/01 v3.1.6a (3.1.6a)
+
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/utilities\pgfkeys.cod
+e.tex
+\pgfkeys@pathtoks=\toks27
+\pgfkeys@temptoks=\toks28
+
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/utilities\pgfkeysfilt
+ered.code.tex
+\pgfkeys@tmptoks=\toks29
+))
+\pgf@x=\dimen176
+\pgf@y=\dimen177
+\pgf@xa=\dimen178
+\pgf@ya=\dimen179
+\pgf@xb=\dimen180
+\pgf@yb=\dimen181
+\pgf@xc=\dimen182
+\pgf@yc=\dimen183
+\pgf@xd=\dimen184
+\pgf@yd=\dimen185
+\w@pgf@writea=\write3
+\r@pgf@reada=\read3
+\c@pgf@counta=\count275
+\c@pgf@countb=\count276
+\c@pgf@countc=\count277
+\c@pgf@countd=\count278
+\t@pgf@toka=\toks30
+\t@pgf@tokb=\toks31
+\t@pgf@tokc=\toks32
+\pgf@sys@id@count=\count279
+
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/systemlayer\pgf.cfg
+File: pgf.cfg 2020/10/01 v3.1.6a (3.1.6a)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-pd
+ftex.def
+File: pgfsys-pdftex.def 2020/10/01 v3.1.6a (3.1.6a)
+
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-co
+mmon-pdf.def
+File: pgfsys-common-pdf.def 2020/10/01 v3.1.6a (3.1.6a)
+)))
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/systemlayer\pgfsyssof
+tpath.code.tex
+File: pgfsyssoftpath.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+\pgfsyssoftpath@smallbuffer@items=\count280
+\pgfsyssoftpath@bigbuffer@items=\count281
+)
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/systemlayer\pgfsyspro
+tocol.code.tex
+File: pgfsysprotocol.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+))
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/basiclayer\pgfcore.co
+de.tex
+Package: pgfcore 2020/10/01 v3.1.6a (3.1.6a)
+
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex
+
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/math\pgfmathcalc.code
+.tex
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/math\pgfmathutil.code
+.tex)
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/math\pgfmathparser.co
+de.tex
+\pgfmath@dimen=\dimen186
+\pgfmath@count=\count282
+\pgfmath@box=\box53
+\pgfmath@toks=\toks33
+\pgfmath@stack@operand=\toks34
+\pgfmath@stack@operation=\toks35
+)
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/math\pgfmathfunctions
+.code.tex
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/math\pgfmathfunctions
+.basic.code.tex)
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/math\pgfmathfunctions
+.trigonometric.code.tex)
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/math\pgfmathfunctions
+.random.code.tex)
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/math\pgfmathfunctions
+.comparison.code.tex)
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/math\pgfmathfunctions
+.base.code.tex)
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/math\pgfmathfunctions
+.round.code.tex)
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/math\pgfmathfunctions
+.misc.code.tex)
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/math\pgfmathfunctions
+.integerarithmetics.code.tex)))
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/math\pgfmathfloat.cod
+e.tex
+\c@pgfmathroundto@lastzeros=\count283
+))
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/math\pgfint.code.tex)
+
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepoi
+nts.code.tex
+File: pgfcorepoints.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+\pgf@picminx=\dimen187
+\pgf@picmaxx=\dimen188
+\pgf@picminy=\dimen189
+\pgf@picmaxy=\dimen190
+\pgf@pathminx=\dimen191
+\pgf@pathmaxx=\dimen192
+\pgf@pathminy=\dimen193
+\pgf@pathmaxy=\dimen194
+\pgf@xx=\dimen195
+\pgf@xy=\dimen196
+\pgf@yx=\dimen197
+\pgf@yy=\dimen198
+\pgf@zx=\dimen199
+\pgf@zy=\dimen256
+)
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepat
+hconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+\pgf@path@lastx=\dimen257
+\pgf@path@lasty=\dimen258
+)
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepat
+husage.code.tex
+File: pgfcorepathusage.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+\pgf@shorten@end@additional=\dimen259
+\pgf@shorten@start@additional=\dimen260
+)
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/basiclayer\pgfcoresco
+pes.code.tex
+File: pgfcorescopes.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+\pgfpic=\box54
+\pgf@hbox=\box55
+\pgf@layerbox@main=\box56
+\pgf@picture@serial@count=\count284
+)
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/basiclayer\pgfcoregra
+phicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+\pgflinewidth=\dimen261
+)
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretra
+nsformations.code.tex
+File: pgfcoretransformations.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+\pgf@pt@x=\dimen262
+\pgf@pt@y=\dimen263
+\pgf@pt@temp=\dimen264
+)
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/basiclayer\pgfcorequi
+ck.code.tex
+File: pgfcorequick.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+)
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreobj
+ects.code.tex
+File: pgfcoreobjects.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+)
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepat
+hprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+)
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/basiclayer\pgfcorearr
+ows.code.tex
+File: pgfcorearrows.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+\pgfarrowsep=\dimen265
+)
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/basiclayer\pgfcoresha
+de.code.tex
+File: pgfcoreshade.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+\pgf@max=\dimen266
+\pgf@sys@shading@range@num=\count285
+\pgf@shadingcount=\count286
+)
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreima
+ge.code.tex
+File: pgfcoreimage.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreext
+ernal.code.tex
+File: pgfcoreexternal.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+\pgfexternal@startupbox=\box57
+))
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/basiclayer\pgfcorelay
+ers.code.tex
+File: pgfcorelayers.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+)
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretra
+nsparency.code.tex
+File: pgfcoretransparency.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+)
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepat
+terns.code.tex
+File: pgfcorepatterns.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+)
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/basiclayer\pgfcorerdf
+.code.tex
+File: pgfcorerdf.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+)))
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/modules\pgfmoduleshap
+es.code.tex
+File: pgfmoduleshapes.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+\pgfnodeparttextbox=\box58
+)
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/modules\pgfmoduleplot
+.code.tex
+File: pgfmoduleplot.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+)
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-v
+ersion-0-65.sty
+Package: pgfcomp-version-0-65 2020/10/01 v3.1.6a (3.1.6a)
+\pgf@nodesepstart=\dimen267
+\pgf@nodesepend=\dimen268
+)
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-v
+ersion-1-18.sty
+Package: pgfcomp-version-1-18 2020/10/01 v3.1.6a (3.1.6a)
+))
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/latex/pgf/utilities\pgffor.sty
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/latex/pgf/utilities\pgfkeys.sty
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/utilities\pgfkeys.cod
+e.tex))
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/latex/pgf/math\pgfmath.sty
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex
+))
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/utilities\pgffor.code
+.tex
+Package: pgffor 2020/10/01 v3.1.6a (3.1.6a)
+
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex
+)
+\pgffor@iter=\dimen269
+\pgffor@skip=\dimen270
+\pgffor@stack=\toks36
+\pgffor@toks=\toks37
+))
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/frontendlayer/tikz\ti
+kz.code.tex
+Package: tikz 2020/10/01 v3.1.6a (3.1.6a)
+
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/libraries\pgflibraryp
+lothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+\pgf@plot@mark@count=\count287
+\pgfplotmarksize=\dimen271
+)
+\tikz@lastx=\dimen272
+\tikz@lasty=\dimen273
+\tikz@lastxsaved=\dimen274
+\tikz@lastysaved=\dimen275
+\tikz@lastmovetox=\dimen276
+\tikz@lastmovetoy=\dimen277
+\tikzleveldistance=\dimen278
+\tikzsiblingdistance=\dimen279
+\tikz@figbox=\box59
+\tikz@figbox@bg=\box60
+\tikz@tempbox=\box61
+\tikz@tempbox@bg=\box62
+\tikztreelevel=\count288
+\tikznumberofchildren=\count289
+\tikznumberofcurrentchild=\count290
+\tikz@fig@count=\count291
+
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/modules\pgfmodulematr
+ix.code.tex
+File: pgfmodulematrix.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+\pgfmatrixcurrentrow=\count292
+\pgfmatrixcurrentcolumn=\count293
+\pgf@matrix@numberofcolumns=\count294
+)
+\tikz@expandcount=\count295
+
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/generic/pgf/frontendlayer/tikz/li
+braries\tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+)))
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count296
+\lst@gtempboxa=\box63
+\lst@token=\toks38
+\lst@length=\count297
+\lst@currlwidth=\dimen280
+\lst@column=\count298
+\lst@pos=\count299
+\lst@lostspace=\dimen281
+\lst@width=\dimen282
+\lst@newlines=\count300
+\lst@lineno=\count301
+\lst@maxwidth=\dimen283
+
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count302
+\lst@skipnumbers=\count303
+\lst@framebox=\box64
+)
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+)
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/latex/scalerel\scalerel.sty
+Package: scalerel 2016/12/29 v1.8 Routines for constrained scaling and stretchi
+ng of objects, relative to a reference object or in absolute terms
+
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/latex/tools\calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count304
+\calc@Bcount=\count305
+\calc@Adimen=\dimen284
+\calc@Bdimen=\dimen285
+\calc@Askip=\skip64
+\calc@Bskip=\skip65
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count306
+\calc@Cskip=\skip66
+)
+\thesrwidth=\skip67
+\thesrheight=\skip68
+\srblobheight=\skip69
+\srblobdepth=\skip70
+\mnxsrwidth=\skip71
+\LMex=\skip72
+\LMpt=\skip73
+)
+(config.tex
+Package hyperref Info: Option `colorlinks' set `true' on input line 50.
+
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/latex/mdframed\mdframed.sty
+Package: mdframed 2013/07/01 1.9b: mdframed
+
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/latex/l3packages/xparse\xparse.st
+y (C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2020-10-27 L3 programming layer (loader) 
+
 (C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/latex/l3backend\l3backend-pdftex.
 def
 File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
-\l__kernel_color_stack_int=\count273
-\l__pdf_internal_box=\box52
-) (main.aux)
+\l__kernel_color_stack_int=\count307
+\l__pdf_internal_box=\box65
+))
+Package: xparse 2020-10-27 L3 Experimental document command parser
+
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/latex/l3packages/xparse\xparse-ge
+neric.tex))
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/latex/zref\zref-abspage.sty
+Package: zref-abspage 2020-07-03 v2.32 Module abspage for zref (HO)
+
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/latex/zref\zref-base.sty
+Package: zref-base 2020-07-03 v2.32 Module base for zref (HO)
+Package zref Info: New property list: main on input line 764.
+Package zref Info: New property: default on input line 765.
+Package zref Info: New property: page on input line 766.
+)
+\c@abspage=\count308
+Package zref Info: New property: abspage on input line 66.
+)
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/latex/needspace\needspace.sty
+Package: needspace 2010/09/12 v1.3d reserve vertical space
+)
+\mdf@templength=\skip74
+\c@mdf@globalstyle@cnt=\count309
+\mdf@skipabove@length=\skip75
+\mdf@skipbelow@length=\skip76
+\mdf@leftmargin@length=\skip77
+\mdf@rightmargin@length=\skip78
+\mdf@innerleftmargin@length=\skip79
+\mdf@innerrightmargin@length=\skip80
+\mdf@innertopmargin@length=\skip81
+\mdf@innerbottommargin@length=\skip82
+\mdf@splittopskip@length=\skip83
+\mdf@splitbottomskip@length=\skip84
+\mdf@outermargin@length=\skip85
+\mdf@innermargin@length=\skip86
+\mdf@linewidth@length=\skip87
+\mdf@innerlinewidth@length=\skip88
+\mdf@middlelinewidth@length=\skip89
+\mdf@outerlinewidth@length=\skip90
+\mdf@roundcorner@length=\skip91
+\mdf@footenotedistance@length=\skip92
+\mdf@userdefinedwidth@length=\skip93
+\mdf@needspace@length=\skip94
+\mdf@frametitleaboveskip@length=\skip95
+\mdf@frametitlebelowskip@length=\skip96
+\mdf@frametitlerulewidth@length=\skip97
+\mdf@frametitleleftmargin@length=\skip98
+\mdf@frametitlerightmargin@length=\skip99
+\mdf@shadowsize@length=\skip100
+\mdf@extratopheight@length=\skip101
+\mdf@subtitleabovelinewidth@length=\skip102
+\mdf@subtitlebelowlinewidth@length=\skip103
+\mdf@subtitleaboveskip@length=\skip104
+\mdf@subtitlebelowskip@length=\skip105
+\mdf@subtitleinneraboveskip@length=\skip106
+\mdf@subtitleinnerbelowskip@length=\skip107
+\mdf@subsubtitleabovelinewidth@length=\skip108
+\mdf@subsubtitlebelowlinewidth@length=\skip109
+\mdf@subsubtitleaboveskip@length=\skip110
+\mdf@subsubtitlebelowskip@length=\skip111
+\mdf@subsubtitleinneraboveskip@length=\skip112
+\mdf@subsubtitleinnerbelowskip@length=\skip113
+
+(C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/latex/mdframed\md-frame-1.mdf
+File: md-frame-1.mdf 2013/07/01\ 1.9b: md-frame-1
+)
+\mdf@frametitlebox=\box66
+\mdf@footnotebox=\box67
+\mdf@splitbox@one=\box68
+\mdf@splitbox@two=\box69
+\mdf@splitbox@save=\box70
+\mdfsplitboxwidth=\skip114
+\mdfsplitboxtotalwidth=\skip115
+\mdfsplitboxheight=\skip116
+\mdfsplitboxdepth=\skip117
+\mdfsplitboxtotalheight=\skip118
+\mdfframetitleboxwidth=\skip119
+\mdfframetitleboxtotalwidth=\skip120
+\mdfframetitleboxheight=\skip121
+\mdfframetitleboxdepth=\skip122
+\mdfframetitleboxtotalheight=\skip123
+\mdffootnoteboxwidth=\skip124
+\mdffootnoteboxtotalwidth=\skip125
+\mdffootnoteboxheight=\skip126
+\mdffootnoteboxdepth=\skip127
+\mdffootnoteboxtotalheight=\skip128
+\mdftotallinewidth=\skip129
+\mdfboundingboxwidth=\skip130
+\mdfboundingboxtotalwidth=\skip131
+\mdfboundingboxheight=\skip132
+\mdfboundingboxdepth=\skip133
+\mdfboundingboxtotalheight=\skip134
+\mdf@freevspace@length=\skip135
+\mdf@horizontalwidthofbox@length=\skip136
+\mdf@verticalmarginwhole@length=\skip137
+\mdf@horizontalspaceofbox=\skip138
+\mdfsubtitleheight=\skip139
+\mdfsubsubtitleheight=\skip140
+\c@mdfcountframes=\count310
+
+****** mdframed patching \endmdf@trivlist
+
+****** -- success******
+
+\mdf@envdepth=\count311
+\c@mdf@env@i=\count312
+\c@mdf@env@ii=\count313
+\c@mdf@zref@counter=\count314
+Package zref Info: New property: mdf@pagevalue on input line 895.
+))
+(main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Info: Redefining \it@ocap on input line 42.
-LaTeX Info: Redefining \it@ccap on input line 42.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Info: Redefining \it@ocap on input line 4.
+LaTeX Info: Redefining \it@ccap on input line 4.
 
 
 File italian.ldf warning: 
@@ -360,21 +848,21 @@ italian.ldf    With OT1 encoding guillemets are poorly faked
 italian.ldf    Use T1 encoding
 italian.ldf    or specify a font with command \CaporaliFrom
 italian.ldf    See the documentation concerning the babel-italian typesetting 
-italian.ldf    on input line 42.
+italian.ldf    on input line 4.
 
 (C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count274
-\scratchdimen=\dimen167
-\scratchbox=\box53
-\nofMPsegments=\count275
-\nofMParguments=\count276
-\everyMPshowfont=\toks26
-\MPscratchCnt=\count277
-\MPscratchDim=\dimen168
-\MPnumerator=\count278
-\makeMPintoPDFobject=\count279
-\everyMPtoPDFconversion=\toks27
+\scratchcounter=\count315
+\scratchdimen=\dimen286
+\scratchbox=\box71
+\nofMPsegments=\count316
+\nofMParguments=\count317
+\everyMPshowfont=\toks39
+\MPscratchCnt=\count318
+\MPscratchDim=\dimen287
+\MPnumerator=\count319
+\makeMPintoPDFobject=\count320
+\everyMPtoPDFconversion=\toks40
 )
 (C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.
 sty
@@ -384,8 +872,8 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 )
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 42.
-Package hyperref Info: Link coloring OFF on input line 42.
+(lastpage)             ! on input line 4.
+Package hyperref Info: Link coloring ON on input line 4.
  (C:\Users\Emma\Desktop\ProgettoSWE\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 
@@ -396,14 +884,14 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count280
+\c@section@level=\count321
 )
-LaTeX Info: Redefining \ref on input line 42.
-LaTeX Info: Redefining \pageref on input line 42.
-LaTeX Info: Redefining \nameref on input line 42.
+LaTeX Info: Redefining \ref on input line 4.
+LaTeX Info: Redefining \pageref on input line 4.
+LaTeX Info: Redefining \nameref on input line 4.
  (main.out) (main.out)
-\@outlinefile=\write3
-\openout3 = `main.out'.
+\@outlinefile=\write4
+\openout4 = `main.out'.
 
 
 *geometry* driver: auto-detecting
@@ -440,35 +928,29 @@ LaTeX Info: Redefining \nameref on input line 42.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<../immagini/DRUIDSLOGO.jpg, id=251, 963.6pt x 963.6pt>
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count322
+<../immagini/DRUIDSLOGO.jpg, id=254, 963.6pt x 963.6pt>
 File: ../immagini/DRUIDSLOGO.jpg Graphic file (type jpg)
 <use ../immagini/DRUIDSLOGO.jpg>
-Package pdftex.def Info: ../immagini/DRUIDSLOGO.jpg  used on input line 50.
-(pdftex.def)             Requested size: 338.58632pt x 338.57365pt.
+Package pdftex.def Info: ../immagini/DRUIDSLOGO.jpg  used on input line 13.
+(pdftex.def)             Requested size: 241.84843pt x 241.84042pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 56.
+(Font)              <12> on input line 20.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 56.
+(Font)              <8> on input line 20.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 56.
+(Font)              <6> on input line 20.
 [1
 
 {C:/Users/Emma/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <../immagini/DRUI
-DSLOGO.jpg>] (Registro.tex
-Underfull \hbox (badness 10000) in paragraph at lines 5--6
-
- []
-
-
-Overfull \hbox (54.03745pt too wide) in paragraph at lines 11--35
- [][] 
- []
-
-)
-<../immagini/minilogo.jpg, id=260, 1927.2pt x 752.8125pt>
+DSLOGO.jpg>] ("Registro delle modifiche.tex")
+<../immagini/minilogo.jpg, id=264, 1927.2pt x 752.8125pt>
 File: ../immagini/minilogo.jpg Graphic file (type jpg)
 <use ../immagini/minilogo.jpg>
-Package pdftex.def Info: ../immagini/minilogo.jpg  used on input line 75.
+Package pdftex.def Info: ../immagini/minilogo.jpg  used on input line 45.
 (pdftex.def)             Requested size: 85.35826pt x 33.3352pt.
 
 
@@ -481,8 +963,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.75 \tableofcontents
-                     {} [1 <../immagini/minilogo.jpg>] (main.toc
+l.45 	\tableofcontents
+                      {} [1 <../immagini/minilogo.jpg>] (main.toc
 File: ../immagini/minilogo.jpg Graphic file (type jpg)
 <use ../immagini/minilogo.jpg>
 Package pdftex.def Info: ../immagini/minilogo.jpg  used on input line 37.
@@ -490,8 +972,8 @@ Package pdftex.def Info: ../immagini/minilogo.jpg  used on input line 37.
  [2
 
 ])
-\tf@toc=\write4
-\openout4 = `main.toc'.
+\tf@toc=\write5
+\openout5 = `main.toc'.
 
 
 (capitoli/Introduzione.tex
@@ -503,7 +985,7 @@ Package pdftex.def Info: ../immagini/minilogo.jpg  used on input line 1.
 Capitolo 1.
 File: ../immagini/minilogo.jpg Graphic file (type jpg)
 <use ../immagini/minilogo.jpg>
-Package pdftex.def Info: ../immagini/minilogo.jpg  used on input line 25.
+Package pdftex.def Info: ../immagini/minilogo.jpg  used on input line 28.
 (pdftex.def)             Requested size: 85.35826pt x 33.3352pt.
 [4
 
@@ -534,7 +1016,7 @@ Package pdftex.def Info: ../immagini/minilogo.jpg  used on input line 1.
 Capitolo 3.
 File: ../immagini/minilogo.jpg Graphic file (type jpg)
 <use ../immagini/minilogo.jpg>
-Package pdftex.def Info: ../immagini/minilogo.jpg  used on input line 16.
+Package pdftex.def Info: ../immagini/minilogo.jpg  used on input line 18.
 (pdftex.def)             Requested size: 85.35826pt x 33.3352pt.
 [9
 
@@ -596,7 +1078,7 @@ Package pdftex.def Info: ../immagini/minilogo.jpg  used on input line 1.
 Capitolo 7.
 File: ../immagini/minilogo.jpg Graphic file (type jpg)
 <use ../immagini/minilogo.jpg>
-Package pdftex.def Info: ../immagini/minilogo.jpg  used on input line 25.
+Package pdftex.def Info: ../immagini/minilogo.jpg  used on input line 24.
 (pdftex.def)             Requested size: 85.35826pt x 33.3352pt.
 [18
 
@@ -609,7 +1091,7 @@ Package pdftex.def Info: ../immagini/minilogo.jpg  used on input line 1.
 Capitolo 8.
 File: ../immagini/minilogo.jpg Graphic file (type jpg)
 <use ../immagini/minilogo.jpg>
-Package pdftex.def Info: ../immagini/minilogo.jpg  used on input line 25.
+Package pdftex.def Info: ../immagini/minilogo.jpg  used on input line 23.
 (pdftex.def)             Requested size: 85.35826pt x 33.3352pt.
 [20
 
@@ -617,7 +1099,7 @@ Package pdftex.def Info: ../immagini/minilogo.jpg  used on input line 25.
 AED: lastpage setting LastPage
 File: ../immagini/minilogo.jpg Graphic file (type jpg)
 <use ../immagini/minilogo.jpg>
-Package pdftex.def Info: ../immagini/minilogo.jpg  used on input line 88.
+Package pdftex.def Info: ../immagini/minilogo.jpg  used on input line 61.
 (pdftex.def)             Requested size: 85.35826pt x 33.3352pt.
 [21] (main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
@@ -625,26 +1107,27 @@ Package rerunfilecheck Info: File `main.out' has not changed.
  )
 (\end occurred inside a group at level 1)
 
-### simple group (level 1) entered at line 8 ({)
+### simple group (level 1) entered at line 7 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 8299 strings out of 479832
- 125869 string characters out of 2872936
- 467973 words of memory out of 3000000
- 24991 multiletter control sequences out of 15000+200000
+ 21744 strings out of 479832
+ 406908 string characters out of 2872936
+ 735135 words of memory out of 3000000
+ 38171 multiletter control sequences out of 15000+200000
  541407 words of font info for 50 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 66i,16n,72p,958b,883s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 89i,16n,98p,958b,888s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Emma\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/e
 c/dpi600\tcrm1200.pk><C:/Users/Emma/Desktop/ProgettoSWE/MiKTeX/fonts/type1/publ
 ic/amsfonts/cm/cmbx12.pfb><C:/Users/Emma/Desktop/ProgettoSWE/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmr12.pfb><C:/Users/Emma/Desktop/ProgettoSWE/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmr17.pfb><C:/Users/Emma/Desktop/ProgettoSWE/MiKTeX/fon
-ts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Emma/Desktop/ProgettoSWE/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on main.pdf (22 pages, 524618 bytes).
+/public/amsfonts/cm/cmmi8.pfb><C:/Users/Emma/Desktop/ProgettoSWE/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmr12.pfb><C:/Users/Emma/Desktop/ProgettoSWE/MiKTeX/fon
+ts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Emma/Desktop/ProgettoSWE/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Emma/Desktop/ProgettoSWE/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on main.pdf (22 pages, 535230 bytes).
 PDF statistics:
- 484 PDF objects out of 1000 (max. 8388607)
- 85 named destinations out of 1000 (max. 500000)
- 507 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 492 PDF objects out of 1000 (max. 8388607)
+ 86 named destinations out of 1000 (max. 500000)
+ 519 words of extra memory for PDF output out of 10000 (max. 10000000)
 

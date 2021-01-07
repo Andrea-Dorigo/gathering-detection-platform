@@ -1,79 +1,52 @@
-\documentclass[a4paper,12pt]{report}
-\usepackage[utf8]{inputenc}
-\usepackage[english, italian]{babel}
-\usepackage{graphicx}
-\usepackage{float}
-\usepackage{tabularx}
-\usepackage{makecell}
-\usepackage{titlesec}
-\usepackage{fancyhdr}
-\usepackage{lastpage}
-\usepackage{xurl}
-\usepackage{hyperref}
-\usepackage{geometry}
-\usepackage[table,dvipsnames]{xcolor}
-
-\titleformat{\chapter}[display]
-{\normalfont\bfseries}{}{0pt}{\LARGE} %QUESTO SERVE PER AVERE SOLO IL NOME DEL CAPITOLO CHE VOGLIO IO
-
-\titlespacing*{\chapter}{0cm}{0cm}{0.2cm}
-
-\geometry{
-	left=20mm,
-	right=20mm,
-}
-
-\renewcommand{\contentsname}{Indice} %QUESTO SERVE PER AVERE L'INDICE CON IL NOME CHE VOGLIO IO
-
-\pagestyle{plain}
-
-\fancypagestyle{plain}{
-\fancyhf{}
-\lhead{\includegraphics[width=3cm]{../immagini/minilogo.jpg}}
-\chead{}
-\rhead{\fontsize{12}{10}Studio di fattibilità}
-\lfoot{}
-\cfoot{\thepage\ di \pageref{LastPage}}
-\rfoot{}
-}
-
-\pagestyle{plain}
+\input{packages}
+\input{config}
 
 \begin{document}
-\makeatletter
-\begin{titlepage}
-	\begin{center}
-	\vspace*{-4,0cm}
-	\author{Jawa Druids}
-	\title{Studio di fattibilità}
-	\date{}
-	\includegraphics[width=0.7\linewidth]{../immagini/DRUIDSLOGO.jpg}\\[4ex]
-	{\huge \bfseries  \@title }\\[2ex] 
-	{\LARGE  \@author}\\[50ex]
-	\vspace*{-8,0cm}
-	\begin{table}[H]
-		\centering
-		\begin{tabular}{c|c}
-			\textbf{Versione} & x.x.x \\
-			\textbf{Data approvazione} & xx-xx-xxxx\\
-			\textbf{Responsabile} & Nome Cognome\\
-			\textbf{Redattori} & Margherita Mitillo \\
-			\textbf{Verificatori} & \makecell{ Nome Cognome \\ Emma Roveroni} \\
-			\textbf{Stato} & stato\\
-			\textbf{Lista distribuzione} & \makecell{Jawa Druids \\ Prof. Tullio Vardanega \\ Prof. Riccardo Cardin}\\
-			\textbf{Uso} & Interno			
-		\end{tabular}
-	\end{table}
-	\fontsize{17}{12}\textbf{Sommario} \\
-	Studio di Fattibilità dei capitolati proposti
-	\end{center}
-\end{titlepage}
-\makeatother
-
-\input{Registro}
 	
-\tableofcontents{}
-
+	\makeatletter
+	\begin{titlepage}
+		\begin{center}
+			\vspace*{-5cm}
+			\author{Jawa Druids} 
+			\title{Nome documento}
+			\date{} %LASCIARE QUESTO CAMPO VUOTO, SE LO TOLGO STAMPA LA DATA CORRENTE
+			\includegraphics[width=0.5\linewidth]{../immagini/DRUIDSLOGO.jpg}\\[4ex]
+			{\huge \bfseries  \@title }\\[2ex] 
+			{\LARGE  \@author}\\[50ex]
+			\vspace*{-9cm}
+			\begin{table}[H]
+				\renewcommand{\arraystretch}{1.4}
+				\centering
+				\begin{tabular}{r | l}
+					\textbf{Versione} & x.x.x \\%RIGA PER INSERIRE LA VERSIONE ULTIMA DEL DOCUMENTO
+					\textbf{Data approvazione} & xx-xx-xxxx\\
+					\textbf{Responsabile} & Nome Cognome\\
+					\textbf{Redattori} & \makecell[tl]{Margherita Mitillo \\ Emma Roveroni} \\
+					\textbf{Verificatori} & \makecell[tl]{Igli Mezini \\ Nome Cognome} \\
+					%MAKECELL SERVE PER POI ANDARE A CAPO ALL'INTERNO DELLA CELLA
+					\textbf{Stato} & Stato\\
+					\textbf{Lista distribuzione} & \makecell[tl]{JawaDruids \\ Prof. Tullio vardanega \\ Prof. Riccardo Cardin \\ Sync Lab}\\
+					\textbf{Uso} & Interno
+				\end{tabular}
+			\end{table}
+			\vspace{0.1cm}
+			\hfill \break
+			\fontsize{17}{10}\textbf{Sommario} \\
+			\vspace{0.1cm}
+			Studio di Fattibilità dei capitolati proposti 
+		\end{center}
+	\end{titlepage}
+	\makeatother
+	
+	\input{Registro delle modifiche}
+	
+	%COMANDO PER LA CREAZIONE DELL'INDICE
+	
+	\tableofcontents{}
+	
+	%PER RENDERE PIÙ CHIARA LA STESURA DEI DOCUMENTI È MEGLIO LASCIARE SEPARATI IN FILE DIVERSI OGNI CAPITOLO
+	
+	% \input{esempio} -- esempio di codice per inserire un nuovo capitolo
 \input{capitoli/Introduzione}
 \input{capitoli/C3}
 \input{capitoli/C1}
