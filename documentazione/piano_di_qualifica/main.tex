@@ -1,0 +1,45 @@
+\documentclass[a4paper,12pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{tabularx}
+\usepackage{makecell}
+
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5} %SONO I DUE COMANDI PER AVERE LE SUBSUBSECTION NUMERATE E PRESENTI NELL'INDICE
+
+\begin{document}
+    
+\makeatletter
+\begin{titlepage}
+    \begin{center}
+    \vspace*{-4,0cm}
+    \author{Jawa Druids} 
+    \title{Piano di qualifica}
+    \date{} %LASCIARE QUESTO CAMPO VUOTO, SE LO TOLGO STAMPA LA DATA CORRENTE
+    \includegraphics[width=0.7\linewidth]{../immagini/DRUIDSLOGO.jpg}\\[4ex]
+    {\huge \bfseries  \@title }\\[2ex] 
+    {\LARGE  \@author}\\[50ex]
+    \vspace*{-8,0cm}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{c|c}
+            \textbf{Versione} & x.x.x \\
+            \textbf{Data approvazione} & xx-xx-xxxx\\
+            \textbf{Responsabile} & Nome Cognome\\
+            \textbf{Redattori} & Alfredo Graziano \\
+            \textbf{Verificatori} & \makecell{Nome Cognome \\ Nome Cognome} \\
+        %MAKECELL SERVE PER POI ANDARE A CAPO ALL'INTERNO DELLA CELLA
+            \textbf{Stato} & stato\\
+            \textbf{Lista distribuzione} & \makecell{Jawa Druids \\ Tullio \\ NomeAziendaProponente}\\
+            \textbf{Uso} & Interno            
+        \end{tabular}
+    \end{table}
+    \fontsize{16}{10}\textbf{Sommario} \\
+    Il documento contiene le strategie di verifica e validazione seguite dal gruppo
+    JawaDruids durante lo svolgimento del progetto Gathering Detection Platform.
+    \end{center}
+\end{titlepage}
+\makeatother
+
+\end{document}
