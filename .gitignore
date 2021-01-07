@@ -13,3 +13,8 @@
 # e tranne la cartella immagini e tutto ciò che v'è al suo interno
 !/documentazione/immagini/
 !/documentazione/immagini/*
+!/documentazione/immagini/**/*/
+!/documentazione/immagini/**/*/*
+
+# file da mac os
+.DS_Store
