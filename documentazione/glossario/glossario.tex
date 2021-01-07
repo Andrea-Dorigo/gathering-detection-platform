@@ -2,125 +2,74 @@
 \input{config}
 
 \begin{document}
-
-\makeatletter
-\begin{titlepage}
-	\begin{center}
-		\vspace*{-5cm}
-		\author{Jawa Druids}
-		\title{Nome documento}
-		\date{} %LASCIARE QUESTO CAMPO VUOTO, SE LO TOLGO STAMPA LA DATA CORRENTE
-		\includegraphics[width=0.7\linewidth]{../immagini/DRUIDSLOGO.jpg}\\[4ex]
-		{\huge \bfseries  \@title }\\[2ex]
-		{\LARGE  \@author}\\[50ex]
-		\vspace*{-9cm}
-		\begin{table}[H]
-			\renewcommand{\arraystretch}{1.4}
-			\centering
-			\begin{tabular}{r | l}
-				\textbf{Versione} & x.x.x \\%RIGA PER INSERIRE LA VERSIONE ULTIMA DEL DOCUMENTO
-				\textbf{Data approvazione} & xx-xx-xxxx\\
-				\textbf{Responsabile} & Nome Cognome\\
-				\textbf{Redattori} & Nome Cognome \\
-				\textbf{Verificatori} & \makecell[tl]{Nome Cognome \\ Nome Cognome} \\
-				%MAKECELL SERVE PER POI ANDARE A CAPO ALL'INTERNO DELLA CELLA
-				\textbf{Stato} & Stato\\
-				\textbf{Lista distribuzione} & \makecell[tl]{Nome Gruppo \\ Nome Professori \\ Nome Azienda Proponente}\\
-				\textbf{Uso} & Esterno
-			\end{tabular}
-		\end{table}
-		\vspace{0.1cm}
-		\hfill \break
-		\fontsize{17}{10}\textbf{Sommario} \\
-		\vspace{0.1cm}
-		\textit{Glossario}
-	\end{center}
-\end{titlepage}
-\makeatother
-
-\input{registro_delle_modifiche}
-
-%COMANDO PER LA CREAZIONE DELL'INDICE
+	
+	\makeatletter
+	\begin{titlepage}
+		\begin{center}
+			\vspace*{-5cm}
+			\author{Jawa Druids} 
+			\title{Glossario}
+			\date{} %LASCIARE QUESTO CAMPO VUOTO, SE LO TOLGO STAMPA LA DATA CORRENTE
+			\includegraphics[width=0.5\linewidth]{../immagini/DRUIDSLOGO.jpg}\\[4ex]
+			{\huge \bfseries  \@title }\\[2ex] 
+			{\LARGE  \@author}\\[50ex]
+			\vspace*{-9cm}
+			\begin{table}[H]
+				\renewcommand{\arraystretch}{1.4}
+				\centering
+				\begin{tabular}{r | l}
+					\textbf{Versione} & x.x.x \\%RIGA PER INSERIRE LA VERSIONE ULTIMA DEL DOCUMENTO
+					\textbf{Data approvazione} & xx-xx-xxxx\\
+					\textbf{Responsabile} & Nome Cognome\\
+					\textbf{Redattori} & Nome Cognome \\
+					\textbf{Verificatori} & \makecell[tl]{Nome Cognome \\ Nome Cognome} \\
+					%MAKECELL SERVE PER POI ANDARE A CAPO ALL'INTERNO DELLA CELLA
+					\textbf{Stato} & Stato\\
+					\textbf{Lista distribuzione} & \makecell[tl]{Nome Gruppo \\ Nome Professori \\ Nome Azienda Proponente}\\
+					\textbf{Uso} & Uso del documento            
+				\end{tabular}
+			\end{table}
+			\vspace{0.1cm}
+			\hfill \break
+			\fontsize{17}{10}\textbf{Sommario} \\
+			\vspace{0.1cm}
+			Brevissima descrizione del documento 
+		\end{center}
+	\end{titlepage}
+	\makeatother
 
 \tableofcontents{}
-\chapter{A}
-	\begin{itemize}
-		\item \textbf{Attività}\\
-		Composizione di più compiti semplici svolti da singoli, o gruppi, al fine di perseguire un obbiettivo comune.
-	\end{itemize}
-\chapter{B}
-\chapter{C}
-	\begin{itemize}
-		\item \textbf{Capitolato (d'appalto)}\\
-		Documento tecnico, allegato generalmente ad un contratto d'appalto, a cui si fa riferimento per la definizione delle specifiche tecniche dei lavori che verranno successivamente svolti per effetto dello stesso contratto.
-		\item \textbf{Committente}\\
-		Soggetto che ordina ad altri l'esecuzione di un lavoro.
 
-		\item \textbf{Compito}\\
-		Rappresenta la componente elementare di un'attività, viene svolta da un soggetto per senso del dovere.
-		Viene anche utilizzato al plurale: compiti.
-	\end{itemize}
-\chapter{D}
-	\begin{itemize}
-		\item \textbf{Discord}\\
-		Software gratuito utilizzato come canale di comunicazione da parte del gruppo di lavoro.
-		Accessibile mediante smartphone, tablet e computer.
-		Permette la comunicazione testuale, condivisione di file, chiamate vocali e video chiamate.
-		Inoltre permette la creazione interna di canali personalizzati in modo da organizzare al meglio la comunicazione tra le persone.
-	\end{itemize}
-\chapter{E}
-\chapter{F}
-\chapter{G}
-	\begin{itemize}
-		\item \textbf{Git}\\
-		Sistema di controllo gratuito a versione distribuita progettato per tenere traccia del lavoro svolto durante l'intero periodo di sviluppo del software.
-		Utilizzato anche per tenere traccia di tutte le modifiche fatte nei file.
-		I suoi punti di forza sono l'integrità dei dati e il supporto per flussi di lavoro distribuiti e non lineari.
-		\item \textbf{Git-flow}\\
-	\end{itemize}
-\chapter{H}
-\chapter{I}
-\chapter{J}
-\chapter{K}
-\chapter{L}
-\chapter{M}
-\chapter{N}
-	\begin{itemize}
-		\item \textbf{Norma}\\
-		Regola di condotta, stabilità da un singolo soggetto o da un collettivo, al fine di regolare un'attività pratica o di indicare il procedimento da seguire in determinate circostanze.
-	\end{itemize}
-\chapter{O}
-\chapter{P}
-	\begin{itemize}
-		\item \textbf{Procedura}\\
-		Nell'informatica s'intende una sequenza ordinata di operazioni da eseguire al fine di raggiungere un determinato scopo.
+\input{registro_delle_modifiche}
+\input{capitoli/A}
+\input{capitoli/B}
+\input{capitoli/C}
+\input{capitoli/D}
+\input{capitoli/E}
+\input{capitoli/F}
+\input{capitoli/G}
+\input{capitoli/H}
+\input{capitoli/I}
+\input{capitoli/J}
+\input{capitoli/K}
+\input{capitoli/L}
+\input{capitoli/M}
+\input{capitoli/N}
+\input{capitoli/O}
+\input{capitoli/P}
+\input{capitoli/Q}
+\input{capitoli/R}
+\input{capitoli/S}
+\input{capitoli/T}
+\input{capitoli/U}
+\input{capitoli/V}
+\input{capitoli/W}
+\input{capitoli/X}
+\input{capitoli/Y}
+\input{capitoli/Z}
 
-		\item \textbf{Proponente}\\
-		Soggetto che propone il \textit{capitolato d'appalto} per un progetto.
-	\end{itemize}
-\chapter{Q}
-\chapter{R}
-	\begin{itemize}
-		\item \textbf{Repository}
-	\end{itemize}
-\chapter{S}
-\chapter{T}
-	\begin{itemize}
-		\item \textbf{Trello}\\
-		Sito internet che permette di organizzare i task per ciascun membro del gruppo di lavoro.
-		Al suo interno è possibile creare delle schede contenenti il task da fare.
-		Inoltre nelle schede è possibile inserire il nome della persona adibita a svolgere quel task, allegati, commenti ed etichette per differenziare la tipologia dell'attività inserita.
-		Oltre a ciò, \textit{trello} dà la possibilità di poter spostare queste schede su varie colonne per poter facilitare ancora di più l'organizzazione a livello visivo.
-	\end{itemize}
-\chapter{U}
-\chapter{V}
-\chapter{W}
-	\begin{itemize}
-		\item \textbf{wrapper}
-	\end{itemize}
-\chapter{X}
-\chapter{Y}
-\chapter{Z}
+
+%COMANDO PER LA CREAZIONE DELL'INDICE
 
 %PER RENDERE PIÙ CHIARA LA STESURA DEI DOCUMENTI È MEGLIO LASCIARE SEPARATI IN FILE DIVERSI OGNI CAPITOLO
 
