@@ -15,3 +15,4 @@
 !/documentazione/immagini/*
 !/documentazione/immagini/**/*/
 !/documentazione/immagini/**/*/*
+.DS_Store
