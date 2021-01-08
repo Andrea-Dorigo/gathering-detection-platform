@@ -1,9 +1,9 @@
 \chapter{Processi Di Supporto}\label{ProcessiDiSupporto}
 I processi di supporto sono documentazione, gestione della configurazione, gestione della qualità, verifica e validazione
-\section{Documentazione}\label{3.1}
-\subsection{Descrizione}\label{3.1.1}
+\section{Documentazione}\label{ProcessiDiSupportoDocumentazione}
+\subsection{Descrizione}\label{ProcessiDiSupportoDocumentazioneDescrizione}
 Questa sezione fornisce le norme per la stesura, la verifica e l'approvazione dei documenti. Tali regole vanno seguite in tutti i documenti ufficiali prodotti durante il ciclo di vita del software, garantendo cosi la coerenza e la validità degli stessi
-\subsection{Implementazione del documento}\label{3.1.2}
+\subsection{Implementazione del documento}\label{ProcessiDiSupportoDocumentazioneImplementazioneDelDocumento}
  Per ogni documento che si intende sviluppare è necessario identificare:
 \begin{itemize}
 \item \textbf {titolo o nome:} che sia significativo ed ufficiale;
@@ -12,7 +12,7 @@ Questa sezione fornisce le norme per la stesura, la verifica e l'approvazione de
 			\item \textbf {procedure di gestione:} che guidino i responsabili nello sviluppo corretto e normato del documento, durante tutto il suo ciclo di vita;
 				\item \textbf {versionamento:} pianificazione di versioni intermedie e finali del documento.
 \end{itemize}
-\subsection{Ciclo di vita di un documento}\label{3.1.3}
+\subsection{Ciclo di vita di un documento}\label{ProcessiDiSupportoDocumentazioneCicloDiVitaDiUnDocumento}
 Ogni documento prodotto percorre le tappe del seguente ciclo di vita:
 \begin{itemize}
 \item \textbf{creazione:} il documento viene creato partendo da un template progettato a tale
@@ -22,13 +22,13 @@ Ogni documento prodotto percorre le tappe del seguente ciclo di vita:
 			\item \textbf{revisione:} ogni singola sezione del corpo del documento viene regolarmente rivista da almeno un membro del gruppo, che deve essere obbligatoriamente diverso dal redattore della parte in verifica; se necessario, la verifica può essere svolta da più persone: in questo caso può partecipare anche chi ha scritto la sezione in verifica a patto che non si occupi della parte da esso redatta;
 				\item \textbf{approvazione:} terminata la revisione, il Responsabile di Progetto stabilisce la validità del documento, che solo a questo punto può essere considerato completo e può essere quindi rilasciato.
 \end{itemize}
-\subsection{Template in formato \LaTeX}\label{3.1.4}
+\subsection{Template in formato \LaTeX}\label{ProcessiDiSupportoDocumentazioneTemplateInFormatoLatex}
 Il gruppo ha deciso di adottare il linguaggio LATEX per la stesura dei documenti. E' stato definito un template per automatizzare l’applicazione delle norme tipografiche e di formattazione, in funzione della coerenza e coesione dei prodotti finali.
 L’uso di un template comune per la strutturazione dei documenti, inoltre, permette di rendere più efficiente l’applicazione di nuove norme o di modifiche a norme già esistenti a tutti i documenti redatti fino a quel momento.
-\subsection{Documenti prodotti}\label{3.1.5}
+\subsection{Documenti prodotti}\label{ProcessiDiSupportoDocumentazioneDocumentiProdotti}
 	 \textbf{Formali:} sono i documenti che riportano le norme che regolano l’operato del gruppo e gli esiti delle attività da esso portate avanti nel corso del ciclo di vita del software. Le caratteristiche di un documento formale sono:
 \begin{itemize}
-\item storicizzazione delle version del documento prodotte durante la sua stesura;
+\item storicizzazione delle versione del documento prodotte durante la sua stesura;
 	\item attribuzione di nomi univoci ad ogni versione;
 		\item approvazione della versione definitiva da parte del Responsabile di Progetto.
 \end{itemize}
@@ -58,11 +58,11 @@ essere:
 	\item \textbf{esterni:} rapporti degli incontri del gruppo coi committenti e/o col proponente, strutturati secondo lo schema domanda-risposta.
 \end{itemize}
 Per i verbali è prevista un’unica stesura. Tale scelta è dettata dal fatto che apportarvi modifiche significherebbe cambiare le decisioni prese in sede di riunione.
-\subsection{Directory di un documento}\label{3.1.6}
+\subsection{Directory di un documento}\label{ProcessiDiSupportoDocumentazioneDirectoryDiUnDocumento}
 Ogni documento è racchiuso all'interno di una directory che prende il nome dal documento ivi trattato; essa è posizionata a sua volta all'interno della directory \textbf{Documenti Interni} o \textbf{Documenti Esterni}, a seconda della tipologia del documento. Quest'ultima, il file \TeX{} principale e il documento pdf da esso generato adottano la convenzione \textit{Snake case}, come stabilito nella \autoref{sec:NormeTipografiche}; nel caso il documento sia formale, in coda al suo nome appare anche la sua versione (e.g. \textit{norme\_di\_progetto\_v1.0.0}).
 Tutti i capitoli appartenenti ad un documento sono organizzati in una subdirectory \textbf{capitoli} posta allo stesso livello del file \TeX{} principale.
-\subsection{Struttura generale dei documenti}\label{3.1.7}
-\subsubsection{Frontespizio}\label{3.1.7.1}
+\subsection{Struttura generale dei documenti}\label{ProcessiDiSupportoDocumentazioneStrutturaGeneraleDeiDocumenti}
+\subsubsection{Frontespizio}\label{ProcessiDiSupportoDocumentazioneStrutturaGeneraleDeiDocumentiFrontespizio}
 Il frontespizio è la prima pagina di ogni documento.
 La prima pagina di ogni documento sarà composta da:
 \begin{itemize}
@@ -80,7 +80,7 @@ Informazioni sul documento che includono:
 						\item \textbf{uso}: indica l’uso finale del documento (interno o esterno);
 							\item \textbf{sommario:} posto in fondo alla pagina che contiene una breve descrizione del contenuto del documento.
 \end{itemize}
-\subsubsection{Registro Modifiche}\label{3.1.7.2}
+\subsubsection{Registro Modifiche}\label{ProcessiDiSupportoDocumentazioneStrutturaGeneraleDeiDocumentiRegistroModifiche}
 Il registro delle modifiche occupa la seconda pagina del documento e consiste in una tabella contenente le informazioni riguardanti il ciclo di vita del documento.
 \\Più precisamente, la tabella riporta per ogni modifica:
 \begin{itemize}
@@ -90,9 +90,9 @@ Il registro delle modifiche occupa la seconda pagina del documento e consiste in
 			\item \textbf{autore:} nominativo della persona che ha effettuato la modifica;
 				\item \textbf{ruolo:} ruolo della persona che ha effettuato la modifica.
 \end{itemize}
-\subsubsection{Indice}\label{3.1.7.3}
+\subsubsection{Indice}\label{ProcessiDiSupportoDocumentazioneStrutturaGeneraleDeiDocumentiIndice}
 L'indice ha lo scopo di riepilogare e dare una visione generale della struttura del documento, mostrando le parti di cui è composto. L'indice ha una struttura standard: numero e titolo del capitolo, con eventuali sottosezioni, e il numero della pagina del contenuto; inoltre, ogni titolo è un link alla pagina del contenuto. L'indice dei contenuti è seguito da un eventuale indice per le tabelle e le figure presenti nel documento.
-\subsubsection{Corpo del documento}\label{3.1.7.4}
+\subsubsection{Corpo del documento}\label{ProcessiDiSupportoDocumentazioneStrutturaGeneraleDeiDocumentiCorpoDelDocumento}
 La struttura del contenuto principale di una pagina è cosi composta:
 \begin{itemize}
 \item in alto a sinistra è presente il logo del gruppo;
@@ -101,7 +101,7 @@ La struttura del contenuto principale di una pagina è cosi composta:
 			\item una riga divide il contenuto principale e il piè di pagina;
 				\item in basso è riportato il numero di pagina attuale ed il numero totale delle pagine che compongono il documento.
 \end{itemize}
-\subsubsection{Verbali}\label{3.1.7.5}
+\subsubsection{Verbali}\label{ProcessiDiSupportoDocumentazioneStrutturaGeneraleDeiDocumentiVerbali}
 Ai verbali, sia interni che esterni, si applicano le stesse norme strutturali degli altri documenti, ad eccezione del fatto che, essendo informali, non sono soggetti a versionamento. Il contenuto di un verbale è così organizzato:
 \begin{itemize}
 \item \textbf{luogo:} riporta il luogo in cui si è svolta la riunione (in alternativa il mezzo utilizzato es. Discord)
@@ -112,10 +112,10 @@ Ai verbali, sia interni che esterni, si applicano le stesse norme strutturali de
 					\item \textbf{ordine del giorno:} contiene l'elenco degli argomenti affrontati alla riunione
 						\item \textbf{resoconto:}  contiene il resoconto delle decisioni prese durante la riunione, in forma tabellare.
 \end{itemize}
-\subsection{Norme Tipografiche}\label{3.1.8}
+\subsection{Norme Tipografiche}\label{ProcessiDiSupportoDocumentazioneNormeTipografiche}
 \label{sec:NormeTipografiche}
 Per attribuire uniformità e coerenza alla documentazione sono state concordate  delle norme tipografiche da adottare durante tutta la sua stesura, esposte nelle seguenti sezioni.
-\subsubsection{Convenzioni di denominazione}\label{3.1.8.1}
+\subsubsection{Convenzioni di denominazione}\label{ProcessiDiSupportoDocumentazioneNormeTipograficheConvenzioniDiDenominanzione}
 I nomi delle directory e dei documenti prodotti rispettano la convenzione \textit{Snake case}:%necessario il riferimento alla relativa pagina wiki
 \begin{itemize}
   \item i nomi fanno utilizzo esclusivo del minuscolo;
@@ -131,7 +131,7 @@ Le estensione dei file sono ovviamente escluse da questa convenzione.
 % \item \textbf{Frasi brevi e poco complesse:} i periodi devono essere il più possibile semplici e non generare incomprensioni;
 % \item \textbf{Brevi blocchi testuali:} si preferisce l'utilizzo di brevi paragrafi.
 % \end{itemize}
-\subsubsection{Termini del Glossario}
+\subsubsection{Termini del Glossario}\label{ProcessiDiSupportoDocumentazioneNormeTipograficheTerminiDelGlossario}
 Ogni termine del \textit{Glossario} è contrassegnato, in ogni sua istanza, da una "G" maiuscola a pedice; la prima occorrenza di un termine all'interno di un documento presenta una "G" di dimensione standard, mentre le successive "G" (all'interno dello stesso documento) sono di dimensione ridotta per non risultare eccessivamente intrusive ed ostacolare la lettura.
 Le istanze dei termini del Glossario presenti nei titoli non necessitano la lettera a pedice.
 % \subsubsection{Elenchi puntati}
@@ -141,7 +141,7 @@ Le istanze dei termini del Glossario presenti nei titoli non necessitano la lett
 % 	\item deve essere seguita da un ";", fatta eccezione per l’ultimo elemento che deve essere seguito da un punto;
 % 	\item può iniziare con dei termini in grassetto e/o con prima lettera maiuscola nel caso in cui il resto della voce sia una descrizione di quei termini.
 % \end{itemize}
-\subsubsection{Formato di data}
+\subsubsection{Formato di data}\label{ProcessiDiSupportoDocumentazioneNormeTipograficheFormatoDiData}
 Le date rispettano il formato
 [DD]-[MM]-[YYYY] dove:
 \begin{itemize}
@@ -150,7 +150,7 @@ Le date rispettano il formato
 	\item \textbf{YYYY:} corrisponde all'anno.
 \end{itemize}
 
-\subsubsection{Sigle}
+\subsubsection{Sigle}\label{ProcessiDiSupportoDocumentazioneNormeTipograficheSigle}
 Per ragioni di scorrevolezza e brevità sono presenti nella documentazione alcune abbreviazioni di parole ricorrenti, elencate in seguito organizzate per categorie.\\
 Revisioni:
 \begin{itemize}
@@ -179,23 +179,23 @@ Ruoli di progetto:
 	\item \textbf{Pgr:} programmatore;
 	\item \textbf{Ve:} verificatore.
 \end{itemize}
-\subsection{Elementi grafici}\label{3.1.9}
-\subsubsection{Immagini}\label{3.1.9.1}
+\subsection{Elementi grafici}\label{ProcessiDiSupportoDocumentazioneElementiGrafici}
+\subsubsection{Immagini}\label{ProcessiDiSupportoDocumentazioneElementiGraficiImmagini}
 Questa sezione definisce le norme per l'uso di elementi grafici quali immagini, tabelle e diagrammi.
 Le immagini apportano un valore aggiunto alla descrizione o forniscono una rappresentazione grafica di ciò che si sta presentando. Immagini con funzione puramente estetica non sono pertanto ammesse, ad eccezione di quanto definito nel template comune. Tutte le immagini sono centrate all’interno della pagina e munite di una breve didascalia così formata:
 \begin{center}
 	\textbf {Figura X: breve descrizione dell'immagine}
 \end{center}
 dove X indica la numerazione dell'immagine.
-\subsubsection{Grafici}
+\subsubsection{Grafici}\label{ProcessiDiSupportoDocumentazioneElementiGraficiGrafici}
 I grafici in linguaggio UML, usati per la modellazione dei casi d’uso e per i diagrammi della progettazione, sono inseriti come immagini.
-\subsubsection{Tabelle}
+\subsubsection{Tabelle}\label{ProcessiDiSupportoDocumentazioneElementiGraficiTabelle}
 L’uso di tabelle è consigliato solo quando strettamente necessario.
 La rappresentazione dei dati in forma tabellare è obbligatoria solo nel momento in cui risulti molto difficile organizzare informazioni aventi una struttura complessa.
 È obbligatorio l’uso di colori che abbiano un contrasto sufficiente a garantire la leggibilità.
 Le tabelle eccessivamente lunghe sono sconsigliate, poichè potrebbero risultare dispersive.
-\subsection{Metriche}
-\subsubsection{MQPD02 Indice Gulpease}
+\subsection{Metriche}\label{ProcessiDiSupportoDocumentazioneMetriche}
+\subsubsection{MQPD02 Indice Gulpease}\label{ProcessiDiSupportoDocumentazioneMetricheMQPD02IndiceGulpease}
 L'indice di Gulpease riporta il grado di leggibilità di un testo redatto in lingua italiana.\\
 La formula adottata è:
 \begin{center}
@@ -208,21 +208,21 @@ L'indice così calcolato può pertanto assumere valori compresi tra 0 e 100, in 
 \item \textbf{GULP$<$ 40:} indica una leggibilità difficile per un utente con licenza superiore.
 \end{itemize}
 
-\subsubsection{Correttezza Ortografica}
+\subsubsection{Correttezza Ortografica}\label{ProcessiDiSupportoDocumentazioneMetricheCorrettezzaOrtografica}
 La correttezza ortografica della lingua italiana è verificata attraverso l'apposito strumento integrato di \TeX studio, il quale sottolinea in tempo reale le parole ove ritiene sia presente un errore, consentendone la correzione.
 
 
-\subsection{Strumenti di stesura}
-\subsubsection{Latex}
+\subsection{Strumenti di stesura}\label{ProcessiDiSupportoDocumentazioneStrumentiDiStesura}
+\subsubsection{Latex}\label{ProcessiDiSupportoDocumentazioneStrumentiDiStesuraLatex}
 Per la stesura dei documenti, il gruppo JawaDruids ha scelto \LaTeX, un linguaggio compilato basato sul programma di composizione tipografica \TeX, al fine di produrre documenti coerenti, ordinati, templatizzati e stesi in modo collaborativo.
-\section{Gestione della configurazione}
-\subsection{Scopo}
+\section{Gestione della configurazione}\label{ProcessiDiSupportoGestioneDellaConfigurazione}
+\subsection{Scopo}\label{ProcessiDiSupportoGestioneDellaConfigurazioneScopo}
 Lo scopo della configurazione è definire una precisa organizzazione nella produzione di documentazione e codice.
 L'implementazione di questo processo rende sistematica la produzione di codice e documenti, la loro modifica e il loro avanzamento di stato.
 Ogni elemento relativo al progetto garantisce pertanto il suo versionamento e rispetta le norme di collocazione, denominazione, modifica e assegnazione di stato descritte in seguito.
 Sono inoltre qui raggruppati e brevemente descritti gli strumenti utilizzati a supporto di tale organizzazione.
-\subsection{Versionamento}
-\subsubsection{Codice di versione di un documento}
+\subsection{Versionamento}\label{ProcessiDiSupportoGestioneDellaConfigurazioneVersionamento}
+\subsubsection{Codice di versione di un documento}\label{ProcessiDiSupportoGestioneDellaConfigurazioneVersionamentoCodiceDiVersioneDiUnDocumento}
 Ogni documento possiede una storia che dev'essere ricostruibile tramite i suoi codici di versione.
 Il registro delle modifiche, presente in ogni documento fatta eccezione per i verbali, raccoglie tutta la storia delle versioni con le modifiche ad esse associate.
 Ogni versione corrisponde ad una riga in tale registro ed è composta da tre numeri separati da punti
@@ -235,12 +235,12 @@ ove, partendo dall'ultima lettera:
 \end{itemize}
 Queste variabili assumono valori interi partendo da 0 con incremento di una singola unità alla volta.
 Ad ogni incremento di una variabile tutte quelle alla sua destra vengono nuovamente azzerate.
-\subsubsection{Tecnologie adottate}
+\subsubsection{Tecnologie adottate}\label{ProcessiDiSupportoGestioneDellaConfigurazioneVersionamentoTecnologieAdottate}
 Il gruppo utilizza il sistema di controllo di versione Git con hosting sulla piattaforma Github.
 L'interazione con queste tecnologie avviene da linea di comando del terminale attraverso il wrapper Git-flow oppure tramite il software ad interfaccia grafica GitKraken.
 
 L'utilizzo di questi strumenti assicurano la progressione, collaborazione e sicurezza nello sviluppo di ogni file all'interno della repository.
-\subsubsection{Repository remoto}
+\subsubsection{Repository remoto}\label{ProcessiDiSupportoGestioneDellaConfigurazioneVersionamentoRepositoryRemoto}
 Il repository remoto utilizzato dal gruppo è disponibile al link
 \begin{center}
  \url{https://github.com/Andrea-Dorigo/jawadruids.git}
@@ -261,10 +261,10 @@ La cartella \textbf{documentazione} contiene tutti i documenti prodotti dal grup
 
 Il gruppo ha raccolto nel documento interno \textit{linee\_guida} i comandi Git e Git-flow che hanno presentato più difficoltà, in modo da rendere la gestione del sistema di versionamento quanto più semplice e uniforme, anche tramite l'utilizzo di esempi.% da riformulare meglio
 %aggiungere riferimento
-\section{Gestione della qualità} \label{3.3}
-\subsection{Scopo} \label{3.3.1}
+\section{Gestione della qualità} \label{ProcessiDiSupportoGestioneDellaQualità}
+\subsection{Scopo} \label{ProcessiDiSupportoGestioneDellaQualitàScopo}
 Lo scopo della gestione della qualità è assicurare il rispetto degli obiettivi di qualità da parte del prodotto finale ed il soddisfacimento delle esigenze manifestate dal proponente.
-\subsection{Descrizione} \label{3.3.2}
+\subsection{Descrizione} \label{ProcessiDiSupportoGestioneDellaQualitàDescrizione}
 Il documento Piano di Qualifica tratta in maniera più approfondita della gestione della qualità. In particolare descrive le modalità e le metriche utilizzate per valutare, e garantire, la qualità di processo e di prodotto. Inoltre riporta i test da applicare per verificare l’adempimento dei requisiti del prodotto software. Tale documento si concentra sui seguenti punti:
 \begin{itemize}
 	\item Presentazione degli standard a cui si fa riferimento;
@@ -282,7 +282,7 @@ Per ogni prodotto si descrivono:
 	%\item obiettivi (da vedere se si scrivono sul pdq)
 	\item Metriche da applicare.
 \end{itemize}
-\subsection{Aspettative} \label{3.3.3}
+\subsection{Aspettative} \label{ProcessiDiSupportoGestioneDellaQualitàAspettative}
 Le aspettative che si intendono soddisfare con la gestione della qualità sono le seguenti:
 \begin{itemize}
 	\item Raggiungimento della qualità di processo;
@@ -291,7 +291,7 @@ Le aspettative che si intendono soddisfare con la gestione della qualità sono l
 	\item Prova oggettiva della qualità;
 	\item Ottenimento della piena soddisfazione finale del proponente e del cliente.
 \end{itemize}
-\subsection{Attività} \label{3.3.4}
+\subsection{Attività} \label{ProcessiDiSupportoGestioneDellaQualitàAttività}
 Il processo della gestione della qualità presenta le seguenti attività:
 \begin{itemize}
 	\item \textbf{Pianificazione:} delineare gli obiettivi di qualità e le metriche e strategie per poterli raggiungere, approntare le risorse a disposizione per svolgere le attività nel migliore dei modi;
@@ -299,7 +299,7 @@ Il processo della gestione della qualità presenta le seguenti attività:
 	\item \textbf{Controllo:} misurare e monitorare i risultati ottenuti;
 	\item \textbf{Aggiustamento:} a fronte dei risultati, è necessario adeguare le strategie e le metriche, individuando, inoltre, dove effettuare dei miglioramenti.
 \end{itemize}
-\subsection{Denominazione delle metriche} \label{3.3.5}
+\subsection{Denominazione delle metriche} \label{ProcessiDiSupportoGestioneDellaQualitàDenominazioneDelleMetriche}
 Ogni metrica possiede un codice univoco che la identifica. Tale codice ha il seguente modello:
 \begin{center}
 	\textbf {MQ[Categoria][Numero]}
@@ -316,16 +316,16 @@ dove:
 	\item \textbf {[Numero]} specifica l’identificativo numerico specifico per ogni metrica. Il conteggio inizia da 1.
 \end{itemize}
 
-\section{Verifica} \label{3.4}
+\section{Verifica}\label{ProcessiDiSupportoVerifica}
 
-\subsection{Descrizione} \label{3.4.1}
+\subsection{Descrizione}\label{ProcessiDiSupportoVerificaDescrizione}
 Il processo di verifica prende in input ciò che è già stato prodotto, ad esempio una versione di un documento, e lo restituisce in uno stato conforme alle aspettative. Per ottenere tale risultato ci si affida a processi di analisi e test.
 
-\subsection{Scopo} \label{3.4.2}
+\subsection{Scopo}\label{ProcessiDiSupportoVerificaScopo}
 L'obiettivo di tale processo è di avere una sola versione dei prodotti realizzati e che essi siano corretti, coesi e
 completi. Sono soggetti a verifica sia il software che la documentazione.
 
-\subsection{Aspettative} \label{3.4.3}
+\subsection{Aspettative}\label{ProcessiDiSupportoVerificaAspettative}
 Il corretto svolgimento del processo di verifica avviene attraverso i seguenti punti:
 \begin{itemize}
 	\item viene effettuato seguendo delle procedure già definite;
@@ -335,10 +335,10 @@ Il corretto svolgimento del processo di verifica avviene attraverso i seguenti p
 	\item una volta verificato, possiamo procedere con la fase di validazione;
 \end{itemize}
 
-\subsection{Attività} \label{3.4.4}
-\subsubsection{Analisi} \label{3.4.4.1}
+\subsection{Attività}\label{ProcessiDiSupportoVerificaAttività}
+\subsubsection{Analisi}\label{ProcessiDiSupportoVerificaAttivitàAnalisi}
 Il processo di analisi si suddivide in analisi statica ed analisi dinamica.
-\paragraph{Analisi statica}\label{3.4.4.1.1}\mbox{}\\
+\paragraph{Analisi statica}\label{ProcessiDiSupportoVerificaAttivitàAnalisiAnalisiStatica}\mbox{}\\
 L'analisi statica effettua controlli su documenti e codice, di cui valuta e applica la correttezza(intesa come assenza di errori e difetti), la conformità a regole e la coesione$_{\scaleto{G}{3pt}}$ dei componenti.
 Per effettuare analisi statica esistono metodi manuali di lettura(attuati da persone) e metodi formali ed automatizzati(attuati da macchine).\\
 Quelli manuali sono due:
@@ -348,11 +348,11 @@ Quelli manuali sono due:
 	\item \textbf{Inspection:} i verificatori utilizzano delle liste di controllo per fare ispezione cercando errori specifici
 	in sezioni specifiche.
 \end{itemize}
-\paragraph{Analisi dinamica}\label{3.4.4.1.2}\mbox{}\\
+\paragraph{Analisi dinamica}\label{ProcessiDiSupportoVerificaAttivitàAnalisiAnalisiDinamica}\mbox{}\\
 L'analisi dinamica è una tecnica di analisi del prodotto software che richiede la sua esecuzione.
 Viene effettuata mediante dei test che verificano se il prodotto funziona e se ci sono anomalie.\\
 
-\subsubsection{Test} \label{3.4.4.2}
+\subsubsection{Test} \label{ProcessiDiSupportoVerificaAttivitàTest}
 I test sono una parte fondamentale del processo di verifica: producono una misura della qualità del prodotto. Questi hanno lo scopo di verificare che il prodotto software svolga le attività che sono state richieste dal proponente, e di permettere di individuare e rimuovere gli errori  commessi, prima di mettere il prodotto in uso. In questo modo si aumenta la qualità del software. 
 I test devono essere:
 \begin{itemize}
@@ -392,7 +392,7 @@ I tipi di test sviluppati sono i seguenti. \\
 		Se i test vengono superati significa che il software è pronto per il rilascio.
 \end{itemize}
 
-\subsubsection{Identificazione dei test}\label{3.4.4.3}
+\subsubsection{Identificazione dei test}\label{ProcessiDiSupportoVerificaAttivitàIdentificazioneDeiTest}
 I test presenti nella sezione precedente sono descritti così:
 \begin{itemize}
 	\item \textbf{Id Test};
@@ -440,8 +440,8 @@ Dove:
 \end{itemize}
 
 
-\subsection{Metriche}\label{3.4.5}
-\subsubsection{MQPD03 Rilevamento Errori}
+\subsection{Metriche}\label{ProcessiDiSupportoVerificaMetriche}
+\subsubsection{MQPD03 Rilevamento Errori}\label{ProcessiDiSupportoVerificaMetricheMQPD03RilevamentoErrori}
 Indice che mostra qual è la percentuale di errore basata sui test fatti.
 Come formula viene utilizzata la seguente:
 \begin{center}
@@ -454,7 +454,7 @@ Come formula viene utilizzata la seguente:
 \end{itemize}
 \textit{Il gruppo JawaDruids ha valutato precoce la scelta di stabilire in questa prima fase dei valori soglia per tale metrica, di conseguenza il gruppo si riserva di integrarli successivamente in modo opportuno.}
 
-\subsubsection{MQPD04 Validità Dati}
+\subsubsection{MQPD04 Validità Dati}\label{ProcessiDiSupportoVerificaMetricheMQQPD04ValiditàDati}
 Questo indice misura la effettiva veridicità dei dati che arrivano in input al software. Ovviamente più i dati si avvicinano alla realtà più elevato sarà il valore dell'indice.
 Viene utilizzata la seguente formula:
 \begin{center}
@@ -468,7 +468,7 @@ Viene utilizzata la seguente formula:
 
 \textit{I range di valori accettabili non si possono ancora esprimere in quanto, concordi con l'azienda, si stabiliranno in futuro.}
 
-\subsubsection{MQPD05 Comprensione del codice}
+\subsubsection{MQPD05 Comprensione del codice}\label{ProcessiDiSupportoVerificaMetricheMQPD05CompresioneDelCodice}
 Questo indice viene calcolato, mediante percentuale, per rappresentare la facilità di comprensione dell'utente riguardo il codice.
 L'operazione è costituita dalla divisione tra le \textit{linee di commento} e le \textit{linee di codice}:
 \begin{center}
@@ -480,12 +480,12 @@ L'operazione è costituita dalla divisione tra le \textit{linee di commento} e l
 	\item \textbf{N\_Lcod} sta per \textit{Numero di linee di codice};
 \end{itemize}
 
-\section{Validazione} \label{3.5}
-\subsection{Scopo} \label{3.5.1}
+\section{Validazione} \label{ProcessiDiSupportoValidazione}
+\subsection{Scopo} \label{ProcessiDiSupportoValidazioneScopo}
 La validazione ha come scopo finale quello di garantire che il software rispetti i requisiti posti e soddisfi le esigenze del proponente.
-\subsection{Descrizione} \label{3.5.2}
+\subsection{Descrizione} \label{ProcessiDiSupportoValidazioneDescrizione}
 Il processo di validazione esamina il prodotto della fase di verifica ed accerta che questo sia pienamente conforme alle attese e ai requisiti del proponente. 
-\subsection{Aspettative} \label{3.5.3}
+\subsection{Aspettative} \label{ProcessiDiSupportoValidazioneAspettative}
 La validazione ha dei criteri da rispettare:
 \begin{itemize}
 	\item identificazione degli oggetti da validare;
