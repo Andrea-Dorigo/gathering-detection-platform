@@ -1,6 +1,6 @@
-\chapter{Requisiti}
-In questa sezione vengono illustrati attraverso una tabella tutti i requisiti individuati dal proponente e il gruppo Jawa Druids. Ogni requisito viene individuato da un codice identificativo, una sua descrizione, la tipologia di requisito e codice della fase di riferimento, la spiegazione di ogni parte è descritta nel documento Norme del Progetto. 
-\section{Requisiti funzionali}
+\chapter{Requisiti}\label{Requisiti}
+In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{\scaleto{G}{3pt}}$ individuati dal proponente$_{\scaleto{G}{3pt}}$ e dal gruppo Jawa Druids. Ogni requisito viene individuato da un codice identificativo, una sua descrizione, la tipologia di requisito e codice della fase di riferimento, la spiegazione di ogni parte è descritta nel documento \textit{Norme del Progetto v1.0.0}.
+\section{Requisiti funzionali}\label{RequisitiFunzionali}
 
 
 
@@ -15,7 +15,7 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti in
 			\textbf{Codice RS} & \textbf{Descrizione} & \textbf{Tipo di requisito} & \textbf{Fonte} \\
 			%fase 1
 			\hline
-			RSFO1 & Realizzazione di motori software ‘contapersone’  & Obbligatorio & \makecell[tcX]{Capitolato \\ Verbale esterno 17-12-2020} \\
+			RSFO1 & Realizzazione di motori software ‘contapersone’  & Obbligatorio & \makecell[tcX]{Capitolato$_{\scaleto{G}{3pt}}$ \\ Verbale esterno 17-12-2020} \\
 			% \shortstack{Capitolato\\Verbale esterno 17-12-2020}   \\
 			\hline
 			RSFF2 & Realizzazione di simulatori di altre sorgenti dati sia dei dati storici/in monitoraggio che dati previsionali & Facoltativo & Capitolato \\
@@ -37,12 +37,12 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti in
 			\hline
 			RSFO7 & Visualizzazione dei dati elaborati attraverso heat map & Obbligatorio & Capitolato  \\
 		\hline
-			RSFO8 & Apache Kafka$_{\scaleto{G}{3pt}}$ deve poter comunicare con il database, l'applicazione web e il modello di machine learning  & Obbligatorio &  Interno \\		
+			RSFO8 & Apache Kafka$_{\scaleto{G}{3pt}}$ deve poter comunicare con il database, l'applicazione web e il modello di Machine Learning  & Obbligatorio &  Interno \\		
 			\hline
 	\end{tabularx}
 	\end{center}
 
-\section{Requisiti prestazionali}
+\section{Requisiti prestazionali}\label{RequisitiPrestazionali}
 \begin{center}
 	\renewcommand{\arraystretch}{1.4}
 	\begin{tabularx}{\textwidth}{ |c|X|c|c| }
@@ -57,7 +57,7 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti in
 	\end{tabularx}
 \end{center}
 
-\section{Requisiti di qualità}
+\section{Requisiti di qualità}\label{RequisitiQualità}
 \begin{center}
 	\renewcommand{\arraystretch}{1.4}
 	\begin{tabularx}{\textwidth}{ |c|X|c|c| }
@@ -82,7 +82,7 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti in
 \end{center}
 
 
-\section{Requisiti di vincolo}
+\section{Requisiti di vincolo}\label{RequisitiVincolo}
 
 \begin{center}
 	\renewcommand{\arraystretch}{1.4}
@@ -97,7 +97,7 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti in
 		\hline
 		RSVO1.2  & I dati acquisiti da telecamere in tempo reale devono avere un luogo di riferimento associato &Obbligatorio  & Interni \\
 		\hline
-		RSVO2  & Il front-end del prodotto viene sviluppato utilizzando tecnologie web &Obbligatorio  & \shortstack{Capitolato\\FC3.1} \\
+		RSVO2  & Il front-end$_{\scaleto{G}{3pt}}$ del prodotto viene sviluppato utilizzando tecnologie web &Obbligatorio  & \shortstack{Capitolato\\FC3.1} \\
 		\hline
 		RSVF2.1  & Utilizzo di leaflet.js per la creazione di heat-map & Facoltativo & \shortstack{Capitolato\\FC3.1} \\
 	\hline
@@ -108,9 +108,9 @@ RSVO3  & Il sistema deve far uso dell'ecosistema Apache Kafka$_{\scaleto{G}{3pt}
 	\end{tabularx}
 \end{center}
 
-\section{Tracciamento dei requisiti}
+\section{Tracciamento dei requisiti}\label{RequisitiTracciamentoDeiRequisiti}
 
-\subsection{Requisito - fonte}
+\subsection{Requisito - fonte}\label{RequisitiTracciamentoDeiRequisitiFonte}
 \begin{center}
 	\renewcommand{\arraystretch}{1.4}
 	\begin{tabularx}{\textwidth}{ |X|X| }
@@ -178,7 +178,7 @@ RSVO3 & \makecell[tcX]{Capitolato\\FC1.3}\\
 	\end{tabularx}
 \end{center}
 
-\subsection{Fonte - requisito}
+\subsection{Fonte - requisito}\label{RequisitiTracciamentoDeiRequisitiFonteRequisito}
 \begin{center}
 	\renewcommand{\arraystretch}{1.4}
 	\begin{tabularx}{\textwidth}{ |X|X| }
@@ -201,6 +201,6 @@ RSVO3 & \makecell[tcX]{Capitolato\\FC1.3}\\
 	\end{tabularx}
 \end{center}
 
-\section{Considerazioni}
+\section{Considerazioni}\label{requisitiConsiderazioni}
 I requisiti potranno subire delle variazioni in futuro, in modo tale da apportare degli aggiornamenti alle voci presenti o delle migliorie.
-Nel caso in cui le attività pianificate terminassero prima del previsto, e dovessero avanzare delle ore di lavoro, potranno essere presi in carico nuovi requisiti per aggiungere del valore al prodotto. Pertanto, qualsiasi espansione è riservata solo per il futuro.
+Nel caso in cui le attività pianificate terminassero prima del previsto e dovessero avanzare delle ore di lavoro, potranno essere presi in carico nuovi requisiti per aggiungere del valore al prodotto. Pertanto, qualsiasi espansione è riservata solo per il futuro.
