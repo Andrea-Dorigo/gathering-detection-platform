@@ -1,29 +1,29 @@
 \chapter{Fasi del progetto}\label{fasiProgetto}
-In questo capitolo verranno illustrate le fasi del progetto identificate dal capitolato$_{\scaleto{G}{3pt}}$ d'appalto \textit{GDP-Gathering Detection Platform}. Il capitolo viene diviso nelle tre fasi generali del progetto: acquisizione, elaborazione e visualizzazione dei dati. Secondo lo \textbf{IEEE Standard 830-1998} in questo capitolo verranno spiegati tutti i punti da sviluppare ed in quello successivo i requisiti obbligatori da implementare per la creazione del prodotto richiesto da \textit{Sync Lab}. La descrizione delle fasi è stata inserita in quanto ritenuta necessaria per il chiarimento della necessità dei requisiti individuati. %inserire descrizione requisiti da ISOIEE
+In questo capitolo verranno illustrate le fasi del progetto identificate dal capitolato$_{\scaleto{G}{3pt}}$ d'appalto \textit{GDP-Gathering Detection Platform}. Il capitolo viene diviso nelle tre fasi generali del progetto: acquisizione, elaborazione e visualizzazione dei dati. Secondo lo \textbf{IEEE Standard 830-1998} in questo capitolo verranno spiegati tutti i punti da sviluppare e nel capitolo successivo i requisiti da implementare per la creazione del prodotto richiesto da \textit{Sync Lab}. La descrizione delle fasi è stata inserita in quanto ritenuta necessaria per il chiarimento della necessità dei requisiti individuati. %inserire descrizione requisiti da ISOIEE
 
 \section{FC1: Acquisizione dati}\label{fasiProgettoAquisizioneDati}%FC fase capitolato
 In questa sezione vengono descritte le fasi di acquisizione dei dati.
 
-\subsubsection{FC1.1: Acquisizione con Java}\label{fasiProgettoAquisizioneDatiJava}
+\subsection{FC1.1: Acquisizione con Java}\label{fasiProgettoAquisizioneDatiJava}
 
 \begin{itemize}
 	\item \textbf{Descrizione}: attraverso il linguaggio Java$_G$ si creerà un programma che preleva informazioni da sorgenti esterne e le invia al server.
 	\item \textbf{Linguaggio di programmazione}: Java$_{\scaleto{G}{3pt}}$.
-	\item \textbf{Input}: i dati forniti saranno prelevati da siti con live-feed$_G$ di webcam di Roma e simulatori di spostamenti di persone.
+	\item \textbf{Input}: i dati forniti saranno prelevati da siti con live-feed$_G$ di webcam di varie città e simulatori di spostamenti di persone.
 	\item \textbf{Output}: i dati resteranno immutati.
 	\item \textbf{Risposta ad errori}: nel caso di mancanza di risposta dai siti con live-feed il programma si bloccherà ed invierà un segnale di errore al server.
 \end{itemize}
 
 %sono dubbioso su 1.2 e 1.3 dovrò modificare qualcosa
 
-\subsubsection{FC1.2: Database}\label{fasiProgettoAquisizioneDatiDatabase}
+\subsection{FC1.2: Database}\label{fasiProgettoAquisizioneDatiDatabase}
 
 \begin{itemize}
-	\item \textbf{Descrizione}: creazione del database e archiviazione dei dati in esso;
+	\item \textbf{Descrizione}: creazione del database e archiviazione dei dati in esso per visualizzazione future e mantenimento dei dati;
 	\item \textbf{Linguaggio}: mySQL.
 \end{itemize}
 
-\subsubsection{FC1.3: Apache Kafka$_G$}\label{fasiProgettoAquisizioneDatiApacheKafka}
+\subsection{FC1.3: Apache Kafka$_G$}\label{fasiProgettoAquisizioneDatiApacheKafka}
 
 \begin{itemize}
 	\item \textbf{Descrizione}: impostazione di una piattaforma di data streaming$_G$ che consente di gestire e trasferire grandi volumi di dati in tempo reale, abbassando notevolmente i tempi di latenza;
@@ -34,10 +34,10 @@ In questa sezione vengono descritte le fasi di acquisizione dei dati.
 %??? I dati verranno inseriti all'interno di un database, questo sarà sviluppato usando Apache Kafka un sistema distribuito che consiste di server e client i quali comunicano tra loro attraverso un protocollo di rete performante di tipo TCP. ???(non so dove inserire)
 
 \section{FC2: Elaborazione Dati}\label{fasiProgettoElaborazioneDati}
-Ottenuti i dati, essi verranno elaborati attraverso librerie di Scikit-learn e TensorFlow con il linguaggio di programmazione Python$_G$.
+Completata la fase precedente i dati verranno elaborati attraverso librerie di Scikit-learn e TensorFlow con il linguaggio di programmazione Python$_G$.
 Di seguito vengono individuate le fasi da seguire per l'elaborazione dei dati.
 
-\subsubsection{FC2.1: Esplorazione Dati}\label{fasiProgettoElaborazioneDatiEsplorazioneDati}
+\subsection{FC2.1: Esplorazione Dati}\label{fasiProgettoElaborazioneDatiEsplorazioneDati}
 
 \begin{itemize}
 	\item \textbf{Descrizione}: si discriminano elementi all'interno del dataset che portano a predizioni errate del modello.
@@ -46,7 +46,7 @@ Di seguito vengono individuate le fasi da seguire per l'elaborazione dei dati.
 	\item \textbf{Processo}: si controlla se c'è presenza di valori mancanti, dataset non bilanciati, outliers$_G$, livello di rumore dei dati e correlazione dei dati. 
 \end{itemize}
 
-\subsubsection{FC2.2: Preprocessing}\label{fasiProgettoElaborazioneDatiPreprocessing}
+\subsection{FC2.2: Preprocessing}\label{fasiProgettoElaborazioneDatiPreprocessing}
 
 \begin{itemize}
 	\item \textbf{Descrizione}: preparazione dei dati grezzi per renderli adatti ad un modello di Machine Learning$_G$. 
@@ -62,7 +62,7 @@ Di seguito vengono individuate le fasi da seguire per l'elaborazione dei dati.
 
 \end{itemize}
 
-\subsubsection{FC2.3: Caso predizione}\label{fasiProgettoElaborazioneDatiCasoPredizione}
+\subsection{FC2.3: Caso predizione}\label{fasiProgettoElaborazioneDatiCasoPredizione}
 
 \begin{itemize}
 	\item \textbf{Descrizione}: in questa fase si effettua una scelta sull'algoritmo più adeguato da utilizzare per il training di dati.
@@ -82,7 +82,7 @@ Di seguito vengono individuate le fasi da seguire per l'elaborazione dei dati.
 \section{FC3: Visualizzazione dati}\label{fasiProgettoVisualizzazioneDati}
 In questa sezione verranno illustrate le fasi di sviluppo della parte visiva della web-app.
 
-\subsubsection{FC3.1: Front-end$_G$}\label{fasiProgettoVisualizzazioneDatiFrontEnd}
+\subsection{FC3.1: Front-end$_G$}\label{fasiProgettoVisualizzazioneDatiFrontEnd}
 
 \begin{itemize}
 	\item \textbf{Descrizione}: sviluppo di una pagina web semplice ed intuitiva.
@@ -91,7 +91,7 @@ In questa sezione verranno illustrate le fasi di sviluppo della parte visiva del
 	\item \textbf{Struttura}: la pagina sarà principalmente rivolta alla visione della mappa per la visualizzazione di aree a rischio assembramenti.
 \end{itemize}
 
-\subsubsection{FC3.2: Back-end$_G$}\label{fasiProgettoVisualizzazioneDatiBackEnd}
+\subsection{FC3.2: Back-end$_G$}\label{fasiProgettoVisualizzazioneDatiBackEnd}
 
 \begin{itemize}
 	\item \textbf{Descrizione}: sviluppo della parte di comunicazione di informazioni tra server/database e front-end$_{\scaleto{G}{3pt}}$.

@@ -1,5 +1,5 @@
 \chapter{Requisiti}\label{Requisiti}
-In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{\scaleto{G}{3pt}}$ individuati dal proponente$_{\scaleto{G}{3pt}}$ e dal gruppo Jawa Druids. Ogni requisito viene individuato da un codice identificativo, una sua descrizione, la tipologia di requisito e codice della fase di riferimento, la spiegazione di ogni parte è descritta nel documento \textit{Norme del Progetto v1.0.0}.
+In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{\scaleto{G}{3pt}}$ individuati dal proponente$_{\scaleto{G}{3pt}}$ e dal gruppo Jawa Druids. Ogni requisito viene individuato da un codice identificativo, una sua descrizione, la tipologia di requisito e la fonte di riferimento, la spiegazione di ogni parte è descritta nel documento \textit{Norme del Progetto v1.0.0}.
 \section{Requisiti funzionali}\label{RequisitiFunzionali}
 
 
@@ -12,73 +12,84 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 		\begin{tabularx}{\textwidth}{ |c|X|c|X| }
 			\hline
 			\rowcolor{Melon}
-			\textbf{Codice RS} & \textbf{Descrizione} & \textbf{Tipo di requisito} & \textbf{Fonte} \\
+			\makecell[c]{\textbf{Codice RS}} & \makecell[c]{\textbf{Descrizione}} & \makecell[c]{\textbf{Tipo di requisito}} & \makecell[c]{\textbf{Fonte}} \\
 			%fase 1
 			\hline
-			RSFO1 & Realizzazione di motori software ‘contapersone’  & Obbligatorio & \makecell[tcX]{Capitolato$_{\scaleto{G}{3pt}}$ \\ Verbale esterno 17-12-2020} \\
+			RSFO1 & Realizzazione di motori software ‘contapersone’  & Obbligatorio & \makecell[c]{Capitolato$_{\scaleto{G}{3pt}}$ \\ V. esterno 17-12-2020 \\ FC1.1} \\
 			% \shortstack{Capitolato\\Verbale esterno 17-12-2020}   \\
 			\hline
-			RSFF2 & Realizzazione di simulatori di altre sorgenti dati sia dei dati storici/in monitoraggio che dati previsionali & Facoltativo & Capitolato \\
+			RSFF2 & Realizzazione di simulatori di altre sorgenti dati sia dei dati storici/in monitoraggio che dati previsionali & Facoltativo & \makecell[c]{Capitolato \\ FC1.1} \\
 			\hline
-			RSFO3  & Il sistema deve visualizzare un messaggio d'errore se il flusso di dati esterno viene a mancare  & Obbligatorio & \makecell[tcX]{Interno\\FC1.1}  \\
+			RSFO3  & Il sistema deve visualizzare un messaggio d'errore se il flusso di dati esterno viene a mancare  & Obbligatorio & \makecell[c]{Interno\\FC1.1}  \\
 			\hline
-			RSFO4.1 & Archiviazione di tutti i dati acquisiti nel databse & Obbligatorio & Capitolato  \\
-				\hline
-				RSFO4.2 & Archiviazione di tutti i dati elaborati nel database & Obbligatorio & Capitolato  \\
-
+			RSFO4.1 & Archiviazione di tutti i dati acquisiti nel databse & Obbligatorio & \makecell[c]{Capitolato \\ FC1.2}  \\
+			\hline
+			RSFO4.2 & Archiviazione di tutti i dati elaborati nel database & Obbligatorio & \makecell[c]{Capitolato \\ FC1.2}  \\
 			%fase 2
 			\hline
-			RSFO5 & Elaborazione in tempo reale dei dati acquisiti da flussi esterni & Obbligatorio & Capitolato  \\
+			RSFO5 & Elaborazione in tempo reale dei dati acquisiti da flussi esterni & Obbligatorio & \makecell[c]{Capitolato}  \\
 			\hline
-			RSFO5.1 & Identificazione di eventi che portano alla variazione del flusso di utenti & Obbligatorio & Capitolato  \\
+			RSFO5.1 & Identificazione di eventi che portano alla variazione del flusso di utenti & Obbligatorio & \makecell[c]{Capitolato}  \\
 			\hline
-			RSFD6 & Previsione dell'insorgenza futura di variazioni significative di flussi di persone & Desiderabile & Capitolato  \\
+				\end{tabularx}\captionof{table}{Requisiti funzionali}
+		\end{center}
+		\begin{center}
+		\renewcommand{\arraystretch}{1.4}
+		\begin{tabularx}{\textwidth}{ |c|X|c|X| }
+			\hline
+			\rowcolor{Melon}
+			\makecell[c]{\textbf{Codice RS}} & \makecell[c]{\textbf{Descrizione}} & \makecell[c]{\textbf{Tipo di requisito}} & \makecell[c]{\textbf{Fonte}} \\
+			%fase 1
+			\hline
+			RSFD6 & Previsione dell'insorgenza futura di variazioni significative di flussi di persone & Desiderabile & \makecell[c]{Capitolato \\ FC2}  \\
 			%fase 3
 			\hline
-			RSFO7 & Visualizzazione dei dati elaborati attraverso heat map & Obbligatorio & Capitolato  \\
+			RSFO7 & Visualizzazione dei dati elaborati attraverso heat map & Obbligatorio & \makecell[c]{Capitolato \\ FC3.1}  \\
 		\hline
-			RSFO8 & Apache Kafka$_{\scaleto{G}{3pt}}$ deve poter comunicare con il database, l'applicazione web e il modello di Machine Learning  & Obbligatorio &  Interno \\		
+		
+
+			RSFO8 & Apache Kafka$_{\scaleto{G}{3pt}}$ deve poter comunicare con il database, l'applicazione web e il modello di Machine Learning  & Obbligatorio &  \makecell[c]{Interno \\ FC1.3} \\		
 			\hline
-	\end{tabularx}
-	\end{center}
+	\end{tabularx}\captionof{table}{Requisiti funzionali}
+\end{center}
 
 \section{Requisiti prestazionali}\label{RequisitiPrestazionali}
 \begin{center}
 	\renewcommand{\arraystretch}{1.4}
-	\begin{tabularx}{\textwidth}{ |c|X|c|c| }
+	\begin{tabularx}{\textwidth}{ |c|X|c|X| }
 		\hline
 		\rowcolor{Melon}
-		\textbf{Codice RS} & \textbf{Descrizione} & \textbf{Tipo di requisito} & \textbf{Fonte} \\
+		\makecell[c]{\textbf{Codice RS}} & \makecell[c]{\textbf{Descrizione}} & \makecell[c]{\textbf{Tipo di requisito}} & \makecell[c]{\textbf{Fonte}} \\
 		\hline
-		RSPO1 & Capacità di acquisizione continuativa nel tempo dei dati da flussi esterni & Obbligatorio & Capitolato  \\
+		RSPO1 & Capacità di acquisizione continuativa nel tempo dei dati da flussi esterni & Obbligatorio & \makecell[c]{Capitolato}  \\
 		\hline
-		RSPO2 & Modalità a bassa latenza dell'aquisizione di informazioni & Obbligatorio & Capitolato \\
-
-	\end{tabularx}
+		RSPO2 & Modalità a bassa latenza dell'aquisizione di informazioni & Obbligatorio & \makecell[c]{Capitolato} \\
+		\hline
+	\end{tabularx}\captionof{table}{Requisiti prestazionali}
 \end{center}
 
 \section{Requisiti di qualità}\label{RequisitiQualità}
 \begin{center}
 	\renewcommand{\arraystretch}{1.4}
-	\begin{tabularx}{\textwidth}{ |c|X|c|c| }
-		\hline
-		\rowcolor{Melon}
-		\textbf{Codice RS} & \textbf{Descrizione} & \textbf{Tipo di requisito} & \textbf{Fonte} \\
-		\hline
-		RSQO1  & La progettazione e la codifica dei requisiti devono rispettare le norme e le metriche definite nel documento \textit{Norme di Progetto v1.0.0}& Obbligatorio & Interno \\
-		\hline
-	RSQF2  & Il codice sorgente del software deve essere disponibile in una repository$_G$ pubblica su Github$_G$  & Facoltativo & Interno \\
+	\begin{tabularx}{\textwidth}{ |c|X|c|X| }
 	\hline
-	RSQF3  & Deve essere sviluppato e fornito un documento con lo schema della base di dati relazionale  & Facoltativo & Interno \\
+	\rowcolor{Melon}
+	\makecell[c]{\textbf{Codice RS}} & \makecell[c]{\textbf{Descrizione}} & \makecell[c]{\textbf{Tipo di requisito}} & \makecell[c]{\textbf{Fonte}} \\
+	\hline
+	RSQO1  & La progettazione e la codifica dei requisiti devono rispettare le norme e le metriche definite nel documento \textit{Norme di Progetto v1.0.0}& Obbligatorio & \makecell[c]{Interno} \\
+	\hline
+	RSQF2  & Il codice sorgente del software deve essere disponibile in una repository$_G$ pubblica su Github$_G$  & Facoltativo & \makecell[c]{Interno} \\
+	\hline
+	RSQF3  & Deve essere sviluppato e fornito un documento con lo schema della base di dati relazionale  & Facoltativo & \makecell[c]{Interno \\ FC1.2} \\
 %	\hline
 %	RSQ  & Fornire una documentazione sui flussi di dati esterni.... & Facoltativo & FC3 \\
 %	\hline
 	\hline
-	RSQF4  & Deve essere realizzato un documento contenente tutti gli errori risolti durante la realizzazione del software & Facoltativo & Interno \\
-		\hline
-	RSQO5  & Test che dimostrino il corretto funzionamento dei servizi e delle funzionalità previste  & Obbligatorio & Capitolato \\
+	RSQF4  & Deve essere realizzato un documento contenente tutti gli errori risolti durante la realizzazione del software & Facoltativo & \makecell[c]{Interno} \\
 	\hline
-	\end{tabularx}
+	RSQO5  & Test che dimostrino il corretto funzionamento dei servizi e delle funzionalità previste  & Obbligatorio & \makecell[c]{Capitolato} \\
+	\hline
+	\end{tabularx}\captionof{table}{Requisiti di qualità}
 \end{center}
 
 
@@ -86,26 +97,26 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 
 \begin{center}
 	\renewcommand{\arraystretch}{1.4}
-	\begin{tabularx}{\textwidth}{ |c|X|c|c| }
+	\begin{tabularx}{\textwidth}{ |c|X|c|X| }
 		\hline
 		\rowcolor{Melon}
-		\textbf{Codice RS} & \textbf{Descrizione} & \textbf{Tipo di requisito} & \textbf{Fonte} \\
-			\hline
-		RSVO1  & I dati acquisiti da telecamere in tempo reale devono avere data di riferimento associato  &Obbligatorio & Interni \\
+		\makecell[c]{\textbf{Codice RS}} & \makecell[c]{\textbf{Descrizione}} & \makecell[c]{\textbf{Tipo di requisito}} & \makecell[c]{\textbf{Fonte}} \\
 		\hline
-		RSVO1.1  & I dati acquisiti da telecamere in tempo reale devono avere un orario di riferimento associato &Obbligatorio & Interni \\
+		RSVO1  & I dati acquisiti da telecamere in tempo reale devono avere data di riferimento associato  &Obbligatorio & \makecell[c]{Interno} \\
 		\hline
-		RSVO1.2  & I dati acquisiti da telecamere in tempo reale devono avere un luogo di riferimento associato &Obbligatorio  & Interni \\
+		RSVO1.1  & I dati acquisiti da telecamere in tempo reale devono avere un orario di riferimento associato &Obbligatorio & \makecell[c]{Interno} \\
 		\hline
-		RSVO2  & Il front-end$_{\scaleto{G}{3pt}}$ del prodotto viene sviluppato utilizzando tecnologie web &Obbligatorio  & \shortstack{Capitolato\\FC3.1} \\
+		RSVO1.2  & I dati acquisiti da telecamere in tempo reale devono avere un luogo di riferimento associato &Obbligatorio  & \makecell[c]{Interno} \\
 		\hline
-		RSVF2.1  & Utilizzo di leaflet.js per la creazione di heat-map & Facoltativo & \shortstack{Capitolato\\FC3.1} \\
-	\hline
-		RSVO2.2  & Utilizzo di angular.js per la creazione della wep-app  & Obbligatorio  & \shortstack{Capitolato\\FC3.1} \\
-\hline
-RSVO3  & Il sistema deve far uso dell'ecosistema Apache Kafka$_{\scaleto{G}{3pt}}$ & Obbligatorio  & \makecell[tcX]{Capitolato\\FC1.3} \\
-\hline
-	\end{tabularx}
+		RSVO2  & Il front-end$_{\scaleto{G}{3pt}}$ del prodotto viene sviluppato utilizzando tecnologie web &Obbligatorio  & \makecell[c]{Capitolato\\FC3.1} \\
+		\hline
+		RSVF2.1  & Utilizzo di leaflet.js per la creazione di heat-map & Facoltativo & \makecell[c]{Capitolato\\FC3.1} \\
+		\hline
+		RSVO2.2  & Utilizzo di angular.js per la creazione della wep-app  & Obbligatorio  & \makecell[c]{Capitolato\\FC3.1} \\
+		\hline
+		RSVO3  & Il sistema deve far uso dell'ecosistema Apache Kafka$_{\scaleto{G}{3pt}}$ & Obbligatorio  & \makecell[c]{Capitolato\\FC1.3} \\
+		\hline
+	\end{tabularx}\captionof{table}{Requisiti di vincolo}
 \end{center}
 
 \section{Tracciamento dei requisiti}\label{RequisitiTracciamentoDeiRequisiti}
@@ -116,66 +127,67 @@ RSVO3  & Il sistema deve far uso dell'ecosistema Apache Kafka$_{\scaleto{G}{3pt}
 	\begin{tabularx}{\textwidth}{ |X|X| }
 		\hline
 		\rowcolor{Melon}
-		\textbf{Codice RS} & \textbf{Fonte}  \\
+		\makecell[c]{\textbf{Codice RS}} & \makecell[c]{\textbf{Fonte}}  \\
 		\hline
-RSFO1 & \makecell[tcX]{Capitolato\\Verbale esterno 17-12-2020} \\
+\makecell[c]{RSFO1} & \makecell[c]{Capitolato\\V. esterno 17-12-2020 \\ FC1.1} \\
 \hline
-RSFF2 & Capitolato\\
+\makecell[c]{RSFF2} & \makecell[c]{Capitolato \\ FC1.1}\\
 \hline
-RSFO3 & \makecell[tcX]{Interno\\FC1.1}\\
+\makecell[c]{RSFO3} & \makecell[c]{Interno\\FC1.1}\\
 \hline
-RSFO4.1 & Capitolato\\
+\makecell[c]{RSFO4.1} & \makecell[c]{Capitolato\\FC1.2}\\
 \hline
-RSFO4.2 & Capitolato\\
+\makecell[c]{RSFO4.2} & \makecell[c]{Capitolato\\FC1.2}\\
 \hline
-RSFO5 & Capitolato\\
+\makecell[c]{RSFO5} & \makecell[c]{Capitolato}\\
 \hline
-RSFO5.1 & Capitolato\\
+\makecell[c]{RSFO5.1} & \makecell[c]{Capitolato}\\
 \hline
-RSFD6 & Capitolato\\
+\makecell[c]{RSFD6 }& \makecell[c]{Capitolato \\ FC2}\\
 \hline
-RSFO7 & Capitolato\\
+\makecell[c]{RSFO7} & \makecell[c]{Capitolato\\FC3.1}\\
 \hline
-RSFO8 & Interno\\
+\makecell[c]{RSFO8} & \makecell[c]{Interno \\FC1.3}\\
 \hline
-RSPO1 & Capitolato\\
+\makecell[c]{RSPO1} & \makecell[c]{Capitolato}\\
 \hline
-RSPO2 & Capitolato\\
+\makecell[c]{RSPO2} & \makecell[c]{Capitolato}\\
 \hline
-RSQO1 & Interno\\
+\makecell[c]{RSQO1} & \makecell[c]{Interno}\\
 \hline
-RSQF2 & Interno\\
+\makecell[c]{RSQF2} & \makecell[c]{Interno}\\
 \hline
-RSQF3 & Interno\\
+\makecell[c]{RSQF3} & \makecell[c]{Interno \\FC1.2}\\
 \hline
-RSQF4 & Interno\\
+\makecell[c]{RSQF4} & \makecell[c]{Interno}\\
 \hline
-RSQO5 & Capitolato\\
+\makecell[c]{RSQO5} & \makecell[c]{Capitolato}\\
 \hline
-RSVO1 & Interno\\
-\hline
-RSVO1.1 & Interno\\
-\hline
-RSVO1.2 & Interno\\
-\hline
-RSVO2 & \makecell[tcX]{Capitolato\\FC3.1}\\
-\hline
-RSVF2.1 & \makecell[tcX]{Capitolato\\FC3.1}\\
-\hline
-	\end{tabularx}
+
+	\end{tabularx}\captionof{table}{Tabella tracciamento requisito-fonte}
 \end{center}
 \begin{center}
 	\renewcommand{\arraystretch}{1.4}
 	\begin{tabularx}{\textwidth}{ |X|X| }
 		\hline
 		\rowcolor{Melon}
-		\textbf{Codice RS} & \textbf{Fonte}  \\
+		\makecell[c]{\textbf{Codice RS}} & \makecell[c]{\textbf{Fonte}}  \\
 		\hline
-RSVO2.2 & \makecell[tcX]{Capitolato\\FC3.1}\\
-\hline
-RSVO3 & \makecell[tcX]{Capitolato\\FC1.3}\\
-\hline
-	\end{tabularx}
+		\makecell[c]{RSVO1} & \makecell[c]{Interno}\\
+		\hline
+		\makecell[c]{RSVO1.1} & \makecell[c]{Interno}\\
+		\hline
+		\makecell[c]{RSVO1.2} & \makecell[c]{Interno}\\
+		\hline
+		\makecell[c]{RSVO2} & \makecell[c]{Capitolato\\FC3.1}\\
+		\hline
+		\makecell[c]{RSVF2.1} & \makecell[c]{Capitolato\\FC3.1}\\
+		\hline
+		\makecell[c]{RSVO2.2} & \makecell[c]{Capitolato\\FC3.1}\\
+		\hline
+		\makecell[c]{RSVO3} & \makecell[c]{Capitolato\\FC1.3}\\
+		\hline
+	\end{tabularx}\captionof{table}{Tabella tracciamento requisito-fonte}
 \end{center}
 
 \subsection{Fonte - requisito}\label{RequisitiTracciamentoDeiRequisitiFonteRequisito}
@@ -184,21 +196,34 @@ RSVO3 & \makecell[tcX]{Capitolato\\FC1.3}\\
 	\begin{tabularx}{\textwidth}{ |X|X| }
 		\hline
 		\rowcolor{Melon}
-		\textbf{Fonte} & \textbf{Codice RS}  \\
+		\makecell[c]{\textbf{Fonte}} & \makecell[c]{\textbf{Codice RS}}  \\
 		\hline
-		Capitolato & \makecell[tcX]{RSFO1\\RSFF2\\RSFO4.1\\RSFO4.2\\RSFO5\\RSFO5.1\\RSFD6\\RSFO7\\RSPO1\\RSPO2\\RSQO5\\RSVO2\\RSVF2.1\\RSVO2.2\\RSVO3} \\
+		\makecell[c]{Capitolato} & \makecell[c]{RSFO1\\RSFF2\\RSFO4.1\\RSFO4.2\\RSFO5\\RSFO5.1\\RSFD6\\RSFO7\\RSPO1\\RSPO2\\RSQO5\\RSVO2\\RSVF2.1\\RSVO2.2\\RSVO3} \\
 		\hline
-		Interno &\makecell[tcX]{RSFO3\\RSFO8\\RSQO1\\RSQF2\\RSQF3\\RSQF4\\RSVO1\\RSVO1.1\\RSVO1.2} \\
+		\makecell[c]{FC1.1} & \makecell[c]{RSFO1 \\ RSFF2 \\ RSFO3} \\
 		\hline
-		Verbale esterno 17-12-2020 & RSFO1 \\
+		
+		\end{tabularx}\captionof{table}{Tabella tracciamento fonte-requisito}
+\begin{tabularx}{\textwidth}{ |X|X| }
+	\hline
+	\rowcolor{Melon}
+	\makecell[c]{\textbf{Fonte}} & \makecell[c]{\textbf{Codice RS}}  \\
+			\hline
+		\makecell[c]{FC1.2} & \makecell[c]{RSFO4.1 \\ RSFO4.2 \\ RSQF3} \\
+		
 		\hline
-		FC1.1 & RSFO3 \\
+	
+		\makecell[c]{FC1.3} & \makecell[c]{RSFO8 \\ RSVO3} \\ 
 		\hline
-		FC1.3 & RSVO3 \\  
+		\makecell[c]{FC2} & \makecell[c]{RSFD6} \\ 
 		\hline
-		FC3.1 & \makecell[tcX]{RSVO2\\RSVF2.1\\RSVO2.2} \\
+		\makecell[c]{FC3.1} & \makecell[c]{RSFO7 \\ RSVO2\\RSVF2.1\\RSVO2.2} \\
 		\hline
-	\end{tabularx}
+		\makecell[c]{Interno} &\makecell[c]{RSFO3\\RSFO8\\RSQO1\\RSQF2\\RSQF3\\RSQF4\\RSVO1\\RSVO1.1\\RSVO1.2} \\
+		\hline
+		\makecell[c]{Verbale esterno 17-12-2020} & \makecell[c]{RSFO1} \\
+		\hline
+	\end{tabularx}\captionof{table}{Tabella tracciamento fonte-requisito}
 \end{center}
 
 \section{Considerazioni}\label{requisitiConsiderazioni}
