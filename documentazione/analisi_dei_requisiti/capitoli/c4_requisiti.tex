@@ -2,16 +2,14 @@
 In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{\scaleto{G}{3pt}}$ individuati dal proponente$_{\scaleto{G}{3pt}}$ e dal gruppo Jawa Druids. Ogni requisito viene individuato da un codice identificativo, una sua descrizione, la tipologia di requisito e la fonte di riferimento, la spiegazione di ogni parte è descritta nel documento \textit{Norme del Progetto v1.0.0}.
 \section{Requisiti funzionali}\label{RequisitiFunzionali}
 
-
-
 \def\tabularxcolumn#1{m{#1}}
-{\rowcolors{2}{Apricot!90!Bittersweet!20}{Bittersweet!70!Apricot!40}
+{\rowcolors{2}{RawSienna!90!RawSienna!20}{RawSienna!70!RawSienna!40}
 	
 	\begin{center}
 		\renewcommand{\arraystretch}{1.4}
-		\begin{tabularx}{\textwidth}{ |c|X|c|X| }
+		\begin{longtable}{|p{3cm}|p{4cm}|p{4cm}|p{4cm}|}
 			\hline
-			\rowcolor{Melon}
+			\rowcolor{airforceblue}
 			\makecell[c]{\textbf{Codice RS}} & \makecell[c]{\textbf{Descrizione}} & \makecell[c]{\textbf{Tipo di requisito}} & \makecell[c]{\textbf{Fonte}} \\
 			%fase 1
 			\hline
@@ -31,75 +29,58 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 			\hline
 			RSFO5.1 & Identificazione di eventi che portano alla variazione del flusso di utenti & Obbligatorio & \makecell[c]{Capitolato}  \\
 			\hline
-				\end{tabularx}\captionof{table}{Requisiti funzionali}
-		\end{center}
-		\begin{center}
-		\renewcommand{\arraystretch}{1.4}
-		\begin{tabularx}{\textwidth}{ |c|X|c|X| }
-			\hline
-			\rowcolor{Melon}
-			\makecell[c]{\textbf{Codice RS}} & \makecell[c]{\textbf{Descrizione}} & \makecell[c]{\textbf{Tipo di requisito}} & \makecell[c]{\textbf{Fonte}} \\
-			%fase 1
-			\hline
 			RSFD6 & Previsione dell'insorgenza futura di variazioni significative di flussi di persone & Desiderabile & \makecell[c]{Capitolato \\ FC2}  \\
 			%fase 3
 			\hline
 			RSFO7 & Visualizzazione dei dati elaborati attraverso heat map & Obbligatorio & \makecell[c]{Capitolato \\ FC3.1}  \\
-		\hline
-		
-
+			\hline
 			RSFO8 & Apache Kafka$_{\scaleto{G}{3pt}}$ deve poter comunicare con il database, l'applicazione web e il modello di Machine Learning  & Obbligatorio &  \makecell[c]{Interno \\ FC1.3} \\		
 			\hline
-	\end{tabularx}\captionof{table}{Requisiti funzionali}
+	\end{longtable}
+	\captionof{table}{Requisiti funzionali}
 \end{center}
 
 \section{Requisiti prestazionali}\label{RequisitiPrestazionali}
-\begin{center}
-	\renewcommand{\arraystretch}{1.4}
-	\begin{tabularx}{\textwidth}{ |c|X|c|X| }
+\def\tabularxcolumn#1{m{#1}}
+{\rowcolors{2}{RawSienna!90!RawSienna!20}{RawSienna!70!RawSienna!40}
+	
+	\begin{center}
+		\renewcommand{\arraystretch}{1.4}
+		\begin{longtable}{|p{4cm}|p{4cm}|p{4cm}|p{3cm}|}
 		\hline
-		\rowcolor{Melon}
+		\rowcolor{airforceblue}
 		\makecell[c]{\textbf{Codice RS}} & \makecell[c]{\textbf{Descrizione}} & \makecell[c]{\textbf{Tipo di requisito}} & \makecell[c]{\textbf{Fonte}} \\
 		\hline
 		RSPO1 & Capacità di acquisizione continuativa nel tempo dei dati da flussi esterni & Obbligatorio & \makecell[c]{Capitolato}  \\
 		\hline
 		RSPO2 & Modalità a bassa latenza dell'aquisizione di informazioni & Obbligatorio & \makecell[c]{Capitolato} \\
 		\hline
-	\end{tabularx}\captionof{table}{Requisiti prestazionali}
-\end{center}
-
-\section{Requisiti di qualità}\label{RequisitiQualità}
-\begin{center}
-	\renewcommand{\arraystretch}{1.4}
-	\begin{tabularx}{\textwidth}{ |c|X|c|X| }
-	\hline
-	\rowcolor{Melon}
-	\makecell[c]{\textbf{Codice RS}} & \makecell[c]{\textbf{Descrizione}} & \makecell[c]{\textbf{Tipo di requisito}} & \makecell[c]{\textbf{Fonte}} \\
-	\hline
-	RSQO1  & La progettazione e la codifica dei requisiti devono rispettare le norme e le metriche definite nel documento \textit{Norme di Progetto v1.0.0}& Obbligatorio & \makecell[c]{Interno} \\
-	\hline
-	RSQF2  & Il codice sorgente del software deve essere disponibile in una repository$_G$ pubblica su Github$_G$  & Facoltativo & \makecell[c]{Interno} \\
-	\hline
-	RSQF3  & Deve essere sviluppato e fornito un documento con lo schema della base di dati relazionale  & Facoltativo & \makecell[c]{Interno \\ FC1.2} \\
-%	\hline
-%	RSQ  & Fornire una documentazione sui flussi di dati esterni.... & Facoltativo & FC3 \\
-%	\hline
-	\hline
-	RSQF4  & Deve essere realizzato un documento contenente tutti gli errori risolti durante la realizzazione del software & Facoltativo & \makecell[c]{Interno} \\
-	\hline
-	RSQO5  & Test che dimostrino il corretto funzionamento dei servizi e delle funzionalità previste  & Obbligatorio & \makecell[c]{Capitolato} \\
-	\hline
-	\end{tabularx}\captionof{table}{Requisiti di qualità}
+		RSQO1  & La progettazione e la codifica dei requisiti devono rispettare le norme e le metriche definite nel documento \textit{Norme di Progetto v1.0.0}& Obbligatorio & \makecell[c]{Interno} \\
+		\hline
+		RSQF2  & Il codice sorgente del software deve essere disponibile in una repository$_G$ pubblica su Github$_G$  & Facoltativo & \makecell[c]{Interno} \\
+		\hline
+		RSQF3  & Deve essere sviluppato e fornito un documento con lo schema della base di dati relazionale  & Facoltativo & \makecell[c]{Interno \\ FC1.2} \\
+	%	\hline
+	%	RSQ  & Fornire una documentazione sui flussi di dati esterni.... & Facoltativo & FC3 \\
+	%	\hline
+		\hline
+		RSQF4  & Deve essere realizzato un documento contenente tutti gli errori risolti durante la realizzazione del software & Facoltativo & \makecell[c]{Interno} \\
+		\hline
+		RSQO5  & Test che dimostrino il corretto funzionamento dei servizi e delle funzionalità previste  & Obbligatorio & \makecell[c]{Capitolato} \\
+		\hline
+		\end{longtable}\captionof{table}{Requisiti di qualità}
 \end{center}
 
 
 \section{Requisiti di vincolo}\label{RequisitiVincolo}
-
-\begin{center}
-	\renewcommand{\arraystretch}{1.4}
-	\begin{tabularx}{\textwidth}{ |c|X|c|X| }
+\def\tabularxcolumn#1{m{#1}}
+{\rowcolors{2}{RawSienna!90!RawSienna!20}{RawSienna!70!RawSienna!40}
+	
+	\begin{center}
+		\renewcommand{\arraystretch}{1.4}
+		\begin{tabularx}{15cm}{ |c|X|c|X| }
 		\hline
-		\rowcolor{Melon}
+		\rowcolor{airforceblue}
 		\makecell[c]{\textbf{Codice RS}} & \makecell[c]{\textbf{Descrizione}} & \makecell[c]{\textbf{Tipo di requisito}} & \makecell[c]{\textbf{Fonte}} \\
 		\hline
 		RSVO1  & I dati acquisiti da telecamere in tempo reale devono avere data di riferimento associato  &Obbligatorio & \makecell[c]{Interno} \\
@@ -122,56 +103,48 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 \section{Tracciamento dei requisiti}\label{RequisitiTracciamentoDeiRequisiti}
 
 \subsection{Requisito - fonte}\label{RequisitiTracciamentoDeiRequisitiFonte}
-\begin{center}
-	\renewcommand{\arraystretch}{1.4}
-	\begin{tabularx}{\textwidth}{ |X|X| }
+\def\tabularxcolumn#1{m{#1}}
+{\rowcolors{2}{RawSienna!90!RawSienna!20}{RawSienna!70!RawSienna!40}
+	\begin{center}
+		\renewcommand{\arraystretch}{1.4}
+		\begin{longtable}{|p{7.5cm}|p{7.5cm}|}
 		\hline
-		\rowcolor{Melon}
+		\rowcolor{airforceblue}
 		\makecell[c]{\textbf{Codice RS}} & \makecell[c]{\textbf{Fonte}}  \\
 		\hline
-\makecell[c]{RSFO1} & \makecell[c]{Capitolato\\V. esterno 17-12-2020 \\ FC1.1} \\
-\hline
-\makecell[c]{RSFF2} & \makecell[c]{Capitolato \\ FC1.1}\\
-\hline
-\makecell[c]{RSFO3} & \makecell[c]{Interno\\FC1.1}\\
-\hline
-\makecell[c]{RSFO4.1} & \makecell[c]{Capitolato\\FC1.2}\\
-\hline
-\makecell[c]{RSFO4.2} & \makecell[c]{Capitolato\\FC1.2}\\
-\hline
-\makecell[c]{RSFO5} & \makecell[c]{Capitolato}\\
-\hline
-\makecell[c]{RSFO5.1} & \makecell[c]{Capitolato}\\
-\hline
-\makecell[c]{RSFD6 }& \makecell[c]{Capitolato \\ FC2}\\
-\hline
-\makecell[c]{RSFO7} & \makecell[c]{Capitolato\\FC3.1}\\
-\hline
-\makecell[c]{RSFO8} & \makecell[c]{Interno \\FC1.3}\\
-\hline
-\makecell[c]{RSPO1} & \makecell[c]{Capitolato}\\
-\hline
-\makecell[c]{RSPO2} & \makecell[c]{Capitolato}\\
-\hline
-\makecell[c]{RSQO1} & \makecell[c]{Interno}\\
-\hline
-\makecell[c]{RSQF2} & \makecell[c]{Interno}\\
-\hline
-\makecell[c]{RSQF3} & \makecell[c]{Interno \\FC1.2}\\
-\hline
-\makecell[c]{RSQF4} & \makecell[c]{Interno}\\
-\hline
-\makecell[c]{RSQO5} & \makecell[c]{Capitolato}\\
-\hline
-
-	\end{tabularx}\captionof{table}{Tabella tracciamento requisito-fonte}
-\end{center}
-\begin{center}
-	\renewcommand{\arraystretch}{1.4}
-	\begin{tabularx}{\textwidth}{ |X|X| }
+		\makecell[c]{RSFO1} & \makecell[c]{Capitolato\\V. esterno 17-12-2020 \\ FC1.1} \\
 		\hline
-		\rowcolor{Melon}
-		\makecell[c]{\textbf{Codice RS}} & \makecell[c]{\textbf{Fonte}}  \\
+		\makecell[c]{RSFF2} & \makecell[c]{Capitolato \\ FC1.1}\\
+		\hline
+		\makecell[c]{RSFO3} & \makecell[c]{Interno\\FC1.1}\\
+		\hline
+		\makecell[c]{RSFO4.1} & \makecell[c]{Capitolato\\FC1.2}\\
+		\hline
+		\makecell[c]{RSFO4.2} & \makecell[c]{Capitolato\\FC1.2}\\
+		\hline
+		\makecell[c]{RSFO5} & \makecell[c]{Capitolato}\\
+		\hline
+		\makecell[c]{RSFO5.1} & \makecell[c]{Capitolato}\\
+		\hline
+		\makecell[c]{RSFD6 }& \makecell[c]{Capitolato \\ FC2}\\
+		\hline
+		\makecell[c]{RSFO7} & \makecell[c]{Capitolato\\FC3.1}\\
+		\hline
+		\makecell[c]{RSFO8} & \makecell[c]{Interno \\FC1.3}\\
+		\hline
+		\makecell[c]{RSPO1} & \makecell[c]{Capitolato}\\
+		\hline
+		\makecell[c]{RSPO2} & \makecell[c]{Capitolato}\\
+		\hline
+		\makecell[c]{RSQO1} & \makecell[c]{Interno}\\
+		\hline
+		\makecell[c]{RSQF2} & \makecell[c]{Interno}\\
+		\hline
+		\makecell[c]{RSQF3} & \makecell[c]{Interno \\FC1.2}\\
+		\hline
+		\makecell[c]{RSQF4} & \makecell[c]{Interno}\\
+		\hline
+		\makecell[c]{RSQO5} & \makecell[c]{Capitolato}\\
 		\hline
 		\makecell[c]{RSVO1} & \makecell[c]{Interno}\\
 		\hline
@@ -187,32 +160,25 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 		\hline
 		\makecell[c]{RSVO3} & \makecell[c]{Capitolato\\FC1.3}\\
 		\hline
-	\end{tabularx}\captionof{table}{Tabella tracciamento requisito-fonte}
+	\end{longtable}\captionof{table}{Tabella tracciamento requisito-fonte}
 \end{center}
 
 \subsection{Fonte - requisito}\label{RequisitiTracciamentoDeiRequisitiFonteRequisito}
-\begin{center}
-	\renewcommand{\arraystretch}{1.4}
-	\begin{tabularx}{\textwidth}{ |X|X| }
+\def\tabularxcolumn#1{m{#1}}
+{\rowcolors{2}{RawSienna!90!RawSienna!20}{RawSienna!70!RawSienna!40}
+	\begin{center}
+		\renewcommand{\arraystretch}{1.4}
+		\begin{longtable}{|p{7.5cm}|p{7.5cm}|}
 		\hline
-		\rowcolor{Melon}
+		\rowcolor{airforceblue}
 		\makecell[c]{\textbf{Fonte}} & \makecell[c]{\textbf{Codice RS}}  \\
 		\hline
 		\makecell[c]{Capitolato} & \makecell[c]{RSFO1\\RSFF2\\RSFO4.1\\RSFO4.2\\RSFO5\\RSFO5.1\\RSFD6\\RSFO7\\RSPO1\\RSPO2\\RSQO5\\RSVO2\\RSVF2.1\\RSVO2.2\\RSVO3} \\
 		\hline
 		\makecell[c]{FC1.1} & \makecell[c]{RSFO1 \\ RSFF2 \\ RSFO3} \\
 		\hline
-		
-		\end{tabularx}\captionof{table}{Tabella tracciamento fonte-requisito}
-\begin{tabularx}{\textwidth}{ |X|X| }
-	\hline
-	\rowcolor{Melon}
-	\makecell[c]{\textbf{Fonte}} & \makecell[c]{\textbf{Codice RS}}  \\
-			\hline
 		\makecell[c]{FC1.2} & \makecell[c]{RSFO4.1 \\ RSFO4.2 \\ RSQF3} \\
-		
 		\hline
-	
 		\makecell[c]{FC1.3} & \makecell[c]{RSFO8 \\ RSVO3} \\ 
 		\hline
 		\makecell[c]{FC2} & \makecell[c]{RSFD6} \\ 
@@ -223,7 +189,7 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 		\hline
 		\makecell[c]{Verbale esterno 17-12-2020} & \makecell[c]{RSFO1} \\
 		\hline
-	\end{tabularx}\captionof{table}{Tabella tracciamento fonte-requisito}
+	\end{longtable}\captionof{table}{Tabella tracciamento fonte-requisito}
 \end{center}
 
 \section{Considerazioni}\label{requisitiConsiderazioni}

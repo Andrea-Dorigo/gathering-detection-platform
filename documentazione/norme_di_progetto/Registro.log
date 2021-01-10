@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.24)  24 NOV 2020 15:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.1.4)  10 JAN 2021 17:17
 entering extended mode
 **./Registro.tex
 (Registro.tex
 LaTeX2e <2020-10-01> patch level 2
-L3 programming layer <2020-10-27> xparse <2020-03-03>
+L3 programming layer <2020-12-07> xparse <2020-03-03>
 
 ! LaTeX Error: Missing \begin{document}.
 
@@ -11,62 +11,19 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.5 \hfill
-           \break
+l.1 \quad
+         
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-! Undefined control sequence.
-l.6 \section
-            *{\myformat{Registro delle modifiche}}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
-Missing character: There is no * in font nullfont!
-! Undefined control sequence.
-\myformat #1-> \centering \huge 
-                                #1 
-l.6 \section*{\myformat{Registro delle modifiche}
-                                                 }
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no R in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no e in font nullfont!
-
-Overfull \hbox (20.0pt too wide) in paragraph at lines 5--7
-[]
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--2
+[] 
  []
 
 ! Undefined control sequence.
-l.8 {\rowcolors
-               {2}{Apricot!90!Bittersweet!20}{Bittersweet!70!Apricot!40}
+l.3 	\LARGE
+           \textbf{Registro delle modifiche}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -74,92 +31,146 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-! LaTeX Error: Missing \begin{document}.
+Overfull \hbox (42.3345pt too wide) in paragraph at lines 3--4
+ \OT1/cmr/bx/n/10 Registro 
+ []
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.8 {\rowcolors{2
-                 }{Apricot!90!Bittersweet!20}{Bittersweet!70!Apricot!40}
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+
+Overfull \hbox (23.31934pt too wide) in paragraph at lines 3--4
+ \OT1/cmr/bx/n/10 delle 
+ []
+
+
+Overfull \hbox (25.87486pt too wide) in paragraph at lines 3--4
+ \OT1/cmr/bx/n/10 mod- 
+ []
+
+
+Overfull \hbox (7.02774pt too wide) in paragraph at lines 3--4
+ \OT1/cmr/bx/n/10 i- 
+ []
+
+
+Overfull \hbox (22.84016pt too wide) in paragraph at lines 3--4
+ \OT1/cmr/bx/n/10 fiche 
+ []
+
+! Undefined control sequence.
+l.6 {\rowcolors
+               {2}{RawSienna!90!RawSienna!20}{RawSienna!70!RawSienna!40}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
 Missing character: There is no 2 in font nullfont!
-Missing character: There is no A in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no r in font nullfont!
+Missing character: There is no R in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no S in font nullfont!
 Missing character: There is no i in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no a in font nullfont!
 Missing character: There is no ! in font nullfont!
 Missing character: There is no 9 in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no ! in font nullfont!
-Missing character: There is no B in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no s in font nullfont!
+Missing character: There is no R in font nullfont!
+Missing character: There is no a in font nullfont!
 Missing character: There is no w in font nullfont!
+Missing character: There is no S in font nullfont!
+Missing character: There is no i in font nullfont!
 Missing character: There is no e in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no t in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no a in font nullfont!
 Missing character: There is no ! in font nullfont!
 Missing character: There is no 2 in font nullfont!
 Missing character: There is no 0 in font nullfont!
-Missing character: There is no B in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no s in font nullfont!
+Missing character: There is no R in font nullfont!
+Missing character: There is no a in font nullfont!
 Missing character: There is no w in font nullfont!
+Missing character: There is no S in font nullfont!
+Missing character: There is no i in font nullfont!
 Missing character: There is no e in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no t in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no a in font nullfont!
 Missing character: There is no ! in font nullfont!
 Missing character: There is no 7 in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no ! in font nullfont!
-Missing character: There is no A in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no r in font nullfont!
+Missing character: There is no R in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no S in font nullfont!
 Missing character: There is no i in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no a in font nullfont!
 Missing character: There is no ! in font nullfont!
 Missing character: There is no 4 in font nullfont!
 Missing character: There is no 0 in font nullfont!
 
-! LaTeX Error: Environment table undefined.
+Overfull \hbox (20.0pt too wide) in paragraph at lines 8--8
+[] 
+ []
+
+
+! LaTeX Error: Environment longtable undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.9 \begin{table}
-                 [H]
+l.10 		\begin{longtable}
+                        {|p{4cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-Missing character: There is no [ in font nullfont!
-Missing character: There is no H in font nullfont!
-Missing character: There is no ] in font nullfont!
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 11.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 11.
+Missing character: There is no | in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no | in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no | in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no | in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no | in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no | in font nullfont!
+! Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
+l.11 		\hline
+             
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
 ! Undefined control sequence.
 <recently read> \rowcolor 
                           
-l.13 		\rowcolor
+l.12 		\rowcolor
                 {Melon}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -172,6 +183,109 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
+! Misplaced alignment tab character &.
+l.13 		\textbf{Modifica} &
+                           \textbf{Autore} & \textbf{Ruolo} & \textbf{Data} ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.13 		\textbf{Modifica} & \textbf{Autore} &
+                                             \textbf{Ruolo} & \textbf{Data} ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.13 ...fica} & \textbf{Autore} & \textbf{Ruolo} &
+                                                   \textbf{Data} & \textbf{V...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.13 ...Autore} & \textbf{Ruolo} & \textbf{Data} &
+                                                   \textbf{Versione}
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+
+Overfull \hbox (27.20819pt too wide) in paragraph at lines 12--14
+ \OT1/cmr/bx/n/10 Mod- 
+ []
+
+
+Overfull \hbox (7.02774pt too wide) in paragraph at lines 12--14
+ \OT1/cmr/bx/n/10 i- 
+ []
+
+
+Overfull \hbox (17.09016pt too wide) in paragraph at lines 12--14
+ \OT1/cmr/bx/n/10 fica 
+ []
+
+
+Overfull \hbox (18.91656pt too wide) in paragraph at lines 12--14
+ \OT1/cmr/bx/n/10 Au- 
+ []
+
+
+Overfull \hbox (20.22908pt too wide) in paragraph at lines 12--14
+ \OT1/cmr/bx/n/10 tore 
+ []
+
+
+Overfull \hbox (29.70818pt too wide) in paragraph at lines 12--14
+ \OT1/cmr/bx/n/10 Ruolo 
+ []
+
+
+Overfull \hbox (24.47205pt too wide) in paragraph at lines 12--14
+ \OT1/cmr/bx/n/10 Data 
+ []
+
+
+Overfull \hbox (21.5763pt too wide) in paragraph at lines 12--14
+ \OT1/cmr/bx/n/10 Ver- 
+ []
+
+
+Overfull \hbox (25.14014pt too wide) in paragraph at lines 12--14
+ \OT1/cmr/bx/n/10 sione 
+ []
+
+! Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
+l.15 		\hline
+             
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced alignment tab character &.
+l.16 		\textit{Capitolo 2.1.2, 2.1.3, 2.1.4} &
+                                               Andrea Cecchin & \textit{Anal...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
 Missing character: There is no A in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no d in font nullfont!
@@ -185,6 +299,230 @@ Missing character: There is no c in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
+! Misplaced alignment tab character &.
+l.16 ...lo 2.1.2, 2.1.3, 2.1.4} & Andrea Cecchin &
+                                                   \textit{Analista} & 26-11...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.16 ....4} & Andrea Cecchin & \textit{Analista} &
+                                                   26-11-2020 & v0.0.3
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+! Misplaced alignment tab character &.
+l.16 ...Cecchin & \textit{Analista} & 26-11-2020 &
+                                                   v0.0.3
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no v in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 3 in font nullfont!
+
+Overfull \hbox (36.54422pt too wide) in paragraph at lines 16--17
+ []\OT1/cmr/m/it/10 Capitolo 
+ []
+
+
+Overfull \hbox (24.5332pt too wide) in paragraph at lines 16--17
+ \OT1/cmr/m/it/10 2.1.2, 
+ []
+
+
+Overfull \hbox (24.5332pt too wide) in paragraph at lines 16--17
+ \OT1/cmr/m/it/10 2.1.3, 
+ []
+
+
+Overfull \hbox (21.46655pt too wide) in paragraph at lines 16--17
+ \OT1/cmr/m/it/10 2.1.4 
+ []
+
+
+Overfull \hbox (24.04428pt too wide) in paragraph at lines 16--17
+ \OT1/cmr/m/it/10 Anal- 
+ []
+
+
+Overfull \hbox (15.58879pt too wide) in paragraph at lines 16--17
+ \OT1/cmr/m/it/10 ista 
+ []
+
+! Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
+l.18 		\hline
+             
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced alignment tab character &.
+l.19 		\textit{Capitolo 2.1.1} &
+                                 Andrea Cecchin & \textit{Analista} & 25-11-...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no A in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no C in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+! Misplaced alignment tab character &.
+l.19 		\textit{Capitolo 2.1.1} & Andrea Cecchin &
+                                                  \textit{Analista} & 25-11-...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.19 ....1} & Andrea Cecchin & \textit{Analista} &
+                                                   25-11-2020 & v0.0.2
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+! Misplaced alignment tab character &.
+l.19 ...Cecchin & \textit{Analista} & 25-11-2020 &
+                                                   v0.0.2
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no v in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 2 in font nullfont!
+
+Overfull \hbox (36.54422pt too wide) in paragraph at lines 19--20
+ []\OT1/cmr/m/it/10 Capitolo 
+ []
+
+
+Overfull \hbox (21.46655pt too wide) in paragraph at lines 19--20
+ \OT1/cmr/m/it/10 2.1.1 
+ []
+
+
+Overfull \hbox (24.04428pt too wide) in paragraph at lines 19--20
+ \OT1/cmr/m/it/10 Anal- 
+ []
+
+
+Overfull \hbox (15.58879pt too wide) in paragraph at lines 19--20
+ \OT1/cmr/m/it/10 ista 
+ []
+
+! Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
+l.21 		\hline
+             
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced alignment tab character &.
+l.22 		\textit{Prima stesura del documento} &
+                                              Andrea Cecchin & \textit{Anali...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no A in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no C in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+! Misplaced alignment tab character &.
+l.22 ... stesura del documento} & Andrea Cecchin &
+                                                   \textit{Analista} & 24-11...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.22 ...to} & Andrea Cecchin & \textit{Analista} &
+                                                   24-11-2020 & v0.0.1
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
 Missing character: There is no 2 in font nullfont!
 Missing character: There is no 4 in font nullfont!
 Missing character: There is no - in font nullfont!
@@ -195,6 +533,16 @@ Missing character: There is no 2 in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no 2 in font nullfont!
 Missing character: There is no 0 in font nullfont!
+! Misplaced alignment tab character &.
+l.22 ...Cecchin & \textit{Analista} & 24-11-2020 &
+                                                   v0.0.1
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
 Missing character: There is no v in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no . in font nullfont!
@@ -202,14 +550,62 @@ Missing character: There is no 0 in font nullfont!
 Missing character: There is no . in font nullfont!
 Missing character: There is no 1 in font nullfont!
 
-! LaTeX Error: \begin{document} ended by \end{table}.
+Overfull \hbox (27.3554pt too wide) in paragraph at lines 22--23
+ []\OT1/cmr/m/it/10 Prima 
+ []
+
+
+Overfull \hbox (30.28311pt too wide) in paragraph at lines 22--23
+ \OT1/cmr/m/it/10 stesura 
+ []
+
+
+Overfull \hbox (12.26659pt too wide) in paragraph at lines 22--23
+ \OT1/cmr/m/it/10 del 
+ []
+
+
+Overfull \hbox (17.88875pt too wide) in paragraph at lines 22--23
+ \OT1/cmr/m/it/10 doc- 
+ []
+
+
+Overfull \hbox (8.94438pt too wide) in paragraph at lines 22--23
+ \OT1/cmr/m/it/10 u- 
+ []
+
+
+Overfull \hbox (26.83316pt too wide) in paragraph at lines 22--23
+ \OT1/cmr/m/it/10 mento 
+ []
+
+
+Overfull \hbox (24.04428pt too wide) in paragraph at lines 22--23
+ \OT1/cmr/m/it/10 Anal- 
+ []
+
+
+Overfull \hbox (15.58879pt too wide) in paragraph at lines 22--23
+ \OT1/cmr/m/it/10 ista 
+ []
+
+! Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
+l.24 		\hline
+             
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+
+! LaTeX Error: \begin{center} on input line 8 ended by \end{longtable}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.17 \end{table}
-                
+l.25 	\end{longtable}
+                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -222,11 +618,11 @@ or  <return>  to continue without it.
 
  
 Here is how much of TeX's memory you used:
- 26 strings out of 479799
- 583 string characters out of 2886242
- 264509 words of memory out of 3000000
- 17117 multiletter control sequences out of 15000+200000
- 535434 words of font info for 30 fonts, out of 3000000 for 9000
+ 26 strings out of 479697
+ 586 string characters out of 2867134
+ 267170 words of memory out of 3000000
+ 17218 multiletter control sequences out of 15000+200000
+ 404084 words of font info for 29 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 19i,7n,15p,133b,146s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 13i,1n,15p,146b,131s stack positions out of 5000i,500n,10000p,200000b,50000s
 !  ==> Fatal error occurred, no output PDF file produced!
