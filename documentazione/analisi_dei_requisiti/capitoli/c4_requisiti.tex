@@ -7,7 +7,7 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 	
 	\begin{center}
 		\renewcommand{\arraystretch}{1.4}
-		\begin{longtable}{|p{3cm}|p{4cm}|p{4cm}|p{4cm}|}
+		\begin{longtable}{|p{3cm}|p{4cm}|p{4cm}|p{4cm}|} 
 			\hline
 			\rowcolor{airforceblue}
 			\makecell[c]{\textbf{Codice RS}} & \makecell[c]{\textbf{Descrizione}} & \makecell[c]{\textbf{Tipo di requisito}} & \makecell[c]{\textbf{Fonte}} \\
@@ -34,10 +34,14 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 			\hline
 			RSFO7 & Visualizzazione dei dati elaborati attraverso heat map & Obbligatorio & \makecell[c]{Capitolato \\ FC3.1}  \\
 			\hline
-			RSFO8 & Apache Kafka$_{\scaleto{G}{3pt}}$ deve poter comunicare con il database, l'applicazione web e il modello di Machine Learning  & Obbligatorio &  \makecell[c]{Interno \\ FC1.3} \\		
+			RSFO8 & Apache Kafka$_{\scaleto{G}{3pt}}$ deve poter comunicare con il database, l'applicazione web e il modello di Machine Learning  & Obbligatorio &  \makecell[c]{Interno \\ FC1.3} 	\\	
 			\hline
-	\end{longtable}
-	\captionof{table}{Requisiti funzionali}
+			
+			\rowcolor{white}
+			
+			\caption[Requisiti funzionali]{Requisiti funzionali}\label{4.1}\\
+	\end{longtable}%\captionof{table}{Requisiti funzionali}
+	
 \end{center}
 
 \section{Requisiti prestazionali}\label{RequisitiPrestazionali}
@@ -68,17 +72,20 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 		\hline
 		RSQO5  & Test che dimostrino il corretto funzionamento dei servizi e delle funzionalità previste  & Obbligatorio & \makecell[c]{Capitolato} \\
 		\hline
-		\end{longtable}\captionof{table}{Requisiti di qualità}
+		\rowcolor{white}
+		
+		\caption[Requisiti di qualità]{Requisiti di qualità}\label{4.2}\\
+		\end{longtable}
 \end{center}
 
-
+\newpage
 \section{Requisiti di vincolo}\label{RequisitiVincolo}
 \def\tabularxcolumn#1{m{#1}}
 {\rowcolors{2}{RawSienna!90!RawSienna!20}{RawSienna!70!RawSienna!40}
 	
-	\begin{center}
-		\renewcommand{\arraystretch}{1.4}
-		\begin{tabularx}{15cm}{ |c|X|c|X| }
+\begin{center}
+	\renewcommand{\arraystretch}{1.4}
+	\begin{longtable}{|p{4cm}|p{4cm}|p{4cm}|p{3cm}|}
 		\hline
 		\rowcolor{airforceblue}
 		\makecell[c]{\textbf{Codice RS}} & \makecell[c]{\textbf{Descrizione}} & \makecell[c]{\textbf{Tipo di requisito}} & \makecell[c]{\textbf{Fonte}} \\
@@ -97,9 +104,12 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 		\hline
 		RSVO3  & Il sistema deve far uso dell'ecosistema Apache Kafka$_{\scaleto{G}{3pt}}$ & Obbligatorio  & \makecell[c]{Capitolato\\FC1.3} \\
 		\hline
-	\end{tabularx}\captionof{table}{Requisiti di vincolo}
+		\rowcolor{white}
+		
+		\caption[Requisiti di vincolo]{Requisiti di vincolo}\label{4.3}\\
+	\end{longtable}
 \end{center}
-
+\newpage
 \section{Tracciamento dei requisiti}\label{RequisitiTracciamentoDeiRequisiti}
 
 \subsection{Requisito - fonte}\label{RequisitiTracciamentoDeiRequisitiFonte}
@@ -160,7 +170,10 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 		\hline
 		\makecell[c]{RSVO3} & \makecell[c]{Capitolato\\FC1.3}\\
 		\hline
-	\end{longtable}\captionof{table}{Tabella tracciamento requisito-fonte}
+		\rowcolor{white}
+		
+		\caption[Tabella tracciamento requisito-fonte]{Tabella tracciamento requisito-fonte}\label{4.4}\\
+	\end{longtable}
 \end{center}
 
 \subsection{Fonte - requisito}\label{RequisitiTracciamentoDeiRequisitiFonteRequisito}
@@ -189,7 +202,10 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 		\hline
 		\makecell[c]{Verbale esterno 17-12-2020} & \makecell[c]{RSFO1} \\
 		\hline
-	\end{longtable}\captionof{table}{Tabella tracciamento fonte-requisito}
+		\rowcolor{white}
+		
+		\caption[Tabella tracciamento fonte-requisito]{Tabella tracciamento fonte-requisito}\label{4.5}\\
+	\end{longtable}
 \end{center}
 
 \section{Considerazioni}\label{requisitiConsiderazioni}
