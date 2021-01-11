@@ -1,8 +1,8 @@
 \chapter{Processi Di Supporto}\label{ProcessiDiSupporto}
-I processi di supporto sono documentazione, gestione della configurazione, gestione della qualità, verifica e validazione
+I processi di supporto sono documentazione, gestione della configurazione, gestione della qualità, verifica e validazione.
 \section{Documentazione}\label{ProcessiDiSupportoDocumentazione}
 \subsection{Descrizione}\label{ProcessiDiSupportoDocumentazioneDescrizione}
-Questa sezione fornisce le norme per la stesura, la verifica e l'approvazione dei documenti. Tali regole vanno seguite in tutti i documenti ufficiali prodotti durante il ciclo di vita del software, garantendo cosi la coerenza e la validità degli stessi
+Questa sezione fornisce le norme per la stesura, la verifica e l'approvazione dei documenti. Tali regole vanno seguite in tutti i documenti ufficiali prodotti durante il ciclo di vita del software, garantendo cosi la coerenza e la validità degli stessi.
 \subsection{Implementazione del documento}\label{ProcessiDiSupportoDocumentazioneImplementazioneDelDocumento}
  Per ogni documento che si intende sviluppare è necessario identificare:
 \begin{itemize}
@@ -66,9 +66,9 @@ Tutti i capitoli appartenenti ad un documento sono organizzati in una subdirecto
 Il frontespizio è la prima pagina di ogni documento.
 La prima pagina di ogni documento sarà composta da:
 \begin{itemize}
-	\item \textbf{logo del gruppo}
-		\item \textbf{indirizzo e-mail del gruppo}
-			\item \textbf{nome del gruppo}
+	\item \textbf{logo del gruppo};
+		\item \textbf{indirizzo e-mail del gruppo};
+			\item \textbf{nome del gruppo}.
 \end{itemize}
 Informazioni sul documento che includono:
 \begin{itemize}
@@ -238,7 +238,6 @@ Ad ogni incremento di una variabile tutte quelle alla sua destra vengono nuovame
 \subsubsection{Tecnologie adottate}\label{ProcessiDiSupportoGestioneDellaConfigurazioneVersionamentoTecnologieAdottate}
 Il gruppo utilizza il sistema di controllo di versione Git$_G$ con hosting sulla piattaforma Github$_G$.
 L'interazione con queste tecnologie avviene da linea di comando del terminale attraverso il wrapper$_G$ Git-flow$_G$ oppure tramite il software ad interfaccia grafica GitKraken$_G$.
-
 L'utilizzo di questi strumenti assicurano la progressione, collaborazione e sicurezza nello sviluppo di ogni file all'interno della repository$_{\scaleto{G}{3pt}}$.
 \subsubsection{Repository remoto}\label{ProcessiDiSupportoGestioneDellaConfigurazioneVersionamentoRepositoryRemoto}
 Il repository$_{\scaleto{G}{3pt}}$ remoto utilizzato dal gruppo è disponibile al link
@@ -256,9 +255,7 @@ La struttura dei branch rispetta la convenzione standard comunemente accettata d
 Il branch \texttt{main} contiene la versione ufficiale del progetto, in cui il \textit{Responsabile} ha approvato tutti i files in esso contenuti.
 Da questo si dirama il branch \texttt{develop}, il quale contiene files nella maggior parte dei casi già revisionati dai \textit{Verificatori}; fanno eccezzione a questa norma$_G$ i documenti e file di interesse comune a moltepici ambiti del progetto oppure i file che non richiedono particolare verifica (gitignore, verbali, template, \textit{Glossario}, linee guida).
 A partire dal \texttt{develop} si diramano i branch delle \texttt{feature}, \texttt{bugfix} e \texttt{hotfix}; i loro nomi devono esplicitare ciò che si sta producendo al loro interno, sempre rispettando le convenzioni di Git-flow$_{\scaleto{G}{3pt}}$.
-
 La cartella \textbf{documentazione} contiene tutti i documenti prodotti dal gruppo; le norme riguardanti i suoi contenuti si trovano nella sezione \S~\ref{ProcessiDiSupportoDocumentazioneDirectoryDiUnDocumento}}.
-
 Il gruppo ha raccolto nel documento interno \textit{linee\_guida} i comandi Git$_{\scaleto{G}{3pt}}$ e Git-flow$_{\scaleto{G}{3pt}}$ che hanno presentato più difficoltà, in modo da rendere la gestione del sistema di versionamento quanto più semplice e uniforme, anche tramite l'utilizzo di esempi.% da riformulare meglio
 %aggiungere riferimento
 \section{Gestione della qualità} \label{ProcessiDiSupportoGestioneDellaQualità}
@@ -332,7 +329,7 @@ Il corretto svolgimento del processo di verifica avviene attraverso i seguenti p
 	\item la verifica segue dei criteri chiari ed affidabili;
 	\item il prodotto viene verificato nel corso di ognuna delle sue fasi;
 	\item al termine della verifica il prodotto si trova in uno stato stabile;
-	\item una volta verificato, possiamo procedere con la fase di validazione;
+	\item una volta verificato, possiamo procedere con la fase di validazione.
 \end{itemize}
 
 \subsection{Attività}\label{ProcessiDiSupportoVerificaAttività}
@@ -371,7 +368,7 @@ Per ogni test si specificano i seguenti parametri:
 	\item \textbf{Output:} dati in uscita attesi;
 	\item \textbf{Avvisi addizionali:} eventuali ulteriori istruzioni su come eseguire il test e su come interpretare i risultati ottenuti.
 \end{itemize}
-I tipi di test sviluppati sono i seguenti. \\ 
+I tipi di test sviluppati sono i seguenti:  
 \begin{itemize}
 	\item[] \textbf{Test di unità} \\
 		I test di unità, detti anche unit test, hanno il compito$_G$ di testare le singole unità software, dove per unità si intende il più piccolo componente del programma dotato di funzionamento autonomo.
@@ -402,7 +399,7 @@ I test presenti nella sezione precedente sono descritti così:
 		\item[-] \textbf{NI}: non implementato;
 		\item[-] \textbf{I}: implementato;
 		\item[-] \textbf{NS}: non superato;
-		\item[-] \textbf{S}: superato;
+		\item[-] \textbf{S}: superato.
 	\end{itemize}
 \end{itemize}
 
@@ -419,15 +416,15 @@ In cui:
 		\item \textbf{F}: indica se il requisito$_{\scaleto{G}{3pt}}$ è funzionale;
 		\item \textbf{Q}: indica se il requisito$_{\scaleto{G}{3pt}}$ è qualitativo;
 		\item \textbf{V}: indica se il requisito$_{\scaleto{G}{3pt}}$ è vincolante;
-		\item \textbf{P}: indica se il requisito$_{\scaleto{G}{3pt}}$ è prestazionale;
+		\item \textbf{P}: indica se il requisito$_{\scaleto{G}{3pt}}$ è prestazionale.
 	\end{itemize}
 	\item \textbf{tipo\_di\_requisito}: suddiviso in:
 	\begin{itemize}
 		\item[-] \textbf{O}: se il requisito$_{\scaleto{G}{3pt}}$ è obbligatorio;
 		\item[-] \textbf{D}: se il requisito$_{\scaleto{G}{3pt}}$ è desiderabile;
-		\item[-] \textbf{F}: se il requisito$_{\scaleto{G}{3pt}}$ è facoltativo;
+		\item[-] \textbf{F}: se il requisito$_{\scaleto{G}{3pt}}$ è facoltativo.
 	\end{itemize}
-	\item \textbf{codice\_requisito}: si tratta di un numero incrementale per rendere univoco il requisito$_{\scaleto{G}{3pt}}$;
+	\item \textbf{codice\_requisito}: si tratta di un numero incrementale per rendere univoco il requisito$_{\scaleto{G}{3pt}}$.
 \end{itemize}
 
 Invece i test di \textit{unità}, \textit{integrazione} e \textit{regressione}, sono rappresentati nel seguente modo:
@@ -448,9 +445,9 @@ Come formula viene utilizzata la seguente:
 	\textbf{RE = ($1-\frac{TE}{TT}$)*100}
 \end{center}
 \begin{itemize}
-	\item \textbf{RE} sta per \textit{Rilevamento Errori}
+	\item \textbf{RE} sta per \textit{Rilevamento Errori};
 	\item \textbf{TE} sta per \textit{Test con Errori};
-	\item \textbf{TT} sta per \textit{Test Totali};
+	\item \textbf{TT} sta per \textit{Test Totali}.
 \end{itemize}
 \textit{Il gruppo \textit{Jawa Druids} ha valutato precoce la scelta di stabilire in questa prima fase dei valori soglia per tale metrica, di conseguenza il gruppo si riserva di integrarli successivamente in modo opportuno.}
 
@@ -463,9 +460,8 @@ Viene utilizzata la seguente formula:
 \begin{itemize}
 	\item \textbf{VD} sta per \textit{Validità Dati};
 	\item \textbf{DIV} sta per \textit{Dati Input Validati};
-	\item \textbf{DP} sta per \textit{Dati Previsti};
+	\item \textbf{DP} sta per \textit{Dati Previsti}.
 \end{itemize}
-
 \textit{I range di valori accettabili non si possono ancora esprimere in quanto, concordi con l'azienda, si stabiliranno in futuro.}
 
 \subsubsection{MQPD05 Comprensione del codice}\label{ProcessiDiSupportoVerificaMetricheMQPD05CompresioneDelCodice}
@@ -477,7 +473,7 @@ L'operazione è costituita dalla divisione tra le \textit{linee di commento} e l
 \begin{itemize}
 	\item \textbf{F} sta per \textit{Facilità}, ovvero la facilità di comprensione del codice;
 	\item \textbf{N\_Lc} sta per \textit{Numero di linee di commento};
-	\item \textbf{N\_Lcod} sta per \textit{Numero di linee di codice};
+	\item \textbf{N\_Lcod} sta per \textit{Numero di linee di codice}.
 \end{itemize}
 
 \section{Validazione} \label{ProcessiDiSupportoValidazione}
