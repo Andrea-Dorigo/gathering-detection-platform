@@ -1,27 +1,107 @@
-\def\myformat#1{
-	\centering\huge#1
-}
+\quad
+\begin{center}
+	\LARGE\textbf{Registro delle modifiche}
+\end{center}
+\def\tabularxcolumn#1{m{#1}}
+{\rowcolors{2}{RawSienna!90!RawSienna!20}{RawSienna!70!RawSienna!40}
 
-\hfill \break
-\section*{\myformat{Registro delle modifiche}}
-
-{\rowcolors{2}{Apricot!90!Bittersweet!20}{Bittersweet!70!Apricot!40}
-\begin{table}[H]
-	\centering
-	\begin{tabular}{|c|c|c|c|c|}
-		\hline
-		\rowcolor{Melon} 
-		\textbf{Modifica} & \textbf{Autore} & \textbf{Ruolo} & \textbf{Data} & \textbf{Versione}
-		\\
-		\hline
-		\textit{Capitolo 2.1.2, 2.1.3, 2.1.4} & Andrea Cecchin & \textit{Analista} & 26-11-2020 & v0.0.3 
-		\\
-		\hline
-		\textit{Capitolo 2.1.1} & Andrea Cecchin & \textit{Analista} & 25-11-2020 & v0.0.2 
-		\\
-		\hline
-		\textit{Prima stesura del documento} & Andrea Cecchin & \textit{Analista} & 24-11-2020 & v0.0.1
-		\\
-		\hline
-	\end{tabular}
-\end{table}
+\begin{center}
+	\renewcommand{\arraystretch}{1.4}
+	\begin{longtable}{|p{4cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
+	\hline
+	\rowcolor{airforceblue}
+	\textbf{Modifica} & \textbf{Autore} & \textbf{Ruolo} & \textbf{Data} & \textbf{Versione}
+	\\
+	\hline
+	\textit{Approvazione del documento per RR} & Igli Mezini & \textit{Responsabile di Progetto} & 10-01-2021 & v1.0.0
+	\\
+	\hline
+	\textit{Revisione Finale del documento} & Margherita Mitillo & \textit{Verificatore} & 09-01-2021 & v0.9.0
+	\\
+	\hline
+	\textit{Verificato capitolo \S~\ref{Formazione}} & Margherita Mitillo & \textit{Verificatore} & 08-01-2021 & v0.8.0
+	\\
+	\hline
+	\textit{Verificate sezioni \S~\ref{ProcessiPrimariProgettazione}, \S~\ref{ProcessiPrimariCodifica}, \S~\ref{ProcessiPrimariStrumenti}, \S~\ref{Standard ISO/IEC 15504} } & Andrea Dorigo & \textit{Verificatore} & 08-01-2021 & v0.7.0
+	\\
+	\hline
+	\textit{Verificate sezioni \S~\ref{ProcessiDiSupportoGestioneDellaConfigurazione}, \S~\ref{ProcessiOrganizzativiProcessoDiPianificazione}, \S~\ref{ProcessiOrganizzativiFormazione}} & Margherita Mitillo & \textit{Verificatore} & 07-01-2021 & v0.6.0
+	\\
+	\hline
+	\textit{Verificate sezioni \S~\ref{ProcessiDiSupportoVerifica}, \S~\ref{ProcessiDiSupportoValidazione}, \S~\ref{StandardISO/IEC9126}} & Emma Roveroni & \textit{Verificatore} & 07-01-2021 & v0.5.0
+	\\
+	\hline
+	\textit{Aggiunto capitolo \S~\ref{Formazione}} & Mattia Cocco & \textit{Amministratore} & 06-01-2021 & v0.4.7
+	\\
+	\hline
+	\textit{Aggiunte sezioni \S~\ref{ProcessiDiSupportoVerifica} e \S~\ref{ProcessiDiSupportoValidazione} } & Alfredo Graziano & \textit{Amministratore} & 05-01-2021 & v0.4.6
+	\\
+	\hline
+	\textit{Aggiunto capitolo \S~\ref{ProcessiOrganizzativiFormazione}} & Mattia Cocco & \textit{Amministratore} & 05-01-2021 & v0.4.5
+	\\
+	\hline
+	\textit{Aggiunte sezioni \S~\ref{ProcessiPrimariProgettazione}, \S~\ref{ProcessiPrimariCodifica}, \S~\ref{ProcessiPrimariStrumenti}} & Andrea Cecchin & \textit{Amministratore} & 03-01-2021 & v0.4.4
+	\\
+	\hline
+	\textit{Aggiunta sezione \S~\ref{ProcessiDiSupportoGestioneDellaConfigurazione}} & Andrea Dorigo & \textit{Amministratore} & 02-01-2021 & v0.4.3
+	\\
+	\hline
+	\textit{Aggiunte sezioni \S~\ref{ProcessiPrimariProspettiveAnalisiDeiRequisitiMetriche}, \S~\ref{ProcessiDiSupportoVerificaDescrizione}} & Mattia Cocco & \textit{Amministratore} & 02-01-2021 & v0.4.2
+	\\
+	\hline
+	\textit{Aggiunto capitolo \S~\ref{Standard ISO/IEC 15504}} & Alfredo Graziano & \textit{Amministratore} & 01-01-2021 & v0.4.1
+	\\
+	\hline
+	\textit{Verificate sezioni \S~\ref{ProcessiDiSupportoGestioneDellaQualità} e \S~\ref{ProcessiOrganizzativiProcessoDiCoordinamento} } & Emma Roveroni & \textit{Verificatore} & 31-12-2020 & v0.4.0
+	\\
+	\hline
+	\textit{Aggiunta sezione \S~\ref{ProcessiOrganizzativiProcessoDiPianificazioneMetriche}} & Alfredo Graziano & \textit{Amministratore} & 30-12-2020 & v0.3.4
+	\\
+	\hline
+	\textit{Aggiunte sezioni \S~\ref{ProcessiDiSupportoGestioneDellaQualità}, \S~\ref{StandardISO/IEC9126} } & Mattia Cocco & \textit{Amministratore} & 30-12-2020 & v0.3.3
+	\\
+	\hline
+	\textit{Aggiunte sezioni \S~\ref{ProcessiOrganizzativiProcessoDiPianificazioneScopo}, \S~\ref{ProcessiOrganizzativiProcessoDiPianificazioneRuoliDiProgetto}, \S~\ref{ProcessiOrganizzativiProcessoDiPianificazioneAssegnazioneDeiCompiti}, \S~\ref{ProcessiOrganizzativiProcessoDiPianificazioneTrelloEGitkraken}, \S~\ref{ProcessiOrganizzativiProcessoDiPianificazioneStrumenti} } & Igli Mezini & \textit{Amministratore} & 30-12-2020 & v0.3.2
+	\\
+	\hline
+	\textit{Aggiunte sezioni \S~\ref{ProcessiOrganizzativiProcessoDiCoordinamentoScopo}, \S~\ref{ProcessiOrganizzativiProcessoDiCoordinamentoComunicazione}, \S~\ref{ProcessiOrganizzativiProcessoDiCoordinamentoRiunioni}, \S~\ref{ProcessiOrganizzativiProcessoDiCoordinamentoStrumentiUtilizzatiPerIlProcessoDiCoordinamento} } & Igli Mezini & \textit{Amministratore} & 29-12-2020 & v0.3.1
+	\\
+	\hline
+	\textit{Verificata sezione \S~\ref{ProcessiDiSupportoDocumentazione}} & Andrea Dorigo & \textit{Verificatore} & 15-12-2020 & v0.3.0
+	\\
+	\hline
+	\textit{Verificate sezioni \S~\ref{ProcessiPrimariFornitura} e \S~\ref{ProcessiPrimariSviluppo} } & Margherita Mitillo & \textit{Verificatore} & 11-12-2020 & v0.2.0
+	\\
+	\hline
+	\textit{Verificato capitolo \S~\ref{Introduzione}} & Margherita Mitillo & \textit{Verificatore} & 10-12-2020 & v0.1.0
+	\\
+	\hline
+	\textit{Aggiunte sezioni \S~\ref{ProcessiDiSupportoDocumentazioneMetricheCorrettezzaOrtografica}, \S~\ref{ProcessiDiSupportoDocumentazioneDirectoryDiUnDocumento}} & Andrea Dorigo & \textit{Amministratore} & 08-12-2020 & v0.0.9
+	\\
+	\hline
+	\textit{Aggiunte sezioni \S~\ref{ProcessiDiSupportoDocumentazioneMetriche}, \S~\ref{ProcessiDiSupportoDocumentazioneStrumentiDiStesura}} & Igli Mezini & \textit{Amministratore} & 03-12-2020 & v0.0.8
+	\\
+	\hline
+	\textit{Aggiunte sezioni \S~\ref{ProcessiDiSupportoDocumentazioneStrutturaGeneraleDeiDocumenti}, \S~\ref{ProcessiDiSupportoDocumentazioneNormeTipografiche}, \S~\ref{ProcessiDiSupportoDocumentazioneElementiGrafici}} & Igli Mezini & \textit{Amministratore} & 01-12-2020 & v0.0.7
+	\\
+	\hline
+	\textit{Aggiunta sezione \S~\ref{ProcessiPrimariSviluppo}} & Andrea Cecchin & \textit{Amministratore} & 30-11-2020 & v0.0.6
+	\\
+	\hline
+	\textit{Aggiunte sezioni \S~\ref{ProcessiDiSupportoDocumentazioneTemplateInFormatoLatex}, \S~\ref{ProcessiDiSupportoDocumentazioneDocumentiProdotti}, \S~\ref{ProcessiDiSupportoDocumentazioneDirectoryDiUnDocumento}} & Igli Mezini & \textit{Amministratore} & 29-11-2020 & v0.0.5
+	\\
+	\hline
+	\textit{Aggiunte sezioni \S~\ref{ProcessiDiSupportoDocumentazioneDescrizione}, \S~\ref{ProcessiDiSupportoDocumentazioneImplementazioneDelDocumento}, \S~\ref{ProcessiDiSupportoDocumentazioneCicloDiVitaDiUnDocumento}} & Igli Mezini & \textit{Amministratore} & 28-11-2020 & v0.0.4
+	\\
+	\hline
+	\textit{Aggiunte sezioni \S~\ref{ProcessiPrimariFornituraStudioDiFattibilità}, \S~\ref{ProcessiPrimariFornituraAltraDocumentazioneDaFornire}, \S~\ref{ProcessiPrimariFornituraStrumenti}} & Andrea Cecchin & \textit{Amministratore} & 26-11-2020 & v0.0.3
+	\\
+	\hline
+	\textit{Aggiunte sezioni \S~\ref{Introduzione} e \S~\ref{ProcessiPrimariFornituraScopo}} & Andrea Cecchin & \textit{Amministratore} & 25-11-2020 & v0.0.2
+	\\
+	\hline
+	\textit{Prima stesura del documento} & Andrea Cecchin & \textit{Amministratore} & 24-11-2020 & v0.0.1
+	\\
+	\hline
+	\end{longtable}
+\end{center}

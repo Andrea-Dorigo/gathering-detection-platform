@@ -1,0 +1,53 @@
+\input{packages}
+\input{config}
+
+\begin{document}
+\makeatletter
+\begin{titlepage}
+	\begin{center}
+		\vspace*{-5cm}
+		\author{Jawa Druids} 
+		\title{Norme di Progetto}
+		\date{} %LASCIARE QUESTO CAMPO VUOTO, SE LO TOLGO STAMPA LA DATA CORRENTE
+		\includegraphics[width=0.5\linewidth]{../immagini/DRUIDSLOGO.jpg}\\[4ex]
+		{\huge \bfseries  \@title }\\[2ex] 
+		{\LARGE  \@author}\\[50ex]
+		\vspace*{-9cm}
+		\begin{table}[H]
+			\renewcommand{\arraystretch}{1.4}
+			\centering
+			\begin{tabular}{r | l}
+				\textbf{Versione} & 1.0.0 \\%RIGA PER INSERIRE LA VERSIONE ULTIMA DEL DOCUMENTO
+				\textbf{Data approvazione} & 10-01-2021\\
+				\textbf{Responsabile} & Igli Mezini \\
+				\textbf{Redattori} & \makecell[tl]{Igli Mezini \\ Andrea Cecchin \\ Andrea Dorigo \\ Mattia Cocco \\ Alfredo Graziano} \\		
+				\textbf{Verificatori} & \makecell[tl]{Margherita Mitillo \\ Andrea Dorigo \\ Emma Roveroni} \\
+				%MAKECELL SERVE PER POI ANDARE A CAPO ALL'INTERNO DELLA CELLA
+				\textbf{Stato} & Approvato\\
+				\textbf{Lista distribuzione} & \makecell[tl]{Jawa Druids \\ Prof. Tullio Vardanega \\ Prof. Riccardo Cardin}\\
+				\textbf{Uso} & Interno     
+			\end{tabular}
+		\end{table}
+		\vspace{0.1cm}
+		\hfill \break
+		\fontsize{17}{10}\textbf{Sommario} \\
+		\vspace{0.1cm}
+		Il documento redatto riferisce le regole, gli strumenti e le convenzioni a cui il gruppo JawaDruids ha stabilito di attenersi e seguire per l'intera durata dello sviluppo del progetto.
+	\end{center}
+\end{titlepage}
+\makeatother
+	\input{Registro}
+
+	\tableofcontents{}
+	\listoffigures
+	\input{capitoli/c1_Introduzione}
+	\input{capitoli/c2_Processi_Primari}
+	\input{capitoli/c3_Processi_di_supporto}
+	\input{capitoli/c4_Processi_Organizzativi}
+	\input{capitoli/c5_ISO_9126}
+	\input{capitoli/c6_ISO_15504}
+	%\input{capitoli/c7_Ciclo_di_deming}
+	\input{capitoli/c8_Formazione}
+	% bibliography, glossary and index would go here.
+
+\end{document}
