@@ -1,0 +1,216 @@
+\input{packages}
+\input{config}
+
+\begin{document}
+
+\makeatletter
+\begin{titlepage}
+	\begin{center}
+		\vspace*{-5cm}
+		\author{Jawa Druids}
+		\title{Piano di Progetto}
+		\date{} %LASCIARE QUESTO CAMPO VUOTO, SE LO TOLGO STAMPA LA DATA CORRENTE
+		\includegraphics[width=0.5\linewidth]{../immagini/DRUIDSLOGO.jpg}\\[4ex]
+		{\huge \bfseries  \@title }\\[2ex]
+		{\LARGE  \@author}\\[50ex]
+		\vspace*{-9cm}
+		\begin{table}[H]
+			\renewcommand{\arraystretch}{1.4}
+			\centering
+			\begin{tabular}{r | l}
+				\textbf{Versione} & 1.0.0 \\%RIGA PER INSERIRE LA VERSIONE ULTIMA DEL DOCUMENTO
+				\textbf{Data approvazione} & 10-01-2021\\
+				\textbf{Responsabile} & Andrea Dorigo\\
+				\textbf{Redattori} & \makecell[tl]{Andrea Dorigo \\ Margherita Mitillo \\ Mattia Cocco} \\
+				\textbf{Verificatori} & \makecell[tl]{Emma Roveroni \\ Andrea Cecchin} \\
+		%MAKECELL SERVE PER POI ANDARE A CAPO ALL'INTERNO DELLA CELLA
+				\textbf{Stato} & Approvato\\
+				\textbf{Lista distribuzione} & \makecell[tl]{Jawa Druids \\ prof. Tullio Vardanega \\ prof. Riccardo Cardin \\ Sync Lab}\\
+				\textbf{Uso} & Esterno
+			\end{tabular}
+		\end{table}
+		\vspace{0.1cm}
+		\hfill \break
+		\fontsize{17}{10}\textbf{Sommario} \\
+		\vspace{0.1cm}
+    Il presente documento contiene la pianificazione delle attività del gruppo Jawa Druids atte al soddisfacimento del capitolato \normalsize\textit{GDP: Gathering Detection Platform} di Sync Lab.
+	\end{center}
+\end{titlepage}
+\makeatother
+
+\input{registro_delle_modifiche}
+
+%COMANDO PER LA CREAZIONE DELL'INDICE
+
+\tableofcontents{}
+\listoffigures
+\listoftables
+\input{capitoli/1-Introduzione}
+\input{capitoli/2-Analisi_dei_rischi}
+\input{capitoli/3-Modello_di_sviluppo}
+\input{capitoli/4-Pianificazone}
+\input{capitoli/5-Preventivo}
+\input{capitoli/6-Consuntivo}
+\input{capitoli/7-Organigramma}
+
+%PER RENDERE PIÙ CHIARA LA STESURA DEI DOCUMENTI È MEGLIO LASCIARE SEPARATI IN FILE DIVERSI OGNI CAPITOLO
+
+% \input{esempio} -- esempio di codice per inserire un nuovo capitolo
+
+\end{document}
+
+% \documentclass[a4paper,12pt]{report}
+% \usepackage[utf8]{inputenc}
+% \usepackage{graphicx}
+% \usepackage{float}
+% \usepackage{tabularx}
+% \usepackage{makecell}
+% \usepackage{titlesec}
+% \usepackage{fancyhdr}
+% \usepackage{lastpage}
+% \usepackage{xurl}
+% \usepackage{hyperref}
+% \usepackage{geometry}
+% \usepackage{color}
+% \usepackage{microtype}
+% \usepackage{enumerate}
+% \usepackage{listings}
+% \usepackage{tabularx}
+% \usepackage[table,dvipsnames]{xcolor}
+% \usepackage{caption}
+% \captionsetup{labelformat=empty}
+% \setcounter{tocdepth}{5}
+% \setcounter{secnumdepth}{5} %SONO I DUE COMANDI PER AVERE LE SUBSUBSECTION NUMERATE E PRESENTI NELL'INDICE
+% \renewcommand{\contentsname}{Indice} %QUESTO SERVE PER AVERE L'INDICE CON IL NOME CHE VOGLIO IO
+% \renewcommand{\listfigurename}{Lista delle figure}
+% \renewcommand{\listtablename}{Lista delle tabelle}
+% \titleformat{\chapter}[display]
+% {\normalfont\bfseries}{}{0pt}{\LARGE} %QUESTO SERVE PER AVERE SOLO IL NOME DEL CAPITOLO CHE VOGLIO IO
+% \titlespacing*{\chapter}{0cm}{0cm}{0.2cm}
+% \geometry{
+% 	left=20mm,
+% 	right=20mm,
+% }
+% \fancypagestyle{plain}{
+% 	\fancyhf{}
+% 	\lhead{\includegraphics[width=3cm]{../immagini/minilogo.jpg}}
+% 	\chead{}
+% 	\rhead{\fontsize{12}{10}Piano di progetto}
+% 	\lfoot{}
+% 	\cfoot{\thepage\ di \pageref*{LastPage}}
+% 	\rfoot{}
+% }
+%
+% \definecolor{atomlightorange}{rgb}{0.88,0.76,0.55}
+% \definecolor{atomdarkgrey}{RGB}{59,62,75}
+%
+% \usepackage{tikz}
+%
+% % set listings
+% \lstset{%
+%     basicstyle=\footnotesize\ttfamily\color{atomlightorange},
+%     framesep=20pt,
+% 		belowskip=10pt,
+% 		aboveskip=10pt
+% }
+%
+% % add frame environment
+% \usepackage[%
+%     framemethod=tikz,
+%     skipbelow=8pt,
+%     skipabove=13pt
+% ]{mdframed}
+% \mdfsetup{%
+%     leftmargin=0pt,
+%     rightmargin=0pt,
+%     backgroundcolor=atomdarkgrey,
+%     middlelinecolor=atomdarkgrey,
+%     roundcorner=6
+% }
+%
+% \usepackage{etoolbox}% >= v2.1 2011-01-03
+% \BeforeBeginEnvironment{lstlisting}{\begin{mdframed}\vspace{-0.7em}}
+% \AfterEndEnvironment{lstlisting}{\vspace{-0.5em}\end{mdframed}}
+%
+% % needed for \lstcapt
+% \def\ifempty#1{\def\temparg{#1}\ifx\temparg\empty}
+%
+% % make new caption command for listings
+% \usepackage{caption}
+% \newcommand{\lstcapt}[2][]{%
+%     \ifempty{#1}%
+%         \captionof{lstlisting}{#2}%
+%     \else%
+%         \captionof{lstlisting}[#1]{#2}%
+%     \fi%
+%     \vspace{0.75\baselineskip}%
+% }
+%
+% \hypersetup{
+%     colorlinks=true,
+%     linkcolor=black,
+%     filecolor=black,
+%     urlcolor=blue,
+% 		citecolor=black,
+% }
+%
+% \pagestyle{plain}
+%
+% \makeatletter
+% 	 \def\thebibliography#1{\chapter*{Bibliografia\@mkboth
+% 		 {Bibliografia}{Bibliografia}}\list
+% 		 {[\arabic{enumi}]}{\settowidth\labelwidth{[#1]}\leftmargin\labelwidth
+%  \advance\leftmargin\labelsep
+%  \usecounter{enumi}}
+%  \def\newblock{\hskip .11em plus .33em minus .07em}
+%  \sloppy\clubpenalty4000\widowpenalty4000
+%  \sfcode`\.=1000\relax}
+% 	 \makeatother
+%
+% \newcolumntype{Y}{>{\centering\arraybackslash}X}
+%
+% \begin{document}
+%
+% \makeatletter
+% \begin{titlepage}
+%     \begin{center}
+%     \vspace*{-5,0cm}
+%     \author{Jawa Druids}
+%     \title{Piano di progetto}
+%     \date{} %LASCIARE QUESTO CAMPO VUOTO, SE LO TOLGO STAMPA LA DATA CORRENTE
+%     \includegraphics[width=0.7\linewidth]{../immagini/DRUIDSLOGO.jpg}\\[4ex]
+%     {\huge \bfseries  \@title }\\[2ex]
+%     {\LARGE  \@author}\\[50ex]
+%     \vspace*{-8,0cm}
+%     \begin{table}[H]
+%         \centering
+%         \begin{tabular}{c|c}
+%             \textbf{Versione} & x.x.x \\
+%             \textbf{Data approvazione} & xx-xx-xxxx\\
+%             \textbf{Responsabile} & Nome Cognome\\
+%             \textbf{Redattori} & Andrea Dorigo \\
+%             \textbf{Verificatori} & Nome Cognome \\
+%         %MAKECELL SERVE PER POI ANDARE A CAPO ALL'INTERNO DELLA CELLA
+%             \textbf{Stato} & Redazione in corso\\
+%             \textbf{Lista distribuzione} & \makecell{Jawa Druids \\ prof. Tullio Vardanega \\ prof. Riccardo Cardin \\ Sync Lab}\\
+%             \textbf{Uso} & Esterno
+%         \end{tabular}
+%     \end{table}
+% 					\vspace{.4cm}
+% 	\hfill \break
+%     \fontsize{17}{10}\textbf{Sommario}\\
+% 		\vspace{.3cm}
+%     Il presente documento contiene la pianificazione delle attività del gruppo Jawa Druids atte al soddisfacimento del capitolato \normalsize\textit{GDP: Gathering Detection Platform} di Sync Lab.
+%     \end{center}
+% \end{titlepage}
+% \makeatother
+%
+% \input{registro_delle_modifiche}
+% \tableofcontents
+% \listoffigures
+% \listoftables
+% \input{capitoli/1-Introduzione}
+% \input{capitoli/2-Analisi_dei_rischi}
+% % \input{bibliografia}
+%
+% \end{document}
