@@ -1,0 +1,53 @@
+\input{package}
+\input{config}
+\begin{document}
+
+\makeatletter
+\begin{titlepage}
+	\begin{center}
+		\vspace*{-4,0cm}
+		\author{Jawa Druids} 
+		\title{Analisi dei Requisiti}
+		\date{} %LASCIARE QUESTO CAMPO VUOTO, SE LO TOLGO STAMPA LA DATA CORRENTE
+		\includegraphics[width=0.5\linewidth]{../immagini/DRUIDSLOGO.jpg}\\[4ex]
+		{\huge \bfseries  \@title }\\[2ex] 
+		{\LARGE  \@author}\\[50ex]
+		\vspace*{-8,0cm}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{r | l}
+				\textbf{Versione} & v1.0.0 \\%RIGA PER INSERIRE LA VERSIONE ULTIMA DEL DOCUMENTO
+				\textbf{Data approvazione} & 10-01-2021\\
+				\textbf{Responsabile} & Andrea Cecchin\\
+				\textbf{Redattori} & \makecell[tl]{Andrea Cecchin \\ Igli Mezini} \\
+				\textbf{Verificatori} & \makecell[tl]{Alfredo Graziano \\ Mattia Cocco } \\
+				%MAKECELL SERVE PER POI ANDARE A CAPO ALL'INTERNO DELLA CELLA
+				\textbf{Stato} & Approvato\\
+				\textbf{Lista distribuzione} & \makecell[tl]{\textit{Jawa Druids} \\ \textit{Prof. Tullio Vardanega} \\ \textit{Prof. Riccardo Cardin} \\ \textit{Sync Lab}}\\
+				\textbf{Uso} & Esterno            
+			\end{tabular}
+		\end{table}
+		\vspace{0.2cm}
+		\hfill \break
+		\fontsize{17}{10}\textbf{Sommario} \\
+		\vspace{0.3cm}
+		L'\emph{\normalsize Analisi dei Requisiti} individua tutti i requisiti da implementare nel prodotto da sviluppare.
+	\end{center}
+\end{titlepage}
+\makeatother
+
+\input{registro}
+
+%COMANDO PER LA CREAZIONE DELL'INDICE
+
+\tableofcontents{}
+\listoftables{}
+\input{capitoli/c1_introduzione}
+\input{capitoli/c2_descrizione_generale}
+\input{capitoli/c3_fasi_progetto}
+\input{capitoli/c4_requisiti}
+%PER RENDERE PIÙ CHIARA LA STESURA DEI DOCUMENTI È MEGLIO LASCIARE SEPARATI IN FILE DIVERSI OGNI CAPITOLO
+
+% \input{esempio} -- esempio di codice per inserire un nuovo capitolo
+
+\end{document}

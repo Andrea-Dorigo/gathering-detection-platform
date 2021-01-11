@@ -1,0 +1,103 @@
+\chapter{Fasi del progetto}\label{fasiProgetto}
+In questo capitolo verranno illustrate le fasi del progetto identificate dal capitolato$_{\scaleto{G}{3pt}}$ d'appalto \textit{GDP-Gathering Detection Platform}. Il capitolo viene diviso nelle tre fasi generali del progetto: acquisizione, elaborazione e visualizzazione dei dati. Secondo lo \textbf{IEEE Standard 830-1998} in questo capitolo verranno spiegati tutti i punti da sviluppare e nel capitolo successivo i requisiti da implementare per la creazione del prodotto richiesto da \textit{Sync Lab}. La descrizione delle fasi è stata inserita in quanto ritenuta necessaria per il chiarimento della necessità dei requisiti individuati. %inserire descrizione requisiti da ISOIEE
+
+\section{FC1: Acquisizione dati}\label{fasiProgettoAquisizioneDati}%FC fase capitolato
+In questa sezione vengono descritte le fasi di acquisizione dei dati.
+
+\subsection{FC1.1: Acquisizione con Java}\label{fasiProgettoAquisizioneDatiJava}
+
+\begin{itemize}
+	\item \textbf{Descrizione}: attraverso il linguaggio Java$_G$ si creerà un programma che preleva informazioni da sorgenti esterne e le invia al server.
+	\item \textbf{Linguaggio di programmazione}: Java$_{\scaleto{G}{3pt}}$.
+	\item \textbf{Input}: i dati forniti saranno prelevati da siti con live-feed$_G$ di webcam di varie città e simulatori di spostamenti di persone.
+	\item \textbf{Output}: i dati resteranno immutati.
+	\item \textbf{Risposta ad errori}: nel caso di mancanza di risposta dai siti con live-feed il programma si bloccherà ed invierà un segnale di errore al server.
+\end{itemize}
+
+%sono dubbioso su 1.2 e 1.3 dovrò modificare qualcosa
+
+\subsection{FC1.2: Database}\label{fasiProgettoAquisizioneDatiDatabase}
+
+\begin{itemize}
+	\item \textbf{Descrizione}: creazione del database e archiviazione dei dati in esso per visualizzazione future e mantenimento dei dati;
+	\item \textbf{Linguaggio}: mySQL.
+\end{itemize}
+
+\subsection{FC1.3: Apache Kafka$_G$}\label{fasiProgettoAquisizioneDatiApacheKafka}
+
+\begin{itemize}
+	\item \textbf{Descrizione}: impostazione di una piattaforma di data streaming$_G$ che consente di gestire e trasferire grandi volumi di dati in tempo reale, abbassando notevolmente i tempi di latenza;
+	\item \textbf{Input}: flussi di dati dall'acquisizione con Java$_{\scaleto{G}{3pt}}$;
+		\item \textbf{Output}: il flusso di dati rimane immutato.
+\end{itemize}
+
+%??? I dati verranno inseriti all'interno di un database, questo sarà sviluppato usando Apache Kafka un sistema distribuito che consiste di server e client i quali comunicano tra loro attraverso un protocollo di rete performante di tipo TCP. ???(non so dove inserire)
+
+\section{FC2: Elaborazione Dati}\label{fasiProgettoElaborazioneDati}
+Completata la fase precedente i dati verranno elaborati attraverso librerie di Scikit-learn e TensorFlow con il linguaggio di programmazione Python$_G$.
+Di seguito vengono individuate le fasi da seguire per l'elaborazione dei dati.
+
+\subsection{FC2.1: Esplorazione Dati}\label{fasiProgettoElaborazioneDatiEsplorazioneDati}
+
+\begin{itemize}
+	\item \textbf{Descrizione}: si discriminano elementi all'interno del dataset che portano a predizioni errate del modello.
+	\item \textbf{Input}: i dati vengono prelevati dal database.
+	\item \textbf{Output}: i dati controllati vengono aggiunti in appositi spazi per individuare la loro correttezza.
+	\item \textbf{Processo}: si controlla se c'è presenza di valori mancanti, dataset non bilanciati, outliers$_G$, livello di rumore dei dati e correlazione dei dati. 
+\end{itemize}
+
+\subsection{FC2.2: Preprocessing}\label{fasiProgettoElaborazioneDatiPreprocessing}
+
+\begin{itemize}
+	\item \textbf{Descrizione}: preparazione dei dati grezzi per renderli adatti ad un modello di Machine Learning$_G$. 
+	\item \textbf{Input}: i dati controllati.
+	\item \textbf{Output}: dati pronti per l'elaborazione nel modello Machine Learning$_{\scaleto{G}{3pt}}$.
+	\item \textbf{Processo}: \begin{enumerate}[leftmargin = 2cm]
+		\item Cleaning: eliminazione o correzione di dati con valori invalidi o corrotti.
+		\item Trasformazione dei dati: i dati vengono normalizzati, discretizzati, aggregati, si calcolano nuove variabili etc.
+		\item Feature extraction: si ricavano, attraverso i dati trasformati, i valori derivati, i quali sono più informativi e non ridondanti, facilitano le fasi successive di apprendimento e generalizzazione.
+		\item Filtraggio dei dati: eliminazione di dati ridondanti e irrilevanti al training del modello attraverso l'applicazione di appositi filtri.
+		\item Train / Test set splitting: si dividono i dati in due gruppi uno per il training e uno per il testing.
+	\end{enumerate}
+
+\end{itemize}
+
+\subsection{FC2.3: Caso predizione}\label{fasiProgettoElaborazioneDatiCasoPredizione}
+
+\begin{itemize}
+	\item \textbf{Descrizione}: in questa fase si effettua una scelta sull'algoritmo più adeguato da utilizzare per il training di dati.
+	\item \textbf{Input}: dati controllati nella fase di preprocessing per il training.
+	\item \textbf{Output}: modello di Machine Learning$_{\scaleto{G}{3pt}}$ allenato sui dati di input.
+	\item \textbf{Tipi di algoritmi}: si dividono per classificazione e regressione.%???non so se va bene???	
+\end{itemize}
+
+\subsubsection{FC2.4: Valutazioni e validazione}\label{fasiProgettoElaborazioneDatiValutazioniValidazione}
+
+\begin{itemize}
+	\item \textbf{Descrizione}: attraverso varie metriche si valuta quanto valido è il modello nella predizione dei casi.
+	\item \textbf{Input}: risposta del modello Machine Learning$_{\scaleto{G}{3pt}}$ dai dati di test, dati effettivi ricavati dalle sorgenti esterne.
+	\item \textbf{Output}: dati che superano la validazione.
+\end{itemize}
+
+\section{FC3: Visualizzazione dati}\label{fasiProgettoVisualizzazioneDati}
+In questa sezione verranno illustrate le fasi di sviluppo della parte visiva della web-app.
+
+\subsection{FC3.1: Front-end$_G$}\label{fasiProgettoVisualizzazioneDatiFrontEnd}
+
+\begin{itemize}
+	\item \textbf{Descrizione}: sviluppo di una pagina web semplice ed intuitiva.
+	\item \textbf{Strumenti}: si utilizzerà Angular$_G$ e Spring$_G$, due librerie per framework$_G$ di JavaScript$_G$.
+	\item \textbf{Vincolo}: la web app dovrà essere costruita sia desktop che mobile friendly. 
+	\item \textbf{Struttura}: la pagina sarà principalmente rivolta alla visione della mappa per la visualizzazione di aree a rischio assembramenti.
+\end{itemize}
+
+\subsection{FC3.2: Back-end$_G$}\label{fasiProgettoVisualizzazioneDatiBackEnd}
+
+\begin{itemize}
+	\item \textbf{Descrizione}: sviluppo della parte di comunicazione di informazioni tra server/database e front-end$_{\scaleto{G}{3pt}}$.
+	\item \textbf{Strumenti}: si utilizzerà Java$_{\scaleto{G}{3pt}}$.
+\end{itemize}
+
+
+%scriverla più generale è un compito non so come uscirà la pagina
+%aggiungere parte caratteristiche date dal capitolato c3 sotto ogni parte ad esempio parte acquisizione dati posso scrivere come requisito il software contapersone etc
