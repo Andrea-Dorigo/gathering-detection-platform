@@ -15,6 +15,4 @@
 !/documentazione/immagini/*
 !/documentazione/immagini/**/*/
 !/documentazione/immagini/**/*/*
-
-# file da mac os
 .DS_Store
