@@ -1,0 +1,55 @@
+\input{packages}
+\input{config}
+
+\begin{document}
+	
+	\makeatletter
+	\begin{titlepage}
+		\begin{center}
+			\vspace*{-5cm}
+			\author{Jawa Druids} 
+			\title{Piano di Qualifica}
+			\date{} %LASCIARE QUESTO CAMPO VUOTO, SE LO TOLGO STAMPA LA DATA CORRENTE
+			\includegraphics[width=0.5\linewidth]{../immagini/DRUIDSLOGO.jpg}\\[4ex]
+			{\huge \bfseries  \@title }\\[2ex] 
+			{\LARGE  \@author}\\[50ex]
+			\vspace*{-9cm}
+			\begin{table}[H]
+				\renewcommand{\arraystretch}{1.4}
+				\centering
+				\begin{tabular}{r | l}
+					\textbf{Versione} & 1.0.0 \\%RIGA PER INSERIRE LA VERSIONE ULTIMA DEL DOCUMENTO
+					\textbf{Data approvazione} & 09-01-2021\\
+					\textbf{Responsabile} & Emma Roveroni\\
+					\textbf{Redattori} & \makecell[tl]{Alfredo Graziano \\ Emma Roveroni \\ Mattia Cocco} \\
+					\textbf{Verificatori} & \makecell[tl]{Igli Mezini} \\
+					%MAKECELL SERVE PER POI ANDARE A CAPO ALL'INTERNO DELLA CELLA
+					\textbf{Stato} & Approvato\\
+					\textbf{Lista distribuzione} & \makecell[tl]{Jawa Druids \\ Prof. Tullio Vardanega \\ Prof. Riccardo Cardin \\ Sync Lab}\\
+					\textbf{Uso} & Esterno  
+				\end{tabular}
+			\end{table}
+			\vspace{0.1cm}
+			\hfill \break
+			\fontsize{17}{10}\textbf{Sommario} \\
+			\vspace{0.1cm}
+			Il documento contiene le strategie di verifica e validazione seguite dal gruppo Jawa Druids durante lo svolgimento del progetto Gathering Detection Platform.
+		\end{center}
+	\end{titlepage}
+	\makeatother
+	
+	\input{Registro}
+	\tableofcontents{}
+	\listoffigures
+	\listoftables
+	\input{capitoli/c1_Introduzione}
+	\input{capitoli/c2_Qualità_di_processo}
+	\input{capitoli/c3_Qualità_di_prodotto}
+	\input{capitoli/c4_Specifica_dei_test}
+	\input{capitoli/c5_Resoconto_attività_di_verifica}
+	\input{capitoli/c6_Valutazioni_per_il_miglioramento}
+	
+	
+	
+	
+\end{document}
