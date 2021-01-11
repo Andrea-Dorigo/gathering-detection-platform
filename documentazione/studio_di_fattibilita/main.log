@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.26)  7 JAN 2021 18:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.26)  11 JAN 2021 11:51
 entering extended mode
 **./main.tex
 (main.tex
@@ -946,7 +946,37 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 [1
 
 {C:/Users/Emma/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <../immagini/DRUI
-DSLOGO.jpg>] ("Registro delle modifiche.tex")
+DSLOGO.jpg>] ("Registro delle modifiche.tex"
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
+[]|\OT1/cmr/m/it/12 Approvazione il
+ []
+
+
+Underfull \hbox (badness 1005) in paragraph at lines 40--40
+\OT1/cmr/m/it/12 do-cu-men-to per la
+ []
+
+
+Underfull \hbox (badness 1231) in paragraph at lines 40--40
+[]|\OT1/cmr/m/it/12 Verificato Ca-pi-to-
+ []
+
+
+Underfull \hbox (badness 4832) in paragraph at lines 40--40
+[]|\OT1/cmr/m/it/12 Verificati Ca-pi-to-
+ []
+
+
+Underfull \hbox (badness 4832) in paragraph at lines 40--40
+[]|\OT1/cmr/m/it/12 Verificati Ca-pi-to-
+ []
+
+
+Underfull \hbox (badness 1817) in paragraph at lines 40--40
+[]|\OT1/cmr/m/it/12 Aggiunta In-tro-du-
+ []
+
+)
 <../immagini/minilogo.jpg, id=264, 1927.2pt x 752.8125pt>
 File: ../immagini/minilogo.jpg Graphic file (type jpg)
 <use ../immagini/minilogo.jpg>
@@ -1112,7 +1142,7 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Here is how much of TeX's memory you used:
  21744 strings out of 479832
  406908 string characters out of 2872936
- 735135 words of memory out of 3000000
+ 737135 words of memory out of 3000000
  38171 multiletter control sequences out of 15000+200000
  541407 words of font info for 50 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1125,7 +1155,7 @@ ype1/public/amsfonts/cm/cmr12.pfb><C:/Users/Emma/Desktop/ProgettoSWE/MiKTeX/fon
 ts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Emma/Desktop/ProgettoSWE/MiKTeX
 /fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Emma/Desktop/ProgettoSWE/M
 iKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on main.pdf (22 pages, 537012 bytes).
+Output written on main.pdf (22 pages, 537589 bytes).
 PDF statistics:
  492 PDF objects out of 1000 (max. 8388607)
  86 named destinations out of 1000 (max. 500000)
