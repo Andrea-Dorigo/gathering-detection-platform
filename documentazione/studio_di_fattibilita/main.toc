@@ -43,24 +43,22 @@
 \contentsline {section}{\numberline {6.2}Descrizione del capitolato}{16}{section.6.2}%
 \contentsline {section}{\numberline {6.3}Finalità del progetto}{16}{section.6.3}%
 \contentsline {section}{\numberline {6.4}Tecnologie interessate}{16}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Aspetti positivi}{16}{section.6.5}%
-\contentsline {section}{\numberline {6.6}Criticità e fattori di rischio}{16}{section.6.6}%
-\contentsline {section}{\numberline {6.7}Conclusioni}{16}{section.6.7}%
-\contentsline {chapter}{\numberline {7}C6 - RGP: Realtime Gaming Platform}{17}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Informazioni generali}{17}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Descrizione del capitolato}{17}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Finalità del progetto}{17}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Tecnologie interessate}{17}{section.7.4}%
-\contentsline {section}{\numberline {7.5}Aspetti positivi}{17}{section.7.5}%
-\contentsline {section}{\numberline {7.6}Criticità e fattori di rischio}{17}{section.7.6}%
-\contentsline {section}{\numberline {7.7}Conclusioni}{17}{section.7.7}%
-\contentsline {chapter}{\numberline {8}C7 - SSD: soluzioni di sincronizzazione desktop}{18}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Informazioni generali}{18}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Descrizione del capitolato}{18}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Finalità del progetto}{18}{section.8.3}%
-\contentsline {section}{\numberline {8.4}Tecnologie interessate}{18}{section.8.4}%
-\contentsline {section}{\numberline {8.5}Aspetti positivi}{18}{section.8.5}%
-\contentsline {section}{\numberline {8.6}Criticità e fattori di rischio}{18}{section.8.6}%
-\contentsline {section}{\numberline {8.7}Conclusioni}{18}{section.8.7}%
-\contentsline {subsection}{\numberline {8.7.1}jdjd}{18}{subsection.8.7.1}%
-\contentsline {subsubsection}{poiuhy}{18}{subsubsection*.2}%
+\contentsline {section}{\numberline {6.5}Aspetti positivi}{17}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Criticità e fattori di rischio}{17}{section.6.6}%
+\contentsline {section}{\numberline {6.7}Conclusioni}{17}{section.6.7}%
+\contentsline {chapter}{\numberline {7}C6 - RGP: Realtime Gaming Platform}{18}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Informazioni generali}{18}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Descrizione del capitolato}{18}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Finalità del progetto}{18}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Tecnologie interessate}{18}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Aspetti positivi}{19}{section.7.5}%
+\contentsline {section}{\numberline {7.6}Criticità e fattori di rischio}{19}{section.7.6}%
+\contentsline {section}{\numberline {7.7}Conclusioni}{19}{section.7.7}%
+\contentsline {chapter}{\numberline {8}C7 - SSD: soluzioni di sincronizzazione desktop}{20}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Informazioni generali}{20}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Descrizione del capitolato}{20}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Finalità del progetto}{20}{section.8.3}%
+\contentsline {section}{\numberline {8.4}Tecnologie interessate}{20}{section.8.4}%
+\contentsline {section}{\numberline {8.5}Aspetti positivi}{21}{section.8.5}%
+\contentsline {section}{\numberline {8.6}Criticità e fattori di rischio}{21}{section.8.6}%
+\contentsline {section}{\numberline {8.7}Conclusioni}{21}{section.8.7}%
