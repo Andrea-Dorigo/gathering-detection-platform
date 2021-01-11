@@ -98,21 +98,24 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 		\hline
 		\centering RSVO2  & Il front-end$_{\scaleto{G}{3pt}}$ del prodotto viene sviluppato utilizzando tecnologie web &\centering Obbligatorio  & \makecell[tc]{Capitolato\\FC3.1} \\
 		\hline
-		\centering RSVF2.1  & Utilizzo di leaflet.js per la creazione di heat-map &\centering  Facoltativo & \makecell[tc]{Capitolato\\FC3.1} \\
+		\centering RSVF2.1  & Utilizzo di leaflet.js per la creazione di heat map$_{\scaleto{G}{3pt}}$ &\centering  Facoltativo & \makecell[tc]{Capitolato\\FC3.1} \\
 		\hline
 		\centering RSVO2.2  & Utilizzo di angular.js per la creazione della wep-app  &\centering  Obbligatorio  & \makecell[tc]{Capitolato\\FC3.1} \\
 		\hline
 		\centering RSVO3  & Il sistema deve far uso dell'ecosistema Apache Kafka$_{\scaleto{G}{3pt}}$ &\centering  Obbligatorio  & \makecell[tc]{Capitolato\\FC1.3} \\
+		\hline
+		\centering RSVO4  & Il back end$_{\scaleto{G}{3pt}}$ del prodotto viene sviluppato utilizzando il linguaggio Java$_{\scaleto{G}{3pt}}$ &\centering  Obbligatorio  & \makecell[tc]{Capitolato\\FC3.2} \\
 		\hline
 		\rowcolor{white}
 		
 		\caption[Requisiti di vincolo]{Requisiti di vincolo}\label{4.3}\\
 	\end{longtable}
 \end{center}
-\newpage
+
 \section{Tracciamento dei requisiti}\label{RequisitiTracciamentoDeiRequisiti}
 
 \subsection{Requisito - fonte}\label{RequisitiTracciamentoDeiRequisitiFonte}
+
 \def\tabularxcolumn#1{m{#1}}
 {\rowcolors{2}{RawSienna!90!RawSienna!20}{RawSienna!70!RawSienna!40}
 	\begin{center}
@@ -170,12 +173,14 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 		\hline
 		\makecell[tc]{RSVO3} & \makecell[tc]{Capitolato\\FC1.3}\\
 		\hline
+		\makecell[tc]{RSVO4} & \makecell[tc]{Capitolato\\FC3.2}\\
+		\hline
 		\rowcolor{white}
 		
 		\caption[Tabella tracciamento requisito-fonte]{Tabella tracciamento requisito-fonte}\label{4.4}\\
 	\end{longtable}
 \end{center}
-
+\clearpage
 \subsection{Fonte - requisito}\label{RequisitiTracciamentoDeiRequisitiFonteRequisito}
 \def\tabularxcolumn#1{m{#1}}
 {\rowcolors{2}{RawSienna!90!RawSienna!20}{RawSienna!70!RawSienna!40}
@@ -197,6 +202,8 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 		\makecell[c]{FC2} & \makecell[c]{RSFD6} \\ 
 		\hline
 		\makecell[c]{FC3.1} & \makecell[c]{RSFO7 \\ RSVO2\\RSVF2.1\\RSVO2.2} \\
+		\hline
+		\makecell[c]{FC3.2} & \makecell[c]{RSVO4} \\
 		\hline
 		\makecell[c]{Interno} &\makecell[c]{RSFO3\\RSFO8\\RSQO1\\RSQF2\\RSQF3\\RSQF4\\RSVO1\\RSVO1.1\\RSVO1.2} \\
 		\hline
