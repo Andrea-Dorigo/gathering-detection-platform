@@ -4,10 +4,10 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 
 \def\tabularxcolumn#1{m{#1}}
 {\rowcolors{2}{RawSienna!90!RawSienna!20}{RawSienna!70!RawSienna!40}
-	
+
 	\begin{center}
 		\renewcommand{\arraystretch}{1.4}
-		\begin{longtable}{|p{3cm}|p{4cm}|p{4cm}|p{4cm}|} 
+		\begin{longtable}{|p{3cm}|p{4cm}|p{4cm}|p{4cm}|}
 			\hline
 			\rowcolor{airforceblue}
 			\makecell[c]{\textbf{Codice RS}} & \makecell[c]{\textbf{Descrizione}} & \makecell[c]{\textbf{Tipo di requisito}} & \makecell[c]{\textbf{Fonte}} \\
@@ -20,7 +20,7 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 			\hline
 			\centering RSFO3  & Il sistema deve visualizzare un messaggio d'errore se il flusso di dati esterno viene a mancare  &\centering  Obbligatorio & \makecell[tc]{Interno\\FC1.1}  \\
 			\hline
-			\centering RSFO4.1 & Archiviazione di tutti i dati acquisiti nel databse & \centering Obbligatorio & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$ \\ FC1.2}  \\
+			\centering RSFO4.1 & Archiviazione di tutti i dati acquisiti nel database & \centering Obbligatorio & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$ \\ FC1.2}  \\
 			\hline
 			\centering RSFO4.2 & Archiviazione di tutti i dati elaborati nel database & \centering Obbligatorio & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$ \\ FC1.2}  \\
 			%fase 2
@@ -34,20 +34,20 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 			\hline
 			\centering RSFO7 & Visualizzazione dei dati elaborati attraverso heat map$_{\scaleto{G}{3pt}}$ &\centering  Obbligatorio & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$ \\ FC3.1}  \\
 			\hline
-			\centering RSFO8 & Apache Kafka$_{\scaleto{G}{3pt}}$ deve poter comunicare con il database, l'applicazione web e il modello di Machine Learning$_{\scaleto{G}{3pt}}$  &\centering  Obbligatorio &  \makecell[tc]{Interno \\ FC1.3} 	\\	
+			\centering RSFO8 & Apache Kafka$_{\scaleto{G}{3pt}}$ deve poter comunicare con il database, l'applicazione web e il modello di Machine Learning$_{\scaleto{G}{3pt}}$  &\centering  Obbligatorio &  \makecell[tc]{Interno \\ FC1.3} 	\\
 			\hline
-			
+
 			\rowcolor{white}
-			
+
 			\caption[Requisiti funzionali]{Requisiti funzionali}\label{4.1}\\
 	\end{longtable}%\captionof{table}{Requisiti funzionali}
-	
+
 \end{center}
 
 \section{Requisiti prestazionali}\label{RequisitiPrestazionali}
 \def\tabularxcolumn#1{m{#1}}
 {\rowcolors{2}{RawSienna!90!RawSienna!20}{RawSienna!70!RawSienna!40}
-	
+
 	\begin{center}
 		\renewcommand{\arraystretch}{1.4}
 		\begin{longtable}{|p{4cm}|p{4cm}|p{4cm}|p{3cm}|}
@@ -60,14 +60,14 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 		\centering RSPO2 & Modalità a bassa latenza dell'aquisizione di informazioni & \centering Obbligatorio & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$} \\
 		\hline
 		\rowcolor{white}
-		
+
 		\caption[Requisiti prestazionali]{Requisiti prestazionali}\label{4.2}\\
 			\end{longtable}
 	\end{center}
 \section{Requisiti di qualità}\label{RequisitiDiQualita}
 \def\tabularxcolumn#1{m{#1}}
 {\rowcolors{2}{RawSienna!90!RawSienna!20}{RawSienna!70!RawSienna!40}
-	
+
 	\begin{center}
 		\renewcommand{\arraystretch}{1.4}
 		\begin{longtable}{|p{4cm}|p{4cm}|p{4cm}|p{3cm}|}
@@ -89,7 +89,7 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 		\centering RSQO5  & Test che dimostrino il corretto funzionamento dei servizi e delle funzionalità previste  & \centering Obbligatorio & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$} \\
 		\hline
 		\rowcolor{white}
-		
+
 		\caption[Requisiti di qualità]{Requisiti di qualità}\label{4.3}\\
 		\end{longtable}
 \end{center}
@@ -98,7 +98,7 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 \section{Requisiti di vincolo}\label{RequisitiVincolo}
 \def\tabularxcolumn#1{m{#1}}
 {\rowcolors{2}{RawSienna!90!RawSienna!20}{RawSienna!70!RawSienna!40}
-	
+
 \begin{center}
 	\renewcommand{\arraystretch}{1.4}
 	\begin{longtable}{|p{4cm}|p{4cm}|p{4cm}|p{3cm}|}
@@ -123,7 +123,7 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 		\centering RSVO4  & Il back end$_{\scaleto{G}{3pt}}$ del prodotto viene sviluppato utilizzando il linguaggio Java$_{\scaleto{G}{3pt}}$ &\centering  Obbligatorio  & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$\\FC3.2} \\
 		\hline
 		\rowcolor{white}
-		
+
 		\caption[Requisiti di vincolo]{Requisiti di vincolo}\label{4.4}\\
 	\end{longtable}
 \end{center}
@@ -192,7 +192,7 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 		\makecell[tc]{RSVO4} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$\\FC3.2}\\
 		\hline
 		\rowcolor{white}
-		
+
 		\caption[Tabella tracciamento requisito-fonte]{Tabella tracciamento requisito-fonte}\label{4.5}\\
 	\end{longtable}
 \end{center}
@@ -213,9 +213,9 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 		\hline
 		\makecell[c]{FC1.2} & \makecell[c]{RSFO4.1 \\ RSFO4.2 \\ RSQF3} \\
 		\hline
-		\makecell[c]{FC1.3} & \makecell[c]{RSFO8 \\ RSVO3} \\ 
+		\makecell[c]{FC1.3} & \makecell[c]{RSFO8 \\ RSVO3} \\
 		\hline
-		\makecell[c]{FC2} & \makecell[c]{RSFD6} \\ 
+		\makecell[c]{FC2} & \makecell[c]{RSFD6} \\
 		\hline
 		\makecell[c]{FC3.1} & \makecell[c]{RSFO7 \\ RSVO2\\RSVF2.1\\RSVO2.2} \\
 		\hline
@@ -226,7 +226,7 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 		\makecell[c]{Verbale esterno 17-12-2020} & \makecell[c]{RSFO1} \\
 		\hline
 		\rowcolor{white}
-		
+
 		\caption[Tabella tracciamento fonte-requisito]{Tabella tracciamento fonte-requisito}\label{4.6}\\
 	\end{longtable}
 \end{center}
