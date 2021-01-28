@@ -36,6 +36,22 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 			\hline
 			\centering RSFO8 & Apache Kafka$_{\scaleto{G}{3pt}}$ deve poter comunicare con il database, l'applicazione web e il modello di Machine Learning$_{\scaleto{G}{3pt}}$  &\centering  Obbligatorio &  \makecell[tc]{Interno \\ FC1.3} 	\\
 			\hline
+			\centering RSFO9 & L'utente deve poter visualizzare i dati in tempo reale tramite heat map  &\centering  Obbligatorio &  \makecell[tc]{Interno \\ FC1.3} 	\\
+			\hline
+			\centering RSFO10 & L'utente deve poter visualizzare i dati storicizzati tramite heat map  &\centering  Obbligatorio &  \makecell[tc]{Interno \\ FC1.3} 	\\
+			\hline
+			\centering RSFO11 & L'utente deve poter visualizzare una previsione tramite heat map  &\centering  Obbligatorio &  \makecell[tc]{Interno \\ FC1.3} 	\\
+			\hline
+			\centering RSFO12 & L'utente deve poter distinguere fra i dati simulati e quelli reali  &\centering  Facoltativo &  \makecell[tc]{Interno \\ FC1.3} 	\\
+			\hline
+			\centering RSFO13 & L'utente deve poter visualizzare un indice di affidabilità della previsione  &\centering  Facoltativo &  \makecell[tc]{Interno \\ FC1.3} 	\\
+			\hline
+			\centering RSFO14 & L'utente deve poter visualizzare un indice di affidabilità dei dati in RT  &\centering  Facoltativo &  \makecell[tc]{Interno \\ FC1.3} 	\\
+			\hline
+			\centering RSFO15 & L'utente deve poter applicare dei filtri ai dati (reali, simulati)  &\centering  Facoltativo &  \makecell[tc]{Interno \\ FC1.3} 	\\
+			\hline
+			\centering RSFO16 & L'utente deve poter visualizzare i dati passati, RT, futuri RAW  &\centering  Facoltativo &  \makecell[tc]{Interno \\ FC1.3} 	\\
+			\hline
 
 			\rowcolor{white}
 
@@ -59,8 +75,15 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 		\hline
 		\centering RSPO2 & Modalità a bassa latenza dell'aquisizione di informazioni & \centering Obbligatorio & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$} \\
 		\hline
+		\centering RSPO3 & Modalità a bassa latenza per l'elaborazione dei dati acquisiti & \centering Obbligatorio & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$} \\
+		\hline
+		\centering RSPO4 & Modalità a bassa latenza per la visualizzazione delle informazioni & \centering Obbligatorio & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$} \\
+		\hline
+		\centering RSPO5 & Misurazione indice di affidabilità & \centering Facoltativo & 
+		\makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$} \\
+		\hline
 		\rowcolor{white}
-
+		
 		\caption[Requisiti prestazionali]{Requisiti prestazionali}\label{4.2}\\
 			\end{longtable}
 	\end{center}
@@ -87,6 +110,10 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 		\centering RSQF4  & Deve essere realizzato un documento contenente tutti gli errori risolti durante la realizzazione del software &\centering  Facoltativo & \makecell[tc]{Interno} \\
 		\hline
 		\centering RSQO5  & Test che dimostrino il corretto funzionamento dei servizi e delle funzionalità previste  & \centering Obbligatorio & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$} \\
+		\hline
+		\centering RSQO6  & Dev'essere disponibile un manuale sviluppatore  & \centering Obbligatorio & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$} \\
+		\hline
+		\centering RSQO7  & Dev'essere disponibile un manuale utente  & \centering Obbligatorio & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$} \\
 		\hline
 		\rowcolor{white}
 
@@ -121,6 +148,12 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 		\centering RSVO3  & Il sistema deve far uso dell'ecosistema Apache Kafka$_{\scaleto{G}{3pt}}$ &\centering  Obbligatorio  & \makecell[tc]{Capitolato\\FC1.3} \\
 		\hline
 		\centering RSVO4  & Il back end$_{\scaleto{G}{3pt}}$ del prodotto viene sviluppato utilizzando il linguaggio Java$_{\scaleto{G}{3pt}}$ &\centering  Obbligatorio  & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$\\FC3.2} \\
+		\hline
+		\centering RSVO5  & Supporto browser Chrome, Firefox con versioni massimo di 3 anni &\centering  Obbligatorio  & \makecell[tc]{Interno\\FC3.2} \\
+		\hline
+		\centering RSVO6  & Supporto browser Safari, Microsoft Edge &\centering  Facoltativo  & \makecell[tc]{Interno\\FC3.2} \\
+		\hline
+		\centering RSVO7  & La web application dev'essere disponibile in un ambiente locale, di sviluppo, e di produzione & \centering  Obbligatorio  & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$\\FC3.2} \\
 		\hline
 		\rowcolor{white}
 
@@ -169,7 +202,7 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 		\hline
 		\makecell[tc]{RSQF2} & \makecell[tc]{Interno}\\
 		\hline
-		\makecell[tc]{RSQF3} & \makecell[tc]{Interno \\FC1.2}\\
+		\makecell[tc]{RSQF3} & \makecell[tc]{Interno \\ FC1.2}\\
 		\hline
 		\makecell[tc]{RSQF4} & \makecell[tc]{Interno}\\
 		\hline
