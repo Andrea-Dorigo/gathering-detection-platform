@@ -19,10 +19,10 @@ In questa sezione vengono elencati i casi d'uso individuati per il progetto GDP 
 %qui andrebbe il primo diagramma disegnato%
 \begin{itemize}
 	\item \textbf{Attori primari}: utente generico;
-	\item \textbf{Descrizione}: l'utente può decidere che città visualizzare e la tipologia di dati legati ad essa;
-	\item \textbf{Scenario principale}: è presente un elemento per far selezionare all'utente la città e la tipologia di dati da visualizzare;
-	\item \textbf{Precondizione}: il sistema è attivo e funzionante;
-	\item \textbf{Postcondizione}: il sistema fa cose e l'utente vede ciò che ha richiesto.
+	\item \textbf{Descrizione}: l'utente visualizza una mappa presente nell'applicazione web. Tale mappa è una heat map e presenta all'utente i dati analizzati dal prodotto;
+	\item \textbf{Scenario principale}: l'utente accede all'applicazione web e visualizza la mappa;
+	\item \textbf{Precondizione}: il sistema è attivo e funzionante e l'utente e l'utente accede all'applicazione web;
+	\item \textbf{Postcondizione}: il sistema invia i dati alla pagina al caricamento presentando una mappa con tutti i dati per l'utente.
 \end{itemize}
 
 \subsection{UC1 - Scelta della città}
@@ -37,11 +37,14 @@ In questa sezione vengono elencati i casi d'uso individuati per il progetto GDP 
 \subsection{UC2 - Scelta della tipologia dei dati}
 \begin{itemize}
 	\item \textbf{Attori primari}: utente generico;
-\item \textbf{Descrizione}: l'utente sceglie la tipologia di dati disponibili da rappresentare nella mappa;
-\item \textbf{Scenario principale}: l'utente accede all'applicazione web e seleziona il tipo di dato da visualizzare. Il sistema fornisce i dati alla mappa e viene così aggiornata;
-\item \textbf{Estensione}: 
-\begin{itemize}
-	\item \textbf{UC3}: se l'applicazione web non riceve nessuna informazione dal sistema viene visualizzato un messaggio di errore.
+	\item \textbf{Descrizione}: l'utente sceglie la tipologia di dati disponibili da rappresentare nella mappa;
+	\item \textbf{Scenario principale}: l'utente accede all'applicazione web e seleziona il tipo di dato da visualizzare nella mappa. Il sistema fornisce i dati alla mappa e viene così aggiornata;
+	\item \textbf{Estensione}: 
+	\begin{itemize}
+		\item \textbf{UC3}: se l'applicazione web non riceve nessuna informazione dal sistema viene visualizzato un messaggio di errore.
+	\end{itemize}
+	\item \textbf{Precondizione}: il sistema è attivo e funzionante e l'utente sceglie la tipologia di dati da utilizzare;
+	\item \textbf{Postcondizione}: il sistema invia i dati all'applicazione web e aggiorna la mappa in base alle nuove informazioni.
 \end{itemize}
 \item \textbf{Precondizione}: il sistema è attivo e funzionante e l'utente sceglie la tipologia di dati da utilizzare;
 \item \textbf{Postcondizione}: il sistema invia i dati all'applicazione web e aggiorna la mappa in base alle nuove informazioni.
