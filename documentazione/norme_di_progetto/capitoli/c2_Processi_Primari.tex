@@ -85,6 +85,7 @@ L'\textit{Analisi dei requisiti$_{\scaleto{G}{3pt}}$} è strutturato nel seguent
 	\item \textbf{Introduzione}: in questa sezione si introduce lo scopo del documento e riferimenti a documenti esterni;
 	\item \textbf{Descrizione generale}: il prodotto viene descritto, si individuano le fasi generali del progetto e l'utenza a cui è destinato il prodotto;
 	\item \textbf{Fasi del prodotto}: si elencano in gruppi le fasi del progetto, le quali vengono suddivise in parti per individuare più dettagliatamente tutti i processi di sviluppo del software;
+	\item \textbf{Casi d'uso$_{\scaleto{G}$}: si elencano tutti i casi d'uso$_{\scaleto{G}{3pt}}$ individuati, questo è utile al tracciamento dei requisiti e permette di individuare tutte le funzionalità del progetto;
 	\item \textbf{Requisiti$_{\scaleto{G}{3pt}}$}: utilizzando le fasi descritte e tutti i documenti sopra indicati si dettagliano tutti i requisiti$_{\scaleto{G}{3pt}}$ obbligatori, facoltativi e desiderabili da implementare.
 \end{itemize}
 \paragraph{Classificazione dei requisiti}\label{ProcessiPrimariProspettiveAnalisiDeiRequisitiClassificazioneDeiRequisiti}\mbox{}\\% RS1.2 = rs(requisiti specifici) 1(fase generale a cui si riferiscono) 2(numero del requisito incrementale)
@@ -120,7 +121,7 @@ Ogni requisito$_{\scaleto{G}{3pt}}$ è strutturato nella tabella nel seguente mo
 		\item Capitolato$_{\scaleto{G}{3pt}}$: individua il documento del capitolato$_{\scaleto{G}{3pt}}$;
 		\item Interno: il requisito$_{\scaleto{G}{3pt}}$ è stato individuato dagli analisti;
 		\item Verbale: si tratta del documento in riferimento alla discussione con il proponente$_{\scaleto{G}{3pt}}$;
-		\item Fasi del capitolato$_{\scaleto{G}{3pt}}$: il requisito$_{\scaleto{G}{3pt}}$ è stato individuato dalla fase del capitolato$_{\scaleto{G}{3pt}}$ individuata con il proprio codice.
+		\item Casi d'uso$_{\scaleto{G}{3pt}}$: il requisito$_{\scaleto{G}{3pt}}$ è stato individuato dal caso d'uso$_{\scaleto{G}{3pt}}$ individuato con il proprio codice.
 	\end{itemize}
 \end{itemize}
 \paragraph{Classificazione delle fasi}\label{ProcessiPrimariProspettiveAnalisiDeiRequisitiClassificazioneDelleFasi}\mbox{}\\% FC1.2 = fc(fasi capitolato) 1 (macro-fase) 2(fase precisa)
@@ -155,6 +156,40 @@ Ogni suddivisione delle fasi è strutturato nel seguente modo:
 	\item \textbf{Vincolo}: vincoli individuati dal gruppo o dal proponente$_{\scaleto{G}{3pt}}$.
 \end{itemize}
 \end{itemize}
+
+%----------Casi d'uso nuovi---------------------%
+\paragraph{Classificazione dei casi d'uso}\label{ProcessiPrimariProspettiveAnalisiDeiRequisitiClassificazioneDeiCasiDuso}
+I casi d'uso$_{\scaleto{G}{3pt}}$ individuano le iterazioni tra il sistema ed un attore. I casi d'uso$_{\scaleto{G}{3pt}}$ vengono identificati nel seguente modo:
+\begin{center}
+	\textbf{UC[codice\_Padre].[codice\_Figlio]}
+\end{center}
+La descrizione della classificazione è la seguente:
+\begin{itemize}
+	\item \textbf{FC}: è l'acronimo per User Case$_{\scaleto{G}{3pt}}$, la parola inglese che si traduce in Casi D'uso$_{\scaleto{G}{3pt}}$;
+	\item \textbf{Codice\_Padre.Codice\_Figlio}: individua un codice univoco per ogni caso d'uso$_{\scaleto{G}{3pt}}$ nella forma gerarchica padre/figlio;
+\end{itemize}
+Ogni caso d'uso$_{\scaleto{G}{3pt}}$ si struttura nel seguente modo:
+\begin{itemize}
+	\item \textbf{Principali}:
+	\begin{itemize}
+		\item \textbf{Attori}: definisce una persona o un elemento esterno che interagisce con il sistema per avviare il caso d'uso$_{\scaleto{G}{3pt}}$;
+		\item \textbf{Descrizione}: breve descrizione del caso d'uso$_{\scaleto{G}{3pt}}$;
+		\item \textbf{Scenario principale}: descrive le azioni necessarie al completamento del caso d'uso$_{\scaleto{G}{3pt}}$;
+		\item \textbf{Precondizione}: individua le condizioni necessarie per l'avvio del caso d'uso$_{\scaleto{G}{3pt}}$;
+		\item \textbf{Postcondizione}: individua le condizioni del sistema al completamento del caso d'uso$_{\scaleto{G}{3pt}}$.
+		%or identify the items that the use case must handle before terminating%
+	\end{itemize}
+	\item \textbf{Aggiuntivi}:
+	\begin{itemize}
+		\item \textbf{Input}: individua file da inserire nel sistema da parte dell'attore;
+		\item \textbf{Output}: Individua file in uscita dal sistema per l'attore;
+		\item \textbf{Estensioni}: individua le condizioni nel quale viene utilizzato un caso d'uso$_{\scaleto{G}{3pt}}$ esterno, tale che aumenti le funzionalità del caso d'uso$_{\scaleto{G}{3pt}}$ sotto osservazione;
+		%An extension point is a feature of a use case which identifies (references) a point in the behavior of the use case where that behavior can be extended by some other (extending) use case, as specified by extend relationship%
+		\item \textbf{Generalizzazioni}: individua la generalizzazione del caso d'uso$_{\scaleto{G}{3pt}}$ in sotto casi figli.
+	\end{itemize}
+\end{itemize}
+
+%---------Fine casi d'uso----------------------%
 \paragraph{Qualità dei requisiti}\label{ProcessiPrimariProspettiveAnalisiDeiRequisitiQualitàDeiRequisiti}\mbox{}\\
 Ogni requisito$_{\scaleto{G}{3pt}}$ deve rispettare le seguenti qualità:
 \begin{itemize}
