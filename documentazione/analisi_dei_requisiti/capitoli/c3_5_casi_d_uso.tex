@@ -25,16 +25,20 @@ In questa sezione vengono elencati i casi d'uso individuati per il progetto GDP 
 	\item \textbf{Postcondizione}: il sistema invia i dati alla pagina al caricamento presentando una mappa con tutti i dati per l'utente.
 \end{itemize}
 
-\subsection{UC1 - Scelta della città}
+\subsection{UC1 - Visualizzazione mappa}
 \begin{itemize}
 \item \textbf{Attori primari}: utente generico;
-\item \textbf{Descrizione}: l'utente può decidere che città visualizzare;
-\item \textbf{Scenario principale}: è presente un elemento per far selezionare all'utente la città;
-\item \textbf{Precondizione}: il sistema è attivo e funzionante;
-\item \textbf{Postcondizione}: il sistema fa cose e l'utente vede ciò che ha richiesto.
+\item \textbf{Descrizione}: l’utente accede all’applicazione web e visualizza la heat map riguardante una città di default;
+\item \textbf{Scenario principale}: 
+	\begin{itemize}
+		\item l’utente accede all’applicazione (utente raggiunge l’applicazione/si collega all’applicazione);
+		\item l’applicazione genera in base ai dati prelevati dal DB l’heat map della città di default in real time.
+	\end{itemize}
+\item \textbf{Precondizione}: il sistema è attivo e funzionante e i dati per la creazione della heat map sono presenti nel DB;
+\item \textbf{Postcondizione}: l’utente visualizza la heat map relativa alla città di default.
 \end{itemize}
 
-\subsection{UC2 - Scelta della tipologia dei dati}
+\subsection{UC2 - Richiesta dati DB}
 \begin{itemize}
 	\item \textbf{Attori primari}: utente generico;
 	\item \textbf{Descrizione}: l'utente sceglie la tipologia di dati disponibili da rappresentare nella mappa;
@@ -104,7 +108,7 @@ In questa sezione vengono elencati i casi d'uso individuati per il progetto GDP 
 		\item l’utente seleziona una città/zona fra quelle proposte;
 	\end{itemize}
 \item \textbf{Precondizione}: l’utente visualizza correttamente (la pagina ed) il tasto per iniziare la selezione della città;
-\item \textbf{Postcondizione}:  l’utente visualizza correttamente la mappa della citta’/zona selezionata.
+\item \textbf{Postcondizione}:  l’utente visualizza correttamente la mappa della città/zona selezionata.
 \end{itemize}
 
 \subsection{UC5 - Scelta periodo dati}
@@ -117,13 +121,53 @@ In questa sezione vengono elencati i casi d'uso individuati per il progetto GDP 
 		\item l’utente visualizza l’applicazione web correttamente;
 		\item Attraverso l’interfaccia l’utente può decidere:
 			\begin{enumerate}
-				\item Di modificare l’orario dei dati da visualizzare;
-				\item Modificare il giorno tra uno di quelli disponibili;
-				\item Ritornare ai dati in tempo reale.
+				\item di modificare l’orario dei dati da visualizzare;
+				\item modificare il giorno tra uno di quelli disponibili;
+				\item ritornare ai dati in tempo reale.
 			\end{enumerate}
 	\end{itemize};
 \item \textbf{Precondizione}: la pagina e l’interfaccia sono visualizzate correttamente, i dati sono presenti nel DB;
 \item \textbf{Postcondizione}: l’utente visualizza i dati riguardanti l’intervallo di tempo selezionato.
+\end{itemize}
+
+\subsection{UC5.1 - Selezione dell'orario}
+%diagramma uc5.1%
+\begin{itemize}
+	\item \textbf{Attori primari}: utente generico;
+	\item \textbf{Descrizione}: l’utente seleziona un orario diverso da quello attuale per visualizzare i dati di quel momento;
+	\item \textbf{Scenario principale}:
+		\begin{itemize}
+			\item l’utente accede all’applicazione web;
+			\item seleziona l’orario di cui vuole visualizzare i dati nella mappa;
+			\item la mappa si aggiorna con i dati dell’ora selezionata dall’utente.
+		\end{itemize}
+	\item \textbf{Precondizione}: la pagina viene visualizzata correttamente, è possibile selezionare l’orario dei dati visualizzati;
+	\item \textbf{Postcondizione}: viene aggiornata la mappa all’orario scelto dall’utente.
+\end{itemize}
+
+\subsection{UC5.2 - Selezione della data}
+%diagramma uc5.2%
+\begin{itemize}
+	\item \textbf{Attori primari}: utente generico;
+	\item \textbf{Descrizione}:  l’utente seleziona una data diversa da quella odierna e tra quelle disponibili e visualizza la mappa della data scelta;
+	\item \textbf{Scenario principale}:
+		\begin{itemize}
+			\item l’utente accede all’applicazione web;
+			\item l’utente seleziona una data diversa da quella attuale;
+			\item la mappa si aggiorna con i dati della data scelta
+		\end{itemize}
+	\item \textbf{Precondizione}: la pagina si visualizza correttamente, i dati relativi ai giorni presenti nel DB, l’interfaccia per selezionare un giorno viene visualizzata correttamente;
+	\item \textbf{Postcondizione}:  la heat map viene aggiornata con i dati del giorno selezionato all’orario di default.
+\end{itemize}
+
+\subsection{UC5.3 - Ripristino dati a tempo reale}
+%diagramma uc5.3%
+\begin{itemize}
+	\item \textbf{Attori primari}: utente generico;
+	\item \textbf{Descrizione}:  l’utente dopo aver visionato i dati dell'intervallo futuro scelto può ritornare a vedere i dati in real time premendo il pulsante Reset to RT(placeholder);
+	\item \textbf{Scenario principale}: l’utente preme sul pulsante per tornare a visualizzare nuovamente i dati real time;
+	\item \textbf{Precondizione}:  l’utente ha utilizzato lo slider per cambiare orario o utilizzato anche il calendario per modificare il giorno;
+	\item \textbf{Postcondizione}: la mappa viene aggiornata con i dati real time.
 \end{itemize}
 
 \subsection{UC6 - Elaborazione dati}
