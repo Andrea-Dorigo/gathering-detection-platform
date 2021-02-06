@@ -93,24 +93,37 @@ In questa sezione vengono elencati i casi d'uso individuati per il progetto GDP 
 \item \textbf{Postcondizione}: .
 \end{itemize}
 
-\subsection{UC4 - Acquisizione dei dati}
+\subsection{UC4 - Scelta della città}
 %nessun diagramma%
 \begin{itemize}
-\item \textbf{Attori primari}: fonti esterne;
-\item \textbf{Descrizione}: ;
-\item \textbf{Scenario principale}: ;
-\item \textbf{Precondizione}: ;
-\item \textbf{Postcondizione}: .
+\item \textbf{Attori primari}: utente generico;
+\item \textbf{Descrizione}: l’utente sceglie la città di cui vuole visualizzare la mappa;
+\item \textbf{Scenario principale}:
+	\begin{itemize}
+		\item l’utente interagisce con l’interfaccia di selezione città/zona;
+		\item l’utente seleziona una città/zona fra quelle proposte;
+	\end{itemize}
+\item \textbf{Precondizione}: l’utente visualizza correttamente (la pagina ed) il tasto per iniziare la selezione della città;
+\item \textbf{Postcondizione}:  l’utente visualizza correttamente la mappa della citta’/zona selezionata.
 \end{itemize}
 
-\subsection{UC5 - Errore nell'acquisizione dei dati}
+\subsection{UC5 - Scelta periodo dati}
 %nessun diagramma%
 \begin{itemize}
-\item \textbf{Attori primari}: fonti esterne;
-\item \textbf{Descrizione}: ;
-\item \textbf{Scenario principale}: ;
-\item \textbf{Precondizione}: ;
-\item \textbf{Postcondizione}: .
+\item \textbf{Attori primari}: utente generico;
+\item \textbf{Descrizione}: l’utente attraverso l’interfaccia del sistema, modifica il periodo in cui vuole visualizzare i dati;
+\item \textbf{Scenario principale}: 
+	\begin{itemize}
+		\item l’utente visualizza l’applicazione web correttamente;
+		\item Attraverso l’interfaccia l’utente può decidere:
+			\begin{enumerate}
+				\item Di modificare l’orario dei dati da visualizzare;
+				\item Modificare il giorno tra uno di quelli disponibili;
+				\item Ritornare ai dati in tempo reale.
+			\end{enumerate}
+	\end{itemize};
+\item \textbf{Precondizione}: la pagina e l’interfaccia sono visualizzate correttamente, i dati sono presenti nel DB;
+\item \textbf{Postcondizione}: l’utente visualizza i dati riguardanti l’intervallo di tempo selezionato.
 \end{itemize}
 
 \subsection{UC6 - Elaborazione dati}
