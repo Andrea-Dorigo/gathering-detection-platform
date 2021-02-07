@@ -35,15 +35,26 @@ In questa sezione vengono elencati i casi d'uso individuati per il progetto GDP 
 		\item l’applicazione genera in base ai dati prelevati dal DB l’heat map della città di default in real time.
 	\end{itemize}
 \item \textbf{Precondizione}: il sistema è attivo e funzionante e i dati per la creazione della heat map sono presenti nel DB;
-\item \textbf{Postcondizione}: l’utente visualizza la heat map relativa alla città di default.
+\item \textbf{Postcondizione}: l’utente visualizza la heat map relativa alla città di default;
+\item \textbf{Estensioni}: l’utente accede all’applicazione web, il sistema alla richiesta dei dati dal database non riceve nessun dato e di conseguenza viene visualizzato un messaggio d’errore(UC3);
+\item \textbf{Inclusioni}: per una corretta visualizzazione della mappa è necessario la richiesta di dati dal DB (UC2).
 \end{itemize}
 
 \subsection{UC2 - Richiesta dati DB}
 \begin{itemize}
 	\item \textbf{Attori primari}: utente generico;
-	\item \textbf{Descrizione}: l'utente sceglie la tipologia di dati disponibili da rappresentare nella mappa;
-	\item \textbf{Scenario principale}: l'utente accede all'applicazione web e seleziona il tipo di dato da visualizzare nella mappa. Il sistema fornisce i dati alla mappa e viene così aggiornata;
-	\item \textbf{Estensione}: 
+	\item \textbf{Descrizione}: quando l’utente carica la pagina web il sistema richiede al Database i dati necessari attraverso una query;
+	\item \textbf{Scenario principale}: 
+		\begin{enumerate}
+			\item l’utente accede all’applicazione;
+			\item il sistema carica la mappa;
+			\item viene effettuata una richiesta al DB mediante le query;
+			\item il DB aggiornato continuativamente con i nuovi dati risponde alla richiesta;
+			\item il sistema riceve la risposta;
+			\item il sistema invia i dati alla mappa per essere generata;
+		\end{enumerate}
+	\item \textbf{Precondizione}: i dati dalle sorgenti sono disponibili;
+	\item \textbf{Postcondizione}: la web application riceve i dati necessari dal database. 
 	\begin{itemize}
 		\item \textbf{UC3}: se l'applicazione web non riceve nessuna informazione dal sistema viene visualizzato un messaggio di errore.
 	\end{itemize}
@@ -51,40 +62,13 @@ In questa sezione vengono elencati i casi d'uso individuati per il progetto GDP 
 	\item \textbf{Postcondizione}: il sistema invia i dati all'applicazione web e aggiorna la mappa in base alle nuove informazioni.
 \end{itemize}
 
-\subsection{UC2.1 - Scelta visualizzazione dati in tempo reale}
+\subsection{UC3 - Visualizzazione messaggio d’errore}
 \begin{itemize}
 	\item \textbf{Attori primari}: utente generico;
-	\item \textbf{Descrizione}: l'utente sceglie la tipologia dati in tempo reale da rappresentare nella mappa;
-	\item \textbf{Scenario principale}: l'utente accede all'applicazione web e seleziona la visualizzazione dati in tempo reale. Il sistema fornisce solo i dati richiesti alla mappa e viene così aggiornata;
-	\item \textbf{Precondizione}: il sistema è attivo e funzionante e i dati in tempo reale sono presenti nel sistema;
-	\item \textbf{Postcondizione}: il sistema invia i dati in tempo reale all'applicazione web e aggiorna la mappa in base alle nuove informazioni.
-\end{itemize}
-
-\subsection{UC2.2 - Scelta visualizzazione dati storici}
-\begin{itemize}
-	\item \textbf{Attori primari}: utente generico;
-	\item \textbf{Descrizione}: l'utente sceglie la tipologia dati storici da rappresentare nella mappa;
-	\item \textbf{Scenario principale}: l'utente accede all'applicazione web e seleziona la visualizzazione dati storici. Il sistema fornisce solo i dati richiesti alla mappa e viene così aggiornata;
-	\item \textbf{Precondizione}: il sistema è attivo e funzionante e i dati storici sono presenti nel sistema;
-	\item \textbf{Postcondizione}: il sistema invia i dati storici all'applicazione web e aggiorna la mappa in base alle nuove informazioni.
-\end{itemize}
-
-\subsection{UC2.3 - Scelta visualizzazione dati predetti}
-\begin{itemize}
-	\item \textbf{Attori primari}: utente generico;
-	\item \textbf{Descrizione}: l'utente sceglie la tipologia dati con predizione da rappresentare nella mappa;
-	\item \textbf{Scenario principale}: l'utente accede all'applicazione web e seleziona la visualizzazione dati con predizione. Il sistema fornisce solo i dati richiesti alla mappa e viene così aggiornata;
-	\item \textbf{Precondizione}: il sistema è attivo e funzionante e i dati elaborati dal modello di \textit{machine learning} sono presenti nel sistema;
-	\item \textbf{Postcondizione}: il sistema invia i dati predetti all'applicazione web e aggiorna la mappa in base alle nuove informazioni.
-\end{itemize}
-
-\subsection{UC3 - Visualizza errore mancanza dati}
-\begin{itemize}
-	\item \textbf{Attori primari}: utente generico;
-	\item \textbf{Descrizione}: l'utente visualizza un messaggio di errore in quanto vi è una mancanza di dati dal sistema;
-	\item \textbf{Scenario principale}: l'utente dopo essere entrato nell'applicazione web, seleziona un tipologia di dati da visualizzare nella mappa e il sistema non riesce a completare la richiesta;
-	\item \textbf{Precondizione}: i dati richiesti non sono presenti nel sistema;
-	\item \textbf{Postcondizione}: il sistema invia un messaggio di errore per informare l'utente che i dati richiesti non sono disponibili.
+	\item \textbf{Descrizione}: l’utente visualizza un messaggio d’errore per la mancanza di dati nel database;
+	\item \textbf{Scenario principale}: il sistema richiede dati al DB senza riceverne in risposta impossibilitando la creazione dell’heat map;
+	\item \textbf{Precondizione}: il sistema effettua una richiesta al database, nel database mancano i dati richiesti
+	\item \textbf{Postcondizione}: viene visualizzato un messaggio all’utente per informarlo sul problema riscontrato
 \end{itemize}
 
 \subsection{Azioni del sistema}
@@ -125,7 +109,7 @@ In questa sezione vengono elencati i casi d'uso individuati per il progetto GDP 
 				\item Modificare il giorno tra quelli disponibili;
 				\item Ritornare ai dati in tempo reale.
 			\end{enumerate}
-	\end{itemize};
+	\end{itemize}
 \item \textbf{Precondizione}: la pagina e l’interfaccia sono visualizzate correttamente, i dati sono presenti nel database;
 \item \textbf{Postcondizione}: l’utente visualizza i dati riguardanti l’intervallo di tempo selezionato.
 \end{itemize}
