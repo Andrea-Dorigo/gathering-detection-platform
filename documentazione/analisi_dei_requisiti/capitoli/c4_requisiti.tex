@@ -163,7 +163,7 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 
 \begin{center}
 	\renewcommand{\arraystretch}{1.4}
-	\begin{longtable}{|p{4cm}|p{4cm}|p{4cm}|p{3cm}|}
+	\begin{longtable}{|p{3cm}|p{4cm}|p{4cm}|p{4cm}|}
 		\hline
 		\rowcolor{airforceblue}
 		\makecell[c]{\textbf{Codice RS}} & \makecell[c]{\textbf{Descrizione}} & \makecell[c]{\textbf{Tipo di requisito}} & \makecell[c]{\textbf{Fonte}} \\
@@ -174,13 +174,13 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 		\hline
 		\centering RSVO1.2  & Utilizzo di vue.js$_{\scaleto{G}{3pt}}$ per la creazione della wep-app$_{\scaleto{G}{3pt}}$  &\centering  Obbligatorio  & \makecell[tc]{V. esterno 02-01-2021} \\
 		\hline
-		\centering RSVO3  & Il sistema deve far uso dell'ecosistema Apache Kafka$_{\scaleto{G}{3pt}}$ &\centering  Obbligatorio  & \makecell[tc]{Capitolato} \\
+		\centering RSVO3  & Il sistema deve far uso dell'ecosistema Apache Kafka$_{\scaleto{G}{3pt}}$ &\centering  Obbligatorio  & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$} \\
 		\hline
 		\centering RSVO4  & Il back end$_{\scaleto{G}{3pt}}$ del prodotto viene sviluppato utilizzando il linguaggio Java$_{\scaleto{G}{3pt}}$ &\centering  Obbligatorio  & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$} \\
 		\hline
 		\centering RSVO5  & Supporto browser Chrome, Firefox con versioni massimo di 3 anni &\centering  Obbligatorio  & \makecell[tc]{Interno} \\
 		\hline
-		\centering RSVO6  & Supporto browser Safari, Microsoft Edge &\centering  Facoltativo  & \makecell[tc]{Interno} \\
+		\centering RSVF6  & Supporto browser Safari, Microsoft Edge &\centering  Facoltativo  & \makecell[tc]{Interno} \\
 		\hline
 		\centering RSVO7  & La web application dev'essere disponibile in un ambiente locale, di sviluppo, e di produzione & \centering  Obbligatorio  & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$} \\
 		\hline
@@ -277,13 +277,17 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 		\hline
 		\makecell[tc]{RSFO31} & \makecell[tc]{V. esterno 02-02-2021}\\
 		\hline
-		\makecell[tc]{RSFO31.1} & \makecell[tc]{V. esterno 02-02-2021}\\ % <-
+		\makecell[tc]{RSFO31.1} & \makecell[tc]{V. esterno 02-02-2021}\\ % <-da qui aiuto
 		\hline
 		\makecell[tc]{RSPO1} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$}\\
 		\hline
 		\makecell[tc]{RSPO2} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$}\\
 		\hline
-		\makecell[tc]{RSP} & \makecell[tc]{}\\
+		\makecell[tc]{RSPO3} & \makecell[tc]{}\\
+		\hline
+		\makecell[tc]{RSPO4} & \makecell[tc]{}\\
+		\hline
+		\makecell[tc]{RSPO5} & \makecell[tc]{}\\%<- aiuto fine
 		\hline
 		\makecell[tc]{RSQO1} & \makecell[tc]{Interno}\\
 		\hline
@@ -295,21 +299,35 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 		\hline
 		\makecell[tc]{RSQO5} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$}\\
 		\hline
+		\makecell[tc]{RSQO6} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$}\\
+		\hline
+		\makecell[tc]{RSQO7} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$}\\
+		\hline
 		\makecell[tc]{RSVO1} & \makecell[tc]{Interno}\\
 		\hline
 		\makecell[tc]{RSVO1.1} & \makecell[tc]{Interno}\\
 		\hline
 		\makecell[tc]{RSVO1.2} & \makecell[tc]{Interno}\\
 		\hline
-		\makecell[tc]{RSVO2} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$\\FC3.1}\\
+		\makecell[tc]{RSVO2} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$}\\
 		\hline
-		\makecell[tc]{RSVF2.1} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$\\FC3.1}\\
+		\makecell[tc]{RSVF2.1} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$}\\
 		\hline
-		\makecell[tc]{RSVO2.2} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$\\FC3.1}\\
+		\makecell[tc]{RSVO2.2} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$}\\
 		\hline
-		\makecell[tc]{RSVO3} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$\\FC1.3}\\
+		\makecell[tc]{RSVO3} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$}\\
 		\hline
-		\makecell[tc]{RSVO4} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$\\FC3.2}\\
+		\makecell[tc]{RSVO4} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$}\\
+		\hline
+		\makecell[tc]{RSVO5} & \makecell[tc]{Interno}\\
+		\hline
+		\makecell[tc]{RSVF6} & \makecell[tc]{Interno}\\
+		\hline
+		\makecell[tc]{RSVO7} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$}\\
+		\hline
+		\makecell[tc]{RSVF8} & \makecell[tc]{V. esterno 02-02-2021}\\
+		\hline
+		\makecell[tc]{RSVF9} & \makecell[tc]{V. esterno 02-02-2021}\\
 		\hline
 		\rowcolor{white}
 
