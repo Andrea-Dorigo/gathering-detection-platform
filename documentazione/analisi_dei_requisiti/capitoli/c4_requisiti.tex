@@ -1,5 +1,6 @@
 \chapter{Requisiti}\label{Requisiti}
 In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{\scaleto{G}{3pt}}$ individuati dal proponente$_{\scaleto{G}{3pt}}$ e dal gruppo \textit{Jawa Druids}. Ogni requisito viene individuato da un codice identificativo, una sua descrizione, la tipologia di requisito e la fonte di riferimento, la spiegazione di ogni parte è descritta nel documento \textit{Norme del Progetto v1.0.0}. Nella sezione successiva viene illustrato attraverso una tabella il tracciamento dei requisiti alla loro fonte e viceversa.
+
 \section{Requisiti funzionali}\label{RequisitiFunzionali}
 
 \def\tabularxcolumn#1{m{#1}}
@@ -106,16 +107,15 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 		\rowcolor{airforceblue}
 		\makecell[c]{\textbf{Codice RS}} & \makecell[c]{\textbf{Descrizione}} & \makecell[c]{\textbf{Tipo di requisito}} & \makecell[c]{\textbf{Fonte}} \\
 		\hline
-		\centering RSPO1 & Capacità di acquisizione continuativa nel tempo dei dati da flussi esterni &\centering  Obbligatorio & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$}  \\
+		\centering RSPO1 & Capacità di acquisizione continuativa nel tempo dei dati da flussi esterni, viene prelevato almeno un dato ogni 10 minuti &\centering  Obbligatorio & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$}  \\
 		\hline
-		\centering RSPO2 & Modalità a bassa latenza dell'aquisizione di informazioni & \centering Obbligatorio & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$} \\
+		\centering RSPO2 & Modalità a bassa latenza dell'aquisizione di informazioni, almeno un dato ogni 5 minuti assumendo una connessione con download di minimo 100kb/s & \centering Obbligatorio & \makecell[tc]{Interno} \\
 		\hline
-		\centering RSPO3 & Modalità a bassa latenza per l'elaborazione dei dati acquisiti & \centering Obbligatorio & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$} \\
+		\centering RSPO3 & Modalità a bassa latenza per l'elaborazione dei dati acquisiti, almeno una elaborazione ogni 4 minuti & \centering Obbligatorio & \makecell[tc]{Interno} \\
 		\hline
-		\centering RSPO4 & Modalità a bassa latenza per la visualizzazione delle informazioni & \centering Obbligatorio & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$} \\
+		\centering RSPO4 & Modalità a bassa latenza per la visualizzazione delle informazioni, la mappa si aggiorna in massimo 30s & \centering Obbligatorio & \makecell[tc]{Interno} \\
 		\hline
-		\centering RSPO5 & Misurazione indice di affidabilità & \centering Facoltativo & 
-		\makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$} \\
+		\centering RSPO5 & Misurazione indice di affidabilità sui dati in tempo reale di almeno 75\% & \centering Obbligatorio &\makecell[tc]{Interno} \\
 		\hline
 		\rowcolor{white}
 		
@@ -137,7 +137,7 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 		\hline
 		\centering RSQF2  & Il codice sorgente del software deve essere disponibile in una repository$_G$ pubblica su Github$_G$  &\centering  Facoltativo & \makecell[tc]{Interno} \\
 		\hline
-		\centering RSQF3  & Deve essere sviluppato e fornito un documento con lo schema della base di dati relazionale  & \centering Facoltativo & \makecell[tc]{Interno \\ FC1.2} \\
+		\centering RSQF3  & Deve essere sviluppato e fornito un documento con lo schema della base di dati relazionale  & \centering Facoltativo & \makecell[tc]{Interno } \\
 	%	\hline
 	%	RSQ  & Fornire una documentazione sui flussi di dati esterni.... & Facoltativo & FC3 \\
 	%	\hline
@@ -184,6 +184,9 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 		\hline
 		\centering RSVO7  & La web application dev'essere disponibile in un ambiente locale, di sviluppo, e di produzione & \centering  Obbligatorio  & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$} \\
 		\hline
+		\centering RSVF8 & Utilizzo di Keras per lo sviluppo del modello machine learning & \centering Facoltativo & \makecell[tc]{V. esterno 02-02-2021} \\
+		\hline
+		\centering RSVF9 & Utilizzo di Pandas come strumento per la manipolazione dei dati & \centering Facoltativo & \makecell[tc]{V. esterno 02-02-2021}
 		\rowcolor{white}
 
 		\caption[Requisiti di vincolo]{Requisiti di vincolo}\label{4.4}\\
