@@ -35,7 +35,7 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 			\hline
 			\centering RSFO7 & Visualizzazione dei dati elaborati attraverso heat map$_{\scaleto{G}{3pt}}$ &\centering  Obbligatorio & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$ \\ UC1}  \\
 			\hline
-			\centering RSFO8 & Apache Kafka$_{\scaleto{G}{3pt}}$ deve creare una comunicazione tra il programma con il software 'contapersone' e il database  &\centering  Obbligatorio &  \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$ } 	\\
+			\centering RSFO8 & Apache Kafka$_{\scaleto{G}{3pt}}$ deve creare una comunicazione tra il programma con il software 'contapersone' e il database  &\centering  Obbligatorio &  \makecell[tc]{Interno } 	\\
 			\hline
 			\centering RSFO9 & L'utente deve poter visualizzare i dati in tempo reale tramite heat map  &\centering  Obbligatorio &  \makecell[tc]{Interno \\ UC5} 	\\
 			\hline
@@ -45,9 +45,9 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 			\hline
 			\centering RSFF12 & L'utente deve poter distinguere fra i dati simulati e quelli reali  &\centering  Facoltativo &  \makecell[tc]{Interno \\ UC1} 	\\
 			\hline
-			\centering RSFO13 & L'utente deve poter visualizzare un indice di affidabilità della previsione nella mappa  &\centering  Facoltativo &  \makecell[tc]{Interno } 	\\ 
+			\centering RSFD13 & L'utente deve poter visualizzare un indice di affidabilità della previsione nella mappa  &\centering  Desiderabile &  \makecell[tc]{Interno} 	\\ 
 			\hline
-			\centering RSFO14 & L'utente deve poter visualizzare un indice di affidabilità dei dati in RT nella mappa  &\centering  Facoltativo &  \makecell[tc]{Interno } 	\\
+			\centering RSFD14 & L'utente deve poter visualizzare un indice di affidabilità dei dati in tempo reale nella mappa  &\centering  Desiderabile &  \makecell[tc]{Interno} 	\\
 			\hline
 			\centering RSFF15 & L'utente deve poter applicare dei filtri ai dati (reali, simulati)  &\centering  Facoltativo &  \makecell[tc]{Interno } 	\\
 			\hline
@@ -61,7 +61,7 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 			\hline
 			\centering RSFO20 & L'utente può selezionare una città tra quelle disponibili &\centering Obbligatorio & \makecell[tc]{Interno \\ UC4} \\
 			\hline
-			\centering RSFO21 & Le zone visualizzate dipendono dalle sorgenti esterne utilizzate &\centering & \makecell[tc]{Interno} \\
+			\centering RSFO21 & Le zone visualizzate della città dipendono dalle sorgenti esterne utilizzate &\centering Obbligatorio & \makecell[tc]{Interno} \\
 			\hline
 			\centering RSFO22  & I dati acquisiti da telecamere in tempo reale devono avere data di riferimento associato  &\centering Obbligatorio & \makecell[tc]{Interno} \\
 			\hline
@@ -73,7 +73,7 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 			\hline
 			\centering RSFO24 & La selezione dell'orario è effettuata su intervalli di tempo di ora in ora &\centering Obbligatorio & \makecell[tc]{UC5.1} \\
 			\hline
-			\centering RSFO25 & Il sistema da priorità ai dati reali presenti nel database per la visualizzazioni della mappa su periodi di tempo storici &\centering Obbligatorio & \makecell[tc]{Interno} \\
+			\centering RSFO25 & Il sistema dà priorità ai dati reali presenti nel database per la visualizzazione della mappa su periodi di tempo storici &\centering Obbligatorio & \makecell[tc]{Interno} \\
 			\hline
 			\centering RSFO26 & Il sistema aggiorna automaticamente la mappa alla selezione di un diverso orario &\centering Obbligatorio & \makecell[tc]{UC5.1} \\
 			\hline
@@ -109,7 +109,7 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 		\hline
 		\centering RSPO1 & Capacità di acquisizione continuativa nel tempo dei dati da flussi esterni, viene prelevato almeno un dato ogni 10 minuti &\centering  Obbligatorio & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$}  \\
 		\hline
-		\centering RSPO2 & Modalità a bassa latenza dell'aquisizione di informazioni, almeno un dato ogni 5 minuti assumendo una connessione con download di minimo 100kb/s & \centering Obbligatorio & \makecell[tc]{Interno} \\
+		\centering RSPO2 & Modalità a bassa latenza nell'aquisizione di informazioni, almeno un dato ogni 5 minuti assumendo una connessione con download di minimo 100kb/s & \centering Obbligatorio & \makecell[tc]{Interno} \\
 		\hline
 		\centering RSPO3 & Modalità a bassa latenza per l'elaborazione dei dati acquisiti, almeno una elaborazione ogni 4 minuti & \centering Obbligatorio & \makecell[tc]{Interno} \\
 		\hline
@@ -207,35 +207,89 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 		\rowcolor{airforceblue}
 		\makecell[tc]{\textbf{Codice RS}} & \makecell[c]{\textbf{Fonte}}  \\
 		\hline
-		\makecell[tc]{RSFO1} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$\\V. esterno 17-12-2020 \\ FC1.1} \\
+		\makecell[tc]{RSFO1} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$\\V. esterno 17-12-2020} \\
 		\hline
-		\makecell[tc]{RSFF2} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$ \\ FC1.1}\\
+		\makecell[tc]{RSFF2} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$}\\
 		\hline
-		\makecell[tc]{RSFO3} & \makecell[tc]{Interno\\FC1.1}\\
+		\makecell[tc]{RSFO3.1} & \makecell[tc]{Interno \\ UC3}\\
 		\hline
-		\makecell[tc]{RSFO4.1} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$\\FC1.2}\\
+		\makecell[tc]{RSFO4.1} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$\\UC2}\\
 		\hline
-		\makecell[tc]{RSFO4.2} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$\\FC1.2}\\
+		\makecell[tc]{RSFO4.2} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$\\UC2}\\
 		\hline
 		\makecell[tc]{RSFO5} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$}\\
 		\hline
-		\makecell[tc]{RSFO5.1} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$}\\
+		\makecell[tc]{RSFO5.1} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$}\\ 
 		\hline
-		\makecell[tc]{RSFD6 }& \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$ \\ FC2}\\
+		\makecell[tc]{RSFD6}& \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$}\\
 		\hline
-		\makecell[tc]{RSFO7} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$\\FC3.1}\\
+		\makecell[tc]{RSFO7} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$\\UC1}\\
 		\hline
-		\makecell[tc]{RSFO8} & \makecell[tc]{Interno \\FC1.3}\\
+		\makecell[tc]{RSFO8} & \makecell[tc]{Interno}\\ 
+		\hline
+		\makecell[tc]{RSFO9} & \makecell[tc]{Interno \\ UC5}\\
+		\hline
+		\makecell[tc]{RSFO10} & \makecell[tc]{Interno \\ UC5}\\
+		\hline
+		\makecell[tc]{RSFO11} & \makecell[tc]{Interno \\ UC5}\\
+		\hline
+		\makecell[tc]{RSFF12} & \makecell[tc]{Interno \\ UC1}\\
+		\hline
+		\makecell[tc]{RSFD13} & \makecell[tc]{Interno}\\
+		\hline
+		\makecell[tc]{RSFD14} & \makecell[tc]{Interno}\\
+		\hline
+		\makecell[tc]{RSFF15} & \makecell[tc]{Interno}\\
+		\hline
+		\makecell[tc]{RSFF16} & \makecell[tc]{Interno}\\
+		\hline
+		\makecell[tc]{RSFO17} & \makecell[tc]{Interno \\ UC1}\\
+		\hline
+		\makecell[tc]{RSFO18} & \makecell[tc]{Interno \\ UC3.2}\\
+		\hline
+		\makecell[tc]{RSFO19} & \makecell[tc]{Interno \\ UC3.3}\\
+		\hline
+		\makecell[tc]{RSFO20} & \makecell[tc]{Interno \\ UC4}\\
+		\hline
+		\makecell[tc]{RSFO21} & \makecell[tc]{Interno}\\
+		\hline
+		\makecell[tc]{RSFO22} & \makecell[tc]{Interno}\\
+		\hline
+		\makecell[tc]{RSFO22.1} & \makecell[tc]{Interno}\\
+		\hline
+		\makecell[tc]{RSFO22.2} & \makecell[tc]{Interno}\\
+		\hline
+		\makecell[tc]{RSFF23} & \makecell[tc]{Interno}\\
+		\hline
+		\makecell[tc]{RSFO24} & \makecell[tc]{UC5.1}\\
+		\hline
+		\makecell[tc]{RSFO25} & \makecell[tc]{Interno}\\
+		\hline
+		\makecell[tc]{RSFO26} & \makecell[tc]{UC5.1}\\
+		\hline
+		\makecell[tc]{RSFO27} & \makecell[tc]{UC5.2}\\
+		\hline
+		\makecell[tc]{RSFO28} & \makecell[tc]{UC5.3}\\
+		\hline
+		\makecell[tc]{RSFD29} & \makecell[tc]{Interno}\\
+		\hline
+		\makecell[tc]{RSFO30} & \makecell[tc]{V. esterno 28-01-2021}\\
+		\hline
+		\makecell[tc]{RSFO31} & \makecell[tc]{V. esterno 02-02-2021}\\
+		\hline
+		\makecell[tc]{RSFO31.1} & \makecell[tc]{V. esterno 02-02-2021}\\ % <-
 		\hline
 		\makecell[tc]{RSPO1} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$}\\
 		\hline
 		\makecell[tc]{RSPO2} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$}\\
 		\hline
+		\makecell[tc]{RSP} & \makecell[tc]{}\\
+		\hline
 		\makecell[tc]{RSQO1} & \makecell[tc]{Interno}\\
 		\hline
 		\makecell[tc]{RSQF2} & \makecell[tc]{Interno}\\
 		\hline
-		\makecell[tc]{RSQF3} & \makecell[tc]{Interno \\ FC1.2}\\
+		\makecell[tc]{RSQF3} & \makecell[tc]{Interno }\\
 		\hline
 		\makecell[tc]{RSQF4} & \makecell[tc]{Interno}\\
 		\hline
