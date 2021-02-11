@@ -47,7 +47,7 @@ In questo capitolo vengono elencati i casi d'uso individuati per il progetto GDP
 	\item \textbf{Postcondizione}: viene visualizzato un messaggio all’utente per informarlo sul problema riscontrato e l’operazione fallisce.
 \end{itemize}
 
-\subsubsection{UC3 - Selezione città da visualizzare nella mappa}\label{selezioneCitta} %parzialmente corretto
+\subsubsection{UC3 - Selezione città da visualizzare nella mappa}\label{selezioneCitta} 
 \begin{center}
 	\begin{figure}[H]
 		\includegraphics{../immagini/attori_casi/uc3.png}
@@ -62,12 +62,12 @@ In questo capitolo vengono elencati i casi d'uso individuati per il progetto GDP
 	\item \textbf{Postcondizione}:   l’utente ha selezionato la città che vuole visualizzare, la heat-map$_{\scaleto{G}{3pt}}$ si aggiorna in base alla scelta fatta.
 \end{itemize}
 
-\subsubsection{UC4 - Impostazione dell’istante di tempo di cui visualizzare la heat map$_{\scaleto{G}{3pt}}$
+\subsubsection{UC4 - Impostazione dell’istante di cui visualizzare la heat map$_{\scaleto{G}{3pt}}$
 } \label{impostazioneIstanteTempo}%parzialmente corretto
 \begin{center}
 	\begin{figure}[H]
-		\includegraphics{../immagini/attori_casi/uc3.png}
-		\caption{UC3 - Selezione città da visualizzare nella mappa}
+		\includegraphics{../immagini/attori_casi/uc4.png}
+		\caption{UC4 - Impostazione dell’istante di cui visualizzare la heat map}
 	\end{figure}
 \end{center}
 \begin{itemize}
@@ -128,8 +128,13 @@ In questo capitolo vengono elencati i casi d'uso individuati per il progetto GDP
 \subsection{Elenco casi d'uso}\label{FBelencoCasiDuso}
 
 
-\subsubsection{UC5 - Richiesta dati}\label{richiestaDati}
-%insert uml
+\subsubsection{UC5 - Richiesta dati al back end}\label{richiestaDati}
+\begin{center}
+	\begin{figure}[H]
+		\includegraphics[scale=0.7]{../immagini/attori_casi/uc5_uc51_uc52_uc53.png}
+		\caption{UC5 - Richiesta dati al back end}
+	\end{figure}
+\end{center}
 \begin{itemize}
 	\item \textbf{Attori primari}: sistema front end;
 	\item \textbf{Descrizione}: il front end richiede dati al backend per generare la heat-map$_{\scaleto{G}{3pt}}$;
@@ -138,22 +143,23 @@ In questo capitolo vengono elencati i casi d'uso individuati per il progetto GDP
 	\item \textbf{Postcondizione}: Il front visualizza e riceve le nuove informazioni. 
 	\item \textbf{Generalizzazioni}: il front end può fare una delle seguenti richieste:
 	\begin{itemize}
-		\item Richiede i dati di un determinato giorno (UC5.1\S~\ref{richiestaDatiGiorno});
+		\item Richiede i dati di uno specifico istante (UC5.1\S~\ref{richiestaDatiGiorno});
 		\item Richiede i dati in tempo reale (UC5.2 \S~\ref{richiestaDatiTempoReale});
 		\item Richiede i dati predetti (UC5.1 \S~\ref{richiestaDatiPredetti}).
 	\end{itemize}
+	\item \textbf{Estensione}: il front end effettua la richiesta al back end, il back end non invia nessun dato nella risposta (UC6 \S~\ref{VisualizzazioneMancanzaBackEnd} )
 \end{itemize}
 
-\subsubsection{UC5.1 - Richiesta dati di un determinato giorno}\label{richiestaDatiGiorno}
+\subsubsection{UC5.1 - Richiesta dati di uno specifico istante}\label{richiestaDatiGiorno}
 \begin{itemize}
 	\item \textbf{Attori primari}: sistema front end;
-	\item \textbf{Descrizione}: Il front end richiede le informazioni relative ad uno specifico giorno;
-	\item \textbf{Scenario principale}:  il front end richiede al back end le informazioni relative ad un giorno specifico;
+	\item \textbf{Descrizione}: Il front end richiede le informazioni relative ad uno specifico istante di tempo;
+	\item \textbf{Scenario principale}:  il front end richiede al back end le informazioni relative all'istante di tempo specificato;
 	\item \textbf{Precondizione}: L’utente esegue la modifica della data o dell’orario come definito rispettivamente nella descrizione di UC4.2 (\S~\ref{modificaData}) e UC4.1 (\S~\ref{selezioneOrario}) ponendo un orario precedente a quello odierno;
-	\item \textbf{Postcondizione}: Il front end visualizza e riceve le informazioni relative al giorno selezionato. 
+	\item \textbf{Postcondizione}: Il front end visualizza e riceve le informazioni relative all'istante di tempo impostato. 
 \end{itemize}
 
-\subsubsection{UC5.2 - Richiesta dati in tempo reale}\label{richiestaDatiTempoReale}
+\subsubsection{UC5.2 - Richiesta dei dati in tempo reale}\label{richiestaDatiTempoReale}
 \begin{itemize}
 	\item \textbf{Attori primari}: sistema front end;
 	\item \textbf{Descrizione}: il front end richiede i dati reali più recentemente aggiunti;
@@ -162,7 +168,7 @@ In questo capitolo vengono elencati i casi d'uso individuati per il progetto GDP
 	\item \textbf{Postcondizione}: Il front end ha ricevuto i dati ed è pronto alla generazione della heat map$_{\scaleto{G}{3pt}}$. 
 \end{itemize}
 
-\subsubsection{UC5.3 - Richiesta dei dati predetti}\label{richiestaDatiPredetti}
+\subsubsection{UC5.3 - Richiesta dati predetti}\label{richiestaDatiPredetti}
 \begin{itemize}
 	\item \textbf{Attori primari}: sistema front end;
 	\item \textbf{Descrizione}: il front end richiede i dati riferiti allo stesso giorno ma ad un orario avanzato rispetto a quello attuale.
@@ -172,4 +178,17 @@ In questo capitolo vengono elencati i casi d'uso individuati per il progetto GDP
 	\item \textbf{Postcondizione}: il front end ha ricevuto i dati ed è pronto alla generazione della heat map$_{\scaleto{G}{3pt}}$. 
 \end{itemize}
 
+\subsubsection{UC6 - Visualizzazione messaggio di mancanza dati dal back end}\label{VisualizzazioneMancanzaBackEnd}
+\begin{itemize}
+	\item \textbf{Attori primari}: sistema front end;
+	\item \textbf{Descrizione}: il front end riceve un messaggio di mancanza dati rispetto alla richiesta data;
+	\item \textbf{Scenario principale}: 
+	\begin{enumerate}
+		\item il front end richiede dei dati specifici al back end;
+		\item la risposta ricevuta è un messaggio di errore;
+		\item il front end ritenta la richiesta di informazioni. 
+	\end{enumerate}
+	\item \textbf{Precondizione}: il front end effettua una richiesta di dati, il back end non ha a disposizione i dati richiesti;
+	\item \textbf{Postcondizione}: il front end riceve un messaggio di errore per la mancanza dei dati richiesti. 
+\end{itemize}
 
