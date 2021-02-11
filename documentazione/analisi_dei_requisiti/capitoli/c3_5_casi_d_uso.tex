@@ -1,220 +1,175 @@
 \chapter{Casi D'uso}\label{casiDuso}
-\section{Attori dei casi d'uso}
+In questo capitolo vengono elencati i casi d'uso individuati per il progetto GDP in accordo con il proponente. Ogni caso d'uso indica un'interazione tra uno o più attori e il sistema. Questa interazione genera uno scenario che è l'insieme delle azioni che hanno in comune uno scopo finale per un utente.
+
+\section{Casi d'uso tra un utente ed il front end}
+%spiegazione della sezione
+\subsection{Attori dei casi d'uso}
 \begin{center}
 	\begin{figure}[H]
-		\includegraphics{../immagini/attori_casi/attore.png}
+		\includegraphics{../immagini/attori_casi/utente_generico.png}
 		\caption{Attore: utente generico}
 	\end{figure}
 \end{center}
-\subsection{Attori Primari}\label{attoriPrimari}
+\subsubsection{Attori Primari}\label{UFattoriPrimari}
 \begin{itemize}
 	\item \textbf{Utente generico:} Definisce l'utente generico che utilizza l'applicazione web;
-	\item \textbf{Fonti esterne:} Definisce le fonti da cui verranno elaborati e visualizzati i dati.
 \end{itemize}
 
-\section{Elenco casi d'uso}\label{elencoCasiDuso}
-In questa sezione vengono elencati i casi d'uso individuati per il progetto GDP in accordo con il proponente. Ogni caso d'uso indica un'interazione tra uno o più attori e il sistema. Questa interazione genera uno scenario che è l'insieme delle azioni che hanno in comune uno scopo finale per un utente.
+\subsection{Elenco casi d'uso}\label{UFelencoCasiDuso}
 
-\subsection{Azioni dell'utente}
-%qui andrebbe il primo diagramma disegnato%
+\subsubsection{UC1 - Visualizzazione informazioni sulla mappa} %parzialmente corretto
+\begin{center}
+	\begin{figure}[H]
+		\includegraphics[scale=0.8]{../immagini/attori_casi/uc1_uc2.png}
+		\caption{UC1 - Visualizzazione informazioni sulla mappa}
+	\end{figure}
+\end{center}
 \begin{itemize}
 	\item \textbf{Attori primari}: utente generico;
-	\item \textbf{Descrizione}: l'utente visualizza una mappa presente nell'applicazione web. Tale mappa è una heat map e presenta all'utente i dati analizzati dal prodotto;
-	\item \textbf{Scenario principale}: l'utente accede all'applicazione web e visualizza la mappa;
-	\item \textbf{Precondizione}: il sistema è attivo e funzionante e l'utente e l'utente accede all'applicazione web;
-	\item \textbf{Postcondizione}: il sistema invia i dati alla pagina al caricamento presentando una mappa con tutti i dati per l'utente.
+	\item \textbf{Descrizione}: l’utente accede all’applicazione web e visualizza la heat map$_{\scaleto{G}{3pt}}$. La mappa mostra la città impostata di default o quella selezionata tra quelle a disposizione, come definito nell’UC3(). Le informazioni vengono ricavate dall’orario e la data impostate dall’utente come indicato nel UC4.1() e UC4.2() o si utilizzano i dati in tempo reale quindi usando l’orario attuale;
+	\item \textbf{Scenario principale}: L’utente accede all’applicazione web e visualizza la heat map$_{\scaleto{G}{3pt}}$ della città;
+	\item \textbf{Precondizione}: il front end può generare la mappa, la città, la data, l’ora sono state indicate dall’utente o vengono utilizzate quelle di default, quindi data e ora sono quelle odierne di sistema per dati in tempo reale;
+	\item \textbf{Postcondizione}: l’utente visualizza la heat map$_{\scaleto{G}{3pt}}$ con i dati ricavati nell’istante di tempo selezionato, come definito nell’UC4, e alla città scelta fra quelle disponibili come descritto nella definizione dell’UC3, oppure visualizza quella riguardante la città impostata di default;
+	\item \textbf{Estensioni}: l’utente accede all’applicazione web, il front end rilevando la richiesta di generazione della mappa individua una mancanza di dati per la sua costruzione e di conseguenza viene visualizzato un messaggio relativo all’errore riscontrato ( UC2 );
 \end{itemize}
 
-\subsection{UC1 - Visualizzazione mappa}
-\begin{itemize}
-\item \textbf{Attori primari}: utente generico;
-\item \textbf{Descrizione}: l’utente accede all’applicazione web e visualizza la heat map riguardante una città di default;
-\item \textbf{Scenario principale}: 
-	\begin{itemize}
-		\item l’utente accede all’applicazione (utente raggiunge l’applicazione/si collega all’applicazione);
-		\item l’applicazione genera in base ai dati prelevati dal DB l’heat map della città di default in real time.
-	\end{itemize}
-\item \textbf{Precondizione}: il sistema è attivo e funzionante e i dati per la creazione della heat map sono presenti nel DB;
-\item \textbf{Postcondizione}: l’utente visualizza la heat map relativa alla città di default;
-\item \textbf{Estensioni}: l’utente accede all’applicazione web, il sistema alla richiesta dei dati dal database non riceve nessun dato e di conseguenza viene visualizzato un messaggio d’errore(UC3);
-\item \textbf{Inclusioni}: per una corretta visualizzazione della mappa è necessario la richiesta di dati dal DB (UC2).
-\end{itemize}
-
-\subsection{UC2 - Richiesta dati DB}
+\subsubsection{UC2 - Visualizzazione messaggio per la mancanza di dati } %parzialmente corretto
 \begin{itemize}
 	\item \textbf{Attori primari}: utente generico;
-	\item \textbf{Descrizione}: quando l’utente carica la pagina web il sistema richiede al Database i dati necessari attraverso una query;
+	\item \textbf{Descrizione}: l’utente visualizza un messaggio d’errore per la mancanza di dati necessari alla generazione della mappa. Questo accade quando il front end non ha a disposizione tutti i dati;
 	\item \textbf{Scenario principale}: 
-		\begin{enumerate}
-			\item l’utente accede all’applicazione;
-			\item il sistema carica la mappa;
-			\item viene effettuata una richiesta al DB mediante le query;
-			\item il DB aggiornato continuativamente con i nuovi dati risponde alla richiesta;
-			\item il sistema riceve la risposta;
-			\item il sistema invia i dati alla mappa per essere generata;
-		\end{enumerate}
-	\item \textbf{Precondizione}: i dati dalle sorgenti sono disponibili;
-	\item \textbf{Postcondizione}: la web application riceve i dati necessari dal database. 
 	\begin{itemize}
-		\item \textbf{UC3}: se l'applicazione web non riceve nessuna informazione dal sistema viene visualizzato un messaggio di errore.
+		\item L’operazione di generazione mappa fallisce;
+		\item L’utente visualizza un messaggio di errore per la mancanza dei dati;
+		\item L’utente clicca il pulsante “ok” per chiudere il messaggio.
 	\end{itemize}
-	\item \textbf{Precondizione}: il sistema è attivo e funzionante e l'utente sceglie la tipologia di dati da utilizzare;
-	\item \textbf{Postcondizione}: il sistema invia i dati all'applicazione web e aggiorna la mappa in base alle nuove informazioni.
+	\item \textbf{Precondizione}: il front end effettua un controllo sui dati, non sono presenti tutti i dati;
+	\item \textbf{Postcondizione}: viene visualizzato un messaggio all’utente per informarlo sul problema riscontrato e l’operazione fallisce.
 \end{itemize}
 
-\subsection{UC3 - Visualizzazione messaggio d’errore}
+\subsubsection{UC3 - Selezione città da visualizzare nella mappa} %parzialmente corretto
+\begin{center}
+	\begin{figure}[H]
+		\includegraphics{../immagini/attori_casi/uc3.png}
+		\caption{UC3 - Selezione città da visualizzare nella mappa}
+	\end{figure}
+\end{center}
 \begin{itemize}
 	\item \textbf{Attori primari}: utente generico;
-	\item \textbf{Descrizione}: l’utente visualizza un messaggio d’errore per la mancanza di dati nel database;
-	\item \textbf{Scenario principale}: il sistema richiede dati al DB senza riceverne in risposta impossibilitando la creazione dell’heat map;
-	\item \textbf{Precondizione}: il sistema effettua una richiesta al database, nel database mancano i dati richiesti
-	\item \textbf{Postcondizione}: viene visualizzato un messaggio all’utente per informarlo sul problema riscontrato
+	\item \textbf{Descrizione}:  l’utente può selezionare la città di cui vuole visualizzare la heat map$_{\scaleto{G}{3pt}}$;
+	\item \textbf{Scenario principale}:l’utente seleziona una città tra quelle messe a disposizione;
+	\item \textbf{Precondizione}: il sistema dispone di informazioni relative a diverse città;
+	\item \textbf{Postcondizione}:   l’utente ha selezionato la città che vuole visualizzare, la heat-map$_{\scaleto{G}{3pt}}$ si aggiorna in base alla scelta fatta.
 \end{itemize}
 
-\subsection{Azioni del sistema}
-%diagramma GDP%
+\subsubsection{UC4 - Impostazione dell’istante di tempo di cui visualizzare la heat map$_{\scaleto{G}{3pt}}$
+} %parzialmente corretto
+\begin{center}
+	\begin{figure}[H]
+		\includegraphics{../immagini/attori_casi/uc3.png}
+		\caption{UC3 - Selezione città da visualizzare nella mappa}
+	\end{figure}
+\end{center}
 \begin{itemize}
-\item \textbf{Attori primari}: fonti esterne;
-\item \textbf{Descrizione}: ;
-\item \textbf{Scenario principale}: ;
-\item \textbf{Precondizione}: ;
-\item \textbf{Postcondizione}: .
+	\item \textbf{Attori primari}: utente generico;
+	\item \textbf{Descrizione}: l’utente attraverso l’interfaccia del sistema, modifica l’istante di tempo di cui vuole visualizzare i dati;
+	\item \textbf{Scenario principale}: Attraverso l’interfaccia l’utente può decidere di:
+		\begin{enumerate}
+			\item Modificare l’orario dei dati da visualizzare (UC4.1 );
+			\item Modificare il giorno tra quelli disponibili (UC4.2 );
+			\item Ritornare ai dati in tempo reale (UC4.3 ).
+		\end{enumerate}
+	\item \textbf{Precondizione}: il sistema dispone di informazioni su diversi istanti di tempo;
+	\item \textbf{Postcondizione}: l’utente ha selezionato un istante di tempo diverso da quello di default e visualizza i dati riguardanti ad esso.%insicuro
 \end{itemize}
 
-\subsection{UC4 - Scelta della città}
-%nessun diagramma%
-\begin{itemize}
-\item \textbf{Attori primari}: utente generico;
-\item \textbf{Descrizione}: l’utente sceglie la città di cui vuole visualizzare la mappa;
-\item \textbf{Scenario principale}:
-	\begin{itemize}
-		\item l’utente interagisce con l’interfaccia di selezione città/zona;
-		\item l’utente seleziona una città/zona fra quelle proposte;
-	\end{itemize}
-\item \textbf{Precondizione}: l’utente visualizza correttamente (la pagina ed) il tasto per iniziare la selezione della città;
-\item \textbf{Postcondizione}:  l’utente visualizza correttamente la mappa della città/zona selezionata.
-\end{itemize}
-
-\subsection{UC5 - Scelta periodo dati}
-%nessun diagramma%
-\begin{itemize}
-\item \textbf{Attori primari}: utente generico;
-\item \textbf{Descrizione}: l’utente attraverso l’interfaccia del sistema, modifica il periodo in cui vuole visualizzare i dati;
-\item \textbf{Scenario principale}: 
-	\begin{itemize}
-		\item l’utente visualizza l’applicazione web correttamente;
-		\item Attraverso l’interfaccia l’utente può decidere di:
-			\begin{enumerate}
-				\item Modificare l’orario dei dati da visualizzare;
-				\item Modificare il giorno tra quelli disponibili;
-				\item Ritornare ai dati in tempo reale.
-			\end{enumerate}
-	\end{itemize}
-\item \textbf{Precondizione}: la pagina e l’interfaccia sono visualizzate correttamente, i dati sono presenti nel database;
-\item \textbf{Postcondizione}: l’utente visualizza i dati riguardanti l’intervallo di tempo selezionato.
-\end{itemize}
-
-\subsection{UC5.1 - Selezione dell'orario}
-%diagramma uc5.1%
+\subsubsection{UC4.1 - Selezione dell’orario}
 \begin{itemize}
 	\item \textbf{Attori primari}: utente generico;
 	\item \textbf{Descrizione}: l’utente seleziona un orario diverso da quello attuale per visualizzare i dati di quel momento;
-	\item \textbf{Scenario principale}:
-		\begin{itemize}
-			\item l’utente accede all’applicazione web;
-			\item seleziona l’orario di cui vuole visualizzare i dati nella mappa;
-			\item la mappa si aggiorna con i dati dell’ora selezionata dall’utente.
-		\end{itemize}
-	\item \textbf{Precondizione}: la pagina viene visualizzata correttamente, è possibile selezionare l’orario dei dati visualizzati;
-	\item \textbf{Postcondizione}: viene aggiornata la mappa all’orario scelto dall’utente.
+	\item \textbf{Scenario principale}:L’utente imposta un orario utilizzando l’interfaccia dell’applicazione web;
+	\item \textbf{Precondizione}: il sistema ha informazioni riguardanti tutti i diversi orari; %insicuro
+	\item \textbf{Postcondizione}:  l’orario viene aggiornato e la mappa visualizza i dati della modifica fatta.
 \end{itemize}
 
-\subsection{UC5.2 - Selezione della data}
-%diagramma uc5.2%
+\subsubsection{UC4.2 - Modifica della data}
 \begin{itemize}
 	\item \textbf{Attori primari}: utente generico;
-	\item \textbf{Descrizione}:  l’utente seleziona una data diversa da quella odierna e tra quelle disponibili e visualizza la mappa della data scelta;
-	\item \textbf{Scenario principale}:
-		\begin{itemize}
-			\item l’utente accede all’applicazione web;
-			\item l’utente seleziona una data diversa da quella attuale;
-			\item la mappa si aggiorna con i dati della data scelta
-		\end{itemize}
-	\item \textbf{Precondizione}: la pagina si visualizza correttamente, i dati relativi ai giorni presenti nel DB, l’interfaccia per selezionare un giorno viene visualizzata correttamente;
-	\item \textbf{Postcondizione}:  la heat map viene aggiornata con i dati del giorno selezionato all’orario di default.
+	\item \textbf{Descrizione}: l’utente seleziona una data diversa da quella odierna e tra quelle disponibili e visualizza la mappa della data scelta;
+	\item \textbf{Scenario principale}: l’utente seleziona una data diversa da quella attuale;
+	\item \textbf{Precondizione}: il sistema possiede informazioni su tutte le date fino a quella odierna;
+	\item \textbf{Postcondizione}: L’utente visualizza l’heat map$_{\scaleto{G}{3pt}}$ aggiornata con i dati del giorno selezionato all’orario attuale o all’orario scelto dall’utente stesso secondo quanto definito nella descrizione dell’UC4.1 ( ).
 \end{itemize}
 
-\subsection{UC5.3 - Ripristino dati a tempo reale}
-%diagramma uc5.3%
+\subsubsection{UC4.3 - Ripristino dati a tempo reale}
 \begin{itemize}
 	\item \textbf{Attori primari}: utente generico;
-	\item \textbf{Descrizione}:  l’utente dopo aver visionato i dati dell'intervallo futuro scelto può ritornare a vedere i dati in real time premendo il pulsante Reset to RT(placeholder);
-	\item \textbf{Scenario principale}: l’utente preme sul pulsante per tornare a visualizzare nuovamente i dati real time;
-	\item \textbf{Precondizione}:  l’utente ha utilizzato lo slider per cambiare orario o utilizzato anche il calendario per modificare il giorno;
-	\item \textbf{Postcondizione}: la mappa viene aggiornata con i dati real time.
+	\item \textbf{Descrizione}:  l’utente sceglie di osservare i dati in tempo reale;
+	\item \textbf{Scenario principale}: l’utente preme sul pulsante per il ripristino dei valori attuali di data e ora;
+	\item \textbf{Precondizione}: l’utente ha impostato una data e/o un’ora diversa dal valore di quella attuale (UC4.1 \& UC4.2);
+	\item \textbf{Postcondizione}: L’utente visualizza la mappa con i dati in tempo reale.
 \end{itemize}
 
-\subsection{UC6 - Elaborazione dati}
-%diagramma uc6%
-\begin{itemize}
-	\item \textbf{Attori primari}: fonti esterne;
-	\item \textbf{Descrizione}: ;
-	\item \textbf{Scenario principale}: ;
-	\item \textbf{Precondizione}: ;
-	\item \textbf{Postcondizione}: .
-\end{itemize}
+\section{Casi d'uso tra il front end ed il back end}
+%spiegazione sezione
 
-\subsection{UC6.1 - Elaborazione per la predizione dei dati}
-%nessun diagramma%
-\begin{itemize}
-	\item \textbf{Attori primari}: fonti esterne;
-	\item \textbf{Descrizione}: ;
-	\item \textbf{Scenario principale}: ;
-	\item \textbf{Precondizione}: ;
-	\item \textbf{Postcondizione}: .
-\end{itemize}
-
-\subsection{UC6.2 - Elaborazione per la visualizzazione dei dati}
-%nessun diagramma%
-\begin{itemize}
-	\item \textbf{Attori primari}: fonti esterne;
-	\item \textbf{Descrizione}: ;
-	\item \textbf{Scenario principale}: ;
-	\item \textbf{Precondizione}: ;
-	\item \textbf{Postcondizione}: .
-\end{itemize}
-
-\subsection{UC7 - Errore nell'elaborazione dati}
-%nessun diagramma%
-\begin{itemize}
-	\item \textbf{Attori primari}: fonti esterne;
-	\item \textbf{Descrizione}: ;
-	\item \textbf{Scenario principale}: ;
-	\item \textbf{Precondizione}: ;
-	\item \textbf{Postcondizione}: .
-\end{itemize}
-
-
-%%DA QUI CI SONO LE COSE FATTE DA CECHCIN%%
-\subsection{UC1 - Visualizzazione mappa}
+\subsection{Attori dei casi d'uso} %immagine errata
 \begin{center}
 	\begin{figure}[H]
-		\includegraphics[width=0.95\linewidth]{../immagini/attori_casi/vis_mappa.png}
-		\caption{UC1 - Visualizzazione mappa}
+		\includegraphics{../immagini/attori_casi/sistema_front_end.png}
+		\caption{Attore: Sistema front end}
 	\end{figure}
 \end{center}
+\subsubsection{Attori Primari}\label{FBattoriPrimari}
 \begin{itemize}
-	\item \textbf{Attori primari}: utente generico;
-	\item \textbf{Descrizione}: l'utente visualizza una mappa presente nell'applicazione web. Tale mappa è una heat map e presenta all'utente i dati analizzati dal prodotto;
-	\item \textbf{Scenario principale}: l'utente accede all'applicazione web e visualizza la mappa;
-	\item \textbf{Precondizione}: il sistema è attivo e funzionante;
-	\item \textbf{Postcondizione}: il sistema invia i dati alla pagina al caricamento presentando una mappa con tutti i dati per l'utente.
+	\item \textbf{Sistema front end:} Definisce una parte del sistema sviluppato che interagisce con il sistema back end;
 \end{itemize}
-\begin{center}
-	\begin{figure}[H]
-		\includegraphics[width=0.95\linewidth]{../immagini/attori_casi/uc2.png}
-		\caption{Schema generale: Scelta dati da visualizzare ed errori}
-	\end{figure}
-\end{center}
+
+\subsection{Elenco casi d'uso}\label{FBelencoCasiDuso}
+
+
+\subsubsection{UC5 - Richiesta dati}
+%insert uml
+\begin{itemize}
+	\item \textbf{Attori primari}: sistema front end;
+	\item \textbf{Descrizione}: il front end richiede dati al backend per generare la heat-map$_{\scaleto{G}{3pt}}$;
+	\item \textbf{Scenario principale}: il front end richiede al back end le informazioni necessarie alla generazione della heat map$_{\scaleto{G}{3pt}}$;
+	\item \textbf{Precondizione}: il front end non ha le informazioni per poter generare la mappa;
+	\item \textbf{Postcondizione}: Il front visualizza e riceve le nuove informazioni. 
+	\item \textbf{Generalizzazioni}: il front end può fare una delle seguenti richieste:
+	\begin{itemize}
+		\item Richiede i dati di un determinato giorno;
+		\item Richiede i dati in tempo reale;
+		\item Richiede i dati predetti.
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{UC5.1 - Richiesta dati di un determinato giorno}
+\begin{itemize}
+	\item \textbf{Attori primari}: sistema front end;
+	\item \textbf{Descrizione}: Il front end richiede le informazioni relative ad uno specifico giorno;
+	\item \textbf{Scenario principale}:  il front end richiede al back end le informazioni relative ad un giorno specifico;
+	\item \textbf{Precondizione}: L’utente esegue la modifica della data o dell’orario come definito rispettivamente nella descrizione di UC4.2 e UC4.1 ponendo un orario precedente a quello odierno;
+	\item \textbf{Postcondizione}: Il front end visualizza e riceve le informazioni relative al giorno selezionato. 
+\end{itemize}
+
+\subsubsection{UC5.2 - Richiesta dati in tempo reale}
+\begin{itemize}
+	\item \textbf{Attori primari}: sistema front end;
+	\item \textbf{Descrizione}: il front end richiede i dati reali più recentemente aggiunti;
+	\item \textbf{Scenario principale}: il front end richiede al back end le informazioni più recentemente aggiunte;
+	\item \textbf{Precondizione}: Viene eseguita la visualizzazione della mappa come definito nell’UC1 o avviene il ripristino dei dati in tempo reale come definito in UC4.3;
+	\item \textbf{Postcondizione}: Il front end ha ricevuto i dati ed è pronto alla generazione della heat map$_{\scaleto{G}{3pt}}$. 
+\end{itemize}
+
+\subsubsection{UC5.3 - Richiesta dei dati predetti}
+\begin{itemize}
+	\item \textbf{Attori primari}: sistema front end;
+	\item \textbf{Descrizione}: il front end richiede i dati riferiti allo stesso giorno ma ad un orario avanzato rispetto a quello attuale.
+	I dati sono ricavati dall’elaborazione, attraverso un modello di machine learning$_{\scaleto{G}{3pt}}$, dei dati reali acquisti;
+	\item \textbf{Scenario principale}: il front end richiede al back end i dati elaborati dal modello machine learning$_{\scaleto{G}{3pt}}$;
+	\item \textbf{Precondizione}: le informazioni vengono visualizzate sulla mappa come definito nell’UC1, impostando un orario successivo a quello attuale come descritto nell’UC4.1;
+	\item \textbf{Postcondizione}: Il front end ha ricevuto i dati ed è pronto alla generazione della heat map$_{\scaleto{G}{3pt}}$. 
+\end{itemize}
 
 
