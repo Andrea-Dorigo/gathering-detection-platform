@@ -19,31 +19,33 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 			\hline
 			\centering RSFF2 & Realizzazione di simulatori di altre sorgenti dati sia dei dati storici/in monitoraggio che dati previsionali & \centering Facoltativo & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$ } \\
 			\hline
-			\centering RSFO3.1  & Il sistema deve visualizzare un messaggio d'errore se vengono a mancare dati nel database   &\centering  Obbligatorio & \makecell[tc]{Interno\\UC3}  \\
+			\centering RSFO3  & Viene visualizzato un messaggio di errore per la mancanza dati nella generazione della heat-map  &\centering  Obbligatorio & \makecell[tc]{UC2}  \\
 			\hline
-			\centering RSFO4.1 & Archiviazione di tutti i dati acquisiti nel database & \centering Obbligatorio & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$ \\ UC2}  \\
+			\centering RSFO4 & Archiviazione di tutti i dati nel database & \centering Obbligatorio & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$ \\ UC5}  \\
 			\hline
-			\centering RSFO4.2 & Archiviazione di tutti i dati elaborati nel database & \centering Obbligatorio & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$ \\ UC2}  \\
+			\centering RSFO4.1 & Archiviazione di tutti i dati reali nel database & \centering Obbligatorio & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$ \\ UC5.1 \\ UC5.2}  \\
+			\hline
+			\centering RSFO4.2 & Archiviazione di tutti i dati elaborati dal modello ML nel database & \centering Obbligatorio & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$ \\ UC5.3}  \\
 			%fase 2
 			\hline
 			\centering RSFO5 & Elaborazione in tempo reale dei dati acquisiti da flussi esterni &\centering  Obbligatorio & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$}  \\
 			\hline
-			\centering RSFO5.1 & Identificazione di eventi che portano alla variazione del flusso di utenti &\centering  Obbligatorio & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$}  \\
+			\centering RSFD5.1 & Identificazione di eventi che portano alla variazione del flusso di utenti &\centering  Desiderabile & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$}  \\
 			\hline
 			\centering RSFD6 & Previsione dell'insorgenza futura di variazioni significative di flussi di persone & \centering Desiderabile & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$ }  \\
 			%fase 3
 			\hline
 			\centering RSFO7 & Visualizzazione dei dati elaborati attraverso heat map$_{\scaleto{G}{3pt}}$ &\centering  Obbligatorio & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$ \\ UC1}  \\
 			\hline
-			\centering RSFO8 & Apache Kafka$_{\scaleto{G}{3pt}}$ deve creare una comunicazione tra il programma con il software 'contapersone' e il database  &\centering  Obbligatorio &  \makecell[tc]{Interno } 	\\
+			\centering RSFO8 & Apache Kafka$_{\scaleto{G}{3pt}}$ deve creare una comunicazione tra il programma con il software 'contapersone' e il database  &\centering  Obbligatorio &  \makecell[tc]{Interno} 	\\
 			\hline
-			\centering RSFO9 & L'utente deve poter visualizzare i dati in tempo reale tramite heat map  &\centering  Obbligatorio &  \makecell[tc]{Interno \\ UC5} 	\\
+			\centering RSFO9 & L'utente deve poter visualizzare i dati in tempo reale tramite heat map$_{\scaleto{G}{3pt}}$  &\centering  Obbligatorio &  \makecell[tc]{Interno \\ UC1} 	\\
 			\hline
-			\centering RSFO10 & L'utente deve poter visualizzare i dati storicizzati tramite heat map  &\centering  Obbligatorio &  \makecell[tc]{Interno \\ UC5} 	\\
+			\centering RSFO10 & L'utente deve poter visualizzare i dati storicizzati tramite heat map$_{\scaleto{G}{3pt}}$  &\centering  Obbligatorio &  \makecell[tc]{Interno \\ UC1} 	\\
 			\hline
-			\centering RSFO11 & L'utente deve poter visualizzare una previsione tramite heat map  &\centering  Obbligatorio &  \makecell[tc]{Interno \\ UC5} 	\\
+			\centering RSFO11 & L'utente deve poter visualizzare una previsione tramite heat map$_{\scaleto{G}{3pt}}$  &\centering  Obbligatorio &  \makecell[tc]{Interno \\ UC1} 	\\
 			\hline
-			\centering RSFF12 & L'utente deve poter distinguere fra i dati simulati e quelli reali  &\centering  Facoltativo &  \makecell[tc]{Interno \\ UC1} 	\\
+			\centering RSFF12 & L'utente deve poter distinguere fra i dati simulati e quelli reali  &\centering  Facoltativo &  \makecell[tc]{Interno} 	\\
 			\hline
 			\centering RSFD13 & L'utente deve poter visualizzare un indice di affidabilità della previsione nella mappa  &\centering  Desiderabile &  \makecell[tc]{Interno} 	\\ 
 			\hline
@@ -51,46 +53,43 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 			\hline
 			\centering RSFF15 & L'utente deve poter applicare dei filtri ai dati (reali, simulati)  &\centering  Facoltativo &  \makecell[tc]{Interno } 	\\
 			\hline
-			\centering RSFF16 & L'utente ha la possibilità di scegliere le sorgenti dati da cui prelevare dati  &\centering  Facoltativo &  \makecell[tc]{Interno } 	\\
+			\centering RSFF16 & L'utente ha la possibilità di scegliere le sorgenti dati da cui prelevare dati  &\centering  Facoltativo &  \makecell[tc]{Interno} 	\\
 			\hline
-			\centering RSFO17 & Il sistema deve aggiornare la mappa automaticamente ogni 10 minuti &\centering Obbligatorio & \makecell[tc]{Interno \\ UC1} \\
+			\centering RSFO17 & Il sistema deve aggiornare la mappa automaticamente ogni 10 minuti &\centering Obbligatorio & \makecell[tc]{Interno} \\
 			\hline
-			\centering RSFO18 & Viene visualizzato un messaggio d'errore se almeno il 20\% delle sorgenti dati vengono a mancare &\centering Obbligatorio & \makecell[tc]{Interno \\ UC3.2} \\
+			\centering RSFO18 & Il modello di machine learning$_{\scaleto{G}{3pt}}$ deve poter salvare i pesi e le predizioni in un file & \centering Obbligatorio &  \makecell[tc]{V. esterno 2-02-2021} \\
 			\hline
-			\centering RSFO19 & Viene visualizzato un messaggio d'errore se il database non risponde alla richiesta della pagina web &\centering Obbligatorio & \makecell[tc]{Interno \\ UC3.3} \\
+			\centering RSFO18.1 & Il formato di file prodotto deve essere .h5 & \centering Obbligatorio & \makecell[tc]{V. esterno 2-02-2021} \\
 			\hline
-			\centering RSFO20 & L'utente può selezionare una città tra quelle disponibili &\centering Obbligatorio & \makecell[tc]{Interno \\ UC4} \\
+			\centering RSFO19 & Viene inviato un messaggio di errore al front end, dal back end, se non ci sono i dati richiesti &\centering Obbligatorio & \makecell[tc]{Interno \\ UC6} \\
+			\hline
+			\centering RSFO20 & L'utente può selezionare una città tra quelle disponibili &\centering Obbligatorio & \makecell[tc]{Interno \\ UC3} \\
 			\hline
 			\centering RSFO21 & Le zone visualizzate della città dipendono dalle sorgenti esterne utilizzate &\centering Obbligatorio & \makecell[tc]{Interno} \\
 			\hline
-			\centering RSFO22  & I dati acquisiti da telecamere in tempo reale devono avere data di riferimento associato  &\centering Obbligatorio & \makecell[tc]{Interno} \\
+			\centering RSFO22  & I dati acquisiti da telecamere in tempo reale devono avere data di riferimento associata  &\centering Obbligatorio & \makecell[tc]{Interno} \\
 			\hline
 			\centering RSFO22.1  & I dati acquisiti da telecamere in tempo reale devono avere un orario di riferimento associato &\centering Obbligatorio & \makecell[tc]{Interno} \\
 			\hline
 			\centering RSFO22.2  & I dati acquisiti da telecamere in tempo reale devono avere un luogo di riferimento associato &\centering Obbligatorio  & \makecell[tc]{Interno} \\
 			\hline
-			\centering RSFF23 & Possibilità da parte del sistema di scegliere di mostrare le predizioni in caso di mancanza di dati reali &\centering Facoltativo & \makecell[tc]{Interno} \\
+			\centering RSFF23 & Possibilità da parte del sistema di scegliere di mostrare i dati predetti in caso di mancanza di quelli reali &\centering Facoltativo & \makecell[tc]{Interno} \\
 			\hline
-			\centering RSFO24 & La selezione dell'orario è effettuata su intervalli di tempo di ora in ora &\centering Obbligatorio & \makecell[tc]{UC5.1} \\
+			\centering RSFO24 & La selezione dell'orario è effettuata su intervalli di tempo di ora in ora &\centering Obbligatorio & \makecell[tc]{UC4.1} \\
 			\hline
 			\centering RSFO25 & Il sistema dà priorità ai dati reali presenti nel database per la visualizzazione della mappa su periodi di tempo storici &\centering Obbligatorio & \makecell[tc]{Interno} \\
 			\hline
-			\centering RSFO26 & Il sistema aggiorna automaticamente la mappa alla selezione di un diverso orario &\centering Obbligatorio & \makecell[tc]{UC5.1} \\
+			\centering RSFO26 & Il sistema aggiorna automaticamente la mappa alla selezione di un diverso orario &\centering Obbligatorio & \makecell[tc]{UC4.1} \\
 			\hline
-			\centering RSFO27 & L'utente deve poter selezionare la data del giorno di cui vuole visualizzare i dati   &\centering Obbligatorio & \makecell[tc]{UC5.2} \\
+			\centering RSFO27 & L'utente deve poter selezionare la data del giorno di cui vuole visualizzare i dati   &\centering Obbligatorio & \makecell[tc]{UC4.2} \\
 			\hline
-			\centering RSFO28 & L'utente deve poter ripristinare la visione in tempo reale tramite un pulsante di ripristino &\centering Obbligatorio & \makecell[tc]{UC5.3} \\
+			\centering RSFO28 & L'utente deve poter ripristinare la visione in tempo reale tramite un pulsante di ripristino &\centering Obbligatorio & \makecell[tc]{UC4.3} \\
 			\hline
 			\centering RSFD29 & Il sistema deve poter prelevare dati da diverse fonti e formattarle nel tipo di default &\centering Desiderabile & \makecell[tc]{Interno} \\
 			\hline
 			\centering RSFO30 & Il sistema deve utilizzare un software 'contapersone' già allenato &\centering Obbligatorio & \makecell[tc]{V. esterno 28-01-2021} \\
 			\hline
-			\centering RSFO31 & Il modello di machine learning$_{\scaleto{G}{3pt}}$ deve poter salvare i pesi e le predizioni in un file & \centering Obbligatorio &  \makecell[tc]{V. esterno 2-02-2021} \\
-			\hline
-			\centering RSFO31.1 & Il formato di file prodotto deve essere .h5 & \centering Obbligatorio & \makecell[tc]{V. esterno 2-02-2021} \\
-			\hline
 			\rowcolor{white}
-
 			\caption[Requisiti funzionali]{Requisiti funzionali}\label{4.1}\\
 	\end{longtable}%\captionof{table}{Requisiti funzionali}
 
@@ -184,7 +183,7 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 		\hline
 		\centering RSVO7  & La web application dev'essere disponibile in un ambiente locale, di sviluppo, e di produzione & \centering  Obbligatorio  & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$} \\
 		\hline
-		\centering RSVF8 & Utilizzo di Keras per lo sviluppo del modello machine learning & \centering Facoltativo & \makecell[tc]{V. esterno 02-02-2021} \\
+		\centering RSVF8 & Utilizzo di Keras per lo sviluppo del modello machine learning$_{\scaleto{G}{3pt}}$ & \centering Facoltativo & \makecell[tc]{V. esterno 02-02-2021} \\
 		\hline
 		\centering RSVF9 & Utilizzo di Pandas come strumento per la manipolazione dei dati & \centering Facoltativo & \makecell[tc]{V. esterno 02-02-2021} \\
 		\hline
