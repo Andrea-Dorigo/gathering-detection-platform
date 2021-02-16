@@ -16,3 +16,6 @@
 !/documentazione/immagini/**/*/
 !/documentazione/immagini/**/*/*
 .DS_Store
+
+# modulo_2_count_people
+/proof_of_concept/modulo_2_count_people/darknet/yolov3.weights
