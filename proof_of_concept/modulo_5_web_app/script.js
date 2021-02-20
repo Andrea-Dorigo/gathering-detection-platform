@@ -1,5 +1,5 @@
 function initialize(){
-    var mymap = L.map('mapid').setView([-37.87, 175.475], 12);
+    var mymap = L.map('mapid').setView([41.890251, 12.492373], 12);
     /*L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?{foo}', {
         foo: 'bar',
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -10,11 +10,11 @@ function initialize(){
         maxZoom: 19
     }).addTo(mymap);
 
-    //L.marker([41.905697, 12.482327]).addTo(mymap).bindPopup('Piazza Spagna'); //prova per marker in piazza spagna 
-    
-    addressPoints = addressPoints.map(function (p) { return [p[0], p[1]]; });
+    //addressPoints = addressPoints.map(function (p) { return [p[0], p[1]]; });
+    console.log(RomaPoints);
+    RomaPoints = RomaPoints.map(function (p) { return [p[0], p[1]]; });
 
-    var heat = L.heatLayer(addressPoints).addTo(mymap);
+    var heat = L.heatLayer(RomaPoints).addTo(mymap);
 
     /*var heatMapPoints = [];
 
@@ -23,5 +23,4 @@ function initialize(){
         minOpacity: 1,
         gradient: {0.4: 'blue', 0.65: 'lime', 1: 'red'}
     }).addTo(mymap);*/
-    // coordinate roma prima riga setView([41.890251, 12.492373]
 }
