@@ -15,9 +15,9 @@ void extract_frames(const string &videoFilePath,vector<Mat>& frames){
     VideoCapture cap1;
 
 
-  	VideoCapture cap("sample.mp4");// open the video file
-  	// if(!cap.isOpened())  // check if we succeeded
-  	// 	CV_Error(CV_StsError, "Can not open Video file");
+  	VideoCapture cap("output.mp4");// open the video file
+  	if(!cap.isOpened())  // check if we succeeded
+  		CV_Error(cv::Error::StsError, "Can not open Video file");
 
   	//cap.get(CV_CAP_PROP_FRAME_COUNT) contains the number of frames in the video;
   	for(int frameNum = 0; frameNum < cap.get(cv::CAP_PROP_FRAME_COUNT);frameNum++)
@@ -54,9 +54,11 @@ void save_frames(vector<Mat>& frames, const string& outputDir){
 int main (){
 
 
+  system("ffmpeg -y -i sample.ts -c:v libx264 -c:a aac output.mp4");
+
   // cv::Mat image = cv::imread("data/dog.jpg");
   vector<Mat> frames;
-  extract_frames("~/sample.mp4",frames);
+  extract_frames("output.mp4",frames);
   //to save
   save_frames(frames, "frame");
   system("./darknet detect cfg/yolov3.cfg yolov3.weights frame0.jpg");
