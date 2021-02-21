@@ -1,9 +1,11 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <fstream>
 
 #include "/usr/include/opencv4/opencv2/opencv.hpp"
 using namespace std;
 using namespace cv;
+#include <boost/algorithm/string.hpp>
 
 /*
 This functions opens a video file and extracts the frames and put them into a vector of Mat(its the class for representing an img)
@@ -54,13 +56,43 @@ void save_frames(vector<Mat>& frames, const string& outputDir){
 int main (){
 
 
-  system("ffmpeg -y -i sample.ts -c:v libx264 -c:a aac output.mp4");
+	std::string text = "Let me split this into words";
+	std::vector<std::string> results;
 
-  // cv::Mat image = cv::imread("data/dog.jpg");
-  vector<Mat> frames;
-  extract_frames("output.mp4",frames);
-  //to save
-  save_frames(frames, "frame");
-  system("./darknet detect cfg/yolov3.cfg yolov3.weights frame0.jpg");
+	boost::split(results, text, [](char c){return c == ' ';});
+
+	cout << results[2] << endl;
+
+
+	//
+  // system("wget https://hddn00.skylinewebcams.com/live.m3u8?a=5mk7240d38l3g7s7har1k0nm20");
+	//
+	// fstream my_file;
+	// my_file.open("live.m3u8?a=5mk7240d38l3g7s7har1k0nm20", ios::in);
+	// if (!my_file) {
+	// 	cout << "No such file";
+	// }
+	// else {
+	// 	char ch;
+	//
+	// 	while (1) {
+	// 		my_file >> ch;
+	// 		if (my_file.eof())
+	// 			break;
+	//
+	// 		cout << ch;
+	// 	}
+	//
+	// }
+	// my_file.close();
+
+  // system("ffmpeg -y -i sample.ts -c:v libx264 -c:a aac output.mp4");
+  //
+  // // cv::Mat image = cv::imread("data/dog.jpg");
+  // vector<Mat> frames;
+  // extract_frames("output.mp4",frames);
+  // //to save
+  // save_frames(frames, "frame");
+  // system("./darknet detect cfg/yolov3.cfg yolov3.weights frame0.jpg");
   return 0;
 }
