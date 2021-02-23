@@ -128,7 +128,7 @@ In questo capitolo vengono elencati i casi d'uso individuati per il progetto GDP
 \subsection{Elenco casi d'uso}\label{FBelencoCasiDuso}
 
 
-\subsubsection{UC5 - Richiesta dati al back end}\label{richiestaDati}
+\subsubsection{UC5 - Visualizzazione delle informazioni dal back end}\label{richiestaDati}
 \begin{center}
 	\begin{figure}[H]
 		\includegraphics[scale=0.7]{../immagini/attori_casi/uc5_uc51_uc52_uc53.png}
@@ -137,51 +137,51 @@ In questo capitolo vengono elencati i casi d'uso individuati per il progetto GDP
 \end{center}
 \begin{itemize}
 	\item \textbf{Attori primari}: sistema front end$_{\scaleto{G}{3pt}}$;
-	\item \textbf{Descrizione}: il front end$_{\scaleto{G}{3pt}}$ richiede dati al backend per generare la heat-map$_{\scaleto{G}{3pt}}$;
-	\item \textbf{Scenario principale}: il front end$_{\scaleto{G}{3pt}}$ richiede al back end$_{\scaleto{G}{3pt}}$ le informazioni necessarie alla generazione della heat map$_{\scaleto{G}{3pt}}$;
+	\item \textbf{Descrizione}: il front end$_{\scaleto{G}{3pt}}$ effettua una richiesta per il recupero dei dati al back end$_{\scaleto{G}{3pt}}$ per generare la heat-map$_{\scaleto{G}{3pt}}$. Il back end$_{\scaleto{G}{3pt}}$ esegue a richiesta ed invia le informazioni da visualizzare al front end$_{\scaleto{G}{3pt}}$;
+	\item \textbf{Scenario principale}: il front end$_{\scaleto{G}{3pt}}$ richiede al back end$_{\scaleto{G}{3pt}}$ le informazioni necessarie alla generazione della heat map$_{\scaleto{G}{3pt}}$, il front end$_{\scaleto{G}{3pt}}$ visualizza le informazioni ricevute dal back end$_{\scaleto{G}{3pt}}$;
 	\item \textbf{Precondizione}: il front end$_{\scaleto{G}{3pt}}$ non ha le informazioni per poter generare la mappa;
 	\item \textbf{Postcondizione}: il front end$_{\scaleto{G}{3pt}}$ visualizza e riceve le nuove informazioni. 
 	\item \textbf{Generalizzazioni}: il front end$_{\scaleto{G}{3pt}}$ può fare una delle seguenti richieste:
 	\begin{itemize}
-		\item Richiede i dati di uno specifico istante (UC5.1\S~\ref{richiestaDatiGiorno});
-		\item Richiede i dati in tempo reale (UC5.2 \S~\ref{richiestaDatiTempoReale});
-		\item Richiede i dati predetti (UC5.1 \S~\ref{richiestaDatiPredetti}).
+		\item Visualizza i dati di uno specifico istante (UC5.1\S~\ref{richiestaDatiGiorno});
+		\item Visualizza i dati in tempo reale (UC5.2 \S~\ref{richiestaDatiTempoReale});
+		\item Visualizza i dati predetti (UC5.1 \S~\ref{richiestaDatiPredetti}).
 	\end{itemize}
 	\item \textbf{Estensione}: il front end$_{\scaleto{G}{3pt}}$ effettua la richiesta al back end$_{\scaleto{G}{3pt}}$, il back end$_{\scaleto{G}{3pt}}$ non invia nessun dato nella risposta (UC6 \S~\ref{VisualizzazioneMancanzaBackEnd} )
 \end{itemize}
 
-\subsubsection{UC5.1 - Richiesta dati di uno specifico istante}\label{richiestaDatiGiorno}
+\subsubsection{UC5.1 - Visualizzazione dei dati di uno specifico istante}\label{richiestaDatiGiorno}
 \begin{itemize}
 	\item \textbf{Attori primari}: sistema front end$_{\scaleto{G}{3pt}}$;
-	\item \textbf{Descrizione}: il front end$_{\scaleto{G}{3pt}}$ richiede le informazioni relative ad uno specifico istante di tempo;
-	\item \textbf{Scenario principale}:  il front end$_{\scaleto{G}{3pt}}$ richiede al back end$_{\scaleto{G}{3pt}}$ le informazioni relative all'istante di tempo specificato;
+	\item \textbf{Descrizione}: il front end$_{\scaleto{G}{3pt}}$ richiede le informazioni relative ad uno specifico istante di tempo, vengono visualizzate le informazioni inviate dal back end$_{\scaleto{G}{3pt}}$;
+	\item \textbf{Scenario principale}:  il front end$_{\scaleto{G}{3pt}}$ richiede al back end$_{\scaleto{G}{3pt}}$ le informazioni relative all'istante di tempo specificato, il back end$_{\scaleto{G}{3pt}}$ invia le informazioni da visualizzare al front end$_{\scaleto{G}{3pt}}$;
 	\item \textbf{Precondizione}: l’utente esegue la modifica della data o dell’orario come definito rispettivamente nella descrizione di UC4.2 (\S~\ref{modificaData}) e UC4.1 (\S~\ref{selezioneOrario}) ponendo un orario precedente a quello attuale;
 	\item \textbf{Postcondizione}: il front end$_{\scaleto{G}{3pt}}$ visualizza e riceve le informazioni relative all'istante di tempo impostato. 
 \end{itemize}
 
-\subsubsection{UC5.2 - Richiesta dei dati in tempo reale}\label{richiestaDatiTempoReale}
+\subsubsection{UC5.2 - Visualizzazione dei dati in tempo reale}\label{richiestaDatiTempoReale}
 \begin{itemize}
 	\item \textbf{Attori primari}: sistema front end$_{\scaleto{G}{3pt}}$;
-	\item \textbf{Descrizione}: il front end$_{\scaleto{G}{3pt}}$ richiede i dati reali più recentemente aggiunti;
-	\item \textbf{Scenario principale}: il front end$_{\scaleto{G}{3pt}}$ richiede al back end$_{\scaleto{G}{3pt}}$ le informazioni più recentemente aggiunte;
+	\item \textbf{Descrizione}: il front end$_{\scaleto{G}{3pt}}$ visualizza i dati reali più recentemente aggiunti;
+	\item \textbf{Scenario principale}: il front end$_{\scaleto{G}{3pt}}$ richiede al back end$_{\scaleto{G}{3pt}}$ le informazioni più recentemente aggiunte, una volta ricevute il front end$_{\scaleto{G}{3pt}}$ le visualizza;
 	\item \textbf{Precondizione}: viene eseguita la visualizzazione della mappa come definito nell’UC1 (\S~\ref{visualizzazioneInfoMappa}) o avviene il ripristino dei dati in tempo reale come definito in UC4.3 (\S~\ref{ripristinoTempoReale});
-	\item \textbf{Postcondizione}: il front end$_{\scaleto{G}{3pt}}$ ha ricevuto i dati ed è pronto alla generazione della heat map$_{\scaleto{G}{3pt}}$. 
+	\item \textbf{Postcondizione}: il front end$_{\scaleto{G}{3pt}}$ ha ricevuto e visualizzato i dati ed è pronto alla generazione della heat map$_{\scaleto{G}{3pt}}$. 
 \end{itemize}
 
-\subsubsection{UC5.3 - Richiesta dati predetti}\label{richiestaDatiPredetti}
+\subsubsection{UC5.3 - Visualizzazione dei dati predetti}\label{richiestaDatiPredetti}
 \begin{itemize}
 	\item \textbf{Attori primari}: sistema front end$_{\scaleto{G}{3pt}}$;
-	\item \textbf{Descrizione}: il front end$_{\scaleto{G}{3pt}}$ richiede i dati riferiti allo stesso giorno ma ad un orario avanzato rispetto a quello attuale.
-	I dati sono ricavati dall’elaborazione, attraverso un modello di machine learning$_{\scaleto{G}{3pt}}$, dei dati reali acquisti;
-	\item \textbf{Scenario principale}: il front end$_{\scaleto{G}{3pt}}$ richiede al back end$_{\scaleto{G}{3pt}}$ i dati elaborati dal modello machine learning$_{\scaleto{G}{3pt}}$;
+	\item \textbf{Descrizione}: il front end$_{\scaleto{G}{3pt}}$ richiede i dati riferiti allo stesso giorno, ma ad un orario avanzato rispetto a quello attuale.
+	I dati sono ricavati dall’elaborazione, attraverso un modello di machine learning$_{\scaleto{G}{3pt}}$, dei dati reali acquisti. Una volta ricevuti i dati il front end$_{\scaleto{G}{3pt}}$ li può visualizzare;
+	\item \textbf{Scenario principale}: il front end$_{\scaleto{G}{3pt}}$ richiede al back end$_{\scaleto{G}{3pt}}$ i dati elaborati dal modello machine learning$_{\scaleto{G}{3pt}}$. Completata la richiesta il front end$_{\scaleto{G}{3pt}}$ visualizzerà i dati inviati dal back end$_{\scaleto{G}{3pt}}$;
 	\item \textbf{Precondizione}: le informazioni vengono visualizzate sulla mappa come definito nell’UC1 (\S~\ref{visualizzazioneInfoMappa}), impostando un orario successivo a quello attuale come descritto nell’UC4.1 (\S~\ref{selezioneOrario});
-	\item \textbf{Postcondizione}: il front end$_{\scaleto{G}{3pt}}$ ha ricevuto i dati ed è pronto alla generazione della heat map$_{\scaleto{G}{3pt}}$. 
+	\item \textbf{Postcondizione}: il front end$_{\scaleto{G}{3pt}}$ ha ricevuto e visualizzato i dati ed è pronto alla generazione della heat map$_{\scaleto{G}{3pt}}$. 
 \end{itemize}
 
 \subsubsection{UC6 - Visualizzazione messaggio di mancanza dati dal back end}\label{VisualizzazioneMancanzaBackEnd}
 \begin{itemize}
 	\item \textbf{Attori primari}: sistema front end$_{\scaleto{G}{3pt}}$;
-	\item \textbf{Descrizione}: il front end$_{\scaleto{G}{3pt}}$ riceve un messaggio di errore per la mancanza dati rispetto alla richiesta data;
+	\item \textbf{Descrizione}: il front end$_{\scaleto{G}{3pt}}$ riceve un messaggio di errore per la mancanza dati rispetto alla richiesta di visualizzazione effettuata;
 	\item \textbf{Scenario principale}: 
 	\begin{enumerate}
 		\item Il front end$_{\scaleto{G}{3pt}}$ richiede dei dati specifici al back end$_{\scaleto{G}{3pt}}$;
@@ -189,6 +189,6 @@ In questo capitolo vengono elencati i casi d'uso individuati per il progetto GDP
 		\item Il front end$_{\scaleto{G}{3pt}}$ ritenta la richiesta di informazioni. 
 	\end{enumerate}
 	\item \textbf{Precondizione}: il front end$_{\scaleto{G}{3pt}}$ effettua una richiesta di dati, il back end$_{\scaleto{G}{3pt}}$ non ha a disposizione i dati richiesti;
-	\item \textbf{Postcondizione}: il front end$_{\scaleto{G}{3pt}}$ riceve un messaggio di errore per la mancanza dei dati richiesti. 
+	\item \textbf{Postcondizione}: il front end$_{\scaleto{G}{3pt}}$ riceve un messaggio di errore per la mancanza dei dati da visualizzare. 
 \end{itemize}
 
