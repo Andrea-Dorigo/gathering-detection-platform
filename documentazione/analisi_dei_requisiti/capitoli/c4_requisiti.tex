@@ -47,13 +47,13 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 			\hline
 			\centering RSFF12 & L'utente deve poter distinguere fra i dati simulati e quelli reali  &\centering  Facoltativo &  \makecell[tc]{Interno} 	\\
 			\hline
-			\centering RSFD13 & L'utente deve poter visualizzare un indice di affidabilità della previsione nella mappa  &\centering  Desiderabile &  \makecell[tc]{Interno} 	\\ 
+			\centering RSFD13 & L'utente deve poter visualizzare un indice di affidabilità della previsione nella mappa  &\centering  Desiderabile &  \makecell[tc]{Interno \\ UC7} 	\\ 
 			\hline
-			\centering RSFD14 & L'utente deve poter visualizzare un indice di affidabilità dei dati in tempo reale nella mappa  &\centering  Desiderabile &  \makecell[tc]{Interno} 	\\
+			\centering RSFD14 & L'utente deve poter visualizzare un indice di affidabilità dei dati in tempo reale nella mappa  &\centering  Desiderabile &  \makecell[tc]{Interno \\ UC7} 	\\
 			\hline
-			\centering RSFF15 & L'utente deve poter applicare dei filtri ai dati (reali, simulati)  &\centering  Facoltativo &  \makecell[tc]{Interno } 	\\
+			\centering RSFF15 & L'utente deve poter applicare dei filtri ai dati (reali, simulati)  &\centering  Facoltativo &  \makecell[tc]{Interno \\ UC8.1 } 	\\
 			\hline
-			\centering RSFF16 & L'utente ha la possibilità di scegliere le sorgenti dati da cui prelevare dati  &\centering  Facoltativo &  \makecell[tc]{Interno} 	\\
+			\centering RSFF16 & L'utente ha la possibilità di scegliere le sorgenti dati da cui prelevare dati  &\centering  Facoltativo &  \makecell[tc]{Interno \\ UC8.2} 	\\
 			\hline
 			\centering RSFO17 & Il sistema deve aggiornare la mappa automaticamente ogni 10 minuti &\centering Obbligatorio & \makecell[tc]{Interno} \\
 			\hline
@@ -89,12 +89,14 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 			\hline
 			\centering RSFO30 & Il sistema deve utilizzare un software 'contapersone' già allenato &\centering Obbligatorio & \makecell[tc]{V. esterno 28-01-2021} \\
 			\hline
+			\centering RSFF31 & L'utente può reperire il manuale d'uso  &\centering Facoltativo & \makecell[tc]{Interno \\ UC9} \\
+			\hline
 			\rowcolor{white}
 			\caption[Requisiti funzionali]{Requisiti funzionali}\label{4.1}\\
 	\end{longtable}%\captionof{table}{Requisiti funzionali}
 
 \end{center}
-
+\clearpage
 \section{Requisiti prestazionali}\label{RequisitiPrestazionali}
 \def\tabularxcolumn#1{m{#1}}
 {\rowcolors{2}{RawSienna!90!RawSienna!20}{RawSienna!70!RawSienna!40}
@@ -177,7 +179,7 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 		\hline
 		\centering RSVO3  & Il sistema deve far uso dell'ecosistema Apache Kafka$_{\scaleto{G}{3pt}}$ &\centering  Obbligatorio  & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$} \\
 		\hline
-		\centering RSVO4  & Il back end$_{\scaleto{G}{3pt}}$ del prodotto viene sviluppato utilizzando il linguaggio Java$_{\scaleto{G}{3pt}}$ &\centering  Obbligatorio  & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$} \\
+		\centering RSVO4  & Il back end$_{\scaleto{G}{3pt}}$ del prodotto viene sviluppato utilizzando il linguaggio Java$_{\scaleto{G}{3pt}}$ &\centering  Facoltativo  & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$} \\
 		\hline
 		\centering RSVO5  & Supporto browser Chrome, Firefox con versioni massimo di 3 anni &\centering  Obbligatorio  & \makecell[tc]{Interno} \\
 		\hline
@@ -236,13 +238,13 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 		\hline
 		\makecell[tc]{RSFF12} & \makecell[tc]{Interno}\\
 		\hline
-		\makecell[tc]{RSFD13} & \makecell[tc]{Interno}\\
+		\makecell[tc]{RSFD13} & \makecell[tc]{Interno \\ UC7}\\
 		\hline
-		\makecell[tc]{RSFD14} & \makecell[tc]{Interno}\\
+		\makecell[tc]{RSFD14} & \makecell[tc]{Interno \\ UC7}\\
 		\hline
-		\makecell[tc]{RSFF15} & \makecell[tc]{Interno}\\
+		\makecell[tc]{RSFF15} & \makecell[tc]{Interno \\ UC8.1}\\
 		\hline
-		\makecell[tc]{RSFF16} & \makecell[tc]{Interno}\\
+		\makecell[tc]{RSFF16} & \makecell[tc]{Interno \\ UC8.2}\\
 		\hline
 		\makecell[tc]{RSFO17} & \makecell[tc]{Interno}\\
 		\hline		
@@ -277,6 +279,8 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 		\makecell[tc]{RSFD29} & \makecell[tc]{Interno}\\
 		\hline
 		\makecell[tc]{RSFO30} & \makecell[tc]{V. esterno 28-01-2021}\\
+		\hline
+		\makecell[tc]{RSFF31} & \makecell[tc]{Interno \\ UC9}\\
 		\hline
 		\makecell[tc]{RSPO1} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$}\\
 		\hline
@@ -362,7 +366,15 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 		\hline
 		\makecell[c]{UC6} & \makecell[c]{RSFO19} \\
 		\hline
-		\makecell[c]{Interno} &\makecell[c]{RSFO8\\RSFO9\\RSFO10\\RSFO11\\RSFF12\\RSFD13\\RSFD14\\RSFF15\\RSFF16\\RSFO17\\RSFO19\\RSFO20\\RSFO21\\RSFO22\\RSFO22.1\\RSFO22.2\\RSFF23\\RSFO25\\RSFD29\\RSPO2\\RSPO3\\RSPO4\\RSPF5\\RSQO1\\RSQF2\\RSQF3\\RSQF4\\RSVO1\\RSVO1.1\\RSVO1.2} \\
+		\makecell[c]{UC7} & \makecell[c]{RSFD13 \\ RSFD14} \\
+		\hline
+		\makecell[c]{UC8.1} & \makecell[c]{RSFF15} \\
+		\hline
+		\makecell[c]{UC8.2} & \makecell[c]{RSFF16} \\
+		\hline
+		\makecell[c]{UC9} & \makecell[c]{RSFF31} \\
+		\hline
+		\makecell[c]{Interno} &\makecell[c]{RSFO8\\RSFO9\\RSFO10\\RSFO11\\RSFF12\\RSFD13\\RSFD14\\RSFF15\\RSFF16\\RSFO17\\RSFO19\\RSFO20\\RSFO21\\RSFO22\\RSFO22.1\\RSFO22.2\\RSFF23\\RSFO25\\RSFD29\\RSPO2\\RSPO3\\RSPO4\\RSPF5\\RSQO1\\RSQF2\\RSQF3\\RSQF4\\RSVO1\\RSVO1.1\\RSVO1.2 \\ RSFF31} \\
 		\hline
 		\makecell[c]{Verbale esterno 17-12-2020} & \makecell[c]{RSFO1} \\
 		\hline

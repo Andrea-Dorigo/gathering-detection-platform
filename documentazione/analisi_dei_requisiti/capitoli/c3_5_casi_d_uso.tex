@@ -1,7 +1,7 @@
 \chapter{Casi d'uso}\label{casiDuso}
 In questo capitolo vengono elencati i casi d'uso individuati per il progetto GDP in accordo con il proponente. Ogni caso d'uso indica un'interazione tra uno o più attori e il sistema. Questa interazione genera uno scenario che è l'insieme delle azioni che hanno in comune uno scopo finale per un attore.
 
-\section{Casi d'uso tra un utente ed il front end}
+\section{Casi d'uso tra un utente e il front end}
 %spiegazione della sezione
 \subsection{Attori dei casi d'uso}
 \begin{center}
@@ -110,7 +110,7 @@ In questo capitolo vengono elencati i casi d'uso individuati per il progetto GDP
 	\item \textbf{Postcondizione}: l’utente visualizza la mappa con i dati in tempo reale.
 \end{itemize}
 
-\section{Casi d'uso tra il front end ed il back end}\label{ucFrontEndBackEnd}
+\section{Casi d'uso tra il front end e il back end}\label{ucFrontEndBackEnd}
 %spiegazione sezione
 
 \subsection{Attori dei casi d'uso} %immagine errata
@@ -132,7 +132,7 @@ In questo capitolo vengono elencati i casi d'uso individuati per il progetto GDP
 \begin{center}
 	\begin{figure}[H]
 		\includegraphics[scale=0.7]{../immagini/attori_casi/uc5_uc51_uc52_uc53.png}
-		\caption{UC5 - Richiesta dati al back end}
+		\caption{UC5 - Visualizzazione delle informazioni dal back end}
 	\end{figure}
 \end{center}
 \begin{itemize}
@@ -192,3 +192,85 @@ In questo capitolo vengono elencati i casi d'uso individuati per il progetto GDP
 	\item \textbf{Postcondizione}: il front end$_{\scaleto{G}{3pt}}$ riceve un messaggio di errore per la mancanza dei dati da visualizzare. 
 \end{itemize}
 
+\section{Casi d'uso facoltativi tra un utente e il front end}
+%spiegazione della sezione
+L'elenco dei casi d'uso in questa sezione individuano requisiti sviluppabili successivamente a quelli obbligatori descritti nelle sezioni precedenti.
+\subsection{Attori dei casi d'uso}
+\begin{center}
+	\begin{figure}[H]
+		\includegraphics{../immagini/attori_casi/utente_generico.png}
+		\caption{Attore: utente generico}
+	\end{figure}
+\end{center}
+\subsubsection{Attori Primari}\label{UFattoriPrimariFac}
+\begin{itemize}
+	\item \textbf{Utente generico:} definisce l'utente generico che utilizza l'applicazione web;
+\end{itemize}
+
+\subsection{Elenco casi d'uso}\label{UFelencoCasiDusoFac}
+\subsubsection{UC7 - Visualizzazione indici di affidabilità}\label{indiciAffidabilita}
+\begin{center}
+	\begin{figure}[H]
+		\includegraphics[scale=0.7]{../immagini/attori_casi/uc7.png}
+		\caption{UC7 - Visualizzazione indici di affidabilità}
+	\end{figure}
+\end{center}
+\begin{itemize}
+	\item \textbf{Attori primari}: utente generico;
+	\item \textbf{Descrizione}: l'utente può visualizzare gli indici di affidabilità dei dati reali raccolti e l'indice di affidabilità delle predizioni svolte dal modello ML;
+	\item \textbf{Scenario principale}: l'utente attraverso l'interfaccia seleziona un pulsante per visualizzare gli indici di affidabilità;
+	\item \textbf{Precondizione}: il front end$_{\scaleto{G}{3pt}}$ dispone degli indici relativi ai dati reali e predetti;
+	\item \textbf{Postcondizione}: l'utente visualizza correttamente gli indici di affidabilità dei dati reali e predetti. 
+\end{itemize}
+
+\subsubsection{UC8 - Impostazioni avanzate sui dati}\label{impostazioniAvanzate}
+\begin{center}
+	\begin{figure}[H]
+		\includegraphics[scale=0.7]{../immagini/attori_casi/uc8.png}
+		\caption{UC8 - Impostazioni avanzate sui dati}
+	\end{figure}
+\end{center}
+\begin{itemize}
+	\item \textbf{Attori primari}: utente generico;
+	\item \textbf{Descrizione}: l'utente attraverso l'interfaccia del front end$_{\scaleto{G}{3pt}}$ può applicare filtri sui dati e modificare le sorgenti esterne da cui vengono prelevate le informazioni;
+	\item \textbf{Scenario principale}: attraverso l'interfaccia l'utente può:
+	\begin{itemize}
+		\item Applicare filtri ai dati \S~\ref{applicazioneFiltri};
+		\item Modificare le sorgenti esterne da cui vengono prelevate le informazioni \S~\ref{selezioneSorgenti};
+	\end{itemize}
+	\item \textbf{Precondizione}: l'utente visualizza correttamente l'interfaccia e sono disponibili varie sorgenti esterne;
+	\item \textbf{Postcondizione}: l'utente applica le impostazioni scelte ai dati e viene aggiornata la mappa di conseguenza. 
+\end{itemize}
+
+\subsubsection{UC8.1 - Applicazione filtri ai dati}\label{applicazioneFiltri}
+\begin{itemize}
+	\item \textbf{Attori primari}: utente generico;
+	\item \textbf{Descrizione}: l'utente attraverso l'interfaccia del front end$_{\scaleto{G}{3pt}}$ può applicare filtri sui dati e modificare le sorgenti esterne da cui vengono prelevate le informazioni;
+	\item \textbf{Scenario principale}: 
+	\item \textbf{Precondizione}: l'utente visualizza correttamente l'interfaccia;
+	\item \textbf{Postcondizione}: l'utente applica i filtri ai dati e viene aggiornata la mappa di conseguenza. 
+\end{itemize}
+
+\subsubsection{UC8.2 - Selezione sorgenti esterne da cui prelevare i dati}\label{selezioneSorgenti}
+\begin{itemize}
+	\item \textbf{Attori primari}: utente generico;
+	\item \textbf{Descrizione}: l'utente attraverso l'interfaccia del front end$_{\scaleto{G}{3pt}}$ dispone di un menù in cui può selezionare le sorgenti che vuole utilizzare per il reperimento dei dati;
+	\item \textbf{Scenario principale}: l'utente seleziona la modifica delle sorgenti esterne e indica quelle da cui vuole prelevare informazioni;
+	\item \textbf{Precondizione}: l'utente visualizza correttamente l'interfaccia, sono disponibili varie sorgenti esterne;
+	\item \textbf{Postcondizione}: l'utente visualizza la mappa con i soli dati delle sorgenti scelte. 
+\end{itemize}
+
+\subsubsection{UC9 - Recupero manuale utente}\label{recuperoManualeUtente}
+\begin{center}
+	\begin{figure}[H]
+		\includegraphics[scale=0.7]{../immagini/attori_casi/uc9.png}
+		\caption{UC9 - Recupero manuale utente}
+	\end{figure}
+\end{center}
+\begin{itemize}
+	\item \textbf{Attori primari}: utente generico;
+	\item \textbf{Descrizione}: l'utente attraverso l'interfaccia del front end$_{\scaleto{G}{3pt}}$ può recuperare il manuale d'uso per informazioni sull'utilizzo dell'applicazione web;
+	\item \textbf{Scenario principale}: l'utente seleziona il link al recupero del manuale utente;
+	\item \textbf{Precondizione}: il front end$_{\scaleto{G}{3pt}}$ dispone del manuale utente;
+	\item \textbf{Postcondizione}: l'utente dispone del manuale utente sul proprio dispositivo e lo può visualizzare. 
+\end{itemize}
