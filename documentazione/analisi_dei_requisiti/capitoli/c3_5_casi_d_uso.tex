@@ -1,5 +1,5 @@
 \chapter{Casi d'uso}\label{casiDuso}
-In questo capitolo vengono elencati i casi d'uso individuati per il progetto GDP in accordo con il proponente. Ogni caso d'uso indica un'interazione tra uno o più attori e il sistema. Questa interazione genera uno scenario che è l'insieme delle azioni che hanno in comune uno scopo finale per un attore.
+In questo capitolo vengono elencati i casi d'uso$_G$ individuati per il progetto \textit{GDP: Gathering Detection Platform} in accordo con il proponente$_{\scaleto{G}{3pt}}$. Ogni caso d'uso$_{\scaleto{G}{3pt}}$ indica un'interazione tra uno o più attori e il sistema. Questa interazione genera uno scenario, cioè l'insieme delle azioni che hanno in comune uno scopo finale per un attore.
 
 \section{Casi d'uso tra un utente e il front end}
 %spiegazione della sezione
@@ -28,8 +28,8 @@ In questo capitolo vengono elencati i casi d'uso individuati per il progetto GDP
 	\item \textbf{Attori primari}: utente generico;
 	\item \textbf{Descrizione}: l’utente accede all’applicazione web e visualizza la heat map$_{\scaleto{G}{3pt}}$. La mappa mostra la città impostata di default o quella selezionata tra quelle a disposizione, come definito nell’UC3(\S~\ref{selezioneCitta}). Le informazioni vengono ricavate dall’orario e la data impostate dall’utente come indicato nel UC4.1(\S~\ref{selezioneOrario}) e UC4.2(\S~\ref{modificaData}) o si utilizzano i dati in tempo reale quindi usando l’orario attuale;
 	\item \textbf{Scenario principale}: L’utente accede all’applicazione web e visualizza la heat map$_{\scaleto{G}{3pt}}$ della città;
-	\item \textbf{Precondizione}: il front end$_G$ può generare la mappa; la città, la data, l’ora sono state indicate dall’utente, seguendo quanto descritto rispettivamente nell'’UC3 (\S~\ref{selezioneCitta}),nell'UC4.2(\S~\ref{modificaData}) e nell'UC4.1(\S~\ref{selezioneOrario}), o vengono utilizzate quelle di default, quindi data e ora sono quelle odierne di sistema per dati in tempo reale;
-	\item \textbf{Postcondizione}: l’utente visualizza la heat map$_{\scaleto{G}{3pt}}$ con i dati ricavati nell’istante di tempo selezionato, come definito nell’UC4 (\S~\ref{impostazioneIstanteTempo}), e alla città scelta fra quelle disponibili come descritto nella definizione dell’UC3 (\S~\ref{selezioneCitta}), oppure visualizza quella riguardante la città impostata di default;
+	\item \textbf{Precondizione}: il front end$_G$ può generare la mappa; la città, la data, l’ora sono state indicate dall’utente, seguendo quanto descritto rispettivamente nell'’UC3 (\S~\ref{selezioneCitta}),nell'UC4.2(\S~\ref{modificaData}) e nell'UC4.1(\S~\ref{selezioneOrario}), o vengono utilizzate quelle di default, quindi data e ora sono quelle odierne di sistema per dati in tempo reale e la città è quella impostata di default;
+	\item \textbf{Postcondizione}: l’utente visualizza la heat map$_{\scaleto{G}{3pt}}$ con i dati ricavati nell’istante di tempo selezionato, come definito nell’UC4 (\S~\ref{impostazioneIstanteTempo}), e alla città scelta fra quelle disponibili come descritto nella definizione dell’UC3 (\S~\ref{selezioneCitta});
 	\item \textbf{Estensioni}: l’utente accede all’applicazione web, il front end$_{\scaleto{G}{3pt}}$, rilevando la richiesta di generazione della mappa, individua una mancanza di dati per la sua costruzione e di conseguenza viene visualizzato un messaggio relativo all’errore riscontrato (UC2 \S~\ref{visualizzazioneMessaggioMancanzaDati});
 \end{itemize}
 
@@ -62,12 +62,12 @@ In questo capitolo vengono elencati i casi d'uso individuati per il progetto GDP
 	\item \textbf{Postcondizione}:   l’utente ha selezionato la città che vuole visualizzare, la heat-map$_{\scaleto{G}{3pt}}$ si aggiorna in base alla scelta fatta.
 \end{itemize}
 
-\subsubsection{UC4 - Impostazione dell’istante di cui visualizzare la heat map$_{\scaleto{G}{3pt}}$
+\subsubsection{UC4 - Selezione dell’istante di cui visualizzare i dati nella heat map$_{\scaleto{G}{3pt}}$
 } \label{impostazioneIstanteTempo}%parzialmente corretto
 \begin{center}
 	\begin{figure}[H]
 		\includegraphics{../immagini/attori_casi/uc4.png}
-		\caption{UC4 - Impostazione dell’istante di cui visualizzare la heat map}
+		\caption{UC4 - Selezione dell’istante di cui visualizzare i dati nella heat map}
 	\end{figure}
 \end{center}
 \begin{itemize}
@@ -122,7 +122,7 @@ In questo capitolo vengono elencati i casi d'uso individuati per il progetto GDP
 \end{center}
 \subsubsection{Attori Primari}\label{FBattoriPrimari}
 \begin{itemize}
-	\item \textbf{Sistema front end:} Definisce una parte del sistema sviluppato che interagisce con il sistema back$_G$ end;
+	\item \textbf{Sistema front end$_{\scaleto{G}{3pt}}$:} Definisce una parte del sistema sviluppato che interagisce con il sistema back end$_{\scaleto{G}{3pt}}$;
 \end{itemize}
 
 \subsection{Elenco casi d'uso}\label{FBelencoCasiDuso}
@@ -147,7 +147,7 @@ In questo capitolo vengono elencati i casi d'uso individuati per il progetto GDP
 		\item Visualizza i dati in tempo reale (UC5.2 \S~\ref{richiestaDatiTempoReale});
 		\item Visualizza i dati predetti (UC5.1 \S~\ref{richiestaDatiPredetti}).
 	\end{itemize}
-	\item \textbf{Estensione}: il front end$_{\scaleto{G}{3pt}}$ effettua la richiesta al back end$_{\scaleto{G}{3pt}}$, il back end$_{\scaleto{G}{3pt}}$ non invia nessun dato nella risposta (UC6 \S~\ref{VisualizzazioneMancanzaBackEnd} )
+	\item \textbf{Estensione}: il front end$_{\scaleto{G}{3pt}}$ effettua la richiesta al back end$_{\scaleto{G}{3pt}}$ il quale non invia nessun dato nella risposta (UC6 \S~\ref{VisualizzazioneMancanzaBackEnd} )
 \end{itemize}
 
 \subsubsection{UC5.1 - Visualizzazione dei dati di uno specifico istante}\label{richiestaDatiGiorno}
@@ -217,7 +217,7 @@ L'elenco dei casi d'uso in questa sezione individuano requisiti sviluppabili suc
 \end{center}
 \begin{itemize}
 	\item \textbf{Attori primari}: utente generico;
-	\item \textbf{Descrizione}: l'utente può visualizzare gli indici di affidabilità dei dati reali raccolti e l'indice di affidabilità delle predizioni svolte dal modello ML;
+	\item \textbf{Descrizione}: l'utente può visualizzare gli indici di affidabilità dei dati reali raccolti e l'indice di affidabilità delle predizioni svolte dal modello di machine learning$_{\scaleto{G}{3pt}}$;
 	\item \textbf{Scenario principale}: l'utente attraverso l'interfaccia seleziona un pulsante per visualizzare gli indici di affidabilità;
 	\item \textbf{Precondizione}: il front end$_{\scaleto{G}{3pt}}$ dispone degli indici relativi ai dati reali e predetti;
 	\item \textbf{Postcondizione}: l'utente visualizza correttamente gli indici di affidabilità dei dati reali e predetti. 
@@ -245,10 +245,10 @@ L'elenco dei casi d'uso in questa sezione individuano requisiti sviluppabili suc
 \subsubsection{UC8.1 - Applicazione filtri ai dati}\label{applicazioneFiltri}
 \begin{itemize}
 	\item \textbf{Attori primari}: utente generico;
-	\item \textbf{Descrizione}: l'utente attraverso l'interfaccia del front end$_{\scaleto{G}{3pt}}$ può applicare filtri sui dati reali e predetti modificandone i colori con cui vengono visualizzati nella mappa;
+	\item \textbf{Descrizione}: l'utente attraverso l'interfaccia del front end$_{\scaleto{G}{3pt}}$ può applicare filtri sui dati reali e su quelli predetti, modificandone i colori con cui vengono visualizzati nella mappa;
 	\item \textbf{Scenario principale}: 
 	\begin{enumerate}
-		\item L'utente seleziona può selezionare il colore per i dati reali e/o per quelli predetti;
+		\item L'utente può selezionare il colore per i dati reali e/o per quelli predetti;
 		\item L'utente conferma i filtri da applicare alla mappa. 
 	\end{enumerate}
 	\item \textbf{Precondizione}: l'utente visualizza correttamente l'interfaccia;
