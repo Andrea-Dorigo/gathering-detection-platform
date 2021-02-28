@@ -14,7 +14,15 @@ Le funzionalità sono organizzate seguendo le tre fasi generali individuate del 
 \end{itemize}
 Sono descritte in seguito le funzionalità di ciascuna fase.
 
-\subsection{FC1.1: Funzionalità dell'acquisizione di dati}\label{}
+\subsection{Funzionalità dell'acquisizione di dati}\label{}
+\subsubsection{Descrizione Funzionalità dell'acquisizione di dati}\label{}
+L'acquisizione dei dati avviene mediante la raccolta dati tramite sistemi di monitoraggio e motori software "contapersone" applicati ad immagini, e stream, delle videocamere o ad altre sorgenti.
+\begin{itemize}
+\item \textbf{Linguaggio di programmazione}: Python$_{\scaleto{G}{3pt}}$/C.
+\item \textbf{Input}: i dati forniti sono prelevati da siti con live-feed$_G$ di webcam pubbliche e simulatori di spostamenti di persone.
+\item \textbf{Output}: i dati resteranno immutati.
+\item \textbf{Risposta ad errori}: nel caso di mancanza di risposta dai siti con live-feed il programma si bloccherà ed invierà un segnale di errore al server, con conseguente messaggio di errore visualizzabile dall'utente.
+\end{itemize}
 
 % \begin{itemize}
 % 	\item \textbf{Descrizione}: attraverso il linguaggio Java$_G$ si creerà un programma che preleva informazioni da sorgenti esterne e le invia al server.
