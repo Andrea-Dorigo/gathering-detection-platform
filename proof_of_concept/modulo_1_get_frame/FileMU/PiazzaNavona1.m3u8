@@ -1,0 +1,14 @@
+#EXTM3U
+#EXT-X-VERSION:3
+#EXT-X-MEDIA-SEQUENCE:2301
+#EXT-X-TARGETDURATION:8
+#EXTINF:4.000,
+https://hddn92.skylinewebcams.com/0205livic-1614614859254.ts
+#EXTINF:4.000,
+https://hddn92.skylinewebcams.com/0205livic-1614614863194.ts
+#EXTINF:4.000,
+https://hddn92.skylinewebcams.com/0205livic-1614614867182.ts
+#EXTINF:7.990,
+https://hddn92.skylinewebcams.com/0205livic-1614614871256.ts
+#EXTINF:4.000,
+https://hddn92.skylinewebcams.com/0205livic-1614614879187.ts

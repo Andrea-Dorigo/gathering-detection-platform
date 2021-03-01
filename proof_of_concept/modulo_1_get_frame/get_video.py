@@ -5,7 +5,7 @@ import string
 import glob
 
 count = 1
-list_link = ("https://hddn00.skylinewebcams.com/live.m3u8?a=4gsvt3jt5k84e831s2t0snjfo0", "https://cdn-002.whatsupcams.com/hls/it_roma02.m3u8")
+list_link = ("https://cdn-002.whatsupcams.com/hls/it_roma02.m3u8", "https://hddn00.skylinewebcams.com/live.m3u8?a=4gsvt3jt5k84e831s2t0snjfo0")
 path_video = "FileMU/"
 
 files = [os.path.join(path_video, file) for file in os.listdir(path_video) if os.path.isfile(os.path.join(path_video, file))]
@@ -16,7 +16,7 @@ files = [os.path.join(path_video, file) for file in os.listdir(path_video) if os
 while True:
     #download file.m3u8
     for obj in range(len(list_link)):
-        urllib.request.urlretrieve(list_link[obj], "FileMU/fontanaTrevi"+str(obj)+".m3u8")
+        urllib.request.urlretrieve(list_link[obj], "FileMU/PiazzaNavona"+str(obj)+".m3u8")
         print(list_link[obj])
 
     i = 0
@@ -28,6 +28,7 @@ while True:
             for line in fopen.readlines():
                 clean = line[:-1]
                 if clean.endswith('.ts'):
+                    print(clean)
                     if not clean.startswith('https'):
                         clean = 'https://cdn-002.whatsupcams.com/hls/' + clean
                         list_video.append(clean)
