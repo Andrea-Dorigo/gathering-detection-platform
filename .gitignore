@@ -16,3 +16,4 @@
 !/documentazione/immagini/**/*/
 !/documentazione/immagini/**/*/*
 .DS_Store
+/proof_of_concept/modulo_1_get_frame/darknet/yolov3.weights
