@@ -3,7 +3,6 @@
 import glob, os
 import image_slicer
 
-print("hello")
 count = 0
 for file in glob.glob("Frame/*.jpg"):
     frames=image_slicer.slice(file, 6, save=False)
