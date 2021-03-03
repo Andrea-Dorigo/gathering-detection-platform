@@ -12,7 +12,7 @@ Le sigle per lo stato dei test sono:
 Per quando riguarda la qualità dei test si usa:
 \begin{itemize}
 	\item \textbf{NS}: il test non ha soddisfatto la richiesta;
-	\item \textbf{S}: il test ha soddisfatto la richiesta. 
+	\item \textbf{S}: il test ha soddisfatto la richiesta.
 \end{itemize}
 
 I test di \textit{Sistema} e \textit{Accettazione} hanno la seguente nomenclatura:
@@ -53,28 +53,26 @@ I test che verranno effettuati sul prodotto software sono così divisi:
 	\item \textbf{Test di accettazione}: i test di accettazione hanno come scopo la verifica che il software sviluppato soddisfi i requisiti$_{\scaleto{G}{3pt}}$ presenti nel capitolato d’appalto$_G$ e concordati col proponente$_{\scaleto{G}{3pt}}$.
 	Questi saranno eseguiti durante il collaudo finale del prodotto software sotto l'osservazione sia dell'azienda proponente$_{\scaleto{G}{3pt}}$ sia del gruppo di lavoro.
 	Rappresentati mediante la sigla \textbf{[TA]};
-	
+
 	\item \textbf{Test di sistema}: i test di sistema vengono eseguiti per verificare che i requisiti$_{\scaleto{G}{3pt}}$, scritti nel documento \textit{Analisi dei Requisiti}, siano stati implementati e funzionanti.
 	Viene rappresentato mediante la sigla \textbf{[TS]};
-		
+
 	\item \textbf{Test di integrazione}: questa tipologia di test verifica i singoli moduli del software come fossero un gruppo unico.
 	Vengono svolti successivamente ai \textit{TU} e prima dei \textit{TS}.
 	Sono contrassegnati da \textbf{[TI]};
-	
+
 	\item \textbf{Test di regressione}: Servono a garantire il corretto funzionamento del prodotto a seguito di modifiche del codice o di inserimento di nuove funzionalità.
 	Vengono etichettati nel seguente modo \textbf{[TR]};
-	
+
 	\item \textbf{Test di unità}: i test di unità servono per verificare le singole unità del software, ovvero le componenti con funzionamento autonomo.
 	Il superamento di tali test non implica il corretto funzionamento del software.
 	Viene contrassegnata da \textbf{[TU]}.
 \end{itemize}
 
-
-
 \quad
 \def\tabularxcolumn#1{m{#1}}
 {\rowcolors{2}{RawSienna!90!RawSienna!20}{RawSienna!70!RawSienna!40}
-	
+
 	\begin{center}
 		\renewcommand{\arraystretch}{1.4}
 		\begin{tabularx}{\textwidth}{|c|X|c|}
@@ -82,11 +80,39 @@ I test che verranno effettuati sul prodotto software sono così divisi:
 			\rowcolor{airforceblue}
 			\textbf{Id Test} & \textbf{Descrizione} & \textbf{Esito}\\
 			\hline
-			\textit{TSRSVO1} & L'utente deve poter vedere la heat-map in tempo reale & \textit{NI}\\
+			\textit{TSRSFO3} & Verifica della visualizzazione di un messaggio d'errore in caso mancanza dati nella generazione della heat-map & \textit{NI}\\
 			\hline
-			\textit{TSRSVO2} & L'utente deve poter vedere le heat-map in un intervallo di tempo futuro & \textit{NI}\\
+			\textit{TSRSFO7} & Verifica della visualizzazione dei dati elaborati attraverso heat map & \textit{NI}\\
 			\hline
-			\textit{TSRSVO3} & L'utente deve aver accesso ai dati raccolti e storicizzati nel tempo & \textit{NI}\\
+			\textit{TSRSFO9} & Verifica che l’utente possa poter visualizzare i dati in tempo reale tramite heat map & \textit{NI}\\
+			\hline
+			\textit{TSRSFO10} & Verifica che l’utente possa poter visualizzare i dati storicizzati tramite heat map & \textit{NI}\\
+			\hline
+			\textit{TSRSFO11} & Verifica che l’utente possa poter visualizzare una previsione tramite heat map & \textit{NI}\\
+			\hline
+			\textit{TSRSFF12} & Verifica che l'utente possa poter vedere la heat-map in tempo reale & \textit{NI}\\
+			\hline
+			\textit{TSRSFD13} & Verfica che l’utente possa poter visualizzare un indice di affidabilità della previsione nella mappa & \textit{NI}\\
+			\hline
+			\textit{TSRSFD14} & Verifica che l’utente possa poter visualizzare un indice di affidabilità dei dati in tempo reale nella mappa & \textit{NI}\\
+			\hline
+			\textit{TSRSFF15} & Verifica che l’utente possa poter applicare dei filtri ai dati (reali, simulati) & \textit{NI}\\
+			\hline
+			\textit{TSRSFF16} & Verifica che l’utente abbia la possibilità di scegliere le sorgenti dati da cui prelevare dati tempo reale & \textit{NI}\\
+			\hline
+			\textit{TSRSFO17} & Verifica che il sistema aggiorni la mappa automaticamente ogni 10 minuti & \textit{NI}\\
+			\hline
+			\textit{TSRSFO18} & Verifica che il modello di machine learning salvi i pesi e le predizioni in un file & \textit{NI}\\
+			\hline
+			\textit{TSRSFO19} & Verifica che venga inviato un messaggio di errore al front end , dal backend, se non ci sono i dati richiesti & \textit{NI}\\
+			\hline
+			\textit{TSRSFO20} & Verifica che l’utente possa selezionare una città tra quelle disponibili & \textit{NI}\\
+			\hline
+			\textit{TSRSFO26} & Verifica che il sistema aggiorni automaticamente la mappa alla selezione di un diverso orario & \textit{NI}\\
+			\hline
+			\textit{TSRSFO27} & Verifica che l’utente possa poter selezionare la data del giorno di cui vuole visualizzare i dati & \textit{NI}\\
+			\hline
+			\textit{TSRSFO28} & Verifica che l’utente possa poter ripristinare la visione in tempo reale tramite un pulsante di ripristino & \textit{NI}\\
 			\hline
 		\end{tabularx}
 	\captionof{table}{\textbf{Elenco test di sistema}}

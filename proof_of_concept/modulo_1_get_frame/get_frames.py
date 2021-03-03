@@ -6,7 +6,6 @@
 import cv2
 import glob
 
-
 path = "VideoFontane/*.ts"
 nframe = 0
 for file in glob.glob(path):
@@ -23,7 +22,6 @@ for file in glob.glob(path):
             saved_frame_name += 1
             count += 1
             nframe +=1
-            print(count)
 
         else:
             print("Could not read the frame."+count)

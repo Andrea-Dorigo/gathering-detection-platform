@@ -1,3 +1,5 @@
+#start with python3 get_video.py
+
 import urllib.request
 import os
 import time
@@ -8,12 +10,11 @@ count = 1
 #list_link = ("https://cdn-002.whatsupcams.com/hls/it_roma02.m3u8", "https://hddn00.skylinewebcams.com/live.m3u8?a=4gsvt3jt5k84e831s2t0snjfo0")
 path_video = "FileMU/"
 list_link = "https://cdn-002.whatsupcams.com/hls/it_roma02.m3u8"
+urllib.request.urlretrieve(list_link, "FileMU/PiazzaNavona.m3u8")
 
 files = [os.path.join(path_video, file) for file in os.listdir(path_video) if os.path.isfile(os.path.join(path_video, file))]
 
 #infinite url request every 5 minutes
-
-#count perché così posso capire se stanno funzionando i link diversi, col "while true" mi tocca bloccare l'esecuzione del programma
 while True:
     #download file.m3u8
     #for obj in range(len(list_link)):
@@ -44,6 +45,7 @@ while True:
 
     #extract frame
     exec(open('get_frames.py').read())
+    #cut each frames in 6
     exec(open('cut_frame.py').read())
 
     time.sleep(5*60)
