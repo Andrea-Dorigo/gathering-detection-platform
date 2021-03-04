@@ -13,7 +13,7 @@ count = 1
 d = 0
 #list_link = ("https://cdn-002.whatsupcams.com/hls/it_roma02.m3u8", "https://hddn00.skylinewebcams.com/live.m3u8?a=4gsvt3jt5k84e831s2t0snjfo0")
 path_video = "../FileMU/"
-list_link = "https://cdn-002.whatsupcams.com/hls/it_roma02.m3u8"
+list_link = "https://hddn00.skylinewebcams.com/live.m3u8?a=arr31505qjgmibjh320dkkp6n2"
 urllib.request.urlretrieve(list_link, "../FileMU/PiazzaNavona.m3u8")
 
 
