@@ -23,9 +23,10 @@ Nella stesura dello \textit{Studio di Fattibilità} per ogni capitolato$_{\scale
 Oltre allo \textit{Studio di Fattibilità} vengono consegnati altri documenti all'azienda \textit{Sync Lab} ed ai committenti \textit{Prof. Tullio Vardanega} e \textit{Prof. Riccardo Cardin}. Questi documenti sono necessari al fine di tracciare le attività$_{\scaleto{G}{3pt}}$ di Analisi, Pianificazione, Verifica, Validazione e Controllo di Qualità per assicurare una completa trasparenza durante tutta la durata del ciclo di vita del progetto.
 I documenti in questione sono:
 \begin{itemize}
-	\item \textit{Analisi dei Requisiti}: identifica e dettaglia in modo completo ed esaustivo i requisiti$_G$ del sistema descritto nel capitolato che il fornitore si impegna a soddisfare;
-	\item \textit{Piano di Qualifica}: illustra la strategia complessiva di verifica e validazione proposta dal fornitore per pervenire al collaudo del sistema con la massima efficienza ed efficacia;
-	\item \textit{Piano di Progetto}: presenta l'organigramma dettagliato del fornitore, lo schema proposto per l'assegnazione e la rotazione dei ruoli di progetto, l'impegno complessivo previsto per ogni ruolo e per ogni individuo, l'analisi dei rischi, la pianificazione di massima per la realizzazione del prodotto, e il corrispondente conto economico preventivo.
+	\item \textit{Analisi dei Requisiti 2.0.0}: identifica e dettaglia in modo completo ed esaustivo i requisiti$_G$ del sistema descritto nel capitolato che il fornitore si impegna a soddisfare;
+	\item \textit{Piano di Qualifica 2.0.0}: illustra la strategia complessiva di verifica e validazione proposta dal fornitore per pervenire al collaudo del sistema con la massima efficienza ed efficacia;
+	\item \textit{Piano di Progetto 2.0.0}: presenta l'organigramma dettagliato del fornitore, lo schema proposto per l'assegnazione e la rotazione dei ruoli di progetto, l'impegno complessivo previsto per ogni ruolo e per ogni individuo, l'analisi dei rischi, la pianificazione di massima per la realizzazione del prodotto, e il corrispondente conto economico preventivo;
+	\item \textit{Proof of Concept$_G$ e Technology Baseline$_G$}: il Proof of Concept$_{\scaleto{G}{3pt}}$ dimostra una baseline$_{\scaleto{G}{3pt}}$ per lo sviluppo del prodotto, mentre la Technology Baseline$_{\scaleto{G}{3pt}}$ definisce le tecnologie utilizzate. 
 \end{itemize}
 Alla documentazione appena illustrata il gruppo \textit{Jawa Druids} allegherà inoltre una lettera di presentazione con la quale si formalizza l'impegno nel portare al termine il capitolato prescelto entro i termini definiti nella lettera e rispettandone i requisiti$_{\scaleto{G}{3pt}}$ minimi.
 \subsection{Strumenti}\label{ProcessiPrimariFornituraStrumenti}
@@ -124,7 +125,6 @@ Ogni requisito$_{\scaleto{G}{3pt}}$ è strutturato nella tabella nel seguente mo
 		\item Casi d'uso$_{\scaleto{G}{3pt}}$: il requisito$_{\scaleto{G}{3pt}}$ è stato individuato dal caso d'uso$_{\scaleto{G}{3pt}}$ individuato con il proprio codice.
 	\end{itemize}
 \end{itemize}
-
 \begin{comment}
 	\paragraph{Classificazione delle fasi}\label{ProcessiPrimariProspettiveAnalisiDeiRequisitiClassificazioneDelleFasi}\mbox{}\\% FC1.2 = fc(fasi capitolato) 1 (macro-fase) 2(fase precisa)
 	La descrizione dettagliata delle fasi è stata incorporata nel documento per individuare la fase in cui il requisito$_{\scaleto{G}{3pt}}$ è necessario che venga implementato o sia possibile l'implementazione.\\
@@ -231,32 +231,54 @@ I range accettabili per il risultato di \textbf{T} sono così suddivisi:
 
 \subsection{Progettazione}\label{ProcessiPrimariProgettazione}
 \subsubsection{Scopo}\label{ProcessiPrimariProgettazioneScopo}
-La Progettazione è un'attività$_{\scaleto{G}{3pt}}$ svolta dai \textit{Progettisti}. In questa fase si individuano, attraverso l'\textit{Analisi dei Requisiti}, le caratteristiche che il prodotto deve avere per soddisfare tutti i requisiti$_{\scaleto{G}{3pt}}$ richiesti dal proponente$_{\scaleto{G}{3pt}}$. Lo scopo è quello di determinare la soluzione migliore per risolvere ogni requisito$_{\scaleto{G}{3pt}}$ individuato.
+La Progettazione è un'attività$_{\scaleto{G}{3pt}}$ svolta dai \textit{Progettisti}. In questa fase si individuano, attraverso l'\textit{Analisi dei Requisiti 2.0.0}, le caratteristiche che il prodotto deve avere per soddisfare tutti i requisiti$_{\scaleto{G}{3pt}}$ richiesti dal proponente$_{\scaleto{G}{3pt}}$. Lo scopo è quello di determinare la soluzione migliore per risolvere ogni requisito$_{\scaleto{G}{3pt}}$ individuato.
 \subsubsection{Aspettative}\label{ProcessiPrimariProgettazioneAspettative}
-Alla conclusione della stesura della progettazione si ha come risultato la realizzazione dell'architettura del software da sviluppare. Tale architettura è necessaria ai programmatori per individuare le istruzioni necessarie a sviluppare il prodotto finito.
+Precedentemente alla realizzazione dell'architettura del sistema dovranno essere definite:
+\begin{itemize}
+	\item le tecnologie da utilizzare;
+	\item i vincoli strutturali richiesti dal proponente;
+	\item il Proof of Concept$_{\scaleto{G}{3pt}}$, cioè una bozza eseguibile del prodotto che individui lo studio svolto in preparazione all'architettura da implementare. 
+\end{itemize}
+Alla conclusione della stesura della progettazione si ha come risultato la realizzazione dell'architettura del software da sviluppare. Tale architettura è necessaria ai programmatori per individuare le istruzioni necessarie a sviluppare il prodotto finito. 
 \subsubsection{Descrizione}\label{ProcessiPrimariProgettazioneDescrizione}
-La progettazione è suddivisa principalmente in due parti:
+La progettazione è suddivisa principalmente in due parti. Inizialmente viene realizzato il Proof of Concept$_{\scaleto{G}{3pt}}$ della Technology Baseline$_{\scaleto{G}{3pt}}$, successivamente viene approfondito e redatta nel documento tecnico allegato alla Product Baseline$_{\scaleto{G}{3pt}}$.%???da rivedere%
+%\begin{itemize}
+%	\item \textbf{Technology baseline$_G$}: contiene tutte le specifiche adottate nella progettazione ad alto livello e delle sue componenti, i test di verifica e l'elenco dei diagrammi UML$_G$ utilizzati per la definizione dell'architettura;
+%	\item \textbf{Product baseline$_G$}: perfeziona ulteriormente la fase di progettazione, integrando ciò che è riportato nella technology baseline$_{\scaleto{G}{3pt}}$, definendo inoltre i test necessari alla verifica.
+%\end{itemize}
+%
+%\subsubsection{Technology baseline}\label{ProcessiPrimariProgettazioneTecnologyBaseline}
+%La technology baseline$_{\scaleto{G}{3pt}}$ viene redatta dal \textit{Progettista} ed include:
+%\begin{itemize}
+%	\item \textbf{Diagramma UML$_{\scaleto{G}{3pt}}$}: diagrammi sulle classi usate, package, attività$_{\scaleto{G}{3pt}}$ e sequenze;
+%	\item \textbf{Tecnologie}: descrizione delle tecnologie utilizzate nel progetto, i loro vantaggi e svantaggi;
+%	\item \textbf{Design pattern}: descrizione di ogni design pattern per la realizzazione dell'architettura, ognuno di essi viene accompagnato da un diagramma che ne espone il significato e la struttura;
+%	\item \textbf{Tracciamento delle componenti}: ogni componente viene riferito al requisito$_{\scaleto{G}{3pt}}$ che soddisfa;
+%	\item \textbf{Test di integrazione}: corrispondono a tutti i test necessari alla verifica del sistema in tutte le sue unità.
+%\end{itemize}
+%\subsubsection{Product baseline}\label{ProcessiPrimariProgettazioneProductBaseline}
+%La product baseline$_{\scaleto{G}{3pt}}$ viene redatta dal \textit{Progettista} ed include:
+%\begin{itemize}
+%	\item \textbf{definizioni delle classi e funzioni}: descrizione univoca delle classi e funzioni evitando ridondanze;
+%	\item \textbf{tracciamento}: ogni requisito$_{\scaleto{G}{3pt}}$ viene tracciato attraverso le classi e funzioni, questo è necessario per individuare se è stato soddisfatto il requisito$_{\scaleto{G}{3pt}}$;
+%	\item \textbf{test di unità}: definiscono test per la verifica delle funzionalità del prodotto.
+%\end{itemize}
+\subsubsection{Qualità dell'architettura}\label{ProcessiPrimariProgettazioneQualitaArchitettura}
+L'architettura del progetto viene definita dai \textit{Progettisti} per individuare una logica corretta allo sviluppo del prodotto. Ogni modulo definito all'interno dell'architettura deve essere identificabile in modo chiaro e riusabile.
+L'architettura dovrà rispettare delle caratteristiche per raggiungere una qualità adeguata:
 \begin{itemize}
-	\item \textbf{Technology baseline$_G$}: contiene tutte le specifiche adottate nella progettazione ad alto livello e delle sue componenti, i test di verifica e l'elenco dei diagrammi UML$_G$ utilizzati per la definizione dell'architettura;
-	\item \textbf{Product baseline$_G$}: perfeziona ulteriormente la fase di progettazione, integrando ciò che è riportato nella technology baseline$_{\scaleto{G}{3pt}}$, definendo inoltre i test necessari alla verifica.
-\end{itemize}
+	\item dovrà soddisfare i requisiti identificati nel documento \textit{Analisi dei Requisiti 2.0.0} e poter essere modulabile nel caso essi vengano modificati o aggiunti;
+	\item dovrà essere capita dagli stakeholders$_{\scaleto{G}{3pt}}$ e quindi dovrà essere fatta una stesura chiara e comprensibile con il tracciamento sui requisiti annesso;
+	\item dovrà poter mantenere un grado di funzionamento adeguato anche in caso di situazioni erronee improvvise;
+	\item dovrà essere possibile applicare modifiche a costi ridotti in caso i requisiti vengano modificati o evoluti;
+	\item dovrà essere modellata in modo tale da poter riutilizzare alcune delle sue parti;
+	\item dovrà comprendere tutti i requisiti e soddisfarli in modo da eliminare sprechi di tempo e spazio;
+	\item dovrà svolgere tutti i suoi compiti al suo utilizzo;
+	\item dovrà essere sicura e la sua manutenzione dovrà avvenire in tempo ridotti cosicché da garantire un servizio di funzionamento il più continuo possibile;
+	\item dovrà essere semplice ed evitare la complessità introducendo solo il necessario. %???%
+\end{itemize} 
 
-\subsubsection{Technology baseline}\label{ProcessiPrimariProgettazioneTecnologyBaseline}
-La technology baseline$_{\scaleto{G}{3pt}}$ viene redatta dal \textit{Progettista} ed include:
-\begin{itemize}
-	\item \textbf{Diagramma UML$_{\scaleto{G}{3pt}}$}: diagrammi sulle classi usate, package, attività$_{\scaleto{G}{3pt}}$ e sequenze;
-	\item \textbf{Tecnologie}: descrizione delle tecnologie utilizzate nel progetto, i loro vantaggi e svantaggi;
-	\item \textbf{Design pattern}: descrizione di ogni design pattern per la realizzazione dell'architettura, ognuno di essi viene accompagnato da un diagramma che ne espone il significato e la struttura;
-	\item \textbf{Tracciamento delle componenti}: ogni componente viene riferito al requisito$_{\scaleto{G}{3pt}}$ che soddisfa;
-	\item \textbf{Test di integrazione}: corrispondono a tutti i test necessari alla verifica del sistema in tutte le sue unità.
-\end{itemize}
-\subsubsection{Product baseline}\label{ProcessiPrimariProgettazioneProductBaseline}
-La product baseline$_{\scaleto{G}{3pt}}$ viene redatta dal \textit{Progettista} ed include:
-\begin{itemize}
-	\item \textbf{definizioni delle classi e funzioni}: descrizione univoca delle classi e funzioni evitando ridondanze;
-	\item \textbf{tracciamento}: ogni requisito$_{\scaleto{G}{3pt}}$ viene tracciato attraverso le classi e funzioni, questo è necessario per individuare se è stato soddisfatto il requisito$_{\scaleto{G}{3pt}}$;
-	\item \textbf{test di unità}: definiscono test per la verifica delle funzionalità del prodotto.
-\end{itemize}
+\subsubsection{Attività di progett}
 \subsection{Codifica}\label{ProcessiPrimariCodifica}
 
 \subsubsection{Scopo}\label{ProcessiPrimariCodificaScopo}
