@@ -1,15 +1,15 @@
-\chapter{Descrizione generale}\label{descrizioneGenerale}
-\section{Caratteristiche del prodotto}\label{descrizioneGeneraleCaratteristicheProdotto}
+\chapter{Descrizione generale}\label{DescrizioneGenerale}
+\section{Caratteristiche del prodotto}\label{DescrizioneGeneraleCaratteristicheProdotto}
 L'idea del capitolato$_G$ \textit{GDP - Gathering Detection Platform} è di creare una piattaforma che riesca a rappresentare mediante visualizzazione grafica zone potenzialmente a rischio di assembramento con l'intento di prevenirle.
 La piattaforma utilizzerà dati prelevati da sensori (come telecamere, dispositivi contapersone, etc.) o sorgenti dati (come flussi di prenotazioni Uber, le tabelle degli orari di autobus/metro/treno, etc.), i quali mediante la loro elaborazione verranno rappresentati tramite una \textit{heat map$_G$}.
 
-\section{Funzionalità del prodotto}\label{descrizioneFunzionalitàDelProdotto}
+\section{Funzionalità del prodotto}\label{DescrizioneGeneraleFunzionalitàDelProdotto}
 La funzionalità principale identificata nel capitolato$_{\scaleto{G}{3pt}}$ d'appalto \textit{GDP-Gathering Detection Platform} è la \textbf{rappresentazione via \textit{heat map$_G$} dei dati ottenuti dalle sorgenti e della loro elaborazione}, affinché l'utente possa consultarle.
 
 Questa funzionalità è il frutto di una serie di funzioni sottostanti, identificate e suddivise per meglio descrivere le operazioni effettuate dal back-end.
 Le illustriamo nella sezione seguente.
 
-\subsection{Sotto-funzioni della rappresentazione della heatmap}
+\subsection{Sotto-funzioni della rappresentazione della heatmap}\label{DescrizioneGeneraleFunzionalitàDelProdottoSottoFunzioniDellaRappresentazioneDellaHeatmap}
 
 La descrizione delle sotto-funzioni della rappresentazione della \textit{heat map$_G$} è stata inserita in quanto ritenuta necessaria per fornire un ulteriore approfondimento riguardo tale macro-funzionalità.
 Queste funzioni sono raggruppate seguendo tre funzioni generali individuate:
@@ -19,10 +19,10 @@ Queste funzioni sono raggruppate seguendo tre funzioni generali individuate:
 	\item \textbf{Rappresentazione di dati:} attraverso un sito web i dati elaborati verranno visualizzati a video mediante una \textit{heat map$_{\scaleto{G}{3pt}}$}.
 \end{itemize}
 
-\subsection{Funzione di acquisizione di dati}\label{}
+\subsection{Funzione di acquisizione di dati}\label{DescrizioneGeneraleFunzionalitàDelProdottoFunzioneDiAcquisizioneDiDati}
 L'acquisizione dei dati avviene tramite sistemi di monitoraggio e motori software "contapersone" applicati ad immagini e/o stream, provenienti delle videocamere o ad altre sorgenti. Ne segue lo streaming di tali dati con Apache Kafka e il successivo inserimento nel database.
 
-\subsubsection{Funzione di conteggio persone}\label{}
+\subsubsection{Funzione di conteggio persone}\label{DescrizioneGeneraleFunzionalitàDelProdottoFunzioneDiAcquisizioneDiDatiFunzioneDiConteggioPersone}
 \begin{itemize}
 \item \textbf{Linguaggio di programmazione}: Python$_{\scaleto{G}{3pt}}$/C.
 \item \textbf{Input}: i dati forniti sono prelevati da siti con live-feed$_G$ di webcam pubbliche e/o simulatori di spostamenti di persone.
@@ -30,7 +30,7 @@ L'acquisizione dei dati avviene tramite sistemi di monitoraggio e motori softwar
 \item \textbf{Risposta ad errori}: nel caso di mancanza di risposta dai siti con live-feed il programma si bloccherà ed invierà un segnale di errore al server, con conseguente messaggio di errore visualizzabile dall'utente.
 \end{itemize}
 
-\subsubsection{Funzione di streaming dati con Apache Kafka$_G$}\label{}
+\subsubsection{Funzione di streaming dati con Apache Kafka$_G$}\label{DescrizioneGeneraleFunzionalitàDelProdottoFunzioneDiAcquisizioneDiDatiFunzioneDiStreamingDatiConApacheKafka}
 
 \begin{itemize}
 	\item \textbf{Descrizione}: impostazione di una piattaforma di data streaming$_G$ che consente di gestire e trasferire grandi volumi di dati in tempo reale, abbassando notevolmente i tempi di latenza;
@@ -38,7 +38,7 @@ L'acquisizione dei dati avviene tramite sistemi di monitoraggio e motori softwar
 		\item \textbf{Output}: il flusso di dati rimane immutato.
 \end{itemize}
 
-\subsubsection{Funzione di inserimento dati nel Database}\label{}
+\subsubsection{Funzione di inserimento dati nel Database}\label{DescrizioneGeneraleFunzionalitàDelProdottoFunzioneDiAcquisizioneDiDatiFunzioneDiInserimentoDatiNelDatabase}
 
 \begin{itemize}
 	\item \textbf{Descrizione}: creazione del database e archiviazione dei dati in esso per visualizzazione future e mantenimento dei dati;
@@ -46,11 +46,11 @@ L'acquisizione dei dati avviene tramite sistemi di monitoraggio e motori softwar
 \end{itemize}
 
 
-\subsection{Funzione di Elaborazione Dati}\label{}
+\subsection{Funzione di Elaborazione Dati}\label{DescrizioneGeneraleFunzionalitàDelProdottoFunzioneDiElaborazioneDati}
 Completata la funzione precedente i dati verranno elaborati attraverso librerie di Scikit-learn e TensorFlow con il linguaggio di programmazione Python$_G$.
 Di seguito vengono individuate le funzioni da seguire per l'elaborazione dei dati.
 
-\subsubsection{Funzione di Esplorazione Dati}\label{}
+\subsubsection{Funzione di Esplorazione Dati}\label{DescrizioneGeneraleFunzionalitàDelProdottoFunzioneDiElaborazioneDatiFunzioneDiEsplorazioneDati}
 
 \begin{itemize}
 	\item \textbf{Descrizione}: si discriminano elementi all'interno del dataset che portano a predizioni errate del modello.
@@ -59,7 +59,7 @@ Di seguito vengono individuate le funzioni da seguire per l'elaborazione dei dat
 	\item \textbf{Processo}: si controlla se c'è presenza di valori mancanti, dataset non bilanciati, outliers$_G$, livello di rumore dei dati e correlazione dei dati.
 \end{itemize}
 
-\subsubsection{Funzione di Preprocessing}\label{}
+\subsubsection{Funzione di Preprocessing}\label{DescrizioneGeneraleFunzionalitàDelProdottoFunzioneDiElaborazioneDatiFunzioneDiPreprocessing}
 
 \begin{itemize}
 	\item \textbf{Descrizione}: preparazione dei dati grezzi per renderli adatti ad un modello di Machine Learning$_G$.
@@ -75,7 +75,7 @@ Di seguito vengono individuate le funzioni da seguire per l'elaborazione dei dat
 
 \end{itemize}
 
-\subsubsection{Funzione di predizione}\label{}
+\subsubsection{Funzione di predizione}\label{DescrizioneGeneraleFunzionalitàDelProdottoFunzioneDiElaborazioneDatiFunzioneDiPredizione}
 
 \begin{itemize}
 	\item \textbf{Descrizione}: in questa funzione si effettua una scelta sull'algoritmo più adeguato da utilizzare per il training di dati.
@@ -84,7 +84,7 @@ Di seguito vengono individuate le funzioni da seguire per l'elaborazione dei dat
 	\item \textbf{Tipi di algoritmi}: si dividono per classificazione e regressione.%???non so se va bene???
 \end{itemize}
 
-\subsubsection{Funzione di Valutazione e validazione}\label{}
+\subsubsection{Funzione di Valutazione e validazione}\label{DescrizioneGeneraleFunzionalitàDelProdottoFunzioneDiElaborazioneDatiFunzioneDiValutazioneEValidazione}
 
 \begin{itemize}
 	\item \textbf{Descrizione}: attraverso varie metriche si valuta quanto valido è il modello nella predizione dei casi.
@@ -92,17 +92,17 @@ Di seguito vengono individuate le funzioni da seguire per l'elaborazione dei dat
 	\item \textbf{Output}: dati che superano la validazione.
 \end{itemize}
 
-\subsection{Funzione di Visualizzazione dati}\label{}
+\subsection{Funzione di Visualizzazione dati}\label{DescrizioneGeneraleFunzionalitàDelProdottoFunzioneDiVisualizzazione}
 In questa sezione verranno illustrate le funzioni della parte visiva della web-app.
 
-\subsubsection{Funzione di Prelevamento dati}\label{}
+\subsubsection{Funzione di Prelevamento dati}\label{DescrizioneGeneraleFunzionalitàDelProdottoFunzioneDiVisualizzazioneFunzioneDiPrelevamentoDati}
 
 \begin{itemize}
 	\item \textbf{Descrizione}: sviluppo della parte di comunicazione di informazioni tra server/database e front-end$_{\scaleto{G}{3pt}}$.
 	\item \textbf{Strumenti}: si utilizzerà Java$_{\scaleto{G}{3pt}}$.
 \end{itemize}
 
-\subsubsection{Funzione di rappresentazione tramite web application}\label{}
+\subsubsection{Funzione di rappresentazione tramite web application}\label{DescrizioneGeneraleFunzionalitàDelProdottoFunzioneDiVisualizzazioneFunzioneDiRappresentazioneTramiteWebApplication}
 
 \begin{itemize}
 	\item \textbf{Descrizione}: sviluppo di una pagina web semplice ed intuitiva.
@@ -112,7 +112,7 @@ In questa sezione verranno illustrate le funzioni della parte visiva della web-a
 \end{itemize}
 
 
-\section{Caratteristiche utente}\label{}
+\section{Caratteristiche utente}\label{DescrizioneGeneraleCaratteristicheUtente}
 Il progetto è rivolto principalmente ad utenti di tipo amministrativo, cioè i quali devono visualizzare l'intera mappa di una regione per motivi lavorativi. \\
 Le conoscenze dell'utente per l'utilizzo del software sono:
 \begin{itemize}
