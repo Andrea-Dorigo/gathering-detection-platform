@@ -4,7 +4,8 @@ import glob, os
 import image_slicer
 
 count = 0
-for file in glob.glob("../Frame/*.jpg"):
-    frames=image_slicer.slice(file, 6, save=False)
+nframe = 0
+for foto in glob.glob("../Frame/*.jpg"):
+    frames=image_slicer.slice(foto, 6, save=False)
     image_slicer.save_tiles(frames, directory='../FrameCut/', prefix='slice'+str(count))
     count += 1
