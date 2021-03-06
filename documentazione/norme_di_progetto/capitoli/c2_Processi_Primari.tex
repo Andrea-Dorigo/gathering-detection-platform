@@ -241,7 +241,7 @@ Precedentemente alla realizzazione dell'architettura del sistema dovranno essere
 \end{itemize}
 Alla conclusione della stesura della progettazione si ha come risultato la realizzazione dell'architettura del software da sviluppare. Tale architettura è necessaria ai programmatori per individuare le istruzioni necessarie a sviluppare il prodotto finito. 
 \subsubsection{Descrizione}\label{ProcessiPrimariProgettazioneDescrizione}
-La progettazione è suddivisa principalmente in due parti. Inizialmente viene realizzato il Proof of Concept$_{\scaleto{G}{3pt}}$ della Technology Baseline$_{\scaleto{G}{3pt}}$, successivamente viene approfondito e redatta nel documento tecnico allegato alla Product Baseline$_{\scaleto{G}{3pt}}$.%???da rivedere%
+La progettazione è suddivisa principalmente in due parti. Inizialmente viene realizzato il Proof of Concept$_{\scaleto{G}{3pt}}$ della Technology Baseline$_{\scaleto{G}{3pt}}$, successivamente viene approfondito e redatta nel documento tecnico allegato alla Product Baseline$_{\scaleto{G}{3pt}}$. La progettazione segue l'\textit{Analisi dei Requisiti 2.0.0} infatti se l'Analisi è l'espansione del problema e l'individuazione delle parti che compongono se stesso per l'individuazione del dominio applicativo allora la progettazione è il procedimento inverso, cioè si trova un modo per collegare tutte le parti assieme, specificando le funzionalità di tutti i sottosistemi e raggiungere così una soluzione unica.
 %\begin{itemize}
 %	\item \textbf{Technology baseline$_G$}: contiene tutte le specifiche adottate nella progettazione ad alto livello e delle sue componenti, i test di verifica e l'elenco dei diagrammi UML$_G$ utilizzati per la definizione dell'architettura;
 %	\item \textbf{Product baseline$_G$}: perfeziona ulteriormente la fase di progettazione, integrando ciò che è riportato nella technology baseline$_{\scaleto{G}{3pt}}$, definendo inoltre i test necessari alla verifica.
@@ -278,7 +278,89 @@ L'architettura dovrà rispettare delle caratteristiche per raggiungere una quali
 	\item dovrà essere semplice ed evitare la complessità introducendo solo il necessario. %???%
 \end{itemize} 
 
-\subsubsection{Attività di progett}
+\subsubsection{Attività di progettazione}\label{ProcessiPrimariProgettazioneAttivita}
+Il periodo della progettazione individua le attività da svolgere attraverso gli obiettivi da raggiungere
+%??? da continuare%
+
+\subsubsection{Diagrammi UML 2.0}\label{ProcessiPrimariProgettazioneUML}
+L'utilizzo dei diagrammi UML 2.0 è necessario per rendere più chiare le scelte progettuali adottate. I diagrammi che verranno utilizzati sono:
+\begin{itemize}
+	\item \textbf{diagrammi dei package$_{\scaleto{G}{3pt}}$}: descrivono graficamente le dipendenze tra diversi package all'interno del sistema, i package sono raggruppamenti di classi in unià;
+	\item \textbf{diagrammi delle classi}: rappresentano graficamente un modello atratto delle classi in descrizione e le loro realzioni, ogni classe viene individuata dai suoi attributi, il suo tipo e i suoi metodi;
+	\item \textbf{diagrammi delle attività}: illustra graficamente la sequenza di attività per raggiungere un obiettivo da uno stato iniziale, essi possono descrivere la logica di un algoritmo; %???%
+	\item \textbf{diagrammi dei casi d'uso}: descrivono le funzionalità che il sistema offre;
+	\item \textbf{diagrammi di sequenza}: rappresentano l'interazione logica tra diverse classi/oggetti;
+\end{itemize}
+
+\quad\large\textbf{Diagrammi dei package}\\
+Ogni package$_{\scaleto{G}{3pt}}$ viene individuato tramite un rettangolo con un'etichetta per il nome. Il package$_{\scaleto{G}{3pt}}$ contiene al suo interno i diagramma delle classi relative al package$_{\scaleto{G}{3pt}}$ e possibili sotto-package$_{\scaleto{G}{3pt}}$. Le dipendenze tra i package$_{\scaleto{G}{3pt}}$ vengono rappresentate attraverso una freccia tratteggiata che collega due package$_{\scaleto{G}{3pt}}$. Si dovrà evitare che le dipendenze dei package$_{\scaleto{G}{3pt}}$ così collegati formino una dipendenza ciclica.
+
+\begin{figure}
+		\centering\includegraphics{../immagini/normeUML/pk_uml.png}
+		\caption{Rappresentazione grafica dei diagrammi dei package}
+\end{figure}
+\quad\large\textbf{Diagrammi delle classi}
+Le classi vengono individuate da un rettangolo suddiviso in tre sezioni orizzontali. Ciascuna sezione partendo dall'alto individuano:
+\begin{enumerate}
+	\item \textbf{Nome della classe}: deve essere univoco ed esplicativo. Il nome sarà scritto in lingua inglese, se la classe raffigurata è una classe astratta il suo nome verrà preceduto da $<<abstract>>$, mentre se è un'interfaccia verrà preceduto da $<<interface>>$.
+	\item \textbf{Attributi}: ogni attributo individua una variabile della classe. Gli attributi vengono scritti uno dopo l'altro sotto forma di lista. Ogni attributo sarà scritto nel seguente modo:
+	\begin{center}
+		\textbf{nomeAttributo : tipo}
+	\end{center}
+	La descrizione della scrittura degli attributi è la seguente:
+	\begin{itemize}
+		\item \textbf{nomeAttributo}: individua il nome della variabile, deve essere scritta in lingua inglese e con la lettera iniziale minuscola. Nel caso sia una variabile costante tutto il nome deve essere scritto in maiuscolo;
+		\item \textbf{tipo}: il tipo può essere semplice o definito da una classe creata dall'utente.
+	\end{itemize}
+	Ogni attributo viene preceduto obbligatoriamente da un operatore:
+	\begin{itemize}
+		\item \textbf{$+$}: indica la visibilità pubblica della variabile;
+		\item \textbf{$-$}: indica la visibilità privata della variabile;
+		\item \textbf{$\#$}: indica la visibilità protetta della variabile;
+		\item \textbf{$\thicksim$}: indica la visibilità package della variabile.
+	\end{itemize}
+	\item \textbf{Metodi}: indicano i metodi della classe, vengono disposti in lista uno dopo l'altro. I metodi vengono scritti nel seguente modo:
+	\begin{center}
+		\textbf{nomeMetodo (lista-param) : tipoR}
+	\end{center}
+	La descrizione della scrittura dei metodi è la seguente:
+	\begin{itemize}
+		\item \textbf{nomeMetodo}: individua il nome del metodo, deve essere univoco ed in lingua inglese;
+		\item \textbf{lista-param}: indica la lista dei parametri formali del metodo che può essere composta da 0 o più parametri, ogni parametro è separato da una virgola con il successivo e sono scritti nel formato \textit{nome : tipo};
+		\item \textbf{tipoR}: individua il tipo dell'oggetto di ritorno, può essere semplice o definito dall'utente.
+	\end{itemize}
+	Ogni metodo sarà preceduto dagli operatori di visibilità descritti precedentemente. Se il metodo sotto osservazione è un metodo astratto il suo nome viene preceduto da $<<abstract>>$, mentre se è statico da $<<static>>$.
+\end{enumerate}
+Il collegamento tra i diagrammi delle classi viene effettuato con delle frecce che illustrano le dipendenze.
+I tipi di frecca vengono descritti di seguito:
+\begin{itemize}
+	\item freccia normale, da classe 1 a classe 2: indica che 
+	\begin{figure}[H]
+		\centering\includegraphics{../immagini/normeUML/frecSempl.png}
+		\caption{Relazione di associazione tra classe 1 e classe 2}
+	\end{figure}
+	 
+	\item freccia tratteggiata, da classe 1 a classe 2:
+	\begin{figure}[H]
+		\centering\includegraphics{../immagini/normeUML/frecTrat.png}
+		\caption{Relazione di dipendenza tra classe 1 e classe 2}
+	\end{figure}
+	\item freccia "a diamante" vuoto, da classe 1 a classe 2:
+	\begin{figure}[H]
+		\centering\includegraphics{../immagini/normeUML/frecDiamVuot.png}
+		\caption{Relazione di aggregazione tra classe 1 e classe 2}
+	\end{figure}
+	\item freccia "a diamante" piena, da classe 1 a classe 2:
+	\begin{figure}[H]
+		\centering\includegraphics{../immagini/normeUML/frecDiamPien.png}
+		\caption{Relazione di composizione tra classe 1 e classe 2}
+	\end{figure}
+	\item freccia con punta vuota, da classe 1 a classe 2:
+	\begin{figure}[H]
+		\centering\includegraphics{../immagini/normeUML/frecInter.png}
+		\caption{Relazione di interfaccie tra classe 1 e classe 2}
+	\end{figure}
+\end{itemize}
 \subsection{Codifica}\label{ProcessiPrimariCodifica}
 
 \subsubsection{Scopo}\label{ProcessiPrimariCodificaScopo}
