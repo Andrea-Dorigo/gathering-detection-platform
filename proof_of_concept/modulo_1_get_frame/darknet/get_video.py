@@ -1,6 +1,6 @@
 #start with python3 get_video.py
-
 import urllib.request
+from urllib.request import urlopen, Request
 import os
 import time
 import string
@@ -22,9 +22,8 @@ long = 12.482327
 
 #list_link = ("https://cdn-002.whatsupcams.com/hls/it_roma02.m3u8", "https://hddn00.skylinewebcams.com/live.m3u8?a=vs0pqlids9c55qqsa2qln4kcq7")
 path_video = "../FileMU/"
-list_link = "https://hddn00.skylinewebcams.com/live.m3u8?a=uh5a3reim22c7oq6gkjquu9u45"
+list_link = "https://cdn-002.whatsupcams.com/hls/it_roma02.m3u8"
 #urllib.request.urlretrieve(list_link, "../FileMU/PiazzaNavona.m3u8")
-
 
 files = [os.path.join(path_video, file) for file in os.listdir(path_video) if os.path.isfile(os.path.join(path_video, file))]
 
@@ -71,9 +70,11 @@ while True:
                         if not clean.startswith('https'):
                             clean = 'https://cdn-002.whatsupcams.com/hls/' + clean
                             list_video.append(clean)
-                            list_video.append(clean)
 
-                            print(list_video)
+                        list_video.append(clean)
+
+
+        print(list_video)
 
 
     #download video.ts i=5,7,9,11,13 are the videos location inside lines[]
@@ -101,7 +102,7 @@ while True:
         #output2, error2 = process2.communicate()
             conta_persone += output.decode().count('person')
         #conta_persone2 += output.decode().count('person')#3 vs 11su 14
-            print(conta_persone)
+            print("Ci sono "+str(conta_persone)+" in totale")
         #print(conta_persone2)
 
         a = [1, lat, long, conta_persone, data_dato, orario]
