@@ -1,0 +1,36 @@
+package com.example.demo;
+
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+//import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RequestMethod;
+import com.google.gson.Gson;
+
+@Controller
+public class indexController {
+
+	@Autowired
+	private coordinateRepository coordinaterepository;
+	
+	@RequestMapping("index")
+	public String index() {
+		System.out.println("hi");
+		return "index.jsp";
+	}
+	
+	@RequestMapping(value = "/coordinate",method = RequestMethod.GET)
+	public String jsonRetr() throws Exception {
+		
+		List<coordinate> coordinate = coordinaterepository.findAll();
+		Gson gson = new Gson();
+		String jsonString = gson.toJson(coordinate);
+		System.out.println(jsonString);
+        return jsonString;
+    }
+	
+}
+
