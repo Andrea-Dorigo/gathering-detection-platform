@@ -18,6 +18,8 @@
 
 <script>
 
+
+
 function generateRandomPoints(center, radius, count) {
   var points = [];
   for (var i=0; i<count; i++) {
@@ -61,16 +63,19 @@ function loadMap(data){
 	
 	var test = JSON.parse(datatext);
 	
-	var randomGeoPointsPiazzaNavona = generateRandomPoints({'lat':test.webcam[4].lat, 'lng':test.webcam[4].lon}, 10, test.webcam[4].people); //piazza navona
+	var count = Object.keys(test.webcam).length;
+    var last = count-1;
+	
+	var randomGeoPointsPiazzaNavona = generateRandomPoints({'lat':test.webcam[last].latitude, 'lng':test.webcam[last].longitude}, 10, test.webcam[last].numPeople); //piazza navona
 
 	var heat = L.heatLayer(randomGeoPointsPiazzaNavona).addTo(map);
 
-	var marker = L.marker([test.webcam[4].lat , test.webcam[4].lon], {
+	var marker = L.marker([test.webcam[last].latitude , test.webcam[last].longitude], {
 	        elevation: 260.0,
 	        title: "Piazza Navona"
 	}).addTo(map);
 
-	marker.bindPopup("Piazza di Navona: " + test.webcam[4].people + " persone ca.").openPopup();
+	marker.bindPopup("Piazza di Navona: " + test.webcam[last].numPeople + " persone ca.").openPopup();
 	
 }
 
@@ -82,10 +87,12 @@ function start() {
 	    url: methodurl,
 	    dataType: 'json', 
 	    success: function(data) {
+	    	console.log(data);
 	        loadMap(data);
 	    }
 	});
 }
+
 
 </script>
 

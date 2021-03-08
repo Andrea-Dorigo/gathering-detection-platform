@@ -25,10 +25,14 @@ public class indexController {
 	
 	@RequestMapping(value = "/coordinate",method = RequestMethod.GET)
 	public @ResponseBody String jsonRetr() throws Exception {
-		
-		List<coordinate> coordinate = coordinaterepository.findAll();
+
+		System.out.println(1);
+		List<Detection> coordinate = coordinaterepository.findAll();
+		System.out.println(2);
 		Gson gson = new Gson();
+		System.out.println(3);
 		String jsonString = gson.toJson(coordinate);
+		System.out.println(jsonString);
         return jsonString;
     }
 	
