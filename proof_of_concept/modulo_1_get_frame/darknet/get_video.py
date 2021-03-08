@@ -23,12 +23,14 @@ long = 12.482327
 #list_link = ("https://cdn-002.whatsupcams.com/hls/it_roma02.m3u8", "https://hddn00.skylinewebcams.com/live.m3u8?a=vs0pqlids9c55qqsa2qln4kcq7")
 path_video = "../FileMU/"
 list_link = "https://cdn-002.whatsupcams.com/hls/it_roma02.m3u8"
+posto = "Piazza Navona"
 #urllib.request.urlretrieve(list_link, "../FileMU/PiazzaNavona.m3u8")
 
 files = [os.path.join(path_video, file) for file in os.listdir(path_video) if os.path.isfile(os.path.join(path_video, file))]
 
 class Detection(Document):
     id_webcam = IntField(required=True)
+    luogo = StringField(required=True)
     latitude = FloatField(required=True)
     longitude = FloatField(required=True)
     numPeople = IntField(required=True)
@@ -38,6 +40,7 @@ class Detection(Document):
     def json(self):
         daily_dict = {
             "id_webcam": self.id_webcam,
+             "luogo" : self.luogo,
             "latitude": self.latitude,
             "longitude": self.longitude,
             "numPeople": self.numPeople,
@@ -105,7 +108,7 @@ while True:
             print("Ci sono "+str(conta_persone)+" in totale")
         #print(conta_persone2)
 
-        a = [1, lat, long, conta_persone, data_dato, orario]
+        a = [1, posto, lat, long, conta_persone, data_dato, orario]
         print(a)
 
 
@@ -113,11 +116,12 @@ while True:
     #Prove database
         detection = Detection(
             id_webcam = a[0],
-            latitude = a[1],
-            longitude = a[2],
-            numPeople = a[3],
-            date = a[4],
-            time = a[5]
+            luogo = a[1],
+            latitude = a[2],
+            longitude = a[3],
+            numPeople = a[4],
+            date = a[5],
+            time = a[6]
             ).save()
 
     except:
