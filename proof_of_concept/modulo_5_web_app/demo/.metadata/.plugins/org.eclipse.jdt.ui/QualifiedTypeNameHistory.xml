@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.springframework.data.annotation.Id"/>
+    <fullyQualifiedTypeName name="org.springframework.data.mongodb.repository.MongoRepository"/>
+    <fullyQualifiedTypeName name="org.springframework.boot.CommandLineRunner"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="com.sun.tools.javac.util.List"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="javax.ws.rs.Path"/>
+    <fullyQualifiedTypeName name="javax.ws.rs.Produces"/>
+    <fullyQualifiedTypeName name="javax.ws.rs.GET"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMethod"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ResponseBody"/>
+</qualifiedTypeNameHistroy>

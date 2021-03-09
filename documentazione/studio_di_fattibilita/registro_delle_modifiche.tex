@@ -6,36 +6,72 @@
 \def\tabularxcolumn#1{m{#1}}
 {\rowcolors{2}{RawSienna!90!RawSienna!20}{RawSienna!70!RawSienna!40}
 
+%\begin{center}
+%	\renewcommand{\arraystretch}{1.4}
+%	\begin{tabularx}{\textwidth}{|c|c|c|c|c|c|}
+%	\hline
+%	\rowcolor{airforceblue}
+%	\textbf{Versione} & \textbf{Data} & \textbf{Autore} & \textbf{Ruolo} & \textbf{Verificatore} & \textbf{Modifica}\\
+%	\hline
+%	v1.0.0 & Margherita Mitillo & \textit{Responsabile di Progetto} & 02-12-2020 & \textit{Approvazione il documento per la RR} & jj\\
+%	\hline
+%	v0.4.0 & Mattia Cocco & \textit{Verificatore} & 01-12-2020 & \textit{Verificato Capitolato C7} & hahh\\
+%	\hline
+%	v0.3.0 & Igli Mezini & \textit{Verificatore} & 01-12-2020 & \textit{Verificati Capitolati C5 e C6} & jsaj\\
+%	\hline
+%	v0.2.2 & Emma Roveroni & \textit{Analista} & 30-11-2020 & \textit{Aggiunto Capitolato C6} & jkhs \\
+%	\hline
+%	 v0.2.1  & Margherita Mitillo & \textit{Analista} & 29-11-2020 & \textit{Aggiunto Capitolato C5 e C7} & kjhs\\
+%	\hline
+%	v0.2.0 & Igli Mezini & \textit{Verificatore} & 27-11-2020 & \textit{Verificati Capitolati C2 e C4} & lkjslj \\
+%	\hline
+%	v0.1.1 & Emma Roveroni & \textit{Analista} & 26-11-2020 &  \textit{Aggiunto Capitolato C4} & jkhakjl \\
+%	\hline
+%	v0.1.0 & Mattia Cocco & \textit{Verificatore} & 25-11-2020 & \textit{Verificata Introduzione e Capitolati C1 e C3} & hjgjk \\
+%	\hline
+%	 v0.0.4& Emma Roveroni & \textit{Analista} & 24-11-2020  & kjh & \textit{Aggiunto Capitolato C1} \\
+%	\hline
+%	 v0.0.3& Margherita Mitillo & \textit{Analista} & 23-11-2020  & khk &\textit{Aggiunti Capitolati C3 e C2} \\
+%	\hline
+%	 v0.0.2 & Margherita Mitillo & \textit{Analista} & 20-11-2020  & ttyy &  \textit{Aggiunta Introduzione} \\
+%	\hline
+%	 v0.0.1 & 19-11-2020 & Margherita Mitillo & \textit{Analista} & - & \textit{Prima stesura del documento}  \\
+%	\hline
+%\end{tabularx}
+%\end{center}
+
+
 \begin{center}
 	\renewcommand{\arraystretch}{1.4}
-\begin{tabularx}{\textwidth}{|X|c|c|c|c|}
-	\hline
-	\rowcolor{airforceblue}
-	\textbf{Modifica} & \textbf{Autore} & \textbf{Ruolo} & \textbf{Data} & \textbf{Versione}\\
-	\hline
-	\textit{Approvazione il documento per la RR} & Margherita Mitillo & \textit{Responsabile di Progetto} & 02-12-2020 & v1.0.0 \\
-	\hline
-	\textit{Verificato Capitolato C7} & Mattia Cocco & \textit{Verificatore} & 01-12-2020 & v0.4.0 \\
-	\hline
-	\textit{Verificati Capitolati C5 e C6} & Igli Mezini & \textit{Verificatore} & 01-12-2020 & v0.3.0 \\
-	\hline
-	\textit{Aggiunto Capitolato C6} & Emma Roveroni & \textit{Analista} & 30-11-2020 & v0.2.2 \\
-	\hline
-	\textit{Aggiunto Capitolato C5 e C7} & Margherita Mitillo & \textit{Analista} & 29-11-2020 & v0.2.1 \\
-	\hline
-	\textit{Verificati Capitolati C2 e C4} & Igli Mezini & \textit{Verificatore} & 27-11-2020 & v0.2.0 \\
-	\hline
-	\textit{Aggiunto Capitolato C4} & Emma Roveroni & \textit{Analista} & 26-11-2020 & v0.1.1 \\
-	\hline
-	\textit{Verificata Introduzione e Capitolati C1 e C3} & Mattia Cocco & \textit{Verificatore} & 25-11-2020 & v0.1.0 \\
-	\hline
-	\textit{Aggiunto Capitolato C1} & Emma Roveroni & \textit{Analista} & 24-11-2020 & v0.0.4 \\
-	\hline
-	\textit{Aggiunti Capitolati C3 e C2} & Margherita Mitillo & \textit{Analista} & 23-11-2020 & v0.0.3 \\
-	\hline
-	\textit{Aggiunta Introduzione} & Margherita Mitillo & \textit{Analista} & 20-11-2020 & v0.0.2 \\
-	\hline
-	\textit{Prima stesura del documento} & Margherita Mitillo & \textit{Analista} & 19-11-2020 & v0.0.1 \\
-	\hline
-\end{tabularx}
+	\begin{longtable}[c]{|p{2cm-1\tabcolsep}|p{2cm}|p{3cm-2\tabcolsep}|p{2,5cm-2\tabcolsep}|p{2,5cm}|p{4cm-2\tabcolsep}|}
+		\hline
+		\rowcolor{airforceblue}
+		\makecell[c]{\textbf{Versione}} & \makecell[c]{\textbf{Data}} & \makecell[c]{\textbf{Autore}} & \makecell[c]{\textbf{Ruolo}} & \makecell[c]{\textbf{Verificatore}} & \makecell[c]{\textbf{Modifica}}\\
+		\hline
+		\centering v1.0.0  & 02-12-2020 & Margherita Mitillo & \centering \textit{Responsabile di Progetto} & \centering - & \textit{Approvazione del documento per la RR} \\
+		\hline
+		\centering v0.4.0 & 01-12-2020 & \centering - & \centering - & Mattia Cocco & \textit{Verificato Capitolato C7} \\
+		\hline
+		\centering v0.3.0 & 01-12-2020 & \centering - & \centering - & Igli Mezini & \textit{Verificati Capitolati C5 e C6} \\
+		\hline
+		\centering v0.2.2 & 29-11-2020 & Emma Roveroni & \centering \textit{Analista} & \centering - & \textit{Aggiunto Capitolato C6} \\
+		\hline
+		\centering v0.2.1 & 29-11-2020 & Margherita Mitillo & \centering \textit{Analista}  & \centering - &  \textit{Aggiunto Capitolato C5 e C7} \\
+		\hline
+		\centering v0.2.0 & 27-11-2020 & \centering - & \centering -  & Igli Mezini & \textit{Verificati Capitolati C2 e C4} \\
+		\hline
+		\centering v0.1.1 & 26-11-2020 & Emma Roveroni & \centering \textit{Analista}  & \centering - &  \textit{Aggiunto Capitolato C4} \\
+		\hline
+		\centering v0.1.0 & 25-11-2020 & \centering - & \centering - & Mattia Cocco & \textit{Verificata Introduzione e Capitolati C1 e C3} \\
+		\hline
+		\centering v0.0.4 & 24-11-2020 & Emma Roveroni & \centering \textit{Analista} & \centering - & \textit{Aggiunto Capitolato C1} \\
+		\hline
+		\centering v0.0.3 & 23-11-2020 & Margherita Mitillo & \centering \textit{Analista}  & \centering- & \textit{Aggiunti Capitolati C3 e C2} \\
+		\hline
+		 \centering v0.0.2 & 20-11-2020  & Margherita Mitillo & \centering \textit{Analista} & \centering - & \textit{Aggiunta Introduzione} \\
+		\hline
+		\centering v0.0.1 & 19-11-2020 & Margherita Mitillo & \centering \textit{Analista} & \centering - & \textit{Prima stesura del documento}  \\
+		\hline
+		
+\end{longtable}
 \end{center}
