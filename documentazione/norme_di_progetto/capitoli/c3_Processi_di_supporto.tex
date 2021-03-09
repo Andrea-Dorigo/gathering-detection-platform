@@ -81,14 +81,17 @@ Informazioni sul documento che includono:
 							\item \textbf{sommario:} posto in fondo alla pagina che contiene una breve descrizione del contenuto del documento.
 \end{itemize}
 \subsubsection{Registro Modifiche}\label{ProcessiDiSupportoDocumentazioneStrutturaGeneraleDeiDocumentiRegistroModifiche}
-Il registro delle modifiche occupa la seconda pagina del documento e consiste in una tabella contenente le informazioni riguardanti il ciclo di vita del documento.
+Il registro delle modifiche, che occupa la seconda pagina del documento, consiste in una tabella contenente le informazioni riguardanti il ciclo di vita del documento.
 \\Più precisamente, la tabella riporta per ogni modifica:
 \begin{itemize}
 \item \textbf{versione:} versione del documento relativa alla modifica effettuata;
-	\item \textbf{descrizione:} breve descrizione della modifica effettuata;
-		\item \textbf{data:} data in cui la modifica è stata approvata;
-			\item \textbf{autore:} nominativo della persona che ha effettuato la modifica;
-				\item \textbf{ruolo:} ruolo della persona che ha effettuato la modifica.
+\item \textbf{data:} data in cui la modifica è stata approvata;
+\item \textbf{autore:} nominativo della persona che ha effettuato la modifica;
+\item \textbf{ruolo:} ruolo della persona che ha effettuato la modifica;
+\item \textbf{verificatore:} nominativo della persona che ha effettuato la verifica della modifica apportata al documento;
+\item \textbf{descrizione:} breve descrizione della modifica effettuata.
+		
+				
 \end{itemize}
 \subsubsection{Indice}\label{ProcessiDiSupportoDocumentazioneStrutturaGeneraleDeiDocumentiIndice}
 L'indice ha lo scopo di riepilogare e dare una visione generale della struttura del documento, mostrando le parti di cui è composto. L'indice ha una struttura standard: numero e titolo del capitolo, con eventuali sottosezioni, e il numero della pagina del contenuto; inoltre, ogni titolo è un link alla pagina del contenuto. L'indice dei contenuti è seguito da un eventuale indice per le tabelle e le figure presenti nel documento.
@@ -102,6 +105,20 @@ La struttura del contenuto principale di una pagina è cosi composta:
 				\item in basso è riportato il numero di pagina attuale ed il numero totale delle pagine che compongono il documento.
 \end{itemize}
 \subsubsection{Verbali}\label{ProcessiDiSupportoDocumentazioneStrutturaGeneraleDeiDocumentiVerbali}
+I verbali vengono identificati attraverso da un codice alfanumerico:
+\begin{center}
+	\textbf{v\_[Tipo\_verbale]\_[Data]}
+\end{center}
+La definizione di questa classificazione è la seguente:
+\begin{itemize}
+	\item \textbf{v}: indica verbale;
+	\item \textbf{Tipo\_verbale}: classifica il verbale in:
+		\begin{itemize}
+			\item \textbf{i}: indicazione per il verbale interno;
+			\item \textbf{e}: indicazione per il verbale esterno.
+		\end{itemize}
+	\item \textbf{Data}: indica la data nel formato \textit{DD\_MM\_YY} del giorno della riunione.
+\end{itemize}
 Ai verbali, sia interni che esterni, si applicano le stesse norme strutturali degli altri documenti. Il contenuto di un verbale è così organizzato:
 \begin{itemize}
 \item \textbf{luogo:} riporta il luogo in cui si è svolta la riunione (in alternativa il mezzo utilizzato es. Discord$_G$);
@@ -224,17 +241,20 @@ Sono inoltre qui raggruppati e brevemente descritti gli strumenti utilizzati a s
 \subsection{Versionamento}\label{ProcessiDiSupportoGestioneDellaConfigurazioneVersionamento}
 \subsubsection{Codice di versione di un documento}\label{ProcessiDiSupportoGestioneDellaConfigurazioneVersionamentoCodiceDiVersioneDiUnDocumento}
 Ogni documento possiede una storia che dev'essere ricostruibile tramite i suoi codici di versione.
-Il registro delle modifiche, presente in ogni documento fatta eccezione per i verbali, raccoglie tutta la storia delle versioni con le modifiche ad esse associate.
-Ogni versione corrisponde ad una riga in tale registro ed è composta da tre numeri separati da punti
-%INSERIRE TESTO CENTRATO X.Y.Z
+Il registro delle modifiche, presente in ogni documento, raccoglie tutta la storia delle versioni con le modifiche ad esse associate.
+Ogni versione corrisponde ad una riga in tale registro ed è composta da tre numeri che possono assumere valori interi, con incremento di una singola unità alla volta. Questi tre valori sono separati da punti nel seguente modo:
+\begin{center}
+	\textbf{X.Y.Z}
+\end{center}
 ove, partendo dall'ultima lettera:
 \begin{itemize}
-  \item \textbf{Z} rappresenta una versione in via di sviluppo del documento, ovvero in cui i redattori hanno aggiunto dei nuovi capitoli o sezioni non ancora verificati;
-  \item \textbf{Y} rappresenta una versione in cui uno o più \textit{Verificatori} hanno proceduto alla revisione dei nuovi capitoli redatti, assicurando la correttezza sia grammaticale che strutturale;
-  \item \textbf{X} rappresenta una versione ufficiale approvata dal \textit{Responsabile di progetto}, e pertanto garantisce un particolare livello di stabilità, correttezza e professionalità.
+  \item \textbf{Z} rappresenta una versione in via di sviluppo del documento, ovvero una versione in cui i redattori hanno aggiunto dei nuovi capitoli e/o sezioni o modificati quelli preesistenti, con relativa verifica. La numerazione di tale indice comincia da 0 e viene incrementato ad ogni modifica, ripartendo dal valore di 0 ogni volta in cui viene incrementato l'indice \textbf{X} o \textbf{Y};
+  \item \textbf{Y} rappresenta una versione in cui uno o più \textit{Verificatori} hanno proceduto alla revisione del documento, assicurandone l'omogeneità, la compattezza e  la correttezza sia grammaticale che strutturale. La numerazione di tale indice comincia da 0, ripartendo da tale valore ogni volta in cui viene incrementato l'indice \textbf{X}; 
+  \item \textbf{X} rappresenta una versione ufficiale approvata dal \textit{Responsabile di progetto}, e pertanto garantisce un particolare livello di stabilità, correttezza e professionalità. La numerazione di tale indice comincia da 0 e non retrocede mai a questo valore. 
 \end{itemize}
-Queste variabili assumono valori interi partendo da 0 con incremento di una singola unità alla volta.
+\begin{comment}Queste variabili assumono valori interi partendo da 0 con incremento di una singola unità alla volta.
 Ad ogni incremento di una variabile tutte quelle alla sua destra vengono nuovamente azzerate.
+\end{comment}
 \subsubsection{Tecnologie adottate}\label{ProcessiDiSupportoGestioneDellaConfigurazioneVersionamentoTecnologieAdottate}
 Il gruppo utilizza il sistema di controllo di versione Git$_G$ con hosting sulla piattaforma Github$_G$.
 L'interazione con queste tecnologie avviene da linea di comando del terminale attraverso il wrapper$_G$ Git-flow$_G$ oppure tramite il software ad interfaccia grafica GitKraken$_G$.

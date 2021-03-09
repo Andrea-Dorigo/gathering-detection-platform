@@ -6,24 +6,50 @@
 \def\tabularxcolumn#1{m{#1}}
 {\rowcolors{2}{RawSienna!90!RawSienna!20}{RawSienna!70!RawSienna!40}
 
+\begin{comment}
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\textwidth}{|X|c|c|c|c|}
+\hline
+\rowcolor{airforceblue}
+\textbf{Modifica} & \textbf{Autore} & \textbf{Ruolo} & \textbf{Data} & \textbf{Versione}\\
+\hline
+\textit{Approvazione documento per RR} & Mattia Cocco & \textit{Responsabile} & 10-01-2021 & v1.0.0\\
+\hline
+\textit{Verifica documento} & Andrea Dorigo & \textit{Verificatore} & 10-01-2021 & v0.1.0\\ %ok
+\hline
+\textit{Aggiunto Slack} & Mattia Cocco & \textit{Analista} & 10-01-2021 & v0.0.4\\ %ok
+\hline
+\textit{Aggiunto Brainstorming, Branch, Diagrammi di Gantt, Design Pattern, Fogli Google, Fornitore, Git-Flow, Git-Hub, Git-Kraken, Indice di Gulpease, Inspection, ISO/IEC 9126, ISO/IEC 15504, Kafka, Live-feed, Meeting, Outlier, Product Baseline, Proof of Concept, Python, Requisito, Spring, Streaming, Task, Technology Baseline, Walkthrough, Wrapper} & Mattia Cocco & \textit{Analista} & 9-01-2021 & v0.0.3 \\ %ok
+\hline
+\textit{Aggiunto Angular, Back-End, Front-End, Framework, GitHub, Heat-Map, Java, Leaflet, Machine Learning, Open-Source, Repository} & Emma Roveroni & \textit{Analista} & 07-01-2021 & v0.0.2 \\ %ok
+\hline
+\textit{Aggiunto Attività, Capitolato (d'appalto), Committente, Compito, Discord, Git, Norma, Procedura, Proponente, Trello} & Mattia Cocco & \textit{Analista} & 30-12-2020 & v0.0.1 \\ %ok
+\hline
+\end{tabularx}
+\end{center}
+
+\end{comment}
+
 \begin{center}
 	\renewcommand{\arraystretch}{1.4}
-\begin{tabularx}{\textwidth}{|X|c|c|c|c|}
-	\hline
-	\rowcolor{airforceblue}
-	\textbf{Modifica} & \textbf{Autore} & \textbf{Ruolo} & \textbf{Data} & \textbf{Versione}\\
-	\hline
-	\textit{Approvazione documento per RR} & Mattia Cocco & \textit{Responsabile} & 10-01-2021 & v1.0.0\\
-	\hline
-	\textit{Verifica documento} & Andrea Dorigo & \textit{Verificatore} & 10-01-2021 & v0.1.0\\
-	\hline
-	\textit{Aggiunto Slack} & Mattia Cocco & \textit{Analista} & 10-01-2021 & v0.0.4\\
-	\hline
-	\textit{Aggiunto Brainstorming, Branch, Diagrammi di Gantt, Design Pattern, Fogli Google, Fornitore, Git-Flow, Git-Hub, Git-Kraken, Indice di Gulpease, Inspection, ISO/IEC 9126, ISO/IEC 15504, Kafka, Live-feed, Meeting, Outlier, Product Baseline, Proof of Concept, Python, Requisito, Spring, Streaming, Task, Technology Baseline, Walkthrough, Wrapper} & Mattia Cocco & \textit{Analista} & 9-01-2021 & v0.0.3 \\
-	\hline
-	\textit{Aggiunto Angular, Back-End, Front-End, Framework, GitHub, Heat-Map, Java, Leaflet, Machine Learning, Open-Source, Repository} & Emma Roveroni & \textit{Analista} & 07-01-2021 & v0.0.2 \\
-	\hline
-	\textit{Aggiunto Attività, Capitolato (d'appalto), Committente, Compito, Discord, Git, Norma, Procedura, Proponente, Trello} & Mattia Cocco & \textit{Analista} & 30-12-2020 & v0.0.1 \\
-	\hline
-\end{tabularx}
+	\begin{longtable}[c]{|p{2cm-1\tabcolsep}|p{2cm}|p{3cm-2\tabcolsep}|p{2,5cm-2\tabcolsep}|p{2,5cm}|p{4cm-2\tabcolsep}|}
+		\hline
+		\rowcolor{airforceblue}
+		\makecell[c]{\textbf{Versione}} & \makecell[c]{\textbf{Data}} & \makecell[c]{\textbf{Autore}} & \makecell[c]{\textbf{Ruolo}} & \makecell[c]{\textbf{Verificatore}} & \makecell[c]{\textbf{Modifica}}\\
+		\hline
+		\centering v1.0.0 & 10-01-2021 & Mattia Cocco & \centering \textit{Responsabile} & \centering - & \textit{Approvazione documento per RR} \\
+		\hline
+		\centering v0.1.0 & 10-01-2021 & \centering - & \centering - & Andrea Dorigo & \textit{Verifica documento} \\
+		\hline
+		\centering v0.0.4 & 10-01-2021 & Mattia Cocco & \centering \textit{Analista} & \centering - & \textit{Aggiunto Slack} \\
+		\hline
+		\centering v0.0.3 & 09-01-2021 & Mattia Cocco & \centering \textit{Analista} & \centering - & \textit{Aggiunto Brainstorming, Branch, Diagrammi di Gantt, Design Pattern, Fogli Google, Fornitore, Git-Flow, Git-Hub, Git-Kraken, Indice di Gulpease, Inspection, ISO/IEC 9126, ISO/IEC 15504, Kafka, Live-feed, Meeting, Outlier, Product Baseline, Proof of Concept, Python, Requisito, Spring, Streaming, Task, Technology Baseline, Walkthrough, Wrapper} \\
+		\hline
+		\centering v0.0.2 & 07-01-2021 & Emma Roveroni & \centering \textit{Analista} & \centering - & \textit{Aggiunto Angular, Back-End, Front-End, Framework, GitHub, Heat-Map, Java, Leaflet, Machine Learning, Open-Source, Repository} \\
+		\hline
+		\centering v0.0.1 & 30-12-2020 & Mattia Cocco & \centering \textit{Analista} & \centering - & \textit{Aggiunto Attività, Capitolato (d'appalto), Committente, Compito, Discord, Git, Norma, Procedura, Proponente, Trello} \\
+		\hline
+		
+	\end{longtable}
 \end{center}
