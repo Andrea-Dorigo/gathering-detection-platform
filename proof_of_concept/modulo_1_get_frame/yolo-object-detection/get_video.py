@@ -98,18 +98,31 @@ while True:
 
         for file in glob.glob(path_frame1):
             # bashCommand = "/usr/bin/ls"
-            subprocess.call(["python3","yolo.py","--image","images/baggage_claim.jpg"])
-            subprocess.wait()
+            # process = subprocess.Popen(['python3','yolo.py','--image','images/baggage_claim.jpg'],
+            #                 stdout=subprocess.PIPE,
+            #                 stderr=subprocess.PIPE)
+            # output, error = process.communicate()
+            # print(output)
+            # subprocess.wait()
+            result = subprocess.run(['python3','yolo.py','--image','../Frame/frame0.jpg'], capture_output=True) # running linux ls command
+            # print(result.stdout.decode().count('person'))
+            conta_persone += result.stdout.decode().count('person')
+
+            #print(subprocess.stoud.readline())
+
+            #subprocess.wait()
             # sys.argv = ['--image images/baggage_claim.jpg --yolo yolo-coco']
-        #bashCommand2 = "./darknet detect cfg/yolov3-tiny.cfg yolov3-tiny.weights ../FrameCut/Spagna"+ str(file)
+            #bashCommand2 = "./darknet detect cfg/yolov3-tiny.cfg yolov3-tiny.weights ../FrameCut/Spagna"+ str(file)
             # process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
-        #process2 = subprocess.Popen(bashCommand2.split(), stdout=subprocess.PIPE)
+            #process2 = subprocess.Popen(bashCommand2.split(), stdout=subprocess.PIPE)
             #process.wait()
-        #process2.wait()
-            output, error = subprocess.communicate()
-        #output2, error2 = process2.communicate()
-            conta_persone += output.decode().count('person')
-        #conta_persone2 += output.decode().count('person')#3 vs 11su 14
+            #process2.wait()
+            # print("heree")
+            # output, error = process.communicate()
+            # print(process.returncode)
+            #output2, error2 = process2.communicate()
+            # conta_persone += output.decode().count('person')
+            #conta_persone2 += output.decode().count('person')#3 vs 11su 14
             print("Ci sono "+str(conta_persone)+" in totale")
         #print(conta_persone2)
 
