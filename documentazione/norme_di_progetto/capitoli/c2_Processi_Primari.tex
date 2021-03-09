@@ -334,31 +334,96 @@ Le classi vengono individuate da un rettangolo suddiviso in tre sezioni orizzont
 Il collegamento tra i diagrammi delle classi viene effettuato con delle frecce che illustrano le dipendenze.
 I tipi di frecca vengono descritti di seguito:
 \begin{itemize}
-	\item freccia normale, da classe 1 a classe 2: indica che 
+	\item freccia normale, da classe 1 a classe 2: indica che gli oggetti delle due classi consividono una relazione statica;
 	\begin{figure}[H]
 		\centering\includegraphics{../immagini/normeUML/frecSempl.png}
 		\caption{Relazione di associazione tra classe 1 e classe 2}
 	\end{figure}
 	 
-	\item freccia tratteggiata, da classe 1 a classe 2:
+	\item freccia tratteggiata, da classe 1 a classe 2: indica che la definizione di una delle due classi fa riferimento alla definizione dell'altra;
 	\begin{figure}[H]
 		\centering\includegraphics{../immagini/normeUML/frecTrat.png}
 		\caption{Relazione di dipendenza tra classe 1 e classe 2}
 	\end{figure}
-	\item freccia "a diamante" vuoto, da classe 1 a classe 2:
+	\item freccia "a diamante" vuoto, da classe 1 a classe 2: indica una relazione del tipo "è parte di", cioè classe 2 è parte di classe 1, questo permette di aggregare più classi e creare una classe più complessa;
 	\begin{figure}[H]
 		\centering\includegraphics{../immagini/normeUML/frecDiamVuot.png}
 		\caption{Relazione di aggregazione tra classe 1 e classe 2}
 	\end{figure}
-	\item freccia "a diamante" piena, da classe 1 a classe 2:
+	\item freccia "a diamante" piena, da classe 1 a classe 2: indica la composizione, è simile all'aggregazione, ma ha una relazione più forte sulla classe sub-ordinata perchè classe 2 non può esistere la classe 1;
 	\begin{figure}[H]
 		\centering\includegraphics{../immagini/normeUML/frecDiamPien.png}
 		\caption{Relazione di composizione tra classe 1 e classe 2}
 	\end{figure}
-	\item freccia con punta vuota, da classe 1 a classe 2:
+	\item freccia con punta vuota, da classe 1 a classe 2: indica la realizzazione/implementazione, cioè l'oggetto classe 1 implementa il comportamento, quindi nel nostro caso i metodi, che l'oggetto classe 2 specifica. 
 	\begin{figure}[H]
 		\centering\includegraphics{../immagini/normeUML/frecInter.png}
 		\caption{Relazione di interfaccie tra classe 1 e classe 2}
+	\end{figure}
+\end{itemize}
+Ad ogni freccia di collegamento viene indicato la molteplicità che ha e vengono indicate nel seguente modo:
+\begin{itemize}
+	\item \textbf{1}: classe 1 possiede un'istanza di classe 2;
+	\item \textbf{0...1}: classe 1 può possedere al massimo una istanza di classe 2;
+	\item \textbf{0...*} classe 1 può possedere 0 o più istanze della classe B;
+	\item \textbf{*}: classe 1 può possedere più istanze della classe 2;
+	\item \textbf{n}: classe 1 possiede $n$ istanze della classe 2.
+\end{itemize}
+\quad\large\textbf{Diagrammi delle attività}
+Il diagramma di attività è un tipo di diagramma che permette di descrivere un processo attraverso dei grafi in cui i nodi rappresentano le attività e gli archi l'ordine con cui vengono eseguite. I diagrammi vengono illustrati usando il seguente formalismo:
+\begin{itemize}
+	\item \textbf{Nodo iniziale}: viene rappresentato da un pallino nero pieno ed indica l'inizio della attività dove viene generato un token;
+	\begin{figure}[H]
+		\centering\includegraphics{../immagini/normeUML/nodoIni.png}
+		\caption{Rappresentazione di un nodo iniziale}
+	\end{figure}
+	\item \textbf{Attività}: viene rappresentata da un rettangolo, la sua descrizione deve essere breve e significativa per indicare l'azione svolta in quel punto del flusso dell'attività. Consuma e produce un token;
+	\begin{figure}[H]
+		\centering\includegraphics{../immagini/normeUML/attivita.png}
+		\caption{Rappresentazione di una attività}
+	\end{figure}
+	\item \textbf{Nodo finale}: viene rappresentato da due cerchi concentrici di cui l'esterno è vuoto e quello interno è pieno. Indica il punto in cui termina l'esecuzione. Consuma un token;
+	\begin{figure}[H]
+		\centering\includegraphics{../immagini/normeUML/nodoFine.png}
+		\caption{Rappresentazione di un nodo finale}
+	\end{figure}
+	\item \textbf{Nodo di fine flusso}: viene rappresentato attraverso un cerchio vuoto con una $X$ al centro. Indica la terminazione di un ramo dell'attività. Consuma un token;
+	\begin{figure}[H]
+		\centering\includegraphics{../immagini/normeUML/nodoFineFlusso.png}
+		\caption{Rappresentazione di un nodo di fine flusso}
+	\end{figure}
+	\item \textbf{Sotto-attività}: viene rappresentata da un rettangolo con un tridente nell'angolo in basso a destra. Indica che l'attività viene rappresentata in un diagramma separato ed ogni sotto-attività ha un input ed un output;
+	\begin{figure}[H]
+		\centering\includegraphics{../immagini/normeUML/attSott.png}
+		\caption{Rappresentazione di una sotto-attività}
+	\end{figure}
+	\item \textbf{Branch}: viene rappresentato attraverso un rombo con una freccia in entrata e $n$ frecce in uscita. Ogni ramo in uscita deve avere una guardia, scritta nel formato $[guardia]$. Il branch definisce una scelta, tra i rami disponibili in usciti se ne può scegliere uno solo in base alla guardia. Consuma e produce un token;
+	\item \textbf{Merge}: viene rappresentato da un rombo con $n$ frecce in entrata e una freccia in uscita. Individua il punto in cui i rami creati dal Branch tornano ad unirsi. Consuma e produce un token;
+		\begin{figure}[H]
+		\centering\includegraphics{../immagini/normeUML/mergeBranch.png}
+		\caption{Rappresentazione di un branch e merge}
+	\end{figure}
+	\item \textbf{Fork}: viene rappresentato da una linea nera marcata orizzontale o verticale. Indica il punto in cui avviene una paralizzazione delle attività da effettuare senza un limite temporale. Il fork presenta una freccia in entrata e $n$ frecce in uscita. Consuma e produce un token;
+	\item \textbf{Join}: viene rappresentato da una linea nera marcata orizzontale o verticale. Indica il punto in cui tutte le attività svolte in parallelo si sincronizzano. Il join preseta $n$ frecce in entrata e una freccia in uscita. Consuma e produce un token;
+		\begin{figure}[H]
+		\centering\includegraphics{../immagini/normeUML/forkJoin.png}
+		\caption{Rappresentazione di un fork e un join}
+	\end{figure}
+	\item \textbf{Pin}: viene rappresentato da un quadrato con una freccia al suo interno nella direzione di input o output. Indica il parametro che viene inviato da un'attività all'altra, a fianco del quadrato viene scritto il tipo di parametro inviato;
+		\begin{figure}[H]
+		\centering\includegraphics{../immagini/normeUML/pin.png}
+		\caption{Rappresentazione di pin in un'attività}
+	\end{figure}
+	\item \textbf{Segnali}: rappresentate da due figure "a incastro", la prima utilizzata per l'emissione del segnale, la seconda per la ricezione dello stesso. Il testo di descrizione all'interno delle figure deve essere breve e conciso e deve avere un prefisso $-signal sending-$ o $-signal receipt-$ a secondo della figura in descrizione;
+		\begin{figure}[H]
+		\centering\includegraphics{../immagini/normeUML/signal.png}
+		\caption{Rappresentazione di un segnale}
+	\end{figure}
+	\item \textbf{Timeout}: viene rappresentato da una clessidra stilizzata. Indica due tipi di eventi uno è il timeout rappresentato dalla clessidra con una freccia entrante e uscente, serve a rappresentare un'attesa di tempo. L'altro tipo di evento è l'evento ripetuto, rappresentato da una clessidra con una freccia in uscita, serve ad indicare un'azione ripetuta. %??? immagini%
+		\begin{figure}[H]
+		\centering\includegraphics{../immagini/normeUML/timeout.png}
+		\centering\includegraphics{../immagini/normeUML/reapeate.png}
+		\caption{Rappresentazione di un evento timeout e uno ripetuto}
 	\end{figure}
 \end{itemize}
 \subsection{Codifica}\label{ProcessiPrimariCodifica}
