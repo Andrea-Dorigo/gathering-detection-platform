@@ -9,18 +9,18 @@ La funzionalità principale identificata nel capitolato$_{\scaleto{G}{3pt}}$ d'a
 Questa funzionalità è il frutto di una serie di funzioni sottostanti, identificate e suddivise per meglio descrivere le operazioni effettuate dal back-end.
 Le illustriamo nella sezione seguente.
 
-\subsection{Sotto-funzioni della rappresentazione della heatmap}\label{DescrizioneGeneraleFunzionalitàDelProdottoSottoFunzioniDellaRappresentazioneDellaHeatmap}
+\subsection{Sotto-funzioni della rappresentazione della heat map}\label{DescrizioneGeneraleFunzionalitàDelProdottoSottoFunzioniDellaRappresentazioneDellaHeatmap}
 
 La descrizione delle sotto-funzioni della rappresentazione della \textit{heat map$_G$} è stata inserita in quanto ritenuta necessaria per fornire un ulteriore approfondimento riguardo tale macro-funzionalità.
 Queste funzioni sono raggruppate seguendo tre funzioni generali individuate:
 \begin{itemize}
-	\item \textbf{Acquisizione di dati:} l'acquisizione avverrà attraverso sistemi di monitoraggio e motori software "contapersone" applicati ad immagini/stream delle videocamere o ad altre sorgenti; i dati ottenuti verranno quindi trattati con Kafka e inseriti nel db;
+	\item \textbf{Acquisizione di dati:} l'acquisizione avverrà attraverso sistemi di monitoraggio e motori software "contapersone" applicati ad immagini/stream delle videocamere o ad altre sorgenti; i dati ottenuti verranno quindi trattati con Apache Kafka$_G$ e inseriti nel db;
 	\item \textbf{Elaborazione di dati:} i dati verranno elaborati per generare valore aggiunto agli stessi e confrontare i differenti flussi di informazioni;
 	\item \textbf{Rappresentazione di dati:} attraverso un sito web i dati elaborati verranno visualizzati a video mediante una \textit{heat map$_{\scaleto{G}{3pt}}$}.
 \end{itemize}
 
 \subsection{Funzione di acquisizione di dati}\label{DescrizioneGeneraleFunzionalitàDelProdottoFunzioneDiAcquisizioneDiDati}
-L'acquisizione dei dati avviene tramite sistemi di monitoraggio e motori software "contapersone" applicati ad immagini e/o stream, provenienti delle videocamere o ad altre sorgenti. Ne segue lo streaming di tali dati con Apache Kafka e il successivo inserimento nel database.
+L'acquisizione dei dati avviene tramite sistemi di monitoraggio e motori software "contapersone" applicati ad immagini e/o stream, provenienti delle videocamere o ad altre sorgenti. Ne segue lo streaming di tali dati con Apache Kafka$_{\scaleto{G}{3pt}}$ e il successivo inserimento nel database.
 
 \subsubsection{Funzione di conteggio persone}\label{DescrizioneGeneraleFunzionalitàDelProdottoFunzioneDiAcquisizioneDiDatiFunzioneDiConteggioPersone}
 \begin{itemize}
@@ -30,7 +30,7 @@ L'acquisizione dei dati avviene tramite sistemi di monitoraggio e motori softwar
 \item \textbf{Risposta ad errori}: nel caso di mancanza di risposta dai siti con live-feed il programma si bloccherà ed invierà un segnale di errore al server, con conseguente messaggio di errore visualizzabile dall'utente.
 \end{itemize}
 
-\subsubsection{Funzione di streaming dati con Apache Kafka$_G$}\label{DescrizioneGeneraleFunzionalitàDelProdottoFunzioneDiAcquisizioneDiDatiFunzioneDiStreamingDatiConApacheKafka}
+\subsubsection{Funzione di streaming dati con Apache Kafka}\label{DescrizioneGeneraleFunzionalitàDelProdottoFunzioneDiAcquisizioneDiDatiFunzioneDiStreamingDatiConApacheKafka}
 
 \begin{itemize}
 	\item \textbf{Descrizione}: impostazione di una piattaforma di data streaming$_G$ che consente di gestire e trasferire grandi volumi di dati in tempo reale, abbassando notevolmente i tempi di latenza;
