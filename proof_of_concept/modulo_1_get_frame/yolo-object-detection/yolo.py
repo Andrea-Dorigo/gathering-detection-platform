@@ -8,11 +8,12 @@ import time
 import cv2
 import os
 
+print("inside YOLO")
 # construct the argument parse and parse the arguments
 ap = argparse.ArgumentParser()
 ap.add_argument("-i", "--image", required=True,
 	help="path to input image")
-ap.add_argument("-y", "--yolo", required=True,
+ap.add_argument("-y", "--yolo", default="yolo-coco",
 	help="base path to YOLO directory")
 ap.add_argument("-c", "--confidence", type=float, default=0.5,
 	help="minimum probability to filter weak detections")
