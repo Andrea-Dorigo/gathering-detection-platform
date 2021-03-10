@@ -18,8 +18,8 @@ path_frame2 = "../FrameCut/Spagna/*.png"
 count = 0
 d = 0
 
-lat = 41.905697
-long = 12.482327
+lat = 41.899139
+long = 12.473311
 
 #list_link = ("https://cdn-002.whatsupcams.com/hls/it_roma02.m3u8", "https://hddn00.skylinewebcams.com/live.m3u8?a=vs0pqlids9c55qqsa2qln4kcq7")
 path_video = "../FileMU/"
@@ -63,7 +63,6 @@ while True:
 
         i = 0
         list_video = []
-
     #open & read file.m3u8
         for ffile in files:
             with open(ffile, "r") as fopen:
@@ -142,7 +141,7 @@ while True:
             time = a[6]
             ).save()
 
-        time.sleep(300)
+        time.sleep(60)
     except:
         time.sleep(5)
 
