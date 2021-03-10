@@ -21,11 +21,11 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 			\hline
 			\centering RSFO3  & Viene visualizzato un messaggio di errore per la mancanza dati nella generazione della heat-map  &\centering  Obbligatorio & \makecell[tc]{UC2}  \\
 			\hline
-			\centering RSFO4 & Archiviazione di tutti i dati nel database & \centering Obbligatorio & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$ \\ UC5}  \\
+			\centering RSFO4 & Archiviazione di tutti i dati nel database & \centering Obbligatorio & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$ \\ UC8}  \\
 			\hline
-			\centering RSFO4.1 & Archiviazione di tutti i dati reali nel database & \centering Obbligatorio & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$ \\ UC5.1 \\ UC5.2}  \\
+			\centering RSFO4.1 & Archiviazione di tutti i dati reali nel database & \centering Obbligatorio & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$ \\ UC8.1 \\ UC8.2}  \\
 			\hline
-			\centering RSFO4.2 & Archiviazione di tutti i dati elaborati dal modello ML nel database & \centering Obbligatorio & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$ \\ UC5.3}  \\
+			\centering RSFO4.2 & Archiviazione di tutti i dati elaborati dal modello ML nel database & \centering Obbligatorio & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$ \\ UC8.3}  \\
 			%fase 2
 			\hline
 			\centering RSFO5 & Elaborazione in tempo reale dei dati acquisiti da flussi esterni &\centering  Obbligatorio & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$}  \\
@@ -214,11 +214,11 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 		\hline
 		\makecell[tc]{RSFO3} & \makecell[tc]{Interno \\ UC2}\\
 		\hline
-		\makecell[tc]{RSFO4} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$\\UC5}\\
+		\makecell[tc]{RSFO4} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$\\UC8}\\
 		\hline
-		\makecell[tc]{RSFO4.1} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$\\UC5.1 \\ UC5.2}\\
+		\makecell[tc]{RSFO4.1} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$\\UC8.1 \\ UC8.2}\\
 		\hline
-		\makecell[tc]{RSFO4.2} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$\\UC5.3}\\
+		\makecell[tc]{RSFO4.2} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$\\UC8.3}\\
 		\hline
 		\makecell[tc]{RSFO5} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$}\\
 		\hline
@@ -270,17 +270,17 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 		\hline
 		\makecell[tc]{RSFO25} & \makecell[tc]{Interno}\\
 		\hline
-		\makecell[tc]{RSFO26} & \makecell[tc]{UC5.1}\\
+		\makecell[tc]{RSFO26} & \makecell[tc]{UC8.1}\\
 		\hline
-		\makecell[tc]{RSFO27} & \makecell[tc]{UC5.2}\\
+		\makecell[tc]{RSFO27} & \makecell[tc]{UC8.2}\\
 		\hline
-		\makecell[tc]{RSFO28} & \makecell[tc]{UC5.3}\\
+		\makecell[tc]{RSFO28} & \makecell[tc]{UC8.3}\\
 		\hline
 		\makecell[tc]{RSFD29} & \makecell[tc]{Interno}\\
 		\hline
 		\makecell[tc]{RSFO30} & \makecell[tc]{V. esterno 02-02-2021}\\
 		\hline
-		\makecell[tc]{RSFF31} & \makecell[tc]{Interno \\ UC9}\\
+		\makecell[tc]{RSFF31} & \makecell[tc]{Interno \\ UC12}\\
 		\hline
 		\makecell[tc]{RSPO1} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$}\\
 		\hline
@@ -349,15 +349,21 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 		\hline
 		\makecell[c]{UC2} & \makecell[c]{RSFO3} \\
 		\hline
-		\makecell[c]{UC4} & \makecell[c]{RSFO20 \\ RSVO3.1 } \\ % UC3.2 RSFO18, UC3.3 RSFO19
+		\makecell[c]{UC4} & \makecell[c]{RSFO20} \\ % UC3.2 RSFO18, UC3.3 RSFO19
 		\hline
-		\makecell[c]{UC5} & \makecell[c]{RSFO4} \\
+		\makecell[c]{UC5.1} & \makecell[c]{RSFO24 \\ RSFO26} \\
 		\hline
-		\makecell[c]{UC5.1} & \makecell[c]{RSFO4.1 \\ RSFO26 \\ RSFO24} \\
+		\makecell[c]{UC5.2} & \makecell[c]{RSFO27} \\
 		\hline
-		\makecell[c]{UC5.2} & \makecell[c]{RSFO4.1 \\ RSFO27} \\
+		\makecell[c]{UC5.3} & \makecell[c]{RSFO28} \\
 		\hline
-		\makecell[c]{UC5.3} & \makecell[c]{RSFO4.2 \\ RSFO28} \\
+		\makecell[c]{UC8} & \makecell[c]{RSFO4} \\
+		\hline
+		\makecell[c]{UC8.1} & \makecell[c]{RSFO4.1 \\ RSFO26 } \\
+		\hline
+		\makecell[c]{UC8.2} & \makecell[c]{RSFO4.1 \\ RSFO27} \\
+		\hline
+		\makecell[c]{UC8.3} & \makecell[c]{RSFO4.2 \\ RSFO28} \\
 		\hline
 		\makecell[c]{UC9} & \makecell[c]{RSFO19} \\
 		\hline
