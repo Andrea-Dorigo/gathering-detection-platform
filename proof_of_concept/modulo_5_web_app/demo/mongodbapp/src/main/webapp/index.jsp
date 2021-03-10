@@ -9,16 +9,27 @@
     <script src="leaflet-heat.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<link rel = "stylesheet" href = "style.css" type = "text/css" media = "screen" />
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
-<body onload="start()">
+<body onload="loadEmptyMap()">
 
 <h1>GDP: Gathering Detection Platform</h1>
-<div id="map"></div>
-
+<div id="content">
+	<div class="container" id="app">
+		<input @change="setColor()" v-model="value" type="range" id="myRange" class="mySlider" min="0" max="24" onchange="getTime()">
+	    <span :style="setColor()" class="rangeValue" id="range"> {{ value }} </span>
+	</div>
+	
+	<input type="button" id="reload" value="Reload Map" onClick="reload()">
+	
+	<div id="map"></div>
+	
+	
+</div>
 
 <script>
 
-
+var map;
 
 function generateRandomPoints(center, radius, count) {
   var points = [];
@@ -32,7 +43,7 @@ function generateRandomPoints(center, radius, count) {
 function generateRandomPoint(center, radius) {
   var x0 = center.lng;
   var y0 = center.lat;
-  // Convert Radius from meters to degrees.
+ 
   var rd = radius/111300;
 
   var u = Math.random();
@@ -45,13 +56,12 @@ function generateRandomPoint(center, radius) {
 
   var xp = x/Math.cos(y0);
 
-  // Resulting point.
   return {'lat': y+y0, 'lng': xp+x0};
 }
 
 function loadMap(data){
 	
-	var map = L.map('map').setView([41.9005213979, 12.4765647604], 12);
+	map = L.map('map').setView([41.9005213979, 12.4765647604], 12);
 
 	var tiles = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 	    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
@@ -65,7 +75,7 @@ function loadMap(data){
 	
 	var count = Object.keys(test.webcam).length;
     var last = count-1;
-	
+    
 	var randomGeoPointsPiazzaNavona = generateRandomPoints({'lat':test.webcam[last].latitude, 'lng':test.webcam[last].longitude}, 10, test.webcam[last].numPeople); //piazza navona
 
 	var heat = L.heatLayer(randomGeoPointsPiazzaNavona).addTo(map);
@@ -75,8 +85,12 @@ function loadMap(data){
 	        title: "Piazza Navona"
 	}).addTo(map);
 
-	marker.bindPopup("Piazza di Navona: " + test.webcam[last].numPeople + " persone ca.").openPopup();
+	marker.bindPopup("Piazza Navona: " + test.webcam[last].numPeople + " persone ca.").openPopup();
 	
+	var t = test.webcam[last].time;
+	t = t.split(".");
+	myRange.value = t[0];
+	range.textContent = t[0];
 }
 
 
@@ -87,11 +101,104 @@ function start() {
 	    url: methodurl,
 	    dataType: 'json', 
 	    success: function(data) {
-	    	console.log(data);
 	        loadMap(data);
 	    }
 	});
 }
+
+function reload() {
+	map.remove();
+	start();
+}
+
+function loadEmptyMap(){
+	map = L.map('map').setView([41.9005213979, 12.4765647604], 12);
+
+	var tiles = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+	    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+	}).addTo(map);
+}
+
+function loadMapByTime(dataFinal, index){
+	
+	map = L.map('map').setView([41.9005213979, 12.4765647604], 12);
+
+	var tiles = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+	    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+	}).addTo(map);
+	
+	var randomGeoPointsPiazzaNavona = generateRandomPoints({'lat':dataFinal.webcam[index].latitude, 'lng':dataFinal.webcam[index].longitude}, 10, dataFinal.webcam[index].numPeople); //piazza navona
+
+	var heat = L.heatLayer(randomGeoPointsPiazzaNavona).addTo(map);
+
+	var marker = L.marker([dataFinal.webcam[index].latitude , dataFinal.webcam[index].longitude], {
+	        elevation: 260.0,
+	        title: "Piazza Navona"
+	}).addTo(map);
+
+	marker.bindPopup("Piazza Navona: " + dataFinal.webcam[index].numPeople + " persone ca.").openPopup();
+	
+
+}
+
+function getTime(){
+	
+	var methodurl = "/coordinate";
+	$.ajax({
+		type: 'GET',
+	    url: methodurl,
+	    dataType: 'json', 
+	    success: function(data) {
+	    	map.remove();
+	    	var dataToString = JSON.stringify(data);
+	    	var datatext = '{"webcam":' + dataToString + '}';
+	    	var test = JSON.parse(datatext);
+	    	var t = document.getElementById("myRange").value;
+	    	var ore;
+	    	var s;
+	    	var k = Object.keys(test.webcam).length;
+	    	for (i = 0; i < k; i++){
+	    		s = test.webcam[i].time;
+	    		ore = s.split(".");
+	    		if(ore[0] == t){
+	    			break;
+	    		}
+	    	}
+	    	if(i == test.webcam.length){
+	    		myRange.value = t;
+		    	range.textContent = t;
+	    		alert("Non ci sono dati disponibili per questa fascia oraria");
+	    		loadEmptyMap();
+	    	}
+	    	else{
+	    		var r = test.webcam[i].time;
+		    	r = r.split(".");
+		    	myRange.value = r[0];
+		    	range.textContent = r[0];
+	    		loadMapByTime(test,i);
+	    	}
+	    }
+	});
+}
+
+new Vue({
+    el: "#app",
+    data() {
+        return {
+            value: ""
+        }
+    },
+    methods: {
+        setColor: function() {
+            if (this.value > 0) {
+                return {
+                    color: "#black",
+                }
+                
+            }
+        }
+    },
+});
 
 
 </script>

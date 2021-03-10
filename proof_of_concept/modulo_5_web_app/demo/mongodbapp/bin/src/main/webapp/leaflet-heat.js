@@ -1,4 +1,8 @@
-/*
+/**
+ * 
+ */
+ 
+ /*
  (c) 2014, Vladimir Agafonkin
  simpleheat, a tiny JavaScript library for drawing heatmaps with Canvas
  https://github.com/mourner/simpleheat
