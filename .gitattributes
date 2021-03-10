@@ -1,0 +1,1 @@
+docker/modulo_1_get_frame/yolo-object-detection/yolo-coco/yolov3.weights filter=lfs diff=lfs merge=lfs -text
