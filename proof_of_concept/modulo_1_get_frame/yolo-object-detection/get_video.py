@@ -104,7 +104,7 @@ while True:
             # output, error = process.communicate()
             # print(output)
             # subprocess.wait()
-            result = subprocess.run(['python3','yolo.py','--image','../Frame/frame0.jpg'], capture_output=True) # running linux ls command
+            result = subprocess.run(['python3','yolo.py','--image','../FrameCut/'+file], capture_output=True) # running linux ls command
             # print(result.stdout.decode().count('person'))
             conta_persone += result.stdout.decode().count('person')
 
@@ -142,6 +142,7 @@ while True:
             time = a[6]
             ).save()
 
+        time.sleep(300)
     except:
         time.sleep(5)
 
