@@ -9,7 +9,7 @@ import sys
 import subprocess
 from datetime import datetime
 from mongoengine import *
-connect("GDP-test", host="172.18.0.2", port=27017)
+connect("GDP-test", host="mdb", port=27017)
 
 bashCommand = "./darknet detect cfg/yolov3.cfg yolov3.weights ../FrameCut/"
 #path_frame = "../FrameCut/*.png"
