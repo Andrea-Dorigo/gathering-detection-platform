@@ -1,5 +1,5 @@
 \chapter{Requisiti}\label{Requisiti}
-In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{\scaleto{G}{3pt}}$ individuati dal proponente$_{\scaleto{G}{3pt}}$ e dal gruppo \textit{Jawa Druids}. Ogni requisito viene individuato da un codice identificativo, una sua descrizione, la tipologia di requisito e la fonte di riferimento, la spiegazione di ogni parte è descritta nel documento \textit{Norme del Progetto v1.0.0}. Nella sezione successiva viene illustrato attraverso una tabella il tracciamento dei requisiti alla loro fonte e viceversa.
+In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{\scaleto{G}{3pt}}$ individuati dal proponente$_{\scaleto{G}{3pt}}$ e dal gruppo \textit{Jawa Druids}. Ogni requisito viene individuato da un codice identificativo, una sua descrizione, la tipologia di requisito e la fonte di riferimento, la spiegazione di ogni parte è descritta nel documento \textit{Norme del Progetto v2.0.0}. Nella sezione successiva viene illustrato attraverso una tabella il tracciamento dei requisiti alla loro fonte e viceversa.
 
 \section{Requisiti funzionali}\label{RequisitiFunzionali}
 
@@ -90,6 +90,46 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 			\centering RSFO30 & Il sistema deve utilizzare un software 'contapersone' già allenato &\centering Obbligatorio & \makecell[tc]{V. esterno 02-02-2021} \\
 			\hline
 			\centering RSFF31 & L'utente può reperire il manuale d'uso  &\centering Facoltativo & \makecell[tc]{Interno \\ UC12} \\
+			\hline
+			\centering RSFO32 & L'utente deve poter variare il livello di zoom della heat map$_{\scaleto{G}{3pt}}$  &\centering Obbligatorio & \makecell[tc]{UC3} \\
+			\hline
+			\centering RSFO32.1 & L'utente deve poter aumentare il livello di zoom della heat map$_{\scaleto{G}{3pt}}$  &\centering Obbligatorio & \makecell[tc]{UC3} \\
+			\hline
+			\centering RSFO32.1.1 & L'utente deve poter attuare il drag della heat map$_{\scaleto{G}{3pt}}$  &\centering Obbligatorio & \makecell[tc]{UC3} \\
+			\hline
+			\centering RSFO32.1.2 & L'utente deve poter visualizzare il popup legato ad un punto di interesse  &\centering Obbligatorio & \makecell[tc]{UC3} \\
+			\hline
+			\centering RSFO32.1.3 & L'utente deve poter chiudere il popup legato ad un punto di interesse &\centering Obbligatorio & \makecell[tc]{UC3} \\
+			\hline
+			\centering RSFO32.2 & L'utente deve poter diminuire il livello di zoom della heat map$_{\scaleto{G}{3pt}}$  &\centering Obbligatorio & \makecell[tc]{UC3} \\
+			\hline			
+			\centering RSFD33 & L'utente deve poter ricercare in una barra di ricerca le città presenti nel database &\centering Desiderabile & \makecell[tc]{UC6} \\
+			\hline
+			\centering RSFD33.1 & L'utente deve poter ricercare tramite nome in una barra di ricerca le città presenti nel database &\centering Desiderabile & \makecell[tc]{UC6.1} \\
+			\hline
+			\centering RSFD33.2 & L'utente deve poter ricercare tramite codice identificativo in una barra di ricerca le città presenti nel database &\centering Desiderabile & \makecell[tc]{UC6.2} \\
+			\hline
+			\centering RSFD34 & Viene visualizzato un messaggio di errore al front end$_{\scaleto{G}{3pt}}$ dal back end$_{\scaleto{G}{3pt}}$ se non sono presenti i dati richiesti &\centering Desiderabile & \makecell[tc]{UC7} \\
+			\hline
+			\centering RSFD35 & L'utente deve poter selezionare due città per poter mettere i loro dati a confronto &\centering Desiderabile & \makecell[tc]{UC13} \\
+			\hline
+			\centering RSFD36 & L'utente deve poter salvare in un file locale i dati della città della mappa che sta visualizzando &\centering Desiderabile & \makecell[tc]{UC14} \\
+			\hline
+			\centering RSFD36.1 & L'utente deve poter salvare in un file locale di tipo pdf i dati della città della mappa che sta visualizzando &\centering Desiderabile & \makecell[tc]{UC14.1} \\
+			\hline
+			\centering RSFD36.2 & L'utente deve poter salvare in un file locale di tipo csv i dati della città della mappa che sta visualizzando &\centering Desiderabile & \makecell[tc]{UC14.2} \\
+			\hline
+			\centering RSFD37 & L'utente deve poter inserire l'e-mail per il ricevimento delle informazioni della città selezionata &\centering Desiderabile & \makecell[tc]{UC15} \\
+			\hline
+			\centering RSFD37.1 & Viene visualizzato un messaggio di errore all'utente dal front end$_{\scaleto{G}{3pt}}$ se sono presenti errori ortografici &\centering Desiderabile & \makecell[tc]{UC16} \\
+			\hline
+			\centering RSFD38 & Il sistema salva nel database l'e-mail e la città selezionata &\centering Desiderabile & \makecell[tc]{UC15} \\
+			\hline
+			\centering RSFD39 & Il sistema invia l'email all'utente &\centering Desiderabile & \makecell[tc]{UC15} \\
+			\hline
+			\centering RSFD40 & L'utente deve poter visualizzare la lista delle città più cercate &\centering Desiderabile & \makecell[tc]{UC17} \\
+			\hline
+			\centering RSFD41 & L'utente deve poter visualizzare la lista di tutte le città presenti nel database &\centering Desiderabile & \makecell[tc]{UC18} \\
 			\hline
 			\rowcolor{white}
 			\caption[Requisiti funzionali]{Requisiti funzionali}\label{4.1}\\
@@ -189,6 +229,8 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 		\hline
 		\centering RSVF8 & Utilizzo di Keras per lo sviluppo del modello machine learning$_{\scaleto{G}{3pt}}$ & \centering Facoltativo & \makecell[tc]{V. esterno 02-02-2021} \\
 		\hline
+		\centering RSVO9 & Il codice identificativo della città deve essere solo numerico & \centering Obbligatorio & \makecell[tc]{Interno} \\
+		\hline
 		\rowcolor{white}
 
 		\caption[Requisiti di vincolo]{Requisiti di vincolo}\label{4.4}\\
@@ -282,6 +324,46 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 		\hline
 		\makecell[tc]{RSFF31} & \makecell[tc]{Interno \\ UC12}\\
 		\hline
+		\makecell[tc]{RSFO32} & \makecell[tc]{UC3}\\
+		\hline
+		\makecell[tc]{RSFO32.1} & \makecell[tc]{UC3}\\
+		\hline
+		\makecell[tc]{RSFO32.1.1} & \makecell[tc]{UC3}\\
+		\hline
+		\makecell[tc]{RSFO32.1.2} & \makecell[tc]{UC3}\\
+		\hline
+		\makecell[tc]{RSFO32.1.3} & \makecell[tc]{UC3}\\
+		\hline
+		\makecell[tc]{RSFO32.2} & \makecell[tc]{UC3}\\
+		\hline
+		\makecell[tc]{RSFD33} & \makecell[tc]{UC6}\\
+		\hline
+		\makecell[tc]{RSFD33.1} & \makecell[tc]{UC6.1}\\
+		\hline
+		\makecell[tc]{RSFD33.2} & \makecell[tc]{UC6.2}\\
+		\hline
+		\makecell[tc]{RSFD34} & \makecell[tc]{UC7}\\
+		\hline
+		\makecell[tc]{RSFD35} & \makecell[tc]{UC13}\\
+		\hline
+		\makecell[tc]{RSFD36} & \makecell[tc]{UC14}\\
+		\hline
+		\makecell[tc]{RSFD36.1} & \makecell[tc]{UC14.1}\\
+		\hline
+		\makecell[tc]{RSFD36.2} & \makecell[tc]{UC14.2}\\
+		\hline
+		\makecell[tc]{RSFD37} & \makecell[tc]{UC15}\\
+		\hline
+		\makecell[tc]{RSFD37.1} & \makecell[tc]{UC16}\\
+		\hline
+		\makecell[tc]{RSFD38} & \makecell[tc]{UC15}\\
+		\hline
+		\makecell[tc]{RSFD39} & \makecell[tc]{UC15}\\
+		\hline
+		\makecell[tc]{RSFD40} & \makecell[tc]{UC17}\\
+		\hline
+		\makecell[tc]{RSFD41} & \makecell[tc]{UC18}\\
+		\hline
 		\makecell[tc]{RSPO1} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$}\\
 		\hline
 		\makecell[tc]{RSPO2} & \makecell[tc]{Interno}\\
@@ -326,6 +408,8 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 		\hline
 		\makecell[tc]{RSVF8} & \makecell[tc]{V. esterno 02-02-2021}\\
 		\hline
+		\makecell[tc]{RSVO8} & \makecell[tc]{Interno}\\
+		\hline
 		\rowcolor{white}
 
 		\caption[Tabella tracciamento requisito-fonte]{Tabella tracciamento requisito-fonte}\label{4.5}\\
@@ -349,6 +433,8 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 		\hline
 		\makecell[c]{UC2} & \makecell[c]{RSFO3} \\
 		\hline
+		\makecell[c]{UC3} & \makecell[c]{RSFO32\\RSFO32.1\\RSFO32.1.1\\RSFO32.1.2\\RSFO32.1.3\\RSFO32.2} \\
+		\hline
 		\makecell[c]{UC4} & \makecell[c]{RSFO20} \\ % UC3.2 RSFO18, UC3.3 RSFO19
 		\hline
 		\makecell[c]{UC5.1} & \makecell[c]{RSFO24 \\ RSFO26} \\
@@ -356,6 +442,14 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 		\makecell[c]{UC5.2} & \makecell[c]{RSFO27} \\
 		\hline
 		\makecell[c]{UC5.3} & \makecell[c]{RSFO28} \\
+		\hline
+		\makecell[c]{UC6} & \makecell[c]{RSFD33} \\
+		\hline
+		\makecell[c]{UC6.1} & \makecell[c]{RSFD33.1} \\
+		\hline
+		\makecell[c]{UC6.2} & \makecell[c]{RSFD33.2} \\
+		\hline
+		\makecell[c]{UC7} & \makecell[c]{RSFD34} \\
 		\hline
 		\makecell[c]{UC8} & \makecell[c]{RSFO4} \\
 		\hline
@@ -375,13 +469,27 @@ In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{
 		\hline
 		\makecell[c]{UC12} & \makecell[c]{RSFF31} \\
 		\hline
-		\makecell[c]{Interno} &\makecell[c]{RSFO8\\RSFO9\\RSFO10\\RSFO11\\RSFF12\\RSFD13\\RSFD14\\RSFF15\\RSFF16\\RSFO17\\RSFO19\\RSFO20\\RSFO21\\RSFO22\\RSFO22.1\\RSFO22.2\\RSFF23\\RSFO25\\RSFD29\\RSPO2\\RSPO3\\RSPO4\\RSPF5\\RSQO1\\RSQF2\\RSQF3\\RSQF4\\RSVO1\\RSVO1.1\\RSVO1.2 \\ RSFF31} \\
+		\makecell[c]{UC13} & \makecell[c]{RSFD35} \\
+		\hline
+		\makecell[c]{UC14} & \makecell[c]{RSFD36} \\
+		\hline
+		\makecell[c]{UC14.1} & \makecell[c]{RSFD36.1} \\
+		\hline
+		\makecell[c]{UC14.2} & \makecell[c]{RSFD36.2} \\
+		\hline\
+		\makecell[c]{UC15} & \makecell[c]{RSFD37\\RSFD38\\RSFD39} \\
+		\hline
+		\makecell[c]{UC16} & \makecell[c]{RSFD37.1} \\
+		\hline
+		\makecell[c]{UC17} & \makecell[c]{RSFD40} \\
+		\hline
+		\makecell[c]{UC18} & \makecell[c]{RSFD41} \\
+		\hline
+		\makecell[c]{Interno} &\makecell[c]{RSFO8\\RSFO9\\RSFO10\\RSFO11\\RSFF12\\RSFD13\\RSFD14\\RSFF15\\RSFF16\\RSFO17\\RSFO19\\RSFO20\\RSFO21\\RSFO22\\RSFO22.1\\RSFO22.2\\RSFF23\\RSFO25\\RSFD29\\RSFF31\\RSPO2\\RSPO3\\RSPO4\\RSPF5\\RSQO1\\RSQF2\\RSQF3\\RSQF4\\RSVO5\\RSVF6\\RSVO9} \\
 		\hline
 		\makecell[c]{Verbale esterno 17-12-2020} & \makecell[c]{RSFO1} \\
 		\hline
-		\makecell[c]{Verbale esterno 02-02-2021} & \makecell[c]{RSFO30} \\
-		\hline
-		\makecell[c]{Verbale esterno 02-02-2021} & \makecell[c]{RSFO18\\RSFO18.1\\RSVO1.2\\RSVF2} \\
+		\makecell[c]{Verbale esterno 02-02-2021} & \makecell[c]{RSFO18\\RSFO18.1\\RSFO30\\RSVO1.2\\RSVF2\\RSVF8} \\
 		\hline
 		\rowcolor{white}
 
