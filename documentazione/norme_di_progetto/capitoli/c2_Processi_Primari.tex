@@ -458,16 +458,29 @@ Conclusa la fase di codifica ci si attende un codice pulito e facile da leggere,
 \subsubsection{Descrizione}\label{ProcessiPrimariCodificaDescrizione}
 In questa fase la programmazione del prodotto dovrà rispettare le norme descritte nel documento. Perseguendo gli obiettivi individuati nel documento \textit{Piano di qualifica v1.0.0} si produrrà un software con un'alta qualità di codice.
 
+\subsubsection{Intestazione} \label{ProcessiPrimariCodificaIntestazione}
+Ciascun file di codifica dovrà riportare la seguente intestazione: 
+\begin{center}
+	\includegraphics[width=0.5\linewidth]{../immagini/CodificaIdentazione.png}
+\end{center}
+
+
 \subsubsection{Stile di codifica}\label{ProcessiPrimariCodificaStileDiCodifica}
 All'interno di questo paragrafo vengono elencate le norme da rispettare da ogni membro del gruppo per raggiungere uniformità del codice:
 
 \begin{itemize}
-	\item \textbf{Indentazione}: ogni blocco di codice scritto per il prodotto da sviluppare deve essere ben indentato e deve rispettare una misura di 4 spazi (equivalenti alla pressione del tasto \textit{tab}). Fanno eccezione a questa regola i commenti che vengono inseriti per spiegazioni di blocchi di codice;
-	\item \textbf{Parentesizzazione}: le parentesi devono essere utilizzate in linea col blocco di codice scritto e non in una linea sottostante per separarlo;
-	\item \textbf{Univocità delle variabili, metodi e funzioni}: ogni variabile, metodo e funzione utilizzata deve avere un nome significativo, esplicativo ed univoco;
+	\item \textbf{Indentazione}: ogni blocco di codice scritto per il prodotto da sviluppare deve essere ben indentato e deve rispettare per ciascun livello una misura di 4 spazi. E’ obbligatorio utilizzare gli spazi anzichè le tabulazioni (tasto tab). Per riuscire a rispettare tale obbligo si cosiglia di configurare in modo appropriato il proprio editor o IDE. Fanno eccezione a queste regole i commenti che vengono inseriti per spiegazioni di blocchi di codice;
+	\item \textbf{Parentesizzazione}:  le parentesi devono essere utilizzate in linea col blocco di codice scritto e non in una linea sottostante, separandole con un singolo spazio;
+	\item \textbf{Univocità delle classi, variabili, metodi e funzioni}: ogni classe, variabile, metodo e funzione utilizzata deve avere un nome significativo, esplicativo ed univoco;
 	\item \textbf{Classi}: ogni classe deve avere il proprio nome scritto con l'iniziale maiuscola;
 	\item \textbf{Metodi e funzioni}: il nome di metodi e funzioni devono iniziare per lettera minuscola e se composti da più parole le successive devono essere scritte con lettera maiuscola (stile \textit{CamelCase});
-	\item \textbf{Lingua}: i commenti devono essere scritti in lingua inglese.
+	\item \textbf{Commenti}: i commenti vanno inseriti solo nei casi in cui sono necessari per migliorare la comprensibilità e leggibilità del codice, mantenendo uno stile sintetico. Si possono utilizzare due tipologie di costrutti per i commenti:
+	\begin{itemize}
+		\item \textbf{/* ... */} per i commenti che racchiudono più di una riga, andare a capo dopo la dicitura /*  per scrivere il commento(????);
+		\item \textbf{// … } per i commenti di linea singola che devono essere separati da uno spazio dopo la dicitura //.
+	\end{itemize}
+	Entrambi costrutti non devono essere riportati sulla stessa riga dell’istruzione a cui si riferiscono ma sulla riga che la precede;
+	\item \textbf{Lingua}: il codice ed i commenti devono essere scritti in lingua inglese.
 \end{itemize}
 
 \subsection{Strumenti}\label{ProcessiPrimariStrumenti}
