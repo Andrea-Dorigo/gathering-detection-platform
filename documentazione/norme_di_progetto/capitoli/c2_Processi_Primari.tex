@@ -26,7 +26,7 @@ I documenti in questione sono:
 	\item \textit{Analisi dei Requisiti 3.0.0}: identifica e dettaglia in modo completo ed esaustivo i requisiti$_G$ del sistema descritto nel capitolato che il fornitore si impegna a soddisfare;
 	\item \textit{Piano di Qualifica 2.0.0}: illustra la strategia complessiva di verifica e validazione proposta dal fornitore per pervenire al collaudo del sistema con la massima efficienza ed efficacia;
 	\item \textit{Piano di Progetto 2.0.0}: presenta l'organigramma dettagliato del fornitore, lo schema proposto per l'assegnazione e la rotazione dei ruoli di progetto, l'impegno complessivo previsto per ogni ruolo e per ogni individuo, l'analisi dei rischi, la pianificazione di massima per la realizzazione del prodotto, e il corrispondente conto economico preventivo;
-	\item \textit{Proof of Concept$_G$ e Technology Baseline$_G$}: il Proof of Concept$_{\scaleto{G}{3pt}}$ dimostra una baseline$_{\scaleto{G}{3pt}}$ per lo sviluppo del prodotto, mentre la Technology Baseline$_{\scaleto{G}{3pt}}$ definisce le tecnologie utilizzate. 
+	\item \textit{Proof of Concept$_G$ e Technology Baseline$_G$}: il Proof of Concept$_{\scaleto{G}{3pt}}$ dimostra una baseline$_{\scaleto{G}{3pt}}$ per lo sviluppo del prodotto, mentre la Technology Baseline$_{\scaleto{G}{3pt}}$ definisce le tecnologie utilizzate.
 \end{itemize}
 Alla documentazione appena illustrata il gruppo \textit{Jawa Druids} allegherà inoltre una lettera di presentazione con la quale si formalizza l'impegno nel portare al termine il capitolato prescelto entro i termini definiti nella lettera e rispettandone i requisiti$_{\scaleto{G}{3pt}}$ minimi.
 \subsection{Strumenti}\label{ProcessiPrimariFornituraStrumenti}
@@ -210,7 +210,8 @@ Ogni requisito$_{\scaleto{G}{3pt}}$ deve rispettare le seguenti qualità:
 \end{itemize}
 
 \paragraph{Metriche}\label{ProcessiPrimariProspettiveAnalisiDeiRequisitiMetriche}\mbox{}\\
-Con \textbf{MQPD01} si intende la \textbf{Totalità delle implementazioni}. Indice riportante l'interezza del prodotto software, rispetto ai requisiti$_{\scaleto{G}{3pt}}$ posti, mediante un valore percentuale.:
+\begin{itemize}
+	\item[-] Con \textbf{MQPD01} si intende la \textbf{Totalità delle implementazioni}. Indice riportante l'interezza del prodotto software, rispetto ai requisiti$_{\scaleto{G}{3pt}}$ posti, mediante un valore percentuale.:
 
 \begin{center}
 	\textbf{T=($1-\frac{RnI}{RI}$)*100}
@@ -228,6 +229,23 @@ I range accettabili per il risultato di \textbf{T} sono così suddivisi:
 	\item \textbf{T} $\leq$ 80\% indica che la copertura dei requisiti$_{\scaleto{G}{3pt}}$ proposti è insufficiente.
 \end{itemize}
 
+\item[-] Con \textbf{MQPS07} viene inteso un valore, in formato percentuale, riferito ai requisiti$_{\scaleto{G}{3pt}}$ \textit{obbligatori} implementati: \textbf{PROI: Percentuale Requisiti Obbligatori Implementati}.
+\begin{center}
+	\textbf{PROI = $frac{ROI}{ROT}$*100}
+\end{center}
+Dove:
+\begin{itemize}
+	\item \textbf{ROI:} requisiti obbligatori implementati;
+	\item \textbf{ROT:} requisiti obbligatori totali.
+\end{itemize}
+I range dei valori che deve assumere il \textbf{PROI} sono così suddivisi:
+\begin{itemize}
+\item \textbf{valore preferibile:} 100\%;
+\item \textbf{valore accettabile:} 100\%.
+\end{itemize}
+
+\end{itemize}
+
 
 \subsection{Progettazione}\label{ProcessiPrimariProgettazione}
 \subsubsection{Scopo}\label{ProcessiPrimariProgettazioneScopo}
@@ -237,9 +255,9 @@ Precedentemente alla realizzazione dell'architettura del sistema dovranno essere
 \begin{itemize}
 	\item le tecnologie da utilizzare;
 	\item i vincoli strutturali richiesti dal proponente;
-	\item il Proof of Concept$_{\scaleto{G}{3pt}}$, cioè una bozza eseguibile del prodotto che individui lo studio svolto in preparazione all'architettura da implementare. 
+	\item il Proof of Concept$_{\scaleto{G}{3pt}}$, cioè una bozza eseguibile del prodotto che individui lo studio svolto in preparazione all'architettura da implementare.
 \end{itemize}
-Alla conclusione della stesura della progettazione si ha come risultato la realizzazione dell'architettura del software da sviluppare. Tale architettura è necessaria ai programmatori per individuare le istruzioni necessarie a sviluppare il prodotto finito. 
+Alla conclusione della stesura della progettazione si ha come risultato la realizzazione dell'architettura del software da sviluppare. Tale architettura è necessaria ai programmatori per individuare le istruzioni necessarie a sviluppare il prodotto finito.
 \subsubsection{Descrizione}\label{ProcessiPrimariProgettazioneDescrizione}
 La progettazione prevede inizialmente la realizzazione del Proof of Concept$_{\scaleto{G}{3pt}}$ della Technology Baseline$_{\scaleto{G}{3pt}}$, che, successivamente, viene approfondito e redatto nel documento tecnico allegato alla Product Baseline$_{\scaleto{G}{3pt}}$. La progettazione segue l'\textit{Analisi dei Requisiti 3.0.0}: infatti, se l'Analisi è l'espansione del problema e l'identificazione delle parti che lo compongono per l'individuazione del dominio applicativo, allora la progettazione è il procedimento inverso, cioè si trova un modo per collegare tutte le parti assieme, specificando le funzionalità di tutti i sottosistemi e raggiungendo così un'unica soluzione.
 %\begin{itemize}
@@ -276,7 +294,7 @@ L'architettura dovrà rispettare delle caratteristiche per raggiungere una quali
 	\item dovrà svolgere tutti i suoi compiti al suo utilizzo;
 	\item dovrà essere sicura e la sua manutenzione dovrà avvenire in tempo ridotti cosicché da garantire un servizio di funzionamento il più continuo possibile;
 	\item dovrà essere semplice ed evitare la complessità introducendo solo il necessario. %???%
-\end{itemize} 
+\end{itemize}
 
 \subsubsection{Attività di progettazione}\label{ProcessiPrimariProgettazioneAttivita}
 Le attività da svolgere durante il progetto sono suddivise per obiettivi da raggiungere e rientrano nello specifico arco temporale definito nel  \textit{Piano di Progetto 2.0.0}. Consistono in progettazione architetturale, progettazione dettagliata e codifica, durante i quali verranno affrontate la Technology Baseline$_{\scaleto{G}{3pt}}$ e la Product Baseline$_{\scaleto{G}{3pt}}$,
@@ -319,7 +337,7 @@ Ogni package$_{\scaleto{G}{3pt}}$ viene individuato tramite un rettangolo con un
 		\centering\includegraphics{../immagini/normeUML/pk_uml.png}
 		\caption{Rappresentazione grafica dei diagrammi dei package}
 \end{figure}
-\paragraph{Diagrammi delle classi:}\label{ProcessiPrimariProgettazioneUMLDiagrammiDelle Classi} 
+\paragraph{Diagrammi delle classi:}\label{ProcessiPrimariProgettazioneUMLDiagrammiDelle Classi}
 Le classi vengono individuate da un rettangolo suddiviso in tre sezioni orizzontali. Ciascuna sezione partendo dall'alto individuano:
 \begin{enumerate}
 	\item \textbf{Nome della classe}: deve essere univoco ed esplicativo. Il nome sarà scritto in lingua inglese, se la classe raffigurata è una classe astratta il suo nome verrà preceduto da $<<abstract>>$, mentre se è un'interfaccia verrà preceduto da $<<interface>>$.
@@ -359,7 +377,7 @@ I tipi di frecca vengono descritti di seguito:
 		\centering\includegraphics{../immagini/normeUML/frecSempl.png}
 		\caption{Relazione di associazione tra classe 1 e classe 2}
 	\end{figure}
-	 
+
 	\item freccia tratteggiata, da classe 1 a classe 2: indica che la definizione di una delle due classi fa riferimento alla definizione dell'altra;
 	\begin{figure}[H]
 		\centering\includegraphics{../immagini/normeUML/frecTrat.png}
@@ -375,7 +393,7 @@ I tipi di frecca vengono descritti di seguito:
 		\centering\includegraphics{../immagini/normeUML/frecDiamPien.png}
 		\caption{Relazione di composizione tra classe 1 e classe 2}
 	\end{figure}
-	\item freccia con punta vuota, da classe 1 a classe 2: indica la realizzazione/implementazione, cioè l'oggetto classe 1 implementa il comportamento, quindi nel nostro caso i metodi, che l'oggetto classe 2 specifica. 
+	\item freccia con punta vuota, da classe 1 a classe 2: indica la realizzazione/implementazione, cioè l'oggetto classe 1 implementa il comportamento, quindi nel nostro caso i metodi, che l'oggetto classe 2 specifica.
 	\begin{figure}[H]
 		\centering\includegraphics{../immagini/normeUML/frecInter.png}
 		\caption{Relazione di interfaccie tra classe 1 e classe 2}
@@ -389,7 +407,7 @@ Ad ogni freccia di collegamento viene indicato la molteplicità che ha e vengono
 	\item \textbf{*}: classe 1 può possedere più istanze della classe 2;
 	\item \textbf{n}: classe 1 possiede $n$ istanze della classe 2.
 \end{itemize}
-\paragraph{Diagrammi delle attività:}\label{ProcessiPrimariProgettazioneUMLDiagrammiDellAttività} 
+\paragraph{Diagrammi delle attività:}\label{ProcessiPrimariProgettazioneUMLDiagrammiDellAttività}
 Il diagramma di attività è un tipo di diagramma che permette di descrivere un processo attraverso dei grafi in cui i nodi rappresentano le attività e gli archi l'ordine con cui vengono eseguite. I diagrammi vengono illustrati usando il seguente formalismo:
 \begin{itemize}
 	\item \textbf{Nodo iniziale}: viene rappresentato da un pallino nero pieno ed indica l'inizio della attività dove viene generato un token;
@@ -457,7 +475,7 @@ Conclusa la fase di codifica ci si attende un codice pulito e facile da leggere,
 In questa fase la programmazione del prodotto dovrà rispettare le norme descritte nel documento. Perseguendo gli obiettivi individuati nel documento \textit{Piano di qualifica 2.0.0} si produrrà un software con un'alta qualità di codice.
 
 \subsubsection{Intestazione} \label{ProcessiPrimariCodificaIntestazione}
-Ciascun file di codifica dovrà riportare la seguente intestazione: 
+Ciascun file di codifica dovrà riportare la seguente intestazione:
 \begin{center}
 	\includegraphics[width=0.5\linewidth]{../immagini/CodificaIdentazione.png}
 \end{center}
@@ -520,7 +538,7 @@ Si tratta di un Open-Source basato su Javascript.
 	\url{https://leafletjs.com/}
 \end{center}
 \subsubsection{Maven} \label{ProcessiPrimariStrumentiMaven}
-	Maven è uno strumento di build automation$_G$, sviluppato da \textit{Apache}, utilizzato per la gestione di progetti Java. Maven si basa sul concetto di \textit{Project Object Model} (POM), ovvero un file .xml in cui sono specificate le informazioni e configurazioni necessarie allo sviluppo di un'applicazione Java. Maven, infatti, permette di configurare tutte le dipendenze e i plugin, specificati nel pom.xml, autonomamente. 
+	Maven è uno strumento di build automation$_G$, sviluppato da \textit{Apache}, utilizzato per la gestione di progetti Java. Maven si basa sul concetto di \textit{Project Object Model} (POM), ovvero un file .xml in cui sono specificate le informazioni e configurazioni necessarie allo sviluppo di un'applicazione Java. Maven, infatti, permette di configurare tutte le dipendenze e i plugin, specificati nel pom.xml, autonomamente.
 	\begin{center}
 		\url{https://maven.apache.org/}
 	\end{center}
