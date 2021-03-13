@@ -295,15 +295,13 @@ Le attività da svolgere durante il progetto sono suddivise per obiettivi da rag
 	\item \textbf{Progettazione di dettaglio} \\ \\
 	Le parti sono suddivise per determinare cosa dovrà fare il codice nel particolare, in modo da assegnare compiti indivisibili ai Programmatori.
 	\begin{itemize}
-		\item definizione degli strumenti di verifica per le \textbf{unità} e per i \textbf{moduli};
-		\item definizione dei ruoli che coinvolgono rispettivamente le \textbf{unità} e i \textbf{moduli};
-		\item definizione delle interazioni che coinvolgono le \textbf{unità};
-		\item suddivisione delle componenti individuate in \textbf{unità};
-		\item definizione dell'\textbf{unità} come insieme dei \textbf{moduli}.
+		\item definizione degli strumenti di verifica per le unità e per i moduli;
+		\item definizione dei ruoli che coinvolgono rispettivamente le unità e i moduli;
+		\item definizione delle interazioni che coinvolgono le unità;
+		\item suddivisione delle componenti individuate in unità;
+		\item definizione dell'unità come insieme dei moduli.
 	\end{itemize}
 \end{itemize}
-%??? da continuare%
-
 \subsubsection{Diagrammi UML 2.0}\label{ProcessiPrimariProgettazioneUML}
 L'utilizzo dei diagrammi UML 2.0 è necessario per rendere più chiare le scelte progettuali adottate. I diagrammi che verranno utilizzati sono:
 \begin{itemize}
@@ -479,7 +477,8 @@ All'interno di questo paragrafo vengono elencate le norme da rispettare da ogni 
 		\item \textbf{/* ... */} per i commenti che racchiudono più di una riga, andare a capo dopo la dicitura /*  per descrivere una parte di codice e poi chiudere il commento con la dicitura */;
 		\item \textbf{// … } per i commenti di linea singola che devono essere separati da uno spazio dopo la dicitura //.
 	\end{itemize}
-	Questa dicitura non è valida per il linguaggio python in quanto non utilizza /**/ o // per la scrittura dei commenti al loro posto si usa il cancelletto #. Il commento verrà scritto in linea al simbolo appena illustrato.
+	Questa dicitura non è valida per il linguaggio python in quanto non utilizza /* */ o // per la scrittura dei commenti al loro posto si usa il cancelletto {\symbol{35}}.
+	Il commento verrà scritto in linea al simbolo appena illustrato.
 	I costrutti non devono essere riportati sulla stessa riga dell’istruzione a cui si riferiscono ma sulla riga che la precede;
 	\item \textbf{Lingua}: il codice ed i commenti devono essere scritti in lingua inglese.
 \end{itemize}
@@ -520,3 +519,8 @@ Si tratta di un Open-Source basato su Javascript.
 \begin{center}
 	\url{https://leafletjs.com/}
 \end{center}
+\subsubsection{Maven} \label{ProcessiPrimariStrumentiMaven}
+	Maven è uno strumento di build automation$_G$, sviluppato da \textit{Apache}, utilizzato per la gestione di progetti Java. Maven si basa sul concetto di \textit{Project Object Model} (POM), ovvero un file .xml in cui sono specificate le informazioni e configurazioni necessarie allo sviluppo di un'applicazione Java. Maven, infatti, permette di configurare tutte le dipendenze e i plugin, specificati nel pom.xml, autonomamente. 
+	\begin{center}
+		\url{https://maven.apache.org/}
+	\end{center}
