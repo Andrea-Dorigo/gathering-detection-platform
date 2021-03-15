@@ -473,16 +473,16 @@ Dove:
 \subsection{Strumenti} \label{ProcessiDiSupportoVerificaStrumenti}
 \subsubsection{Analisi statica} \label{ProcessiDiSupportoVerificaStrumentiAnalisiStatica}
 \begin{itemize}
-	\item \textbf{Checkstyle:} è uno strumento che permette di eseguire l’analisi statica del codice utilizzato nello sviluppo di un progetto software, per verificare se il codice sorgente Java è conforme alle regole di codifica adottate dal gruppo. Tali regole sono quindi definite all’interno del file \textit{checkstyle.xml}, il quale viene integrato dal gestore delle dipendenze di \textit{Maven}. L’uso di tale strumento permette di automatizzare  il processo di controllo del codice Java: viene eseguito ad ogni build, segnalando gli eventuali errori riscontrati; 
-	\item \textbf{Pylint:} è uno strumento utilizzato per l’analisi statica del codice sorgente Python. Viene quindi adottato per controllare la presenza di errori nel codice, con l’obiettivo di applicare uno standard codifica e di promuovere buone prassi di scrittura del codice;
-	\item \textbf{Prettier:} è uno strumento per il controllo automatico della formattazione del codice scritto in linguaggio JavaScript, esso permette di eseguire dei controlli sul formato del codice tramite regole configurabili.
+	\item \textbf{Checkstyle$_G$:} è uno strumento che permette di eseguire l’analisi statica del codice utilizzato nello sviluppo di un progetto software, per verificare se il codice sorgente Java$_{\scaleto{G}{3pt}}$ è conforme alle regole di codifica adottate dal gruppo. Tali regole sono quindi definite all’interno del file \textit{checkstyle.xml}, il quale viene integrato dal gestore delle dipendenze di \textit{Maven$_{\scaleto{G}{3pt}}$}. L’uso di tale strumento permette di automatizzare  il processo di controllo del codice Java$_{\scaleto{G}{3pt}}$: viene eseguito ad ogni build, segnalando gli eventuali errori riscontrati; 
+	\item \textbf{Pylint$_G$:} è uno strumento utilizzato per l’analisi statica del codice sorgente Python$_{\scaleto{G}{3pt}}$. Viene quindi adottato per controllare la presenza di errori nel codice, con l’obiettivo di applicare uno standard codifica e di promuovere buone prassi di scrittura del codice;
+	\item \textbf{Prettier$_G$:} è uno strumento per il controllo automatico della formattazione del codice scritto in linguaggio JavaScript$_{\scaleto{G}{3pt}}$, esso permette di eseguire dei controlli sul formato del codice tramite regole configurabili.
 	Oltre ad effettuare il controllo, mette a disposizione anche una funzionalità di formattazione del codice attivabile al momento del salvataggio.
 \end{itemize}
 \subsubsection{Analisi Dinamica} \label{ProcessiDiSupportoVerificaStrumentiAnalisiDinamica}
 \begin{itemize}
-	\item \textbf{JUnit:} è un framework, integrato dal gestore di dipendenza Maven, che permette di eseguire automaticamente i test di unità per codice Java.
+	\item \textbf{JUnit$_G$:} è un framework$_G$, integrato dal gestore di dipendenza Maven$_{\scaleto{G}{3pt}}$, che permette di eseguire automaticamente i test di unità per codice Java$_{\scaleto{G}{3pt}}$.
 	Permette di essere configurato direttamente all’interno del file \textit{pom.xml} presente nella cartella di progetto e, ad ogni build del prodotto software, esegue automaticamente tutti i test definiti nel progetto, segnalando quelli che non hanno avuto esito positivo, attraverso opportuni errori.
-	Non necessita di particolari configurazioni in quanto autonomamente rileva i test disponibili, purchè rispettino le convenzioni di nomenclatura ed utilizzino opportunamente i metodi e le annotazioni definite dal framework per i test di unità.	
+	Non necessita di particolari configurazioni in quanto autonomamente rileva i test disponibili, purchè rispettino le convenzioni di nomenclatura ed utilizzino opportunamente i metodi e le annotazioni definite dal framework$_{\scaleto{G}{3pt}}$ per i test di unità.	
 \end{itemize}
 \subsection{Metriche}\label{ProcessiDiSupportoVerificaMetriche}
 \subsubsection{MQPD03 Rilevamento Errori}\label{ProcessiDiSupportoVerificaMetricheMQPD03RilevamentoErrori}
