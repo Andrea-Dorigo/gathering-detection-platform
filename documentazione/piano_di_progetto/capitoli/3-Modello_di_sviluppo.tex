@@ -29,32 +29,54 @@ Tuttavia per una buona esecuzione del progetto e della pianificazione, è necess
 In questa sezione viene riportata una tabella contenente i dettagli di sviluppo di ogni incremento, facendo riferimento agli obiettivi, ai casi d'uso$_{\scaleto{G}{3pt}}$ e ai requisiti$_{\scaleto{G}{3pt}}$ di ognuno di essi.
 \begin{center}
 	\renewcommand{\arraystretch}{1.4}
-	\begin{longtable}[c]{p{4cm}|p{4cm}|p{4cm}|p{3cm}}
+	\begin{longtable}[c]{p{3cm}|p{5cm}|p{4cm}|p{3cm}}
 		\hline
 		\rowcolor{airforceblue}
 		\makecell[c]{\textbf{Incremento}} & \makecell[c]{\textbf{Obiettivi}} & \makecell[c]{\textbf{Casi d'uso}} &  \makecell[c]{\textbf{Requisiti}}\\
 		\hline
-		\multicolumn{4}{|c|}{Fase di progettazione}\\
+		\multicolumn{4}{|c|}{Fase di progettazione architetturale}\\
 		\hline
 		\centering Incremento 0 & \centering Sviluppo di un
-		Proof of Concept$_{\scaleto{G}{3pt}}$ che implementi un software conta persone funzionante che salvi i dati nel database e li visualizzi graficamente in una heat map$_{\scaleto{G}{3pt}}$. & \centering  UC1, UC2, UC3, UC5.1, UC5.3, UC8.1, UC9 & \makecell[c]{RSFO5 \\ RSFO7 \\ RSFO9 \\ RSFO24 \\ RSFO26 \\ RSFO28 \\ RSFO32 \\ RSFO32.1 \\ RSFO32.1.1 \\ RSFO32.1.2 \\ RSFO32.2} \\
+		Proof of Concept$_{\scaleto{G}{3pt}}$ che implementi un software conta persone funzionante che salvi i dati nel database e li visualizzi graficamente in una heat map$_{\scaleto{G}{3pt}}$ & \centering  UC1, UC2, UC3, UC5.1, UC5.3, UC8.1, UC9 & \makecell[tc]{RSFO5 \\ RSFO7 \\ RSFO9 \\ RSFO24 \\ RSFO26 \\ RSFO28 \\ RSFO32 \\ RSFO32.1 \\ RSFO32.1.1 \\ RSFO32.1.2 \\ RSFO32.2} \\
 		\hline
-		\centering Incremento 1 & \centering Incremento della documentazione e preparazione alle attività di progettazione e codifica di dettaglio tramite studio e approfondimenti. & \centering - & \makecell[c]{-} \\
+		\multicolumn{4}{|c|}{Fase di progettazione di dettaglio e codifica}\\
 		\hline
-		\centering Incremento 2 & \centering Sviluppo e impostazione programma per la raccolta dati e invio informazioni al database; inizio stesura del manuale utente. & \centering UC8.1, UC8.2 & \makecell[c]{RSFO1 \\ RSFO4.1 \\ RSFO22 \\ RSFO22.1 \\ RSFO22.2 \\ RSFO30} \\
+		\centering Incremento 1 & \centering Incremento della documentazione e preparazione alle attività di progettazione e codifica di dettaglio tramite studio e approfondimenti & \centering - & \makecell[tc]{-} \\
 		\hline
-		\centering Incremento 3 & \centering Sviluppo e impostazione front end$_{\scaleto{G}{3pt}}$ relativo a impianto grafico e richiesta informazioni attraverso uno Spring$_{\scaleto{G}{3pt}}$ controller; correzione della documentazione in base alle segnalazioni ricevute dai committenti$_{\scaleto{G}{3pt}}$. & \centering UC1, UC2, UC3, UC5.1, UC5.3, UC8, UC9 & \makecell[c]{RSFO3 \\ RSFO5\\ RSFO7 \\  RSFO9 \\ RSFO10 \\ RSFO17 \\ RSFO19 \\ RSFO21 \\ RSFO24 \\ RSFO26 \\ RSFO28 \\ RSFO32 \\ RSFO32.1 \\ RSFO32.1.1 \\ RSFO32.1.2 \\ RSFO32.2} \\
+		\centering Incremento 2 & \centering Sviluppo e impostazione programma per la raccolta dati e invio informazioni al database; inizio stesura del manuale utente & \centering UC8.1, UC8.2 & \makecell[tc]{RSFO1 \\ RSFO4.1 \\ RSFO22 \\ RSFO22.1 \\ RSFO22.2 \\ RSFO30} \\
 		\hline
-		\centering Incremento 4 & \centering Implementazione di  un modello machine learning$_{\scaleto{G}{3pt}}$ in grado di elaborare i dati per effettuare predizioni e di salvarli, in modo che siano visualizzabili dall'utente nella heat map$_{\scaleto{G}{3pt}}$. & \centering UC1, UC8.3 & \makecell[c]{RSFO4.2 \\ RSFO11 \\ RSFO18 \\	RSFO18.1} \\
+		\centering Incremento 3 & \centering Sviluppo e impostazione front end$_{\scaleto{G}{3pt}}$ relativo a impianto grafico e richiesta informazioni attraverso uno Spring$_{\scaleto{G}{3pt}}$ controller & \centering UC1, UC2, UC3, UC5.1, UC5.3, UC8, UC9 & \makecell[tc]{RSFO3 \\ RSFO5\\ RSFO7 \\  RSFO9 \\ RSFO10 \\ RSFO17 \\ RSFO19 \\ RSFO21 \\ RSFO24 \\ RSFO26 \\ RSFO28 \\ RSFO32 \\ RSFO32.1 \\ RSFO32.1.1 \\ RSFO32.1.2 \\ RSFO32.2} \\
 		\hline
-		\centering Incremento 5 & \centering Implementazione della funzionalità di selezione e ricerca 
-		della città di cui visualizzare i dati; implementazione della possibilità di visualizzare dati di giorni passati. & \centering UC4, UC5.2, UC6, UC6.1, UC6.2, UC7 & \makecell[c]{RSFO20 \\ RSFO27 \\ RSFD33 \\ RSFD33.1 \\ RSFD33.2 \\ RSFD34} \\
+		\centering Incremento 4 & \centering Correzione della documentazione in base alle segnalazioni ricevute dai committenti$_{\scaleto{G}{3pt}}$ & \centering - & \makecell[tc]{-} \\
 		\hline
-		\centering Incremento 6 & \centering Completamento manuale utente ed altra documentazione da corredare al prodotto software; controllo del codice e correzione in base alle indicazioni ricevute dal committente$_{\scaleto{G}{3pt}}$. & \centering - & \makecell[c]{-} \\
+		\centering Incremento 5 & \centering Implementazione di  un modello machine learning$_{\scaleto{G}{3pt}}$ in grado di elaborare i dati per effettuare predizioni e di salvarli, in modo che siano visualizzabili dall'utente nella heat map$_{\scaleto{G}{3pt}}$. & \centering UC1, UC8.3 & \makecell[tc]{RSFO4.2 \\ RSFO11 \\ RSFO18 \\	RSFO18.1} \\
 		\hline
-		\centering Incremento 7 & \centering Incremento e verifica finale di tutti i documenti da consegnare in Revisione di Qualifica e preparazione all'esposiozione. & \centering - & \makecell[c]{-} \\
+		\centering Incremento 6 & \centering Implementazione della funzionalità di selezione e ricerca 
+		della città di cui visualizzare i dati & \centering UC4, UC6, UC6.1, UC6.2, UC7 & \makecell[tc]{RSFO20 \\ RSFD33 \\ RSFD33.1 \\ RSFD33.2 \\ RSFD34} \\
 		\hline
-		\centering & \centering & \centering & \makecell[c]{} \\
+		\centering Incremento 7 & \centering Implementazione della funzionalità di visualizzare dati di giorni passati & \centering UC5.2 & \makecell[tc]{RSFO27} \\
+		\hline
+		\centering Incremento 8 & \centering Completamento manuale utente ed altra documentazione da corredare al prodotto software & \centering - & \makecell[tc]{-} \\
+		\hline
+		\centering Incremento 9 & \centering Controllo del codice e correzione in base alle indicazioni ricevute dal committente$_{\scaleto{G}{3pt}}$ & \centering - & \makecell[tc]{-} \\
+		\hline
+		\centering Incremento 10 & \centering Incremento e verifica finale di tutti i documenti da consegnare in Revisione di Qualifica e preparazione all'esposizione. & \centering - & \makecell[tc]{-} \\
+		\hline
+		\multicolumn{4}{|c|}{Fase di validazione e collaudo}\\
+		\hline
+		\centering Incremento 11 & \centering Incremento e correzione della documentazione in base alle indicazioni ricevute in Revisione di Qualifica & \centering - & \makecell[tc]{-} \\
+		\hline
+		\centering Incremento 12 & \centering  Correzione della codifica  & \centering - & \makecell[tc]{-} \\
+		\hline
+		\centering Incremento 13 & \centering Il team JawaDruids si riserverà di scegliere quali requisiti facoltativi e desiderabili implementare tra quelli elencati nel documento \textit{Analisi dei Requisiti v2.0.0} & \centering - & \makecell[tc]{-} \\
+		\hline
+		\centering Incremento 14 & \centering Incremento e controllo finale del Manuale Utente & \centering - & \makecell[tc]{-} \\
+		\hline
+		\centering Incremento 15 & \centering Incremento della documentazione tecnica & \centering - & \makecell[tc]{-} \\
+		\hline
+		\centering Incremento 16 & \centering Validazione & \centering - & \makecell[tc]{-} \\
+		\hline
+		\centering Incremento 17 & \centering Collaudo & \centering - & \makecell[tc]{-} \\
 		\hline
 		\rowcolor{white}
 		\caption[Nome caption]{Tabella degli incrementi}\label{qua va in base alle label di altre tabelle mi sa}
