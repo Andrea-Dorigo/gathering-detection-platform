@@ -11,7 +11,7 @@ def main():
     Extracts a frame from a ts video
     """
 
-    path = "../VideoFontane/*.ts"
+    path = "../videos/*.ts"
     nframe = 0
     for file in glob.glob(path):
         video_capture = cv2.VideoCapture(file)
@@ -23,7 +23,7 @@ def main():
         while video_capture.isOpened() and count < 1:
             frame_is_read, frame = video_capture.read()
             if frame_is_read:
-                cv2.imwrite("../Frame/frame"+str(nframe)+".jpg", frame)
+                cv2.imwrite("../frames/frame"+str(nframe)+".jpg", frame)
                 saved_frame_name += 1
                 count += 1
                 nframe += 1

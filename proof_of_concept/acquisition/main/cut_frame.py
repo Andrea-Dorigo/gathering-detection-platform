@@ -15,8 +15,8 @@ def main():
     """
     count = 0
     # nframe = 0
-    for foto in glob.glob("../Frame/*.jpg"):
+    for foto in glob.glob("../frames/*.jpg"):
         frames = image_slicer.slice(foto, 6, save=False)
-        image_slicer.save_tiles(frames, directory='../FrameCut/', prefix='slice'+str(count))
+        image_slicer.save_tiles(frames, directory='../frames_pieces/', prefix='slice'+str(count))
         count += 1
 main()
