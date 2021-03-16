@@ -11,10 +11,10 @@ from datetime import datetime
 from mongoengine import *
 connect("GDP-test", host="localhost", port=27017)
 
-bashCommand = "./darknet detect cfg/yolov3.cfg yolov3.weights ../FrameCut/"
+#bashCommand = "./darknet detect cfg/yolov3.cfg yolov3.weights ../FrameCut/"
 #path_frame = "../FrameCut/*.png"
-path_frame1 = "../FrameCut/*.png"
-path_frame2 = "../FrameCut/Spagna/*.png"
+path_frame1 = "../frames_pieces/*.png"
+#path_frame2 = "../FrameCut/Spagna/*.png"
 count = 0
 d = 0
 
@@ -22,7 +22,7 @@ lat = 41.899139
 long = 12.473311
 
 #list_link = ("https://cdn-002.whatsupcams.com/hls/it_roma02.m3u8", "https://hddn00.skylinewebcams.com/live.m3u8?a=vs0pqlids9c55qqsa2qln4kcq7")
-path_video = "../FileMU/"
+path_video = "../m3u8/"
 list_link = "https://cdn-002.whatsupcams.com/hls/it_roma02.m3u8"
 posto = "Piazza Navona"
 #urllib.request.urlretrieve(list_link, "../FileMU/PiazzaNavona.m3u8")
@@ -41,7 +41,7 @@ class Detection(Document):
     def json(self):
         daily_dict = {
             "id_webcam": self.id_webcam,
-             "luogo" : self.luogo,
+            "luogo" : self.luogo,
             "latitude": self.latitude,
             "longitude": self.longitude,
             "numPeople": self.numPeople,
@@ -51,14 +51,14 @@ class Detection(Document):
         return json.dumps(daily_dict) #dumps converte python to json
 
 
-#infinite url request every 5 minutes
+#infinite url request every 1 minutes
 while True:
     orario = datetime.now().strftime('%H:%M')
     data_dato = datetime.now().strftime('%d-%m-%Y')
     #download file.m3u8
     #for obj in range(len(list_link)):
     try:
-        urllib.request.urlretrieve(list_link, "../FileMU/PiazzaNavona.m3u8")
+        urllib.request.urlretrieve(list_link, "../m3u8/PiazzaNavona.m3u8")
     #    print(list_link[obj])
 
         i = 0
@@ -82,7 +82,7 @@ while True:
 
     #download video.ts i=5,7,9,11,13 are the videos location inside lines[]
     #for o in range(len(list_video)):
-        urllib.request.urlretrieve(list_video[0], "../VideoFontane/Video"+str(0)+".ts")
+        urllib.request.urlretrieve(list_video[0], "../videos/Video"+str(0)+".ts")
 
     #urllib.request.urlretrieve(list_video, "../VideoFontane/Video.ts")
 
@@ -103,7 +103,7 @@ while True:
             # output, error = process.communicate()
             # print(output)
             # subprocess.wait()
-            result = subprocess.run(['python3','yolo.py','--image','../FrameCut/'+file], capture_output=True) # running linux ls command
+            result = subprocess.run(['python3','yolo.py','--image','../frames_pieces/'+file], capture_output=True) # running linux ls command
             # print(result.stdout.decode().count('person'))
             conta_persone += result.stdout.decode().count('person')
 
