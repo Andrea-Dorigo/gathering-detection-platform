@@ -2,6 +2,8 @@
 #2)python3 -m pip install image_slicer
 """
 This file is used in get_video.py
+The main function cuts all jpgs in the frames folder in 6 parts
+for better accuracy in object recognition
 """
 
 import glob
