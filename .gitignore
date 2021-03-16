@@ -18,5 +18,5 @@
 .DS_Store
 /proof_of_concept/modulo_1_get_frame/darknet/yolov3.weights
 /proof_of_concept/modulo_1_get_frame/darknet/yolov3-tiny.weights
-/proof_of_concept/modulo_1_get_frame/yolo-object-detection/yolo-coco/yolov3.weights
+#/proof_of_concept/modulo_1_get_frame/yolo-object-detection/yolo-coco/yolov3.weights
 /proof_of_concept/modulo_1_get_frame/darknet/live*
