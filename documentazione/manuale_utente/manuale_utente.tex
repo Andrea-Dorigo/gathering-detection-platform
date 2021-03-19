@@ -1,0 +1,46 @@
+\input{packages}
+\input{config}
+
+\begin{document}
+	
+	\makeatletter
+	\begin{titlepage}
+		\begin{center}
+			\vspace*{-4cm}
+			\author{Jawa Druids} 
+			\title{Piano di Qualifica}
+			\date{} %LASCIARE QUESTO CAMPO VUOTO, SE LO TOLGO STAMPA LA DATA CORRENTE
+			\includegraphics[width=0.5\linewidth]{../immagini/DRUIDSLOGO.jpg}\\[4ex]
+			{\huge \bfseries  \@title }\\[2ex] 
+			{\LARGE  \@author}\\[50ex]
+			\vspace*{-9cm}
+			\begin{table}[H]
+				\renewcommand{\arraystretch}{1.4}
+				\centering
+				\begin{tabular}{r | l}
+					\textbf{Versione} & 2.0.0 \\%RIGA PER INSERIRE LA VERSIONE ULTIMA DEL DOCUMENTO
+					\textbf{Data approvazione} & \\
+					\textbf{Responsabile} & Andrea Cecchin\\
+					\textbf{Redattori} & \makecell[tl]{ Emma Roveroni \\ Mattia Cocco \\ Margherita Mitillo} \\
+					\textbf{Verificatori} & \makecell[tl]{Igli Mezini \\ Andrea Cecchin \\ Emma Roveroni} \\
+					%MAKECELL SERVE PER POI ANDARE A CAPO ALL'INTERNO DELLA CELLA
+					\textbf{Stato} & \\
+					\textbf{Lista distribuzione} & \makecell[tl]{Jawa Druids \\ Prof. Tullio Vardanega \\ Prof. Riccardo Cardin \\ Sync Lab}\\
+					\textbf{Uso} & Esterno  
+				\end{tabular}
+			\end{table}
+			\vspace{0.1cm}
+			\hfill \break
+			\fontsize{17}{10}\textbf{Sommario} \\
+			\vspace{0.1cm}
+			Il documento contiene il manuale destinato all'utente
+		\end{center}
+	\end{titlepage}
+	\makeatother
+	
+	\input{registro_delle_modifiche}
+	\tableofcontents{}
+	\listoffigures
+	\listoftables	
+	
+\end{document}

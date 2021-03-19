@@ -1,0 +1,111 @@
+%COMANDO PER AVERE IL CAPITOLO CON IL NOME CHE VOGLIAMO NOI
+
+\titleformat{\chapter}
+{\normalfont\bfseries\LARGE}{\thechapter}{20pt}{\LARGE}
+
+%COMANDO PER LA SPAZIATURA DEI TITOLI DAL BORDO DEL FOGLIO
+
+\titlespacing*{\chapter}{0cm}{0cm}{0.2cm}
+\setlength{\headsep}{1.5cm} % spaziatura tra header e testo
+%COMANDO PER LA SPAZIATURA DEL TESTO DAI BORDI LATERALI
+
+\geometry{
+	left=20mm,
+	right=20mm,
+}
+
+%COMADNO PER AVERE L'INDICE DEL NOME CHE SI VUOLE
+
+\renewcommand{\contentsname}{Indice}
+
+%COMADNI PER OTTENERE SUBSUBSECTION NUMERATE E PRESENTI NELL'INDICE
+
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+
+%COMANDI PER OTTENERE HEADER E FOOTER
+
+\pagestyle{plain}
+
+\fancypagestyle{plain}{
+	\fancyhf{}
+	\lhead{\includegraphics[width=3cm]{../immagini/minilogo.jpg}}
+	\chead{}
+	\rhead{\fontsize{12}{10}Piano di Qualifica}
+	\lfoot{}
+	\cfoot{\thepage\ di \pageref{LastPage}}
+	\rfoot{}
+}
+
+\pagestyle{plain}
+
+%COMANDI PER LINK
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black,
+	filecolor=black,
+	urlcolor=blue,
+	citecolor=black,
+}
+
+%COMANDI PER SNIPPET DI CODICE
+
+\BeforeBeginEnvironment{lstlisting}{\begin{mdframed}\vspace{-0.7em}}
+	\AfterEndEnvironment{lstlisting}{\vspace{-0.5em}\end{mdframed}}
+
+% needed for \lstcapt
+\def\ifempty#1{\def\temparg{#1}\ifx\temparg\empty}
+
+% make new caption command for listings
+\usepackage{caption}
+\newcommand{\lstcapt}[2][]{%
+	\ifempty{#1}%
+	\captionof{lstlisting}{#2}%
+	\else%
+	\captionof{lstlisting}[#1]{#2}%
+	\fi%
+	\vspace{0.75\baselineskip}%
+}
+
+\definecolor{atomlightorange}{rgb}{0.88,0.76,0.55}
+\definecolor{atomdarkgrey}{RGB}{59,62,75}
+
+% set listings
+\lstset{%
+	basicstyle=\footnotesize\ttfamily\color{atomlightorange},
+	framesep=20pt,
+	belowskip=10pt,
+	aboveskip=10pt
+}
+
+% add frame environment
+\usepackage[%
+framemethod=tikz,
+skipbelow=8pt,
+skipabove=13pt
+]{mdframed}
+\mdfsetup{%
+	leftmargin=0pt,
+	rightmargin=0pt,
+	backgroundcolor=atomdarkgrey,
+	middlelinecolor=atomdarkgrey,
+	roundcorner=6
+}
+
+%BIBLIOGRAFIA
+
+\makeatletter
+\def\thebibliography#1{\chapter*{Bibliografia\@mkboth
+		{Bibliografia}{Bibliografia}}\list
+	{[\arabic{enumi}]}{\settowidth\labelwidth{[#1]}\leftmargin\labelwidth
+		\advance\leftmargin\labelsep
+		\usecounter{enumi}}
+	\def\newblock{\hskip .11em plus .33em minus .07em}
+	\sloppy\clubpenalty4000\widowpenalty4000
+	\sfcode`\.=1000\relax}
+\makeatother
+
+%DEFINIZIONE COLORI
+
+\definecolor{airforceblue}{rgb}{0.36, 0.54, 0.66}
