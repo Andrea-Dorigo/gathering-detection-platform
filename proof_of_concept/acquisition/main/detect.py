@@ -24,24 +24,24 @@ long = 12.473311
 #list_link = ("https://cdn-002.whatsupcams.com/hls/it_roma02.m3u8", "https://hddn00.skylinewebcams.com/live.m3u8?a=vs0pqlids9c55qqsa2qln4kcq7")
 path_video = "../m3u8/"
 list_link = "https://cdn-002.whatsupcams.com/hls/it_roma02.m3u8"
-posto = "Piazza Navona"
+location = "Piazza Navona"
 #urllib.request.urlretrieve(list_link, "../FileMU/PiazzaNavona.m3u8")
 
 files = [os.path.join(path_video, file) for file in os.listdir(path_video) if os.path.isfile(os.path.join(path_video, file))]
 
 class Detection(Document):
     id_webcam = IntField(required=True)
-    luogo = StringField(required=True)
+    location = StringField(required=True)
     latitude = FloatField(required=True)
     longitude = FloatField(required=True)
     numPeople = IntField(required=True)
-    date = StringField(required=True)
-    time = StringField(required=True)
+    date = DateTimeField(required=True)
+    time = DateTimeField(required=True)
 
     def json(self):
         daily_dict = {
             "id_webcam": self.id_webcam,
-            "luogo" : self.luogo,
+            "location" : self.location,
             "latitude": self.latitude,
             "longitude": self.longitude,
             "numPeople": self.numPeople,
@@ -53,8 +53,8 @@ class Detection(Document):
 
 #infinite url request every 1 minutes
 while True:
-    orario = datetime.now().strftime('%H:%M')
-    data_dato = datetime.now().strftime('%d-%m-%Y')
+    orario = datetime.now().time().replace(microsecond=0)
+    data_dato = datetime.now().date()
     #download file.m3u8
     #for obj in range(len(list_link)):
     try:
@@ -125,7 +125,7 @@ while True:
             print("Ci sono "+str(conta_persone)+" in totale")
         #print(conta_persone2)
 
-        a = [1, posto, lat, long, conta_persone, data_dato, orario]
+        a = [1, location, lat, long, conta_persone, data_dato, orario]
         print(a)
 
 
@@ -133,7 +133,7 @@ while True:
     #Prove database
         detection = Detection(
             id_webcam = a[0],
-            luogo = a[1],
+            location = a[1],
             latitude = a[2],
             longitude = a[3],
             numPeople = a[4],
