@@ -70,13 +70,8 @@ I test che verranno effettuati sul prodotto software sono così divisi:
 	Viene contrassegnata da \textbf{[TU]}.
 \end{itemize}
 
-\section{Test di unità}\label{SpecificaDeiTestTestDiUnita}
-
-\subsection{Tracciamento dei test}\label{SpecificaDeiTestTestDiUnitaTracciamentoDeiTest}
-
-\section{Test di integrazione}\label{SpecificaDeiTestTestDiIntegrazione}
-
-\subsection{Tracciamento dei test}\label{SpecificaDeiTestTestDiIntegrazioneTracciamentoDeiTest}
+\section{Test di accettazione}\label{SpecificaDeiTestTestDiAccettazione}
+\subsection{Tracciamento dei test}\label{SpecificaDeiTestTestDiAccettazioneTracciamentoDeiTest}
 
 \section{Test di sistema}\label{SpecificaDeiTestTestDiSistema}
 Sono stati individuati i seguenti test di sistema per garantire il funzionamento del prodotto sviluppato. I test di sistema sono stati identificati attraverso i requisiti indicati nel documento \textit{Analisi dei Requisiti 3.0.0}. 
@@ -285,3 +280,34 @@ Sono stati individuati i seguenti test di sistema per garantire il funzionamento
 	\end{longtable}
 
 \end{center}
+
+\section{Test di integrazione}\label{SpecificaDeiTestTestDiIntegrazione}
+Sono stati individuati i seguenti test di integrazione per garantire il funzionamento dei diversi moduli nel momento in cui vengono messi in relazione tra di loro.
+\def\tabularxcolumn#1{m{#1}}
+{\rowcolors{2}{RawSienna!90!RawSienna!20}{RawSienna!70!RawSienna!40}
+	
+	\begin{center}
+		\renewcommand{\arraystretch}{1.4}
+		\begin{longtable}{|p{3cm}|p{8cm}|p{3cm}|}
+			\hline
+			\rowcolor{airforceblue}
+			\makecell[c]{\textbf{Id Test}} & \makecell[c]{\textbf{Descrizione}} & \makecell[c]{\textbf{Esito}} \\
+			\hline
+			\centering \textit{TI1} & Verifica che il sistema acquisica i dati attraverso il modulo conta persone che utlizza l'algoritmo di Yolo v3 & \makecell[tc]{\textit{NI}} \\
+			\hline
+			\centering \textit{TI2} & Verifica che il sistema invii i dati ottenuti dal modulo conta persone al database in modo corretto & \makecell[tc]{\textit{NI}}\\
+			\hline
+			\centering \textit{TI3} &  Verifica che il sistema invii i dati ottenuti dal modulo di machine learning al database in modo corretto &\makecell[tc]{\textit{NI}}\\
+			\hline
+			\centering \textit{TI4} &  Verifica che il sistema invii i dati presenti nel  database al web application in modo corretto &\makecell[tc]{\textit{NI}}\\
+			\hline
+			\rowcolor{white}
+			\caption{\textbf{Elenco test di accettazione}}
+		\end{longtable}
+	\end{center}
+
+\subsection{Tracciamento dei test}\label{SpecificaDeiTestTestDiIntegrazioneTracciamentoDeiTest}
+
+\section{Test di unità}\label{SpecificaDeiTestTestDiUnita}
+
+\subsection{Tracciamento dei test}\label{SpecificaDeiTestTestDiUnitaTracciamentoDeiTest}
