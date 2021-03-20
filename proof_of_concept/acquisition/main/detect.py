@@ -11,19 +11,21 @@ from datetime import datetime
 from mongoengine import *
 connect("GDP-test", host="localhost", port=27017)
 
-#bashCommand = "./darknet detect cfg/yolov3.cfg yolov3.weights ../FrameCut/"
-#path_frame = "../FrameCut/*.png"
 path_frame1 = "../frames_pieces/*.png"
-#path_frame2 = "../FrameCut/Spagna/*.png"
+path_video = "../m3u8/"
 count = 0
 d = 0
 
 lat = 41.899139
 long = 12.473311
+list_link = []
 
-#list_link = ("https://cdn-002.whatsupcams.com/hls/it_roma02.m3u8", "https://hddn00.skylinewebcams.com/live.m3u8?a=vs0pqlids9c55qqsa2qln4kcq7")
-path_video = "../m3u8/"
-list_link = "https://cdn-002.whatsupcams.com/hls/it_roma02.m3u8"
+url_file = open('../link_webcam.txt','r')
+for url in url_file.readlines():
+    list_link.append(url)
+
+print(list_link[0])
+
 location = "Piazza Navona"
 #urllib.request.urlretrieve(list_link, "../FileMU/PiazzaNavona.m3u8")
 
@@ -50,7 +52,7 @@ class Detection(Document):
         }
         return json.dumps(daily_dict) #dumps converte python to json
 
-
+conta_link = 0
 #infinite url request every 1 minutes
 while True:
     orario = datetime.now().time().replace(microsecond=0)
@@ -58,7 +60,8 @@ while True:
     #download file.m3u8
     #for obj in range(len(list_link)):
     try:
-        urllib.request.urlretrieve(list_link, "../m3u8/PiazzaNavona.m3u8")
+        for conta_link in range (len(list_link)):
+            urllib.request.urlretrieve(list_link[conta_link], "../m3u8/PiazzaNavona.m3u8")
     #    print(list_link[obj])
 
         i = 0
