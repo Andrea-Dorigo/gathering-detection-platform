@@ -22,9 +22,10 @@ list_link = []
 
 url_file = open('../link_webcam.txt','r')
 for url in url_file.readlines():
+    url.split(',')
     list_link.append(url)
 
-print(list_link[0])
+print(list_link)
 
 location = "Piazza Navona"
 #urllib.request.urlretrieve(list_link, "../FileMU/PiazzaNavona.m3u8")
@@ -61,7 +62,7 @@ while True:
     #for obj in range(len(list_link)):
     try:
         for conta_link in range (len(list_link)):
-            urllib.request.urlretrieve(list_link[conta_link], "../m3u8/PiazzaNavona.m3u8")
+            urllib.request.urlretrieve(list_link[conta_link], "../m3u8/PiazzaNavona"+str(conta_link)+".m3u8")
     #    print(list_link[obj])
 
         i = 0
@@ -72,7 +73,7 @@ while True:
                 for line in fopen.readlines():
                     clean = line[:-1]
                     if clean.endswith('.ts'):
-                        print(clean)
+                        #print(clean)
                         if not clean.startswith('https'):
                             clean = 'https://cdn-002.whatsupcams.com/hls/' + clean
                             list_video.append(clean)
@@ -80,12 +81,12 @@ while True:
                         list_video.append(clean)
 
 
-        print(list_video)
+        print(len(list_video))
 
 
     #download video.ts i=5,7,9,11,13 are the videos location inside lines[]
-    #for o in range(len(list_video)):
-        urllib.request.urlretrieve(list_video[0], "../videos/Video"+str(0)+".ts")
+        for o in range(len(list_video)):
+            urllib.request.urlretrieve(list_video[o], "../videos/Video"+str(o)+".ts")
 
     #urllib.request.urlretrieve(list_video, "../VideoFontane/Video.ts")
 
