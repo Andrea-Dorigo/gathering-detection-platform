@@ -25,7 +25,7 @@ for url in url_file.readlines():
     url.split(',')
     list_link.append(url)
 
-print(list_link)
+#print(list_link)
 
 location = "Piazza Navona"
 #urllib.request.urlretrieve(list_link, "../FileMU/PiazzaNavona.m3u8")
