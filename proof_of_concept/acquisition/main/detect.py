@@ -14,8 +14,8 @@ connect("GDP-test", host="localhost", port=27017)
 
 path_frame1 = "../frames_pieces/*.png"
 path_video = "../m3u8/"
-count = 0
-d = 0
+# count = 0
+# d = 0
 
 # lat = 41.899139
 # long = 12.473311
