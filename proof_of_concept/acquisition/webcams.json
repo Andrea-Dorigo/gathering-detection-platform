@@ -7,14 +7,6 @@
     	"latitude" : 41.899139,
     	"longitude" : 12.473311,
       "split_frame_in" : 6
-    },
-    {
-      "link" : "https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1616429507/ei/Y21YYLKaM8SYgQeV5qiACA/ip/82.54.187.178/id/X9KAdlrI8KE.1/itag/95/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D136/hls_chunk_host/r4---sn-uxaxpu5ap5-925e.googlevideo.com/playlist_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/7920/mh/rU/mm/44/mn/sn-uxaxpu5ap5-925e/ms/lva/mv/m/mvi/4/pl/24/dover/11/keepalive/yes/fexp/24001374,24007246/mt/1616407711/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,playlist_duration,manifest_duration,vprv,playlist_type/sig/AOq0QJ8wRgIhANtJGgHLYpv4wc3ApXGkZuhFvKZ0u9m4bRZz-kPCrk5sAiEAhFNUmWh2Z1htYO3vVUhwr8xIjDp3q9zvUfNq31LWcPA%3D/lsparams/hls_chunk_host,initcwndbps,mh,mm,mn,ms,mv,mvi,pl/lsig/AG3C_xAwRAIgJ3ccgXDP08lOT-YwOnqGABVKiVtsoV0sAcJvg3e5dQECIDQLNqkcl7YyXBn-RQzznlxnrqTnsaunWxrlQxYN1FKx/playlist/index.m3u8",
-    	"id_webcam" : 2,
-    	"location" : "Amsterdam Dam Square - NON VALIDA",
-    	"latitude" : 52.373063,
-    	"longitude" : 4.892644,
-      "split_frame_in" : 6
     }
   ]
 }
