@@ -56,7 +56,8 @@ class Detection(Document):
 conta_link = 0
 #infinite url request every 1 minutes
 while True:
-    orario = datetime.now().time().replace(microsecond=0)
+    #orario = datetime.now().time().replace(microsecond=0)
+    orario = datetime.now().strftime("%H:%M:%S")
     data_dato = datetime.now().date()
     #download file.m3u8
     #for obj in range(len(list_link)):
@@ -80,7 +81,7 @@ while True:
 
                         list_video.append(clean)
 
-
+            
         print(len(list_video))
 
 
