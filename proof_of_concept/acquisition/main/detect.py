@@ -10,12 +10,16 @@ import json
 import subprocess
 from datetime import datetime
 from mongoengine import *
+
+import weather
+
 connect("GDP-test", host="localhost", port=27017)
 
 path_frame1 = "../frames_pieces/*.png"
 path_video = "../m3u8/"
 # count = 0
 # d = 0
+# importlib.import_module("get_weather")
 
 # lat = 41.899139
 # long = 12.473311
@@ -36,8 +40,10 @@ for webcam in data["webcams"]:
     # print(webcam["link"])
     list_link = []
     list_link.append(webcam["link"])
-
+    day_of_week = datetime.now().date().weekday()
+    # print(day_of_week)
     #print(list_link)
+    [temperature, weather_description] = weather.get_current_weather(webcam["latitude"], webcam["longitude"])
 
     # location = "Piazza Navona"
     #urllib.request.urlretrieve(list_link, "../FileMU/PiazzaNavona.m3u8")
@@ -52,7 +58,10 @@ for webcam in data["webcams"]:
         numPeople = IntField(required=True)
         date = DateTimeField(required=True)
         time = DateTimeField(required=True)
-
+        type = IntField(required=True)
+        weather_description = StringField()
+        temperature = FloatField()
+        day_of_week = IntField()
         # def json(self):
         #     daily_dict = {
         #         "id_webcam": webcam["id"],
@@ -155,7 +164,11 @@ for webcam in data["webcams"]:
                 longitude = webcam["longitude"],
                 numPeople = conta_persone,
                 date = data_dato,
-                time = orario
+                time = orario,
+                type = 0,
+                weather_description = weather_description,
+                temperature = temperature,
+                day_of_week = day_of_week
                 ).save()
 
             time.sleep(1)
