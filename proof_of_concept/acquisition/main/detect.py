@@ -33,7 +33,7 @@ with open('../webcams.json') as f:
 
 for webcam in data["webcams"]:
     print(webcam["location"])
-    print(webcam["link"])
+    # print(webcam["link"])
     list_link = []
     list_link.append(webcam["link"])
 
@@ -67,7 +67,7 @@ for webcam in data["webcams"]:
 
     conta_link = 0
     #infinite url request every 1 minutes
-    while True:
+    for i in range(1):
         #orario = datetime.now().time().replace(microsecond=0)
         orario = datetime.now().strftime("%H:%M:%S")
         data_dato = datetime.now().date()
@@ -93,8 +93,8 @@ for webcam in data["webcams"]:
 
                             list_video.append(clean)
 
-            print("List video = ")
-            print(list_video)
+            # print("List video = ")
+            # print(list_video)
             print("List video length = ")
             print(len(list_video))
 
@@ -112,7 +112,7 @@ for webcam in data["webcams"]:
         #call darknet
             conta_persone = 0
             conta_persone2 = 0
-            print("after cut_frame")
+            # print("after cut_frame")
 
             for file in glob.glob(path_frame1):
                 # bashCommand = "/usr/bin/ls"
@@ -144,21 +144,21 @@ for webcam in data["webcams"]:
                 print("Ci sono "+str(conta_persone)+" in totale")
             #print(conta_persone2)
 
-            a = [webcam["id_webcam"], webcam["location"], webcam["latitude"], webcam["longitude"], conta_persone, data_dato, orario]
-            print(a)
+            # a = [, webcam["location"], webcam["latitude"], webcam["longitude"], conta_persone, data_dato, orario]
+            # print(a)
 
         #Prove database
             detection = Detection(
-                id_webcam = a[0],
-                location = a[1],
-                latitude = a[2],
-                longitude = a[3],
-                numPeople = a[4],
-                date = a[5],
-                time = a[6]
+                id_webcam = webcam["id_webcam"],
+                location = webcam["location"],
+                latitude = webcam["latitude"],
+                longitude = webcam["longitude"],
+                numPeople = conta_persone,
+                date = data_dato,
+                time = orario
                 ).save()
 
-            time.sleep(60)
+            time.sleep(1)
         except:
             time.sleep(5)
 
