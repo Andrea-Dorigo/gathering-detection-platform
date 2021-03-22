@@ -33,6 +33,7 @@ path_video = "../m3u8/"
 
 class Detection(Document):
     id_webcam = IntField(required=True)
+    city = StringField(required=True)
     location = StringField(required=True)
     latitude = FloatField(required=True)
     longitude = FloatField(required=True)
@@ -164,6 +165,7 @@ while True:
             #Prove database
                 detection = Detection(
                     id_webcam = webcam["id_webcam"],
+                    city = webcam["city"],
                     location = webcam["location"],
                     latitude = webcam["latitude"],
                     longitude = webcam["longitude"],
