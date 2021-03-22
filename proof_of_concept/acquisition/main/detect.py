@@ -11,12 +11,14 @@ import subprocess
 from datetime import datetime,timedelta
 from mongoengine import *
 
-from get_current_weather import get_current_weather
+from weather import get_current_weather
 
 connect("GDP-test", host="localhost", port=27017)
 
 path_frame1 = "../frames_pieces/*.png"
 # path_video = "../m3u8/"
+
+# TODO: aggiungere le costanti che indicano i path (come quella qui sopra)
 
 INTERVAL_BETWEEN_DETECTIONS = 20
 
@@ -34,21 +36,37 @@ class Detection(Document):
     temperature = FloatField()
     day_of_week = IntField()
 
+# leggi il file json contenente i dati delle webcam
 with open('../webcams.json') as f:
   json_data = json.load(f)
 
-i = 0
-while i < 1 :
+
+# A fini di testing, viene fatta una sola detection (loops < 1);
+# sostituisci "while loops < 1:" con "while True:" per l'esecuzione continua
+loops = 0
+while loops < 1 :
+
+    # imposta il tempo di attesa fra un conteggio di persone e l'altro
     t_end = datetime.now() + timedelta(seconds=INTERVAL_BETWEEN_DETECTIONS)
+
+    # scorri fra tutte le webcams presenti nel file json
     for webcam in json_data["webcams"]:
+
+        # ottieni la temperatura e il meteo al tempo dell'acquisizione;
         [temperature, weather_description] = get_current_weather(webcam["latitude"], webcam["longitude"])
-        orario = datetime.now().strftime("%H:%M:%S")
-        data_dato = datetime.now().date()
+
+        #imposta l'orario e la data di acquisizione
+        current_time = datetime.now().strftime("%H:%M:%S")
+        current_date = datetime.now().date()
 
         try:
-            m3u8_file_path = "../m3u8/"+webcam["location"]+".m3u8"
+
+            # scarica il file m3u8 contenente i link ai video
+            m3u8_file_path = "../m3u8/" + webcam["location"] + ".m3u8"
             urllib.request.urlretrieve(webcam["link"], m3u8_file_path )
 
+            # scorri le righe del file m3u8 fino a che non trovi un link al video .ts e salvalo in video_link
+            # si ferma al primo link perche' ci basta meno di un video al minuto
             for line in open(m3u8_file_path, "r").readlines():
                 if line[:-1].endswith('.ts'):
                     video_link = line[:-1]
@@ -57,14 +75,17 @@ while i < 1 :
                     print(video_link)
                     break
 
+            # scarica il video dal link appena ricavato
             urllib.request.urlretrieve(video_link, "../videos/Video" + webcam["location"] + ".ts")
 
+            # estrai un frame dal video
             exec(open('get_frames.py').read())
+
+            # dividi il frame in 6 per un migliore affidabilita' nel riconoscimento
             exec(open('cut_frame.py').read())
 
+            # conta le persone in ogni sottoframe
             persone_contate = 0
-            # print("after cut_frame")
-
             for file in glob.glob(path_frame1):
 
                 result = subprocess.run(['python3','yolo.py','--image','../frames_pieces/'+file], capture_output=True)
@@ -75,7 +96,7 @@ while i < 1 :
 
             print("Ci sono "+str(persone_contate) + " in totale")
 
-        #Prove database
+            # inserisci i risultati nel db
             detection = Detection(
                 id_webcam = webcam["id_webcam"],
                 city = webcam["city"],
@@ -83,8 +104,8 @@ while i < 1 :
                 latitude = webcam["latitude"],
                 longitude = webcam["longitude"],
                 numPeople = persone_contate,
-                date = data_dato,
-                time = orario,
+                date = current_date,
+                time = current_time,
                 type = 0,
                 weather_description = weather_description,
                 temperature = temperature,
@@ -92,6 +113,7 @@ while i < 1 :
                 ).save()
         except:
             time.sleep((t_end - datetime.now()).total_seconds())
-    i = 1
+
+    loops = loops + 1
+
     #time.sleep((t_end - datetime.now()).total_seconds())
-        #time.sleep(10*60)
