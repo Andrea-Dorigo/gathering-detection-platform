@@ -1,6 +1,5 @@
 package com.example.demo;
 
-
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,13 +16,13 @@ public class indexController {
 
 	@Autowired
 	private coordinateRepository coordinaterepository;
-	
+
 	@RequestMapping("index")
 	public String index() {
 		return "index.jsp";
 	}
-	
-	@RequestMapping(value = "/coordinate",method = RequestMethod.GET)
+
+	@RequestMapping(value = "/coordinate", method = RequestMethod.GET)
 	public @ResponseBody String jsonRetr() throws Exception {
 
 		System.out.println(1);
@@ -33,8 +32,7 @@ public class indexController {
 		System.out.println(3);
 		String jsonString = gson.toJson(coordinate);
 		System.out.println(jsonString);
-        return jsonString;
-    }
-	
-}
+		return jsonString;
+	}
 
+}
