@@ -47,8 +47,8 @@ class Detection(Document):
 
 with open('../webcams.json') as f:
   data = json.load(f)
-
-while True:
+i = 0
+while i < 1 :
     t_end = datetime.now() + timedelta(seconds=20)
     print("TEMPO TEMPO TEMPO")
     print(t_end.strftime("%H:%M:%S"))
@@ -179,5 +179,6 @@ while True:
                     ).save()
             except:
                 time.sleep(0)
-    time.sleep((t_end - datetime.now()).total_seconds())
+    i = 1
+    #time.sleep((t_end - datetime.now()).total_seconds())
         #time.sleep(10*60)
