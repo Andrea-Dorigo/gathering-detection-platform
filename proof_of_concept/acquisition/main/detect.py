@@ -81,12 +81,14 @@ while True:
 
                         list_video.append(clean)
 
-            
+        print("List video = ")
+        print(list_video)
+        print("List video length = ")
         print(len(list_video))
 
 
     #download video.ts i=5,7,9,11,13 are the videos location inside lines[]
-        for o in range(len(list_video)):
+        for o in range(1):
             urllib.request.urlretrieve(list_video[o], "../videos/Video"+str(o)+".ts")
 
     #urllib.request.urlretrieve(list_video, "../VideoFontane/Video.ts")
