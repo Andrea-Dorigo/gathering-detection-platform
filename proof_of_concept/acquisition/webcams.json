@@ -4,7 +4,7 @@
       "link" : "https://cdn-002.whatsupcams.com/hls/it_roma02.m3u8",
     	"id_webcam" : 1,
       "city" : "Roma",
-    	"location" : "Piazza Navona",
+    	"location" : "PiazzaNavona",
     	"latitude" : 41.899139,
     	"longitude" : 12.473311,
       "split_frame_in" : 6
