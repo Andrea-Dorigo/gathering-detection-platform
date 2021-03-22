@@ -87,11 +87,8 @@ while loops < 1 :
             # conta le persone in ogni sottoframe
             persone_contate = 0
             for file in glob.glob(path_frame1):
-
                 result = subprocess.run(['python3','yolo.py','--image','../frames_pieces/'+file], capture_output=True)
-
                 persone_contate += result.stdout.decode().count('person')
-
                 print("Persone contate fino ad ora: "+str(persone_contate))
 
             print("Ci sono "+str(persone_contate) + " in totale")
