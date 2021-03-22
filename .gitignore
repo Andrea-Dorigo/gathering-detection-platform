@@ -22,3 +22,4 @@
 /proof_of_concept/acquisition/frames/*
 /proof_of_concept/acquisition/videos/*
 /proof_of_concept/acquisition/frames_pieces/*
+/proof_of_concept/acquisition/main/__pycache__
