@@ -23,7 +23,7 @@ path_frame1 = "../frames_pieces/*.png"
 
 # TODO: aggiungere le costanti che indicano i path (come quella qui sopra)
 
-INTERVAL_BETWEEN_DETECTIONS = 20
+INTERVAL_BETWEEN_DETECTIONS = 60
 
 class Detection(Document):
     id_webcam = IntField(required=True)
@@ -46,12 +46,13 @@ with open('../webcams.json') as f:
 
 # A fini di testing, viene fatta una sola detection (loops < 1);
 # sostituisci "while loops < 1:" con "while True:" per l'esecuzione continua
-loops = 0
-while loops < 1 :
+#loops = 0
+while True :
 
     # imposta il tempo di attesa fra un conteggio di persone e l'altro
     t_end = datetime.now() + timedelta(seconds=INTERVAL_BETWEEN_DETECTIONS)
-
+    print(t_end)
+    print(datetime.now())
     # scorri fra tutte le webcams presenti nel file json
     for webcam in json_data["webcams"]:
 
@@ -59,8 +60,8 @@ while loops < 1 :
         [temperature, weather_description] = get_current_weather(webcam["latitude"], webcam["longitude"])
 
         #imposta l'orario e la data di acquisizione
-        current_time = datetime.now().strftime("%H:%M:%S")
-        current_date = datetime.now().date()
+        current_time = datetime.now()
+        current_date = datetime.now()
 
         try:
 
@@ -117,8 +118,9 @@ while loops < 1 :
                 day_of_week =  datetime.now().date().weekday()
                 ).save()
         except:
+            print("exception")
             time.sleep((t_end - datetime.now()).total_seconds())
 
-    loops = loops + 1
-
-    #time.sleep((t_end - datetime.now()).total_seconds())
+    #loops = loops + 1
+    print("waiting")
+    time.sleep((t_end - datetime.now()).total_seconds())
