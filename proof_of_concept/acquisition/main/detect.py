@@ -12,9 +12,12 @@ from datetime import datetime,timedelta
 from mongoengine import *
 
 from weather import get_current_weather
+from get_frames import get_frames
+from cut_frame import cut_frames
 
 connect("GDP-test", host="localhost", port=27017)
 
+statement = True
 path_frame1 = "../frames_pieces/*.png"
 # path_video = "../m3u8/"
 
@@ -79,10 +82,15 @@ while loops < 1 :
             urllib.request.urlretrieve(video_link, "../videos/Video" + webcam["location"] + ".ts")
 
             # estrai un frame dal video
-            exec(open('get_frames.py').read())
-
+            #exec(open('get_frames.py').read())
+            get_frames(statement)
+            if statement is True:
+                print("Acquisizione Frame completata")
             # dividi il frame in 6 per un migliore affidabilita' nel riconoscimento
-            exec(open('cut_frame.py').read())
+            #exec(open('cut_frame.py').read())
+            cut_frames(statement)
+            if statement is True:
+                print("Taglio dei frame in foto completata")
 
             # conta le persone in ogni sottoframe
             persone_contate = 0

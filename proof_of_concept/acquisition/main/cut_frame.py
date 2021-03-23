@@ -9,7 +9,7 @@ for better accuracy in object recognition
 import glob
 import image_slicer
 
-def main():
+def cut_frames(statement):
     """
     This function cuts a frame in 6
     """
@@ -19,4 +19,7 @@ def main():
         frames = image_slicer.slice(foto, 6, save=False)
         image_slicer.save_tiles(frames, directory='../frames_pieces/', prefix='slice'+str(count))
         count += 1
-main()
+        statement = True
+
+    return bool(statement)
+#cut_frames()
