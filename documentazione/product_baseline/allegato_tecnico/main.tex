@@ -32,9 +32,9 @@
 
 \fancypagestyle{plain}{
 	\fancyhf{}
-	\lhead{\includegraphics[width=3cm]{../immagini/minilogo.jpg}}
+	\lhead{\includegraphics[width=3cm]{../../immagini/minilogo.jpg}}
 	\chead{}
-	\rhead{\fontsize{12}{10}Studio di fattibilità}
+	\rhead{\fontsize{12}{10}Allegato tecnico}
 	\lfoot{}
 	\cfoot{\thepage\ di \pageref{LastPage}}
 	\rfoot{}
@@ -48,37 +48,38 @@
 		\begin{center}
 			\vspace*{-4,0cm}
 			\author{Jawa Druids}
-			\title{Norme di Progetto}
+			\title{Allegato Tecnico}
 			\date{}
-			\includegraphics[width=0.7\linewidth]{../immagini/DRUIDSLOGO.jpg}\\[4ex]
+			\includegraphics[width=0.7\linewidth]{../../immagini/DRUIDSLOGO.jpg}\\[4ex]
+
+			
 			{\huge \bfseries  \@title }\\[2ex] 
 			{\LARGE  \@author}\\[50ex]
 			\vspace*{-8,0cm}
 			\begin{table}[H]
 				\centering
 				\begin{tabular}{c|c}
-					\textbf{Versione} & x.x.x \\
+					\textbf{Versione} & 1.0.0 \\
 					\textbf{Data approvazione} & xx-xx-xxxx\\
 					\textbf{Responsabile} & Nome Cognome\\
-					\textbf{Redattori} & Andrea Cecchin \\
+					\textbf{Redattori} & Nome Cognome \\
 					\textbf{Verificatori} & \makecell{Nome Cognome \\ Nome Cognome} \\
-					\textbf{Stato} & stato\\
-					\textbf{Lista distribuzione} & \makecell{Jawa Druids \\ Tullio \\ GGGG}\\
-					\textbf{Uso} & Interno			
+					\textbf{Stato} & Approvato\\
+					\textbf{Lista distribuzione} & \makecell{ \\ Jawa Druids \\ Prof. Tullio Vardanega\\ Prof. Riccardo Cardin\\ Sync Lab}\\
+					\textbf{Uso} & Esterno			
 				\end{tabular}
 			\end{table}
 			\fontsize{17}{12}\textbf{Sommario} \\
-			Il documento redatto riferisce le regole, gli strumenti e le convenzioni a cui il gruppo JawaDruids ha stabilito di attenersi e seguire per l'intera durata dello sviluppo del progetto.
+			Il documento redatto contiene le scelte architetturali che il gruppo Jawa Druids ha effettuato ai fini realizzativi del progetto GDP: Gathering Detection Platform. Comprende i design pattern utilizzati e i diagrammi di attività, sequenza, classi e package.
 		\end{center}
 	\end{titlepage}
 	\makeatother
-	\input{Registro}
 	
 	
 	\tableofcontents{}
 	
 	\input{capitoli/c1_Introduzione}
-	\input{capitoli/c2_Processi_Primari}
+	\input{capitoli/c2_Architettura_del_prodotto}
 	
 	% bibliography, glossary and index would go here.
 	
