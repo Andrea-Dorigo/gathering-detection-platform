@@ -6,14 +6,14 @@ The main function extracts a frame from a ts video
 import glob
 import cv2
 
-def get_frames():
+def get_frames(PATH_VIDEOS):
     """
     Extracts a frame from a ts video
     """
 
-    path = "../videos/*.ts"
+    #path = "../videos/*.ts"
     nframe = 0
-    for file in glob.glob(path):
+    for file in glob.glob(PATH_VIDEOS+"*.ts"):
         video_capture = cv2.VideoCapture(file)
         video_capture.set(cv2.CAP_PROP_FPS, 15)
 

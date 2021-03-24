@@ -8,14 +8,14 @@ for better accuracy in object recognition
 
 import glob
 import image_slicer
-path_frames = "../frames/*.jpg"
-def cut_frames():
+
+def cut_frames(PATH_FRAMES):
     """
     This function cuts a frame in 6
     """
     count = 0
     # nframe = 0
-    for foto in glob.glob(path_frames):
+    for foto in glob.glob(PATH_FRAMES):
         frames = image_slicer.slice(foto, 6, save=False)
         image_slicer.save_tiles(frames, directory='../frames_pieces/', prefix='slice'+str(count))
         count += 1
