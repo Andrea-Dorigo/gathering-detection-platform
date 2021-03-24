@@ -18,8 +18,8 @@
 .DS_Store
 
 
-/proof_of_concept/acquisition/m3u8/*
-/proof_of_concept/acquisition/frames/*
-/proof_of_concept/acquisition/videos/*
-/proof_of_concept/acquisition/frames_pieces/*
+#/proof_of_concept/acquisition/m3u8/*.m3u8
+/proof_of_concept/acquisition/frames/*.jpg
+/proof_of_concept/acquisition/videos/*.ts
+/proof_of_concept/acquisition/frames_pieces/*.png
 /proof_of_concept/acquisition/main/__pycache__
