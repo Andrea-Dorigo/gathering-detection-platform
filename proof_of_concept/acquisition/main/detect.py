@@ -15,14 +15,14 @@ from weather import get_current_weather
 from get_frames import get_frames
 from cut_frame import cut_frames
 
-connect("GDP-test", host="localhost", port=27017)
+connect("GDP-test", host = "localhost", port = 27017)
 
 statement = True
 PATH_WEBCAM_JSON = "../webcams.json"
 PATH_M3U8 = "../m3u8/"
 PATH_VIDEOS = "../videos/"
-PATH_FRAMES = "../frames/*.jpg"
-PATH_FRAMES_PIECES= "../frames_pieces/*.png"
+PATH_FRAMES = "../frames/"
+PATH_FRAMES_PIECES= "../frames_pieces/"
 # path_video = "../m3u8/"
 
 # TODO: aggiungere le costanti che indicano i path (come quella qui sopra)
@@ -54,7 +54,7 @@ with open(PATH_WEBCAM_JSON) as f:
 while True :
 
     # imposta il tempo di attesa fra un conteggio di persone e l'altro
-    t_end = datetime.now() + timedelta(seconds=INTERVAL_BETWEEN_DETECTIONS)
+    t_end = datetime.now() + timedelta(seconds = INTERVAL_BETWEEN_DETECTIONS)
     print(t_end)
     print(datetime.now())
     # scorri fra tutte le webcams presenti nel file json
@@ -88,23 +88,23 @@ while True :
 
             # estrai un frame dal video
             #exec(open('get_frames.py').read())
-            get_frames(PATH_VIDEOS)
-            if get_frames(PATH_VIDEOS):
+            get_frames(PATH_VIDEOS, PATH_FRAMES)
+            if get_frames(PATH_VIDEOS, PATH_FRAMES):
                 print("Acquisizione Frame completata")
             # dividi il frame in 6 per un migliore affidabilita' nel riconoscimento
             #exec(open('cut_frame.py').read())
-            cut_frames(PATH_FRAMES)
-            if cut_frames(PATH_FRAMES):
+            cut_frames(PATH_FRAMES, PATH_FRAMES_PIECES)
+            if cut_frames(PATH_FRAMES, PATH_FRAMES_PIECES):
                 print("Taglio dei frame in foto completata")
 
             # conta le persone in ogni sottoframe
             persone_contate = 0
-            for file in glob.glob(PATH_FRAMES_PIECES):
-                result = subprocess.run(['python3','yolo.py','--image','../frames_pieces/'+file], capture_output=True)
+            for file in glob.glob(PATH_FRAMES_PIECES + "*.png"):
+                result = subprocess.run(['python3' , 'yolo.py' , '--image' , PATH_FRAMES_PIECES + file], capture_output=True)
                 persone_contate += result.stdout.decode().count('person')
-                print("Persone contate fino ad ora: "+str(persone_contate))
+                print("Persone contate fino ad ora: " + str(persone_contate))
 
-            print("Ci sono "+str(persone_contate) + " in totale")
+            print("Ci sono " + str(persone_contate) + " in totale")
 
             # inserisci i risultati nel db
             detection = Detection(

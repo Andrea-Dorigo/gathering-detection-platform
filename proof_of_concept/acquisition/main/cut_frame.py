@@ -9,17 +9,17 @@ for better accuracy in object recognition
 import glob
 import image_slicer
 
-def cut_frames(PATH_FRAMES):
+
+def cut_frames(PATH_FRAMES, PATH_FRAMES_PIECES):
     """
     This function cuts a frame in 6
     """
     count = 0
     # nframe = 0
-    for foto in glob.glob(PATH_FRAMES):
-        frames = image_slicer.slice(foto, 6, save=False)
-        image_slicer.save_tiles(frames, directory='../frames_pieces/', prefix='slice'+str(count))
+    for foto in glob.glob(PATH_FRAMES + "*.jpg"):
+        frames = image_slicer.slice(foto, 6, save = False)
+        image_slicer.save_tiles(frames, directory = PATH_FRAMES_PIECES, prefix = 'slice'+str(count))
         count += 1
-        statement = True
 
-    return bool(statement)
+    return True
 #cut_frames()
