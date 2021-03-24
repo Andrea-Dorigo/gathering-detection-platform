@@ -18,7 +18,10 @@ from cut_frame import cut_frames
 connect("GDP-test", host="localhost", port=27017)
 
 statement = True
-path_frame1 = "../frames_pieces/*.png"
+path_webcam_json = "../webcams.json"
+path_m3u8 = "../m3u8/"
+path_videos = "../videos/"
+path_frames_pieces = "../frames_pieces/*.png"
 # path_video = "../m3u8/"
 
 # TODO: aggiungere le costanti che indicano i path (come quella qui sopra)
@@ -40,7 +43,7 @@ class Detection(Document):
     day_of_week = IntField()
 
 # leggi il file json contenente i dati delle webcam
-with open('../webcams.json') as f:
+with open(path_webcam_json) as f:
   json_data = json.load(f)
 
 
@@ -66,7 +69,7 @@ while True :
         try:
 
             # scarica il file m3u8 contenente i link ai video
-            m3u8_file_path = "../m3u8/" + webcam["location"] + ".m3u8"
+            m3u8_file_path = path_m3u8 + webcam["location"] + ".m3u8"
             urllib.request.urlretrieve(webcam["link"], m3u8_file_path )
 
             # scorri le righe del file m3u8 fino a che non trovi un link al video .ts e salvalo in video_link
@@ -80,7 +83,7 @@ while True :
                     break
 
             # scarica il video dal link appena ricavato
-            urllib.request.urlretrieve(video_link, "../videos/Video" + webcam["location"] + ".ts")
+            urllib.request.urlretrieve(video_link, path_videos+"Video" + webcam["location"] + ".ts")
 
             # estrai un frame dal video
             #exec(open('get_frames.py').read())
@@ -95,7 +98,7 @@ while True :
 
             # conta le persone in ogni sottoframe
             persone_contate = 0
-            for file in glob.glob(path_frame1):
+            for file in glob.glob(path_frames_pieces):
                 result = subprocess.run(['python3','yolo.py','--image','../frames_pieces/'+file], capture_output=True)
                 persone_contate += result.stdout.decode().count('person')
                 print("Persone contate fino ad ora: "+str(persone_contate))

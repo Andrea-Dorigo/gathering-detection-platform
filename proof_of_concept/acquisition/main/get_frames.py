@@ -6,7 +6,7 @@ The main function extracts a frame from a ts video
 import glob
 import cv2
 
-def get_frames(statement):
+def get_frames():
     """
     Extracts a frame from a ts video
     """
@@ -31,8 +31,7 @@ def get_frames(statement):
 
             else:
                 print("Could not read the frame."+count)
-                statement = False
-                count += 1
+                return False
 
     return bool(statement)
 #get_frames()
