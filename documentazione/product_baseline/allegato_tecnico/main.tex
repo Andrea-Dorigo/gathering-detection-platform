@@ -50,34 +50,38 @@
 			\author{Jawa Druids}
 			\title{Allegato Tecnico}
 			\date{}
-			\includegraphics[width=0.7\linewidth]{../../immagini/DRUIDSLOGO.jpg}\\[4ex]
+			\includegraphics[width=0.5\linewidth]{../../immagini/DRUIDSLOGO.jpg}\\[4ex]
 
 			
 			{\huge \bfseries  \@title }\\[2ex] 
 			{\LARGE  \@author}\\[50ex]
-			\vspace*{-8,0cm}
+			\vspace*{-9,0cm}
 			\begin{table}[H]
-				\centering
-				\begin{tabular}{c|c}
-					\textbf{Versione} & 1.0.0 \\
-					\textbf{Data approvazione} & xx-xx-xxxx\\
-					\textbf{Responsabile} & Nome Cognome\\
-					\textbf{Redattori} & Nome Cognome \\
-					\textbf{Verificatori} & \makecell{Nome Cognome \\ Nome Cognome} \\
-					\textbf{Stato} & Approvato\\
-					\textbf{Lista distribuzione} & \makecell{ \\ Jawa Druids \\ Prof. Tullio Vardanega\\ Prof. Riccardo Cardin\\ Sync Lab}\\
-					\textbf{Uso} & Esterno			
-				\end{tabular}
-			\end{table}
-			\fontsize{17}{12}\textbf{Sommario} \\
-			Il documento redatto contiene le scelte architetturali che il gruppo Jawa Druids ha effettuato ai fini realizzativi del progetto GDP: Gathering Detection Platform. Comprende i design pattern utilizzati e i diagrammi di attività, sequenza, classi e package.
+			\renewcommand{\arraystretch}{1.4}
+			\centering
+			\begin{tabular}{r | l}
+				\textbf{Versione} & 1.0.0 \\%RIGA PER INSERIRE LA VERSIONE ULTIMA DEL DOCUMENTO
+				\textbf{Data approvazione} & ??-??-????\\
+				\textbf{Responsabile} & Nome Cognome \\
+				\textbf{Redattori} & \makecell[tl]{Nome Cognome \\ Nome Cognome} \\		
+				\textbf{Verificatori} & \makecell[tl]{Nome Cognome \\ Nome Cognome \\Nome Cognome} \\
+				%MAKECELL SERVE PER POI ANDARE A CAPO ALL'INTERNO DELLA CELLA
+				\textbf{Stato} & Approvato\\
+				\textbf{Lista distribuzione} & \makecell[tl]{Jawa Druids \\ Prof. Tullio Vardanega \\ Prof. Riccardo Cardin}\\
+				\textbf{Uso} & Esterno     
+			\end{tabular}
+		\end{table}
+		\vspace{0.1cm}
+		\hfill \break
+		\fontsize{17}{10}\textbf{Sommario} \\
+		\vspace{0.1cm}
+		Il presente documento contiene le scelte architetturali che il gruppo \emph{\normalsize{\textit{Jawa Druids}}} ha effettuato ai fini realizzativi del progetto. Contiene i design pattern e i diagrammi di attività, sequenza, classi e package.
 		\end{center}
 	\end{titlepage}
 	\makeatother
 	
 	
 	\tableofcontents{}
-	
 	\input{capitoli/c1_Introduzione}
 	\input{capitoli/c2_Architettura_del_prodotto}
 	
