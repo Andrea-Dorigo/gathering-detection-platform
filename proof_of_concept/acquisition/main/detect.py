@@ -81,12 +81,12 @@ while True :
                 if line[:-1].endswith('.ts'):
                     video_link = line[:-1]
                     if not line[:-1].startswith('https'):
-                        video_link = 'https://cdn-002.whatsupcams.com/hls/' + line[:-1]
+                        video_link = webcam["url_prefix"] + line[:-1]
                     print(video_link)
                     break
 
             # scarica il video dal link appena ricavato
-            urllib.request.urlretrieve(video_link, PATH_VIDEOS+"Video" + webcam["location"] + ".ts")
+            urllib.request.urlretrieve(video_link, PATH_VIDEOS+"Video" + ".ts")
 
             # estrai un frame dal video
             #exec(open('get_frames.py').read())

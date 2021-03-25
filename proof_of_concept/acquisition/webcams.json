@@ -7,7 +7,18 @@
     	"location" : "PiazzaNavona",
     	"latitude" : 41.899139,
     	"longitude" : 12.473311,
-      "split_frame_in" : 6
+      "split_frame_in" : 6,
+      "url_prefix" : "https://cdn-002.whatsupcams.com/hls/"
+    },
+    {
+      "link" : "https://cdn-004.whatsupcams.com/hls/hr_novska01.m3u8",
+      "id_webcam" : 2,
+      "city" : "Novska",
+      "location" : "GradNovska",
+      "latitude" : 45.3397,
+      "longitude" : 16.9787,
+      "split_frame_in" : 6,
+      "url_prefix" : "https://cdn-004.whatsupcams.com/hls/"
     }
   ]
 }
