@@ -1,5 +1,6 @@
 package com.webapp.spring.data.mongodb.controller;
 
+import com.google.gson.Gson;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -30,7 +31,7 @@ public class indexController {
 	CoordinateRepository coordinateRepository;
 
 	@GetMapping("/coordinate")
-	public ResponseEntity<List<Detection>>getAllDetection(@RequestParam(required = false) String id) {try {
+	public ResponseEntity<String>getAllDetection(@RequestParam(required = false) String id) {try {
 	List<Detection> detec = new ArrayList<Detection>();
 	if (id == null)
         coordinateRepository.findAll().forEach(detec::add);
@@ -40,8 +41,8 @@ public class indexController {
       if (detec.isEmpty()) {
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
       }
-
-      return new ResponseEntity<>(detec, HttpStatus.OK);
+	String json = new Gson().toJson(detec );
+      return new ResponseEntity<>(json, HttpStatus.OK);
 	
 	}catch (Exception e) {
       return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
