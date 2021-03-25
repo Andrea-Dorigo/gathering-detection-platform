@@ -29,7 +29,7 @@ PATH_FRAMES_PIECES= "../frames_pieces/"
 
 # TODO: aggiungere le costanti che indicano i path (come quella qui sopra)
 
-INTERVAL_BETWEEN_DETECTIONS = 60
+INTERVAL_BETWEEN_DETECTIONS = 300
 
 class Detection(Document):
     id_webcam = IntField(required=True)
