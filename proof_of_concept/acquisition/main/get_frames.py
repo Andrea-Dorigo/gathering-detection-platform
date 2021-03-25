@@ -6,14 +6,13 @@ The main function extracts a frame from a ts video
 import glob
 import cv2
 
-def get_frames(statement):
+def get_frames(PATH_VIDEOS, PATH_FRAMES):
     """
     Extracts a frame from a ts video
     """
 
-    path = "../videos/*.ts"
     nframe = 0
-    for file in glob.glob(path):
+    for file in glob.glob(PATH_VIDEOS + "*.ts"):
         video_capture = cv2.VideoCapture(file)
         video_capture.set(cv2.CAP_PROP_FPS, 15)
 
@@ -23,16 +22,15 @@ def get_frames(statement):
         while video_capture.isOpened() and count < 1:
             frame_is_read, frame = video_capture.read()
             if frame_is_read:
-                cv2.imwrite("../frames/frame"+str(nframe)+".jpg", frame)
+                cv2.imwrite(PATH_FRAMES + "frame" + ".jpg", frame)
                 saved_frame_name += 1
                 count += 1
                 nframe += 1
                 statement = True
 
             else:
-                print("Could not read the frame."+count)
-                statement = False
-                count += 1
+                print("Could not read the frame." + count)
+                return False
 
     return bool(statement)
 #get_frames()
