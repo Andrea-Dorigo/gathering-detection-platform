@@ -54,9 +54,11 @@ with open(PATH_WEBCAM_JSON) as f:
 while True :
 
     # imposta il tempo di attesa fra un conteggio di persone e l'altro
-    t_end = datetime.now() + timedelta(seconds = INTERVAL_BETWEEN_DETECTIONS)
-    print(t_end)
+    t_start = datetime.now().replace(microsecond=0)
     print(datetime.now())
+    t_end = t_start + timedelta(seconds=INTERVAL_BETWEEN_DETECTIONS)
+    print(t_start)
+    print(t_end)
     # scorri fra tutte le webcams presenti nel file json
     for webcam in json_data["webcams"]:
 
@@ -123,8 +125,9 @@ while True :
                 ).save()
         except:
             print("exception")
-            time.sleep((t_end - datetime.now()).total_seconds())
+            #time.sleep((t_end - datetime.now()).total_seconds())
 
     #loops = loops + 1
     print("waiting")
+    print((t_end - datetime.now()).total_seconds())
     time.sleep((t_end - datetime.now()).total_seconds())
