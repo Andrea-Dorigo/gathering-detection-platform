@@ -74,7 +74,7 @@ while True :
         try:
 
             # scarica il file m3u8 contenente i link ai video
-            m3u8_file_path = '..' + PATH_M3U8 + webcam["location"] + ".m3u8"
+            m3u8_file_path = PATH_M3U8 + webcam["location"] + ".m3u8"
             urllib.request.urlretrieve(webcam["link"], m3u8_file_path )
 
             # scorri le righe del file m3u8 fino a che non trovi un link al video .ts e salvalo in video_link

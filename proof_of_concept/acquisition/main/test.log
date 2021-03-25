@@ -6,3 +6,31 @@ DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweatherma
 DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.3397&lon=16.9787&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 453
 INFO:root:Eccezione ore: 2021-03-25 11:45:32.621759
 ERROR:root:(<class 'FileNotFoundError'>, FileNotFoundError(2, 'No such file or directory'), <traceback object at 0x7f803688d080>)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=41.899139&lon=12.473311&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 458
+INFO:root:Eccezione ore: 2021-03-25 11:50:02.943681
+ERROR:root:(<class 'FileNotFoundError'>, FileNotFoundError(2, 'No such file or directory'), <traceback object at 0x7f2de3118600>)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.3397&lon=16.9787&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 453
+INFO:root:Eccezione ore: 2021-03-25 11:50:03.186430
+ERROR:root:(<class 'FileNotFoundError'>, FileNotFoundError(2, 'No such file or directory'), <traceback object at 0x7f2de3118600>)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=41.899139&lon=12.473311&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 458
+INFO:root:Eccezione ore: 2021-03-25 11:51:16.315847
+ERROR:root:(<class 'KeyboardInterrupt'>, KeyboardInterrupt(), <traceback object at 0x7f656be77880>)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.3397&lon=16.9787&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 453
+INFO:root:Eccezione ore: 2021-03-25 11:51:16.495839
+ERROR:root:(<class 'KeyboardInterrupt'>, KeyboardInterrupt(), <traceback object at 0x7f6568d7fc00>)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=41.899139&lon=12.473311&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 458
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.3397&lon=16.9787&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 453
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=41.899139&lon=12.473311&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 459
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.3397&lon=16.9787&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 453
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=41.899139&lon=12.473311&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 459
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.3397&lon=16.9787&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 453
