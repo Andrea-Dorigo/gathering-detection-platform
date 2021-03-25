@@ -32,9 +32,12 @@ export default{
 </script>
 <style scoped>
 #slider {
-    margin :1px;
-    padding:5px;
-    width: 70%;
-    height: 100%;
+    fill: white;
+    fill-opacity: 0%;
+    width: 80%;
+    color: snow;
+    stroke: black;
+    stroke-width: 2;
+    
 }
 </style>
