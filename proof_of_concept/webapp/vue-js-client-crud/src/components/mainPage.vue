@@ -1,12 +1,14 @@
 <template>
 
 <div id="things">
-  <h1>GDP: Gathering Detection Platform</h1>
   <slider/>
   <button type="button" value="Reload Map" @click="ricarica">Reload map</button>
-  <div id="calendar"></div>
-  <Datepicker :inline="true" v-on:selected="pick" />
+  <div id="mc">
   <div id="map"></div>
+  <div id="calendar">
+    <Datepicker :inline="true" v-on:selected="pick" />
+  </div>
+  </div>
 	</div>
   
 </template>
@@ -15,8 +17,10 @@
 
 import $ from 'jquery'
 import slider from './slider.vue'
-import Datepicker from 'vuejs-datepicker';
+import Datepicker from 'vuejs-datepicker'
 import L from 'leaflet'
+import Elements from '../services/htpprequest'
+
 var map;
 
 export default {
@@ -100,8 +104,8 @@ export default {
     return points;
     },
     start: function() {
-    var methodurl = "/coordinate";
-    // eslint-disable-next-line no-undef
+    this.loadMap(Elements.getCoordinate());
+    /*var methodurl = "http://localhost:8080/api/coordinate";
       $.ajax({
       type: 'GET',
       url: methodurl,
@@ -109,7 +113,7 @@ export default {
       success: function(data) {
       this.loadMap(data);
       }
-      });
+      });*/
     },
     ricarica: function() {
       console.log("1")
@@ -138,7 +142,6 @@ export default {
       marker.bindPopup("Piazza Navona: " + dataFinal.webcam[index].numPeople + " persone ca.").openPopup();
     },
     getTime: function(){
-	
     var methodurl = "/coordinate";
     // eslint-disable-next-line no-undef
     $.ajax({
@@ -188,24 +191,18 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scope>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
 #map {
   position: absolute;
   width: 800px;
   height: 600px;
   float: right;
+}
+#calendar{
+  position: relative;
+  float: right;
+}
+#mc{
+  width: 1400px;
+  position: relative;
 }
 </style>

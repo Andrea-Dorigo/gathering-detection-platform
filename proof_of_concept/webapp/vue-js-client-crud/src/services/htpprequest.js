@@ -1,8 +1,9 @@
 import http from "../http-common";
 
 class Elements {
-    get() {
-        return http.get("/pippo");
+    getCoordinate() {
+        console.log(http.get("/coordinate"));
+        return http.get("/coordinate");
     }
 }
 

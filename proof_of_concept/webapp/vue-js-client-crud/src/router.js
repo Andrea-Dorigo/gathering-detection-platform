@@ -1,6 +1,9 @@
 import Vue from "vue";
 import Router from "vue-router";
 
+import chiSiamo from './components/chiSiamo.vue'
+import mainPage from './components/mainPage.vue'
+
 Vue.use(Router);
 
 export default new Router({
@@ -8,9 +11,15 @@ export default new Router({
   routes: [
     {
       path: "/",
-      alias: "/coordinate",
-      name: "coordinate",
-      component: () => import("./components/mainPage")
+      alias: "/mainPage",
+      name: "mainPage",
+      component: mainPage,
+    },
+    {
+      path: "/",
+      alias: "/chiSiamo",
+      name: "chiSiamo",
+      component: chiSiamo,
     }
 ]
 });

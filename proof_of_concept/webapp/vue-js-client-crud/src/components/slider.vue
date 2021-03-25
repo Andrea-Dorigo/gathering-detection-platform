@@ -1,33 +1,40 @@
 <template>
-    <div id="slider">
-    <input @change="setColor()" v-model="value" type="range" id="myRange" class="mySlider" min="0" max="24" v-on:change="getTimeSlider"/>
-    <span :style="setColor()" class="rangeValue" id="range"> {{ value }} </span>
+    <div id="sliderdiv">
+    <time-slider id="slider"  color-main="navy"  color='snow' v-on:current-time="shiftTime($event)" v-on:change="getTimeSlider"></time-slider>
+    <!--<input @change="setColor()" v-model="value" type="range" id="myRange" class="mySlider" min="0" max="24" v-on:change="getTimeSlider"/>
+    <span :style="setColor()" class="rangeValue" id="range"> {{ value }} </span>-->
     </div>
 </template>
 
-<script>
- 
-import {getTime} from "./myfunctions.js";
 
-export default({
-    name: 'slider',
-    data() {
-        return {
-            value: ""
-        }
+<script>
+import TimeSlider from 'times-slider'
+import {getTime} from "./myfunctions.js"
+
+export default{
+  components: {
+      TimeSlider
+    },
+    data: () => ({
+        curTime: new Date(Date.now()).toTimeString().slice(0,5)
+    }), 
+     mounted: function () {
     },
     methods: {
-        setColor: function() {
-            if (this.value > 0) {
-                return {
-                    color: "#black",
-                }
-
-            }
-        },
-        getTimeSlider: function() {
-            getTime;
-        }
+    shiftTime: function(a) {
+      this.curTime = a;
     },
-});
+    getTimeSlider: function() {
+            getTime();
+        }
+    }
+}
 </script>
+<style scoped>
+#slider {
+    margin :1px;
+    padding:5px;
+    width: 70%;
+    height: 100%;
+}
+</style>
