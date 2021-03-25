@@ -9,6 +9,7 @@
   import AdvancedSearch from 'vue-advanced-search'
 
   export default {
+    name: 'searchMio',
     components: { AdvancedSearch },
     data () {
       return {

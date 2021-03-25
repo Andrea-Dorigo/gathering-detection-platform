@@ -20,6 +20,8 @@ import slider from './slider.vue'
 import Datepicker from 'vuejs-datepicker'
 import L from 'leaflet'
 import Elements from '../services/htpprequest'
+import 'leaflet-svg-shape-markers'
+import {heatLayer} from 'leaflet'
 
 var map;
 
@@ -29,7 +31,25 @@ export default {
     Datepicker,
     slider
   },
+  data() {
+    var coords= [];
+    return {
+      coords,
+    }
+  },
   methods: {
+    GetHeatLayer: function() {
+      heatLayer();
+    },
+    retrieveCoordinate : function() {
+      console.log("sono nel retrieve");
+      Elements.getCoordinate().then(res => {
+        console.log(res.data);
+        this.coords=res.data;
+        console.log(this.coords);
+        this.loadMap(this.coords);
+      })
+    },
     pick: function(){
       window.alert("ciaone"); 
     },
@@ -51,18 +71,24 @@ export default {
 
       tiles.addTo(map);
       
+      console.log("ciaone andrea cecchin");
+
+      console.log(data);
+
       var dataToString = JSON.stringify(data);
       
       var datatext = '{"webcam":' + dataToString + '}';
       
       var test = JSON.parse(datatext);
+
+      console.log(test);
       
       var count = Object.keys(test.webcam).length;
-        var last = count-1;
+      var last = count-1;
         
       var randomGeoPointsPiazzaNavona = this.generateRandomPoints({'lat':test.webcam[last].latitude, 'lng':test.webcam[last].longitude}, 10, test.webcam[last].numPeople); //piazza navona
 
-      var heat = L.heatLayer(randomGeoPointsPiazzaNavona);
+      var heat = L.GetHeatLayer(randomGeoPointsPiazzaNavona);
 
       heat.addTo(map);
 
@@ -105,22 +131,11 @@ export default {
     },
     start: function() {
     this.loadMap(Elements.getCoordinate());
-    /*var methodurl = "http://localhost:8080/api/coordinate";
-      $.ajax({
-      type: 'GET',
-      url: methodurl,
-      dataType: 'json', 
-      success: function(data) {
-      this.loadMap(data);
-      }
-      });*/
     },
     ricarica: function() {
-      console.log("1")
       this.$el="map";
       map.remove();
-      console.log(2);
-      this.start();
+      this.retrieveCoordinate();
     },
     loadMapByTime: function(dataFinal, index){
       
