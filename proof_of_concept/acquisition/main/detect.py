@@ -10,12 +10,14 @@ import json
 import subprocess
 from datetime import datetime,timedelta
 from mongoengine import *
+import logging
 
 from weather import get_current_weather
 from get_frames import get_frames
 from cut_frame import cut_frames
 
 connect("GDP-test", host = "localhost", port = 27017)
+logging.basicConfig(filename='test.log', level=logging.DEBUG)
 
 statement = True
 PATH_WEBCAM_JSON = "../webcams.json"
@@ -72,7 +74,7 @@ while True :
         try:
 
             # scarica il file m3u8 contenente i link ai video
-            m3u8_file_path = PATH_M3U8 + webcam["location"] + ".m3u8"
+            m3u8_file_path = '..' + PATH_M3U8 + webcam["location"] + ".m3u8"
             urllib.request.urlretrieve(webcam["link"], m3u8_file_path )
 
             # scorri le righe del file m3u8 fino a che non trovi un link al video .ts e salvalo in video_link
@@ -107,7 +109,6 @@ while True :
                 print("Persone contate fino ad ora: " + str(persone_contate))
 
             print("Ci sono " + str(persone_contate) + " in totale")
-
             # inserisci i risultati nel db
             detection = Detection(
                 id_webcam = webcam["id_webcam"],
@@ -124,7 +125,9 @@ while True :
                 day_of_week =  datetime.now().date().weekday()
                 ).save()
         except:
-            print("exception")
+            print('Exception')
+            logging.info('Eccezione ore: ' + str(datetime.now()) )
+            logging.error(sys.exc_info())
             #time.sleep((t_end - datetime.now()).total_seconds())
 
     #loops = loops + 1
