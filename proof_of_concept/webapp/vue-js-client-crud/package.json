@@ -11,6 +11,7 @@
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "easy-vue-leaflet": "^1.1.4",
+    "jquery": "^3.6.0",
     "leaflet": "^1.7.1",
     "leaflet.heat": "^0.2.0",
     "vue": "^2.6.11",

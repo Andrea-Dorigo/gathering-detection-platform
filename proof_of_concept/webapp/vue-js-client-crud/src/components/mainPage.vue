@@ -3,7 +3,7 @@
 <div id="things">
   <h1>GDP: Gathering Detection Platform</h1>
   <slider/>
-  <button type="button" value="Reload Map" @click="reload()">Reload map</button>
+  <button type="button" value="Reload Map" @click="ricarica">Reload map</button>
   <div id="calendar"></div>
   <Datepicker :inline="true" v-on:selected="pick" />
   <div id="map"></div>
@@ -13,6 +13,7 @@
 
 <script>
 
+import $ from 'jquery'
 import slider from './slider.vue'
 import Datepicker from 'vuejs-datepicker';
 import L from 'leaflet'
@@ -35,44 +36,43 @@ export default {
       console.log("metti la mappa vuota");
       var tiles = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-    });
-    tiles.addTo(map);
-    }
+      });
+      tiles.addTo(map);
     },
     loadMap: function(data){
-    map = L.map('map').setView([41.9005213979, 12.4765647604], 12);
-    var tiles = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-		attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-    })
+      map = L.map('map').setView([41.9005213979, 12.4765647604], 12);
+      var tiles = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+      })
 
-    tiles.addTo(map);
-    
-    var dataToString = JSON.stringify(data);
-    
-    var datatext = '{"webcam":' + dataToString + '}';
-    
-    var test = JSON.parse(datatext);
-    
-    var count = Object.keys(test.webcam).length;
-      var last = count-1;
+      tiles.addTo(map);
       
-    var randomGeoPointsPiazzaNavona = this.generateRandomPoints({'lat':test.webcam[last].latitude, 'lng':test.webcam[last].longitude}, 10, test.webcam[last].numPeople); //piazza navona
+      var dataToString = JSON.stringify(data);
+      
+      var datatext = '{"webcam":' + dataToString + '}';
+      
+      var test = JSON.parse(datatext);
+      
+      var count = Object.keys(test.webcam).length;
+        var last = count-1;
+        
+      var randomGeoPointsPiazzaNavona = this.generateRandomPoints({'lat':test.webcam[last].latitude, 'lng':test.webcam[last].longitude}, 10, test.webcam[last].numPeople); //piazza navona
 
-    var heat = L.heatLayer(randomGeoPointsPiazzaNavona);
+      var heat = L.heatLayer(randomGeoPointsPiazzaNavona);
 
-    heat.addTo(map);
+      heat.addTo(map);
 
-    var marker = L.marker([test.webcam[last].latitude , test.webcam[last].longitude], {
-      elevation: 260.0,
-      title: "Piazza Navona"
-    }).addTo(map);
+      var marker = L.marker([test.webcam[last].latitude , test.webcam[last].longitude], {
+        elevation: 260.0,
+        title: "Piazza Navona"
+      }).addTo(map);
 
-    marker.bindPopup("Piazza Navona: " + test.webcam[last].numPeople + " persone ca.").openPopup();
-    
-    var t = test.webcam[last].time;
-    t = t.split(".");
-    document.getElementById("myRange").value = t[0];
-    document.getElementById("range").textContent = t[0];
+      marker.bindPopup("Piazza Navona: " + test.webcam[last].numPeople + " persone ca.").openPopup();
+      
+      var t = test.webcam[last].time;
+      t = t.split(".");
+      document.getElementById("myRange").value = t[0];
+      document.getElementById("range").textContent = t[0];
   },
     generateRandomPointCR: function(center, radius) {
     var x0 = center.lng;
@@ -102,18 +102,21 @@ export default {
     start: function() {
     var methodurl = "/coordinate";
     // eslint-disable-next-line no-undef
-    $.ajax({
-    type: 'GET',
-    url: methodurl,
-    dataType: 'json', 
-    success: function(data) {
-    this.loadMap(data);
-    }
-	});
+      $.ajax({
+      type: 'GET',
+      url: methodurl,
+      dataType: 'json', 
+      success: function(data) {
+      this.loadMap(data);
+      }
+      });
     },
-    reload: function() {
-    map.remove();
-    this.start();
+    ricarica: function() {
+      console.log("1")
+      this.$el="map";
+      map.remove();
+      console.log(2);
+      this.start();
     },
     loadMapByTime: function(dataFinal, index){
       
@@ -173,10 +176,10 @@ export default {
           }
         }
     });
+  }
   },
-    mounted:function() {
+    mounted() {
         this.$el="map";
-        console.log("ahahah");
         this.loadEmptyMap();
     }
   }

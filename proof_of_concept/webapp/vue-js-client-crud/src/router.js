@@ -8,8 +8,8 @@ export default new Router({
   routes: [
     {
       path: "/",
-      alias: "/pippo",
-      name: "pippo",
+      alias: "/coordinate",
+      name: "coordinate",
       component: () => import("./components/mainPage")
     }
 ]
