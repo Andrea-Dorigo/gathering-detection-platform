@@ -1,6 +1,6 @@
 <template>
     <div id="sliderdiv">
-    <time-slider id="slider"  color-main="navy"  color='snow' v-on:current-time="shiftTime($event)" v-on:change="getTimeSlider"></time-slider>
+    <time-slider  color-main="navy"  color='snow' v-on:current-time="shiftTime($event)" style="width:80%"></time-slider>
     <!--<input @change="setColor()" v-model="value" type="range" id="myRange" class="mySlider" min="0" max="24" v-on:change="getTimeSlider"/>
     <span :style="setColor()" class="rangeValue" id="range"> {{ value }} </span>-->
     </div>
@@ -30,14 +30,3 @@ export default{
     }
 }
 </script>
-<style scoped>
-#slider {
-    fill: white;
-    fill-opacity: 0%;
-    width: 80%;
-    color: snow;
-    stroke: black;
-    stroke-width: 2;
-    
-}
-</style>

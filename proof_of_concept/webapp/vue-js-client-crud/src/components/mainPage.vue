@@ -1,12 +1,14 @@
 <template>
 
 <div id="things">
+  <div id="sb">
   <slider/>
   <button type="button" value="Reload Map" @click="ricarica">Reload map</button>
+  </div>
   <div id="mc">
   <div id="map"></div>
   <div id="calendar">
-    <Datepicker :inline="true" v-on:selected="pick" />
+   <Datepicker :inline="true" v-on:selected="pick" />
   </div>
   </div>
 	</div>
@@ -15,21 +17,19 @@
 
 <script>
 
-import $ from 'jquery'
 import slider from './slider.vue'
 import Datepicker from 'vuejs-datepicker'
 import L from 'leaflet'
 import Elements from '../services/htpprequest'
 import 'leaflet-svg-shape-markers'
-import {heatLayer} from 'leaflet'
-
-var map;
+import "heatmap.js"
+import HeatmapOverlay from './heatmapoverley.js'
 
 export default {
   name: 'things',
    components: {
     Datepicker,
-    slider
+    slider,
   },
   data() {
     var coords= [];
@@ -38,9 +38,6 @@ export default {
     }
   },
   methods: {
-    GetHeatLayer: function() {
-      heatLayer();
-    },
     retrieveCoordinate : function() {
       console.log("sono nel retrieve");
       Elements.getCoordinate().then(res => {
@@ -50,162 +47,67 @@ export default {
         this.loadMap(this.coords);
       })
     },
+    loadMap: function(){
+      var testData = {
+          max: 8,
+          data: [{lat: 24.6408, lng:46.7728, count: 3},{lat: 50.75, lng:-1.55, count: 1},{lat: 52.6333, lng:1.75, count: 1},{lat: 48.15, lng:9.4667, count: 1},{lat: 52.35, lng:4.9167, count: 2},{lat: 60.8, lng:11.1, count: 1},{lat: 43.561, lng:-116.214, count: 1},{lat: 47.5036, lng:-94.685, count: 1},{lat: 42.1818, lng:-71.1962, count: 1},{lat: 42.0477, lng:-74.1227, count: 1},{lat: 40.0326, lng:-75.719, count: 1},{lat: 40.7128, lng:-73.2962, count: 2},{lat: 27.9003, lng:-82.3024, count: 1},{lat: 38.2085, lng:-85.6918, count: 1},{lat: 46.8159, lng:-100.706, count: 1},{lat: 30.5449, lng:-90.8083, count: 1},{lat: 44.735, lng:-89.61, count: 1},{lat: 41.4201, lng:-75.6485, count: 2},{lat: 39.4209, lng:-74.4977, count: 1},{lat: 39.7437, lng:-104.979, count: 1},{lat: 39.5593, lng:-105.006, count: 1},{lat: 45.2673, lng:-93.0196, count: 1},{lat: 41.1215, lng:-89.4635, count: 1},{lat: 43.4314, lng:-83.9784, count: 1},{lat: 43.7279, lng:-86.284, count: 1},{lat: 40.7168, lng:-73.9861, count: 1},{lat: 47.7294, lng:-116.757, count: 1},{lat: 47.7294, lng:-116.757, count: 2},{lat: 35.5498, lng:-118.917, count: 1},{lat: 34.1568, lng:-118.523, count: 1},{lat: 39.501, lng:-87.3919, count: 3},{lat: 33.5586, lng:-112.095, count: 1},{lat: 38.757, lng:-77.1487, count: 1},{lat: 33.223, lng:-117.107, count: 1},{lat: 30.2316, lng:-85.502, count: 1},{lat: 39.1703, lng:-75.5456, count: 8},{lat: 30.0041, lng:-95.2984, count: 2},{lat: 29.7755, lng:-95.4152, count: 1},{lat: 41.8014, lng:-87.6005, count: 1},{lat: 37.8754, lng:-121.687, count: 7},{lat: 38.4493, lng:-122.709, count: 1},{lat: 40.5494, lng:-89.6252, count: 1},{lat: 42.6105, lng:-71.2306, count: 1},{lat: 40.0973, lng:-85.671, count: 1},{lat: 40.3987, lng:-86.8642, count: 1},{lat: 40.4224, lng:-86.8031, count: 4},{lat: 47.2166, lng:-122.451, count: 1},{lat: 32.2369, lng:-110.956, count: 1},{lat: 41.3969, lng:-87.3274, count: 2},{lat: 41.7364, lng:-89.7043, count: 2},{lat: 42.3425, lng:-71.0677, count: 1},{lat: 33.8042, lng:-83.8893, count: 1},{lat: 36.6859, lng:-121.629, count: 2},{lat: 41.0957, lng:-80.5052, count: 1},{lat: 46.8841, lng:-123.995, count: 1},{lat: 40.2851, lng:-75.9523, count: 2},{lat: 42.4235, lng:-85.3992, count: 1},{lat: 39.7437, lng:-104.979, count: 2},{lat: 25.6586, lng:-80.3568, count: 7},{lat: 33.0975, lng:-80.1753, count: 1},{lat: 25.7615, lng:-80.2939, count: 1},{lat: 26.3739, lng:-80.1468, count: 1},{lat: 37.6454, lng:-84.8171, count: 1},{lat: 34.2321, lng:-77.8835, count: 1},{lat: 34.6774, lng:-82.928, count: 1},{lat: 39.9744, lng:-86.0779, count: 1},{lat: 35.6784, lng:-97.4944, count: 2},{lat: 33.5547, lng:-84.1872, count: 1},{lat: 27.2498, lng:-80.3797, count: 1},{lat: 41.4789, lng:-81.6473, count: 1},{lat: 41.813, lng:-87.7134, count: 1},{lat: 41.8917, lng:-87.9359, count: 1},{lat: 35.0911, lng:-89.651, count: 1},{lat: 32.6102, lng:-117.03, count: 1},{lat: 41.758, lng:-72.7444, count: 1},{lat: 39.8062, lng:-86.1407, count: 1},{lat: 41.872, lng:-88.1662, count: 1},{lat: 34.1404, lng:-81.3369, count: 1},{lat: 46.15, lng:-60.1667, count: 1},{lat: 36.0679, lng:-86.7194, count: 1},{lat: 43.45, lng:-80.5, count: 1},{lat: 44.3833, lng:-79.7, count: 1},{lat: 45.4167, lng:-75.7, count: 2},{lat: 43.75, lng:-79.2, count: 2},{lat: 45.2667, lng:-66.0667, count: 3},{lat: 42.9833, lng:-81.25, count: 2},{lat: 44.25, lng:-79.4667, count: 3},{lat: 45.2667, lng:-66.0667, count: 2},{lat: 34.3667, lng:-118.478, count: 3},{lat: 42.734, lng:-87.8211, count: 1},{lat: 39.9738, lng:-86.1765, count: 1},{lat: 33.7438, lng:-117.866, count: 1},{lat: 37.5741, lng:-122.321, count: 1},{lat: 42.2843, lng:-85.2293, count: 1},{lat: 34.6574, lng:-92.5295, count: 1},{lat: 41.4881, lng:-87.4424, count: 1},{lat: 25.72, lng:-80.2707, count: 1},{lat: 34.5873, lng:-118.245, count: 1},{lat: 35.8278, lng:-78.6421, count: 1}]
+        };
+
+        var baseLayer = L.tileLayer(
+          'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
+            attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
+            maxZoom: 30
+          }
+        );
+
+        var cfg = {
+          // radius should be small ONLY if scaleRadius is true (or small radius is intended)
+          "radius": 2,
+          "maxOpacity": .8,
+          // scales the radius based on map zoom
+          "scaleRadius": true,
+          // if set to false the heatmap uses the global maximum for colorization
+          // if activated: uses the data maximum within the current map boundaries
+          //   (there will always be a red spot with useLocalExtremas true)
+          "useLocalExtrema": true,
+          // which field name in your data represents the latitude - default "lat"
+          latField: 'lat',
+          // which field name in your data represents the longitude - default "lng"
+          lngField: 'lng',
+          // which field name in your data represents the data value - default "value"
+          valueField: 'count'
+        };
+
+
+        var heatmapLayer = new HeatmapOverlay(cfg);
+
+        new L.Map('map', {
+          center: new L.LatLng(25.6586, -80.3568),
+          zoom: 4,
+          layers: [baseLayer, heatmapLayer]
+        });
+
+        heatmapLayer.setData(testData);
+    },
     pick: function(){
       window.alert("ciaone"); 
     },
-    loadEmptyMap: function(){
-      this.$el="map";
-      console.log("crea mappa vuota");
-      map = L.map('map').setView([41.9005213979, 12.4765647604], 12);
-      console.log("metti la mappa vuota");
-      var tiles = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-      });
-      tiles.addTo(map);
+    ricarica: function(){
+      this.loadMap();
     },
-    loadMap: function(data){
-      map = L.map('map').setView([41.9005213979, 12.4765647604], 12);
-      var tiles = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-      })
-
-      tiles.addTo(map);
-      
-      console.log("ciaone andrea cecchin");
-
-      console.log(data);
-
-      var dataToString = JSON.stringify(data);
-      
-      var datatext = '{"webcam":' + dataToString + '}';
-      
-      var test = JSON.parse(datatext);
-
-      console.log(test);
-      
-      var count = Object.keys(test.webcam).length;
-      var last = count-1;
-        
-      var randomGeoPointsPiazzaNavona = this.generateRandomPoints({'lat':test.webcam[last].latitude, 'lng':test.webcam[last].longitude}, 10, test.webcam[last].numPeople); //piazza navona
-
-      var heat = L.GetHeatLayer(randomGeoPointsPiazzaNavona);
-
-      heat.addTo(map);
-
-      var marker = L.marker([test.webcam[last].latitude , test.webcam[last].longitude], {
-        elevation: 260.0,
-        title: "Piazza Navona"
-      }).addTo(map);
-
-      marker.bindPopup("Piazza Navona: " + test.webcam[last].numPeople + " persone ca.").openPopup();
-      
-      var t = test.webcam[last].time;
-      t = t.split(".");
-      document.getElementById("myRange").value = t[0];
-      document.getElementById("range").textContent = t[0];
-  },
-    generateRandomPointCR: function(center, radius) {
-    var x0 = center.lng;
-    var y0 = center.lat;
-  
-    var rd = radius/111300;
-
-    var u = Math.random();
-    var v = Math.random();
-
-    var w = rd * Math.sqrt(u);
-    var t = 2 * Math.PI * v;
-    var x = w * Math.cos(t);
-    var y = w * Math.sin(t);
-
-    var xp = x/Math.cos(y0);
-
-    return {'lat': y+y0, 'lng': xp+x0};
-    },
-    generateRandomPoints: function(center, radius, count) {
-    var points = [];
-    for (var i=0; i<count; i++) {
-    points.push(this.generateRandomPointCR(center, radius));
-    }
-    return points;
-    },
-    start: function() {
-    this.loadMap(Elements.getCoordinate());
-    },
-    ricarica: function() {
-      this.$el="map";
-      map.remove();
-      this.retrieveCoordinate();
-    },
-    loadMapByTime: function(dataFinal, index){
-      
-      map = L.map('map').setView([41.9005213979, 12.4765647604], 12);
-
-      var tiles = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-          attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-      });
-      tiles.addTo(map);
-      var randomGeoPointsPiazzaNavona = this.generateRandomPoints({'lat':dataFinal.webcam[index].latitude, 'lng':dataFinal.webcam[index].longitude}, 10, dataFinal.webcam[index].numPeople); //piazza navona
-
-      var heat = L.heatLayer(randomGeoPointsPiazzaNavona);
-      heat.addTo(map);
-      var marker = L.marker([dataFinal.webcam[index].latitude , dataFinal.webcam[index].longitude], {
-              elevation: 260.0,
-              title: "Piazza Navona"
-      }).addTo(map);
-
-      marker.bindPopup("Piazza Navona: " + dataFinal.webcam[index].numPeople + " persone ca.").openPopup();
-    },
-    getTime: function(){
-    var methodurl = "/coordinate";
-    // eslint-disable-next-line no-undef
-    $.ajax({
-      type: 'GET',
-        url: methodurl,
-        dataType: 'json', 
-        success: function(data) {
-          map.remove();
-          var dataToString = JSON.stringify(data);
-          var datatext = '{"webcam":' + dataToString + '}';
-          var test = JSON.parse(datatext);
-          var t = document.getElementById("myRange").value;
-          var ore;
-          var s;
-          var k = Object.keys(test.webcam).length;
-          for (var i = 0; i < k; i++){
-            s = test.webcam[i].time;
-            ore = s.split(".");
-            if(ore[0] == t){
-              break;
-            }
-          }
-          if(i == test.webcam.length){
-          document.getElementById("myRange").value = t;
-          document.getElementById("range").textContent = t;
-            alert("Non ci sono dati disponibili per questa fascia oraria");
-            this.loadEmptyMap();
-          }
-          else{
-            var r = test.webcam[i].time;
-            r = r.split(".");
-            document.getElementById("myRange").value = r[0];
-            document.getElementById("range").textContent = r[0];
-            this.loadMapByTime(test,i);
-          }
-        }
-    });
-  }
-  },
     mounted() {
         this.$el="map";
-        this.loadEmptyMap();
+        this.loadMap();
     }
   }
- 
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scope>
+#sb {
+  display: inline;
+}
 #map {
   position: absolute;
   width: 800px;
