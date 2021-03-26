@@ -90,6 +90,7 @@ export default {
         heatmapLayer.setData(testData);
     },
     pick: function(){
+      //da completare quando funziona la mappa
       window.alert("ciaone"); 
     },
     ricarica: function(){

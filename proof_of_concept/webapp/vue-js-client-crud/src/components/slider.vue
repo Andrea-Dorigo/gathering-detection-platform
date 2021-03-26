@@ -12,6 +12,7 @@ import TimeSlider from 'times-slider'
 import {getTime} from "./myfunctions.js"
 
 export default{
+  //da completare quando funziona la mappa
   components: {
       TimeSlider
     },

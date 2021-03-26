@@ -12,7 +12,6 @@
         </ul>
         <div>
           <autosearch/>
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
           </div>
       </div>
       </nav>
@@ -39,5 +38,13 @@ export default {
 h1 {
  position: relative;
  text-align: center;
+}
+#app ul li{
+  padding-left:10%;
+  padding-right:10%;
+  width:100%;
+}
+#app ul{
+  width: 80%;
 }
 </style>
