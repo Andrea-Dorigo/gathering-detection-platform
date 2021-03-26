@@ -1,4 +1,4 @@
-package com.webapp.spring.data.mongodb;
+package com.webapp.data.mongodb;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
