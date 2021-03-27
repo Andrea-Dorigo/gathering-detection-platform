@@ -48,3 +48,9 @@ DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweatherma
 DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.309812&lon=18.410428&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 459
 DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
 DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.0262&lon=14.5737&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 456
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=41.899139&lon=12.473311&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 465
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=41.899139&lon=12.473311&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 464
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=41.899139&lon=12.473311&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 465
