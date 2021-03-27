@@ -5,7 +5,7 @@ class Elements {
         return http.get("/coordinate");
     }
     getCities() {
-        return http.get('/city');
+        return http.get('/testCity');
     }
 }
 

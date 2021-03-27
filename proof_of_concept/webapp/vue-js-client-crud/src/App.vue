@@ -2,7 +2,7 @@
   <div id="app">
     <div id="noFooter">
       <h1>GDP: Gathering Detection Platform</h1>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">Home</li>
@@ -12,12 +12,12 @@
           <li class="nav-item dropdown">link alle città</li>
         </ul>
       </div>
-      </nav>
-      <div>
+        <div>
           <autosearch/>
           </div>
-    <mainPage/>
-  </div>
+      </nav>
+        <mainPage/>
+      </div>
 
     <footer class="bg-light text-center text-lg-start  mt-auto">
         <div class="container p-4">
@@ -96,5 +96,12 @@ footer{
   display: block;
 }
 
+#navbar {
+  width: 80%;
+  margin-right: 0;
+}
 
+#navsearch{
+  display: initial;
+}
 </style>
