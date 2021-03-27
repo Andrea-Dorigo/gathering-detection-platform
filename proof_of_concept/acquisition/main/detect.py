@@ -65,69 +65,94 @@ while True :
     for webcam in json_data["webcams"]:
 
         # ottieni la temperatura e il meteo al tempo dell'acquisizione;
-        [temperature, weather_description] = get_current_weather(webcam["latitude"], webcam["longitude"])
+        try:
+            [temperature, weather_description] = get_current_weather(webcam["latitude"], webcam["longitude"])
+        except:
+            print('Exception')
+            logging.info('Eccezione ore: ' + str(datetime.now()) )
+            logging.error(sys.exc_info())
+            continue
 
         #imposta l'orario e la data di acquisizione
         current_time = datetime.now()
         current_date = datetime.now()
 
-        try:
-
             # scarica il file m3u8 contenente i link ai video
-            m3u8_file_path = PATH_M3U8 + webcam["location"] + ".m3u8"
+        m3u8_file_path = PATH_M3U8 + webcam["location"] + ".m3u8"
+        try:
             urllib.request.urlretrieve(webcam["link"], m3u8_file_path )
-
-            # scorri le righe del file m3u8 fino a che non trovi un link al video .ts e salvalo in video_link
-            # si ferma al primo link perche' ci basta meno di un video al minuto
-            for line in open(m3u8_file_path, "r").readlines():
-                if line[:-1].endswith('.ts'):
-                    video_link = line[:-1]
-                    if not line[:-1].startswith('https'):
-                        video_link = webcam["url_prefix"] + line[:-1]
-                    print(video_link)
-                    break
-
-            # scarica il video dal link appena ricavato
-            urllib.request.urlretrieve(video_link, PATH_VIDEOS+"Video" + ".ts")
-
-            # estrai un frame dal video
-            #exec(open('get_frames.py').read())
-            get_frames(PATH_VIDEOS, PATH_FRAMES)
-            if get_frames(PATH_VIDEOS, PATH_FRAMES):
-                print("Acquisizione Frame completata")
-            # dividi il frame in 6 per un migliore affidabilita' nel riconoscimento
-            #exec(open('cut_frame.py').read())
-            cut_frames(PATH_FRAMES, PATH_FRAMES_PIECES)
-            if cut_frames(PATH_FRAMES, PATH_FRAMES_PIECES):
-                print("Taglio dei frame in foto completata")
-
-            # conta le persone in ogni sottoframe
-            persone_contate = 0
-            for file in glob.glob(PATH_FRAMES_PIECES + "*.png"):
-                result = subprocess.run(['python3' , 'yolo.py' , '--image' , PATH_FRAMES_PIECES + file], capture_output=True)
-                persone_contate += result.stdout.decode().count('person')
-                print("Persone contate fino ad ora: " + str(persone_contate))
-
-            print("Ci sono " + str(persone_contate) + " in totale")
-            # inserisci i risultati nel db
-            detection = Detection(
-                id_webcam = webcam["id_webcam"],
-                city = webcam["city"],
-                location = webcam["location"],
-                latitude = webcam["latitude"],
-                longitude = webcam["longitude"],
-                numPeople = persone_contate,
-                date = current_date,
-                time = current_time,
-                type = 0,
-                weather_description = weather_description,
-                temperature = temperature,
-                day_of_week =  datetime.now().date().weekday()
-                ).save()
         except:
             print('Exception')
             logging.info('Eccezione ore: ' + str(datetime.now()) )
             logging.error(sys.exc_info())
+            continue
+
+            # scorri le righe del file m3u8 fino a che non trovi un link al video .ts e salvalo in video_link
+            # si ferma al primo link perche' ci basta meno di un video al minuto
+        for line in open(m3u8_file_path, "r").readlines():
+            if line[:-1].endswith('.ts'):
+                video_link = line[:-1]
+                if not line[:-1].startswith('https'):
+                    video_link = webcam["url_prefix"] + line[:-1]
+                print(video_link)
+                break
+
+            # scarica il video dal link appena ricavato
+        try:
+            urllib.request.urlretrieve(video_link, PATH_VIDEOS+"Video" + ".ts")
+        except:
+            print('Exception')
+            logging.info('Eccezione ore: ' + str(datetime.now()) )
+            logging.error(sys.exc_info())
+            continue
+
+            # estrai un frame dal video
+            #exec(open('get_frames.py').read())
+        try:
+            get_frames(PATH_VIDEOS, PATH_FRAMES)
+            if get_frames(PATH_VIDEOS, PATH_FRAMES):
+                print("Acquisizione Frame completata")
+        except:
+            print('Exception')
+            logging.info('Eccezione ore: ' + str(datetime.now()) )
+            logging.error(sys.exc_info())
+            continue
+            # dividi il frame in 6 per un migliore affidabilita' nel riconoscimento
+            #exec(open('cut_frame.py').read())
+        try:
+            cut_frames(PATH_FRAMES, PATH_FRAMES_PIECES)
+            if cut_frames(PATH_FRAMES, PATH_FRAMES_PIECES):
+                print("Taglio dei frame in foto completata")
+
+        except:
+            print('Exception')
+            logging.info('Eccezione ore: ' + str(datetime.now()) )
+            logging.error(sys.exc_info())
+            continue
+
+        # conta le persone in ogni sottoframe
+        persone_contate = 0
+        for file in glob.glob(PATH_FRAMES_PIECES + "*.png"):
+            result = subprocess.run(['python3' , 'yolo.py' , '--image' , PATH_FRAMES_PIECES + file], capture_output=True)
+            persone_contate += result.stdout.decode().count('person')
+            print("Persone contate fino ad ora: " + str(persone_contate))
+
+        print("Ci sono " + str(persone_contate) + " in totale")
+            # inserisci i risultati nel db
+        detection = Detection(
+            id_webcam = webcam["id_webcam"],
+            city = webcam["city"],
+            location = webcam["location"],
+            latitude = webcam["latitude"],
+            longitude = webcam["longitude"],
+            numPeople = persone_contate,
+            date = current_date,
+            time = current_time,
+            type = 0,
+            weather_description = weather_description,
+            temperature = temperature,
+            day_of_week =  datetime.now().date().weekday()
+            ).save()
             #time.sleep((t_end - datetime.now()).total_seconds())
 
     #loops = loops + 1

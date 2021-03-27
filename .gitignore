@@ -23,3 +23,4 @@
 /proof_of_concept/acquisition/videos/*.ts
 /proof_of_concept/acquisition/frames_pieces/*.png
 /proof_of_concept/acquisition/main/__pycache__
+/proof_of_concept/acquisition/main/test.log
