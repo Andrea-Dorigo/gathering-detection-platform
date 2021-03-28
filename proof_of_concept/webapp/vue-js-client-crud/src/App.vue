@@ -85,7 +85,7 @@ h1 {
   width: 80%;
 }
 footer{
-  bottom: 0em;   
+  bottom: 0em;
   width: 100%;
   margin-bottom: 0em;
 }
