@@ -37,10 +37,12 @@ export default {
       });
       }
       })
+      var coo = Elements.getCoo();
+      console.log(coo);
     },
       itemSelected: function(index){
         //da completare quando la mappa funziona
-         var id = this.suggestiondata[index].id; 
+         var id = this.suggestiondata[index].id;
          var name = this.suggestiondata[index].name;
 
          console.log(id);

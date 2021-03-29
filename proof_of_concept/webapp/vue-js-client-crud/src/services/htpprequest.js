@@ -7,6 +7,9 @@ class Elements {
     getCities() {
         return http.get('/city');
     }
+    getCoo() {
+        return http.get("/coo");
+    }
 }
 
 export default new Elements();
