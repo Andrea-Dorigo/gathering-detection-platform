@@ -45,7 +45,7 @@ public class indexController {
       }
 	String json = new Gson().toJson(detec);
       return new ResponseEntity<>(detec, HttpStatus.OK);
-	
+
 	}catch (Exception e) {
       return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
     }
@@ -53,6 +53,6 @@ public class indexController {
 
 @GetMapping("/city")
 	public ResponseEntity<List<String>> fetchCity() {
-	return new ResponseEntity<>(coordinateRepository.getAllCity(),HttpStatus.OK);
+	return new ResponseEntity<>(coordinateRepository.getCities(),HttpStatus.OK);
  }
 }
