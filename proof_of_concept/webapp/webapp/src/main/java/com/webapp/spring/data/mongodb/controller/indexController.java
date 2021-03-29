@@ -56,8 +56,8 @@ public class indexController {
 	return new ResponseEntity<>(coordinateRepository.getCities(),HttpStatus.OK);
  }
 
-@GetMapping("/coo")
-	public ResponseEntity<List<Double>> fetchCoo() {
-	return new ResponseEntity<>(coordinateRepository.getLatLngs("Krk"),HttpStatus.OK);
+@GetMapping("/coo/{city}")
+	public ResponseEntity<List<List<Double>>> fetchCoo(@PathVariable("city") String city) {
+	return new ResponseEntity<>(coordinateRepository.getLatLngs(city),HttpStatus.OK);
  }
 }

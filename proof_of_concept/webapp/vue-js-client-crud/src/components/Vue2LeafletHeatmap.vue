@@ -112,6 +112,9 @@ export default {
     addLatLng(value) {
       this.mapObject.addLatLng(value);
     }
+  },
+  created() {
+    this.$root.$refs.LHeatmap_component = this;
   }
 };
 </script>

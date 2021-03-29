@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="autosearch">
       <input type="text" placeholder="Cerca la città.." v-model="searchText" @keyup="retireveCities" autocomplete="on"/>
       <div class="suggestion_list" v-if="searchText.length">
         <ul class="list_group">
@@ -56,3 +56,10 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+#autosearch {
+  width: 30%;
+  display: inline !important;
+}
+</style>

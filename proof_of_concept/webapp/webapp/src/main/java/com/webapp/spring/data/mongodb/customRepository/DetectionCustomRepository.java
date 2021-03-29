@@ -3,5 +3,5 @@ import java.util.List;
 
 public interface DetectionCustomRepository {
 	public List<String> getCities();
-	public List<Double> getLatLngs(String city);
+	public List<List<Double>> getLatLngs(String city);
 }

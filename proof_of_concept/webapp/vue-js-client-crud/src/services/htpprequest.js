@@ -5,10 +5,10 @@ class Elements {
         return http.get("/coordinate");
     }
     getCities() {
-        return http.get('/city');
+        return http.get("/city");
     }
-    getCoo() {
-        return http.get("/coo");
+    getCoo(city) {
+        return http.get(`/coo/${city}`);
     }
 }
 

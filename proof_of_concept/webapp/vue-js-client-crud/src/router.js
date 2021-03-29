@@ -6,18 +6,17 @@ import mainPage from './components/mainPage.vue'
 
 Vue.use(Router);
 
+
 export default new Router({
   mode: "history",
   routes: [
     {
       path: "/",
-      alias: "/mainPage",
       name: "mainPage",
       component: mainPage,
     },
     {
-      path: "/",
-      alias: "/chiSiamo",
+      path: "/chiSiamo",
       name: "chiSiamo",
       component: chiSiamo,
     }

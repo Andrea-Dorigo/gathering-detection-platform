@@ -3,11 +3,10 @@
 <div id="things">
   <div id="sb">
   <slider/>
-  <!-- <LHeatmap/> -->
-  <!--button type="button" value="Reload Map">Reload map</!--button-->
+   <button type="button" value="Reload Map" @click="getRetrieveCoordinate">Reload map</button>
   </div>
   <div id="mc">
-    <BasicExample />
+    <BasicExample id="map"/>
     <div id="calendar">
    <Datepicker :inline="true" />
   </div>
@@ -20,7 +19,6 @@
 
 import slider from './slider.vue'
 import Datepicker from 'vuejs-datepicker'
-import Elements from '../services/htpprequest'
 import BasicExample from "./BasicExample.vue";
 
 
@@ -38,36 +36,39 @@ export default {
     }
   },
   methods: {
-    retrieveCoordinate : function() {
-      console.log("sono nel retrieve");
-      Elements.getCoordinate().then(res => {
-        console.log(res.data);
-        this.coords=res.data;
-        console.log(this.coords);
-        this.loadMap(this.coords);
-      })
-    },
-  }
+    getRetrieveCoordinate: function(){
+      this.$root.$refs.basicExample_component.retrieveCoordinate();
+    }
+  },
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scope>
+slider{
+  width: 80%;
+}
 #sb {
-  display: inline;
+  display: flex;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom:10px;
+}
+#sb button {
+  width: 20%;
+  float:right;
 }
 #map {
   position: absolute;
-  width: 800px;
+  width: 1200px;
   height: 600px;
-  float: right;
+  float: left;
 }
 #calendar{
   position: relative;
   float: right;
 }
 #mc{
-  width: 1400px;
-  position: relative;
+  display: inline;
+  width:100%;
 }
 </style>

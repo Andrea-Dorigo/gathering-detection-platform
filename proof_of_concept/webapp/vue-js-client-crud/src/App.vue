@@ -1,22 +1,26 @@
 <template>
-  <div id="app">
+  <div id="barAndFooter">
     <div id="noFooter">
       <h1>GDP: Gathering Detection Platform</h1>
+      <div id="navsearch">
       <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">Home</li>
+          <li class="nav-item active">
+            <router-link to="/">Home</router-link>
+          </li>
           <li class="nav-item">
             <router-link to="/chiSiamo">Chi siamo</router-link>
           </li>
           <li class="nav-item dropdown">link alle città</li>
         </ul>
       </div>
-        <div>
+      </nav>
+      <div>
           <autosearch/>
           </div>
-      </nav>
-        <mainPage/>
+      </div>
+       <router-view />
       </div>
 
     <footer class="bg-light text-center text-lg-start  mt-auto">
@@ -59,13 +63,11 @@
 </template>
 
 <script>
-import mainPage from './components/mainPage.vue'
 import autosearch from './components/autocompleteSearch.vue'
 
 export default {
   name: 'app',
   components: {
-    mainPage,
     autosearch
   }
 }
@@ -76,12 +78,12 @@ h1 {
  position: relative;
  text-align: center;
 }
-#app ul li{
+#barAndFooter ul li{
   padding-left:10%;
   padding-right:10%;
   width:100%;
 }
-#app ul{
+#barAndFooter ul{
   width: 80%;
 }
 footer{
@@ -97,11 +99,10 @@ footer{
 }
 
 #navbar {
-  width: 80%;
-  margin-right: 0;
+  width: 70%;
 }
 
 #navsearch{
-  display: initial;
+  display: flex;
 }
 </style>
