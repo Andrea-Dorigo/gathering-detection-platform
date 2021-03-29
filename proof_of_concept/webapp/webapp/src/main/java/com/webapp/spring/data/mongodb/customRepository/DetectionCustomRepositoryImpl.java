@@ -12,14 +12,20 @@ public class DetectionCustomRepositoryImpl implements DetectionCustomRepository 
 	@Autowired
 	MongoTemplate mongoTemplate;
 	 
-	public List<String> getAllCity() {
-		Criteria criteria = new Criteria();
-		criteria.where("id").is("1");
-		Query query = new Query();
-		query.addCriteria(criteria);
-		System.out.println(mongoTemplate.findDistinct("city", Detection.class, String.class));
+	public List<String> getCities() {
 		
-		return mongoTemplate.findDistinct(query, "city", Detection.class, String.class);
+		return mongoTemplate.findDistinct("city", Detection.class, String.class);
 	}
+
+	public List<String> getLatLngs(String city){
+		Criteria criteria = new Criteria();
+		criteria.where("city").is(city);
+		Query query = new Query();
+        query.addCriteria(criteria);
+		query.fields().include("latitude", "longitude").exclude("id", "id_webcam", "city");
+        return mongoTemplate.findDistinct(query, ("latitude", "longitude"), Detection.class, String.class);
+	}
+	
+	
 
 }

@@ -50,29 +50,8 @@ public class indexController {
       return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }
-@GetMapping("/city")
-	public ResponseEntity<List<String>>getCity(@RequestParam(required = false) String id) {try {
-	List<Detection> detec = new ArrayList<Detection>();
-	if (id == null)
-        coordinateRepository.findAll().forEach(detec::add);
-      else
-   	coordinateRepository.findByIdContaining(id).forEach(detec::add);
 
-      if (detec.isEmpty()) {
-        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-      }
-	String json = new Gson().toJson(detec);
-	List<String> cities = new ArrayList<String>();
-	for(int i=0; i<detec.size();i++) {
-		cities.add(detec.get(i).getCity());
-	}
-    return new ResponseEntity<>(cities, HttpStatus.OK);
-	
-	}catch (Exception e) {
-      return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
-    }
-}
-	@GetMapping("/testCity")
+@GetMapping("/city")
 	public ResponseEntity<List<String>> fetchCity() {
 	return new ResponseEntity<>(coordinateRepository.getAllCity(),HttpStatus.OK);
  }

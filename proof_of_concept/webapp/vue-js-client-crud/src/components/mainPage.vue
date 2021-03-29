@@ -4,12 +4,11 @@
   <div id="sb">
   <slider/>
   <!-- <LHeatmap/> -->
-  <BasicExample />
-  <button type="button" value="Reload Map">Reload map</button>
+  <!--button type="button" value="Reload Map">Reload map</!--button-->
   </div>
   <div id="mc">
-  <!-- <GoogleMap /> -->
-  <div id="calendar">
+    <BasicExample />
+    <div id="calendar">
    <Datepicker :inline="true" />
   </div>
   </div>
@@ -24,9 +23,6 @@ import Datepicker from 'vuejs-datepicker'
 import Elements from '../services/htpprequest'
 import BasicExample from "./BasicExample.vue";
 
-// import GoogleMap from './googleMap.vue'
-
-// import LHeatmap from './Vue2LeafletHeatmap.vue'
 
 export default {
   name: 'things',
@@ -34,7 +30,6 @@ export default {
     Datepicker,
     slider,
     BasicExample
-    // LHeatmap
   },
   data() {
     var coords= [];
@@ -52,10 +47,6 @@ export default {
         this.loadMap(this.coords);
       })
     },
-    mounted() {
-        this.$el="map";
-        this.loadMap();
-    }
   }
 }
 </script>
