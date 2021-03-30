@@ -11,7 +11,6 @@ import { findRealParent, propsBinder } from "vue2-leaflet";
 import { DomEvent } from "leaflet";
 import "leaflet.heat";
 
-
 const props = {
   latLng: {
     type: Array,
@@ -48,6 +47,11 @@ const props = {
     type: Boolean,
     custom: true,
     default: true
+  },
+  center: {
+    type: Array,
+    default:() =>[41.899139, 12.473311],
+    custom: true
   }
 };
 export default {
@@ -111,6 +115,31 @@ export default {
     },
     addLatLng(value) {
       this.mapObject.addLatLng(value);
+    },
+    setHeatLayer(value) {
+      const options = {};
+    if (this.minOpacity) {
+      options.minOpacity = this.minOpacity;
+    }
+    if (this.maxZoom) {
+      options.maxZoom = this.maxZoom;
+    }
+    if (this.radius) {
+      options.radius = this.radius;
+    }
+    if (this.blur) {
+      options.blur = this.blur;
+    }
+    if (this.max) {
+      options.max = this.max;
+    }
+      this.parentContainer.removeLayer(this);
+      this.mapObject = L.heatLayer(value,options);
+      this.parentContainer.addLayer(this, !this.visible);
+      //this.$emit('update:center', this.latlngs);
+      //this.$root.$refs.basicExample_component.centerUpdated(value);
+      //L.setView(this.latlngs,10);
+      console.log(this.center);
     }
   },
   created() {

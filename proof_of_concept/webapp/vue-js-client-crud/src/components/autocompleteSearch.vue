@@ -41,15 +41,11 @@ export default {
       console.log(coo);
     },
       itemSelected: function(index){
-        //da completare quando la mappa funziona
-         var id = this.suggestiondata[index].id;
-         var name = this.suggestiondata[index].name;
-
-         console.log(id);
-         console.log(name);
-
-         this.searchText = name;
-         this.suggestiondata = [];
+        var name = this.suggestiondata[index];
+        Elements.getCoo(name).then(res => {
+        this.latlngs=res.data;
+        this.$root.$refs.LHeatmap_component.setHeatLayer(this.latlngs);
+      })
 
       }
 
@@ -61,5 +57,12 @@ export default {
 #autosearch {
   width: 30%;
   display: inline !important;
+}
+#autosearch ul li {
+  list-style-type: none;
+  color: blue;
+}
+#autosearch ul li:hover {
+  cursor: pointer;
 }
 </style>
