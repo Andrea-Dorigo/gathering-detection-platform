@@ -136,10 +136,6 @@ export default {
       this.parentContainer.removeLayer(this);
       this.mapObject = L.heatLayer(value,options);
       this.parentContainer.addLayer(this, !this.visible);
-      //this.$emit('update:center', this.latlngs);
-      //this.$root.$refs.basicExample_component.centerUpdated(value);
-      //L.setView(this.latlngs,10);
-      console.log(this.center);
     }
   },
   created() {

@@ -1,6 +1,6 @@
 <template>
     <div class="basic-example">
-        <l-map :zoom="10" :center="center">
+        <l-map :zoom="10" :center="center" >
             <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></l-tile-layer>
             <Vue2LeafletHeatmap   :lat-lng="latlngs" :radius="60" :min-opacity=".75" :max-zoom="18" :min-zoom="16" :blur="60"></Vue2LeafletHeatmap>
         </l-map>
@@ -27,15 +27,17 @@ export default {
     };
   },
   methods: {
-    retrieveCoordinate : function() {
-      Elements.getCoo("Roma").then(res => {
-        console.log(res.data);
+  retrieveCoordinate : function() {
+    Elements.getCoo("Roma").then(res => {
         this.latlngs=res.data;
         this.$root.$refs.LHeatmap_component.setHeatLayer(this.latlngs);
       })
     },
+    setCenter: function(value) {
+      this.center= value;
+    }
   },
-   created() {
+  created() {
     this.$root.$refs.basicExample_component = this;
   }
 }

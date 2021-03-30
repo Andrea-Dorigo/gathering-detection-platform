@@ -30,21 +30,20 @@ export default {
       this.suggestiondata = [];
       this.cit=res.data;
       place=this.cit;
-      console.log(this.cit);
       if(this.searchText!='') {
         this.suggestiondata = place.filter(place => {
         return place.toLowerCase().includes(this.searchText.toLowerCase())
       });
       }
       })
-      var coo = Elements.getCoo();
-      console.log(coo);
+      //var coo = Elements.getCoo();
     },
-      itemSelected: function(index){
-        var name = this.suggestiondata[index];
-        Elements.getCoo(name).then(res => {
+    itemSelected: function(index){
+      var name = this.suggestiondata[index];
+      Elements.getCoo(name).then(res => {
         this.latlngs=res.data;
         this.$root.$refs.LHeatmap_component.setHeatLayer(this.latlngs);
+        this.$root.$refs.basicExample_component.setCenter(res.data[0]);
       })
 
       }
