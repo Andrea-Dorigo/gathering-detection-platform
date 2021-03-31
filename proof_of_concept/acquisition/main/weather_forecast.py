@@ -6,81 +6,48 @@
 # import required modules
 import requests, json
 from datetime import datetime
+from mongoengine import *
+
+connect("GDP-test", host = "localhost", port = 27017)
+
+class Forecast(Document):
+    latitude = FloatField(required=True)
+    longitude = FloatField(required=True)
+    datetime = DateTimeField(required=True)
+    weather_description = StringField()
+    temperature = FloatField()
 
 
-def get_weather_forecast(latitude,longitude):
-    # Enter your API key here
-    api_key = "550617cb3af649e1d6729a3f78b24e17"
+# OpenWeather API key
+API_KEY = "550617cb3af649e1d6729a3f78b24e17"
 
-    # base_url variable to store url
-    base_url = "https://api.openweathermap.org/data/2.5/onecall?"
+# Base OpenWeatherMap api url
+BASE_URL = "https://api.openweathermap.org/data/2.5/onecall?"
 
-    # https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}
+def get_hourly_forecast(latitude,longitude):
 
-    # Give city name
-    # city_name = "Rome"
+    # url to request
+    complete_url = BASE_URL + "lat=" + str(latitude) + "&lon=" + str(longitude) + "&exclude=current,minutely,daily,alert" + "&units=metric" + "&appid=" + API_KEY
 
-    # lat = "41.899139"
-    # lon = "12.473311"
-
-    # complete_url variable to store
-    # complete url address
-    complete_url = base_url + "lat=" + str(latitude) + "&lon=" + str(longitude) + "&exclude=current,minutely,daily,alert" + "&units=metric" + "&appid=" + api_key
-
-
-    # get method of requests module
-    # return response object
-    response = requests.get(complete_url)
+    # Api request to get weather data, save it into a json
+    response = requests.get(complete_url).json()
     # print(response)
-    # json method of response object
-    # convert json format data into
-    # python format data
-    x = response.json()
-    #print(x)
 
-    # Now x contains list of nested dictionaries
-    # Check the value of "cod" key is equal 550617cb3af649e1d6729a3f78b24e17
-    # "404", means city is found otherwise,
-    # city is not found
+    for i in range(48):
+        # get the complete forecast for hour i
+        y = response["hourly"][i]
+        # print(y)
 
-    # store the value of "main"
-    # key in variable y
+        # get temperature, forecast hour, weather_description
+        temperature = y["temp"]
+        forecast_hour = datetime.fromtimestamp(y["dt"])
+        weather_description = y["weather"][0]["description"]
 
-    y = x["hourly"][1]
-    print(y)
-    # store the value corresponding
-    # to the "temp" key of y
-    temperature = y["temp"]
-    hour = datetime.fromtimestamp(y["dt"])
-    # >>> datetime.fromtimestamp(1485714600).strftime("%A, %B %d, %Y %I:%M:%S")
+        # print values for that hour
+        print(" temperature = " + str(temperature) +
+              "\n forecast_hour = " + str(forecast_hour) +
+              "\n description = " + str(weather_description))
 
 
-    # store the value corresponding
-    # to the "pressure" key of y
-    # current_pressure = y["pressure"]
-    #
-    # # store the value corresponding
-    # # to the "humidity" key of y
-    # current_humidiy = y["humidity"]
 
-    # store the value of "weather"
-    # key in variable z
-    #z = x["weather"]
-
-    # store the value corresponding
-    # to the "description" key at
-    # the 0th index of z
-    #weather_description = z[0]["description"]
-
-    # print following values
-    print(" Temperature (in Celsius unit) = " +
-                    str(temperature) +
-          # "\n atmospheric pressure (in hPa unit) = " +
-          #           str(current_pressure) +
-          # "\n humidity (in percentage) = " +
-          #           str(current_humidiy) +
-          "\n hour = " +
-                    str(hour))
-    #return [current_temperature, weather_description]
-
-get_weather_forecast(41.899139,12.473311)
+get_hourly_forecast(41.899139,12.473311)
