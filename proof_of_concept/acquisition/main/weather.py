@@ -31,7 +31,7 @@ def get_current_weather(latitude,longitude):
     # convert json format data into
     # python format data
     x = response.json()
-    print(x)
+    # print(x)
 
     # Now x contains list of nested dictionaries
     # Check the value of "cod" key is equal 550617cb3af649e1d6729a3f78b24e17
@@ -78,4 +78,4 @@ def get_current_weather(latitude,longitude):
     else:
         print(" Request didn't return 200 ")
 
-get_current_weather(41.899139,12.473311)
+# get_current_weather(41.899139,12.473311)
