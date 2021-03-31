@@ -1,8 +1,11 @@
 <template>
     <div class="basic-example">
-        <l-map :zoom="10" :center="center" >
+      <div>
+        <span>Zoom: {{ zoom }}</span>
+      </div>
+        <l-map :zoom="zoom" :center="center" @update:center="centerUpdated" @update:zoom="zoomUpdated" :max-zoom="18" :min-zoom="15" >
             <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></l-tile-layer>
-            <Vue2LeafletHeatmap   :lat-lng="latlngs" :radius="60" :min-opacity=".75" :max-zoom="18" :min-zoom="16" :blur="60"></Vue2LeafletHeatmap>
+            <Vue2LeafletHeatmap   :lat-lng="latlngs" :radius="60" :min-opacity=".75" :blur="60"></Vue2LeafletHeatmap>
         </l-map>
     </div>
 </template>
@@ -23,6 +26,7 @@ export default {
     return {
       latlngs: [[41.899139, 12.473311]],
       center: [41.899139, 12.473311],
+      zoom: 15,
     };
   },
   methods: {
@@ -30,16 +34,22 @@ export default {
       var city = this.$root.$refs.autocompleteSearch_component.getNameCity();
       Elements.getCoo(city).then(res => {
           this.latlngs=res.data;
-          this.setCenter(res.data[0]);
           this.$root.$refs.LHeatmap_component.setHeatLayer(this.latlngs);
+          this.setCenter(res.data[0]);
+          this.$root.$refs.slider_component.setCurTime();
           console.log(res.data[0]);
         })
       },
     setCenter: function(value) {
-        console.log("entro nel centro")
         console.log(value);
         this.center= value;
-      }
+      },
+    centerUpdated: function(center) {
+      this.center = center;
+    },
+    zoomUpdated: function(zoom) {
+      this.zoom = zoom;
+    },
   },
   created() {
     this.$root.$refs.basicExample_component = this;

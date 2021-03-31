@@ -7,25 +7,28 @@
 
 <script>
 import TimeSlider from 'times-slider'
-import {getTime} from "./myfunctions.js"
 
 export default{
-  //da completare quando funziona la mappa
+  name: 'slider',
   components: {
       TimeSlider
     },
     data: () => ({
         curTime: new Date(Date.now()).toTimeString().slice(0,5)
     }), 
-     mounted: function () {
-    },
     methods: {
     shiftTime: function(a) {
       this.curTime = a;
     },
-    getTimeSlider: function() {
-            getTime();
-        }
+    setCurTime: function() {
+      console.log(this.curTime);
+      console.log("entro?")
+      this.curTime =  new Date(Date.now()).toTimeString().slice(0,5);
+      console.log(this.curTime);
+    },
+    },
+    created() {
+       this.$root.$refs.slider_component = this;
     }
 }
 </script>
