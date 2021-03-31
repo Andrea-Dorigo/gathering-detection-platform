@@ -12,7 +12,6 @@ import { LMap, LTileLayer } from "vue2-leaflet";
 import Vue2LeafletHeatmap from './Vue2LeafletHeatmap.vue';
 import Elements from '../services/htpprequest';
 
-
 export default {
   name: 'basicExample',
   components: {
@@ -27,15 +26,20 @@ export default {
     };
   },
   methods: {
-  retrieveCoordinate : function() {
-    Elements.getCoo("Roma").then(res => {
-        this.latlngs=res.data;
-        this.$root.$refs.LHeatmap_component.setHeatLayer(this.latlngs);
-      })
-    },
+    retrieveCoordinate : function() {
+      var city = this.$root.$refs.autocompleteSearch_component.getNameCity();
+      Elements.getCoo(city).then(res => {
+          this.latlngs=res.data;
+          this.setCenter(res.data[0]);
+          this.$root.$refs.LHeatmap_component.setHeatLayer(this.latlngs);
+          console.log(res.data[0]);
+        })
+      },
     setCenter: function(value) {
-      this.center= value;
-    }
+        console.log("entro nel centro")
+        console.log(value);
+        this.center= value;
+      }
   },
   created() {
     this.$root.$refs.basicExample_component = this;

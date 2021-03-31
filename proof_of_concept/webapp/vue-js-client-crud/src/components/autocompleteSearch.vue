@@ -17,10 +17,12 @@ export default {
     var cit= [];
     var searchText='';
     var suggestiondata=[];
+    var name='Roma';
     return {
       cit,
       searchText,
       suggestiondata,
+      name,
     }
   },
     methods:{
@@ -39,16 +41,20 @@ export default {
       //var coo = Elements.getCoo();
     },
     itemSelected: function(index){
-      var name = this.suggestiondata[index];
-      Elements.getCoo(name).then(res => {
+      this.name = this.suggestiondata[index];
+      Elements.getCoo(this.name).then(res => {
         this.latlngs=res.data;
         this.$root.$refs.LHeatmap_component.setHeatLayer(this.latlngs);
         this.$root.$refs.basicExample_component.setCenter(res.data[0]);
       })
-
-      }
-
+    },
+    getNameCity : function() {
+      return this.name;
     }
+  },
+  created() {
+    this.$root.$refs.autocompleteSearch_component = this;
+  }
 }
 </script>
 

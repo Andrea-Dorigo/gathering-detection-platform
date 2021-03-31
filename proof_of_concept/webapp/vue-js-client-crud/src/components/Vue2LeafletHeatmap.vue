@@ -11,6 +11,7 @@ import { findRealParent, propsBinder } from "vue2-leaflet";
 import { DomEvent } from "leaflet";
 import "leaflet.heat";
 
+
 const props = {
   latLng: {
     type: Array,

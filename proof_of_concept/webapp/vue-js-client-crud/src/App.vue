@@ -17,8 +17,8 @@
       </div>
       </nav>
       <div>
-          <autosearch/>
-          </div>
+        <autosearch/>
+      </div>
       </div>
        <router-view />
       </div>
