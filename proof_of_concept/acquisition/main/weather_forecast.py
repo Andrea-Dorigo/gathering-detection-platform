@@ -27,7 +27,11 @@ BASE_URL = "https://api.openweathermap.org/data/2.5/onecall?"
 def get_hourly_forecast(latitude,longitude):
 
     # url to request
-    complete_url = BASE_URL + "lat=" + str(latitude) + "&lon=" + str(longitude) + "&exclude=current,minutely,daily,alert" + "&units=metric" + "&appid=" + API_KEY
+    complete_url = ( BASE_URL +
+                    "lat=" + str(latitude) +
+                    "&lon=" + str(longitude) + "&exclude=current,minutely,daily,alert" +
+                    "&units=metric" +
+                    "&appid=" + API_KEY)
 
     # Api request to get weather data, save it into a json
     response = requests.get(complete_url).json()
