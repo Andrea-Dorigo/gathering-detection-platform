@@ -8,7 +8,7 @@ import requests, json
 from datetime import datetime
 
 
-def get_future_weather(latitude,longitude):
+def get_weather_forecast(latitude,longitude):
     # Enter your API key here
     api_key = "550617cb3af649e1d6729a3f78b24e17"
 
@@ -83,4 +83,4 @@ def get_future_weather(latitude,longitude):
                     str(hour))
     #return [current_temperature, weather_description]
 
-get_future_weather(41.899139,12.473311)
+get_weather_forecast(41.899139,12.473311)
