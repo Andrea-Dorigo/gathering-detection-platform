@@ -1,3 +1,12 @@
+<!--
+  Project Name: GDP- Gathering Detection Platform
+  File Name: autocompleteSearch.vue
+  Author: Andrea Dorigo
+  Creation Date: 2021-03-28
+  Summary: the file containes the necessary code to be able to implements the heat map.
+  Last change date: 2021-03-31
+-->
+
 <template>
   <div id="autosearch">
       <input type="text" placeholder="Cerca la città.." v-model="searchText" @keyup="retireveCities" autocomplete="on"/>
@@ -11,6 +20,7 @@
 </template>
 
 <script>
+
 import Elements from '../services/htpprequest'
 export default {
   data() {

@@ -1,3 +1,12 @@
+<!--
+  Project Name: GDP- Gathering Detection Platform
+  File Name: autocompleteSearch.vue
+  Author: Andrea Dorigo
+  Creation Date: 2021-03-28
+  Summary: the file containes the code related to implementation of the heat map. 
+  Last change date: 2021-03-31
+-->
+
 <template>
     <div class="basic-example">
       <div>
@@ -37,11 +46,9 @@ export default {
           this.$root.$refs.LHeatmap_component.setHeatLayer(this.latlngs);
           this.setCenter(res.data[0]);
           this.$root.$refs.slider_component.setCurTime();
-          console.log(res.data[0]);
         })
       },
     setCenter: function(value) {
-        console.log(value);
         this.center= value;
       },
     centerUpdated: function(center) {

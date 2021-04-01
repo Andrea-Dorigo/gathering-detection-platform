@@ -1,3 +1,12 @@
+<!--
+  Project Name: GDP- Gathering Detection Platform
+  File Name: autocompleteSearch.vue
+  Author: Margherita Mitillo
+  Creation Date: 2021-03-24
+  Summary: the file containes the code related to all the components presents in the webapp.
+  Last change date: 2021-04-01
+-->
+
 <template>
 
 <div id="things">
@@ -8,7 +17,7 @@
   <div id="mc">
     <BasicExample id="map"/>
     <div id="calendar">
-   <Datepicker :inline="true" />
+   <Datepicker :inline="true" v-model="picker" @dayclick='dayClicked'/>
   </div>
   </div>
 	</div>
@@ -31,14 +40,23 @@ export default {
   },
   data() {
     var coords= [];
+    var picker= new Date().toISOString().substr(0, 10);
     return {
       coords,
+      picker,
     }
   },
   methods: {
     getRetrieveCoordinate: function(){
       this.$root.$refs.basicExample_component.retrieveCoordinate();
-    }
+      this.picker = new Date().toISOString().substr(0, 10);
+    },
+    /*dayClicked(date){
+      
+      console.log(date);
+      this.picker = date.getTime();
+      console.log(this.picker);
+    }*/
   },
 }
 </script>

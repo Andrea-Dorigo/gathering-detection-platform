@@ -1,3 +1,12 @@
+<!--
+  Project Name: GDP- Gathering Detection Platform
+  File Name: autocompleteSearch.vue
+  Author: Margherita Mitillo
+  Creation Date: 2021-03-25
+  Summary: the file containes the code related to the search bar for the city
+  Last change date: 2021-03-31
+-->
+
 <template>
   <div style="display: none;">
     <slot v-if="ready"></slot>

@@ -1,3 +1,12 @@
+<!--
+  Project Name: GDP- Gathering Detection Platform
+  File Name: slider.vue
+  Author: Margherita Mitillo
+  Creation Date: 2021-03-24
+  Summary: the file containes the code related to the time slider.
+  Last change date: 2021-03-31
+-->
+
 <template>
     <div id="sliderdiv">
     <time-slider  color-main="navy"  color='snow' v-on:current-time="shiftTime($event)" style="width:80%"></time-slider>
@@ -21,10 +30,7 @@ export default{
       this.curTime = a;
     },
     setCurTime: function() {
-      console.log(this.curTime);
-      console.log("entro?")
       this.curTime =  new Date(Date.now()).toTimeString().slice(0,5);
-      console.log(this.curTime);
     },
     },
     created() {
