@@ -17,7 +17,7 @@
   <div id="mc">
     <BasicExample id="map"/>
     <div id="calendar">
-   <Datepicker :inline="true" v-model="picker" @dayclick='dayClicked'/>
+   <Datepicker :inline="true" v-model="picker" v-on:selected="setDate" format="yyyy-MM-dd"/>
   </div>
   </div>
 	</div>
@@ -51,13 +51,16 @@ export default {
       this.$root.$refs.basicExample_component.retrieveCoordinate();
       this.picker = new Date().toISOString().substr(0, 10);
     },
-    /*dayClicked(date){
-      
-      console.log(date);
-      this.picker = date.getTime();
+    setDate: function(date){
+      console.log("ci entro?")
       console.log(this.picker);
-    }*/
-  },
+      //Necessario cambiare formato a picker dopo averlo assegnato perchè così non va bene 
+      this.picker = date;
+      console.log(this.picker);
+      
+    }
+  }
+
 }
 </script>
 
