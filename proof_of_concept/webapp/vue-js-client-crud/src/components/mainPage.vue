@@ -79,17 +79,17 @@ slider{
   float:right;
 }
 #map {
-  position: absolute;
+  /* position: absolute; */
   width: 1200px;
   height: 600px;
-  float: left;
+  /* float: left; */
 }
 #calendar{
   position: relative;
   float: right;
 }
 #mc{
-  display: inline;
+  display: flex;
   width:100%;
 }
 </style>
