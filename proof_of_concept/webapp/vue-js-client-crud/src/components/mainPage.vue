@@ -17,9 +17,11 @@
   <div id="mc">
     <BasicExample id="map"/>
     <div id="calendar">
-   <Datepicker :inline="true" v-model="picker" v-on:selected="setDate" format="yyyy-MM-dd"/>
+       <Datepicker :inline="true" v-model="picker" v-on:selected="setDate" format="yyyy-MM-dd"/>
+    </div>
   </div>
-  </div>
+  <trendGraph />
+
 	</div>
 
 </template>
@@ -29,6 +31,7 @@
 import slider from './slider.vue'
 import Datepicker from 'vuejs-datepicker'
 import BasicExample from "./BasicExample.vue";
+import trendGraph from "./trendGraph.vue"
 
 
 export default {
@@ -36,7 +39,8 @@ export default {
    components: {
     Datepicker,
     slider,
-    BasicExample
+    BasicExample,
+    trendGraph
   },
   data() {
     var coords= [];
@@ -54,10 +58,10 @@ export default {
     setDate: function(date){
       console.log("ci entro?")
       console.log(this.picker);
-      //Necessario cambiare formato a picker dopo averlo assegnato perchè così non va bene 
+      //Necessario cambiare formato a picker dopo averlo assegnato perchè così non va bene
       this.picker = date;
       console.log(this.picker);
-      
+
     }
   }
 
