@@ -12,13 +12,10 @@
           <li class="nav-item">
             <router-link to="/chiSiamo">Chi siamo</router-link>
           </li>
-          <li class="nav-item dropdown">link alle città</li>
         </ul>
-      </div>
-      </nav>
-      <div>
         <autosearch/>
       </div>
+      </nav>
       </div>
        <router-view />
       </div>
@@ -29,9 +26,7 @@
       <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
         <h5 class="text-uppercase">Footer Content</h5>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
-            molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam
-            voluptatem veniam, est atque cumque eum delectus sint!
+            Web application del progetto GDP - Gathering detection platform
           </p>
       </div>
       <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
@@ -85,6 +80,7 @@ h1 {
 }
 #barAndFooter ul{
   width: 80%;
+  margin-right: 1px !important;
 }
 footer{
   bottom: 0em;
@@ -96,10 +92,11 @@ footer{
   min-height: 100vh;
   padding-bottom: 10em;
   display: block;
+  z-index: 0;
 }
 
 #navbar {
-  width: 70%;
+  width: 100%;
 }
 
 #navsearch{

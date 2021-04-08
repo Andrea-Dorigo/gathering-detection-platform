@@ -11,10 +11,11 @@
 
 <div id="things">
   <div id="sb">
-  <slider/>
-   <button type="button" value="Reload Map" @click="getRetrieveCoordinate">Reload map</button>
+  <slider2 id="slider"/>
+   <button type="button" class="btn btn-outline-primary" value="Reload Map" @click="getRetrieveCoordinate">Reload map</button>
   </div>
   <div id="mc">
+    <listCity/>
     <BasicExample id="map"/>
     <div id="calendar">
    <Datepicker :inline="true" v-model="picker" v-on:selected="setDate" format="yyyy-MM-dd"/>
@@ -26,17 +27,19 @@
 
 <script>
 
-import slider from './slider.vue'
 import Datepicker from 'vuejs-datepicker'
 import BasicExample from "./BasicExample.vue";
+import slider2 from './slider2.vue'
+import listCity from './listCity.vue'
 
 
 export default {
   name: 'things',
    components: {
     Datepicker,
-    slider,
-    BasicExample
+    BasicExample,
+    slider2,
+    listCity
   },
   data() {
     var coords= [];
@@ -75,31 +78,38 @@ export default {
 </script>
 
 <style scope>
-slider{
-  width: 80%;
+#things {
+   z-index: -11;
+}
+#slider{
+  z-index: -11;
+  margin-left: 30px;
+  margin-right: 20px;
+  width: 90%;
 }
 #sb {
+  z-index: 0;
   display: flex;
   width: 100%;
   padding-top: 10px;
   padding-bottom:10px;
 }
-#sb button {
-  width: 20%;
-  float:right;
-}
 #map {
-  position: absolute;
+  padding-left: 100px;
+  padding-right: 20px;
   width: 1200px;
   height: 600px;
-  float: left;
+  margin-left: 20px;
 }
 #calendar{
-  position: relative;
-  float: right;
+  z-index: -11;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-left: 100px;
 }
 #mc{
-  display: inline;
+  padding-top: 10px;
+  display: flex;
   width:100%;
 }
 </style>

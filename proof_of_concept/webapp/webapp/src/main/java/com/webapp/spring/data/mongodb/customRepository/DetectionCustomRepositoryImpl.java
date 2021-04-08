@@ -14,6 +14,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 
 import com.webapp.spring.data.mongodb.model.Detection;
 
@@ -38,10 +40,13 @@ public class DetectionCustomRepositoryImpl implements DetectionCustomRepository 
         }
         return cooList;
     }
-    public List<Detection> getDataRT(String city, String date) {
+    public List<Detection> getDataRT(String city, String startDate) throws Exception {
         Query query = new Query();
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH");
         //query.addCriteria(Criteria.where("city").is(city));
-        query.addCriteria(Criteria.where("date").is(city));
+        System.out.println(dateFormat.parseObject("2021-03-24T10"));
+        query.addCriteria(Criteria.where("date").lte(dateFormat.parseObject(startDate)));
+        query.addCriteria(Criteria.where("city").is(city));
         List<Detection> numPeople = mongoTemplate.find(query, Detection.class, "detection");
         System.out.println(numPeople);
         return numPeople;

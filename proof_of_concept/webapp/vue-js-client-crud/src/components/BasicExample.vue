@@ -9,9 +9,6 @@
 
 <template>
     <div class="basic-example">
-      <div>
-        <span>Zoom: {{ zoom }}</span>
-      </div>
         <l-map :zoom="zoom" :center="center" @update:center="centerUpdated" @update:zoom="zoomUpdated" :max-zoom="18" :min-zoom="15" >
             <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></l-tile-layer>
             <Vue2LeafletHeatmap   :lat-lng="latlngs" :radius="60" :min-opacity=".75" :blur="60"></Vue2LeafletHeatmap>
@@ -43,7 +40,7 @@ export default {
       center: [41.899139, 12.473311],
       zoom: 15,
       markerLatLng: [41.899139, 12.473311],
-      message: ''
+      message: 'ciao emma'
     };
   },
   methods: {
@@ -63,6 +60,7 @@ export default {
         var numPeople = res.data;
         this.setMessagePopUp(res.data);
           if( res.data != 0) {
+            this.markerLatLng=res.data[0];
              //prende le coordinate della città
               Elements.getCoo(city).then(res => {
                   this.markerLatLng = res.data[0];

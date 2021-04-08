@@ -71,7 +71,7 @@ public class indexController {
         return new ResponseEntity<>(coordinateRepository.getLatLngs(city),HttpStatus.OK);
  }
 @GetMapping("/RT/{city}/{date}")
-public ResponseEntity<List<Detection>> fetchDataRT(@PathVariable("city") String city,@PathVariable("date") String date ) {
+public ResponseEntity<List<Detection>> fetchDataRT(@PathVariable("city") String city,@PathVariable("date") String date ) throws Exception {
     return new ResponseEntity<>(coordinateRepository.getDataRT(city,date),HttpStatus.OK);
  }
 }

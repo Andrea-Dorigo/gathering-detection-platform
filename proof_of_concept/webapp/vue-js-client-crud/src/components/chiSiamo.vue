@@ -9,10 +9,17 @@
 
 <template>
   <div id="chiSiamo">
-      <h1>Jawa Druids</h1>
-      <p>Il gruppo Jawa Druids ha sviluppato questo sito durante un progetto universitario in collaborazzione con l'azienda Sync Lab.</p>
+      <h1>Il gruppo</h1>
+      <p>Il gruppo Jawa Druids è composto da sette studenti dell'università di studio di Padova del corso di laurea triennale di Informatica.</p>
+      <h2>L'azienda</h2>
+      <p>Sync Lab nasce come Software house tramutatasi rapidamente in System Integrator attraverso un processo di maturazione delle competenze tecnologiche, 
+        metodologiche ed applicative nel dominio del software. L'azienda, propone sul mercato interessanti quanto innovativi prodotti software,
+        nati nel nostro laboratorio di ricerca e sviluppo. Attraverso questi prodotti. Sync Lab ha gradualmente conquistato significativamente fette
+        di mercato nei seguenti settori: mobile, videosorveglianza e sicurezza delle infrastrutture informatiche aziendali.</p>
       <h2>GDP</h2>
-      <p>GDP è un sito creato con lo scopo di poter visualizzare e predirre il rischio assembramento nelle città in modo tale da garantire la sicurezza a tutti i cittadni.</p>
+      <p>GDP è un sito creato con lo scopo di poter visualizzare e predirre il rischio assembramento nelle città in modo tale da garantire la sicurezza a tutti i cittadni.
+        Il sito deve essere a disposizione degli utenti amministrativi come i dipendenti delle sedi comunali.
+      </p>
   </div>
 </template>
 
@@ -22,3 +29,11 @@ export default {
     name: 'chiSiamo',
 }
 </script>
+
+<style scoped>
+#chiSiamo {
+  padding-left: 8%;
+  padding-top: 5%;
+  padding-right: 8%;
+}
+</style>

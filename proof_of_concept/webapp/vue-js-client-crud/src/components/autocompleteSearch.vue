@@ -9,13 +9,15 @@
 
 <template>
   <div id="autosearch">
+    <div id="noButton">
       <input type="text" placeholder="Cerca la città.." v-model="searchText" @keyup="retireveCities" autocomplete="on"/>
       <div class="suggestion_list" v-if="searchText.length">
         <ul class="list_group">
           <li :key="item" class="list_group-item" v-for="(item,index) in suggestiondata" @click="itemSelected(index)">{{ item }}</li>
         </ul>
       </div>
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </div>
+      <button class="btn btn-outline-primary" type="submit">Search</button>
     </div>
 </template>
 
@@ -69,11 +71,31 @@ export default {
 </script>
 
 <style scoped>
+.suggestion_list {
+  width: 100%;
+}
+#noButton {
+  z-index: 0;
+  margin-right: 2%;
+  width: 100%;
+}
 #autosearch {
   width: 30%;
-  display: inline !important;
+  display: flex;
+}
+#autosearch input {
+  width: 100%;
+}
+#autosearch ul {
+  background-color:white;
+  position: absolute;
+  z-index: 99;
+  width: 426.8px;
+  padding-left: 0px;
 }
 #autosearch ul li {
+  padding: 3% 2% 3% 2%;
+  border: solid 1px black;
   list-style-type: none;
   color: blue;
 }
