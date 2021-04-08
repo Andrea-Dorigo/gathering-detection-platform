@@ -12,12 +12,46 @@ Al suo interno sono presenti le componenti di seguito elencate e spiegate ognuna
 
 \section{Barra di navigazione}\label{UtilizzoDiGDPGatheringDetecionPlatformBarraDiNavigazione}
 
-Nella barra di navigazione sono presenti tre link e la barra di ricerca. Tramite i link l'utente potrà navigare nel sito guardando la pagina "Chi siamo", tornare alla Home e scaricare il manuale utente.
+Nella barra di navigazione è quella rappresentata in figura n (mettere figura) ed è presente in tutte le pagine dell'applicazione web. Tramite questa l'utente potrà navigare all'interno della piattaforma. Nella barra di navigazione sono presenti:
+\begin{itemize}
+	\item \textit{Home}: link alla pagina iniziale;
+	\item \textit{Chi siamo}: link alla pagina "Chi siamo";
+	\item \textit{Barra di ricerca}: attraverso la barra di ricerca è possibile cercare, e quindi selezionare tra quelle disponibili, la città di cui si è interessati a visualizzare i dati sulla heat-map. 
+\end{itemize}
+(inserire riferimenti tra elenco e ciò che si mostra nella foto?)
+%scaricare il manuale utente ?????
 
 \section{Contenuto centrale}\label{UtilizzoDiGDPGatheringDetecionPlatformContenutoCentrale}
+\subsection{Pagina Iniziale - Home} \label{UtilizzoDiGDPGatheringDetecionPlatformContenutoCentralePaginaInizialeHome}
+La pagina iniziale che visualizza l'utente è quella mostrata in figura n (quella che c'è sopra in 3.1). 
+\subsubsection{Heatmap}\label{UtilizzoDiGDPGatheringDetecionPlatformContenutoCentralePaginaInizialeHomeHeatmap}
+Al centro della web app è presente una heat map che raffigura, inizialmente, il flusso di persone presenti nella città di Roma nell'orario attuale. Successivamente l'utente potrà modificare la città, attraverso il menù a tendina (\S~\ref{UtilizzoDiGDPGatheringDetecionPlatformContenutoCentralePaginaInizialeHomeMenùATendina}) oppure tramite la barra di ricerca, l'orario e la data, secondo quanto spiegato in \S~\ref{UtilizzoDiGDPGatheringDetecionPlatformContenutoCentralePaginaInizialeHomeCalendarioESlider}, e visualizzare tramite la heat map i dati relativi ai campi selezionati. Per facilitare la lettura della mappa, viene mostrato un pop-up, accompagnato da un marker, che evidenzia sia il nome del luogo che si sta osservando sia il numero di persone effettivamente presenti in quel momento. Questa funzionalità viene illustrata nella seguente figura n. (inserire figura pop-up)
+\subsubsection{Elenco delle città} \label{UtilizzoDiGDPGatheringDetecionPlatformContenutoCentralePaginaInizialeHomeMenùATendina}
+(inserire immagine) \\
+L'elenco delle città, posizionato a sinistra della mappa, viene utilizzato per la selezione della città. Infatti, l'utente, quando apre l'applicazione web, visualizza la mappa centrata sulla città di Roma, la città di default, ma successivamente può scegliere di osservare il flusso di persone relativo ad un'altra città presente tra quelle messe a disposizione nel menù a tendina. 
 
-\subsection{Heatmap}\label{UtilizzoDiGDPGatheringDetecionPlatformContenutoCentraleHeatmap}
+\subsubsection{Calendario e slider}\label{UtilizzoDiGDPGatheringDetecionPlatformContenutoCentralePaginaInizialeHomeCalendarioESlider}
+(inserire immagine caledario e slider) \\
+L'utente ha a disposizione, a destra della mappa, un calendario che gli permette di scelgiere l'anno, il mese ed il giorno di cui desidera visualizzare i dati. Per selezionare l'anno bisogna cliccare su 1 (da evidenziare nella figura i vari punti in cui cliccare per cambiare anno/mese/giorno) e per il mese 2. \\
+%da scrivere che può solo andare nel passato e presente?
+\\
+Al di sopra della mappa, invece, è presente uno slider con il quale l'utente può scegliere un orario diverso da quello attuale di cui desidera visualizzare i dati attraverso la heat map. La selezione dell'orario è effettuata su intervalli di tempo di ora in ora. 
 
-\subsection{Calendario e slider}\label{UtilizzoDiGDPGatheringDetecionPlatformContenutoCentraleCalendarioESlider}
+\subsubsection{Bottone Reload Map} \label{UtilizzoDiGDPGatheringDetecionPlatformContenutoCentralePaginaInizialeHomeBottoneReloadMap}
+(inserire immagine)\\
+Nel caso in cui l'utente avesse selezionato una data diversa da quella odiera e/o un'ora differente da quella attuale, cliccando sul pulsante "Reload Map", la mappa si aggiornerà e tornerà a mostrare i dati in tempo reale, quindi realtivi a data e ora corrente, restando sulla città che si stava osservando. 
+
+\subsection{Chi siamo} \label{UtilizzoDiGDPGatheringDetecionPlatformContenutoCentraleChiSiamo}
+(inserire immagine)\\
+In questa pagina è possibile visualizzare le informazioni che riguardano il team di sviluppo JawaDruids, l'azienda proponente SyncLab e il progetto \textit{GDP: Gathering Detection Platform}. 
+%da completare 
 
 \section{Footer}\label{UtilizzoDiGDPGatheringDetecionPlatformFooter}
+(inserire foto ??) \\
+Il footer è presente in tutte le pagine dell'applicazione web e riporta alcuni link utili, come quello del sito web dell'azienda SyncLab, la mail del team di sviluppo, da contattare in caso si riscontrino problemi con l'uso del prodotto software. 
+%da sistemare
+
+
+%COSE DA VALUTARE SE SCRIVERE O MENO
+%1) che la mappa si aggiorna ogni 10 minuti automaticamente??? (ancora da implementare in realtà)
+%2) parte di predizione?? slider +2 ore rispetto a quella attuale
