@@ -10,6 +10,9 @@ class Elements {
     getCoo(city) {
         return http.get(`/coo/${city}`);
     }
+    getDataRT(city, date) {
+        return http.get(`/RT/${city}/${date}`);
+    }
 }
 
 export default new Elements();

@@ -38,4 +38,12 @@ public class DetectionCustomRepositoryImpl implements DetectionCustomRepository 
         }
         return cooList;
     }
+    public List<Detection> getDataRT(String city, String date) {
+        Query query = new Query();
+        //query.addCriteria(Criteria.where("city").is(city));
+        query.addCriteria(Criteria.where("date").is(city));
+        List<Detection> numPeople = mongoTemplate.find(query, Detection.class, "detection");
+        System.out.println(numPeople);
+        return numPeople;
+    }
 }

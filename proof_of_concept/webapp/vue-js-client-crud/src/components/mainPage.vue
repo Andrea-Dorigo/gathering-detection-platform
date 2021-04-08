@@ -48,17 +48,27 @@ export default {
   },
   methods: {
     getRetrieveCoordinate: function(){
-      this.$root.$refs.basicExample_component.retrieveCoordinate();
-      this.picker = new Date().toISOString().substr(0, 10);
+      var date = this.picker = new Date().toISOString().substr(0, 10);
+      var time = this.$root.$refs.slider_component.getActualTime();
+      date = date + 'T' + time + '+00:00'; 
+      time = date; 
+      var prova = "2021-03-24T09:16:55.110+00:00";
+      this.$root.$refs.slider_component.setActualTime();
+      this.$root.$refs.basicExample_component.retrieveCoordinate(prova);
     },
     setDate: function(date){
-      console.log("ci entro?")
-      console.log(this.picker);
-      //Necessario cambiare formato a picker dopo averlo assegnato perchè così non va bene 
-      this.picker = date;
-      console.log(this.picker);
-      
-    }
+      var d = this.picker = date.toISOString().substr(0, 10);
+      // getActualTime ritorna l'ora precisa di adesso, andrà usata getCurTime, non appena capisco come aggiungere sec e ms
+      var t = this.$root.$refs.slider_component.getActualTime();
+      d = d + 'T' + t + '+00:00'; 
+      t = d; 
+      var prova = '2021-03-24T12:16:55.234+00:00';
+      this.$root.$refs.basicExample_component.retrieveCoordinate(prova);
+    },
+    getDate: function() {
+      return this.picker;
+    },
+
   }
 
 }

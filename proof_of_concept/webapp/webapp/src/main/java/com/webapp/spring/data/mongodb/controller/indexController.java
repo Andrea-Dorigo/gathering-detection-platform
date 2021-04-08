@@ -70,4 +70,8 @@ public class indexController {
     public ResponseEntity<List<List<Double>>> fetchCoo(@PathVariable("city") String city) {
         return new ResponseEntity<>(coordinateRepository.getLatLngs(city),HttpStatus.OK);
  }
+@GetMapping("/RT/{city}/{date}")
+public ResponseEntity<List<Detection>> fetchDataRT(@PathVariable("city") String city,@PathVariable("date") String date ) {
+    return new ResponseEntity<>(coordinateRepository.getDataRT(city,date),HttpStatus.OK);
+ }
 }

@@ -29,9 +29,20 @@ export default{
     shiftTime: function(a) {
       this.curTime = a;
     },
-    setCurTime: function() {
+    setActualTime: function() {
       this.curTime =  new Date(Date.now()).toTimeString().slice(0,5);
     },
+    //forse si può togliere
+    getActualTime: function(){
+      var d = new Date(Date.now());
+      var s=  d.getSeconds();
+      var ms = d.getMilliseconds();
+      var time = new Date(Date.now()).toTimeString().slice(0,5) + ':' + s + '.' + ms;
+      return time;
+    },
+    getCurTime: function() {
+      return this.curTime;
+    }
     },
     created() {
        this.$root.$refs.slider_component = this;
