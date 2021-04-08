@@ -88,7 +88,7 @@ def main():
     time.sleep((midnight - datetime.now()).total_seconds())
 
     # infinite loop
-    while False:
+    while True:
 
         # get next day midnight
         day_after_tomorrow = datetime.today() + timedelta(days=2)
