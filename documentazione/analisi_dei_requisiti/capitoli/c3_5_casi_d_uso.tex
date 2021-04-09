@@ -493,23 +493,56 @@ L'elenco dei casi d'uso in questa sezione individuano requisiti sviluppabili suc
 	\item \textbf{Postcondizione}: il sistema ha salvato localmente i dati in formato csv.
 \end{itemize}
 
+
+\begin{center}
+	\begin{figure}[H]
+		\centering\includegraphics[scale=0.7]{../immagini/attori_casi/UC15.png}
+		\caption{UC15 - Notifica via email di una città selezionata}
+	\end{figure}
+\end{center}
+
 \subsubsection{UC15 - Notifica via email di una città selezionata}\label{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC15NotificaViaEmailDiUnaCittaSelezionata}
 
 \begin{center}
 	\begin{figure}[H]
-		\centering\includegraphics[scale=0.7]{../immagini/attori_casi/uc15.png}
+		\centering\includegraphics[scale=0.7]{../immagini/attori_casi/UC15_1_2.png}
 		\caption{UC15 - Notifica via email di una città selezionata}
 	\end{figure}
 \end{center}
 
 \begin{itemize}
 	\item \textbf{Attori primari}: utente generico;
-	\item \textbf{Descrizione}: l'utente ha la possibilità di richiedere una notifica via email che verrà inviata nel momento in cui il rischio di assembramento, nella città che sta visualizzando, supera una certa soglia. Per procedere con la richiesta di notifica l'utente deve completare il form di inserimento dell'email;
-	\item \textbf{Scenario principale}: l'utente richiede la notifica via email inserendola nel form;
+	\item \textbf{Descrizione}: l'utente decide di voler essere notificato via email riguardo gli aggiornamenti relativi ad una determinata città;
+	\item \textbf{Scenario principale}:
+		\begin{itemize}
+			\item inserisce la propria mail - UC15.1 \ref{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC15.1InserimentoEmail};
+			\item seleziona la città di interesse - UC15.2 \ref{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC15.2SelezioneCitta}.
+		\end{itemize}
 	\item \textbf{Precondizione}: l'utente sta visualizzando la heat map$_{\scaleto{G}{3pt}}$ e richiede la notifica via email;
-	\item \textbf{Postcondizione}: il sistema aggiunge nel database l'email inserita dall'utente;
+	\item \textbf{Postcondizione}: il sistema aggiunge nel database l'email inserita dall'utente e la relativa città di interesse;
 	\item \textbf{Estensioni}: il front end effettua un controllo ortografico che segnala possibili errori all'utente (UC16, sezione \S~\ref{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC16VisualizzazioneMessaggioDiErroreEmailErrata}).
 \end{itemize}
+
+\subsubsection{UC15.1 - Inserimento email}\label{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC15.1InserimentoEmail}
+
+\begin{itemize}
+	\item \textbf{Attori primari}: utente generico;
+	\item \textbf{Descrizione}: l'utente inserisce la propria mail, senza errori di ortografia;
+	\item \textbf{Scenario principale}: l'utente inserisce la propria email all'interno del form;
+	\item \textbf{Precondizione}: l'utente ha richiesto la notificazione via email;
+	\item \textbf{Postcondizione}: il sistema aggiunge nel database l'email inserita dall'utente;
+\end{itemize}
+
+\subsubsection{UC15.2 - Selezione della città}\label{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC15.2SelezioneCitta}
+
+\begin{itemize}
+	\item \textbf{Attori primari}: utente generico;
+	\item \textbf{Descrizione}: l'utente seleziona la città di suo interesse;
+	\item \textbf{Scenario principale}: l'utente seleziona la città di suo interesse all'interno del form;
+	\item \textbf{Precondizione}: l'utente ha richiesto la notificazione via email;
+	\item \textbf{Postcondizione}: il sistema aggiunge nel database la città selezionata dall'utente;
+\end{itemize}
+
 
 \subsubsection{UC16 - Visualizzazione messaggio di errore e-mail errata}\label{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC16VisualizzazioneMessaggioDiErroreEmailErrata}
 
