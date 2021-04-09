@@ -11,10 +11,11 @@
 
 <div id="things">
   <div id="sb">
-  <slider/>
-   <button type="button" value="Reload Map" @click="getRetrieveCoordinate">Reload map</button>
+  <slider2 id="slider"/>
+   <button type="button" class="btn btn-outline-primary" value="Reload Map" @click="getRetrieveCoordinate">Reload map</button>
   </div>
   <div id="mc">
+    <listCity/>
     <BasicExample id="map"/>
     <div id="calendar">
        <Datepicker :inline="true" v-model="picker" v-on:selected="setDate" format="yyyy-MM-dd"/>
@@ -28,9 +29,10 @@
 
 <script>
 
-import slider from './slider.vue'
 import Datepicker from 'vuejs-datepicker'
 import BasicExample from "./BasicExample.vue";
+import slider2 from './slider2.vue'
+import listCity from './listCity.vue'
 import trendGraph from "./trendGraph.vue"
 
 
@@ -38,8 +40,9 @@ export default {
   name: 'things',
    components: {
     Datepicker,
-    slider,
     BasicExample,
+    slider2,
+    listCity,
     trendGraph
   },
   data() {
@@ -52,47 +55,64 @@ export default {
   },
   methods: {
     getRetrieveCoordinate: function(){
-      this.$root.$refs.basicExample_component.retrieveCoordinate();
-      this.picker = new Date().toISOString().substr(0, 10);
+      var date = this.picker = new Date().toISOString().substr(0, 10);
+      var time = this.$root.$refs.slider_component.getActualTime();
+      date = date + 'T' + time + '+00:00';
+      time = date;
+      var prova = "2021-03-24T09:16:55.110+00:00";
+      this.$root.$refs.slider_component.setActualTime();
+      this.$root.$refs.basicExample_component.retrieveCoordinate(prova);
     },
     setDate: function(date){
-      console.log("ci entro?")
-      console.log(this.picker);
-      //Necessario cambiare formato a picker dopo averlo assegnato perchè così non va bene
-      this.picker = date;
-      console.log(this.picker);
+      var d = this.picker = date.toISOString().substr(0, 10);
+      // getActualTime ritorna l'ora precisa di adesso, andrà usata getCurTime, non appena capisco come aggiungere sec e ms
+      var t = this.$root.$refs.slider_component.getActualTime();
+      d = d + 'T' + t + '+00:00';
+      t = d;
+      var prova = '2021-03-24T12:16:55.234+00:00';
+      this.$root.$refs.basicExample_component.retrieveCoordinate(prova);
+    },
+    getDate: function() {
+      return this.picker;
+    },
 
-    }
   }
 
 }
 </script>
 
 <style scope>
-slider{
-  width: 80%;
+#things {
+   z-index: -11;
+}
+#slider{
+  z-index: -11;
+  margin-left: 30px;
+  margin-right: 20px;
+  width: 90%;
 }
 #sb {
+  z-index: 0;
   display: flex;
   width: 100%;
   padding-top: 10px;
   padding-bottom:10px;
 }
-#sb button {
-  width: 20%;
-  float:right;
-}
 #map {
-  /* position: absolute; */
+  padding-left: 100px;
+  padding-right: 20px;
   width: 1200px;
   height: 600px;
-  /* float: left; */
+  margin-left: 20px;
 }
 #calendar{
-  position: relative;
-  float: right;
+  z-index: -11;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-left: 100px;
 }
 #mc{
+  padding-top: 10px;
   display: flex;
   width:100%;
 }
