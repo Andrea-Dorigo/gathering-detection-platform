@@ -6,7 +6,7 @@ La piattaforma utilizzerà dati prelevati da sensori (come telecamere, dispositi
 \section{Funzionalità del prodotto}\label{DescrizioneGeneraleFunzionalitàDelProdotto}
 La funzionalità principale identificata nel capitolato$_{\scaleto{G}{3pt}}$ d'appalto \textit{GDP-Gathering Detection Platform} è la \textbf{rappresentazione via \textit{heat map$_G$} dei dati ottenuti dalle sorgenti e della loro elaborazione}, affinché l'utente possa consultarle.
 
-Questa funzionalità è il frutto di una serie di funzioni sottostanti, identificate e suddivise per meglio descrivere le operazioni effettuate dal back-end.
+Questa funzionalità è il frutto di una serie di funzioni sottostanti, identificate e suddivise per meglio descrivere le operazioni effettuate dal back-end$_{\scaleto{G}{3pt}}$.
 Le illustriamo nella sezione seguente.
 
 \subsection{Sotto-funzioni della rappresentazione della heat map}\label{DescrizioneGeneraleFunzionalitàDelProdottoSottoFunzioniDellaRappresentazioneDellaHeatmap}
@@ -14,7 +14,7 @@ Le illustriamo nella sezione seguente.
 La descrizione delle sotto-funzioni della rappresentazione della \textit{heat map$_G$} è stata inserita in quanto ritenuta necessaria per fornire un ulteriore approfondimento riguardo tale macro-funzionalità.
 Queste funzioni sono raggruppate seguendo tre funzioni generali individuate:
 \begin{itemize}
-	\item \textbf{Acquisizione di dati:} l'acquisizione avverrà attraverso sistemi di monitoraggio e motori software "contapersone" applicati ad immagini/stream delle videocamere o ad altre sorgenti; i dati ottenuti verranno quindi trattati con Apache Kafka$_G$ e inseriti nel db;
+	\item \textbf{Acquisizione di dati:} l'acquisizione avverrà attraverso sistemi di monitoraggio e motori software "contapersone" applicati ad immagini/stream delle videocamere o ad altre sorgenti; i dati ottenuti verranno quindi trattati con Apache Kafka$_G$ e inseriti nel database;
 	\item \textbf{Elaborazione di dati:} i dati verranno elaborati per generare valore aggiunto agli stessi e confrontare i differenti flussi di informazioni;
 	\item \textbf{Rappresentazione di dati:} attraverso un sito web i dati elaborati verranno visualizzati a video mediante una \textit{heat map$_{\scaleto{G}{3pt}}$}.
 \end{itemize}
@@ -27,7 +27,7 @@ L'acquisizione dei dati avviene tramite sistemi di monitoraggio e motori softwar
 \item \textbf{Linguaggio di programmazione}: Python$_{\scaleto{G}{3pt}}$/C.
 \item \textbf{Input}: i dati forniti sono prelevati da siti con live-feed$_G$ di webcam pubbliche e/o simulatori di spostamenti di persone.
 \item \textbf{Output}: il numero delle persone presenti in uno stream/immagine ad un preciso istante.
-\item \textbf{Risposta ad errori}: nel caso di mancanza di risposta dai siti con live-feed il programma si bloccherà ed invierà un segnale di errore al server, con conseguente messaggio di errore visualizzabile dall'utente.
+%\item \textbf{Risposta ad errori}: nel caso di mancanza di risposta dai siti con live-feed il programma si bloccherà ed invierà un segnale di errore al server, con conseguente messaggio di errore visualizzabile dall'utente.%
 \end{itemize}
 
 \subsubsection{Funzione di streaming dati con Apache Kafka}\label{DescrizioneGeneraleFunzionalitàDelProdottoFunzioneDiAcquisizioneDiDatiFunzioneDiStreamingDatiConApacheKafka}
@@ -53,10 +53,10 @@ Di seguito vengono individuate le funzioni da seguire per l'elaborazione dei dat
 \subsubsection{Funzione di Esplorazione Dati}\label{DescrizioneGeneraleFunzionalitàDelProdottoFunzioneDiElaborazioneDatiFunzioneDiEsplorazioneDati}
 
 \begin{itemize}
-	\item \textbf{Descrizione}: si discriminano elementi all'interno del dataset che portano a predizioni errate del modello.
+	\item \textbf{Descrizione}: si discriminano elementi all'interno del dataset$_{\scaleto{G}{3pt}}$ che portano a predizioni errate del modello.
 	\item \textbf{Input}: i dati vengono prelevati dal database.
 	\item \textbf{Output}: i dati controllati vengono aggiunti in appositi spazi per individuare la loro correttezza.
-	\item \textbf{Processo}: si controlla se c'è presenza di valori mancanti, dataset non bilanciati, outliers$_G$, livello di rumore dei dati e correlazione dei dati.
+	\item \textbf{Processo}: si controlla se c'è presenza di valori mancanti, dataset$_{\scaleto{G}{3pt}}$ non bilanciati, outliers$_G$, livello di rumore dei dati e correlazione dei dati.
 \end{itemize}
 
 \subsubsection{Funzione di Preprocessing}\label{DescrizioneGeneraleFunzionalitàDelProdottoFunzioneDiElaborazioneDatiFunzioneDiPreprocessing}
@@ -106,7 +106,7 @@ In questa sezione verranno illustrate le funzioni della parte visiva della web-a
 
 \begin{itemize}
 	\item \textbf{Descrizione}: sviluppo di una pagina web semplice ed intuitiva.
-	\item \textbf{Strumenti}: si utilizzerà Vue.js e Spring$_G$, due librerie per framework$_G$ di JavaScript$_G$.
+	\item \textbf{Strumenti}: si utilizzerà Vue.js, una libreria per framework$_G$ di JavaScript$_G$.
 	\item \textbf{Vincolo}: la web app dovrà essere costruita sia desktop che mobile friendly.
 	\item \textbf{Struttura}: la pagina sarà principalmente rivolta alla visione della mappa per la visualizzazione di aree a rischio assembramenti.
 \end{itemize}

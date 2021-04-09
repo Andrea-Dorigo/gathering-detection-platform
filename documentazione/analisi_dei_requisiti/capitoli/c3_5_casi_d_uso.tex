@@ -76,20 +76,20 @@ Dopo un'attenta analisi, il gruppo ha deciso di porre questo caso d'uso separato
 \begin{itemize}
 	\item \textbf{Attori primari:} utente generico;
 	\item \textbf{Descrizione:} l’utente, durante la visualizzazione della heat map$_{\scaleto{G}{3pt}}$, può variare il livello di zoom della mappa della città selezionata attraverso l'interfaccia;
-	\item \textbf{Scenario principale:} l’utente attraverso l'interfaccia può decidere di:
-	\begin{itemize}
-		\item aumentare il livello di zoom (UC3.1, sezione \S~\ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC31ZoomInDellaHeatMap});
-		\item diminuire il livello di zoom (UC3.2, sezione \S~\ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC32ZoomOutDellaHeatMap}).
-	\end{itemize}
+	\item \textbf{Scenario principale:} l’utente attraverso l'interfaccia può decidere di modificare il livello di zoom della mappa visualizzata;
+	\item \textbf{Generalizzazioni:}\begin{enumerate}
+		\item UC3.1 - Zoom-in della heat map$_{\scaleto{G}{3pt}}$;
+		\item UC3.2 - Zoom-out della heat map$_{\scaleto{G}{3pt}}$.
+	\end{enumerate}
 	\item \textbf{Precondizione:} il sistema è funzionante e la mappa è stata caricata;
-	\item \textbf{Postcondizione:} il livello di zoom della mappa è aumentato o diminuito in base all'azione che compie l'utente: se compie zoom-in il livello aumenta,se invece compie zoom-out il livello diminuisce.
+	\item \textbf{Postcondizione:} il livello di zoom della mappa è aumentato o diminuito in base all'azione che compie l'utente.
 \end{itemize}
 
 \subsubsection{UC3.1 - Zoom-in della heat map}\label{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC31ZoomInDellaHeatMap}
 
 \begin{center}
 	\begin{figure}[H]
-		\centering\includegraphics[scale=0.8]{../immagini/attori_casi/uc31_uc32.png}
+		\centering\includegraphics[scale=0.8]{../immagini/attori_casi/UC3.1.png}
 		\caption{UC3.1 - Zoom-in della heat map}
 	\end{figure}
 \end{center}
@@ -97,12 +97,12 @@ Dopo un'attenta analisi, il gruppo ha deciso di porre questo caso d'uso separato
 \begin{itemize}
 	\item \textbf{Attori primari:} utente generico;
 	\item \textbf{Descrizione:} l’utente, durante la visualizzazione della heat map$_{\scaleto{G}{3pt}}$, può aumentare il livello di zoom per vedere in dettaglio la mappa della città selezionata;
-	\item \textbf{Scenario principale:} l’utente aumenta il livello di zoom della heat map$_{\scaleto{G}{3pt}}$ per una visualizzazione dettagliata della città, dopo aver compiuto questa azione l'utente inoltre può: spostarsi all'interno della mappa (UC3.1.1, sezione \S~\ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC311DragDellaHeatMap}) e cliccare sui pop-up$_G$ dei punti di interesse (UC3.1.2, sezione \S~\ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC312VisualizzazioneDelPopupDiUnPuntoDiInteresse});
+	\item \textbf{Scenario principale:} l’utente aumenta il livello di zoom della heat map$_{\scaleto{G}{3pt}}$ per una visualizzazione dettagliata della città, dopo aver compiuto questa azione l'utente inoltre può: spostarsi all'interno della mappa (UC3.1.1, sezione \S~\ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC311SpostamentoDelCentroDellaMappa}) e visualizzare le etichette (denonimate pop-up$_G$) dei punti di interesse (UC3.1.2, sezione \S~\ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC312VisualizzazioneDelPopupDiUnPuntoDiInteresse});
 	\item \textbf{Precondizione:} il sistema dispone di informazioni relative alla città e il livello di zoom-in non è al massimo;
 	\item \textbf{Postcondizione:} la heat map$_{\scaleto{G}{3pt}}$ si aggiorna mostrando livelli di informazioni più dettagliate in base al livello di zoom in effettuato.
 \end{itemize}
 
-\subsubsection{UC3.1.1 - Drag$_G$ della heat map}\label{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC311DragDellaHeatMap}
+\subsubsection{UC3.1.1 - Spostamento del centro della mappa map}\label{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC311SpostamentoDelCentroDellaMappa}
 
 \begin{itemize}
 	\item \textbf{Attori primari:} utente generico;
@@ -112,14 +112,14 @@ Dopo un'attenta analisi, il gruppo ha deciso di porre questo caso d'uso separato
 	\item \textbf{Postcondizione:} l’utente si è spostato all’interno della heat map$_{\scaleto{G}{3pt}}$.
 \end{itemize}
 
-\subsubsection{UC3.1.2 - Visualizzazione del popup di un punto di interesse}\label{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC312VisualizzazioneDelPopupDiUnPuntoDiInteresse}
+\subsubsection{UC3.1.2 - Visualizzazione delle informazioni nell'etichetta del punto di interesse}\label{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC312VisualizzazioneDelPopupDiUnPuntoDiInteresse}
 
 \begin{itemize}
 	\item \textbf{Attori primari:} utente generico;
-	\item \textbf{Descrizione:} l’utente ha la possibilità di selezionare una zona in particolare della mappa e far apparire un popup contenente le informazioni riguardanti la zona selezionata;
+	\item \textbf{Descrizione:} l’utente ha la possibilità di selezionare una zona in particolare della mappa e far apparire un'etichetta (popup$_{\scaleto{G}{3pt}}$) contenente le informazioni riguardanti la zona selezionata;
 	\item \textbf{Scenario principale:} l’utente seleziona una zona e appare un popup;
-	\item \textbf{Precondizione:} il livello di zoom in è diverso da quello iniziale ed il sistema fa apparire un’icona apposita per il popup;
-	\item \textbf{Postcondizione:} l’utente ha premuto sull’icona ed appare il popup.
+	\item \textbf{Precondizione:} il livello di zoom in è diverso da quello iniziale ed il sistema fa apparire un’icona apposita per la visualizzazione dell'etichetta;
+	\item \textbf{Postcondizione:} l’utente ha premuto sull’icona ed appare l'etichetta.
 \end{itemize}
 
 \subsubsection{UC3.2 - Zoom-out della heat map}\label{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC32ZoomOutDellaHeatMap}
@@ -129,7 +129,7 @@ Dopo un'attenta analisi, il gruppo ha deciso di porre questo caso d'uso separato
 	\item \textbf{Descrizione:} l’utente, durante la visualizzazione della heat map$_{\scaleto{G}{3pt}}$, può diminuire il livello di zoom per vedere informazioni meno dettagliate della città selezionata;
 	\item \textbf{Scenario principale:} l’utente diminuisce il livello di zoom della heat map$_{\scaleto{G}{3pt}}$ per una visualizzazione meno dettagliata della città;
 	\item \textbf{Precondizione:}  il sistema dispone di informazioni relative alla città e il livello di zoom-out non è al massimo;
-	\item \textbf{Postcondizione:} la heat map$_{\scaleto{G}{3pt}}$ si aggiorna mostrando livelli di informazioni meno dettagliate in base al livello di zoom out effettuato.
+	\item \textbf{Postcondizione:} la heat map$_{\scaleto{G}{3pt}}$ si aggiorna mostrando livelli di informazioni meno dettagliate in base al livello di zoom-out effettuato.
 \end{itemize}
 
 \subsubsection{UC4 - Selezione città da visualizzare nella mappa}\label{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC4SelezioneCittaDaVisualizzareNellaMappa}
@@ -206,7 +206,7 @@ Dopo un'attenta analisi, il gruppo ha deciso di porre questo caso d'uso separato
 	\item \textbf{Descrizione:} l’utente può ricercare in una barra di ricerca la città da visualizzare;
 	\item \textbf{Scenario principale:} l’utente ricerca una città tramite una barra di ricerca;
 	\item \textbf{Precondizione:} l’utente ha inserito la città da ricercare;
-	\item \textbf{Postcondizione:}l’utente ha inserito la città che vuole cercare e il sistema si aggiorna in base alla ricerca fatta;
+	\item \textbf{Postcondizione:} l’utente ha inserito la città che vuole cercare e il sistema si aggiorna in base alla ricerca fatta;
 	\item \textbf{Estensioni:} l’utente ha ricercato una città non presente nel database, il sistema rileva questo errore e di conseguenza viene visualizzato un messaggio relativo all’errore riscontrato (UC 7, sezione \S~\ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC7VisualizzazioneMessaggioDiMancanzaCittàNelDatabase}).
 \end{itemize}
 
