@@ -31,7 +31,6 @@
       </div>
       <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
         <h5 class="text-uppercase">Links</h5>
-
         <ul class="list-unstyled mb-0">
           <li>
             <a href="https://www.synclab.it/" class="text-dark">Sync Lab</a>
@@ -73,12 +72,12 @@ h1 {
  position: relative;
  text-align: center;
 }
-#barAndFooter ul li{
+#noFooter ul li{
   padding-left:10%;
   padding-right:10%;
   width:100%;
 }
-#barAndFooter ul{
+#noFooter ul{
   width: 80%;
   margin-right: 1px !important;
 }

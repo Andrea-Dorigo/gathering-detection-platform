@@ -8,7 +8,7 @@
 -->
 
 <template>
-    <div>
+    <div id="slider">
          <vue-slide-bar v-model="sliderWithLabel.value"
                 :data="sliderWithLabel.data"
                 :range="sliderWithLabel.range"
@@ -26,6 +26,7 @@
 import VueSlideBar from 'vue-slide-bar'
 
   export default {
+    name: "slider",
        components: {
         VueSlideBar
       },
@@ -140,7 +141,20 @@ import VueSlideBar from 'vue-slide-bar'
             methods: {
               callbackRange: function(val) {
                 this.rangeValue = val
-              }
+              },
+              setActualTime: function() {
+              this.curTime =  new Date(Date.now()).toTimeString().slice(0,5);
+              },
+              getActualTime: function(){
+            var d = new Date(Date.now());
+            var s=  d.getSeconds();
+            var ms = d.getMilliseconds();
+            var time = new Date(Date.now()).toTimeString().slice(0,5) + ':' + s + '.' + ms;
+            return time;
+            },
+            },
+            created() {
+            this.$root.$refs.slider2_component = this;
             }
           }
         

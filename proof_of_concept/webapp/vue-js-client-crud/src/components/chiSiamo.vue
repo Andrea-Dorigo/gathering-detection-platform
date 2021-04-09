@@ -18,8 +18,14 @@
         di mercato nei seguenti settori: mobile, videosorveglianza e sicurezza delle infrastrutture informatiche aziendali.</p>
       <h2>GDP</h2>
       <p>GDP è un sito creato con lo scopo di poter visualizzare e predirre il rischio assembramento nelle città in modo tale da garantire la sicurezza a tutti i cittadni.
-        Il sito deve essere a disposizione degli utenti amministrativi come i dipendenti delle sedi comunali.
+        Il sito deve essere a disposizione degli utenti amministrativi come i dipendenti delle sedi comunali. Grazie a questa web application si potranno organizzare eventi
+        in sicurezza riuscendo a predirre quante persone saranno presenti.
       </p>
+      <ul id="loghi">
+        <li id="synclab"><img src="../assets/synclab.png" alt="Sync Lab" width="400"></li>
+        <li><img src="../assets/DRUIDSLOGO.jpg" alt="Jawa Druids" width="400"></li>
+        <li><img src="../assets/unipd.png" alt="Unipd" width="400"></li>
+      </ul>
   </div>
 </template>
 
@@ -35,5 +41,17 @@ export default {
   padding-left: 8%;
   padding-top: 5%;
   padding-right: 8%;
+}
+#chiSiamo ul {
+  display: flex;  
+  list-style-type: none;
+}
+#chiSiamo #loghi li {
+  padding-left: 3%;
+  padding-right: 3%
+}
+#chiSiamo #synclab{
+  padding-top:9%;
+  padding-bottom: 5%;
 }
 </style>

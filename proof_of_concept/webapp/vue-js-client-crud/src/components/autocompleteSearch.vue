@@ -89,7 +89,7 @@ export default {
 #autosearch ul {
   background-color:white;
   position: absolute;
-  z-index: 99;
+  z-index: 3;
   width: 426.8px;
   padding-left: 0px;
 }
