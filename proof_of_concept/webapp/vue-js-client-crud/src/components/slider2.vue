@@ -1,147 +1,154 @@
-<!--
-  Project Name: GDP- Gathering Detection Platform
-  File Name: slider2.vue
-  Author: Margherita Mitillo
-  Creation Date: 2021-04-08
-  Summary: the file containes the code related to the time slider.
-  Last change date: 2021-04-08
--->
-
 <template>
-    <div>
-         <vue-slide-bar v-model="sliderWithLabel.value"
-                :data="sliderWithLabel.data"
-                :range="sliderWithLabel.range"
-                :lineHeight="15"
-                :labelStyles="{ color: '#4a4a4a', backgroundColor: '#4a4a4a' }"
-                :processStyle="{ backgroundColor: '#d8d8d8'}"
-                :tooltipStyle="{ translateX: '60.56px'}"
-                @callbackRange="callbackRange(sliderWithLabel.value)"
-                style="z-index:0">
-        </vue-slide-bar>
-    </div>
+  <div>
+    <VueSlideBar
+      v-model="slider.value"
+      :data="slider.data"
+      :range="slider.range"
+      :labelStyles="{ color: '#4a4a4a', backgroundColor: '#4a4a4a' }"
+      :processStyle="{ backgroundColor: '#d8d8d8' }"
+      @callbackRange="callbackRange">
+    </VueSlideBar>
+    <h2>Value: {{slider.value}}</h2>
+    <h2>Label: {{rangeValue.label}}</h2>
+  </div>
 </template>
-
+ 
 <script>
 import VueSlideBar from 'vue-slide-bar'
-
-  export default {
-       components: {
-        VueSlideBar
-      },
-    data () {
-              return {
-                rangeValue: {},
-                sliderWithLabel: {
-                value: '13:00',
-                data: ['06:00','07:00','08:00','09:00','10:00','11:00','12:00','13:00','14:00','15:00','16:00',
-                        '17:00','18:00','19:00','20:00','24:00','01:00','02:00','03:00','04:00','05:00'],
-                range: [
-                  {
-                    label: '06:00',
-                    isHide: true
-                  },
-                  {
-                    label: '07:00',
-                    isHide: true
-                  },
-                  {
-                    label: '08:00',
-                    isHide: true
-                  },
-                  {
-                    label: '09:00',
-                    isHide: true
-                  },
-                  {
-                    label: '10:00',
-                    isHide: true
-                  },
-                  {
-                    label: '11:00',
-                    isHide: true
-                  },
-                  {
-                    label: '12:00',
-                    isHide: true
-                  },
-                  {
-                    label: '13:00',
-                    isHide: true
-                  },
-                  {
-                    label: '14:00',
-                    isHide: true
-                  },
-                  {
-                    label: '15:00',
-                    isHide: true
-                  },
-                  {
-                    label: '16:00',
-                    isHide: true
-                  },
-                  {
-                    label: '17:00',
-                    isHide: true
-                  },
-                  {
-                    label: '18:00',
-                    isHide: true
-                  },
-                  {
-                    label: '19:00',
-                    isHide: true
-                  },
-                  {
-                    label: '20:00',
-                    isHide: true
-                  },
-                  {
-                    label: '21:00',
-                    isHide: true
-                  },
-                  {
-                    label: '22:00',
-                    isHide: true
-                  },
-                  {
-                    label: '23:00',
-                    isHide: true
-                  },
-                  {
-                    label: '00:00',
-                    isHide: true
-                  },
-                  {
-                    label: '01:00',
-                    isHide: true
-                  },
-                  {
-                    label: '02:00',
-                    isHide: true
-                  },
-                  {
-                    label: '03:00',
-                    isHide: true
-                  },
-                  {
-                    label: '04:00',
-                    isHide: true
-                  },
-                  {
-                    label: '05:00',
-                    isHide: true
-                  }
-                ],
-              }
-            }
-            },
-            methods: {
-              callbackRange: function(val) {
-                this.rangeValue = val
-              }
-            }
+ 
+export default {
+  data () {
+    return {
+      rangeValue: {},
+      slider: {
+        value: 1,
+        data: [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        range: [
+          {
+            label: '0'
+          },
+          {
+            label: '1',
+          },
+          {
+            label: '2'
+          },
+          {
+            label: '3',
+          },
+          {
+            label: '4'
+          },
+          {
+            label: '5',
+          },
+          {
+            label: '6'
+          },
+          {
+            label: '7'
+          },
+          {
+            label: '8'
+          },
+          {
+            label: '9'
+          },
+          {
+            label: '10'
+          },
+          {
+            label: '11'
+          },
+          {
+            label: '12'
+          },
+          {
+            label: '13'
+          },
+          {
+            label: '14'
+          },
+          {
+            label: '15'
+          },
+          {
+            label: '16'
+          },
+          {
+            label: '17'
+          },
+          {
+            label: '18'
+          },
+          {
+            label: '19'
+          },
+          {
+            label: '20'
+          },
+          {
+            label: '21'
+          },
+          {
+            label: '22'
+          },
+          {
+            label: '23'
+          },
+          {
+            label: '24'
           }
-        
+        ]
+      }
+    }
+  },
+  methods: {
+    callbackRange: function(val) {
+        this.rangeValue = val
+    },
+    setActualTime: function() {
+        this.curTime =  new Date(Date.now()).toTimeString().slice(0,5);
+    },
+    getActualTime: function(){
+        var d = new Date(Date.now());
+        var s=  d.getSeconds();
+        var ms = d.getMilliseconds();
+        var time = new Date(Date.now()).toTimeString().slice(0,5) + ':' + s + '.' + ms;
+        return time;
+    },
+  },
+  created() {
+     this.$root.$refs.slider2_component = this;
+  },
+  components: {
+    VueSlideBar
+  }
+}
 </script>

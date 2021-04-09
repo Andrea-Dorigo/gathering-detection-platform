@@ -12,8 +12,8 @@
         <l-map :zoom="zoom" :center="center" @update:center="centerUpdated" @update:zoom="zoomUpdated" :max-zoom="18" :min-zoom="15" >
             <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></l-tile-layer>
             <Vue2LeafletHeatmap   :lat-lng="latlngs" :radius="60" :min-opacity=".75" :blur="60"></Vue2LeafletHeatmap>
-            <l-marker :lat-lng="markerLatLng">
-                <l-popup> {{message}}</l-popup>
+            <l-marker v-if="zoom>16" :lat-lng="markerLatLng">
+                <l-popup>{{message}}</l-popup>
             </l-marker>
         </l-map>
     </div>
@@ -35,12 +35,13 @@ export default {
     LPopup
   },
   data() {
+    var message='';
     return {
       latlngs: [[41.899139, 12.473311]],
       center: [41.899139, 12.473311],
       zoom: 15,
       markerLatLng: [41.899139, 12.473311],
-      message: 'ciao emma'
+      message,
     };
   },
   methods: {
@@ -54,30 +55,31 @@ export default {
         })
       },*/
     retrieveCoordinate : function(date) {
+      var numPeople = 0;
       var city = this.$root.$refs.autocompleteSearch_component.getNameCity();
-      //prende num persone in quella data 
+      console.log("1");
       Elements.getDataRT(city,date).then(res => {
-        var numPeople = res.data;
-        this.setMessagePopUp(res.data);
+        numPeople = res.data[0].numPeople;
+        console.log("2");
           if( res.data != 0) {
-            this.markerLatLng=res.data[0];
-             //prende le coordinate della città
-              Elements.getCoo(city).then(res => {
-                  this.markerLatLng = res.data[0];
-                  this.latlngs=res.data;
-                  var geoPoints = this.generateRandomPoints({'lat': this.latlngs.latitude, 'lng':this.latlngs.longitude}, 10, numPeople);
-                  this.$root.$refs.LHeatmap_component.setHeatLayer(geoPoints);
-                  this.setCenter(res.data[0]);
-              })
+            this.markerLatLng= [res.data[0].latitude, res.data[0].longitude];
+            this.message='In '+ res.data[0].location + ' ci sono '+numPeople+' persone';
           }
           else {
             //rimuovere colore non sono riuscita con removeLayer
             //mettere alert migliore 
+            this.message='Non ci sono dati disponibili';
             alert("Non ci sono dati disponibili");
           }  
         })
-        
-        
+        Elements.getCoo(city).then(res => {
+           console.log("3");
+                  this.markerLatLng = res.data[0];
+                  this.latlngs=res.data[0];
+                  var geoPoints = this.generateRandomPoints({'lat': this.latlngs[0], 'lng':this.latlngs[1]}, 10, numPeople);
+                  this.$root.$refs.LHeatmap_component.setHeatLayer(geoPoints);
+                  this.setCenter(res.data[0]);
+              })
     },
     setCenter: function(value) {
         this.center= value;

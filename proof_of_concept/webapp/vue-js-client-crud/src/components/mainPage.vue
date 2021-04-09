@@ -17,9 +17,7 @@
   <div id="mc">
     <listCity/>
     <BasicExample id="map"/>
-    <div id="calendar">
-       <Datepicker :inline="true" v-model="picker" v-on:selected="setDate" format="yyyy-MM-dd"/>
-    </div>
+    <Datepicker id="calendar" :inline="true" v-model="picker" v-on:selected="setDate" format="yyyy-MM-dd"/>
   </div>
   <trendGraph />
 
@@ -54,23 +52,22 @@ export default {
     }
   },
   methods: {
+    //Quando si preme ReloadMap
     getRetrieveCoordinate: function(){
       var date = this.picker = new Date().toISOString().substr(0, 10);
-      var time = this.$root.$refs.slider_component.getActualTime();
-      date = date + 'T' + time + '+00:00';
-      time = date;
-      var prova = "2021-03-24T09:16:55.110+00:00";
-      this.$root.$refs.slider_component.setActualTime();
-      this.$root.$refs.basicExample_component.retrieveCoordinate(prova);
+      var time = this.$root.$refs.slider2_component.getActualTime();
+      date = date + 'T' + time;
+      //var prova = "2021-03-24T09:16:55.110+00:00";
+      this.$root.$refs.slider2_component.setActualTime();
+      this.$root.$refs.basicExample_component.retrieveCoordinate(date);
     },
+    //Quando si seleziona data
     setDate: function(date){
       var d = this.picker = date.toISOString().substr(0, 10);
       // getActualTime ritorna l'ora precisa di adesso, andrà usata getCurTime, non appena capisco come aggiungere sec e ms
-      var t = this.$root.$refs.slider_component.getActualTime();
-      d = d + 'T' + t + '+00:00';
-      t = d;
-      var prova = '2021-03-24T12:16:55.234+00:00';
-      this.$root.$refs.basicExample_component.retrieveCoordinate(prova);
+      var t = this.$root.$refs.slider2_component.getActualTime();
+      d = d + 'T' + t;
+      this.$root.$refs.basicExample_component.retrieveCoordinate(d);
     },
     getDate: function() {
       return this.picker;
@@ -83,16 +80,16 @@ export default {
 
 <style scope>
 #things {
-   z-index: -11;
+   z-index: -2;
 }
 #slider{
-  z-index: -11;
+  z-index: 0;
   margin-left: 30px;
   margin-right: 20px;
   width: 90%;
 }
 #sb {
-  z-index: 0;
+  z-index: -1;
   display: flex;
   width: 100%;
   padding-top: 10px;
@@ -106,7 +103,7 @@ export default {
   margin-left: 20px;
 }
 #calendar{
-  z-index: -11;
+  z-index: 0;
   padding-right: 20px;
   padding-left: 20px;
   margin-left: 100px;
