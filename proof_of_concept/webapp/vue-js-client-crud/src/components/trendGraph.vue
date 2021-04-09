@@ -9,8 +9,10 @@
 
 <template>
   <div class="trendGraph">
+    <button
+    @click="getNumPeopleToday()">STAMPA IL GRAFICO</button>
     <trend
-      :data="[0, 2, 5, 9, 5, 10, 3, 5, 0, 0, 1, 8, 2, 9, 0]"
+      :data="data"
       :gradient="['#6fa8dc', '#42b983', '#2c3e50']"
       auto-draw
       smooth
@@ -25,19 +27,28 @@ import Elements from '../services/htpprequest';
 
 export default {
   name: 'trendGraph',
-  // methods: {
-  //  getNumPeopleToday: function() {
-  //    Elements.getCoo("Roma").then(res => {
-  //        this.latlngs=res.data;
-  //        console.log(this.latlngs);
-  //     });
-  //  },
+  data() {
+    return {
+      data: []
+    }
+  },
+  methods: {
+   getNumPeopleToday: function() {
+     console.log("bruh");
+     this.data = Elements.getDataRT("Roma","2021-04-3T10").then(data => {
+         this.numPeopleToday=data.data;
+         console.log("here bruh");
+         console.log(this.numPeopleToday);
+         return this.numPeopleToday;
+      });
+    // return this.numPeople;
+    this.data = [0,1,2,3,4,5,6];
+     return this.data;
+    }
+  },
   created() {
-    console.log("bruh");
-    Elements.getNumPeopleToday("Roma").then(res => {
-        this.numPeopleToday=res.data;
-        console.log(this.numPeopleToday);
-     });
+    // getNumPeopleToday();
+
   }
 }
 
