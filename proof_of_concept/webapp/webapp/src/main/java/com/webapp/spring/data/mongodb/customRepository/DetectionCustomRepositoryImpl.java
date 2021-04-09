@@ -53,8 +53,8 @@ public class DetectionCustomRepositoryImpl implements DetectionCustomRepository 
     }
 
     public List<Integer> getNumPeopleToday(String city, String startDate) throws Exception {
-        Query query = new Query();
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH");
+        Query query = new Query();
         query.addCriteria(Criteria.where("date").gte(dateFormat.parseObject(startDate)));
         query.addCriteria(Criteria.where("city").is(city));
         List<Detection> detections = mongoTemplate.find(query, Detection.class, "detection");

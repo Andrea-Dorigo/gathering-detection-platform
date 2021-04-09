@@ -35,19 +35,13 @@ export default {
   methods: {
    getNumPeopleToday: function() {
      var tzoffset = (new Date()).getTimezoneOffset() *(-1/60); //offset in hours (+2, cest)
-     var today = (new Date());
+     var today = new Date();
      today.setHours(0 + tzoffset,0,0,0);
      today = today.toISOString().slice(0, -1);
      this.data = Elements.getNumPeopleToday("Krk",today).then(data => {
          this.data = data.data;
-         console.log("returned data: " + this.data);
       });
     }
-  },
-  created() {
-    this.$root.$refs.trendGraph_component = this;
-    // getNumPeopleToday();
-
   }
 }
 
@@ -55,7 +49,7 @@ export default {
 
 <style scoped>
 .trendGraph {
-  width: 40%;
+  width: 60%;
   margin: 4em auto 0 auto;
 }
 </style>
