@@ -43,10 +43,9 @@ public class DetectionCustomRepositoryImpl implements DetectionCustomRepository 
     public List<Detection> getDataRT(String city, String startDate) throws Exception {
         Query query = new Query();
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH");
-        //query.addCriteria(Criteria.where("city").is(city));
-        System.out.println(dateFormat.parseObject("2021-03-24T10"));
         query.addCriteria(Criteria.where("date").lte(dateFormat.parseObject(startDate)));
         query.addCriteria(Criteria.where("city").is(city));
+        query.limit(1);
         List<Detection> numPeople = mongoTemplate.find(query, Detection.class, "detection");
         System.out.println(numPeople);
         return numPeople;

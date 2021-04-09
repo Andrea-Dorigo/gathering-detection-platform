@@ -48,23 +48,22 @@ export default {
     }
   },
   methods: {
+    //Quando si preme ReloadMap
     getRetrieveCoordinate: function(){
       var date = this.picker = new Date().toISOString().substr(0, 10);
       var time = this.$root.$refs.slider2_component.getActualTime();
-      date = date + 'T' + time + '+00:00'; 
-      time = date; 
-      var prova = "2021-03-24T09:16:55.110+00:00";
+      date = date + 'T' + time; 
+      //var prova = "2021-03-24T09:16:55.110+00:00";
       this.$root.$refs.slider2_component.setActualTime();
-      this.$root.$refs.basicExample_component.retrieveCoordinate(prova);
+      this.$root.$refs.basicExample_component.retrieveCoordinate(date);
     },
+    //Quando si seleziona data 
     setDate: function(date){
       var d = this.picker = date.toISOString().substr(0, 10);
       // getActualTime ritorna l'ora precisa di adesso, andrà usata getCurTime, non appena capisco come aggiungere sec e ms
       var t = this.$root.$refs.slider2_component.getActualTime();
-      d = d + 'T' + t + '+00:00'; 
-      t = d; 
-      var prova = t;
-      this.$root.$refs.basicExample_component.retrieveCoordinate(prova);
+      d = d + 'T' + t; 
+      this.$root.$refs.basicExample_component.retrieveCoordinate(d);
     },
     getDate: function() {
       return this.picker;
