@@ -13,6 +13,9 @@ class Elements {
     getDataRT(city, date) {
         return http.get(`/RT/${city}/${date}`);
     }
+    getNumPeopleToday(city, date) {
+        return http.get(`/numPeopleToday/${city}/${date}`);
+    }
 }
 
 export default new Elements();

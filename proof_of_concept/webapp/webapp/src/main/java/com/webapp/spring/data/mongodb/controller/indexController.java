@@ -3,7 +3,7 @@
   File Name: indexController.java
   Author: Emma Roveroni
   Creation Date: 2021-03-07
-  Summary: the file containes the methods ?? 
+  Summary: the file containes the methods ??
   Last change date: 2021-04-01
 */
 package com.webapp.spring.data.mongodb.controller;
@@ -44,7 +44,7 @@ public class indexController {
     public ResponseEntity<List<Detection>>getAllDetection(@RequestParam(required = false) String id) {
         try {
             List<Detection> detec = new ArrayList<Detection>();
-            if (id == null) { 
+            if (id == null) {
                 coordinateRepository.findAll().forEach(detec::add);
             }
             else {
@@ -74,4 +74,8 @@ public class indexController {
 public ResponseEntity<List<Detection>> fetchDataRT(@PathVariable("city") String city,@PathVariable("date") String date ) throws Exception {
     return new ResponseEntity<>(coordinateRepository.getDataRT(city,date),HttpStatus.OK);
  }
+ @GetMapping("/numPeopleToday/{city}/{date}")
+ public ResponseEntity<List<Integer>> fetchNumPeopleToday(@PathVariable("city") String city,@PathVariable("date") String date ) throws Exception {
+     return new ResponseEntity<>(coordinateRepository.getNumPeopleToday(city,date),HttpStatus.OK);
+  }
 }

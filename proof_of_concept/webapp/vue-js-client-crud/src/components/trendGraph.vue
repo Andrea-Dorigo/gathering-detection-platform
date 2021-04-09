@@ -10,7 +10,7 @@
 <template>
   <div class="trendGraph">
     <button
-    @click="getNumPeopleToday()">STAMPA IL GRAFICO</button>
+    @click="getNumPeopleToday()">Stampa il grafico di oggi (Krk)</button>
     <trend
       :data="data"
       :gradient="['#6fa8dc', '#42b983', '#2c3e50']"
@@ -34,19 +34,18 @@ export default {
   },
   methods: {
    getNumPeopleToday: function() {
-     console.log("bruh");
-     this.data = Elements.getDataRT("Roma","2021-04-3T10").then(data => {
-         this.numPeopleToday=data.data;
-         console.log("here bruh");
-         console.log(this.numPeopleToday);
-         return this.numPeopleToday;
+     var tzoffset = (new Date()).getTimezoneOffset() *(-1/60); //offset in hours (+2, cest)
+     var today = (new Date());
+     today.setHours(0 + tzoffset,0,0,0);
+     today = today.toISOString().slice(0, -1);
+     this.data = Elements.getNumPeopleToday("Krk",today).then(data => {
+         this.data = data.data;
+         console.log("returned data: " + this.data);
       });
-    // return this.numPeople;
-    this.data = [0,1,2,3,4,5,6];
-     return this.data;
     }
   },
   created() {
+    this.$root.$refs.trendGraph_component = this;
     // getNumPeopleToday();
 
   }
