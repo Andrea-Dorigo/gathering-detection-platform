@@ -1,5 +1,5 @@
 \chapter{Requisiti}\label{Requisiti}
-In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{\scaleto{G}{3pt}}$ individuati dal proponente$_{\scaleto{G}{3pt}}$ e dal gruppo \textit{Jawa Druids}. Ogni requisito viene individuato da un codice identificativo, una sua descrizione, la tipologia di requisito e la fonte di riferimento, la spiegazione di ogni parte è descritta nel documento \textit{Norme del Progetto v2.0.0}. Nella sezione successiva viene illustrato attraverso una tabella il tracciamento dei requisiti alla loro fonte e viceversa.\\
+In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{\scaleto{G}{3pt}}$ individuati dal proponente$_{\scaleto{G}{3pt}}$ e dal gruppo \textit{Jawa Druids}. Ogni requisito viene individuato da un codice identificativo, una sua descrizione, la tipologia di requisito e la fonte di riferimento, la spiegazione di ogni parte è descritta nel documento \textit{Norme del Progetto v3.0.0}. Nella sezione successiva viene illustrato attraverso una tabella il tracciamento dei requisiti alla loro fonte e viceversa.\\
 I requisiti$_{\scaleto{G}{3pt}}$ sono stati individuati utilizzando la seguente codifica:
 \begin{center}
 	\textbf{RS[classificazione][tipo\_di\_requisito][codice\_requisito]}
@@ -37,12 +37,12 @@ La descrizione della classificazione è la seguente:
 			\makecell[c]{\textbf{Codice RS}} & \makecell[c]{\textbf{Descrizione}} & \makecell[c]{\textbf{Tipo di requisito}} & \makecell[c]{\textbf{Fonte}} \\
 			%fase 1
 			\hline
-			\centering RSFO1 & Utilizzo di motori software ‘contapersone’  &\centering  Obbligatorio & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$ \\ V. esterno 17-12-2020 } \\
+			\centering RSFO1 & Utilizzo di motori software ‘contapersone’  &\centering  Obbligatorio & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$ \\ V. esterno 2020-12-17 } \\
 			% \shortstack{Capitolato\\Verbale esterno 17-12-2020}   \\
 			\hline
 			\centering RSFF2 & Realizzazione di simulatori di altre sorgenti dati sia dei dati storici/in monitoraggio che dati previsionali & \centering Facoltativo & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$ } \\
 			\hline
-			\centering RSFO3  & Viene visualizzato un  sezionei errore per la mancanza dati nella generazione della heat map$_{\scaleto{G}{3pt}}$  &\centering  Obbligatorio & \makecell[tc]{UC2}  \\
+			\centering RSFO3  & Viene visualizzato un  errore per la mancanza dati nella generazione della heat map$_{\scaleto{G}{3pt}}$  &\centering  Obbligatorio & \makecell[tc]{UC2}  \\
 			\hline
 			\centering RSFO4 & Archiviazione di tutti i dati nel database & \centering Obbligatorio & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$ \\ UC8}  \\
 			\hline
@@ -80,11 +80,11 @@ La descrizione della classificazione è la seguente:
 			\hline
 			\centering RSFO17 & Il sistema deve aggiornare la mappa automaticamente ogni 10 minuti &\centering Obbligatorio & \makecell[tc]{Interno} \\
 			\hline
-			\centering RSFO18 & Il modello di machine learning$_{\scaleto{G}{3pt}}$ deve poter salvare i pesi e le predizioni in un file & \centering Obbligatorio &  \makecell[tc]{V. esterno 2-02-2021} \\
+			\centering RSFO18 & Il modello di machine learning$_{\scaleto{G}{3pt}}$ deve poter salvare i pesi e le predizioni in un file & \centering Obbligatorio &  \makecell[tc]{V. esterno 2021-02-02} \\
 			\hline
-			\centering RSFO18.1 & Il formato di file prodotto deve essere .h5 & \centering Obbligatorio & \makecell[tc]{V. esterno 2-02-2021} \\
+			\centering RSFO18.1 & Il formato di file prodotto deve essere .h5 & \centering Obbligatorio & \makecell[tc]{V. esterno 2021-02-02} \\
 			\hline
-			\centering RSFO19 & Viene inviato un  sezionei errore al front end$_{\scaleto{G}{3pt}}$, dal back end, se non ci sono i dati richiesti &\centering Obbligatorio & \makecell[tc]{Interno \\ UC9} \\
+			\centering RSFO19 & Viene inviato un errore al front end$_{\scaleto{G}{3pt}}$, dal back end, se non ci sono i dati richiesti &\centering Obbligatorio & \makecell[tc]{Interno \\ UC9} \\
 			\hline
 			\centering RSFO20 & L'utente può selezionare una città tra quelle disponibili &\centering Obbligatorio & \makecell[tc]{Interno \\ UC4} \\
 			\hline
@@ -110,7 +110,7 @@ La descrizione della classificazione è la seguente:
 			\hline
 			\centering RSFD29 & Il sistema deve poter prelevare dati da diverse fonti e formattarle nel tipo di default &\centering Desiderabile & \makecell[tc]{Interno} \\
 			\hline
-			\centering RSFO30 & Il sistema deve utilizzare un software 'contapersone' già allenato &\centering Obbligatorio & \makecell[tc]{V. esterno 02-02-2021} \\
+			\centering RSFO30 & Il sistema deve utilizzare un software 'contapersone' già allenato &\centering Obbligatorio & \makecell[tc]{V. esterno 2021-02-02} \\
 			\hline
 			\centering RSFF31 & L'utente può reperire il manuale d'uso  &\centering Facoltativo & \makecell[tc]{Interno \\ UC12} \\
 			\hline
@@ -132,7 +132,7 @@ La descrizione della classificazione è la seguente:
 			\hline
 			\centering RSFD33.2 & L'utente deve poter ricercare tramite codice identificativo in una barra di ricerca le città presenti nel database &\centering Desiderabile & \makecell[tc]{UC6.2} \\
 			\hline
-			\centering RSFD34 & Viene visualizzato un  sezionei errore all'utente che non sono presenti i dati richiesti nel database attraverso la barra di ricerca &\centering Desiderabile & \makecell[tc]{UC7} \\
+			\centering RSFD34 & Viene visualizzato un errore all'utente che non sono presenti i dati richiesti nel database attraverso la barra di ricerca &\centering Desiderabile & \makecell[tc]{UC7} \\
 			\hline
 			\centering RSFD35 & L'utente deve poter selezionare due città per poter mettere i loro dati a confronto &\centering Desiderabile & \makecell[tc]{UC13} \\
 			\hline
@@ -144,7 +144,7 @@ La descrizione della classificazione è la seguente:
 			\hline
 			\centering RSFD37 & L'utente deve poter inserire l'e-mail per il ricevimento delle informazioni della città selezionata &\centering Desiderabile & \makecell[tc]{UC15} \\
 			\hline
-			\centering RSFD37.1 & Viene visualizzato un  sezionei errore all'utente dal front end$_{\scaleto{G}{3pt}}$ se l'email inserita è scritta in modo errato  &\centering Desiderabile & \makecell[tc]{UC16} \\
+			\centering RSFD37.1 & Viene visualizzato un errore all'utente dal front end$_{\scaleto{G}{3pt}}$ se l'email inserita è scritta in modo errato  &\centering Desiderabile & \makecell[tc]{UC16} \\
 			\hline
 			\centering RSFD38 & Il sistema salva nel database l'e-mail e la città selezionata &\centering Desiderabile & \makecell[tc]{UC15} \\
 			\hline
@@ -198,7 +198,7 @@ La descrizione della classificazione è la seguente:
 			\rowcolor{airforceblue}
 			\makecell[c]{\textbf{Codice RS}} & \makecell[c]{\textbf{Descrizione}} & \makecell[c]{\textbf{Tipo di requisito}} & \makecell[c]{\textbf{Fonte}} \\
 			\hline
-		\centering RSQO1  & La progettazione e la codifica dei requisiti devono rispettare le norme e le metriche definite nel documento \textit{Norme di Progetto 2.0.0}&\centering  Obbligatorio & \makecell[tc]{Interno} \\
+		\centering RSQO1  & La progettazione e la codifica dei requisiti devono rispettare le norme e le metriche definite nel documento \textit{Norme di Progetto 3.0.0}&\centering  Obbligatorio & \makecell[tc]{Interno} \\
 		\hline
 		\centering RSQF2  & Il codice sorgente del software deve essere disponibile in una repository$_G$ pubblica su Github$_G$  &\centering  Facoltativo & \makecell[tc]{Interno} \\
 		\hline
@@ -236,9 +236,9 @@ La descrizione della classificazione è la seguente:
 		\hline
 		\centering RSVF1.1  & Utilizzo di leaflet.js$_{\scaleto{G}{3pt}}$ per la creazione di heat map$_{\scaleto{G}{3pt}}$ &\centering  Facoltativo & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$} \\
 		\hline
-		\centering RSVO1.2  & Utilizzo di vue.js$_{\scaleto{G}{3pt}}$ per la creazione della wep-app$_{\scaleto{G}{3pt}}$  &\centering  Obbligatorio  & \makecell[tc]{V. esterno 02-02-2021} \\
+		\centering RSVO1.2  & Utilizzo di vue.js$_{\scaleto{G}{3pt}}$ per la creazione della web-app$_{\scaleto{G}{3pt}}$  &\centering  Obbligatorio  & \makecell[tc]{V. esterno 2021-02-02} \\
 		\hline
-		\centering RSVF2 & Utilizzo di Pandas come strumento per la manipolazione dei dati & \centering Facoltativo & \makecell[tc]{V. esterno 02-02-2021} \\
+		\centering RSVF2 & Utilizzo di Pandas come strumento per la manipolazione dei dati & \centering Facoltativo & \makecell[tc]{V. esterno 2021-02-02} \\
 		\hline
 		\centering RSVO3  & Il sistema deve far uso dell'ecosistema Apache Kafka$_{\scaleto{G}{3pt}}$ &\centering  Obbligatorio  & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$} \\
 		\hline
@@ -250,7 +250,7 @@ La descrizione della classificazione è la seguente:
 		\hline
 		\centering RSVO7  & La web application dev'essere disponibile in un ambiente locale, di sviluppo, e di produzione & \centering  Obbligatorio  & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$} \\
 		\hline
-		\centering RSVF8 & Utilizzo di Keras per lo sviluppo del modello machine learning$_{\scaleto{G}{3pt}}$ & \centering Facoltativo & \makecell[tc]{V. esterno 02-02-2021} \\
+		\centering RSVF8 & Utilizzo di Keras per lo sviluppo del modello machine learning$_{\scaleto{G}{3pt}}$ & \centering Facoltativo & \makecell[tc]{V. esterno 2021-02-02} \\
 		\hline
 		\centering RSVO9 & Il codice identificativo della città deve essere solo numerico & \centering Obbligatorio & \makecell[tc]{Interno} \\
 		\hline
@@ -275,7 +275,7 @@ La descrizione della classificazione è la seguente:
 		\rowcolor{airforceblue}
 		\makecell[tc]{\textbf{Codice RS}} & \makecell[c]{\textbf{Fonte}}  \\
 		\hline
-		\makecell[tc]{RSFO1} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$\\V. esterno 17-12-2020} \\
+		\makecell[tc]{RSFO1} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$\\V. esterno 2020-12-17} \\
 		\hline
 		\makecell[tc]{RSFF2} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$}\\
 		\hline
@@ -315,9 +315,9 @@ La descrizione della classificazione è la seguente:
 		\hline
 		\makecell[tc]{RSFO17} & \makecell[tc]{Interno}\\
 		\hline
-		\makecell[tc]{RSFO18} & \makecell[tc]{V. esterno 02-02-2021}\\
+		\makecell[tc]{RSFO18} & \makecell[tc]{V. esterno 2021-02-02}\\
 		\hline
-		\makecell[tc]{RSFO18.1} & \makecell[tc]{V. esterno 02-02-2021}\\
+		\makecell[tc]{RSFO18.1} & \makecell[tc]{V. esterno 2021-02-02}\\
 		\hline
 		\makecell[tc]{RSFO19} & \makecell[tc]{Interno \\ UC9}\\
 		\hline
@@ -345,7 +345,7 @@ La descrizione della classificazione è la seguente:
 		\hline
 		\makecell[tc]{RSFD29} & \makecell[tc]{Interno}\\
 		\hline
-		\makecell[tc]{RSFO30} & \makecell[tc]{V. esterno 02-02-2021}\\
+		\makecell[tc]{RSFO30} & \makecell[tc]{V. esterno 2021-02-02}\\
 		\hline
 		\makecell[tc]{RSFF31} & \makecell[tc]{Interno \\ UC12}\\
 		\hline
@@ -466,9 +466,9 @@ La descrizione della classificazione è la seguente:
 		\hline	
 		\makecell[tc]{RSVO1.1} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$}\\
 		\hline
-		\makecell[tc]{RSVO1.2} & \makecell[tc]{V. esterno 02-02-2021}\\
+		\makecell[tc]{RSVO1.2} & \makecell[tc]{V. esterno 2021-02-02}\\
 		\hline
-		\makecell[tc]{RSVF2} & \makecell[tc]{V. esterno 02-02-2021}\\
+		\makecell[tc]{RSVF2} & \makecell[tc]{V. esterno 2021-02-02}\\
 		\hline
 		\makecell[tc]{RSVO3} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$}\\
 		\hline
@@ -480,7 +480,7 @@ La descrizione della classificazione è la seguente:
 		\hline
 		\makecell[tc]{RSVO7} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$}\\
 		\hline
-		\makecell[tc]{RSVF8} & \makecell[tc]{V. esterno 02-02-2021}\\
+		\makecell[tc]{RSVF8} & \makecell[tc]{V. esterno 2021-02-02}\\
 		\hline
 		\makecell[tc]{RSVO9} & \makecell[tc]{Interno}\\
 		\hline
@@ -504,9 +504,9 @@ La descrizione della classificazione è la seguente:
 		\makecell[c]{Capitolato$_{\scaleto{G}{3pt}}$} & \makecell[c]{RSFO1\\RSFF2\\RSFO4\\RSFO4.1\\RSFO4.2\\RSFO5\\RSFD5.1\\RSFD6\\RSFO7\\RSPO1\\RSQO5\\RSQO6\\RSQO7\\RSVO1\\RSVF1.1\\RSVO3\\RSVO4\\RSVO7} \\
 		\hline
 		\hline
-		\makecell[c]{Verbale esterno 17-12-2020} & \makecell[c]{RSFO1} \\
+		\makecell[c]{Verbale esterno 2020-12-17} & \makecell[c]{RSFO1} \\
 		\hline
-		\makecell[c]{Verbale esterno 02-02-2021} & \makecell[c]{RSFO18\\RSFO18.1\\RSFO30\\RSVO1.2\\RSVF2\\RSVF8} \\
+		\makecell[c]{Verbale esterno 2021-02-02} & \makecell[c]{RSFO18\\RSFO18.1\\RSFO30\\RSVO1.2\\RSVF2\\RSVF8} \\
 		\hline
 		\makecell[c]{Interno} &\makecell[c]{RSFO8\\RSFO9\\RSFO10\\RSFO11\\RSFF12\\RSFD13\\RSFD14\\RSFF15\\RSFF16\\RSFO17\\RSFO19\\RSFO20\\RSFO21\\RSFO22\\RSFO22.1\\RSFO22.2\\RSFF23\\RSFO25\\RSFD29\\RSFF31\\RSPO2\\RSPO3\\RSPO4\\RSPF5\\RSQO1\\RSQF2\\RSQF3\\RSQF4\\RSVO5\\RSVF6\\RSVO9} \\
 		\hline

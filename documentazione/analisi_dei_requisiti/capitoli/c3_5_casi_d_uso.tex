@@ -50,9 +50,9 @@ La descrizione della classificazione è la seguente:
 	\item \textbf{Descrizione}: l’utente visualizza un  ’errore per la mancanza di dati necessari alla generazione della mappa. Questo accade quando il front end$_{\scaleto{G}{3pt}}$ non ha a disposizione tutti i dati;
 	\item \textbf{Scenario principale}:
 	\begin{itemize}
-		\item L’operazione di generazione mappa fallisce;
-		\item L’utente visualizza un  i errore per la mancanza dei dati;
-		\item L’utente clicca il pulsante “ok” per chiudere il messaggio.
+		\item l’operazione di generazione mappa fallisce;
+		\item l’utente visualizza un errore per la mancanza dei dati;
+		\item l’utente clicca il pulsante “ok” per chiudere il messaggio.
 	\end{itemize}
 	\item \textbf{Precondizione}: il front end$_{\scaleto{G}{3pt}}$ effettua un controllo sui dati, non sono presenti tutti i dati;
 	\item \textbf{Postcondizione}: viene visualizzato un messaggio all’utente per informarlo sul problema riscontrato e l’operazione fallisce.
@@ -116,9 +116,9 @@ Dopo un'attenta analisi, il gruppo ha deciso di porre questo caso d'uso separato
 
 \begin{itemize}
 	\item \textbf{Attori primari:} utente generico;
-	\item \textbf{Descrizione:} l’utente visualizza l'etichetta (popup$_{\scaleto{G}{3pt}}$) contenente le informazioni riguardanti la città visualizzata;
-	\item \textbf{Scenario principale:} l’utente ha effettuato uno o più zoom-in sulla zona di interesse e visualizza l'etichetta informativa riferita alla città;
-	\item \textbf{Precondizione:} il livello di zoom-in è diverso da quello iniziale ed il sistema mostra l'etichetta relativa alla città;
+	\item \textbf{Descrizione:} l’utente visualizza un'icona del punto di interesse. Premendo l'icona vine visualizzata l'etichetta (popup$_{\scaleto{G}{3pt}}$) contenente le informazioni riguardanti ad essa;
+	\item \textbf{Scenario principale:} l’utente ha effettuato uno o più zoom-in sulla zona di interesse e visualizza l'etichetta informativa riferita alla città premendo sopra l'icona visibile nella mappa;
+	\item \textbf{Precondizione:} il livello di zoom-in è diverso da quello iniziale ed il sistema mostra l'icona per la visione delle informazioni del punto di interesse;
 	\item \textbf{Postcondizione:} l’utente visualizza l'etichetta.
 \end{itemize}
 
@@ -230,15 +230,15 @@ Dopo un'attenta analisi, il gruppo ha deciso di porre questo caso d'uso separato
 	\item \textbf{Postcondizione:} il sistema mostra all’utente il risultato della ricerca effettuata.
 \end{itemize}
 
-\subsubsection{UC7 - Visualizzazione  i mancanza città nel database}\label{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC7VisualizzazioneMessaggioDiMancanzaCittàNelDatabase}
+\subsubsection{UC7 - Visualizzazione mancanza città nel database}\label{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC7VisualizzazioneMessaggioDiMancanzaCittàNelDatabase}
 
 \begin{itemize}
 	\item \textbf{Attori primari:} utente generico;
-	\item \textbf{Descrizione:} l’utente visualizza un  i errore per un inserimento nella barra di ricerca di una città non presente nel database;
+	\item \textbf{Descrizione:} l’utente visualizza un errore per l'inserimento nella barra di ricerca di una città non presente nel database;
 	\item \textbf{Scenario principale:}
 	\begin{enumerate}
 		\item l’operazione di ricerca fallisce;
-		\item l’utente visualizza un  i errore;
+		\item l’utente visualizza un errore;
 		\item l’utente preme "ok" per chiudere il messaggio.
 	\end{enumerate}
 	\item \textbf{Precondizione:} il front end$_{\scaleto{G}{3pt}}$ effettua un controllo sui dati e non è presente la città ricercata;
@@ -281,9 +281,9 @@ Dopo un'attenta analisi, il gruppo ha deciso di porre questo caso d'uso separato
 	\item \textbf{Postcondizione}: il front end$_{\scaleto{G}{3pt}}$ visualizza e riceve le nuove informazioni.
 	\item \textbf{Generalizzazioni}: il front end$_{\scaleto{G}{3pt}}$ può fare una delle seguenti richieste:
 	\begin{itemize}
-		\item Visualizza i dati di uno specifico istante (UC8.1, sezione \ref{CasiDUsoCasiDUsoTraIlFrontEndEIlBackEndElencoDeiCasiDUsoUC81VisualizzazioneDeiDatiDiUnoSpecificoIstante});
+		\item Visualizza i dati di uno specifico istante passato (UC8.1, sezione \ref{CasiDUsoCasiDUsoTraIlFrontEndEIlBackEndElencoDeiCasiDUsoUC81VisualizzazioneDeiDatiDiUnoSpecificoIstante});
 		\item Visualizza i dati in tempo reale (UC8.2, sezione  \ref{CasiDUsoCasiDUsoTraIlFrontEndEIlBackEndElencoDeiCasiDUsoUC82VisualizzazioneDeiDatiInTempoReale});
-		\item Visualizza i dati predetti (UC8.3, sezione  \ref{CasiDUsoCasiDUsoTraIlFrontEndEIlBackEndElencoDeiCasiDUsoUC83VisualizzazioneDeiDatiPredetti}).
+		\item Visualizza i dati futuri predetti (UC8.3, sezione  \ref{CasiDUsoCasiDUsoTraIlFrontEndEIlBackEndElencoDeiCasiDUsoUC83VisualizzazioneDeiDatiPredetti}).
 	\end{itemize}
 	\item \textbf{Estensione}: il front end$_{\scaleto{G}{3pt}}$ effettua la richiesta al back end$_{\scaleto{G}{3pt}}$ il quale non invia nessun dato nella risposta (UC9, sezione \ref{CasiDUsoCasiDUsoTraIlFrontEndEIlBackEndElencoDeiCasiDUsoUC9VisualizzazioneMessaggioDiMancanzaDatiDalBackEnd}).
 \end{itemize}
@@ -306,28 +306,28 @@ Dopo un'attenta analisi, il gruppo ha deciso di porre questo caso d'uso separato
 	\item \textbf{Postcondizione}: il front end$_{\scaleto{G}{3pt}}$ ha ricevuto e visualizzato i dati ed è pronto alla generazione della heat map$_{\scaleto{G}{3pt}}$.
 \end{itemize}
 
-\subsubsection{UC8.3 - Visualizzazione dei dati predetti}\label{CasiDUsoCasiDUsoTraIlFrontEndEIlBackEndElencoDeiCasiDUsoUC83VisualizzazioneDeiDatiPredetti}
+\subsubsection{UC8.3 - Visualizzazione dei dati futuri predetti}\label{CasiDUsoCasiDUsoTraIlFrontEndEIlBackEndElencoDeiCasiDUsoUC83VisualizzazioneDeiDatiPredetti}
 \begin{itemize}
 	\item \textbf{Attori primari}: sistema front end$_{\scaleto{G}{3pt}}$;
-	\item \textbf{Descrizione}: il front end$_{\scaleto{G}{3pt}}$ richiede i dati riferiti allo stesso giorno, ma ad un orario avanzato rispetto a quello attuale.
+	\item \textbf{Descrizione}: il front end$_{\scaleto{G}{3pt}}$ richiede i dati i dati della previsione fino al giorno seguente.
 	I dati sono ricavati dall’elaborazione, attraverso un modello di machine learning$_{\scaleto{G}{3pt}}$, dei dati reali acquisti. Una volta ricevuti i dati il front end$_{\scaleto{G}{3pt}}$ li può visualizzare;
 	\item \textbf{Scenario principale}: il front end$_{\scaleto{G}{3pt}}$ richiede al back end$_{\scaleto{G}{3pt}}$ i dati elaborati dal modello machine learning$_{\scaleto{G}{3pt}}$. Completata la richiesta il front end$_{\scaleto{G}{3pt}}$ visualizzerà i dati inviati dal back end$_{\scaleto{G}{3pt}}$;
 	\item \textbf{Precondizione}: le informazioni vengono visualizzate sulla mappa come definito nell’UC1 (sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC1VisualizzazioneInformazioniSullaMappa}), impostando un orario successivo a quello attuale come descritto nell’UC5.1 (sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC51SelezioneDellOrario});
 	\item \textbf{Postcondizione}: il front end$_{\scaleto{G}{3pt}}$ ha ricevuto e visualizzato i dati ed è pronto alla generazione della heat map$_{\scaleto{G}{3pt}}$.
 \end{itemize}
 
-\subsubsection{UC9 - Visualizzazione  i mancanza dati dal back end}\label{CasiDUsoCasiDUsoTraIlFrontEndEIlBackEndElencoDeiCasiDUsoUC9VisualizzazioneMessaggioDiMancanzaDatiDalBackEnd}
+\subsubsection{UC9 - Visualizzazione mancanza dati dal back end}\label{CasiDUsoCasiDUsoTraIlFrontEndEIlBackEndElencoDeiCasiDUsoUC9VisualizzazioneMessaggioDiMancanzaDatiDalBackEnd}
 \begin{itemize}
 	\item \textbf{Attori primari}: sistema front end$_{\scaleto{G}{3pt}}$;
-	\item \textbf{Descrizione}: il front end$_{\scaleto{G}{3pt}}$ riceve un  i errore per la mancanza dati rispetto alla richiesta di visualizzazione effettuata;
+	\item \textbf{Descrizione}: il front end$_{\scaleto{G}{3pt}}$ riceve un errore per la mancanza dati rispetto alla richiesta di visualizzazione effettuata;
 	\item \textbf{Scenario principale}:
 	\begin{enumerate}
 		\item Il front end$_{\scaleto{G}{3pt}}$ richiede dei dati specifici al back end$_{\scaleto{G}{3pt}}$;
-		\item La risposta ricevuta è un  i errore;
+		\item La risposta ricevuta è un errore;
 		\item Il front end$_{\scaleto{G}{3pt}}$ ritenta la richiesta di informazioni.
 	\end{enumerate}
 	\item \textbf{Precondizione}: il front end$_{\scaleto{G}{3pt}}$ effettua una richiesta di dati, il back end$_{\scaleto{G}{3pt}}$ non ha a disposizione i dati richiesti;
-	\item \textbf{Postcondizione}: il front end$_{\scaleto{G}{3pt}}$ riceve un  i errore per la mancanza dei dati da visualizzare.
+	\item \textbf{Postcondizione}: il front end$_{\scaleto{G}{3pt}}$ riceve un errore per la mancanza dei dati da visualizzare.
 \end{itemize}
 
 \newpage
@@ -442,7 +442,7 @@ L'elenco dei casi d'uso in questa sezione individuano requisiti sviluppabili suc
 \end{center}
 
 
-\subsubsection{UC13 -Visualizzazione di dati a confronto di due città differenti}\label{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC13VisualizzazioneDiDatiAConfrontoDiDueCittaDifferenti}
+\subsubsection{UC13 - Visualizzazione di dati a confronto di due città differenti}\label{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC13VisualizzazioneDiDatiAConfrontoDiDueCittaDifferenti}
 
 \begin{itemize}
 	\item \textbf{Attori primari}: utente generico;
@@ -462,34 +462,34 @@ L'elenco dei casi d'uso in questa sezione individuano requisiti sviluppabili suc
 \end{center}
 
 
-\subsubsection{UC14 -Salvataggio dei dati di una città in un file esterno}\label{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC14SalvataggioDeiDatiDiUnaCittaInUnFileEsterno}
+\subsubsection{UC14 - Salvataggio dei dati di una città in un file esterno}\label{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC14SalvataggioDeiDatiDiUnaCittaInUnFileEsterno}
 
 
 \begin{itemize}
 	\item \textbf{Attori primari}: utente generico;
 	\item \textbf{Descrizione}: l’utente ha la possibilità di salvare localmente i dati relativi ad una città in un file;
 	\item \textbf{Scenario principale}: l’utente salva localmente i dati della città che sta visualizzando;
-	\item \textbf{Precondizione}: il sistema dispone le informazioni riguardanti le città e  l’utente sta visualizzando la heat map$_{\scaleto{G}{3pt}}$ di una città in particolare;
+	\item \textbf{Precondizione}: il sistema dispone delle informazioni riguardanti le città e  l’utente sta visualizzando la heat map$_{\scaleto{G}{3pt}}$ di una città in particolare;
 	\item \textbf{Postcondizione}: il sistema ha salvato localmente i dati della città che sta visualizzando.
 \end{itemize}
 
-\subsubsection{UC14.1 -Salvataggio dei dati di una città in un file esterno di tipo pdf}\label{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC141SalvataggioDeiDatiDiUnaCittaInUnFileEsternoDiTipoPdf}
+\subsubsection{UC14.1 - Salvataggio dei dati di una città in un file esterno di tipo pdf}\label{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC141SalvataggioDeiDatiDiUnaCittaInUnFileEsternoDiTipoPdf}
 
 \begin{itemize}
 	\item \textbf{Attori primari}: utente generico;
 	\item \textbf{Descrizione}: l’utente può selezionare l’estensione del file in pdf;
 	\item \textbf{Scenario principale}: l’utente seleziona l’estensione del file in pdf;
-	\item \textbf{Precondizione}: il sistema dispone le informazioni riguardanti le città e  l’utente sta visualizzando la heat map$_{\scaleto{G}{3pt}}$ di una città in particolare;
+	\item \textbf{Precondizione}: il sistema dispone delle informazioni riguardanti le città e  l’utente sta visualizzando la heat map$_{\scaleto{G}{3pt}}$ di una città in particolare;
 	\item \textbf{Postcondizione}: il sistema ha salvato localmente i dati in formato pdf.
 \end{itemize}
 
-\subsubsection{UC14.2 -Salvataggio dei dati di una città in un file esterno di tipo csv}\label{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC142SalvataggioDeiDatiDiUnaCittaInUnFileEsternoDiTipoCsv}
+\subsubsection{UC14.2 - Salvataggio dei dati di una città in un file esterno di tipo csv}\label{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC142SalvataggioDeiDatiDiUnaCittaInUnFileEsternoDiTipoCsv}
 
 \begin{itemize}
 	\item \textbf{Attori primari}: utente generico;
 	\item \textbf{Descrizione}: l’utente può selezionare l’estensione del file in csv;
 	\item \textbf{Scenario principale}: l’utente seleziona l’estensione del file in csv;
-	\item \textbf{Precondizione}: il sistema dispone le informazioni riguardanti le città e  l’utente sta visualizzando la heat map$_{\scaleto{G}{3pt}}$ di una città in particolare;
+	\item \textbf{Precondizione}: il sistema dispone delle informazioni riguardanti le città e  l’utente sta visualizzando la heat map$_{\scaleto{G}{3pt}}$ di una città in particolare;
 	\item \textbf{Postcondizione}: il sistema ha salvato localmente i dati in formato csv.
 \end{itemize}
 
@@ -515,19 +515,19 @@ L'elenco dei casi d'uso in questa sezione individuano requisiti sviluppabili suc
 	\item \textbf{Descrizione}: l'utente decide di voler essere notificato via email riguardo gli aggiornamenti relativi ad una determinata città;
 	\item \textbf{Scenario principale}:
 		\begin{itemize}
-			\item inserisce la propria mail - UC15.1 sezione \ref{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC15.1InserimentoEmail};
-			\item seleziona la città di interesse - UC15.2 sezione \ref{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC15.2SelezioneCitta}.
+			\item inserisce la propria mail (UC15.1, sezione \ref{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC15.1InserimentoEmail});
+			\item seleziona la città di interesse (UC15.2, sezione \ref{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC15.2SelezioneCitta}).
 		\end{itemize}
 	\item \textbf{Precondizione}: l'utente sta visualizzando la heat map$_{\scaleto{G}{3pt}}$ e richiede la notifica via email;
 	\item \textbf{Postcondizione}: il sistema aggiunge nel database l'email inserita dall'utente e la relativa città di interesse;
-	\item \textbf{Estensioni}: il front end effettua un controllo ortografico che segnala possibili errori all'utente (UC16, sezione \ref{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC16VisualizzazioneMessaggioDiErroreEmailErrata}).
+	\item \textbf{Estensioni}: il sistema determina che l'email inserita non è valida, di conseguenza viene visualizzato un messaggio d'errore (UC16, sezione \ref{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC16VisualizzazioneMessaggioDiErroreEmailErrata}).
 \end{itemize}
 
 \subsubsection{UC15.1 - Inserimento email}\label{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC15.1InserimentoEmail}
 
 \begin{itemize}
 	\item \textbf{Attori primari}: utente generico;
-	\item \textbf{Descrizione}: l'utente inserisce la propria mail, senza errori di ortografia;
+	\item \textbf{Descrizione}: l'utente inserisce la propria email;
 	\item \textbf{Scenario principale}: l'utente inserisce la propria email all'interno del form;
 	\item \textbf{Precondizione}: l'utente ha richiesto la notificazione via email;
 	\item \textbf{Postcondizione}: il sistema aggiunge nel database l'email inserita dall'utente;
@@ -538,20 +538,24 @@ L'elenco dei casi d'uso in questa sezione individuano requisiti sviluppabili suc
 \begin{itemize}
 	\item \textbf{Attori primari}: utente generico;
 	\item \textbf{Descrizione}: l'utente seleziona la città di suo interesse;
-	\item \textbf{Scenario principale}: l'utente seleziona la città di suo interesse all'interno del form;
+	\item \textbf{Scenario principale}: l'utente seleziona la città di suo interesse;
 	\item \textbf{Precondizione}: l'utente ha richiesto la notificazione via email;
-	\item \textbf{Postcondizione}: il sistema aggiunge nel database la città selezionata dall'utente;
+	\item \textbf{Postcondizione}: il sistema aggiunge nel database la città selezionata dall'utente per ricevere le notifiche su di essa;
 \end{itemize}
 
 
-\subsubsection{UC16 - Visualizzazione  i errore e-mail errata}\label{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC16VisualizzazioneMessaggioDiErroreEmailErrata}
+\subsubsection{UC16 - Visualizzazione messaggio di errore inserimento email}\label{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC16VisualizzazioneMessaggioDiErroreEmailErrata}
 
 \begin{itemize}
 	\item \textbf{Attori primari}: utente generico;
-	\item \textbf{Descrizione}: Il front end$_{\scaleto{G}{3pt}}$ invia un  i errore per un inserimento ortografico errato;
-	\item \textbf{Scenario principale}: l'utente legge il messaggio inviato dal front end e capisce che deve controllare l'email inserita;
-	\item \textbf{Precondizione}: il front end$_{\scaleto{G}{3pt}}$ blocca l'invio di dati al database;
-	\item \textbf{Postcondizione}: il front end$_{\scaleto{G}{3pt}}$ invia un messaggio di errore.
+	\item \textbf{Descrizione}: Il front end$_{\scaleto{G}{3pt}}$ mostra a video un messaggio di errore nell'inserimento della email;
+	\item \textbf{Scenario principale}: \begin{itemize}
+		\item l'operazione di inserimento email fallisce;
+		\item l'utente visualizza il messaggio d'errore;
+		\item l'utente clicca il pulsante "ok" per chiudere il messaggio.
+	\end{itemize}
+	\item \textbf{Precondizione}: l'email inserita non è valida;
+	\item \textbf{Postcondizione}: l'utente visualizza un messaggio di errore.
 \end{itemize}
 
 
