@@ -59,27 +59,32 @@ export default {
       var city = this.$root.$refs.autocompleteSearch_component.getNameCity();
       console.log("1");
       Elements.getDataRT(city,date).then(res => {
-        numPeople = res.data[0].numPeople;
-        console.log("2");
-          if( res.data != 0) {
+        if( res.data != 0) {
+            console.log(res.data)
+            numPeople = res.data[0].numPeople;
+            console.log("2");
             this.markerLatLng= [res.data[0].latitude, res.data[0].longitude];
             this.message='In '+ res.data[0].location + ' ci sono '+numPeople+' persone';
-          }
-          else {
+            this.latlngs = [res.data[0].latitude, res.data[0].longitude];
+            var geoPoints = this.generateRandomPoints({'lat': this.latlngs[0], 'lng':this.latlngs[1]}, 10, numPeople);
+            this.$root.$refs.LHeatmap_component.setHeatLayer(geoPoints);
+            this.setCenter(this.latlngs);
+            console.log(this.latlngs)
+        }
+        else {
             //rimuovere colore non sono riuscita con removeLayer
             //mettere alert migliore 
             this.message='Non ci sono dati disponibili';
             alert("Non ci sono dati disponibili");
-          }  
+        }  
         })
-        Elements.getCoo(city).then(res => {
+        /*Elements.getCoo(city).then(res => {
            console.log("3");
-                  this.markerLatLng = res.data[0];
                   this.latlngs=res.data[0];
                   var geoPoints = this.generateRandomPoints({'lat': this.latlngs[0], 'lng':this.latlngs[1]}, 10, numPeople);
                   this.$root.$refs.LHeatmap_component.setHeatLayer(geoPoints);
                   this.setCenter(res.data[0]);
-              })
+              })*/
     },
     setCenter: function(value) {
         this.center= value;
