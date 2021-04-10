@@ -55,17 +55,17 @@ export default {
     //Quando si preme ReloadMap
     getRetrieveCoordinate: function(){
       var date = this.picker = new Date().toISOString().substr(0, 10);
-      var time = this.$root.$refs.slider2_component.getActualTime();
+      var time = this.$root.$refs.slider2_component.reloadMap();
       date = date + 'T' + time;
-      //var prova = "2021-03-24T09:16:55.110+00:00";
-      this.$root.$refs.slider2_component.setActualTime();
+      this.$root.$refs.slider2_component.reloadMap();
       this.$root.$refs.basicExample_component.retrieveCoordinate(date);
     },
     //Quando si seleziona data
     setDate: function(date){
       var d = this.picker = date.toISOString().substr(0, 10);
       // getActualTime ritorna l'ora precisa di adesso, andrà usata getCurTime, non appena capisco come aggiungere sec e ms
-      var t = this.$root.$refs.slider2_component.getActualTime();
+      var t = this.$root.$refs.slider2_component.getTime();
+      console.log(t)
       d = d + 'T' + t;
       this.$root.$refs.basicExample_component.retrieveCoordinate(d);
     },

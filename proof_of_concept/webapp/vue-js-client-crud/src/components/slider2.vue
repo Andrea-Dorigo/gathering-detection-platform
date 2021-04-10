@@ -133,15 +133,16 @@ export default {
     callbackRange: function(val) {
         this.rangeValue = val
     },
-    setActualTime: function() {
-        this.curTime =  new Date(Date.now()).toTimeString().slice(0,5);
-    },
-    getActualTime: function(){
-        var d = new Date(Date.now());
-        var s=  d.getSeconds();
-        var ms = d.getMilliseconds();
-        var time = new Date(Date.now()).toTimeString().slice(0,5) + ':' + s + '.' + ms;
+    reloadMap: function(){
+        var time = new Date(Date.now()).getHours().toString();
+        this.rangeValue = time;
+        //manca da spostare visivamente lo slider 
+        //this.rangeValue.label = time;
         return time;
+    },
+    getTime: function() {
+      //non so come prendere l'orario dopo poichè è una stringa 
+      return this.rangeValue.label
     },
   },
   created() {
