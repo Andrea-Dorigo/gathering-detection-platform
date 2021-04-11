@@ -182,10 +182,12 @@ def main():
     # wait until midnight
     tomorrow = datetime.today() + timedelta(days=1)
     midnight = datetime.combine(tomorrow, datetime.min.time())
-    print( "waiting until: " + str(midnight) +
-           ";\ntime remaining: " + str(midnight - datetime.now()) )
+    five_past_midnight = midnight + timedelta(minutes=5)
+
+    print( "waiting until: " + str(five_past_midnight) +
+           ";\ntime remaining: " + str(five_past_midnight - datetime.now()) )
     #
-    # time.sleep((midnight - datetime.now()).total_seconds())
+    time.sleep((midnight - datetime.now()).total_seconds())
 
     # infinite loop
     while True:
@@ -194,14 +196,14 @@ def main():
 
         tomorrow = datetime.today() + timedelta(days=1)
         midnight = datetime.combine(tomorrow, datetime.min.time())
+        five_past_midnight = midnight + timedelta(minutes=5)
 
         # loop all webcams
         for webcam in json_data["webcams"]:
             predict(webcam)
 
-        break
         # # sleep until the next midnight
-        # time.sleep((midnight - datetime.now()).total_seconds())
+        time.sleep((five_past_midnight - datetime.now()).total_seconds())
 
 
 main()
