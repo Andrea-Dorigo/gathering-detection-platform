@@ -187,7 +187,7 @@ def main():
     print( "waiting until: " + str(five_past_midnight) +
            ";\ntime remaining: " + str(five_past_midnight - datetime.now()) )
     #
-    time.sleep((midnight - datetime.now()).total_seconds())
+    # time.sleep((midnight - datetime.now()).total_seconds())
 
     # infinite loop
     while True:
@@ -200,8 +200,11 @@ def main():
 
         # loop all webcams
         for webcam in json_data["webcams"]:
-            predict(webcam)
-
+            try:
+                predict(webcam)
+            except:
+                print('EXCEPTION OCCURRED')
+        
         # # sleep until the next midnight
         time.sleep((five_past_midnight - datetime.now()).total_seconds())
 
