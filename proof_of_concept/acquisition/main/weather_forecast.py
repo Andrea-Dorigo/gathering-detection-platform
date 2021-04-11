@@ -88,11 +88,15 @@ def main():
     time.sleep((midnight - datetime.now()).total_seconds())
 
     # infinite loop
+    #MODIFICATO! NON CHIAMA PIU' LA FUNZIONE OGNI 2 GIORNI, MA 1
     while True:
 
         # get next day midnight
         day_after_tomorrow = datetime.today() + timedelta(days=2)
         tomorrow_midnight = datetime.combine(day_after_tomorrow, datetime.min.time())
+
+        tomorrow = datetime.today() + timedelta(days=1)
+        midnight = datetime.combine(tomorrow, datetime.min.time())
 
         # loop all webcams
         for webcam in json_data["webcams"]:
@@ -106,7 +110,8 @@ def main():
             get_hourly_forecast(webcam["latitude"], webcam["longitude"])
 
         # sleep until the next midnight
-        time.sleep((tomorrow_midnight - datetime.now()).total_seconds())
+        time.sleep((midnight - datetime.now()).total_seconds())
 
 
 main()
+# get_hourly_forecast(45.309812,18.410428)
