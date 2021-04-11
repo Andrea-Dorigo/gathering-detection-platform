@@ -8,8 +8,8 @@ Si tratta di un linguaggio orientato ad oggetti, utile a sviluppare script, comp
 Nel progetto \textit{Gathering-Detection-Platform}, Python$_G$ è il linguaggio su cui si basa tutto il backend$_G$, compreso il modulo del machine-learning$_G$.
 
 \begin{itemize}
-  \item Versione utilizzata: 3.8.x;
-  \item Link download: \url{https://www.python.org/downloads/} .
+  \item versione utilizzata: 3.8.x;
+  \item link download: \url{https://www.python.org/downloads/} .
 \end{itemize}
 
 \subsection{MongoDB}\label{TecnologieMongoDB}
@@ -18,8 +18,8 @@ Si tratta di un database$_{\scaleto{G}{3pt}}$ non relazionale e orientato ai doc
 Classificato come tipo NoSQL$_G$, MongoDB$_{\scaleto{G}{3pt}}$ non utilizza la classica struttura basata su tabelle ma invece si basa su tipi di documenti JSON$_G$, facilitando così l'integrazioni di alcuni tipi di dati.
 
 \begin{itemize}
-    \item Versione utilizzata: 4.4.4;
-    \item Link download: \url{https://www.mongodb.com/it }.
+    \item versione utilizzata: 4.4.4;
+    \item link al sito: \url{https://www.mongodb.com/it }.
 \end{itemize}
 
 
@@ -41,8 +41,8 @@ Si tratta di una piattaforma che ha come caratteristica principale il fatto di r
 Il risultato è una virtualizzazione dalla piattaforma stessa, che rende così il linguaggio Java$_{\scaleto{G}{3pt}}$, e i relativi programmi, portabili su piattaforme hardware diverse.
 
 \begin{itemize}
-  \item Versione utilizzata: 11.x;
-  \item Link download: \url{https://www.java.com/it/download/}.
+  \item versione utilizzata: 11.x;
+  \item link download: \url{https://www.java.com/it/download/}.
 \end{itemize}
 
 \subsection{Vue.js}\label{TecnologieVue}
@@ -50,8 +50,8 @@ Il risultato è una virtualizzazione dalla piattaforma stessa, che rende così i
 Supporta molte funzionalità, anche avanzate, grazie ad una serie di librerie di supporto dedicate che sono ufficialmente mantenute.
 
 \begin{itemize}
-  \item Versione utilizzata: 4.5.x;
-  \item Link download: \url{https://vuejs.org/}.
+  \item versione utilizzata: 4.5.x;
+  \item link al sito: \url{https://vuejs.org/}.
 \end{itemize}
 
 \subsection{Node.js}\label{TecnologieNode}
@@ -61,21 +61,108 @@ A differenza di JavaScript$_{\scaleto{G}{3pt}}$ che in origine era lato client$_
 Implementa il paradigma "JavaScript everywhere" in modo da unificare lo sviluppo di applicazioni web intorno ad un unico linguaggio di programmazione, JavaScript$_{\scaleto{G}{3pt}}$.
 
 \begin{itemize}
-  \item Versione utilizzata: 14.16.x;
-  \item Link download: \url{https://nodejs.org/it/download/}.
+  \item versione utilizzata: 14.16.x;
+  \item link download: \url{https://nodejs.org/it/download/}.
 \end{itemize}
 
 \subsection{Bootstrap}\label{TecnologieBootstrap}
 Framework open-source che, mediante le proprie librerie, viene utilizzato per uniformare i vari componenti che compongono un'interfaccia web, oltre che per crearli.
 
 \begin{itemize}
-  \item Versione utilizzata: 4.x;
-  \item Link download: \url{https://getbootstrap.com/docs/5.0/getting-started/download/}.
+  \item versione utilizzata: 4.3.1;
+  \item link download: \url{https://getbootstrap.com/docs/5.0/getting-started/download/}.
 \end{itemize}
-
 
 
 \subsection{JSON}\label{TecnologieJson}
 Si tratta di un formato testuale necessario per l'esportazione ed importazione dei dati presenti nel \textit{modulo} di salvataggio dati, mediante MongoDB$_{\scaleto{G}{3pt}}$, ed esterni al database$_{\scaleto{G}{3pt}}$.
 È un formato dati diffuso per lo scambio di essi in applicazioni client-server$_G$.
 Basato su oggetti, ovvero coppie chiave/valore, e supporta una moltitudine di dati diversi. Infine è di facile lettura per l'utente e non necessita particolari procedure per modificarlo.
+
+
+\section{Librerie di terze parti}\label{LibrerieDiTerzeParti}
+Insieme alle tecnologie sopra citate, sono state anche integrate delle librerie di terze parti.
+
+\subsection{OpenCV}\label{LibrerieOpenCV}
+OpenCV è una libreria software multipiattaforma specializzata nella visione artificiale in tempo reale.
+È stata integrata nel \textit{modulo} adibito alla cattura immagini in tempo reale, in linguaggio python$_{\scaleto{G}{3pt}}$.
+
+\begin{itemize}
+  \item versione utilizzata: 4.2.0;
+  \item link al sito: \url{https://opencv.org/}.
+\end{itemize}
+
+\subsection{Yolo V3}\label{LibrerieYoloV3}
+Si tratta di uno script in linguaggio python$_{\scaleto{G}{3pt}}$ per il riconoscimento real-time di oggetti in una foto.
+Viene utilizzato nel \textit{modulo} di acquisizione dati per il riconoscimento e conteggio delle persone presenti in un singolo frame.
+
+\begin{itemize}
+  \item link al sito: \url{https://pjreddie.com/darknet/yolo/}.
+\end{itemize}
+
+\subsection{Pandas}\label{LibreriePandas}
+È una libreria veloce, potente e flessibile creata appositamente per analizzare dati e manipolarli mediante appositi strumenti.
+Utilizzata nel \textit{modulo} di machine-learning$_{\scaleto{G}{3pt}}$, basata su python$_{\scaleto{G}{3pt}}$.
+
+\begin{itemize}
+  \item versione utilizzata: 1.2.1;
+  \item link all'installazione: \url{https://pandas.pydata.org/getting_started.html}.
+\end{itemize}
+
+\subsection{Scikit-learn}\label{LibrerieScikitLearn}
+È una libreria open source di apprendimento automatico per il linguaggio di programmazione Python.
+Al suo interno sono presenti numerosi algoritmi, per la manipolazione dati, tra cui quelli di regressione, utilizzati nel \textit{modulo} di machine-learning$_{\scaleto{G}{3pt}}$.
+
+\begin{itemize}
+  \item versione utilizzata: 0.24.1;
+  \item link all'installazione: \url{https://scikit-learn.org/stable/install.html}.
+\end{itemize}
+
+\subsection{Mongoengine}\label{LibrerieMongoengine}
+Si tratta di un document-object mapper basato su python$_{\scaleto{G}{3pt}}$ ed ideato per lavorare assieme a MongoDB$_{\scaleto{G}{3pt}}$ da python$_{\scaleto{G}{3pt}}$.
+
+\begin{itemize}
+  \item versione utilizzata: 0.24.1;
+  \item link alla repo$_{\scaleto{G}{3pt}}$: \url{https://github.com/MongoEngine/mongoengine}.
+\end{itemize}
+
+\subsection{NumPy}\label{LibrerieNumpy}
+Libreria open-source$_{\scaleto{G}{3pt}}$, basata sul linguaggio python$_{\scaleto{G}{3pt}}$.
+Fornisce un grosso supporto a grandi matrici e array multidimensionli, inoltre integra molte funzioni matematiche adatte a lavorare su tali strutture dati.
+
+\begin{itemize}
+  \item versione utilizzata: 1.20.1;
+  \item link all'installazione: \url{https://numpy.org/install/}.
+\end{itemize}
+
+\subsection{Pylint}\label{LibreriePylint}
+Strumento utilizzato per l’analisi statica del codice sorgente Python$_{\scaleto{G}{3pt}}$. Viene quindi adottato per controllare la presenza di errori nel codice, con l’obiettivo di applicare uno standard codifica e di promuovere buone prassi di scrittura del codice
+
+\begin{itemize}
+  \item versione utilizzata: 2.7.3;
+  \item link al sito: \url{https://pypi.org/project/pylint/}.
+\end{itemize}
+
+\subsection{Checkstyle}\label{LibrerieCheckstyle}
+Strumento che permette di eseguire l’analisi statica del codice java$_{\scaleto{G}{3pt}}$ utilizzato nello sviluppo di un progetto software.
+
+\begin{itemize}
+  \item versione utilizzata: 2.17;
+  \item link alla repo$_{\scaleto{G}{3pt}}$: \url{https://github.com/checkstyle/checkstyle}.
+\end{itemize}
+
+\subsection{ESLint}\label{LibrerieESLint}
+Strumento di analisi del codice statico per identificare i le problematiche trovate nel codice JavaScript$_{\scaleto{G}{3pt}}$.
+
+\begin{itemize}
+  \item versione utilizzata: 2.1.19;
+  \item link alla repo: \url{https://www.npmjs.com/package/eslint}.
+\end{itemize}
+
+\subsection{Prettier}\label{LibreriePrettier}
+Strumento per il controllo automatico della formattazione del codice scritto in linguaggio JavaScript$_{\scaleto{G}{3pt}}$.
+
+\begin{itemize}
+  \item versione utilizzata: 6.3.2;
+  \item link al sito: \url{https://prettier.io/}.
+\end{itemize}
