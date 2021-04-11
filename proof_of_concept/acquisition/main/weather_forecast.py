@@ -103,11 +103,11 @@ def main():
             get_hourly_forecast(webcam["latitude"], webcam["longitude"])
 
         # sleep 30 minutes (1800 seconds)
-        time.sleep(1800)
-
-        # repeat (could be a repeat twice loop)
-        for webcam in json_data["webcams"]:
-            get_hourly_forecast(webcam["latitude"], webcam["longitude"])
+        # time.sleep(1800)
+        #
+        # # repeat (could be a repeat twice loop)
+        # for webcam in json_data["webcams"]:
+        #     get_hourly_forecast(webcam["latitude"], webcam["longitude"])
 
         # sleep until the next midnight
         time.sleep((midnight - datetime.now()).total_seconds())
