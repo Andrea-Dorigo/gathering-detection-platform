@@ -54,10 +54,14 @@ export default {
     },
     itemSelected: function(index){
       this.name = this.suggestiondata[index];
+      var date = new Date().toISOString().substr(0, 10);
       Elements.getCoo(this.name).then(res => {
         this.latlngs=res.data;
         this.$root.$refs.LHeatmap_component.setHeatLayer(this.latlngs);
         this.$root.$refs.basicExample_component.setCenter(res.data[0]);
+        this.$root.$refs.basicExample_component.placePopUp(res.data[0]);
+        this.$root.$refs.basicExample_component.zoomUpdated(15);
+        this.$root.$refs.basicExample_component.retrieveCoordinate(date);
       })
     },
     getNameCity : function() {

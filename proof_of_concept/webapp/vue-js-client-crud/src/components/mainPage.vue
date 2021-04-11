@@ -10,17 +10,19 @@
 <template>
 
 <div id="things">
-  <div id="sb">
-  <slider2 id="slider"/>
-   <button type="button" class="btn btn-outline-primary" value="Reload Map" @click="getRetrieveCoordinate">Reload map</button>
-  </div>
   <div id="mc">
     <listCity/>
+    <div id="sliderMap">
+      <div id="sb">
+    <slider2 id="slider"/>
+    <button type="button" class="btn btn-outline-primary" value="Reload Map" @click="getRetrieveCoordinate">Reload map</button>
+    </div>
     <BasicExample id="map"/>
-    <Datepicker id="calendar" :inline="true" v-model="picker" v-on:selected="setDate" format="yyyy-MM-dd"/>
+    </div>
+    <div id="calendar">
+    <Datepicker :inline="true" v-model="picker" v-on:selected="setDate" format="yyyy-MM-dd"/>
+    </div>
   </div>
-  <trendGraph />
-
 	</div>
 
 </template>
@@ -31,7 +33,6 @@ import Datepicker from 'vuejs-datepicker'
 import BasicExample from "./BasicExample.vue";
 import slider2 from './slider2.vue'
 import listCity from './listCity.vue'
-import trendGraph from "./trendGraph.vue"
 
 
 export default {
@@ -41,7 +42,6 @@ export default {
     BasicExample,
     slider2,
     listCity,
-    trendGraph
   },
   data() {
     var coords= [];
@@ -72,7 +72,9 @@ export default {
     getDate: function() {
       return this.picker;
     },
-
+    created() {
+    this.$root.$refs.mainPage_component = this;
+  }
   }
 
 }
@@ -86,17 +88,23 @@ export default {
   z-index: 0;
   margin-left: 30px;
   margin-right: 20px;
-  width: 90%;
+  width: 80%;
+}
+#sb>button {
+  margin-top: 30px;
+  margin-left: 60px;
+  margin-right: 0px;
+  height: 35%;
+  width: 15%;
 }
 #sb {
   z-index: -1;
   display: flex;
-  width: 100%;
+  width: 95%;
   padding-top: 10px;
   padding-bottom:10px;
 }
 #map {
-  padding-left: 100px;
   padding-right: 20px;
   width: 1200px;
   height: 600px;
@@ -105,8 +113,9 @@ export default {
 #calendar{
   z-index: 0;
   padding-right: 20px;
+  padding-top: 150px;
   padding-left: 20px;
-  margin-left: 100px;
+  margin-left: 50px;
 }
 #mc{
   padding-top: 10px;

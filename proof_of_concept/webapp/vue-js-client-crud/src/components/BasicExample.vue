@@ -62,7 +62,6 @@ export default {
         if( res.data != 0) {
             console.log(res.data)
             numPeople = res.data[0].numPeople;
-            console.log("2");
             this.markerLatLng= [res.data[0].latitude, res.data[0].longitude];
             this.message='In '+ res.data[0].location + ' ci sono '+numPeople+' persone';
             this.latlngs = [res.data[0].latitude, res.data[0].longitude];
@@ -94,6 +93,9 @@ export default {
     },
     zoomUpdated: function(zoom) {
       this.zoom = zoom;
+    },
+    placePopUp: function(place) {
+        this.markerLatLng = place;
     },
     setMessagePopUp: function(numPeople) {
         //bisogna prendere place, per es Piazza Navona

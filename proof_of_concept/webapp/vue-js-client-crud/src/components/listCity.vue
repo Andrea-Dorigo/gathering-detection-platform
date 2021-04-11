@@ -36,11 +36,15 @@ export default {
       //var coo = Elements.getCoo();
     },
     itemSelected: function(index){
+      var date = new Date().toISOString().substr(0, 10);
       this.name = this.suggestiondata[index];
       Elements.getCoo(this.name).then(res => {
         this.latlngs=res.data;
         this.$root.$refs.LHeatmap_component.setHeatLayer(this.latlngs);
         this.$root.$refs.basicExample_component.setCenter(res.data[0]);
+        this.$root.$refs.basicExample_component.placePopUp(res.data[0]);
+        this.$root.$refs.basicExample_component.zoomUpdated(15);
+        this.$root.$refs.basicExample_component.retrieveCoordinate(date);
       })
     },
     getNameCity : function() {
@@ -76,7 +80,9 @@ export default {
 }
 #listCity {
     padding-left: 1%;
-    padding-right: 5%;
+    padding-right: 1%;
+    padding-top: 15%;
+    width: 15%;
 }
 </style>
 

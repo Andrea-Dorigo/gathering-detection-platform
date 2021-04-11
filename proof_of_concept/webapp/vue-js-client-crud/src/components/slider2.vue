@@ -8,8 +8,6 @@
       :processStyle="{ backgroundColor: '#d8d8d8' }"
       @callbackRange="callbackRange">
     </VueSlideBar>
-    <h2>Value: {{slider.value}}</h2>
-    <h2>Label: {{rangeValue.label}}</h2>
   </div>
 </template>
  
