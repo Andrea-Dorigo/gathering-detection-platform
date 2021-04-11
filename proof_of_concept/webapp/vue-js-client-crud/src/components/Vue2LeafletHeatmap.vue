@@ -20,56 +20,54 @@ import { findRealParent, propsBinder } from "vue2-leaflet";
 import { DomEvent } from "leaflet";
 import "leaflet.heat";
 
-
 const props = {
   latLng: {
     type: Array,
-    default: () => [
-      ],
-    custom: false
+    default: () => [],
+    custom: false,
   },
   minOpacity: {
     type: Number,
     custom: true,
-    default: 0.05
+    default: 0.05,
   },
   maxZoom: {
     type: Number,
     custom: true,
-    default: 18
+    default: 18,
   },
   radius: {
     type: Number,
     custom: true,
-    default: 25
+    default: 25,
   },
   blur: {
     type: Number,
     custom: true,
-    default: 15
+    default: 15,
   },
   max: {
     type: Number,
     custom: true,
-    default: 1.0
+    default: 1.0,
   },
   visible: {
     type: Boolean,
     custom: true,
-    default: true
+    default: true,
   },
   center: {
     type: Array,
-    default:() =>[41.899139, 12.473311],
-    custom: true
-  }
+    default: () => [41.899139, 12.473311],
+    custom: true,
+  },
 };
 export default {
   name: "LHeatmap",
   props,
   data() {
     return {
-      ready: false
+      ready: false,
     };
   },
   mounted() {
@@ -128,31 +126,30 @@ export default {
     },
     setHeatLayer(value) {
       const options = {};
-    if (this.minOpacity) {
-      options.minOpacity = this.minOpacity;
-    }
-    if (this.maxZoom) {
-      options.maxZoom = this.maxZoom;
-    }
-    if (this.radius) {
-      options.radius = this.radius;
-    }
-    if (this.blur) {
-      options.blur = this.blur;
-    }
-    if (this.max) {
-      options.max = this.max;
-    }
+      if (this.minOpacity) {
+        options.minOpacity = this.minOpacity;
+      }
+      if (this.maxZoom) {
+        options.maxZoom = this.maxZoom;
+      }
+      if (this.radius) {
+        options.radius = this.radius;
+      }
+      if (this.blur) {
+        options.blur = this.blur;
+      }
+      if (this.max) {
+        options.max = this.max;
+      }
       this.parentContainer.removeLayer(this);
-      this.mapObject = L.heatLayer(value,options);
+      this.mapObject = L.heatLayer(value, options);
       this.parentContainer.addLayer(this, !this.visible);
-    }
+    },
   },
   created() {
     this.$root.$refs.LHeatmap_component = this;
-  }
+  },
 };
 </script>
 
-<style>
-</style>
+<style></style>

@@ -10,68 +10,80 @@
 <template>
   <div id="autosearch">
     <div id="noButton">
-      <input type="text" placeholder="Cerca la città.." v-model="searchText" @keyup="retireveCities" autocomplete="on"/>
+      <input
+        type="text"
+        placeholder="Cerca la città.."
+        v-model="searchText"
+        @keyup="retireveCities"
+        autocomplete="on"
+      />
       <div class="suggestion_list" v-if="searchText.length">
         <ul class="list_group">
-          <li :key="item" class="list_group-item" v-for="(item,index) in suggestiondata" @click="itemSelected(index)">{{ item }}</li>
+          <li
+            :key="item"
+            class="list_group-item"
+            v-for="(item, index) in suggestiondata"
+            @click="itemSelected(index)"
+          >
+            {{ item }}
+          </li>
         </ul>
       </div>
-      </div>
-      <button class="btn btn-outline-primary" type="submit">Search</button>
     </div>
+    <button class="btn btn-outline-primary" type="submit">Search</button>
+  </div>
 </template>
 
 <script>
-
-import Elements from '../services/htpprequest'
+import Elements from "../services/htpprequest";
 export default {
   data() {
-    var cit= [];
-    var searchText='';
-    var suggestiondata=[];
-    var name='Roma';
+    var cit = [];
+    var searchText = "";
+    var suggestiondata = [];
+    var name = "Roma";
     return {
       cit,
       searchText,
       suggestiondata,
       name,
-    }
+    };
   },
-    methods:{
-      retireveCities : function() {
-      Elements.getCities().then(res => {
-      var place;
-      this.suggestiondata = [];
-      this.cit=res.data;
-      place=this.cit;
-      if(this.searchText!='') {
-        this.suggestiondata = place.filter(place => {
-        return place.toLowerCase().includes(this.searchText.toLowerCase())
+  methods: {
+    retireveCities: function() {
+      Elements.getCities().then((res) => {
+        var place;
+        this.suggestiondata = [];
+        this.cit = res.data;
+        place = this.cit;
+        if (this.searchText != "") {
+          this.suggestiondata = place.filter((place) => {
+            return place.toLowerCase().includes(this.searchText.toLowerCase());
+          });
+        }
       });
-      }
-      })
       //var coo = Elements.getCoo();
     },
-    itemSelected: function(index){
+    itemSelected: function(index) {
       this.name = this.suggestiondata[index];
       var date = new Date().toISOString().substr(0, 10);
-      Elements.getCoo(this.name).then(res => {
-        this.latlngs=res.data;
+      Elements.getCoo(this.name).then((res) => {
+        this.latlngs = res.data;
         this.$root.$refs.LHeatmap_component.setHeatLayer(this.latlngs);
         this.$root.$refs.basicExample_component.setCenter(res.data[0]);
         this.$root.$refs.basicExample_component.placePopUp(res.data[0]);
         this.$root.$refs.basicExample_component.zoomUpdated(15);
         this.$root.$refs.basicExample_component.retrieveCoordinate(date);
-      })
+      });
     },
-    getNameCity : function() {
+    getNameCity: function() {
       return this.name;
-    }
+    },
   },
   created() {
     this.$root.$refs.autocompleteSearch_component = this;
-  }
-}
+  },
+};
 </script>
 
 <style scoped>
@@ -91,7 +103,7 @@ export default {
   width: 100%;
 }
 #autosearch ul {
-  background-color:white;
+  background-color: white;
   position: absolute;
   z-index: 3;
   width: 426.8px;

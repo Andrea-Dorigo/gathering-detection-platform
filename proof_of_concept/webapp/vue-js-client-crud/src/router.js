@@ -1,11 +1,10 @@
 import Vue from "vue";
 import Router from "vue-router";
 
-import chiSiamo from './components/chiSiamo.vue'
-import mainPage from './components/mainPage.vue'
+import chiSiamo from "./components/chiSiamo.vue";
+import mainPage from "./components/mainPage.vue";
 
 Vue.use(Router);
-
 
 export default new Router({
   mode: "history",
@@ -19,6 +18,6 @@ export default new Router({
       path: "/chiSiamo",
       name: "chiSiamo",
       component: chiSiamo,
-    }
-]
+    },
+  ],
 });

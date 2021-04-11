@@ -6,16 +6,17 @@
       :range="slider.range"
       :labelStyles="{ color: '#4a4a4a', backgroundColor: '#4a4a4a' }"
       :processStyle="{ backgroundColor: '#d8d8d8' }"
-      @callbackRange="callbackRange">
+      @callbackRange="callbackRange"
+    >
     </VueSlideBar>
   </div>
 </template>
- 
+
 <script>
-import VueSlideBar from 'vue-slide-bar'
- 
+import VueSlideBar from "vue-slide-bar";
+
 export default {
-  data () {
+  data() {
     return {
       rangeValue: {},
       slider: {
@@ -45,109 +46,109 @@ export default {
           21,
           22,
           23,
-          24
+          24,
         ],
         range: [
           {
-            label: '0'
+            label: "0",
           },
           {
-            label: '1',
+            label: "1",
           },
           {
-            label: '2'
+            label: "2",
           },
           {
-            label: '3',
+            label: "3",
           },
           {
-            label: '4'
+            label: "4",
           },
           {
-            label: '5',
+            label: "5",
           },
           {
-            label: '6'
+            label: "6",
           },
           {
-            label: '7'
+            label: "7",
           },
           {
-            label: '8'
+            label: "8",
           },
           {
-            label: '9'
+            label: "9",
           },
           {
-            label: '10'
+            label: "10",
           },
           {
-            label: '11'
+            label: "11",
           },
           {
-            label: '12'
+            label: "12",
           },
           {
-            label: '13'
+            label: "13",
           },
           {
-            label: '14'
+            label: "14",
           },
           {
-            label: '15'
+            label: "15",
           },
           {
-            label: '16'
+            label: "16",
           },
           {
-            label: '17'
+            label: "17",
           },
           {
-            label: '18'
+            label: "18",
           },
           {
-            label: '19'
+            label: "19",
           },
           {
-            label: '20'
+            label: "20",
           },
           {
-            label: '21'
+            label: "21",
           },
           {
-            label: '22'
+            label: "22",
           },
           {
-            label: '23'
+            label: "23",
           },
           {
-            label: '24'
-          }
-        ]
-      }
-    }
+            label: "24",
+          },
+        ],
+      },
+    };
   },
   methods: {
     callbackRange: function(val) {
-        this.rangeValue = val
+      this.rangeValue = val;
     },
-    reloadMap: function(){
-        var time = new Date(Date.now()).getHours().toString();
-        this.rangeValue = time;
-        //manca da spostare visivamente lo slider 
-        //this.rangeValue.label = time;
-        return time;
+    reloadMap: function() {
+      var time = new Date(Date.now()).getHours().toString();
+      this.rangeValue = time;
+      //manca da spostare visivamente lo slider
+      //this.rangeValue.label = time;
+      return time;
     },
     getTime: function() {
-      //non so come prendere l'orario dopo poichè è una stringa 
-      return this.rangeValue.label
+      //non so come prendere l'orario dopo poichè è una stringa
+      return this.rangeValue.label;
     },
   },
   created() {
-     this.$root.$refs.slider2_component = this;
+    this.$root.$refs.slider2_component = this;
   },
   components: {
-    VueSlideBar
-  }
-}
+    VueSlideBar,
+  },
+};
 </script>
