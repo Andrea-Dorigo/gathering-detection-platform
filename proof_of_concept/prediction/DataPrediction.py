@@ -1,24 +1,14 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
 from mongoengine import *
 import numpy as np
 import datetime
 import pandas
 import matplotlib.pyplot as plt
 import sklearn
+import sklearn.preprocessing
+import sklearn.model_selection
+import sklearn.linear_model
+from sklearn.ensemble import RandomForestRegressor
 import tabulate
-
-
-print(pandas.__version__)
-print(sklearn.__version__)
-print(np.__version__)
-
-
-# In[2]:
 
 
 connect("GDP-test", host = "localhost", port = 27017)
@@ -36,13 +26,8 @@ class Detection(Document):
     temperature = FloatField()
     day_of_week = IntField()
 
-
-# In[ ]:
-
-
-# print(Detection.objects.distinct('city')) # vedere se posso prendere solo le città per poi fare query distinte
+# vedere se posso prendere solo le città per poi fare query distinte
 table = pandas.DataFrame(Detection.objects(city='Djakovo',type=0).as_pymongo()) #prelevo i dati di roma
-
 table = table.dropna()
 
 most_freq = lambda x: x.value_counts(dropna=True).index[0]
@@ -51,8 +36,7 @@ table_a = table
 table_a = table_a.drop(columns = ['_id','id_webcam','city','type','date','location','latitude','longitude'])
 table_a['time'] = pandas.to_datetime(table_a['time'])
 table_a.sort_values(by='time', inplace=True)
-#print(table_a.columns)
-#table_1 = table_a.resample('30T', on='time').agg({'numPeople': 'mean', 'temperature' : 'mean', 'weather_description'}).head(20)
+
 tb = table_a.groupby([pandas.Grouper(key='time', freq='30T')], as_index=False).agg( time=('time', most_freq)
                                                                    , meanPeople=('numPeople', 'mean')
                                                                    , temp=('temperature','mean')
@@ -61,27 +45,7 @@ tb = table_a.groupby([pandas.Grouper(key='time', freq='30T')], as_index=False).a
 
 
 tb = tb.dropna()
-
-# tb.plot('time','meanPeople')
-#tb['hour'] = tb['time'].apply(tb['time'].hour)
-# #print(type tb['time'])
-#print(tb.to_markdown())
-#print(table_a.to_markdown())
-# tb.plot('time','numPeople')
-
-
-# In[4]:
-
-
-#print(tb.columns)
 tb.plot('time','meanPeople')
-# fc_table.plot('time')
-
-
-# In[5]:
-
-
-import sklearn.preprocessing
 
 class weather_forecast(Document):
     latitude = FloatField(required=True)
@@ -125,34 +89,10 @@ le.classes_ = np.unique(np.concatenate((forecast_dummies, detection_dummies), ax
 fc['weather'] = le.transform(fc['weather'])
 tb['weather_dummy'] = le.transform(tb['weather'])
 
-# print(le.classes_)
-# le.fit(fc['weather'])
-# le.fit(table_a['weather_description'])
-
-# print(le.classes_)
-
-# print(fc.columns)
-
-# for index, row in forecast.iterrows():
-#     print(index)
-#     fc.insert(index,'aa', index)
-
 print(fc)
 
-
-
 tb['time'] = tb['time'].dt.hour
-#tb['time'] = (tb['time'].dt.hour).astype(int)#modifico le colonne con i valori che mi servono
 
-
-# In[8]:
-
-
-import sklearn.model_selection
-
-# tb['weather'] = pandas.get_dummies(tb['weather']) #il weather viene convertito con parametri interi
-
-# print(tb.to_markdown())
 tb = tb.dropna()
 tb = tb.reset_index()
 
@@ -163,16 +103,11 @@ x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(
     test_size = 0.33, shuffle = True, random_state= 42)
 
 
-# In[9]:
-
-
 #Modello tipo Regressione Lineare standard
-import sklearn.linear_model
 
 modelLReg = sklearn.linear_model.LinearRegression()
 #provo a dargli in pasto tutto
 #prima di questo ora bisogna dividere tutto il dataset in 70-30
-# print(x_train.to_markdown())
 modelLReg.fit(x_train, y_train)
 
 
@@ -186,11 +121,7 @@ print("Residual sum of squares: %.2f" % np.mean((modelLReg.predict(x_test) - y_t
 print('Variance score: %.2f' % modelLReg.score(x_test, y_test))
 
 
-
-
-
 #Modello tipo Forest
-from sklearn.ensemble import RandomForestRegressor
 
 modelForest = RandomForestRegressor(n_estimators = 1000)
 
@@ -229,3 +160,54 @@ dtPrediction.insert(11,'day_of_week', fc['day_of_week'])
 print(dtPrediction)
 for i in range(24):
     Detection(id_webcam = dtPrediction['id_webcam'][i], city = dtPrediction['city'][i],location = dtPrediction['location'][i],latitude = dtPrediction['latitude'][i],longitude = dtPrediction['longitude'][i],numPeople = dtPrediction['numPeople'][i],date = dtPrediction['date'][i],time = dtPrediction['time'][i],type = dtPrediction['type'][i],weather_description = dtPrediction['weather_description'][i],temperature = dtPrediction['temperature'][i],day_of_week = dtPrediction['day_of_week'][i]).save()
+
+
+
+# def main():
+#     """
+#     Get forecast data every 30 minutes
+#     starting from the next midnight;
+#
+#     get the weather data at minutes 00/30 of every hour,
+#     since that is required by the current Machine Learning model
+#     """
+#
+#     # load json with webcams data
+#     with open(PATH_WEBCAM_JSON) as f:
+#       json_data = json.load(f)
+#
+#     # wait until midnight
+#     tomorrow = datetime.today() + timedelta(days=1)
+#     midnight = datetime.combine(tomorrow, datetime.min.time())
+#     print( "waiting until: " + str(midnight) +
+#            ";\ntime remaining: " + str(midnight - datetime.now()) )
+#
+#     time.sleep((midnight - datetime.now()).total_seconds())
+#
+#     # infinite loop
+#     #MODIFICATO! NON CHIAMA PIU' LA FUNZIONE OGNI 2 GIORNI, MA 1
+#     while True:
+#
+#         # get next day midnight
+#         day_after_tomorrow = datetime.today() + timedelta(days=2)
+#         tomorrow_midnight = datetime.combine(day_after_tomorrow, datetime.min.time())
+#
+#         tomorrow = datetime.today() + timedelta(days=1)
+#         midnight = datetime.combine(tomorrow, datetime.min.time())
+#
+#         # loop all webcams
+#         for webcam in json_data["webcams"]:
+#             get_hourly_forecast(webcam["latitude"], webcam["longitude"])
+#
+#         # sleep 30 minutes (1800 seconds)
+#         time.sleep(1800)
+#
+#         # repeat (could be a repeat twice loop)
+#         for webcam in json_data["webcams"]:
+#             get_hourly_forecast(webcam["latitude"], webcam["longitude"])
+#
+#         # sleep until the next midnight
+#         time.sleep((midnight - datetime.now()).total_seconds())
+#
+#
+# main()
