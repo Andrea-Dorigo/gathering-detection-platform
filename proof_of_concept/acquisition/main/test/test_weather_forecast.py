@@ -10,5 +10,6 @@ class ResponseTestCase(unittest.TestCase):
        response = get_openweather_api_response(45.309812,18.41042,"550617cb3af649e1d6729a3f78b24e17")
        self.assertIn('hourly', response)
        self.assertNotIn('cod', response)
+       self.assertEqual(len(response['hourly']) , 48)
 
 unittest.main()
