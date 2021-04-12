@@ -35,9 +35,10 @@ PATH_WEBCAM_JSON = "../webcams.json"
 
 def get_openweather_api_response(latitude,longitude,API_KEY):
     """
-    Calls the OpenWeatherMap API to get
+    Calls the OpenWeatherMap OneCall API to get
     weather forecast for the next 48 hours (current hour included)
-    in a json format
+    in a json format.
+    More info here: https://openweathermap.org/api/one-call-api
     """
     # url to request
     complete_url = ( BASE_URL +
