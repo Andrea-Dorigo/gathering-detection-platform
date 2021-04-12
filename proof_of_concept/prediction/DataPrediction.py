@@ -11,6 +11,7 @@ from sklearn.ensemble import RandomForestRegressor
 import tabulate
 import requests, json
 import time
+import pickle
 from datetime import date, datetime, timedelta
 
 
@@ -137,6 +138,9 @@ def predict(webcam):
     modelForest = RandomForestRegressor(n_estimators = 1000)
 
     modelForest.fit(x_train,y_train)
+    pickle.dump(modelForest, open("modelForest.pkl", "wb"))
+
+
     print('Forest score : %.2f' % modelForest.score(x_test,y_test))
     forest_prediction= modelForest.predict(fc)
     plt.title("Random Forest")
@@ -148,12 +152,12 @@ def predict(webcam):
 
 
 
-    timePred = datetime.today().replace(hour=0, minute=0, second=0, microsecond=0) + timedelta(days = 1)
-    timeDelta = timedelta(hours = 1)
-    xTime = []
-    xtime = np.asarray(xTime)
-    for i in range(24):
-        xTime.append(timePred+timeDelta*i)
+    # timePred = datetime.today().replace(hour=0, minute=0, second=0, microsecond=0) + timedelta(days = 1)
+    # timeDelta = timedelta(hours = 1)
+    # xTime = []
+    # xtime = np.asarray(xTime)
+    # for i in range(24):
+    #     xTime.append(timePred+timeDelta*i)
     dtPrediction = pandas.DataFrame()
     dtPrediction.insert(0,'id_webcam', table['id_webcam'].iloc[0:24])
     dtPrediction.insert(1,'city', table['city'].iloc[0:24])
