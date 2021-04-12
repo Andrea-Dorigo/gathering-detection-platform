@@ -1,0 +1,54 @@
+\input{packages}
+\input{config}
+
+\begin{document}
+
+\makeatletter
+\begin{titlepage}
+	\begin{center}
+		\vspace*{-4cm}
+		\author{Jawa Druids}
+		\title{Verbale Esterno 2021-03-19}
+		\date{} %LASCIARE QUESTO CAMPO VUOTO, SE LO TOLGO STAMPA LA DATA CORRENTE
+		\includegraphics[width=0.7\linewidth]{../../immagini/DRUIDSLOGO.jpg}\\[4ex]
+		{\huge \bfseries  \@title }\\[2ex]
+		{\LARGE  \@author}\\[50ex]
+		\vspace*{-9cm}
+		\begin{table}[H]
+			\renewcommand{\arraystretch}{1.4}
+			\centering
+			\begin{tabular}{r | l}
+				\textbf{Versione} & v1.0.0 \\%RIGA PER INSERIRE LA VERSIONE ULTIMA DEL DOCUMENTO
+				\textbf{Data approvazione} & 2021-03-21\\
+				\textbf{Responsabile} & Andrea Dorigo\\
+				\textbf{Redattori} & Igli Mezini \\
+				\textbf{Verificatori} & \makecell[tl]{Alfredo Graziano} \\
+				%MAKECELL SERVE PER POI ANDARE A CAPO ALL'INTERNO DELLA CELLA
+				\textbf{Stato} & Approvato\\
+				\textbf{Lista distribuzione} & \makecell[tl]{Jawa Druids \\ Prof. Tullio Vardanega \\ Prof. Riccardo Cardin}\\
+				\textbf{Uso} & Esterno
+			\end{tabular}
+		\end{table}
+		\vspace{0.1cm}
+		\hfill \break
+		\fontsize{17}{10}\textbf{Sommario} \\
+		\vspace{0.1cm}
+		Verbale esterno del giorno 2021-03-19 riguardo la presentazione del POC avuta su Google Meet con Fabio Pallaro e il suo team di Sync Lab.
+	\end{center}
+\end{titlepage}
+\makeatother
+
+\input{registro_delle_modifiche}
+
+%COMANDO PER LA CREAZIONE DELL'INDICE
+
+\newpage
+\tableofcontents{}
+
+%PER RENDERE PIÙ CHIARA LA STESURA DEI DOCUMENTI È MEGLIO LASCIARE SEPARATI IN FILE DIVERSI OGNI CAPITOLO
+
+\input{verbale}
+
+% \input{esempio} -- esempio di codice per inserire un nuovo capitolo
+
+\end{document}
