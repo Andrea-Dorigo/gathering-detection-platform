@@ -12,13 +12,16 @@ import time
 from datetime import datetime, timedelta
 import json
 import requests
-import pymongo
+from mongoengine import *
 
-# MongoDB parameters
-# MongoEngine would be more appropriate here
-CLIENT = pymongo.MongoClient("mongodb://localhost:27017/")
-DATABASE = CLIENT["GDP-test"]
-COLLECTION = DATABASE["weather_forecast"]
+connect("GDP-test", host = "localhost", port = 27017)
+
+class weather_forecast(Document):
+    latitude = FloatField(required=True)
+    longitude = FloatField(required=True)
+    datetime = DateTimeField(required=True)
+    weather_description = StringField()
+    temperature = FloatField()
 
 # OpenWeather API key
 API_KEY = "550617cb3af649e1d6729a3f78b24e17"
@@ -56,7 +59,7 @@ def get_hourly_forecast(latitude,longitude):
     """
 
     response = get_openweather_api_response(latitude,longitude,API_KEY)
-    print(response)
+    # print(response)
 
     for i in range(48):
         # get the complete forecast for hour i
@@ -68,15 +71,17 @@ def get_hourly_forecast(latitude,longitude):
         temperature = hourly_forecast["temp"]
 
         # print values for that hour
-        print(" temperature = " + str(temperature) +
-              "\n forecast_hour = " + str(forecast_hour) +
-              "\n description = " + str(weather_description))
+        # print(" temperature = " + str(temperature) +
+        #       "\n forecast_hour = " + str(forecast_hour) +
+        #       "\n description = " + str(weather_description))
 
-        # COLLECTION.insert_one({ "latitude" : latitude ,
-        #                         "longitude" : longitude ,
-        #                         "datetime" : forecast_hour,
-        #                         "weather_description" : weather_description,
-        #                         "temperature" : temperature })
+        weather_forecast(
+            latitude = latitude,
+            longitude = longitude,
+            datetime = forecast_hour,
+            weather_description = weather_description,
+            temperature = temperature
+            ).save()
 
 
 def main():
@@ -122,5 +127,5 @@ def main():
         time.sleep((midnight - datetime.now()).total_seconds())
 
 
-# main()
+main()
 # get_hourly_forecast(45.309812,18.410428)
