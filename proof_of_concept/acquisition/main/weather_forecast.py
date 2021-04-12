@@ -52,6 +52,7 @@ def get_hourly_forecast(latitude,longitude):
     """
 
     response = get_openweather_api_response(latitude,longitude,API_KEY)
+    print(response)
 
     for i in range(48):
         # get the complete forecast for hour i
@@ -117,5 +118,5 @@ def main():
         time.sleep((midnight - datetime.now()).total_seconds())
 
 
-main()
+# main()
 # get_hourly_forecast(45.309812,18.410428)
