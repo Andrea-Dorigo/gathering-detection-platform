@@ -138,7 +138,7 @@ def predict(webcam):
     modelForest = RandomForestRegressor(n_estimators = 1000)
 
     modelForest.fit(x_train,y_train)
-    pickle.dump(modelForest, open("modelForest.pkl", "wb"))
+    pickle.dump(modelForest, open("modelForest_" + webcam['location'] + ".pkl", "wb"))
 
 
     print('Forest score : %.2f' % modelForest.score(x_test,y_test))
