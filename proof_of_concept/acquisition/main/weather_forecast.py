@@ -71,9 +71,9 @@ def get_hourly_forecast(latitude,longitude):
         temperature = hourly_forecast["temp"]
 
         # print values for that hour
-        # print(" temperature = " + str(temperature) +
-        #       "\n forecast_hour = " + str(forecast_hour) +
-        #       "\n description = " + str(weather_description))
+        print(" temperature = " + str(temperature) +
+              "\n forecast_hour = " + str(forecast_hour) +
+              "\n description = " + str(weather_description))
 
         weather_forecast(
             latitude = latitude,
@@ -103,7 +103,7 @@ def main():
     print( "waiting until: " + str(midnight) +
            ";\ntime remaining: " + str(midnight - datetime.now()) )
 
-    # time.sleep((midnight - datetime.now()).total_seconds())
+    time.sleep((midnight - datetime.now()).total_seconds())
 
     # infinite loop
     #MODIFICATO! NON CHIAMA PIU' LA FUNZIONE OGNI 2 GIORNI, MA 1
