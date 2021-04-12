@@ -67,11 +67,11 @@ def get_hourly_forecast(latitude,longitude):
               "\n forecast_hour = " + str(forecast_hour) +
               "\n description = " + str(weather_description))
 
-        COLLECTION.insert_one({ "latitude" : latitude ,
-                                "longitude" : longitude ,
-                                "datetime" : forecast_hour,
-                                "weather_description" : weather_description,
-                                "temperature" : temperature })
+        # COLLECTION.insert_one({ "latitude" : latitude ,
+        #                         "longitude" : longitude ,
+        #                         "datetime" : forecast_hour,
+        #                         "weather_description" : weather_description,
+        #                         "temperature" : temperature })
 
 
 def main():
@@ -93,7 +93,7 @@ def main():
     print( "waiting until: " + str(midnight) +
            ";\ntime remaining: " + str(midnight - datetime.now()) )
 
-    time.sleep((midnight - datetime.now()).total_seconds())
+    # time.sleep((midnight - datetime.now()).total_seconds())
 
     # infinite loop
     #MODIFICATO! NON CHIAMA PIU' LA FUNZIONE OGNI 2 GIORNI, MA 1
