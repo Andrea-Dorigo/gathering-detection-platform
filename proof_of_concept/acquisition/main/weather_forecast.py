@@ -3,12 +3,15 @@ Python program to get weather foreacast every 30 minutes
 for all cities in webcams.
 Uses OpenWeatherMap API:
 more information at -> https://openweathermap.org/api
+
+created by Andrea Dorigo
 """
 
 # import required modules
-import requests, json
 import time
-from datetime import date, datetime, timedelta
+from datetime import datetime, timedelta
+import json
+import requests
 import pymongo
 
 # MongoDB parameters
@@ -47,12 +50,12 @@ def get_hourly_forecast(latitude,longitude):
 
     for i in range(48):
         # get the complete forecast for hour i
-        y = response["hourly"][i]
+        hourly_forecast = response["hourly"][i]
 
         # get temperature, forecast hour, weather_description
-        forecast_hour = datetime.fromtimestamp(y["dt"])
-        weather_description = y["weather"][0]["description"]
-        temperature = y["temp"]
+        forecast_hour = datetime.fromtimestamp(hourly_forecast["dt"])
+        weather_description = hourly_forecast["weather"][0]["description"]
+        temperature = hourly_forecast["temp"]
 
         # print values for that hour
         print(" temperature = " + str(temperature) +
@@ -76,8 +79,8 @@ def main():
     """
 
     # load json with webcams data
-    with open(PATH_WEBCAM_JSON) as f:
-      json_data = json.load(f)
+    with open(PATH_WEBCAM_JSON) as fopen:
+        json_data = json.load(fopen)
 
     # wait until midnight
     tomorrow = datetime.today() + timedelta(days=1)
@@ -90,10 +93,6 @@ def main():
     # infinite loop
     #MODIFICATO! NON CHIAMA PIU' LA FUNZIONE OGNI 2 GIORNI, MA 1
     while True:
-
-        # get next day midnight
-        day_after_tomorrow = datetime.today() + timedelta(days=2)
-        tomorrow_midnight = datetime.combine(day_after_tomorrow, datetime.min.time())
 
         tomorrow = datetime.today() + timedelta(days=1)
         midnight = datetime.combine(tomorrow, datetime.min.time())
