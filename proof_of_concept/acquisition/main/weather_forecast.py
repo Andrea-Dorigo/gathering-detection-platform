@@ -33,7 +33,7 @@ BASE_URL = "https://api.openweathermap.org/data/2.5/onecall?"
 PATH_WEBCAM_JSON = "../webcams.json"
 
 
-def get_openweather_api_response(latitude,longitude,API_KEY):
+def get_onecall_api_response(latitude,longitude,API_KEY):
     """
     Calls the OpenWeatherMap OneCall API to get
     weather forecast for the next 48 hours (current hour included)
@@ -59,7 +59,7 @@ def get_hourly_forecast(latitude,longitude):
     Forecast variables: temperature, weather_description
     """
 
-    response = get_openweather_api_response(latitude,longitude,API_KEY)
+    response = get_onecall_api_response(latitude,longitude,API_KEY)
     # print(response)
 
     for i in range(48):
