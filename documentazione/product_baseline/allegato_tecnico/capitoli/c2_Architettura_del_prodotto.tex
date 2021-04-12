@@ -1,8 +1,26 @@
-\chapter{Architettura del prodotto}
+\chapter{Architettura del prodotto}\label{ArchitetturaDelProdotto}
 
 \section{Descrizione generale}
-In fase di progettazione, il gruppo Jaea Druids.... 
-\section{Architettura Training Module}
-Ibkbhjbjbk
-\section{Diagrammi dei package}
-diagrammi.....
+In fase di progettazione, il gruppo \textit{Jawa Druids} ha deciso di suddividere la modellazione architetturale di \textit{Gathering-Detection-Platform} in tre distinti moduli, tutti indipendenti tra loro.
+Il primo modulo si occupa solamente di leggere, tramite file JSON$_G$, tutte le webcam disponibili per poi effettuare il riconoscimento persone tramite i frame scaricati. Successivamente i dati estrapolati verranno invitati al database.
+Il secondo modulo, il machine-learning$_G$, si occupa di recuperare questi dati dal database per lavorarli producendo predizioni per le ore future.
+Infine il terzo modulo, la web-app$_G$ vera e propria, si occuperà di rappresentare graficamente i dati all'interno del database mediante una heat-map$_G$ e farli visualizzare all'utente.
+
+\section{Architettura Acquisition}\label{ArchitetturaDelProdottoAcquisition}
+L'architettura riguardante il modulo di acquisizione, ovvero il primo modulo del software, è basata sul fatto che è creata sul paradigma della codifica procedurale.
+Inoltre non presenta alcuna classe in quanto non crea oggetti, crea esclusivamente un array con i dati che estrapola dai frame e dalle informazioni del tempo.
+%Inserire
+%Grafici
+
+\section{Architettura Prediction}\label{ArchitetturaDelProdottoPrediction}
+L'architettura del modulo del machine-learning si può semplificare ad un modulo unico con all'interno i metodi necessari per prelevare dati dal database per poi reinviarli da lavorati.
+Non necessita classi interne in quanto svolge esclusivamente operazioni funzionali
+%Inserire
+%Grafici
+
+
+\section{Architettura Web-App}\label{ArchitetturaDelProdottoWebApp}
+Per il modulo relativo al front-end$_G$, si è deciso di utilizzare il pattern \textit{Model-View-Controller}(MVC).
+Questa scelta è dovuta al fatto che, essendo la web-app sviluppata con spring, il pattern è quello che più si adatta alla tipologia sia di modellazione sia di scopo.
+%Inserire
+%Grafici
