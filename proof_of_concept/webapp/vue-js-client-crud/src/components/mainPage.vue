@@ -8,7 +8,7 @@
 -->
 
 <template>
-  <div id="things">
+  <div id="mainPage">
     <div id="mc">
       <listCity />
       <div id="sliderMap">
@@ -25,71 +25,40 @@
         </div>
         <BasicExample id="map" />
       </div>
-      <div id="calendar">
-        <Datepicker
-          :inline="true"
-          v-model="picker"
-          v-on:selected="setDate"
-          format="yyyy-MM-dd"
-        />
-      </div>
+      <date-picker/>
     </div>
   </div>
 </template>
 
 <script>
-import Datepicker from "vuejs-datepicker";
 import BasicExample from "./BasicExample.vue";
 import slider2 from "./slider2.vue";
 import listCity from "./listCity.vue";
+import DatePicker from './datePicker.vue';
 
 export default {
-  name: "things",
+  name: "mainPage",
   components: {
-    Datepicker,
+    DatePicker,
     BasicExample,
     slider2,
     listCity,
   },
-  data() {
-    var coords = [];
-    var picker = new Date().toISOString().substr(0, 10);
-    return {
-      coords,
-      picker,
-    };
-  },
   methods: {
     //Quando si preme ReloadMap o si apre il sito
     getRetrieveCoordinate: function() {
-      var date = (this.picker = new Date().toISOString().substr(0, 10));
-      var StartTime = this.$root.$refs.slider2_component.reloadMap();
-      date = date + "T" + StartTime;
+      var date = this.$root.$refs.datePicker_component.getDate();
       this.$root.$refs.basicExample_component.retrieveCoordinate(date);
     },
-    //Quando si seleziona data
-    setDate: function(date) {
-      var d = (this.picker = date.toISOString().substr(0, 10));
-      var t = this.$root.$refs.slider2_component.getTime();
-      console.log(t);
-      d = d + "T" + t;
-      this.$root.$refs.basicExample_component.retrieveCoordinate(d);
-    },
-    getDate: function() {
-      var date = this.picker;
-      var time = this.$root.$refs.slider2_component.getTime();
-      date = date + "T" + time;
-      return date;
     },
     created() {
       this.$root.$refs.mainPage_component = this;
     },
-  },
 };
 </script>
 
 <style scope>
-#things {
+#mainPage {
   z-index: -2;
 }
 #slider {
@@ -118,16 +87,8 @@ export default {
   height: 600px;
   margin-left: 20px;
 }
-#calendar {
-  z-index: 0;
-  padding-right: 20px;
-  padding-top: 150px;
-  padding-left: 20px;
-  margin-left: 50px;
-}
 #mc {
   padding-top: 10px;
   display: flex;
-  width: 100%;
 }
 </style>

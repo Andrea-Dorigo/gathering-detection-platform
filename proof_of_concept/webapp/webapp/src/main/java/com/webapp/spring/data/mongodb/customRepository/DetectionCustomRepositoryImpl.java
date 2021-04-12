@@ -10,6 +10,9 @@ package com.webapp.spring.data.mongodb.customRepository;
 import java.util.List;
 import java.util.ArrayList;
 
+import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Sort.Direction;
+import org.springframework.data.domain.Sort.Order;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
@@ -45,10 +48,19 @@ public class DetectionCustomRepositoryImpl implements DetectionCustomRepository 
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH");
         query.addCriteria(Criteria.where("date").lte(dateFormat.parseObject(startDate)));
         query.addCriteria(Criteria.where("city").is(city));
+        query.with(Sort.by("time").descending());
         query.limit(1);
         List<Detection> numPeople = mongoTemplate.find(query, Detection.class, "detection");
         System.out.println(numPeople);
         return numPeople;
+    }
+
+    public List<Detection> getLastValue(String city) throws Exception {
+        Query query = new Query();
+        query.limit(1);
+        query.with(Sort.by("time").descending());
+        List<Detection> LastValue = mongoTemplate.find(query, Detection.class, "detection");
+        return LastValue;
     }
 
     public List<Integer> getNumPeopleToday(String city, String startDate) throws Exception {

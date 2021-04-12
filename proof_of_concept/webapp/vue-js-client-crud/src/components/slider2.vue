@@ -16,11 +16,12 @@
 import VueSlideBar from "vue-slide-bar";
 
 export default {
+  name: "slider2",
   data() {
     return {
       rangeValue: {},
       slider: {
-        value: 1,
+        value: parseInt(new Date(Date.now()).getHours().toString(), 10),
         data: [
           0,
           1,
@@ -131,16 +132,17 @@ export default {
   methods: {
     callbackRange: function(val) {
       this.rangeValue = val;
+      var date = this.$root.$refs.datePicker_component.getDate();
+      if(date.search("Europa"))  date = new Date(date).toISOString().substr(0, 10);
+      this.$root.$refs.basicExample_component.retrieveCoordinate(date);
     },
     reloadMap: function() {
-      var time = new Date(Date.now()).getHours().toString();
-      this.rangeValue = time;
-      //manca da spostare visivamente lo slider
-      //this.rangeValue.label = time;
+      var timeString = new Date(Date.now()).getHours().toString();
+      var time = parseInt(timeString, 10);
+      this.slider.value = time;
       return time;
     },
     getTime: function() {
-      //non so come prendere l'orario dopo poichè è una stringa
       return this.rangeValue.label;
     },
   },

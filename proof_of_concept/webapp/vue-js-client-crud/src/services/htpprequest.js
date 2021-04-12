@@ -16,6 +16,9 @@ class Elements {
   getNumPeopleToday(city, date) {
     return http.get(`/numPeopleToday/${city}/${date}`);
   }
+  getLastValue(city) {
+    return http.get(`/LV/${city}`);
+  }
 }
 
 export default new Elements();

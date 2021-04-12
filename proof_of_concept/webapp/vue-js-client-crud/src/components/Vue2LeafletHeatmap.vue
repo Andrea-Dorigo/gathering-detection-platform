@@ -98,6 +98,9 @@ export default {
     this.parentContainer.removeLayer(this);
   },
   methods: {
+    RemoveAll: function() {
+     this.parentContainer.removeLayer(this);
+    },
     setMinOpacity(newVal) {
       this.mapObject.setOptions({ minOpacity: newVal });
     },

@@ -9,6 +9,19 @@
 
 <template>
   <div class="basic-example">
+    <div id="myModal" class="modal">
+    <div class="modal-content">
+    <span class="close" @click="closeModal">&times;</span>
+    <p>Non sono presenti dati per la data o l'ora selezionati</p>
+    <button
+            type="button"
+            class="btn btn-outline-primary"
+            @click="closeModal"
+          >
+            OK
+          </button>
+     </div>
+     </div>
     <l-map
       :zoom="zoom"
       :center="center"
@@ -26,7 +39,7 @@
         :min-opacity="0.75"
         :blur="60"
       ></Vue2LeafletHeatmap>
-      <l-marker v-if="zoom > 16" :lat-lng="markerLatLng">
+      <l-marker v-if="zoom > 16" :lat-lng="markerLatLng" :visible="visibility">
         <l-popup>{{ message }}</l-popup>
       </l-marker>
     </l-map>
@@ -55,28 +68,29 @@ export default {
       zoom: 15,
       markerLatLng: [41.899139, 12.473311],
       message,
+      visibility : true,
     };
   },
   methods: {
-    /*retrieveCoordinate : function() {
-      var city = this.$root.$refs.autocompleteSearch_component.getNameCity();
-      Elements.getCoo(city).then(res => {
-          this.latlngs=res.data;
-          this.$root.$refs.LHeatmap_component.setHeatLayer(this.latlngs);
-          this.setCenter(res.data[0]);
-          this.$root.$refs.slider_component.setCurTime();
-        })
-      },*/
     retrieveCoordinate: function(date) {
-      var numPeople = 0;
       var city = this.$root.$refs.autocompleteSearch_component.getNameCity();
-      Elements.getDataRT(city, date).then((res) => {
-        if (res.data != 0) {
-          numPeople = res.data[0].numPeople;
-          this.markerLatLng = [res.data[0].latitude, res.data[0].longitude];
+      var modal = document.getElementById("myModal");
+      console.log(Elements.getLastValue(city));
+      Elements.getLastValue(city).then((res) =>{
+      var temp = res.data[0].time;
+      console.log(new Date(temp.replace(" CEST","")));
+      console.log(new Date(date+":00:00"));
+      console.log("data del calendario!!! "+date);
+      if(new Date(date+":00:00")<= new Date(temp.replace(" CEST",""))) {
+      var numPeople = 0;
+      Elements.getDataRT(city, date).then((res1) => {
+        if (res1.data != 0) {
+          this.visibility = true;
+          numPeople = res1.data[0].numPeople;
+          this.markerLatLng = [res1.data[0].latitude, res1.data[0].longitude];
           this.message =
-            "In " + res.data[0].location + " ci sono " + numPeople + " persone";
-          this.latlngs = [res.data[0].latitude, res.data[0].longitude];
+            "In " + res1.data[0].location + " ci sono " + numPeople + " persone";
+          this.latlngs = [res1.data[0].latitude, res1.data[0].longitude];
           var geoPoints = this.generateRandomPoints(
             { lat: this.latlngs[0], lng: this.latlngs[1] },
             10,
@@ -85,19 +99,22 @@ export default {
           this.$root.$refs.LHeatmap_component.setHeatLayer(geoPoints);
           this.setCenter(this.latlngs);
         } else {
-          //rimuovere colore non sono riuscita con removeLayer
-          //mettere alert migliore
+          modal.style.display = "block";
+          this.visibility = false;
+          this.$root.$refs.LHeatmap_component.RemoveAll();
           this.message = "Non ci sono dati disponibili";
-          alert("Non ci sono dati disponibili");
         }
+        });} else {
+         modal.style.display = "block";
+          this.visibility = false;
+          this.$root.$refs.LHeatmap_component.RemoveAll();
+          this.message = "Non ci sono dati disponibili";
+      }
       });
-      /*Elements.getCoo(city).then(res => {
-           console.log("3");
-                  this.latlngs=res.data[0];
-                  var geoPoints = this.generateRandomPoints({'lat': this.latlngs[0], 'lng':this.latlngs[1]}, 10, numPeople);
-                  this.$root.$refs.LHeatmap_component.setHeatLayer(geoPoints);
-                  this.setCenter(res.data[0]);
-              })*/
+    },
+    closeModal: function() {
+      var modal = document.getElementById("myModal");
+      modal.style.display = "none";
     },
     setCenter: function(value) {
       this.center = value;
@@ -110,10 +127,6 @@ export default {
     },
     placePopUp: function(place) {
       this.markerLatLng = place;
-    },
-    setMessagePopUp: function(numPeople) {
-      //bisogna prendere place, per es Piazza Navona
-      this.message = "Roma: " + numPeople + " persone ca.";
     },
     generateRandomPoint: function(center, radius) {
       var x0 = center.lng;
@@ -151,5 +164,36 @@ export default {
 .basic-example {
   width: 80%;
   height: 500px;
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
 </style>
