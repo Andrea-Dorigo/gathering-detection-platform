@@ -24,5 +24,6 @@
 /proof_of_concept/acquisition/frames_pieces/*.png
 /proof_of_concept/acquisition/main/__pycache__
 /proof_of_concept/acquisition/main/test.log
+/proof_of_concept/acquisition/main/test/test.log
 /proof_of_concept/prediction/.ipynb_checkpoints
 /proof_of_concept/prediction/*.pkl
