@@ -37,7 +37,8 @@ def get_current_weather(latitude,longitude):
     # Check the value of "cod" key is equal 550617cb3af649e1d6729a3f78b24e17
     # "404", means city is found otherwise,
     # city is not found
-    if x["cod"] == "200":
+    
+    if x["cod"] == 200:
 
         # store the value of "main"
         # key in variable y
