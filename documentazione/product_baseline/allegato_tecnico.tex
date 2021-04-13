@@ -1,47 +1,5 @@
-\documentclass[a4paper,12pt]{report}
-\usepackage[utf8]{inputenc}
-\usepackage[english, italian]{babel}
-\usepackage{graphicx}
-\usepackage{float}
-\usepackage{tabularx}
-\usepackage{makecell}
-\usepackage{titlesec}
-\usepackage{fancyhdr}
-\usepackage{lastpage}
-\usepackage{xurl}
-\usepackage{hyperref}
-\usepackage{geometry}
-\usepackage[table,dvipsnames]{xcolor}
-
-\setcounter{secnumdepth}{5}% Number \subsubsection
-\setcounter{tocdepth}{5}
-
-\titleformat{\chapter}[display]
-{\normalfont\bfseries}{}{0pt}{\LARGE} %QUESTO SERVE PER AVERE SOLO IL NOME DEL CAPITOLO CHE VOGLIO IO
-
-\titlespacing*{\chapter}{0cm}{0cm}{0.2cm}
-
-\geometry{
-	left=20mm,
-	right=20mm,
-}
-
-\renewcommand{\contentsname}{Indice} %QUESTO SERVE PER AVERE L'INDICE CON IL NOME CHE VOGLIO IO
-
-\pagestyle{plain}
-
-\fancypagestyle{plain}{
-	\fancyhf{}
-	\lhead{\includegraphics[width=3cm]{../../immagini/minilogo.jpg}}
-	\chead{}
-	\rhead{\fontsize{12}{10}Allegato tecnico}
-	\lfoot{}
-	\cfoot{\thepage\ di \pageref{LastPage}}
-	\rfoot{}
-}
-
-\pagestyle{plain}
-
+\input{package}
+\input{config}
 \begin{document}
 	\makeatletter
 	\begin{titlepage}
@@ -50,7 +8,7 @@
 			\author{Jawa Druids}
 			\title{Allegato Tecnico}
 			\date{}
-			\includegraphics[width=0.5\linewidth]{../../immagini/DRUIDSLOGO.jpg}\\[4ex]
+			\includegraphics[width=0.5\linewidth]{../immagini/DRUIDSLOGO.jpg}\\[4ex]
 
 			
 			{\huge \bfseries  \@title }\\[2ex] 
@@ -82,9 +40,11 @@
 	
 	
 	\tableofcontents{}
+	\listoftables{}
+	\listoffigures{}
 	\input{capitoli/c1_Introduzione}
 	\input{capitoli/c2_Architettura_del_prodotto}
-	
+	\input{capitoli/c4_Requisiti_soddisfatti}
 	% bibliography, glossary and index would go here.
 	
 \end{document}
