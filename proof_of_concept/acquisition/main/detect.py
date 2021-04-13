@@ -12,10 +12,12 @@ import subprocess
 from datetime import datetime,timedelta
 from mongoengine import *
 import logging
+import cv2
 
 from weather import get_current_weather
-from get_frames import get_frames
-from cut_frame import cut_frames
+from get_frames import get_frames, extract_frame_from_video_url
+from cut_frame import cut_frames, cut_frame_in_six
+from yolo import detect
 
 connect("GDP-test", host = "localhost", port = 27017)
 logging.basicConfig(filename='test.log', level=logging.DEBUG)
@@ -92,14 +94,16 @@ def main():
 
             try:
                 video_link = fetch_read_m3u8(webcam["link"], webcam["url_prefix"])
-                print(video_link)
             except:
                 print("Failed to fetch/read m3u8")
-                continue
+                # continue
 
                 # scarica il video dal link appena ricavato
+
             try:
-                urllib.request.urlretrieve(video_link, PATH_VIDEOS+"Video" + ".ts")
+                #urllib.request.urlretrieve(video_link, PATH_VIDEOS+"Video" + ".ts")
+                frame_is_read, frame = extract_frame_from_video_url(video_link)
+                print(frame_is_read)
             except:
                 print('Exception: video non disponibile: ' + webcam["location"])
                 logging.info('Eccezione ore: ' + str(datetime.now()) )
@@ -108,21 +112,24 @@ def main():
 
                 # estrai un frame dal video
                 #exec(open('get_frames.py').read())
-            try:
-                get_frames(PATH_VIDEOS, PATH_FRAMES)
-                if get_frames(PATH_VIDEOS, PATH_FRAMES):
-                    print("Acquisizione Frame completata")
-            except:
-                print('Exception')
-                logging.info('Eccezione ore: ' + str(datetime.now()) )
-                logging.error(sys.exc_info())
-                continue
+            # try:
+            #     get_frames(PATH_VIDEOS, PATH_FRAMES)
+            #     if get_frames(PATH_VIDEOS, PATH_FRAMES):
+            #         print("Acquisizione Frame completata")
+            # except:
+            #     print('Exception')
+            #     logging.info('Eccezione ore: ' + str(datetime.now()) )
+            #     logging.error(sys.exc_info())
+            #     continue
                 # dividi il frame in 6 per un migliore affidabilita' nel riconoscimento
                 #exec(open('cut_frame.py').read())
+
             try:
-                cut_frames(PATH_FRAMES, PATH_FRAMES_PIECES)
-                if cut_frames(PATH_FRAMES, PATH_FRAMES_PIECES):
-                    print("Taglio dei frame in foto completata")
+                # cut_frames(PATH_FRAMES, PATH_FRAMES_PIECES)
+                # if cut_frames(PATH_FRAMES, PATH_FRAMES_PIECES):
+                #     print("Taglio dei frame in foto completata")
+                frame_part = cut_frame_in_six(frame)
+                # cv2.imwrite("test.jpg", frame_part[0])
 
             except:
                 print('Exception')
@@ -132,12 +139,17 @@ def main():
 
             # conta le persone in ogni sottoframe
             persone_contate = 0
-            for file in glob.glob(PATH_FRAMES_PIECES + "*.png"):
-                result = subprocess.run(['python3' , 'yolo.py' , '--image' , PATH_FRAMES_PIECES + file], capture_output=True)
-                persone_contate += result.stdout.decode().count('person')
-                print("Persone contate fino ad ora: " + str(persone_contate))
+            # for file in glob.glob(PATH_FRAMES_PIECES + "*.png"):
+            for frame in frame_part:
 
-            print("Ci sono " + str(persone_contate) + " in totale")
+                result = detect(frame)
+                print(result)
+                # persone_contate += result.stdout.decode().count('person')
+                # print("Persone contate fino ad ora: " + str(persone_contate))
+
+                # print("Ci sono " + str(persone_contate) + " in totale")
+
+
                 # inserisci i risultati nel db
             detection = Detection(
                 id_webcam = webcam["id_webcam"],

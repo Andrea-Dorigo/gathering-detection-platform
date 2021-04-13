@@ -5,6 +5,7 @@ The main function extracts a frame from a ts video
 
 import glob
 import cv2
+# import requests
 
 def get_frames(PATH_VIDEOS, PATH_FRAMES):
     """
@@ -34,3 +35,11 @@ def get_frames(PATH_VIDEOS, PATH_FRAMES):
 
     return bool(statement)
 #get_frames()
+
+
+def extract_frame_from_video_url(video_link):
+    frame_is_read, frame = cv2.VideoCapture(video_link).read()
+    if frame_is_read:
+        return frame_is_read, frame
+    else:
+        print("Could not read the frame." + count)
