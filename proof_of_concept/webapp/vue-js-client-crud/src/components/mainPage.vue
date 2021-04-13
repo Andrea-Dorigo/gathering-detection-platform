@@ -23,9 +23,9 @@
             Reload map
           </button>
         </div>
+        <date-picker />
         <BasicExample id="map" />
       </div>
-      <date-picker />
     </div>
   </div>
 </template>

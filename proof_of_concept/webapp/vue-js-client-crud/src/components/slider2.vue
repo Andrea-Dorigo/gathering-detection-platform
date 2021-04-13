@@ -16,6 +16,9 @@
 import VueSlideBar from "vue-slide-bar";
 
 export default {
+  components: {
+    VueSlideBar,
+  },
   name: "slider2",
   data() {
     return {
@@ -149,9 +152,6 @@ export default {
   },
   created() {
     this.$root.$refs.slider2_component = this;
-  },
-  components: {
-    VueSlideBar,
   },
 };
 </script>

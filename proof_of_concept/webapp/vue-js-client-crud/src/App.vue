@@ -59,6 +59,7 @@
 </template>
 
 <script>
+
 import autosearch from "./components/autocompleteSearch.vue";
 
 export default {

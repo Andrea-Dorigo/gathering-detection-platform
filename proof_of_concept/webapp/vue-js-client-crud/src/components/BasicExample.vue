@@ -73,13 +73,11 @@ export default {
   },
   methods: {
     retrieveCoordinate: function(date) {
-      console.log("sto funzionando");
+      console.log("entro nel retireve");
       var city = this.$root.$refs.autocompleteSearch_component.getNameCity();
       var modal = document.getElementById("myModal");
-      console.log(date);
       Elements.getLastValue(city).then((res) => {
         var temp = res.data[0].time;
-        console.log(new Date(temp.replace(" CEST", "")));
         if (new Date(date + ":00:00") <= new Date(temp.replace(" CEST", ""))) {
           var numPeople = 0;
           Elements.getDataRT(city, date).then((res1) => {
@@ -160,16 +158,23 @@ export default {
       }
       return points;
     },
-    createAlert: function() {
-      window.alert("forse vado");
+    refreshMap: function() {
+      var datePicker = this.$root.$refs.datePicker_component.getDate();
+      var dateNow = new Date(Date.now()).getHours().toString();
+      var timeSlider = this.$root.$refs.slider2_component.getTime();
+      var timeNow = new Date(Date.now()).getHours().toString();
+      if(datePicker === dateNow && timeSlider=== timeNow) {
+        var date = datePicker + "T" + timeSlider;
+        console.log("funziona!");
+        setInterval(() => this.retrieveCoordinate(date), 6000);
+      } else {
+        console.log("non funziona");
+      }
     },
   },
   created() {
     this.$root.$refs.basicExample_component = this;
-    var date = new Date(Date.now()).toISOString().substr(0, 10);
-    var time = new Date(Date.now()).getHours().toString();
-    date = date + "T" + time;
-    this.interval = setInterval(() => this.retrieveCoordinate(date), 600000);
+    this.$nextTick(this.refreshMap());
   },
 };
 </script>
