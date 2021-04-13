@@ -14,7 +14,6 @@ class ResponseTestCase(unittest.TestCase):
        # results must contain 48 hourly_forecast)
        self.assertIn(mock_prefix, response)
        self.assertIn(".ts", response)
-       print(response)
 
 
 unittest.main()
