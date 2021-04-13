@@ -47,13 +47,13 @@ class Detection(Document):
     day_of_week = IntField()
 
 
-def fetch_read_m3u8(webcam):
+def fetch_read_m3u8(webcam_link, webcam_prefix):
         try:
-            response = requests.get(webcam["link"])
+            response = requests.get(webcam_link)
             # scorri le righe del m3u8 fino al primo video .ts e salvalo in video_link
             for line in response.text.splitlines():
                 if line.endswith('.ts'):
-                    return webcam["url_prefix"] + line
+                    return webcam_prefix + line
 
         except:
             logging.info('Eccezione fetch_read_m3u8 ore: ' + str(datetime.now()) )
@@ -91,7 +91,8 @@ def main():
             current_time = current_date = datetime.now()
 
             try:
-                video_link = fetch_read_m3u8(webcam)
+                video_link = fetch_read_m3u8(webcam["link"], webcam["url_prefix"])
+                print(video_link)
             except:
                 print("Failed to fetch/read m3u8")
                 continue
