@@ -7,8 +7,10 @@ Il secondo modulo, il machine-learning$_G$, si occupa di recuperare questi dati 
 Infine il terzo modulo, la web-app$_G$ vera e propria, si occuperà di rappresentare graficamente i dati all'interno del database mediante una heat-map$_G$ e farli visualizzare all'utente.
 
 \section{Architettura Acquisition}\label{ArchitetturaDelProdottoAcquisition}
-L'architettura riguardante il modulo di acquisizione, ovvero il primo modulo del software, è basata sul fatto che è creata sul paradigma della codifica procedurale.
-Inoltre non presenta alcuna classe in quanto non crea oggetti, crea esclusivamente un array con i dati che estrapola dai frame e dalle informazioni del tempo.
+L'architettura riguardante il modulo di acquisizione, ovvero il primo modulo del software, è molto semplice ed intuitiva.
+Non vi è alcuna classe e si basa su una programmazione procedurale, in cui nel \textit{detect.py}, ovvero lo script principale del modulo, vengono richiamate le funzioni, in maniera sequenziale, per manipolare i dati scaricati dalle webcam.
+La scelta dell'utilizzo di un paradigma procedurale risiede nel fatto che la creazione di oggetti e il loro utilizzo risultavano, nell'insieme, più complicati mentre chiamando delle semplici funzioni esterne il programma risultava più leggibile e efficiente.
+Gli unici oggetti presenti in \textit{detect.py} sono quelli di tipo \textit{data}, necessari per la giusta esecuzione dello script.
 %Inserire
 %Grafici
 
