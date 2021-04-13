@@ -21,23 +21,14 @@ def detect(frame_part):
     confidence = 0.5
     base_threshold = 0.3
     yolo_path = "yolo-coco"
+
     # load the COCO class labels our YOLO model was trained on
-    # labels_path = os.path.sep.join([yolo_path, "coco.names"])
     labels = open(os.path.sep.join([yolo_path, "coco.names"])).read().strip().split("\n")
 
-    # initialize a list of colors to represent each possible class label
-    #np.random.seed(42)
-    #COLORS = np.random.randint(0, 255, size=(len(labels), 3),
-    #                           dtype="uint8")
-
-    # derive the paths to the YOLO weights and model configuration
-    #weightsPath = os.path.sep.join([yolo_path, "yolov3.weights"])
-    #configPath = os.path.sep.join([yolo_path, "yolov3.cfg"])
-
-    # load our YOLO object detector trained on COCO dataset (80 classes)
     print("[INFO] loading YOLO from disk...")
     net = cv2.dnn.readNetFromDarknet(os.path.sep.join([yolo_path, "yolov3.cfg"]),
                                      os.path.sep.join([yolo_path, "yolov3.weights"]))
+
     # load our input image and grab its spatial dimensions
     image = frame_part
     # image = cv2.imread("foto3.jpg")
@@ -50,8 +41,6 @@ def detect(frame_part):
     # construct a blob from the input image and then perform a forward
     # pass of the YOLO object detector, giving us our bounding boxes and
     # associated probabilities
-    # blob = cv2.dnn.blobFromImage(image, 1 / 255.0, (416, 416),
-    #                              swapRB=True, crop=False)
     net.setInput(cv2.dnn.blobFromImage(image, 1 / 255.0, (416, 416),
                                        swapRB=True, crop=False))
     start = time.time()
@@ -82,15 +71,13 @@ def detect(frame_part):
             if confidence_score > confidence:
                 # scale the bounding box coordinates back relative to the
                 # size of the image, keeping in mind that YOLO actually
-                # returns the center (x, y)-coordinates of the bounding
+                # returns the center-coordinates of the bounding
                 # box followed by the boxes' box_width and box_height
                 box = detection[0:4] * np.array([width, height, width, height])
                 (centerX, centerY, box_width, box_height) = box.astype("int")
 
-                # use the center (x, y)-coordinates to derive the top and
+                # use the center-coordinates to derive the top and
                 # and left corner of the bounding box
-                #x =
-                #y =
                 x = int(centerX - (box_width / 2))
                 y = int(centerY - (box_height / 2))
 
@@ -115,14 +102,13 @@ def detect(frame_part):
             (w, h) = (boxes[i][2], boxes[i][3])
 
             # draw a bounding box rectangle and label on the image
-            #color = [int(c) for c in COLORS[class_ids[i]]]
             cv2.rectangle(image, (x, y), (x + w, y + h), 0, 2)
             text = "{}: {:.4f}".format(labels[class_ids[i]], confidences[i])
             #cv2.putText(image, text, (x, y - 5), cv2.FONT_HERSHEY_SIMPLEX,
             #    0.5, color, 2)
             print(text)
     # show the output image
-    cv2.imwrite("Image.jpg", image)
+    cv2.imwrite("detection.jpg", image)
     #cv2.waitKey(0)
     return 0
 # detect()
