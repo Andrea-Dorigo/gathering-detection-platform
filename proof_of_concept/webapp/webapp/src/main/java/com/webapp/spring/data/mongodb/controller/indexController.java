@@ -1,6 +1,6 @@
 /*
   Project Name: GDP- Gathering Detection Platform
-  File Name: indexController.java
+  File Name: IndexController.java
   Author: Emma Roveroni
   Creation Date: 2021-03-07
   Summary: the file containes the methods ??
@@ -35,19 +35,18 @@ import com.webapp.spring.data.mongodb.repository.CoordinateRepository;
 @RestController
 @RequestMapping("/api")
 @Service
-public class indexController {
+public class IndexController {
 
     @Autowired
     CoordinateRepository coordinateRepository;
 
     @GetMapping("/coordinate")
-    public ResponseEntity<List<Detection>>getAllDetection(@RequestParam(required = false) String id) {
+    public ResponseEntity<List<Detection>> getAllDetection(@RequestParam(required = false) String id) {
         try {
             List<Detection> detec = new ArrayList<Detection>();
             if (id == null) {
                 coordinateRepository.findAll().forEach(detec::add);
-            }
-            else {
+            } else {
                 coordinateRepository.findByIdContaining(id).forEach(detec::add);
             }
             if (detec.isEmpty()) {
@@ -55,31 +54,35 @@ public class indexController {
             }
             String json = new Gson().toJson(detec);
             return new ResponseEntity<>(detec, HttpStatus.OK);
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
-}
 
-@GetMapping("/city")
+    @GetMapping("/city")
     public ResponseEntity<List<String>> fetchCity() {
-        return new ResponseEntity<>(coordinateRepository.getCities(),HttpStatus.OK);
- }
+        return new ResponseEntity<>(coordinateRepository.getCities(), HttpStatus.OK);
+    }
 
-@GetMapping("/coo/{city}")
+    @GetMapping("/coo/{city}")
     public ResponseEntity<List<List<Double>>> fetchCoo(@PathVariable("city") String city) {
-        return new ResponseEntity<>(coordinateRepository.getLatLngs(city),HttpStatus.OK);
- }
-@GetMapping("/RT/{city}/{date}")
-public ResponseEntity<List<Detection>> fetchDataRT(@PathVariable("city") String city,@PathVariable("date") String date ) throws Exception {
-    return new ResponseEntity<>(coordinateRepository.getDataRT(city,date),HttpStatus.OK);
- }
- @GetMapping("/LV/{city}")
-public ResponseEntity<List<Detection>> fetchLastValue(@PathVariable("city") String city) throws Exception {
-    return new ResponseEntity<>(coordinateRepository.getLastValue(city),HttpStatus.OK);
- }
- @GetMapping("/numPeopleToday/{city}/{date}")
- public ResponseEntity<List<Integer>> fetchNumPeopleToday(@PathVariable("city") String city,@PathVariable("date") String date ) throws Exception {
-     return new ResponseEntity<>(coordinateRepository.getNumPeopleToday(city,date),HttpStatus.OK);
-  }
+        return new ResponseEntity<>(coordinateRepository.getLatLngs(city), HttpStatus.OK);
+    }
+
+    @GetMapping("/RT/{city}/{date}")
+    public ResponseEntity<List<Detection>> fetchDataRT(@PathVariable("city") String city,
+            @PathVariable("date") String date) throws Exception {
+        return new ResponseEntity<>(coordinateRepository.getDataRT(city, date), HttpStatus.OK);
+    }
+
+    @GetMapping("/LV/{city}")
+    public ResponseEntity<List<Detection>> fetchLastValue(@PathVariable("city") String city) throws Exception {
+        return new ResponseEntity<>(coordinateRepository.getLastValue(city), HttpStatus.OK);
+    }
+
+    @GetMapping("/numPeopleToday/{city}/{date}")
+    public ResponseEntity<List<Integer>> fetchNumPeopleToday(@PathVariable("city") String city,
+            @PathVariable("date") String date) throws Exception {
+        return new ResponseEntity<>(coordinateRepository.getNumPeopleToday(city, date), HttpStatus.OK);
+    }
 }
