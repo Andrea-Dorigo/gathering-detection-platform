@@ -51,34 +51,34 @@ export default {
         ],
         range: [
           {
-            label: "0",
+            label: "00",
           },
           {
-            label: "1",
+            label: "01",
           },
           {
-            label: "2",
+            label: "02",
           },
           {
-            label: "3",
+            label: "03",
           },
           {
-            label: "4",
+            label: "04",
           },
           {
-            label: "5",
+            label: "05",
           },
           {
-            label: "6",
+            label: "06",
           },
           {
-            label: "7",
+            label: "07",
           },
           {
-            label: "8",
+            label: "08",
           },
           {
-            label: "9",
+            label: "09",
           },
           {
             label: "10",
@@ -133,7 +133,8 @@ export default {
     callbackRange: function(val) {
       this.rangeValue = val;
       var date = this.$root.$refs.datePicker_component.getDate();
-      if(date.search("Europa"))  date = new Date(date).toISOString().substr(0, 10);
+      //if (date.search("Europa"))
+      //  date = new Date(date).toISOString().substr(0, 10);
       this.$root.$refs.basicExample_component.retrieveCoordinate(date);
     },
     reloadMap: function() {

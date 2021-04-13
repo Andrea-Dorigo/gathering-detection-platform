@@ -25,7 +25,7 @@
         </div>
         <BasicExample id="map" />
       </div>
-      <date-picker/>
+      <date-picker />
     </div>
   </div>
 </template>
@@ -34,7 +34,7 @@
 import BasicExample from "./BasicExample.vue";
 import slider2 from "./slider2.vue";
 import listCity from "./listCity.vue";
-import DatePicker from './datePicker.vue';
+import DatePicker from "./datePicker.vue";
 
 export default {
   name: "mainPage",
@@ -45,15 +45,17 @@ export default {
     listCity,
   },
   methods: {
-    //Quando si preme ReloadMap o si apre il sito
+    //Quando si preme ReloadMap
     getRetrieveCoordinate: function() {
+      this.$root.$refs.datePicker_component.resetDate();
+      this.$root.$refs.slider2_component.reloadMap();
       var date = this.$root.$refs.datePicker_component.getDate();
       this.$root.$refs.basicExample_component.retrieveCoordinate(date);
     },
-    },
-    created() {
-      this.$root.$refs.mainPage_component = this;
-    },
+  },
+  created() {
+    this.$root.$refs.mainPage_component = this;
+  },
 };
 </script>
 

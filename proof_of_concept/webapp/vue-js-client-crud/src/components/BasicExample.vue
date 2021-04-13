@@ -10,18 +10,18 @@
 <template>
   <div class="basic-example">
     <div id="myModal" class="modal">
-    <div class="modal-content">
-    <span class="close" @click="closeModal">&times;</span>
-    <p>Non sono presenti dati per la data o l'ora selezionati</p>
-    <button
-            type="button"
-            class="btn btn-outline-primary"
-            @click="closeModal"
-          >
-            OK
-          </button>
-     </div>
-     </div>
+      <div class="modal-content">
+        <span class="close" @click="closeModal">&times;</span>
+        <p>Non sono presenti dati per la data o l'ora selezionati</p>
+        <button
+          type="button"
+          class="btn btn-outline-primary"
+          @click="closeModal"
+        >
+          OK
+        </button>
+      </div>
+    </div>
     <l-map
       :zoom="zoom"
       :center="center"
@@ -68,48 +68,55 @@ export default {
       zoom: 15,
       markerLatLng: [41.899139, 12.473311],
       message,
-      visibility : true,
+      visibility: true,
     };
   },
   methods: {
     retrieveCoordinate: function(date) {
+      console.log("sto funzionando");
       var city = this.$root.$refs.autocompleteSearch_component.getNameCity();
       var modal = document.getElementById("myModal");
-      console.log(Elements.getLastValue(city));
-      Elements.getLastValue(city).then((res) =>{
-      var temp = res.data[0].time;
-      console.log(new Date(temp.replace(" CEST","")));
-      console.log(new Date(date+":00:00"));
-      console.log("data del calendario!!! "+date);
-      if(new Date(date+":00:00")<= new Date(temp.replace(" CEST",""))) {
-      var numPeople = 0;
-      Elements.getDataRT(city, date).then((res1) => {
-        if (res1.data != 0) {
-          this.visibility = true;
-          numPeople = res1.data[0].numPeople;
-          this.markerLatLng = [res1.data[0].latitude, res1.data[0].longitude];
-          this.message =
-            "In " + res1.data[0].location + " ci sono " + numPeople + " persone";
-          this.latlngs = [res1.data[0].latitude, res1.data[0].longitude];
-          var geoPoints = this.generateRandomPoints(
-            { lat: this.latlngs[0], lng: this.latlngs[1] },
-            10,
-            numPeople
-          );
-          this.$root.$refs.LHeatmap_component.setHeatLayer(geoPoints);
-          this.setCenter(this.latlngs);
+      console.log(date);
+      Elements.getLastValue(city).then((res) => {
+        var temp = res.data[0].time;
+        console.log(new Date(temp.replace(" CEST", "")));
+        if (new Date(date + ":00:00") <= new Date(temp.replace(" CEST", ""))) {
+          var numPeople = 0;
+          Elements.getDataRT(city, date).then((res1) => {
+            if (res1.data != 0) {
+              this.visibility = true;
+              numPeople = res1.data[0].numPeople;
+              this.markerLatLng = [
+                res1.data[0].latitude,
+                res1.data[0].longitude,
+              ];
+              this.message =
+                "In " +
+                res1.data[0].location +
+                " ci sono " +
+                numPeople +
+                " persone";
+              this.latlngs = [res1.data[0].latitude, res1.data[0].longitude];
+              var geoPoints = this.generateRandomPoints(
+                { lat: this.latlngs[0], lng: this.latlngs[1] },
+                10,
+                numPeople
+              );
+              this.$root.$refs.LHeatmap_component.setHeatLayer(geoPoints);
+              this.setCenter(this.latlngs);
+            } else {
+              modal.style.display = "block";
+              this.visibility = false;
+              this.$root.$refs.LHeatmap_component.RemoveAll();
+              this.message = "Non ci sono dati disponibili";
+            }
+          });
         } else {
           modal.style.display = "block";
           this.visibility = false;
           this.$root.$refs.LHeatmap_component.RemoveAll();
           this.message = "Non ci sono dati disponibili";
         }
-        });} else {
-         modal.style.display = "block";
-          this.visibility = false;
-          this.$root.$refs.LHeatmap_component.RemoveAll();
-          this.message = "Non ci sono dati disponibili";
-      }
       });
     },
     closeModal: function() {
@@ -153,9 +160,16 @@ export default {
       }
       return points;
     },
+    createAlert: function() {
+      window.alert("forse vado");
+    },
   },
   created() {
     this.$root.$refs.basicExample_component = this;
+    var date = new Date(Date.now()).toISOString().substr(0, 10);
+    var time = new Date(Date.now()).getHours().toString();
+    date = date + "T" + time;
+    this.interval = setInterval(() => this.retrieveCoordinate(date), 600000);
   },
 };
 </script>
@@ -181,8 +195,8 @@ export default {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 .close {
   color: #aaaaaa;

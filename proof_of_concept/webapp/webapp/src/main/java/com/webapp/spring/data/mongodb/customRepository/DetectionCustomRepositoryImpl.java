@@ -51,7 +51,6 @@ public class DetectionCustomRepositoryImpl implements DetectionCustomRepository 
         query.with(Sort.by("time").descending());
         query.limit(1);
         List<Detection> numPeople = mongoTemplate.find(query, Detection.class, "detection");
-        System.out.println(numPeople);
         return numPeople;
     }
 
@@ -60,6 +59,8 @@ public class DetectionCustomRepositoryImpl implements DetectionCustomRepository 
         query.limit(1);
         query.with(Sort.by("time").descending());
         List<Detection> LastValue = mongoTemplate.find(query, Detection.class, "detection");
+        System.out.println("ultimo valore");
+        System.out.println(LastValue);
         return LastValue;
     }
 

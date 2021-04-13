@@ -43,7 +43,7 @@ export default {
       //var coo = Elements.getCoo();
     },
     itemSelected: function(index) {
-      var date = new Date().toISOString().substr(0, 10);
+      var date = this.$root.$refs.datePicker_component.getDate();
       this.name = this.suggestiondata[index];
       Elements.getCoo(this.name).then((res) => {
         this.latlngs = res.data;
