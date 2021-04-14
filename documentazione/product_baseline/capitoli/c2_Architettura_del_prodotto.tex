@@ -8,9 +8,11 @@ Infine il terzo modulo, la web-app$_G$ vera e propria, si occuperà di rappresen
 
 \section{Architettura Acquisition}\label{ArchitetturaDelProdottoAcquisition}
 L'architettura riguardante il modulo di acquisizione, ovvero il primo modulo del software, è molto semplice ed intuitiva.
-Non vi è alcuna classe e si basa su una programmazione procedurale, in cui nel \textit{detect.py}, ovvero lo script principale del modulo, vengono richiamate le funzioni, in maniera sequenziale, per manipolare i dati scaricati dalle webcam.
-La scelta dell'utilizzo di un paradigma procedurale risiede nel fatto che la creazione di oggetti e il loro utilizzo risultavano, nell'insieme, più complicati mentre chiamando delle semplici funzioni esterne il programma risultava più leggibile e efficiente.
+Non vi è alcuna classe e si basa su una programmazione procedurale.
+Nel \textit{detect.py}, ovvero lo script principale del modulo, vengono richiamate le funzioni, in maniera sequenziale, per scaricare e manipolare i dati delle webcam.
+La scelta dell'utilizzo di un paradigma procedurale risiede nel fatto che la creazione di oggetti e il loro utilizzo risultavano, nell'insieme, più complicati mentre chiamando delle semplici funzioni esterne il programma risultava più leggibile ed efficiente.
 Gli unici oggetti presenti in \textit{detect.py} sono quelli di tipo \textit{data}, necessari per la giusta esecuzione dello script.
+Di seguito vengono riportati i diagrammi relativi all'\textit{attività} e di \textit{package}.
 %Inserire
 %Grafici
 
@@ -23,8 +25,8 @@ Non necessita classi interne in quanto svolge esclusivamente operazioni funziona
 
 \section{Architettura Web-App}\label{ArchitetturaDelProdottoWebApp}
 Per il modulo relativo al front-end$_G$, si è deciso di utilizzare il pattern \textit{Model-View-Controller}(MVC).
-Questa scelta è dovuta al fatto che, essendo la web-app sviluppata con spring, il pattern è quello che più si adatta alla tipologia sia di modellazione sia di scopo. 
+Questa scelta è dovuta al fatto che, essendo la web-app sviluppata con spring, il pattern è quello che più si adatta alla tipologia sia di modellazione sia di scopo.
 Lo scambio di dati tra fron-end e back-end avviene attraverso il pattern architetturale REST. Si è deciso questo pattern per avere un oggetto di scambio tra le due parti unico strutturalmente e quindi non è essere vincolato dalla struttura presente nel database.
-Questo permette di aumentare la portabilità dell'applicazione web potendo applicare il back-end, possibilmente, a diversi front-end. Le richieste che il front-end effettua al back-end sono HTTP Request GET, quindi sono sempre richieste di visione di informazioni per poi essere utilizzate per aggiornare la parte grafica visibile dal client. 
+Questo permette di aumentare la portabilità dell'applicazione web potendo applicare il back-end, possibilmente, a diversi front-end. Le richieste che il front-end effettua al back-end sono HTTP Request GET, quindi sono sempre richieste di visione di informazioni per poi essere utilizzate per aggiornare la parte grafica visibile dal client.
 %Inserire
 %Grafici
