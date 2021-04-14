@@ -40,25 +40,6 @@ public class IndexController {
     @Autowired
     CoordinateRepository coordinateRepository;
 
-    @GetMapping("/coordinate")
-    public ResponseEntity<List<Detection>> getAllDetection(@RequestParam(required = false) String id) {
-        try {
-            List<Detection> detec = new ArrayList<Detection>();
-            if (id == null) {
-                coordinateRepository.findAll().forEach(detec::add);
-            } else {
-                coordinateRepository.findByIdContaining(id).forEach(detec::add);
-            }
-            if (detec.isEmpty()) {
-                return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-            }
-            String json = new Gson().toJson(detec);
-            return new ResponseEntity<>(detec, HttpStatus.OK);
-        } catch (Exception e) {
-            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-    }
-
     @GetMapping("/city")
     public ResponseEntity<List<String>> fetchCity() {
         return new ResponseEntity<>(coordinateRepository.getCities(), HttpStatus.OK);
