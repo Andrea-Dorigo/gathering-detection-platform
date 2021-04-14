@@ -17,5 +17,4 @@ import com.webapp.spring.data.mongodb.customRepository.DetectionCustomRepository
 import com.webapp.spring.data.mongodb.model.Detection;
 
 public interface CoordinateRepository extends MongoRepository<Detection, String>, DetectionCustomRepository {
-  List<Detection> findByIdContaining(String id);
 }

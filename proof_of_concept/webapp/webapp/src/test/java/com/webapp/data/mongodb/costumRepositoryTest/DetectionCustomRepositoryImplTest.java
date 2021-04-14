@@ -20,8 +20,6 @@ import java.time.LocalTime;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
-import jdk.jfr.Timestamp;
-
 import org.junit.Before;
 import org.junit.After;
 import static org.junit.Assert.assertFalse;
@@ -67,10 +65,10 @@ public class DetectionCustomRepositoryImplTest {
   @Test
   public void getCitiesTest() {
     List<String> city = new ArrayList<String>();
-    city.add("Roma");
-    city.add("Novska");
     city.add("Djakovo");
     city.add("Krk");
+    city.add("Novska");
+    city.add("Roma");
     assertEquals(city, DCRI.getCities());
   }
 }
