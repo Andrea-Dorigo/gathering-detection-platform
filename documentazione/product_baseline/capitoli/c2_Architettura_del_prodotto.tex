@@ -22,9 +22,10 @@ Non necessita classi interne in quanto svolge esclusivamente operazioni funziona
 \begin{enumerate}
 	\item prelevo i dati all'interno del database;
 	\item controllo dei dati per eliminare le informazioni che possono inquinare le predizioni;
+	\item creo un set di dati da predire;
 	\item definisco il modello della predizione;
 	\item alleno il modello con i dati prelevati e controllati;
-	\item creo un set di dati da predire e utilizzando il modello ricavo il risultato;
+	\item utilizzo il modello allenato per ricavare le previsioni dal set di dati creato nel punto 2;
 	\item archivio il risultato nel database.
 \end{enumerate}
 %Inserire
@@ -32,7 +33,7 @@ Non necessita classi interne in quanto svolge esclusivamente operazioni funziona
 \subsection{Diagrammi dei package}
 \begin{center}
 	\begin{figure}[H]
-		\includegraphics{../immagini/diag_PB/diag_pack_pred.png}
+		\includegraphics[scale=0.8]{../immagini/diag_PB/diag_pack_pred.png}
 		\caption{Diagramma dei package del modulo della predizione}
 	\end{figure}
 \end{center}
@@ -44,3 +45,19 @@ Lo scambio di dati tra fron-end e back-end avviene attraverso il pattern archite
 Questo permette di aumentare la portabilità dell'applicazione web potendo applicare il back-end, possibilmente, a diversi front-end. Le richieste che il front-end effettua al back-end sono HTTP Request GET, quindi sono sempre richieste di visione di informazioni per poi essere utilizzate per aggiornare la parte grafica visibile dal client.
 %Inserire
 %Grafici
+\subsection{Diagrammi dei package}
+\begin{center}
+	\begin{figure}[H]
+		\includegraphics[scale=0.8]{../immagini/diag_PB/diag_pack_spring.png}
+		\caption{Diagramma dei package del modulo back-end}
+	\end{figure}
+\end{center}
+
+\subsection{Diagrammi delle attività}
+In questo diagramma di attività viene illustrato la sequenza di operazioni dell'aggiornamento della heat-map a seguito di un cambiamento dei parametri della web-app da parte dell'utente.
+\begin{center}
+	\begin{figure}[H]
+		\includegraphics[scale=0.8]{../immagini/diag_PB/diag_act_front_back.png}
+		\caption{Diagramma di attività tra modulo front-end e modulo back-end}
+	\end{figure}
+\end{center}
