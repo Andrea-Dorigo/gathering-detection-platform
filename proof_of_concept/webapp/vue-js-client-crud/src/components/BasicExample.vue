@@ -73,7 +73,6 @@ export default {
   },
   methods: {
     retrieveCoordinate: function(date) {
-      console.log("entro nel retireve");
       var city = this.$root.$refs.autocompleteSearch_component.getNameCity();
       var modal = document.getElementById("myModal");
       Elements.getLastValue(city).then((res) => {
@@ -165,11 +164,8 @@ export default {
       if(timeNow.length == 1) timeNow = "0"+timeNow;
       dateNow = dateNow + "T" + timeNow;
       if(datePicker === dateNow) {
-        console.log("funziona!");
         this.retrieveCoordinate(dateNow);
         setInterval(() => this.refreshMap(), 600000);
-      } else {
-        console.log("non funziona");
       }
     },
   },
