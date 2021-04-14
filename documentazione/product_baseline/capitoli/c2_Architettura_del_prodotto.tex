@@ -16,6 +16,46 @@ Di seguito vengono riportati i diagrammi relativi all'\textit{attività} e di \t
 %Inserire
 %Grafici
 
+\subsection{Diagramma dei package Acquisition}\label{DiagrammaDeiPackageAcquisition}
+%Inserire PACKAGE
+\clearpage
+\subsection{Diagramma di attività modulo Acquisition}
+\begin{center}
+	\begin{figure}[H]
+		\centering\includegraphics[scale=0.7]
+    {../immagini/diag_PB/detection.png}
+		\caption{Diagramma di attività del modulo Acquisition}
+	\end{figure}
+\end{center}
+
+\subsubsection{Diagramma di sotto attività di richiesta previsioni meteo}\label{DiagrammaSottoAttivitaRichiestaPrevisioniMeteo}
+\begin{center}
+	\begin{figure}[H]
+		\centering\includegraphics[scale=0.8]
+    {../immagini/diag_PB/previsioni_del_tempo.png}
+		\caption{Diagramma di sotto attività di richiesta previsioni meteo}
+	\end{figure}
+\end{center}
+
+\subsubsection{Diagramma di sotto attività di download e cut frame}\label{DiagrammaSottoAttivitaDownloadECutFrameVideo}
+\begin{center}
+	\begin{figure}[H]
+		\centering\includegraphics[scale=0.8]
+    {../immagini/diag_PB/download_e_cut_frames.png}
+		\caption{Diagramma di sotto attività di download e cut frame}
+	\end{figure}
+\end{center}
+
+\subsubsection{Diagramma di sotto attività di riconoscimento persone}\label{DiagrammaSottoAttivitaRiconoscimentoPersone}
+\begin{center}
+	\begin{figure}[H]
+		\centering\includegraphics[scale=0.8]
+    {../immagini/diag_PB/conta_persone.png}
+		\caption{Diagramma di sotto attività di riconoscimento persone}
+	\end{figure}
+\end{center}
+
+
 \section{Architettura Prediction}\label{ArchitetturaDelProdottoPrediction}
 L'architettura del modulo del machine-learning si può semplificare ad un modulo unico con all'interno i metodi necessari per prelevare dati dal database per generare delle predizioni ed archiviarle nel database.
 Non necessita classi interne in quanto svolge esclusivamente operazioni funzionali. Per generare le predizioni il modulo svolge delle operazioni sequenziali:
