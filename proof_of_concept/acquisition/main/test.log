@@ -54,3 +54,103 @@ DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweatherma
 DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=41.899139&lon=12.473311&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 464
 DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
 DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=41.899139&lon=12.473311&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 465
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=41.899139&lon=12.473311&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 455
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-002.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-002.whatsupcams.com:443 "GET /hls/it_roma02.m3u8 HTTP/1.1" 404 169
+INFO:root:Eccezione ore: 2021-04-14 11:20:47.884190
+ERROR:root:(<class 'NameError'>, NameError("name 'count' is not defined"), <traceback object at 0x7eff3d93c2c0>)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.3397&lon=16.9787&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 464
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-004.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-004.whatsupcams.com:443 "GET /hls/hr_novska01.m3u8 HTTP/1.1" 200 189
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.309812&lon=18.410428&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 481
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-004.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-004.whatsupcams.com:443 "GET /hls/hr_djakovo02.m3u8 HTTP/1.1" 200 188
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.0262&lon=14.5737&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 460
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-001.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-001.whatsupcams.com:443 "GET /hls/hr_krk03.m3u8 HTTP/1.1" 200 176
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=41.899139&lon=12.473311&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 457
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-002.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-002.whatsupcams.com:443 "GET /hls/it_roma02.m3u8 HTTP/1.1" 404 169
+INFO:root:Eccezione ore: 2021-04-14 11:36:08.272679
+ERROR:root:(<class 'NameError'>, NameError("name 'count' is not defined"), <traceback object at 0x7fa1173447c0>)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.3397&lon=16.9787&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 464
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-004.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-004.whatsupcams.com:443 "GET /hls/hr_novska01.m3u8 HTTP/1.1" 200 189
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.309812&lon=18.410428&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 481
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-004.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-004.whatsupcams.com:443 "GET /hls/hr_djakovo02.m3u8 HTTP/1.1" 200 188
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.0262&lon=14.5737&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 460
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-001.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-001.whatsupcams.com:443 "GET /hls/hr_krk03.m3u8 HTTP/1.1" 200 176
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=41.899139&lon=12.473311&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 458
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-002.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-002.whatsupcams.com:443 "GET /hls/it_roma02.m3u8 HTTP/1.1" 404 169
+INFO:root:Eccezione ore: 2021-04-14 11:37:46.040906
+ERROR:root:(<class 'NameError'>, NameError("name 'count' is not defined"), <traceback object at 0x7f9c40f1ca40>)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.3397&lon=16.9787&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 465
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-004.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-004.whatsupcams.com:443 "GET /hls/hr_novska01.m3u8 HTTP/1.1" 200 189
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.309812&lon=18.410428&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 481
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-004.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-004.whatsupcams.com:443 "GET /hls/hr_djakovo02.m3u8 HTTP/1.1" 200 208
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.0262&lon=14.5737&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 460
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-001.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-001.whatsupcams.com:443 "GET /hls/hr_krk03.m3u8 HTTP/1.1" 200 197
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=41.899139&lon=12.473311&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 457
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-002.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-002.whatsupcams.com:443 "GET /hls/it_roma02.m3u8 HTTP/1.1" 404 169
+INFO:root:Eccezione ore: 2021-04-14 11:38:40.653011
+ERROR:root:(<class 'NameError'>, NameError("name 'count' is not defined"), <traceback object at 0x7fcc97d87b40>)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.3397&lon=16.9787&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 465
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-004.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-004.whatsupcams.com:443 "GET /hls/hr_novska01.m3u8 HTTP/1.1" 200 189
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=41.899139&lon=12.473311&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 458
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-002.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-002.whatsupcams.com:443 "GET /hls/it_roma02.m3u8 HTTP/1.1" 404 169
+INFO:root:Eccezione ore: 2021-04-14 11:38:53.020885
+ERROR:root:(<class 'NameError'>, NameError("name 'count' is not defined"), <traceback object at 0x7f05cba3b700>)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.3397&lon=16.9787&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 465
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-004.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-004.whatsupcams.com:443 "GET /hls/hr_novska01.m3u8 HTTP/1.1" 200 189
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.309812&lon=18.410428&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 481
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-004.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-004.whatsupcams.com:443 "GET /hls/hr_djakovo02.m3u8 HTTP/1.1" 200 188
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.0262&lon=14.5737&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 460
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-001.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-001.whatsupcams.com:443 "GET /hls/hr_krk03.m3u8 HTTP/1.1" 200 176
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=41.899139&lon=12.473311&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 458
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-002.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-002.whatsupcams.com:443 "GET /hls/it_roma02.m3u8 HTTP/1.1" 404 169
+INFO:root:Eccezione ore: 2021-04-14 11:42:01.152796
+ERROR:root:(<class 'NameError'>, NameError("name 'count' is not defined"), <traceback object at 0x7f5dc6471940>)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.3397&lon=16.9787&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 465
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-004.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-004.whatsupcams.com:443 "GET /hls/hr_novska01.m3u8 HTTP/1.1" 200 189
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.309812&lon=18.410428&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 481
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-004.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-004.whatsupcams.com:443 "GET /hls/hr_djakovo02.m3u8 HTTP/1.1" 200 188
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.0262&lon=14.5737&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 460
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-001.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-001.whatsupcams.com:443 "GET /hls/hr_krk03.m3u8 HTTP/1.1" 200 175

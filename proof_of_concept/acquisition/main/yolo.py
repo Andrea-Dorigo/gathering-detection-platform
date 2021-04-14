@@ -25,7 +25,6 @@ def detect(frame_part):
     # load the COCO class labels our YOLO model was trained on
     labels = open(os.path.sep.join([yolo_path, "coco.names"])).read().strip().split("\n")
 
-    print("[INFO] loading YOLO from disk...")
     net = cv2.dnn.readNetFromDarknet(os.path.sep.join([yolo_path, "yolov3.cfg"]),
                                      os.path.sep.join([yolo_path, "yolov3.weights"]))
 
@@ -92,7 +91,7 @@ def detect(frame_part):
     # boxes
     idxs = cv2.dnn.NMSBoxes(boxes, confidences, confidence_score,
                             base_threshold)
-
+    count = 0
     # ensure at least one detection exists
     if len(idxs) > 0:
         # loop over the indexes we are keeping
@@ -106,9 +105,11 @@ def detect(frame_part):
             text = "{}: {:.4f}".format(labels[class_ids[i]], confidences[i])
             #cv2.putText(image, text, (x, y - 5), cv2.FONT_HERSHEY_SIMPLEX,
             #    0.5, color, 2)
-            print(text)
+            # print(text)
+            if "person" in text:
+                count = count + 1
     # show the output image
-    cv2.imwrite("detection.jpg", image)
+    # cv2.imwrite("detection.jpg", image)
     #cv2.waitKey(0)
-    return 0
+    return count
 # detect()

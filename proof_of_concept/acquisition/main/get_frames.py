@@ -40,6 +40,7 @@ def get_frames(PATH_VIDEOS, PATH_FRAMES):
 def extract_frame_from_video_url(video_link):
     frame_is_read, frame = cv2.VideoCapture(video_link).read()
     if frame_is_read:
+        # cv2.imwrite("frame.jpg", frame)
         return frame_is_read, frame
     else:
         print("Could not read the frame." + count)

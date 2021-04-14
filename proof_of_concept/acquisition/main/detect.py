@@ -137,18 +137,13 @@ def main():
                 logging.error(sys.exc_info())
                 continue
 
-            # conta le persone in ogni sottoframe
             persone_contate = 0
-            # for file in glob.glob(PATH_FRAMES_PIECES + "*.png"):
+
+            # conta le persone in ogni sottoframe
             for frame in frame_part:
+                persone_contate = persone_contate + detect(frame)
 
-                result = detect(frame)
-                print(result)
-                # persone_contate += result.stdout.decode().count('person')
-                # print("Persone contate fino ad ora: " + str(persone_contate))
-
-                # print("Ci sono " + str(persone_contate) + " in totale")
-
+            print("Persone: " + str(persone_contate))
 
                 # inserisci i risultati nel db
             detection = Detection(
@@ -168,8 +163,7 @@ def main():
                 #time.sleep((t_end - datetime.now()).total_seconds())
 
         #loops = loops + 1
-        print("waiting")
-        print((t_end - datetime.now()).total_seconds())
+        print("waiting for: " + str((t_end - datetime.now()).total_seconds()))
         time.sleep((t_end - datetime.now()).total_seconds())
 
 main()

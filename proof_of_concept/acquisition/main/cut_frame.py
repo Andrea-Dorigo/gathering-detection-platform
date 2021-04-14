@@ -32,7 +32,6 @@ def cut_frame_in_six(frame):
     frame_part = []
     for i in range(3):
         for j in range(2):
-            print("iteration: " + str(i) + " " + str(j))
             x_start =int( frame.shape[1]*i/3)
             x_end = int(frame.shape[1]*(i+1)/3)
             y_start = int(frame.shape[0]*j/2)

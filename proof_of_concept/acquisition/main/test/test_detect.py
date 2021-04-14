@@ -15,5 +15,12 @@ class ResponseTestCase(unittest.TestCase):
        self.assertIn(mock_prefix, response)
        self.assertIn(".ts", response)
 
+  def test_extract_frame_from_video_url(self):
+      mock_link = "https://cdn-004.whatsupcams.com/hls/hr_novska01.m3u8"
+      response = extract_frame_from_video_url(mock_link, mock_prefix)
+      # results must contain 48 hourly_forecast)
+      self.assertIn(mock_prefix, response)
+      self.assertIn(".ts", response)
+
 
 unittest.main()
