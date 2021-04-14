@@ -15,8 +15,16 @@ Gli unici oggetti presenti in \textit{detect.py} sono quelli di tipo \textit{dat
 %Grafici
 
 \section{Architettura Prediction}\label{ArchitetturaDelProdottoPrediction}
-L'architettura del modulo del machine-learning si può semplificare ad un modulo unico con all'interno i metodi necessari per prelevare dati dal database per poi reinviarli da lavorati.
-Non necessita classi interne in quanto svolge esclusivamente operazioni funzionali
+L'architettura del modulo del machine-learning si può semplificare ad un modulo unico con all'interno i metodi necessari per prelevare dati dal database per generare delle predizioni ed archiviarle nel database.
+Non necessita classi interne in quanto svolge esclusivamente operazioni funzionali. Per generare le predizioni il modulo svolge delle operazioni sequenziali:
+\begin{enumerate}
+	\item prelevo i dati all'interno del database;
+	\item controllo dei dati per eliminare le informazioni che possono inquinare le predizioni;
+	\item definisco il modello della predizione;
+	\item alleno il modello con i dati prelevati e controllati;
+	\item creo un set di dati da predire e utilizzando il modello ricavo il risultato;
+	\item archivio il risultato nel database.
+\end{enumerate}
 %Inserire
 %Grafici
 
@@ -25,6 +33,6 @@ Non necessita classi interne in quanto svolge esclusivamente operazioni funziona
 Per il modulo relativo al front-end$_G$, si è deciso di utilizzare il pattern \textit{Model-View-Controller}(MVC).
 Questa scelta è dovuta al fatto che, essendo la web-app sviluppata con spring, il pattern è quello che più si adatta alla tipologia sia di modellazione sia di scopo. 
 Lo scambio di dati tra fron-end e back-end avviene attraverso il pattern architetturale REST. Si è deciso questo pattern per avere un oggetto di scambio tra le due parti unico strutturalmente e quindi non è essere vincolato dalla struttura presente nel database.
-Questo permette di aumentare la portabilità dell'applicazione web potendo applicare il back-end, possibilmente, a diversi front-end. Le richieste che il front-end effettua al back-end sono HTTP Request GET, quindi sono sempre richieste di visione di informazioni per poi essere utilizzate per aggiornare la parte grafica visibile dal client. 
+Questo permette di aumentare la portabilità dell'applicazione web potendo applicare il back-end, possibilmente, a diversi front-end. Il back-end mette a disposizione vari servizi per la visione dei dati del database, ma non vi sarà necessità di manipolazione degli stessi dato che il lato front-end è rivolto solo ad una visione grafica di informazioni. Le due componenti, front-end e back-end, sono separate tra di loro e dialogano attraverso HTTP Request usando il modulo di Axios per la parte di front-end.
 %Inserire
 %Grafici
