@@ -154,3 +154,21 @@ DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweatherma
 DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.0262&lon=14.5737&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 460
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-001.whatsupcams.com:443
 DEBUG:urllib3.connectionpool:https://cdn-001.whatsupcams.com:443 "GET /hls/hr_krk03.m3u8 HTTP/1.1" 200 175
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=41.899139&lon=12.473311&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 465
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-002.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-002.whatsupcams.com:443 "GET /hls/it_roma02.m3u8 HTTP/1.1" 404 169
+INFO:root:Eccezione ore: 2021-04-14 14:57:15.171390
+ERROR:root:(<class 'NameError'>, NameError("name 'count' is not defined"), <traceback object at 0x7fb286e87900>)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.3397&lon=16.9787&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 465
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-004.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-004.whatsupcams.com:443 "GET /hls/hr_novska01.m3u8 HTTP/1.1" 200 189
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.309812&lon=18.410428&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 474
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-004.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-004.whatsupcams.com:443 "GET /hls/hr_djakovo02.m3u8 HTTP/1.1" 200 183
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.0262&lon=14.5737&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 466
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-001.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-001.whatsupcams.com:443 "GET /hls/hr_krk03.m3u8 HTTP/1.1" 200 175
