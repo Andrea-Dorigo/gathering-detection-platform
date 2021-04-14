@@ -160,13 +160,14 @@ export default {
     },
     refreshMap: function() {
       var datePicker = this.$root.$refs.datePicker_component.getDate();
-      var dateNow = new Date(Date.now()).getHours().toString();
-      var timeSlider = this.$root.$refs.slider2_component.getTime();
+      var dateNow = new Date().toISOString().substr(0, 10);
       var timeNow = new Date(Date.now()).getHours().toString();
-      if(datePicker === dateNow && timeSlider=== timeNow) {
-        var date = datePicker + "T" + timeSlider;
+      if(timeNow.length == 1) timeNow = "0"+timeNow;
+      dateNow = dateNow + "T" + timeNow;
+      if(datePicker === dateNow) {
         console.log("funziona!");
-        setInterval(() => this.retrieveCoordinate(date), 6000);
+        this.retrieveCoordinate(dateNow);
+        setInterval(() => this.refreshMap(), 600000);
       } else {
         console.log("non funziona");
       }

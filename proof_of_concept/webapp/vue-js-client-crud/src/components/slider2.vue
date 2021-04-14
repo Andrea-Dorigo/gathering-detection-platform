@@ -136,8 +136,6 @@ export default {
     callbackRange: function(val) {
       this.rangeValue = val;
       var date = this.$root.$refs.datePicker_component.getDate();
-      //if (date.search("Europa"))
-      //  date = new Date(date).toISOString().substr(0, 10);
       this.$root.$refs.basicExample_component.retrieveCoordinate(date);
     },
     reloadMap: function() {
@@ -151,6 +149,8 @@ export default {
     },
   },
   created() {
+    this.rangeValue.label = new Date(Date.now()).getHours().toString();
+    if(this.rangeValue.label.length == 1) this.rangeValue.label = "0"+this.rangeValue.label;
     this.$root.$refs.slider2_component = this;
   },
 };

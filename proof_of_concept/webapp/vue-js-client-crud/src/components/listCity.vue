@@ -86,9 +86,7 @@ export default {
   cursor: pointer;
 }
 #listCity {
-  padding-left: 1%;
-  padding-right: 1%;
-  padding-top: 15%;
-  width: 15%;
+  padding-left: 20px;
+  padding-top: 30px;
 }
 </style>

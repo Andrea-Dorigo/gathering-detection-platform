@@ -1,9 +1,6 @@
 import http from "../http-common";
 
 class Elements {
-  getCoordinate() {
-    return http.get("/coordinate");
-  }
   getCities() {
     return http.get("/city");
   }
@@ -12,9 +9,6 @@ class Elements {
   }
   getDataRT(city, date) {
     return http.get(`/RT/${city}/${date}`);
-  }
-  getNumPeopleToday(city, date) {
-    return http.get(`/numPeopleToday/${city}/${date}`);
   }
   getLastValue(city) {
     return http.get(`/LV/${city}`);

@@ -10,7 +10,7 @@
 <template>
   <div id="mainPage">
     <div id="mc">
-      <listCity />
+      <date-picker />
       <div id="sliderMap">
         <div id="sb">
           <slider2 id="slider" />
@@ -23,8 +23,10 @@
             Reload map
           </button>
         </div>
-        <date-picker />
+        <div id="mapList">
         <BasicExample id="map" />
+         <listCity />
+        </div>
       </div>
     </div>
   </div>
@@ -60,6 +62,9 @@ export default {
 </script>
 
 <style scope>
+#mapList {
+  display: flex;
+}
 #mainPage {
   z-index: -2;
 }
@@ -84,10 +89,8 @@ export default {
   padding-bottom: 10px;
 }
 #map {
-  padding-right: 20px;
   width: 1200px;
   height: 600px;
-  margin-left: 20px;
 }
 #mc {
   padding-top: 10px;
