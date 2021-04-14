@@ -9,21 +9,11 @@
 
 package com.webapp.data.mongodb.modelTest;
 
-import java.util.List;
-
 import com.webapp.spring.data.mongodb.model.Detection;
-
-import java.util.ArrayList;
-import java.time.LocalTime;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
-import jdk.jfr.Timestamp;
-
 import org.junit.Before;
-import org.junit.After;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
 
 public class DetectionTest {
 

@@ -7,6 +7,7 @@
   Last change date: 2021-03-26
 */
 package com.webapp.spring.data.mongodb.customRepository;
+
 import java.util.List;
 import java.util.ArrayList;
 
@@ -35,7 +36,7 @@ public class DetectionCustomRepositoryImpl implements DetectionCustomRepository 
         List<Double> lat = mongoTemplate.findDistinct(query, "latitude", Detection.class, Double.class);
         List<Double> lon = mongoTemplate.findDistinct(query, "longitude", Detection.class, Double.class);
         List<List<Double>> cooList = new ArrayList<List<Double>>();
-        for(int i=0;i<lat.size();i++) {
+        for (int i = 0; i < lat.size(); i++) {
             List<Double> coo = new ArrayList<Double>();
             coo.add(lat.get(i));
             coo.add(lon.get(i));
@@ -43,14 +44,40 @@ public class DetectionCustomRepositoryImpl implements DetectionCustomRepository 
         }
         return cooList;
     }
+
     public List<Detection> getDataRT(String city, String startDate) throws Exception {
+        String temptime = startDate.substring(startDate.length() - 2);
+        String tempDate = startDate.substring(0, startDate.length() - 2);
+        int temp = Integer.valueOf(temptime);
+        temp = temp - 1;
+        String t;
+        if (temp < 10) {
+            t = "0" + temp;
+        } else {
+            t = Integer.toString(temp);
+        }
+        tempDate = tempDate + t;
+        System.out.println(tempDate);
         Query query = new Query();
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH");
         query.addCriteria(Criteria.where("date").lte(dateFormat.parseObject(startDate)));
+        query.addCriteria(Criteria.where("time").gte(dateFormat.parseObject(tempDate)));
         query.addCriteria(Criteria.where("city").is(city));
+        query.addCriteria(Criteria.where("type").is(0));
         query.with(Sort.by("time").descending());
         query.limit(1);
         List<Detection> numPeople = mongoTemplate.find(query, Detection.class, "detection");
+        if (numPeople.isEmpty()) {
+            Query query1 = new Query();
+            query1.addCriteria(Criteria.where("date").lte(dateFormat.parseObject(startDate)));
+            query1.addCriteria(Criteria.where("time").gte(dateFormat.parseObject(tempDate)));
+            query1.addCriteria(Criteria.where("city").is(city));
+            query1.addCriteria(Criteria.where("type").is(1));
+            query1.with(Sort.by("time").descending());
+            query1.limit(1);
+            numPeople = mongoTemplate.find(query1, Detection.class, "detection");
+        }
+        System.out.println(numPeople);
         return numPeople;
     }
 
@@ -59,8 +86,7 @@ public class DetectionCustomRepositoryImpl implements DetectionCustomRepository 
         query.limit(1);
         query.with(Sort.by("time").descending());
         List<Detection> LastValue = mongoTemplate.find(query, Detection.class, "detection");
-        System.out.println("ultimo valore");
-        System.out.println(LastValue);
+
         return LastValue;
     }
 
@@ -71,8 +97,8 @@ public class DetectionCustomRepositoryImpl implements DetectionCustomRepository 
         query.addCriteria(Criteria.where("city").is(city));
         List<Detection> detections = mongoTemplate.find(query, Detection.class, "detection");
         List<Integer> numPeople = new ArrayList<Integer>();
-        for(int i=0;i<detections.size();i++) {
-          numPeople.add(detections.get(i).getNumPeople());
+        for (int i = 0; i < detections.size(); i++) {
+            numPeople.add(detections.get(i).getNumPeople());
         }
         return numPeople;
     }
