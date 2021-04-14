@@ -29,7 +29,6 @@ export default {
       slider: {
         value: parseInt(new Date(Date.now()).getHours().toString(), 10),
         data: [
-          0,
           1,
           2,
           3,
@@ -56,9 +55,6 @@ export default {
           24,
         ],
         range: [
-          {
-            label: "00",
-          },
           {
             label: "01",
           },
@@ -137,10 +133,10 @@ export default {
   },
   methods: {
     callbackRange: function(val) {
-      if(globalCounter !== 0) {
+      if (globalCounter !== 0) {
         globalTimeCheck = false;
       } else {
-        globalCounter = globalCounter+1;
+        globalCounter = globalCounter + 1;
       }
       this.rangeValue = val;
       var date = this.$root.$refs.datePicker_component.getDate();
@@ -158,24 +154,28 @@ export default {
       return this.rangeValue.label;
     },
     refreshSlider: function() {
-        var timeNow = new Date(Date.now()).getHours().toString();
-        var timeSlider = this.getTime();
-        if(timeSlider.length == 1) timeSlider = "0"+timeSlider;
-        var datePicker = this.$root.$refs.datePicker_component.getDate();
-        var dateNow = new Date().toISOString().substr(0, 10);
-        dateNow = dateNow + "T" +timeNow;
-        if(timeNow === timeSlider && globalTimeCheck===true && datePicker===dateNow) {
-          this.reloadMap();
-          setInterval(() => this.refreshSlider(), 6000);
-        }
-        else {
-          setInterval(() => this.refreshSlider(), 6000);
-        }
-    }
+      var timeNow = new Date(Date.now()).getHours().toString();
+      var timeSlider = this.getTime();
+      if (timeSlider.length == 1) timeSlider = "0" + timeSlider;
+      var datePicker = this.$root.$refs.datePicker_component.getDate();
+      var dateNow = new Date().toISOString().substr(0, 10);
+      dateNow = dateNow + "T" + timeNow;
+      if (
+        timeNow === timeSlider &&
+        globalTimeCheck === true &&
+        datePicker === dateNow
+      ) {
+        this.reloadMap();
+        setInterval(() => this.refreshSlider(), 6000);
+      } else {
+        setInterval(() => this.refreshSlider(), 6000);
+      }
+    },
   },
   created() {
     this.rangeValue.label = new Date(Date.now()).getHours().toString();
-    if(this.rangeValue.label.length == 1) this.rangeValue.label = "0"+this.rangeValue.label;
+    if (this.rangeValue.label.length == 1)
+      this.rangeValue.label = "0" + this.rangeValue.label;
     this.$root.$refs.slider2_component = this;
     this.$nextTick(this.refreshSlider());
   },
