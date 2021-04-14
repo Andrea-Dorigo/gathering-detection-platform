@@ -18,11 +18,17 @@ Di seguito vengono riportati i diagrammi relativi all'\textit{attività} e di \t
 
 \subsection{Diagramma dei package Acquisition}\label{DiagrammaDeiPackageAcquisition}
 %Inserire PACKAGE
-\clearpage
+\begin{center}
+	\begin{figure}[H]
+		\centering\includegraphics[scale=0.65]{../immagini/diag_PB/diag_pack_acqui.png}
+		\caption{Diagramma dei package del modulo acquisition}
+	\end{figure}
+\end{center}
+
 \subsection{Diagramma di attività modulo Acquisition}
 \begin{center}
 	\begin{figure}[H]
-		\centering\includegraphics[scale=0.7]
+		\centering\includegraphics[scale=0.65]
     {../immagini/diag_PB/detection.png}
 		\caption{Diagramma di attività del modulo Acquisition}
 	\end{figure}
@@ -73,13 +79,13 @@ Non necessita classi interne in quanto svolge esclusivamente operazioni funziona
 \subsection{Diagrammi dei package}
 \begin{center}
 	\begin{figure}[H]
-		\includegraphics[scale=0.8]{../immagini/diag_PB/diag_pack_pred.png}
+		\centering\includegraphics[scale=0.8]{../immagini/diag_PB/diag_pack_pred.png}
 		\caption{Diagramma dei package del modulo della predizione}
 	\end{figure}
 \end{center}
 
 \section{Architettura Web-App}\label{ArchitetturaDelProdottoWebApp}
-Per il modulo relativo al front-end$_G$, si è deciso di utilizzare il pattern \textit{Model-View-Controller}(MVC).
+Per il modulo relativo al front-end$_G$, si è deciso di utilizzare il pattern \textit{Model-View-Controller} (MVC).
 Questa scelta è dovuta al fatto che, essendo la web-app sviluppata con spring, il pattern è quello che più si adatta alla tipologia sia di modellazione sia di scopo.
 Lo scambio di dati tra fron-end e back-end avviene attraverso il pattern architetturale REST. Si è deciso questo pattern per avere un oggetto di scambio tra le due parti unico strutturalmente e quindi non è essere vincolato dalla struttura presente nel database.
 Questo permette di aumentare la portabilità dell'applicazione web potendo applicare il back-end, possibilmente, a diversi front-end. Le richieste che il front-end effettua al back-end sono HTTP Request GET, quindi sono sempre richieste di visione di informazioni per poi essere utilizzate per aggiornare la parte grafica visibile dal client.
@@ -88,7 +94,7 @@ Questo permette di aumentare la portabilità dell'applicazione web potendo appli
 \subsection{Diagrammi dei package}
 \begin{center}
 	\begin{figure}[H]
-		\includegraphics[scale=0.8]{../immagini/diag_PB/diag_pack_spring.png}
+		\centering\includegraphics[scale=0.8]{../immagini/diag_PB/diag_pack_spring.png}
 		\caption{Diagramma dei package del modulo back-end}
 	\end{figure}
 \end{center}
@@ -97,7 +103,7 @@ Questo permette di aumentare la portabilità dell'applicazione web potendo appli
 In questo diagramma di attività viene illustrato la sequenza di operazioni dell'aggiornamento della heat-map a seguito di un cambiamento dei parametri della web-app da parte dell'utente.
 \begin{center}
 	\begin{figure}[H]
-		\includegraphics[scale=0.8]{../immagini/diag_PB/diag_act_front_back.png}
+		\centering\includegraphics[scale=0.8]{../immagini/diag_PB/diag_act_front_back.png}
 		\caption{Diagramma di attività tra modulo front-end e modulo back-end}
 	\end{figure}
 \end{center}
