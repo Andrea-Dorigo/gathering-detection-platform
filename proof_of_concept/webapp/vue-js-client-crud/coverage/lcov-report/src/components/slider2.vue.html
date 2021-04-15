@@ -375,10 +375,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -407,18 +403,22 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -455,7 +455,6 @@ export default {
       slider: {
         value: parseInt(new Date(Date.now()).getHours().toString(), 10),
         data: [
-          0,
           1,
           2,
           3,
@@ -482,9 +481,6 @@ export default {
           24,
         ],
         range: [
-          {
-            label: "00",
-          },
           {
             label: "01",
           },
@@ -563,10 +559,10 @@ export default {
   },
   methods: {
 <span class="fstat-no" title="function not covered" >    callbackRange: function(val) {</span>
-<span class="cstat-no" title="statement not covered" >      if(globalCounter !== 0) {</span>
+<span class="cstat-no" title="statement not covered" >      if (globalCounter !== 0) {</span>
 <span class="cstat-no" title="statement not covered" >        globalTimeCheck = false;</span>
       } else {
-<span class="cstat-no" title="statement not covered" >        globalCounter = globalCounter+1;</span>
+<span class="cstat-no" title="statement not covered" >        globalCounter = globalCounter + 1;</span>
       }
 <span class="cstat-no" title="statement not covered" >      this.rangeValue = val;</span>
 <span class="cstat-no" title="statement not covered" >      var date = this.$root.$refs.datePicker_component.getDate();</span>
@@ -584,25 +580,29 @@ export default {
 <span class="cstat-no" title="statement not covered" >      return this.rangeValue.label;</span>
     },
 <span class="fstat-no" title="function not covered" >    refreshSlider: function() {</span>
-<span class="cstat-no" title="statement not covered" >        var timeNow = new Date(Date.now()).getHours().toString();</span>
-<span class="cstat-no" title="statement not covered" >        var timeSlider = this.getTime();</span>
-<span class="cstat-no" title="statement not covered" >        if(timeSlider.length == 1) timeSlider = "0"+timeSlider;</span>
-<span class="cstat-no" title="statement not covered" >        var datePicker = this.$root.$refs.datePicker_component.getDate();</span>
-<span class="cstat-no" title="statement not covered" >        var dateNow = new Date().toISOString().substr(0, 10);</span>
-<span class="cstat-no" title="statement not covered" >        dateNow = dateNow + "T" +timeNow;</span>
-<span class="cstat-no" title="statement not covered" >        if(timeNow === timeSlider &amp;&amp; globalTimeCheck===true &amp;&amp; datePicker===dateNow) {</span>
-<span class="cstat-no" title="statement not covered" >          this.reloadMap();</span>
-<span class="cstat-no" title="statement not covered" >          this.$root.$refs.basicExample_component.retrieveCoordinate(datePicker);</span>
-<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >          setInterval(() =&gt; this.refreshSlider(), 6000);</span></span>
-        }
-        else {
-<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >          setInterval(() =&gt; this.refreshSlider(), 6000);</span></span>
-        }
-    }
+<span class="cstat-no" title="statement not covered" >      var timeNow = new Date(Date.now()).getHours().toString();</span>
+<span class="cstat-no" title="statement not covered" >      var timeSlider = this.getTime();</span>
+<span class="cstat-no" title="statement not covered" >      if (timeSlider.length == 1) timeSlider = "0" + timeSlider;</span>
+<span class="cstat-no" title="statement not covered" >      var datePicker = this.$root.$refs.datePicker_component.getDate();</span>
+<span class="cstat-no" title="statement not covered" >      var dateNow = new Date().toISOString().substr(0, 10);</span>
+<span class="cstat-no" title="statement not covered" >      dateNow = dateNow + "T" + timeNow;</span>
+<span class="cstat-no" title="statement not covered" >      if (</span>
+        timeNow !== timeSlider &amp;&amp;
+        globalTimeCheck === true &amp;&amp;
+        datePicker === dateNow
+      ) {
+<span class="cstat-no" title="statement not covered" >        this.reloadMap();</span>
+<span class="cstat-no" title="statement not covered" >        console.log("qua entro?");</span>
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >        setInterval(() =&gt; this.refreshSlider(), 6000);</span></span>
+      } else {
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >        setInterval(() =&gt; this.refreshSlider(), 6000);</span></span>
+      }
+    },
   },
 <span class="fstat-no" title="function not covered" >  created() {</span>
 <span class="cstat-no" title="statement not covered" >    this.rangeValue.label = new Date(Date.now()).getHours().toString();</span>
-<span class="cstat-no" title="statement not covered" >    if(this.rangeValue.label.length == 1) this.rangeValue.label = "0"+this.rangeValue.label;</span>
+<span class="cstat-no" title="statement not covered" >    if (this.rangeValue.label.length == 1)</span>
+      this.rangeValue.label = "0" + this.rangeValue.label;
 <span class="cstat-no" title="statement not covered" >    this.$root.$refs.slider2_component = this;</span>
 <span class="cstat-no" title="statement not covered" >    this.$nextTick(this.refreshSlider());</span>
   },
@@ -615,7 +615,7 @@ export default {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Wed Apr 14 2021 16:49:32 GMT+0200 (Ora legale dell’Europa centrale)
+                at Thu Apr 15 2021 12:37:15 GMT+0200 (Ora legale dell’Europa centrale)
             </div>
         </div>
         <script src="..\..\prettify.js"></script>

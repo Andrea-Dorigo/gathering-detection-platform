@@ -161,11 +161,12 @@ export default {
       var dateNow = new Date().toISOString().substr(0, 10);
       dateNow = dateNow + "T" + timeNow;
       if (
-        timeNow === timeSlider &&
+        timeNow !== timeSlider &&
         globalTimeCheck === true &&
         datePicker === dateNow
       ) {
         this.reloadMap();
+        console.log("qua entro?");
         setInterval(() => this.refreshSlider(), 6000);
       } else {
         setInterval(() => this.refreshSlider(), 6000);

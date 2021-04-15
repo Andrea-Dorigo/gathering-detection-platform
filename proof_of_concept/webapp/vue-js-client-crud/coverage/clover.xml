@@ -1,6 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1618414263177" clover="3.2.0">
-  <project timestamp="1618414263177" name="All files">
-    <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0" elements="0" coveredelements="0" complexity="0" loc="0" ncloc="0" packages="0" files="0" classes="0"/>
+<coverage generated="1618484823533" clover="3.2.0">
+  <project timestamp="1618484823533" name="All files">
+    <metrics statements="28" coveredstatements="7" conditionals="2" coveredconditionals="0" methods="12" coveredmethods="2" elements="42" coveredelements="9" complexity="0" loc="28" ncloc="28" packages="3" files="3" classes="3"/>
+    <package name="src">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="http-common.js" path="C:\Users\margh\Desktop\PROGETTO\jawadruids\proof_of_concept\webapp\vue-js-client-crud\src\http-common.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="src.components">
+      <metrics statements="24" coveredstatements="7" conditionals="2" coveredconditionals="0" methods="8" coveredmethods="2"/>
+      <file name="autocompleteSearch.vue" path="C:\Users\margh\Desktop\PROGETTO\jawadruids\proof_of_concept\webapp\vue-js-client-crud\src\components\autocompleteSearch.vue">
+        <metrics statements="24" coveredstatements="7" conditionals="2" coveredconditionals="0" methods="8" coveredmethods="2"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="56" count="0" type="stmt"/>
+        <line num="57" count="0" type="stmt"/>
+        <line num="58" count="0" type="stmt"/>
+        <line num="59" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="61" count="0" type="stmt"/>
+        <line num="68" count="0" type="stmt"/>
+        <line num="69" count="0" type="stmt"/>
+        <line num="70" count="0" type="stmt"/>
+        <line num="71" count="0" type="stmt"/>
+        <line num="72" count="0" type="stmt"/>
+        <line num="73" count="0" type="stmt"/>
+        <line num="74" count="0" type="stmt"/>
+        <line num="75" count="0" type="stmt"/>
+        <line num="76" count="0" type="stmt"/>
+        <line num="80" count="0" type="stmt"/>
+        <line num="84" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.services">
+      <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="htpprequest.js" path="C:\Users\margh\Desktop\PROGETTO\jawadruids\proof_of_concept\webapp\vue-js-client-crud\src\services\htpprequest.js">
+        <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+      </file>
+    </package>
   </project>
 </coverage>
