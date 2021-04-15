@@ -7,7 +7,7 @@
   Last change date: 2021-04-13
 */
 
-package com.webapp.data.mongodb.costumRepositoryTest;
+package com.webapp.data.mongodb.DetectionCustomRepositoryImplTest;
 
 import com.webapp.spring.data.mongodb.customRepository.DetectionCustomRepositoryImpl;
 
@@ -16,16 +16,26 @@ import java.util.List;
 import com.webapp.spring.data.mongodb.model.Detection;
 
 import java.util.ArrayList;
-import java.time.LocalTime;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
-
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.junit.Before;
-import org.junit.After;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
 
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = "classpath:testSpringCnfig.xml")
+@SpringBootTest(classes = DetectionCustomRepositoryImpl.class)
 public class DetectionCustomRepositoryImplTest {
+
+  @Autowired
+  @Qualifier("mongoTemplate")
+  private MongoTemplate mongoTemplate;
+
   DetectionCustomRepositoryImpl DCRI;
   Detection d;
   String id;
