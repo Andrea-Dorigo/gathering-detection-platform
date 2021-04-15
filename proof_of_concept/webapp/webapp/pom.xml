@@ -75,7 +75,11 @@
 				</executions>
       		</plugin>
 		</plugins>
-		
+		<testResources>
+            <testResource>
+                <directory>src\test\java\com\webapp\data\mongodb</directory>
+            </testResource>
+    </testResources>
 	</build>
 
 </project>
