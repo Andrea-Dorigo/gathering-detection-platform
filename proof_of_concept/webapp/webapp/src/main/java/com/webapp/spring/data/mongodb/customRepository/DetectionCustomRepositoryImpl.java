@@ -24,8 +24,13 @@ import java.text.SimpleDateFormat;
 import com.webapp.spring.data.mongodb.model.Detection;
 
 public class DetectionCustomRepositoryImpl implements DetectionCustomRepository {
+    
+    private MongoTemplate mongoTemplate;
+    
     @Autowired
-    MongoTemplate mongoTemplate;
+    public DetectionCustomRepositoryImpl(MongoTemplate mongoTemplate) {
+    	this.mongoTemplate = mongoTemplate;
+    }
 
     public List<String> getCities() {
         return mongoTemplate.findDistinct("city", Detection.class, String.class);
