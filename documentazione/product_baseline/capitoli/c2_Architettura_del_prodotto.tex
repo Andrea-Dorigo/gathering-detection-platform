@@ -25,7 +25,7 @@ Di seguito vengono riportati i diagrammi relativi all'\textit{attività} e di \t
 	\end{figure}
 \end{center}
 
-\subsection{Diagramma di attività modulo Acquisition}
+\subsection{Diagramma di attività}
 \begin{center}
 	\begin{figure}[H]
 		\centering\includegraphics[scale=0.65]
@@ -65,24 +65,24 @@ Di seguito vengono riportati i diagrammi relativi all'\textit{attività} e di \t
 \section{Architettura Prediction}\label{ArchitetturaDelProdottoPrediction}
 L'architettura del modulo del machine-learning si può semplificare ad un modulo unico con all'interno i metodi necessari per prelevare dati dal database per generare delle predizioni ed archiviarle nel database.
 Non necessita classi interne in quanto svolge esclusivamente operazioni funzionali. Per generare le predizioni il modulo svolge delle operazioni sequenziali:
-\begin{enumerate}
-	\item prelevo i dati all'interno del database;
-	\item controllo dei dati per eliminare le informazioni che possono inquinare le predizioni;
-	\item creo un set di dati da predire;
-	\item definisco il modello della predizione;
-	\item alleno il modello con i dati prelevati e controllati;
-	\item utilizzo il modello allenato per ricavare le previsioni dal set di dati creato nel punto 2;
-	\item archivio il risultato nel database.
-\end{enumerate}
 %Inserire
 %Grafici
 \subsection{Diagrammi dei package}
 \begin{center}
 	\begin{figure}[H]
 		\centering\includegraphics[scale=0.8]{../immagini/diag_PB/diag_pack_pred.png}
-		\caption{Diagramma dei package del modulo della predizione}
+		\caption{Diagramma dei package del modulo Prediction}
 	\end{figure}
 \end{center}
+
+\subsection{Diagrammi di attività}
+\begin{center}
+	\begin{figure}[H]
+		\centering\includegraphics[scale=0.60]{../immagini/diag_PB/prediction_activity.png}
+		\caption{Diagramma di attività del modulo Prediction}
+	\end{figure}
+\end{center}
+
 
 \section{Architettura Web-App}\label{ArchitetturaDelProdottoWebApp}
 Per il modulo relativo al front-end$_G$, si è deciso di utilizzare il pattern \textit{Model-View-Controller} (MVC).
