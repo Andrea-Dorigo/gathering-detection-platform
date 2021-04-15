@@ -22,9 +22,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">4.17% </span>
+                <span class="strong">41.67% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>1/24</span>
+                <span class='fraction'>10/24</span>
             </div>
         
             
@@ -36,16 +36,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">55.56% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/9</span>
+                <span class='fraction'>5/9</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">4.17% </span>
+                <span class="strong">41.67% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>1/24</span>
+                <span class='fraction'>10/24</span>
             </div>
         
             
@@ -168,6 +168,21 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -178,21 +193,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -205,14 +205,14 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -259,12 +259,12 @@
 import Elements from "../services/htpprequest";
 &nbsp;
 export default {
-<span class="fstat-no" title="function not covered" >  data() {</span>
-<span class="cstat-no" title="statement not covered" >    var cit = [];</span>
-<span class="cstat-no" title="statement not covered" >    var searchText = "";</span>
-<span class="cstat-no" title="statement not covered" >    var suggestiondata = [];</span>
-<span class="cstat-no" title="statement not covered" >    var name = "Roma";</span>
-<span class="cstat-no" title="statement not covered" >    return {</span>
+  data() {
+    var cit = [];
+    var searchText = "";
+    var suggestiondata = [];
+    var name = "Roma";
+    return {
       cit,
       searchText,
       suggestiondata,
@@ -272,8 +272,8 @@ export default {
     };
   },
   methods: {
-<span class="fstat-no" title="function not covered" >    retireveCities: function() {</span>
-<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >      Elements.getCities().then((res) =&gt; {</span></span>
+    retireveCities: function() {
+<span class="fstat-no" title="function not covered" >      Elements.getCities().then((res) =&gt; {</span>
         var place;
 <span class="cstat-no" title="statement not covered" >        this.suggestiondata = [];</span>
 <span class="cstat-no" title="statement not covered" >        this.cit = res.data;</span>
@@ -296,15 +296,15 @@ export default {
 <span class="cstat-no" title="statement not covered" >        this.$root.$refs.basicExample_component.retrieveCoordinate(date);</span>
       });
     },
-<span class="fstat-no" title="function not covered" >    getNameCity: function() {</span>
-<span class="cstat-no" title="statement not covered" >      return this.name;</span>
+    getNameCity: function() {
+      return this.name;
     },
   },
-<span class="fstat-no" title="function not covered" >  created() {</span>
-<span class="cstat-no" title="statement not covered" >    this.$root.$refs.autocompleteSearch_component = this;</span>
+  created() {
+    this.$root.$refs.autocompleteSearch_component = this;
   },
-<span class="fstat-no" title="function not covered" >  mounted() {</span>
-<span class="cstat-no" title="statement not covered" >    this.retireveCities();</span>
+  mounted() {
+    this.retireveCities();
   },
 };
 &lt;/script&gt;
@@ -339,7 +339,7 @@ export default {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Wed Apr 14 2021 16:49:32 GMT+0200 (Ora legale dell’Europa centrale)
+                at Thu Apr 15 2021 21:18:51 GMT+0200 (Ora legale dell’Europa centrale)
             </div>
         </div>
         <script src="..\..\prettify.js"></script>

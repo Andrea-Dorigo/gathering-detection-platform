@@ -22,30 +22,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">6.67% </span>
+                <span class="strong">60% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>1/15</span>
+                <span class='fraction'>9/15</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>1/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">60% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/5</span>
+                <span class='fraction'>3/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">6.67% </span>
+                <span class="strong">60% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>1/15</span>
+                <span class='fraction'>9/15</span>
             </div>
         
             
@@ -54,7 +54,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -153,8 +153,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -166,20 +166,20 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -220,9 +220,9 @@ export default {
   components: {
     Datepicker,
   },
-<span class="fstat-no" title="function not covered" >  data() {</span>
-<span class="cstat-no" title="statement not covered" >    var picker = new Date().toISOString().substr(0, 10);</span>
-<span class="cstat-no" title="statement not covered" >    return {</span>
+  data() {
+    var picker = new Date().toISOString().substr(0, 10);
+    return {
       picker,
     };
   },
@@ -233,21 +233,21 @@ export default {
 <span class="cstat-no" title="statement not covered" >      d = d + "T" + t;</span>
 <span class="cstat-no" title="statement not covered" >      this.$root.$refs.basicExample_component.retrieveCoordinate(d);</span>
     },
-<span class="fstat-no" title="function not covered" >    getDate: function() {</span>
-<span class="cstat-no" title="statement not covered" >      var date = this.picker;</span>
-<span class="cstat-no" title="statement not covered" >      if (typeof date !== "string") {</span>
+    getDate: function() {
+      var date = this.picker;
+<span class="missing-if-branch" title="if path not taken" >I</span>      if (typeof date !== "string") {
 <span class="cstat-no" title="statement not covered" >        date = date.toISOString().substr(0, 10);</span>
       }
-<span class="cstat-no" title="statement not covered" >      var t = this.$root.$refs.slider2_component.getTime();</span>
-<span class="cstat-no" title="statement not covered" >      date = date + "T" + t;</span>
-<span class="cstat-no" title="statement not covered" >      return date;</span>
+      var t = this.$root.$refs.slider2_component.getTime();
+      date = date + "T" + t;
+      return date;
     },
 <span class="fstat-no" title="function not covered" >    resetDate: function() {</span>
 <span class="cstat-no" title="statement not covered" >      this.picker = new Date(Date.now()).toISOString().substr(0, 10);</span>
     },
   },
-<span class="fstat-no" title="function not covered" >  created() {</span>
-<span class="cstat-no" title="statement not covered" >    this.$root.$refs.datePicker_component = this;</span>
+  created() {
+    this.$root.$refs.datePicker_component = this;
   },
 };
 &lt;/script&gt;
@@ -267,7 +267,7 @@ export default {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Thu Apr 15 2021 12:37:15 GMT+0200 (Ora legale dell’Europa centrale)
+                at Thu Apr 15 2021 21:18:51 GMT+0200 (Ora legale dell’Europa centrale)
             </div>
         </div>
         <script src="..\..\prettify.js"></script>

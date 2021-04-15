@@ -13,7 +13,7 @@
       <date-picker />
       <div id="sliderMap">
         <div id="sb">
-          <slider2 id="slider" />
+          <slider id="slider" />
           <button
             type="button"
             class="btn btn-outline-primary"
@@ -24,7 +24,7 @@
           </button>
         </div>
         <div id="mapList">
-        <BasicExample id="map" />
+        <heatMap id="map" />
          <listCity />
         </div>
       </div>
@@ -33,17 +33,17 @@
 </template>
 
 <script>
-import BasicExample from "./BasicExample.vue";
-import slider2 from "./slider2.vue";
+import heatMap from "./heatMap.vue";
+import slider from "./slider.vue";
 import listCity from "./listCity.vue";
-import DatePicker from "./datePicker.vue";
+import datePicker from "./datePicker.vue";
 
 export default {
   name: "mainPage",
   components: {
-    DatePicker,
-    BasicExample,
-    slider2,
+    datePicker,
+    heatMap,
+    slider,
     listCity,
   },
   methods: {
