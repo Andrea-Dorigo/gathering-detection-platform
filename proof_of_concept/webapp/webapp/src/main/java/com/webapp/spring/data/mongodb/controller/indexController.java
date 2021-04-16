@@ -55,10 +55,4 @@ public class IndexController {
     public ResponseEntity<Detection> fetchLastValue(@PathVariable("city") String city) throws Exception {
         return new ResponseEntity<>(detectionCustomRepository.getLastValue(city), HttpStatus.OK);
     }
-
-    @GetMapping("/numPeopleToday/{city}/{date}")
-    public ResponseEntity<List<Integer>> fetchNumPeopleToday(@PathVariable("city") String city,
-            @PathVariable("date") String date) throws Exception {
-        return new ResponseEntity<>(detectionCustomRepository.getNumPeopleToday(city, date), HttpStatus.OK);
-    }
 }

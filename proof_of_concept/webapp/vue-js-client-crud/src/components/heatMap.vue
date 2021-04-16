@@ -48,8 +48,8 @@
 
 <script>
 import { LMap, LTileLayer, LMarker, LPopup } from "vue2-leaflet";
-import Vue2LeafletHeatmap from "./vue2LeafletHeatmap.vue";
 import Elements from "../services/htpprequest";
+import Vue2LeafletHeatmap from "./vue2LeafletHeatmap.vue";
 
 export default {
   name: "basicExample",
@@ -161,9 +161,9 @@ export default {
       var datePicker = this.$root.$refs.datePicker_component.getDate();
       var dateNow = new Date().toISOString().substr(0, 10);
       var timeNow = new Date(Date.now()).getHours().toString();
-      if(timeNow.length == 1) timeNow = "0"+timeNow;
+      if (timeNow.length == 1) timeNow = "0" + timeNow;
       dateNow = dateNow + "T" + timeNow;
-      if(datePicker === dateNow) {
+      if (datePicker === dateNow) {
         this.retrieveCoordinate(dateNow);
         setInterval(() => this.refreshMap(), 600000);
       }
