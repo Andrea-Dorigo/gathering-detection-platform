@@ -37,8 +37,12 @@ import com.webapp.spring.data.mongodb.repository.CoordinateRepository;
 @Service
 public class IndexController {
 
+    private CoordinateRepository coordinateRepository;
+    
     @Autowired
-    CoordinateRepository coordinateRepository;
+    public IndexController(CoordinateRepository coordinateRepository){
+        this.coordinateRepository = coordinateRepository;
+    }
 
     @GetMapping("/city")
     public ResponseEntity<List<String>> fetchCity() {
