@@ -66,6 +66,7 @@ public class DetectionCustomRepositoryImplTest {
     query.limit(1);
     query.with(Sort.by("time").descending());
 	List<Detection> lastValue = new ArrayList<>();
+	lastValue.add(new Detection());
 	when(mongoTemplate.find(query, Detection.class, "detection")).thenReturn(lastValue);
 	underTest.getLastValue(city);
 	verify(mongoTemplate).find(query, Detection.class, "detection");
