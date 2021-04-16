@@ -72,11 +72,11 @@ Di seguito vengono riportati i diagrammi relativi all'\textit{attività} e di \t
 
 
 \section{Architettura Prediction}\label{ArchitetturaDelProdottoPrediction}
-L'architettura del modulo del machine-learning si può semplificare ad un modulo unico con all'interno i metodi necessari per prelevare dati dal database per generare delle predizioni ed archiviarle nel database.
+L'architettura del modulo del machine-learning$_{\scaleto{G}{3pt}}$ si può semplificare ad un modulo unico con all'interno i metodi necessari per prelevare dati dal database per generare delle predizioni ed archiviarle nel database.
 Non necessita classi interne in quanto svolge esclusivamente operazioni funzionali. Per generare le predizioni il modulo svolge delle operazioni sequenziali:
 %Inserire
 %Grafici
-\subsection{Diagrammi dei package}
+\subsection{Diagrammi dei package}\label{DiagrammaDeiPackagePrediction}
 \begin{center}
 	\begin{figure}[H]
 		\centering\includegraphics[scale=0.8]{../immagini/diag_PB/diag_pack_pred.png}
@@ -84,7 +84,7 @@ Non necessita classi interne in quanto svolge esclusivamente operazioni funziona
 	\end{figure}
 \end{center}
 
-\subsection{Diagrammi di attività}
+\subsection{Diagrammi di attività}\label{DiagrammaDiAttivitaPrediction}
 \begin{center}
 	\begin{figure}[H]
 		\centering\includegraphics[scale=0.60]{../immagini/diag_PB/prediction_activity.png}
@@ -94,33 +94,33 @@ Non necessita classi interne in quanto svolge esclusivamente operazioni funziona
 
 
 \section{Architettura Web-App}\label{ArchitetturaDelProdottoWebApp}
-Lo scambio di dati tra fron-end e back-end avviene attraverso il pattern architetturale REST. Si è deciso questo pattern per avere un oggetto di scambio tra le due parti unico strutturalmente e quindi non è essere vincolato dalla struttura presente nel database.
-Questo permette di aumentare la portabilità dell'applicazione web potendo applicare il back-end, possibilmente, a diversi front-end. Le richieste che il front-end effettua al back-end sono HTTP Request GET, quindi sono sempre richieste di visione di informazioni per poi essere utilizzate per aggiornare la parte grafica visibile dal client.
+Lo scambio di dati tra fron-end e back-end avviene attraverso il design pattern$_G$ architetturale REST. Si ha optato per questo pattern in modo da avere un oggetto unico strutturalmente di scambio tra le due parti e quindi non vincolato  dalla  struttura  presente  nel  database.
+Questo permette di aumentare la portabilità dell'applicazione web potendo applicare il back-end$_{\scaleto{G}{3pt}}$, possibilmente, a diversi front-end$_{\scaleto{G}{3pt}}$. Le richieste che il front-end$_{\scaleto{G}{3pt}}$ effettua al back-end$_{\scaleto{G}{3pt}}$ sono HTTP Request GET, quindi sono sempre richieste di visione di informazioni per poi essere utilizzate per aggiornare la parte grafica visibile dal client.
 %Inserire
 %Grafici
-\subsection{Diagrammi dei package del modulo back-end}
+\subsection{Diagrammi dei package del modulo REST API}\label{DiagrammaDeiPackageRestApi}
 \begin{center}
 	\begin{figure}[H]
 		\centering\includegraphics[scale=0.8]{../immagini/diag_PB/diag_pack_spring.png}
 		\caption{Diagramma dei package del modulo back-end}
 	\end{figure}
 \end{center}
-\subsection{Diagramma delle classi del modulo back-end}
+\subsection{Diagramma delle classi del modulo back-end}\label{DiagrammaClassiRestApi}
 \begin{center}
 	\begin{figure}[H]
 		\centering\includegraphics[scale=0.65]{../immagini/diag_PB/diag_class_spring.png}
 		\caption{Diagramma delle classi del modulo back-end}
 	\end{figure}
 \end{center}
-\subsection{Diagrammi dei package del modulo front-end}
+\subsection{Diagrammi dei package del modulo front-end}\label{DiagrammaPackageFrontEnd}
 \begin{center}
 	\begin{figure}[H]
 		\centering\includegraphics[scale=0.7]{../immagini/diag_PB/diag_pack_vue.png}
 		\caption{Diagramma dei package del modulo front-end}
 	\end{figure}
 \end{center}
-\subsection{Diagrammi delle attività}
-In questo diagramma di attività viene illustrato la sequenza di operazioni dell'aggiornamento della heat-map a seguito di un cambiamento dei parametri della web-app da parte dell'utente.
+\subsection{Diagrammi delle attività}\label{DiagrammaDelleAttivita}
+In questo diagramma di attività viene illustrata la sequenza di operazioni dell'aggiornamento della heat-map a seguito di un cambiamento dei parametri della web-app da parte dell'utente.
 \begin{center}
 	\begin{figure}[H]
 		\centering\includegraphics[scale=0.8]{../immagini/diag_PB/diag_act_front_back.png}
