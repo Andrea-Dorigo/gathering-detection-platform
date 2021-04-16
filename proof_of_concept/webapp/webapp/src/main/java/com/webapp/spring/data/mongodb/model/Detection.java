@@ -50,58 +50,6 @@ public class Detection {
         this.day_of_week = day_of_week;
     }
 
-    public String getId() {
-        return id;
-    }
-
-    public int getId_webcam() {
-        return id_webcam;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public String getLocation() {
-        return location;
-    }
-
-    public float getLatitude() {
-        return latitude;
-    }
-
-    public float getLongitude() {
-        return longitude;
-    }
-
-    public int getNumPeople() {
-        return numPeople;
-    }
-
-    public String getDate() {
-        return date;
-    }
-
-    public String getTime() {
-        return time;
-    }
-
-    public int getType() {
-        return type;
-    }
-
-    public String getWeather_description() {
-        return weather_description;
-    }
-
-    public float getTemperature() {
-        return temperature;
-    }
-
-    public int getDay_of_week() {
-        return day_of_week;
-    }
-
     @Override
     public String toString() {
         return "Detection [id=" + id + ", id_webcam=" + id_webcam + ", city=" + city + ", location=" + location
