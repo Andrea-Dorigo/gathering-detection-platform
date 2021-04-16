@@ -12,17 +12,18 @@ import java.util.List;
 import java.util.ArrayList;
 
 import org.springframework.data.domain.Sort;
-import org.springframework.data.domain.Sort.Direction;
-import org.springframework.data.domain.Sort.Order;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
+import org.springframework.stereotype.Repository;
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
 import com.webapp.spring.data.mongodb.model.Detection;
 
+@Repository
 public class DetectionCustomRepositoryImpl implements DetectionCustomRepository {
     
     private MongoTemplate mongoTemplate;
@@ -86,12 +87,11 @@ public class DetectionCustomRepositoryImpl implements DetectionCustomRepository 
         return numPeople;
     }
 
-    public List<Detection> getLastValue(String city) throws Exception {
+    public Detection getLastValue(String city) throws Exception {
         Query query = new Query();
         query.limit(1);
         query.with(Sort.by("time").descending());
-        List<Detection> LastValue = mongoTemplate.find(query, Detection.class, "detection");
-
+        Detection LastValue = mongoTemplate.find(query, Detection.class, "detection").get(0);
         return LastValue;
     }
 

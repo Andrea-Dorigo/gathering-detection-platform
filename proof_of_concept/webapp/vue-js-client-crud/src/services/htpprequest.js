@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 import http from "../http-common";
 
 class Elements {

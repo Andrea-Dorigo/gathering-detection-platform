@@ -8,28 +8,19 @@
 */
 package com.webapp.spring.data.mongodb.controller;
 
-import com.google.gson.Gson;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.webapp.spring.data.mongodb.model.Detection;
-import com.webapp.spring.data.mongodb.repository.CoordinateRepository;
+import com.webapp.spring.data.mongodb.customRepository.DetectionCustomRepository;
 
 @CrossOrigin(origins = "http://localhost:8081")
 @RestController
@@ -37,37 +28,37 @@ import com.webapp.spring.data.mongodb.repository.CoordinateRepository;
 @Service
 public class IndexController {
 
-    private CoordinateRepository coordinateRepository;
+    private DetectionCustomRepository detectionCustomRepository;
     
     @Autowired
-    public IndexController(CoordinateRepository coordinateRepository){
-        this.coordinateRepository = coordinateRepository;
+    public IndexController(DetectionCustomRepository detectionCustomRepository){
+        this.detectionCustomRepository = detectionCustomRepository;
     }
 
     @GetMapping("/city")
     public ResponseEntity<List<String>> fetchCity() {
-        return new ResponseEntity<>(coordinateRepository.getCities(), HttpStatus.OK);
+        return new ResponseEntity<>(detectionCustomRepository.getCities(), HttpStatus.OK);
     }
 
     @GetMapping("/coo/{city}")
     public ResponseEntity<List<List<Double>>> fetchCoo(@PathVariable("city") String city) {
-        return new ResponseEntity<>(coordinateRepository.getLatLngs(city), HttpStatus.OK);
+        return new ResponseEntity<>(detectionCustomRepository.getLatLngs(city), HttpStatus.OK);
     }
 
     @GetMapping("/RT/{city}/{date}")
     public ResponseEntity<List<Detection>> fetchDataRT(@PathVariable("city") String city,
             @PathVariable("date") String date) throws Exception {
-        return new ResponseEntity<>(coordinateRepository.getDataRT(city, date), HttpStatus.OK);
+        return new ResponseEntity<>(detectionCustomRepository.getDataRT(city, date), HttpStatus.OK);
     }
 
     @GetMapping("/LV/{city}")
-    public ResponseEntity<List<Detection>> fetchLastValue(@PathVariable("city") String city) throws Exception {
-        return new ResponseEntity<>(coordinateRepository.getLastValue(city), HttpStatus.OK);
+    public ResponseEntity<Detection> fetchLastValue(@PathVariable("city") String city) throws Exception {
+        return new ResponseEntity<>(detectionCustomRepository.getLastValue(city), HttpStatus.OK);
     }
 
     @GetMapping("/numPeopleToday/{city}/{date}")
     public ResponseEntity<List<Integer>> fetchNumPeopleToday(@PathVariable("city") String city,
             @PathVariable("date") String date) throws Exception {
-        return new ResponseEntity<>(coordinateRepository.getNumPeopleToday(city, date), HttpStatus.OK);
+        return new ResponseEntity<>(detectionCustomRepository.getNumPeopleToday(city, date), HttpStatus.OK);
     }
 }

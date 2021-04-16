@@ -76,7 +76,7 @@ export default {
       var city = this.$root.$refs.autocompleteSearch_component.getNameCity();
       var modal = document.getElementById("myModal");
       Elements.getLastValue(city).then((res) => {
-        var temp = res.data[0].time;
+        var temp = res.data.time;
         if (new Date(date + ":00:00") <= new Date(temp.replace(" CEST", ""))) {
           var numPeople = 0;
           Elements.getDataRT(city, date).then((res1) => {

@@ -14,6 +14,6 @@ public interface DetectionCustomRepository {
     public List<String> getCities();
     public List<List<Double>> getLatLngs(String city);
     public List<Detection> getDataRT(String city, String date) throws Exception;
-    public List<Detection> getLastValue(String city) throws Exception ;
+    public Detection getLastValue(String city) throws Exception ;
     public List<Integer> getNumPeopleToday(String city, String date) throws Exception;
 }

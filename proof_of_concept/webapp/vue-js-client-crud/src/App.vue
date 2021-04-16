@@ -24,7 +24,7 @@
       <div class="container p-4">
         <div class="row">
           <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Footer Content</h5>
+            <h5 class="text-uppercase">GDP</h5>
             <p>
               Web application del progetto GDP - Gathering detection platform
             </p>
@@ -61,9 +61,11 @@
 <script>
 
 import autosearch from "./components/autocompleteSearch.vue";
+import router from "./router.js";
 
 export default {
   name: "app",
+  router: router,
   components: {
     autosearch,
   },
