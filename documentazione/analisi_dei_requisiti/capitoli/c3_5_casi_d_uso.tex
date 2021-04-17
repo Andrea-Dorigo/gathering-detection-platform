@@ -163,7 +163,7 @@ Dopo un'attenta analisi, il gruppo ha deciso di porre questo caso d'uso separato
 }\label{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC5SelezioneDellIstanzeDiCuiVisualizzareIDatiNellaHeatmap}%parzialmente corretto
 \begin{center}
 	\begin{figure}[H]
-		\centering\includegraphics{../immagini/attori_casi/UC5.png}
+		\centering\includegraphics{../immagini/attori_casi/UC_9.png}
 		\caption{UC5 - Selezione dell’istante di cui visualizzare i dati nella heat map}
 	\end{figure}
 \end{center}
@@ -172,15 +172,15 @@ Dopo un'attenta analisi, il gruppo ha deciso di porre questo caso d'uso separato
 	\item \textbf{Descrizione}: l’utente, attraverso l’interfaccia del sistema, modifica l’istante di tempo di cui vuole visualizzare i dati;
 	\item \textbf{Scenario principale}: attraverso l’interfaccia l’utente può decidere di:
 		\begin{enumerate}
-			\item Modificare l’orario dei dati da visualizzare (UC5.1, sezione  \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC51SelezioneDellOrario});
-			\item Modificare la data tra quelle disponibili (UC5.2, sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC52ModificaDellaData});
-			\item Ritornare ai dati in tempo reale (UC5.3, sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC53RipristinoDatiATempoReale}).
+			\item Modificare l’orario dei dati da visualizzare (UC9.1, sezione  \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC51SelezioneDellOrario});
+			\item Modificare la data tra quelle disponibili (UC9.2, sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC52ModificaDellaData});
+			\item Ritornare ai dati in tempo reale (UC9.3, sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC53RipristinoDatiATempoReale}).
 		\end{enumerate}
 	\item \textbf{Precondizione}: il sistema dispone di informazioni su diversi istanti di tempo;
 	\item \textbf{Postcondizione}: l’utente ha selezionato un istante di tempo diverso da quello attuale e visualizza i dati riguardanti ad esso.%insicuro
 \end{itemize}
 
-\subsubsection{UC5.1 - Selezione dell’orario}\label{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC51SelezioneDellOrario}
+\subsubsection{UC9.1 - Selezione dell’orario}\label{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC51SelezioneDellOrario}
 \begin{itemize}
 	\item \textbf{Attori primari}: utente generico;
 	\item \textbf{Descrizione}: l’utente seleziona un orario diverso da quello attuale per visualizzare i dati di quel momento;
@@ -189,34 +189,34 @@ Dopo un'attenta analisi, il gruppo ha deciso di porre questo caso d'uso separato
 	\item \textbf{Postcondizione}:  l’orario viene aggiornato e la mappa visualizza i dati della modifica fatta.
 \end{itemize}
 
-\subsubsection{UC5.2 - Modifica della data}\label{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC52ModificaDellaData}
+\subsubsection{UC9.2 - Modifica della data}\label{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC52ModificaDellaData}
 \begin{itemize}
 	\item \textbf{Attori primari}: utente generico;
 	\item \textbf{Descrizione}: l’utente seleziona una data diversa da quella odierna tra quelle disponibili e visualizza la mappa della data scelta;
 	\item \textbf{Scenario principale}: l’utente seleziona una data diversa da quella attuale;
 	\item \textbf{Precondizione}: il sistema possiede informazioni su tutte le date fino a quella odierna;
-	\item \textbf{Postcondizione}: la data viene aggiornata e l’utente visualizza l’heat map$_{\scaleto{G}{3pt}}$ aggiornata con i dati del giorno selezionato all’orario attuale o all’orario scelto dall’utente stesso, secondo quanto definito nella descrizione dell’UC5.1 (sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC51SelezioneDellOrario}).
+	\item \textbf{Postcondizione}: la data viene aggiornata e l’utente visualizza l’heat map$_{\scaleto{G}{3pt}}$ aggiornata con i dati del giorno selezionato all’orario attuale o all’orario scelto dall’utente stesso, secondo quanto definito nella descrizione dell’UC9.1 (sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC51SelezioneDellOrario}).
 \end{itemize}
 
-\subsubsection{UC5.3 - Ripristino dati a tempo reale}\label{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC53RipristinoDatiATempoReale}
+\subsubsection{UC9.3 - Ripristino dati a tempo reale}\label{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC53RipristinoDatiATempoReale}
 \begin{itemize}
 	\item \textbf{Attori primari}: utente generico;
 	\item \textbf{Descrizione}:  l’utente sceglie di osservare i dati in tempo reale;
 	\item \textbf{Scenario principale}: l’utente preme sul pulsante per il ripristino dei valori attuali di data e ora;
-	\item \textbf{Precondizione}: l’utente ha impostato una data e/o un’ora diversa dal valore di quella attuale secondo quanto descritto nell'UC5.1 (sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC51SelezioneDellOrario}) e nell'UC5.2 (sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC52ModificaDellaData});
+	\item \textbf{Precondizione}: l’utente ha impostato una data e/o un’ora diversa dal valore di quella attuale secondo quanto descritto nell'UC9.1 (sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC51SelezioneDellOrario}) e nell'UC9.2 (sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC52ModificaDellaData});
 	\item \textbf{Postcondizione}: l’utente visualizza la mappa con i dati in tempo reale.
 \end{itemize}
 
 
 \begin{center}
 	\begin{figure}[H]
-		\centering\includegraphics[scale=0.8]{../immagini/attori_casi/uc6.png}
+		\centering\includegraphics[scale=0.6]{../immagini/attori_casi/UC_10.png}
 		\caption{Scherma generale della ricerca ed errori annessi}
 	\end{figure}
 \end{center}
 
 
-\subsubsection{UC6 - Ricerca della città da visualizzare}\label{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC6RicercaDellaCittàDaVisualizzare}
+\subsubsection{UC10 - Ricerca della città da visualizzare}\label{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC6RicercaDellaCittàDaVisualizzare}
 
 \begin{itemize}
 	\item \textbf{Attori primari:} utente generico;
@@ -224,10 +224,10 @@ Dopo un'attenta analisi, il gruppo ha deciso di porre questo caso d'uso separato
 	\item \textbf{Scenario principale:} l’utente ricerca una città tramite una barra di ricerca;
 	\item \textbf{Precondizione:} l’utente ha inserito la città da ricercare;
 	\item \textbf{Postcondizione:} l’utente ha inserito la città che vuole cercare e il sistema si aggiorna in base alla ricerca fatta;
-	\item \textbf{Estensioni:} l’utente ha ricercato una città non presente nel database, il sistema rileva questo errore e di conseguenza viene visualizzato un messaggio relativo all’errore riscontrato (UC 7, sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC7VisualizzazioneMessaggioDiMancanzaCittàNelDatabase}).
+	\item \textbf{Estensioni:} l’utente ha ricercato una città non presente nel database, il sistema rileva questo errore e di conseguenza viene visualizzato un messaggio relativo all’errore riscontrato (UC 13, sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC7VisualizzazioneMessaggioDiMancanzaCittàNelDatabase}).
 \end{itemize}
 
-\subsubsection{UC6.1 - Ricerca della città da visualizzare tramite codice identificativo}\label{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC61RicercaDellaCittàDaVisualizzareTramiteCodiceIdentificativo}
+\subsubsection{UC11 - Ricerca della città da visualizzare tramite codice identificativo}\label{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC61RicercaDellaCittàDaVisualizzareTramiteCodiceIdentificativo}
 
 \begin{itemize}
 	\item \textbf{Attori primari:} utente generico;
@@ -237,7 +237,7 @@ Dopo un'attenta analisi, il gruppo ha deciso di porre questo caso d'uso separato
 	\item \textbf{Postcondizione:} il sistema mostra all’utente il risultato della ricerca effettuata.
 \end{itemize}
 
-\subsubsection{UC6.2 - Ricerca della città da visualizzare tramite nome}\label{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC52RicercaDellaCittàDaVisualizzareTramiteNome}
+\subsubsection{UC12- Ricerca della città da visualizzare tramite nome}\label{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC52RicercaDellaCittàDaVisualizzareTramiteNome}
 
 \begin{itemize}
 	\item \textbf{Attori primari:} utente generico;
@@ -247,7 +247,7 @@ Dopo un'attenta analisi, il gruppo ha deciso di porre questo caso d'uso separato
 	\item \textbf{Postcondizione:} il sistema mostra all’utente il risultato della ricerca effettuata.
 \end{itemize}
 
-\subsubsection{UC7 - Visualizzazione mancanza città nel database}\label{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC7VisualizzazioneMessaggioDiMancanzaCittàNelDatabase}
+\subsubsection{UC13 - Visualizzazione mancanza città nel database}\label{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC7VisualizzazioneMessaggioDiMancanzaCittàNelDatabase}
 
 \begin{itemize}
 	\item \textbf{Attori primari:} utente generico;
