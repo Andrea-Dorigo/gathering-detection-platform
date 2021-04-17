@@ -95,11 +95,11 @@ Non necessita classi interne in quanto svolge esclusivamente operazioni procedur
 
 \section{Architettura Web-App}\label{ArchitetturaDelProdottoWebApp}
 Lo scambio di dati tra fron-end$_{\scaleto{G}{3pt}}$ e back-end$_{\scaleto{G}{3pt}}$ avviene attraverso il design pattern$_G$ architetturale REST$_{\scaleto{G}{3pt}}$. Si ha optato per questo pattern in modo da avere un oggetto unico strutturalmente di scambio tra le due parti e quindi non vincolato  dalla  struttura  presente  nel  database.
-Questo permette di aumentare la portabilità dell'applicazione web potendo applicare il back-end$_{\scaleto{G}{3pt}}$, possibilmente, a diversi front-end$_{\scaleto{G}{3pt}}$. Le richieste che il front-end$_{\scaleto{G}{3pt}}$ effettua al back-end$_{\scaleto{G}{3pt}}$ sono HTTP Request GET, quindi sono sempre richieste di visione di informazioni per poi essere utilizzate per aggiornare la parte grafica visibile dal client.
+Questo permette di aumentare la portabilità dell'applicazione web potendo applicare il back-end$_{\scaleto{G}{3pt}}$, possibilmente, a diversi front-end$_{\scaleto{G}{3pt}}$. Le richieste che il front-end$_{\scaleto{G}{3pt}}$ effettua al back-end$_{\scaleto{G}{3pt}}$ sono HTTP Request GET$_{\scaleto{G}{3pt}}$, quindi sono sempre richieste di visione di informazioni per poi essere utilizzate per aggiornare la parte grafica visibile dal client.
 %Inserire
 %Grafici
 \subsection{Diagrammi dei package del modulo back-end}\label{DiagrammaDeiPackageRestApi}
-Il diagramma dei package del modulo back-end$_{\scaleto{G}{3pt}}$ espone le classi all'interno del modulo e l'uso della libreria esterna framework di Spring per generare il servizio REST$_{\scaleto{G}{3pt}}$ con l'autoconfigurazione messa a disposizione da Spring Boot.
+Il diagramma dei package del modulo back-end$_{\scaleto{G}{3pt}}$ espone le classi all'interno del modulo e l'uso della libreria esterna framework di Spring$_{\scaleto{G}{3pt}}$ per generare il servizio REST$_{\scaleto{G}{3pt}}$ con l'autoconfigurazione messa a disposizione da Spring Boot$_{\scaleto{G}{3pt}}$.
 \begin{center}
 	\begin{figure}[H]
 		\centering\includegraphics[scale=0.8]{../immagini/diag_PB/diag_pack_spring.png}
@@ -114,7 +114,7 @@ Il diagramma dei package del modulo back-end$_{\scaleto{G}{3pt}}$ espone le clas
 	\end{figure}
 \end{center}
 \subsection{Diagramma di sequenza del modulo back-end}\label{DiagrammaSequenzaSpring}
-Il diagramma di sequenza illustrato descrive la sequenza di azioni dopo una richiesta di visualizzazione della lista delle città presenti nel database. Questo schema omette tutte le componenti create autonomamente da Spring Boot$_{\scaleto{G}{3pt}}$. Tutte le altre richieste hanno uno schema analogo, ma con una query diversa al database.
+Il diagramma di sequenza illustrato descrive la sequenza di azioni dopo una richiesta di visualizzazione della lista delle città presenti nel database. Questo schema omette tutte le componenti create autonomamente da Spring Boot$_{\scaleto{G}{3pt}}$. Tutte le altre richieste hanno uno schema analogo, ma con una query$_{\scaleto{G}{3pt}}$ diversa al database.
 \begin{center}
 	\begin{figure}[H]
 		\centering\includegraphics[scale=0.7]{../immagini/diag_PB/diag_seq_spring.png}
@@ -130,7 +130,7 @@ Il diagramma dei package del modulo front-end$_{\scaleto{G}{3pt}}$ espone i coll
 	\end{figure}
 \end{center}
 \subsection{Diagrammi delle attività}\label{DiagrammaDelleAttivita}
-In questo diagramma di attività viene illustrata la sequenza di operazioni dell'aggiornamento della heat-map a seguito di un cambiamento dei parametri della web-app da parte dell'utente.
+In questo diagramma di attività viene illustrata la sequenza di operazioni dell'aggiornamento della heat-map$_{\scaleto{G}{3pt}}$ a seguito di un cambiamento dei parametri della web-app da parte dell'utente.
 \begin{center}
 	\begin{figure}[H]
 		\centering\includegraphics[scale=0.8]{../immagini/diag_PB/diag_act_front_back.png}
