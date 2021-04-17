@@ -1,5 +1,5 @@
 /*jshint esversion: 6 */
-import { mount} from "@vue/test-utils";
+import { mount, shallowMount} from "@vue/test-utils";
 import chiSiamo from "../../components/aboutUs.vue";
 import autocompleteSearch from '../../components/autocompleteSearch.vue';
 import heatMap from '../../components/heatMap.vue';
@@ -69,7 +69,7 @@ describe("autocompleteSearch", () => {
 });
 
 describe("datePicker", () => {
-  const wrapper = mount(datePicker);
+  const wrapper = shallowMount(datePicker);
   test('check if exist', () =>{
     expect(wrapper.exists()).toBe(true);
     expect(wrapper.find('does-not-exist').exists()).toBe(false);
@@ -77,7 +77,7 @@ describe("datePicker", () => {
 });
 
 describe("slider", () => {
-  const wrapper = mount(slider);
+  const wrapper = shallowMount(slider);
   test('check if exist', () =>{
     expect(wrapper.exists()).toBe(true);
     expect(wrapper.find('does-not-exist').exists()).toBe(false);
@@ -105,7 +105,7 @@ describe("listCity", () => {
 });
 
 describe("vue2LeafletHeatmap", () => {
-  const wrapper = mount(vue2LeafletHeatmap);
+  const wrapper = shallowMount(vue2LeafletHeatmap);
   test('check if exist', () =>{
     expect(wrapper.exists()).toBe(true);
     expect(wrapper.find('does-not-exist').exists()).toBe(false);
@@ -113,7 +113,7 @@ describe("vue2LeafletHeatmap", () => {
 });
 
 describe("heatMap", () => {
-  const wrapper = mount(heatMap);
+  const wrapper = shallowMount(heatMap);
   test('check if component Vue2LeafletHeatmap exixst', () => {
     expect(wrapper.findComponent(vue2LeafletHeatmap).exists()).toBe(true);
   });
@@ -124,12 +124,19 @@ describe("heatMap", () => {
 });
 
 describe("mainPage", () => {
-  const wrapper = mount(mainPage);
+  const wrapper = shallowMount(mainPage);
   test('check if component heatmap exixst', () => {
     expect(wrapper.findComponent(heatMap).exists()).toBe(true);
   });
   test('check if exist', () =>{
     expect(wrapper.exists()).toBe(true);
     expect(wrapper.find('does-not-exist').exists()).toBe(false);
+  });
+  test('check if getRetrieveCoordinate is called', () => {
+    const mockgetRetrieveCoordinate = jest.spyOn(wrapper.vm, "getRetrieveCoordinate");
+    wrapper.setMethods({toggleVisibility:jest.fn()});
+    expect(mockgetRetrieveCoordinate).not.toHaveBeenCalled();
+    wrapper.find('button').trigger('click');
+    expect(mockgetRetrieveCoordinate).toHaveBeenCalled();
   });
 });

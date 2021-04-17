@@ -22,7 +22,7 @@ export default {
   components: {
     VueSlideBar,
   },
-  name: "slider2",
+  name: "slider",
   data() {
     return {
       rangeValue: {},
@@ -177,7 +177,7 @@ export default {
     this.rangeValue.label = new Date(Date.now()).getHours().toString();
     if (this.rangeValue.label.length == 1)
       this.rangeValue.label = "0" + this.rangeValue.label;
-    this.$root.$refs.slider2_component = this;
+    this.$root.$refs.slider_component = this;
     this.$nextTick(this.refreshSlider());
   },
 };

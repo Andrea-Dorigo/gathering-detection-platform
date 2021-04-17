@@ -50,7 +50,7 @@ export default {
     //Quando si preme ReloadMap
     getRetrieveCoordinate: function() {
       this.$root.$refs.datePicker_component.resetDate();
-      this.$root.$refs.slider2_component.reloadMap();
+      this.$root.$refs.slider_component.reloadMap();
       var date = this.$root.$refs.datePicker_component.getDate();
       this.$root.$refs.basicExample_component.retrieveCoordinate(date);
     },

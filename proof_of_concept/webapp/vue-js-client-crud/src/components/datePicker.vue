@@ -35,7 +35,7 @@ export default {
   methods: {
     setDate: function(date) {
       var d = (this.picker = date.toISOString().substr(0, 10));
-      var t = this.$root.$refs.slider2_component.getTime();
+      var t = this.$root.$refs.slider_component.getTime();
       d = d + "T" + t;
       this.$root.$refs.basicExample_component.retrieveCoordinate(d);
     },
@@ -44,7 +44,7 @@ export default {
       if (typeof date !== "string") {
         date = date.toISOString().substr(0, 10);
       }
-      var t = this.$root.$refs.slider2_component.getTime();
+      var t = this.$root.$refs.slider_component.getTime();
       date = date + "T" + t;
       return date;
     },
