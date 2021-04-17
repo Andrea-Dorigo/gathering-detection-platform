@@ -25,12 +25,12 @@ import com.webapp.spring.data.mongodb.model.Detection;
 
 @Repository
 public class DetectionCustomRepositoryImpl implements DetectionCustomRepository {
-    
+
     private MongoTemplate mongoTemplate;
-    
+
     @Autowired
     public DetectionCustomRepositoryImpl(MongoTemplate mongoTemplate) {
-    	this.mongoTemplate = mongoTemplate;
+        this.mongoTemplate = mongoTemplate;
     }
 
     public List<String> getCities() {
@@ -63,7 +63,7 @@ public class DetectionCustomRepositoryImpl implements DetectionCustomRepository 
             t = Integer.toString(temp);
         }
         tempDate = tempDate + t;
-       
+
         Query query = new Query();
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH");
         query.addCriteria(Criteria.where("date").lte(dateFormat.parseObject(startDate)));

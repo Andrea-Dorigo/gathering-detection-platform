@@ -49,7 +49,7 @@
 <script>
 import { LMap, LTileLayer, LMarker, LPopup } from "vue2-leaflet";
 import Elements from "../services/htpprequest";
-import Vue2LeafletHeatmap from "./vue2LeafletHeatmap.vue";
+import Vue2LeafletHeatmap from "./Vue2LeafletHeatmap";
 
 export default {
   name: "basicExample",
