@@ -6,7 +6,7 @@ Il primo modulo si occupa solamente di leggere, tramite file JSON$_G$, tutte le 
 Il secondo modulo, il machine-learning$_G$, si occupa di recuperare questi dati dal database per lavorarli producendo predizioni per le ore future.
 Infine il terzo modulo, la web-app$_G$ vera e propria, si occuperà di rappresentare graficamente i dati all'interno del database mediante una heat-map$_G$ e farli visualizzare all'utente.
 
-\section{Architettura Acquisition}\label{ArchitetturaDelProdottoAcquisition}
+\section{Architettura acquisizione}\label{ArchitetturaDelProdottoAcquisition}
 L'architettura riguardante il modulo di acquisizione, ovvero il primo modulo del software, è molto semplice ed intuitiva.
 Non vi è alcuna classe e si basa su una programmazione procedurale.
 Nel \textit{detect.py}, ovvero lo script principale del modulo, vengono richiamate le funzioni, in maniera sequenziale, per scaricare e manipolare i dati delle webcam.
@@ -16,7 +16,7 @@ Di seguito vengono riportati i diagrammi relativi all'\textit{attività} e di \t
 %Inserire
 %Grafici
 
-\subsection{Diagramma dei package Acquisition}\label{DiagrammaDeiPackageAcquisition}
+\subsection{Diagramma dei package dell'acquisizione}\label{DiagrammaDeiPackageAcquisition}
 %Inserire PACKAGE
 \begin{center}
 	\begin{figure}[H]
@@ -71,7 +71,7 @@ Di seguito vengono riportati i diagrammi relativi all'\textit{attività} e di \t
 \end{center}
 
 
-\section{Architettura Prediction}\label{ArchitetturaDelProdottoPrediction}
+\section{Architettura della predizione}\label{ArchitetturaDelProdottoPrediction}
 L'architettura del modulo del machine-learning$_{\scaleto{G}{3pt}}$ si può semplificare ad un modulo unico con all'interno i metodi necessari per prelevare dati dal database per generare delle predizioni ed archiviarle nel database.
 Non necessita classi interne in quanto svolge esclusivamente operazioni procedurali. 
 %Inserire
@@ -80,7 +80,7 @@ Non necessita classi interne in quanto svolge esclusivamente operazioni procedur
 \begin{center}
 	\begin{figure}[H]
 		\centering\includegraphics[scale=0.8]{../immagini/diag_PB/diag_pack_pred.png}
-		\caption{Diagramma dei package del modulo Prediction}
+		\caption{Diagramma dei package del modulo predizione}
 	\end{figure}
 \end{center}
 
@@ -88,7 +88,7 @@ Non necessita classi interne in quanto svolge esclusivamente operazioni procedur
 \begin{center}
 	\begin{figure}[H]
 		\centering\includegraphics[scale=0.60]{../immagini/diag_PB/prediction_activity.png}
-		\caption{Diagramma di attività del modulo Prediction}
+		\caption{Diagramma di attività del modulo predizione}
 	\end{figure}
 \end{center}
 
@@ -98,7 +98,7 @@ Lo scambio di dati tra fron-end e back-end avviene attraverso il design pattern$
 Questo permette di aumentare la portabilità dell'applicazione web potendo applicare il back-end$_{\scaleto{G}{3pt}}$, possibilmente, a diversi front-end$_{\scaleto{G}{3pt}}$. Le richieste che il front-end$_{\scaleto{G}{3pt}}$ effettua al back-end$_{\scaleto{G}{3pt}}$ sono HTTP Request GET, quindi sono sempre richieste di visione di informazioni per poi essere utilizzate per aggiornare la parte grafica visibile dal client.
 %Inserire
 %Grafici
-\subsection{Diagrammi dei package del modulo REST API}\label{DiagrammaDeiPackageRestApi}
+\subsection{Diagrammi dei package del modulo back-end}\label{DiagrammaDeiPackageRestApi}
 \begin{center}
 	\begin{figure}[H]
 		\centering\includegraphics[scale=0.8]{../immagini/diag_PB/diag_pack_spring.png}
