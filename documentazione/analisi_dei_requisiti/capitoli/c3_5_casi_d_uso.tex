@@ -287,60 +287,61 @@ Dopo un'attenta analisi, il gruppo ha deciso di porre questo caso d'uso separato
 
 \subsection{Elenco casi d'uso}\label{CasiDUsoCasiDUsoTraIlFrontEndEIlBackEndElencoDeiCasiDUso}
 
-
 \begin{center}
 	\begin{figure}[H]
-		\centering\includegraphics[scale=0.7]{../immagini/attori_casi/UC8.png}
-		\caption{Schema generale della visualizzazione dati con errore annesso}
+		\centering\includegraphics[scale=0.6]{../immagini/attori_casi/UC_14.png}
+		\caption{Scherma generale della visualizzazione dei dati di un instante passato}
 	\end{figure}
 \end{center}
 
-\subsubsection{UC8 - Visualizzazione delle informazioni dal back end}\label{CasiDUsoCasiDUsoTraIlFrontEndEIlBackEndElencoDeiCasiDUsoUC8VisualizzazioneDelleInformazioniDalBackEnd}
-
-\begin{itemize}
-	\item \textbf{Attori primari}: sistema front end$_{\scaleto{G}{3pt}}$;
-	\item \textbf{Descrizione}: il front end$_{\scaleto{G}{3pt}}$ effettua una richiesta per il recupero dei dati al back end$_{\scaleto{G}{3pt}}$ per generare la heat-map$_{\scaleto{G}{3pt}}$. Il back end$_{\scaleto{G}{3pt}}$ esegue a richiesta ed invia le informazioni da visualizzare al front end$_{\scaleto{G}{3pt}}$;
-	\item \textbf{Scenario principale}: il front end$_{\scaleto{G}{3pt}}$ richiede al back end$_{\scaleto{G}{3pt}}$ le informazioni necessarie alla generazione della heat map$_{\scaleto{G}{3pt}}$, il front end$_{\scaleto{G}{3pt}}$ visualizza le informazioni ricevute dal back end$_{\scaleto{G}{3pt}}$;
-	\item \textbf{Precondizione}: il front end$_{\scaleto{G}{3pt}}$ non ha le informazioni per poter generare la mappa;
-	\item \textbf{Postcondizione}: il front end$_{\scaleto{G}{3pt}}$ visualizza e riceve le nuove informazioni.
-	\item \textbf{Generalizzazioni}: il front end$_{\scaleto{G}{3pt}}$ può fare una delle seguenti richieste:
-	\begin{itemize}
-		\item Visualizza i dati di uno specifico istante passato (UC8.1, sezione \ref{CasiDUsoCasiDUsoTraIlFrontEndEIlBackEndElencoDeiCasiDUsoUC81VisualizzazioneDeiDatiDiUnoSpecificoIstante});
-		\item Visualizza i dati in tempo reale (UC8.2, sezione  \ref{CasiDUsoCasiDUsoTraIlFrontEndEIlBackEndElencoDeiCasiDUsoUC82VisualizzazioneDeiDatiInTempoReale});
-		\item Visualizza i dati futuri predetti (UC8.3, sezione  \ref{CasiDUsoCasiDUsoTraIlFrontEndEIlBackEndElencoDeiCasiDUsoUC83VisualizzazioneDeiDatiPredetti}).
-	\end{itemize}
-	\item \textbf{Estensione}: il front end$_{\scaleto{G}{3pt}}$ effettua la richiesta al back end$_{\scaleto{G}{3pt}}$ il quale non invia nessun dato nella risposta (UC9, sezione \ref{CasiDUsoCasiDUsoTraIlFrontEndEIlBackEndElencoDeiCasiDUsoUC9VisualizzazioneMessaggioDiMancanzaDatiDalBackEnd}).
-\end{itemize}
-
-\subsubsection{UC8.1 - Visualizzazione dei dati di uno specifico istante passato}\label{CasiDUsoCasiDUsoTraIlFrontEndEIlBackEndElencoDeiCasiDUsoUC81VisualizzazioneDeiDatiDiUnoSpecificoIstante}
+\subsubsection{UC14 - Visualizzazione dei dati di uno specifico istante passato}\label{CasiDUsoCasiDUsoTraIlFrontEndEIlBackEndElencoDeiCasiDUsoUC81VisualizzazioneDeiDatiDiUnoSpecificoIstante}
 \begin{itemize}
 	\item \textbf{Attori primari}: sistema front end$_{\scaleto{G}{3pt}}$;
 	\item \textbf{Descrizione}: il front end$_{\scaleto{G}{3pt}}$ richiede le informazioni relative ad uno specifico istante di tempo passato, vengono visualizzate le informazioni inviate dal back end$_{\scaleto{G}{3pt}}$;
 	\item \textbf{Scenario principale}:  il front end$_{\scaleto{G}{3pt}}$ richiede al back end$_{\scaleto{G}{3pt}}$ le informazioni relative all'istante di tempo passato specificato, il back end$_{\scaleto{G}{3pt}}$ invia le informazioni da visualizzare al front end$_{\scaleto{G}{3pt}}$;
-	\item \textbf{Precondizione}: l’utente esegue la modifica della data o dell’orario come definito rispettivamente nella descrizione di UC5.2 (sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC52ModificaDellaData}) e UC5.1 (sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC51SelezioneDellOrario}) selezionando un istante di tempo precedente a quello attuale;
+	\item \textbf{Precondizione}: l’utente esegue la modifica della data o dell’orario come definito rispettivamente nella descrizione di UC9.2 (sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC52ModificaDellaData}) e UC9.1 (sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC51SelezioneDellOrario}) selezionando un istante di tempo precedente a quello attuale;
 	\item \textbf{Postcondizione}: il front end$_{\scaleto{G}{3pt}}$ visualizza e riceve le informazioni relative all'istante di tempo passato impostato.
+	\item \textbf{Estensione}: il front end$_{\scaleto{G}{3pt}}$ effettua la richiesta al back end$_{\scaleto{G}{3pt}}$ il quale non invia nessun dato nella risposta (UC17, sezione \ref{CasiDUsoCasiDUsoTraIlFrontEndEIlBackEndElencoDeiCasiDUsoUC9VisualizzazioneMessaggioDiMancanzaDatiDalBackEnd}).
 \end{itemize}
 
-\subsubsection{UC8.2 - Visualizzazione dei dati in tempo reale}\label{CasiDUsoCasiDUsoTraIlFrontEndEIlBackEndElencoDeiCasiDUsoUC82VisualizzazioneDeiDatiInTempoReale}
+\begin{center}
+	\begin{figure}[H]
+		\centering\includegraphics[scale=0.6]{../immagini/attori_casi/UC_15.png}
+		\caption{Scherma generale della visualizzazione dei dati in tempo reale}
+	\end{figure}
+\end{center}
+
+
+\subsubsection{UC15 - Visualizzazione dei dati in tempo reale}\label{CasiDUsoCasiDUsoTraIlFrontEndEIlBackEndElencoDeiCasiDUsoUC82VisualizzazioneDeiDatiInTempoReale}
 \begin{itemize}
 	\item \textbf{Attori primari}: sistema front end$_{\scaleto{G}{3pt}}$;
 	\item \textbf{Descrizione}: il front end$_{\scaleto{G}{3pt}}$ visualizza i dati reali più recentemente aggiunti;
 	\item \textbf{Scenario principale}: il front end$_{\scaleto{G}{3pt}}$ richiede al back end$_{\scaleto{G}{3pt}}$ le informazioni più recentemente aggiunte, una volta ricevute il front end$_{\scaleto{G}{3pt}}$ le visualizza;
-	\item \textbf{Precondizione}: viene eseguita la visualizzazione della mappa come definito nell’UC1 (sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC1VisualizzazioneInformazioniSullaMappa}) o avviene il ripristino dei dati in tempo reale come definito in UC5.3 (sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC53RipristinoDatiATempoReale});
+	\item \textbf{Precondizione}: viene eseguita la visualizzazione della mappa come definito nell’UC1 (sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC1VisualizzazioneInformazioniSullaMappa}) o avviene il ripristino dei dati in tempo reale come definito in UC9.3 (sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC53RipristinoDatiATempoReale});
 	\item \textbf{Postcondizione}: il front end$_{\scaleto{G}{3pt}}$ ha ricevuto e visualizzato i dati ed è pronto alla generazione della heat map$_{\scaleto{G}{3pt}}$.
+	\item \textbf{Estensione}: il front end$_{\scaleto{G}{3pt}}$ effettua la richiesta al back end$_{\scaleto{G}{3pt}}$ il quale non invia nessun dato nella risposta (UC17, sezione \ref{CasiDUsoCasiDUsoTraIlFrontEndEIlBackEndElencoDeiCasiDUsoUC9VisualizzazioneMessaggioDiMancanzaDatiDalBackEnd}).
 \end{itemize}
 
-\subsubsection{UC8.3 - Visualizzazione dei dati futuri predetti}\label{CasiDUsoCasiDUsoTraIlFrontEndEIlBackEndElencoDeiCasiDUsoUC83VisualizzazioneDeiDatiPredetti}
+\begin{center}
+	\begin{figure}[H]
+		\centering\includegraphics[scale=0.6]{../immagini/attori_casi/UC_16.png}
+		\caption{Scherma generale della visualizzazione dei dati futuri predetti}
+	\end{figure}
+\end{center}
+
+
+\subsubsection{UC16 - Visualizzazione dei dati futuri predetti}\label{CasiDUsoCasiDUsoTraIlFrontEndEIlBackEndElencoDeiCasiDUsoUC83VisualizzazioneDeiDatiPredetti}
 \begin{itemize}
 	\item \textbf{Attori primari}: sistema front end$_{\scaleto{G}{3pt}}$;
 	\item \textbf{Descrizione}: il front end$_{\scaleto{G}{3pt}}$ richiede i dati i dati della previsione fino al giorno seguente.
 	I dati sono ricavati dall’elaborazione, attraverso un modello di machine learning$_{\scaleto{G}{3pt}}$, dei dati reali acquisti. Una volta ricevuti i dati il front end$_{\scaleto{G}{3pt}}$ li può visualizzare;
 	\item \textbf{Scenario principale}: il front end$_{\scaleto{G}{3pt}}$ richiede al back end$_{\scaleto{G}{3pt}}$ i dati elaborati dal modello machine learning$_{\scaleto{G}{3pt}}$. Completata la richiesta il front end$_{\scaleto{G}{3pt}}$ visualizzerà i dati inviati dal back end$_{\scaleto{G}{3pt}}$;
-	\item \textbf{Precondizione}: le informazioni vengono visualizzate sulla mappa come definito nell’UC1 (sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC1VisualizzazioneInformazioniSullaMappa}), impostando un orario successivo a quello attuale come descritto nell’UC5.1 (sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC51SelezioneDellOrario});
+	\item \textbf{Precondizione}: le informazioni vengono visualizzate sulla mappa come definito nell’UC1 (sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC1VisualizzazioneInformazioniSullaMappa}), impostando un orario successivo a quello attuale come descritto nell’UC9.1 (sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC51SelezioneDellOrario});
 	\item \textbf{Postcondizione}: il front end$_{\scaleto{G}{3pt}}$ ha ricevuto e visualizzato i dati ed è pronto alla generazione della heat map$_{\scaleto{G}{3pt}}$.
+	\item \textbf{Estensione}: il front end$_{\scaleto{G}{3pt}}$ effettua la richiesta al back end$_{\scaleto{G}{3pt}}$ il quale non invia nessun dato nella risposta (UC17, sezione \ref{CasiDUsoCasiDUsoTraIlFrontEndEIlBackEndElencoDeiCasiDUsoUC9VisualizzazioneMessaggioDiMancanzaDatiDalBackEnd}).
 \end{itemize}
 
-\subsubsection{UC9 - Visualizzazione mancanza dati dal back end}\label{CasiDUsoCasiDUsoTraIlFrontEndEIlBackEndElencoDeiCasiDUsoUC9VisualizzazioneMessaggioDiMancanzaDatiDalBackEnd}
+\subsubsection{UC17 - Visualizzazione mancanza dati dal back end}\label{CasiDUsoCasiDUsoTraIlFrontEndEIlBackEndElencoDeiCasiDUsoUC9VisualizzazioneMessaggioDiMancanzaDatiDalBackEnd}
 \begin{itemize}
 	\item \textbf{Attori primari}: sistema front end$_{\scaleto{G}{3pt}}$;
 	\item \textbf{Descrizione}: il front end$_{\scaleto{G}{3pt}}$ riceve un errore per la mancanza dati rispetto alla richiesta di visualizzazione effettuata;
@@ -376,13 +377,13 @@ L'elenco dei casi d'uso in questa sezione individuano requisiti sviluppabili suc
 
 \begin{center}
 	\begin{figure}[H]
-		\centering\includegraphics[scale=0.7]{../immagini/attori_casi/UC10-11.png}
-		\caption{UC10 - Visualizzazione indici di affidabilità}
+		\centering\includegraphics[scale=0.7]{../immagini/attori_casi/UC_18.png}
+		\caption{Schema generale della visualizzazione degli indici di affidabilità}
 	\end{figure}
 \end{center}
 
 
-\subsubsection{UC10 - Visualizzazione indici di affidabilità}\label{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC10VisualizzazioneIndiciDiAffidabilita}
+\subsubsection{UC18 - Visualizzazione indici di affidabilità}\label{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC10VisualizzazioneIndiciDiAffidabilita}
 
 
 \begin{itemize}
@@ -393,12 +394,12 @@ L'elenco dei casi d'uso in questa sezione individuano requisiti sviluppabili suc
 	\item \textbf{Postcondizione}: l'utente visualizza correttamente gli indici di affidabilità dei dati reali e predetti.
 \end{itemize}
 
-\subsubsection{UC11 - Impostazioni avanzate sui dati}\label{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC11ImpostazioniAvanzateSuiDati}
+\subsubsection{UC19 - Impostazioni avanzate sui dati}\label{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC11ImpostazioniAvanzateSuiDati}
 
 \begin{center}
 	\begin{figure}[H]
-		\centering\includegraphics[scale=0.7]{../immagini/attori_casi/UC11_1.png}
-		\caption{UC11 - Impostazioni avanzate sui dati}
+		\centering\includegraphics[scale=0.7]{../immagini/attori_casi/UC_19.png}
+		\caption{Schema generale delle impostazioni avanzate sui dati}
 	\end{figure}
 \end{center}
 
@@ -407,14 +408,14 @@ L'elenco dei casi d'uso in questa sezione individuano requisiti sviluppabili suc
 	\item \textbf{Descrizione}: l'utente attraverso l'interfaccia del front end$_{\scaleto{G}{3pt}}$ può applicare filtri sui dati e modificare le sorgenti esterne da cui vengono prelevate le informazioni;
 	\item \textbf{Scenario principale}: attraverso l'interfaccia l'utente può:
 	\begin{itemize}
-		\item Applicare filtri ai dati (UC11.1, sezione  \ref{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC111ApplicazioneFiltriAiDati});
-		\item Modificare le sorgenti esterne da cui vengono prelevate le informazioni (UC11.2, sezione \ref{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC112SelezioneSorgentiEsterneDaCuiPrelevareIDati});
+		\item Applicare filtri ai dati (UC19.1, sezione  \ref{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC111ApplicazioneFiltriAiDati});
+		\item Modificare le sorgenti esterne da cui vengono prelevate le informazioni (UC19.2, sezione \ref{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC112SelezioneSorgentiEsterneDaCuiPrelevareIDati});
 	\end{itemize}
 	\item \textbf{Precondizione}: l'utente visualizza correttamente l'interfaccia e sono disponibili varie sorgenti esterne;
 	\item \textbf{Postcondizione}: l'utente applica le impostazioni scelte ai dati e viene aggiornata la mappa di conseguenza.
 \end{itemize}
 
-\subsubsection{UC11.1 - Applicazione filtri ai dati}\label{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC111ApplicazioneFiltriAiDati}
+\subsubsection{UC19.1 - Applicazione filtri ai dati}\label{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC111ApplicazioneFiltriAiDati}
 \begin{itemize}
 	\item \textbf{Attori primari}: utente generico;
 	\item \textbf{Descrizione}: l'utente attraverso l'interfaccia del front end$_{\scaleto{G}{3pt}}$ può applicare filtri sui dati reali e su quelli predetti, modificandone i colori con cui vengono visualizzati nella mappa;
@@ -427,7 +428,7 @@ L'elenco dei casi d'uso in questa sezione individuano requisiti sviluppabili suc
 	\item \textbf{Postcondizione}: l'utente applica i filtri ai dati e viene aggiornata la mappa di conseguenza.
 \end{itemize}
 
-\subsubsection{UC11.2 - Selezione sorgenti esterne da cui prelevare i dati}\label{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC112SelezioneSorgentiEsterneDaCuiPrelevareIDati}
+\subsubsection{UC19.2 - Selezione sorgenti esterne da cui prelevare i dati}\label{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC112SelezioneSorgentiEsterneDaCuiPrelevareIDati}
 \begin{itemize}
 	\item \textbf{Attori primari}: utente generico;
 	\item \textbf{Descrizione}: l'utente attraverso l'interfaccia del front end$_{\scaleto{G}{3pt}}$ dispone di un menù in cui può selezionare le sorgenti che vuole utilizzare per il reperimento dei dati;
