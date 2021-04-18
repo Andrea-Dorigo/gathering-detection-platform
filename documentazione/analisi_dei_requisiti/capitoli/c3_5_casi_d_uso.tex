@@ -62,7 +62,7 @@ La descrizione della classificazione è la seguente:
 \begin{center}
 	\begin{figure}[H]
 		\centering\includegraphics[scale=0.8]{../immagini/attori_casi/UC3-4-5.png}
-		\caption{Schema generale interazioni con la heat map$_{\scaleto{G}{3pt}}$}
+		\caption{Schema generale zoom della heat-map$_{\scaleto{G}{3pt}}$}
 	\end{figure}
 \end{center}
 
@@ -108,25 +108,25 @@ Dopo un'attenta analisi, il gruppo ha deciso di porre questo caso d'uso separato
 \begin{center}
 	\begin{figure}[H]
 		\centering\includegraphics[scale=0.8]{../immagini/attori_casi/UC_6.png}
-		\caption{Schema generale interazioni con la heat map$_{\scaleto{G}{3pt}}$}
+		\caption{Schema generale spostamento della mappa}
 	\end{figure}
 \end{center}
 
 
-\subsubsection{UC6 - Spostamento del centro della mappa}\label{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC311SpostamentoDelCentroDellaMappa}
+\subsubsection{UC6 - Spostamento all'interno della mappa}\label{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC311SpostamentoDelCentroDellaMappa}
 
 \begin{itemize}
 	\item \textbf{Attori primari:} utente generico;
-	\item \textbf{Descrizione:} l’utente può spostarsi all’interno della heat map$_{\scaleto{G}{3pt}}$, modificando il centro di visualizzazione della mappa;
-	\item \textbf{Scenario principale:} l’utente si sposta nel punto della heat map$_{\scaleto{G}{3pt}}$ che vuole visualizzare modificando il centro di default;
-	\item \textbf{Precondizione:} il livello di zoom-in è diverso da quello iniziale e si sta visualizzando il centro impostato di default dell'heat map$_{\scaleto{G}{3pt}}$;
-	\item \textbf{Postcondizione:} l’utente sposta il centro della heat map$_{\scaleto{G}{3pt}}$.
+	\item \textbf{Descrizione:} l’utente può spostarsi all’interno della mappa, utilizzando il cursore può trascinare la mappa nel punto che vuole visualizzare;
+	\item \textbf{Scenario principale:} l'utente decide di visualizzare un punto diverso da quello di default, presentato nella mappa, e quindi trascinandola si sposta per osservarlo;
+	\item \textbf{Precondizione:} il livello di zoom-in$_{\scaleto{G}{3pt}}$ è diverso da quello iniziale e si sta visualizzando la mappa nelle coordinate della città scelta o impostasta di default;
+	\item \textbf{Postcondizione:} visualizza la mappa in un punto diverso rispetto al punto di partenza.
 \end{itemize}
 
 \begin{center}
 	\begin{figure}[H]
 		\centering\includegraphics[scale=0.8]{../immagini/attori_casi/UC_7.png}
-		\caption{Schema generale interazioni con la heat map$_{\scaleto{G}{3pt}}$}
+		\caption{Schema generale visualizzazione delle informazioni nell'etichetta}
 	\end{figure}
 \end{center}
 
@@ -135,16 +135,16 @@ Dopo un'attenta analisi, il gruppo ha deciso di porre questo caso d'uso separato
 
 \begin{itemize}
 	\item \textbf{Attori primari:} utente generico;
-	\item \textbf{Descrizione:} l’utente visualizza un'icona del punto di interesse. Premendo l'icona vine visualizzata l'etichetta (popup$_{\scaleto{G}{3pt}}$) contenente le informazioni riguardanti ad essa;
-	\item \textbf{Scenario principale:} l’utente ha effettuato uno o più zoom-in sulla zona di interesse e visualizza l'etichetta informativa riferita alla città premendo sopra l'icona visibile nella mappa;
-	\item \textbf{Precondizione:} il livello di zoom-in è diverso da quello iniziale ed il sistema mostra l'icona per la visione delle informazioni del punto di interesse;
+	\item \textbf{Descrizione:} l’utente visualizza un'icona del punto di interesse. All'icona è associata un'etichetta contenente le informazioni riguardanti ad essa;
+	\item \textbf{Scenario principale:} l’utente ha effettuato uno o più zoom-in sulla zona di interesse e visualizza l'etichetta informativa riferita alla città;
+	\item \textbf{Precondizione:} il livello di zoom-in è maggiore di quello iniziale ed il sistema dispone delle informazioni da visualizzare nell'etichetta;
 	\item \textbf{Postcondizione:} l’utente visualizza l'etichetta.
 \end{itemize}
 
 \begin{center}
 	\begin{figure}[H]
 		\centering\includegraphics[scale=0.8]{../immagini/attori_casi/UC_8.png}
-		\caption{Schema generale interazioni con la heat map$_{\scaleto{G}{3pt}}$}
+		\caption{Schema generale selezione della città}
 	\end{figure}
 \end{center}
 
@@ -163,8 +163,8 @@ Dopo un'attenta analisi, il gruppo ha deciso di porre questo caso d'uso separato
 }\label{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC5SelezioneDellIstanzeDiCuiVisualizzareIDatiNellaHeatmap}%parzialmente corretto
 \begin{center}
 	\begin{figure}[H]
-		\centering\includegraphics{../immagini/attori_casi/UC_9.png}
-		\caption{UC5 - Selezione dell’istante di cui visualizzare i dati nella heat map}
+		\centering\includegraphics[scale=0.8]{../immagini/attori_casi/UC_9.png}
+		\caption{Schema sotto-casi della selezione dell'istante da visualizzare}
 	\end{figure}
 \end{center}
 \begin{itemize}
@@ -224,20 +224,16 @@ Dopo un'attenta analisi, il gruppo ha deciso di porre questo caso d'uso separato
 	\item \textbf{Scenario principale:} l’utente ricerca una città tramite una barra di ricerca;
 	\item \textbf{Precondizione:} l’utente ha inserito la città da ricercare;
 	\item \textbf{Postcondizione:} l’utente ha inserito la città che vuole cercare e il sistema si aggiorna in base alla ricerca fatta;
+	\item \textbf{Generalizzazioni:}
+	\begin{itemize}
+		\item Ricerca della città tramite il suo nome UC11 (sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC52RicercaDellaCittàDaVisualizzareTramiteNome});
+		\item Ricerca della città tramite il suo codice UC12 (sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC61RicercaDellaCittàDaVisualizzareTramiteCodiceIdentificativo}).
+	\end{itemize}
 	\item \textbf{Estensioni:} l’utente ha ricercato una città non presente nel database, il sistema rileva questo errore e di conseguenza viene visualizzato un messaggio relativo all’errore riscontrato (UC 13, sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC7VisualizzazioneMessaggioDiMancanzaCittàNelDatabase}).
 \end{itemize}
 
-\subsubsection{UC11 - Ricerca della città da visualizzare tramite codice identificativo}\label{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC61RicercaDellaCittàDaVisualizzareTramiteCodiceIdentificativo}
 
-\begin{itemize}
-	\item \textbf{Attori primari:} utente generico;
-	\item \textbf{Descrizione:} l’utente ha la possibilità di ricercare la città da visualizzare tramite codice identificativo;
-	\item \textbf{Scenario principale:} l’utente ricerca la città tramite codice identificativo;
-	\item \textbf{Precondizione:} l’utente ha inserito il codice identificativo della città da ricercare;
-	\item \textbf{Postcondizione:} il sistema mostra all’utente il risultato della ricerca effettuata.
-\end{itemize}
-
-\subsubsection{UC12- Ricerca della città da visualizzare tramite nome}\label{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC52RicercaDellaCittàDaVisualizzareTramiteNome}
+\subsubsection{UC11 - Ricerca della città per nome}\label{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC52RicercaDellaCittàDaVisualizzareTramiteNome}
 
 \begin{itemize}
 	\item \textbf{Attori primari:} utente generico;
@@ -246,6 +242,17 @@ Dopo un'attenta analisi, il gruppo ha deciso di porre questo caso d'uso separato
 	\item \textbf{Precondizione:} l’utente ha inserito il nome della città da ricercare;
 	\item \textbf{Postcondizione:} il sistema mostra all’utente il risultato della ricerca effettuata.
 \end{itemize}
+
+\subsubsection{UC12 - Ricerca della città per codice identificativo}\label{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC61RicercaDellaCittàDaVisualizzareTramiteCodiceIdentificativo}
+\begin{itemize}
+	\item \textbf{Attori primari:} utente generico;
+	\item \textbf{Descrizione:} l’utente ha la possibilità di ricercare la città da visualizzare tramite codice identificativo;
+	\item \textbf{Scenario principale:} l’utente ricerca la città tramite codice identificativo;
+	\item \textbf{Precondizione:} l’utente ha inserito il codice identificativo della città da ricercare;
+	\item \textbf{Postcondizione:} il sistema mostra all’utente il risultato della ricerca effettuata.
+\end{itemize}
+
+
 
 \subsubsection{UC13 - Visualizzazione mancanza città nel database}\label{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC7VisualizzazioneMessaggioDiMancanzaCittàNelDatabase}
 
