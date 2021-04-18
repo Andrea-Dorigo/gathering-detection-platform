@@ -27,7 +27,7 @@ La descrizione della classificazione è la seguente:
 
 \begin{center}
 	\begin{figure}[H]
-		\centering\includegraphics[scale=0.8]{../immagini/attori_casi/uc1_uc2.png}
+		\centering\includegraphics[scale=0.8]{../immagini/attori_casi/UC_1_2.png}
 		\caption{Schema generale visualizzazione mappa con errori annessi}
 	\end{figure}
 \end{center}
@@ -37,10 +37,10 @@ La descrizione della classificazione è la seguente:
 
 \begin{itemize}
 	\item \textbf{Attori primari}: utente generico;
-	\item \textbf{Descrizione}: l’utente accede all’applicazione web e visualizza la heat map$_{\scaleto{G}{3pt}}$. La mappa mostra la città impostata di default o quella selezionata tra quelle a disposizione, come definito nell’UC4(sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC4SelezioneCittaDaVisualizzareNellaMappa}). Le informazioni vengono ricavate dall’orario e la data impostate dall’utente come indicato nel UC5.1(sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC51SelezioneDellOrario}) e UC5.2(sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC52ModificaDellaData}) o si utilizzano i dati in tempo reale quindi usando l’orario attuale;
+	\item \textbf{Descrizione}: l’utente accede all’applicazione web e visualizza la heat map$_{\scaleto{G}{3pt}}$. La mappa mostra la città impostata di default o quella selezionata tra quelle a disposizione, come definito nell’UC8(sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC4SelezioneCittaDaVisualizzareNellaMappa}). Le informazioni vengono ricavate dall’orario e la data impostate dall’utente come indicato nel UC9.1(sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC51SelezioneDellOrario}) e UC9.2(sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC52ModificaDellaData}) o si utilizzano i dati in tempo reale quindi usando l’orario attuale;
 	\item \textbf{Scenario principale}: L’utente accede all’applicazione web e visualizza la heat map$_{\scaleto{G}{3pt}}$ della città;
-	\item \textbf{Precondizione}: il front end$_{\scaleto{G}{3pt}}$ può generare la mappa; la città, la data, l’ora sono state indicate dall’utente, seguendo quanto descritto rispettivamente nell'UC4 (sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC4SelezioneCittaDaVisualizzareNellaMappa}), nell'UC5.2(sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC52ModificaDellaData}) e nell'UC5.1(sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC51SelezioneDellOrario}), o vengono utilizzate quelle di default, quindi data e ora sono quelle odierne di sistema per dati in tempo reale e la città è quella impostata di default;
-	\item \textbf{Postcondizione}: l’utente visualizza la heat map$_{\scaleto{G}{3pt}}$ con i dati ricavati nell’istante di tempo selezionato, come definito nell’UC5 (sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC5SelezioneDellIstanzeDiCuiVisualizzareIDatiNellaHeatmap}), e alla città scelta fra quelle disponibili come descritto nella definizione dell’UC4 (sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC4SelezioneCittaDaVisualizzareNellaMappa});
+	\item \textbf{Precondizione}: il front end$_{\scaleto{G}{3pt}}$ può generare la mappa; la città, la data, l’ora sono state indicate dall’utente, seguendo quanto descritto rispettivamente nell'UC8 (sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC4SelezioneCittaDaVisualizzareNellaMappa}), nell'UC9.2(sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC52ModificaDellaData}) e nell'UC9.1(sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC51SelezioneDellOrario}), o vengono utilizzate quelle di default, quindi data e ora sono quelle odierne di sistema per dati in tempo reale e la città è quella impostata di default;
+	\item \textbf{Postcondizione}: l’utente visualizza la heat map$_{\scaleto{G}{3pt}}$ con i dati ricavati nell’istante di tempo selezionato, come definito nell’UC9 (sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC5SelezioneDellIstanzeDiCuiVisualizzareIDatiNellaHeatmap}), e alla città scelta fra quelle disponibili come descritto nella definizione dell’UC8 (sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC4SelezioneCittaDaVisualizzareNellaMappa});
 	\item \textbf{Estensioni}: l’utente accede all’applicazione web, il front end$_{\scaleto{G}{3pt}}$, rilevando la richiesta di generazione della mappa, individua una mancanza di dati per la sua costruzione e di conseguenza viene visualizzato un messaggio relativo all’errore riscontrato (UC2, sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC2VisualizzazioneMessaggioPerLaMancanzaDiDati});
 \end{itemize}
 
@@ -61,7 +61,7 @@ La descrizione della classificazione è la seguente:
 
 \begin{center}
 	\begin{figure}[H]
-		\centering\includegraphics[scale=0.8]{../immagini/attori_casi/UC3-4-5.png}
+		\centering\includegraphics[scale=0.8]{../immagini/attori_casi/UC_3_4_5.png}
 		\caption{Schema generale zoom della heat-map$_{\scaleto{G}{3pt}}$}
 	\end{figure}
 \end{center}
@@ -90,7 +90,7 @@ Dopo un'attenta analisi, il gruppo ha deciso di porre questo caso d'uso separato
 \begin{itemize}
 	\item \textbf{Attori primari:} utente generico;
 	\item \textbf{Descrizione:} l’utente, durante la visualizzazione della heat map$_{\scaleto{G}{3pt}}$, può aumentare il livello di zoom per vedere in dettaglio la mappa della città selezionata;
-	\item \textbf{Scenario principale:} l’utente aumenta il livello di zoom della heat map$_{\scaleto{G}{3pt}}$ per una visualizzazione dettagliata della città, dopo aver compiuto questa azione l'utente inoltre può: spostarsi all'interno della mappa (UC3.1.1, sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC311SpostamentoDelCentroDellaMappa}) e visualizzare le etichette (denonimate pop-up$_G$) dei punti di interesse (UC3.1.2, sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC312VisualizzazioneDelPopupDiUnPuntoDiInteresse});
+	\item \textbf{Scenario principale:} l’utente aumenta il livello di zoom della heat map$_{\scaleto{G}{3pt}}$ per una visualizzazione dettagliata della città, dopo aver compiuto questa azione l'utente inoltre può: spostarsi all'interno della mappa (UC6, sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC311SpostamentoDelCentroDellaMappa}) e visualizzare le etichette (denonimate pop-up$_G$) dei punti di interesse (UC7, sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC312VisualizzazioneDelPopupDiUnPuntoDiInteresse});
 	\item \textbf{Precondizione:} il sistema dispone di informazioni relative alla città e il livello di zoom-in non è al massimo;
 	\item \textbf{Postcondizione:} la heat map$_{\scaleto{G}{3pt}}$ si aggiorna mostrando livelli di informazioni più dettagliate in base al livello di zoom in effettuato.
 \end{itemize}
@@ -158,12 +158,17 @@ Dopo un'attenta analisi, il gruppo ha deciso di porre questo caso d'uso separato
 	\item \textbf{Precondizione}: il sistema dispone di informazioni relative a diverse città;
 	\item \textbf{Postcondizione}:   l’utente ha selezionato la città che vuole visualizzare, la heat-map$_{\scaleto{G}{3pt}}$ si aggiorna in base alla scelta fatta.
 \end{itemize}
-
+\begin{center}
+	\begin{figure}[H]
+		\centering\includegraphics[scale=0.8]{../immagini/attori_casi/UC_9.png}
+		\caption{Schema generale della selezione dell'istante di cui visualizzare i dati}
+	\end{figure}
+\end{center}
 \subsubsection{UC9 - Selezione dell’istante di cui visualizzare i dati nella heat map
 }\label{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC5SelezioneDellIstanzeDiCuiVisualizzareIDatiNellaHeatmap}%parzialmente corretto
 \begin{center}
 	\begin{figure}[H]
-		\centering\includegraphics[scale=0.8]{../immagini/attori_casi/UC_9.png}
+		\centering\includegraphics[scale=0.7]{../immagini/attori_casi/UC_9_1_2_3.png}
 		\caption{Schema sotto-casi della selezione dell'istante da visualizzare}
 	\end{figure}
 \end{center}
@@ -229,7 +234,7 @@ Dopo un'attenta analisi, il gruppo ha deciso di porre questo caso d'uso separato
 		\item Ricerca della città tramite il suo nome UC11 (sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC52RicercaDellaCittàDaVisualizzareTramiteNome});
 		\item Ricerca della città tramite il suo codice UC12 (sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC61RicercaDellaCittàDaVisualizzareTramiteCodiceIdentificativo}).
 	\end{itemize}
-	\item \textbf{Estensioni:} l’utente ha ricercato una città non presente nel database, il sistema rileva questo errore e di conseguenza viene visualizzato un messaggio relativo all’errore riscontrato (UC 13, sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC7VisualizzazioneMessaggioDiMancanzaCittàNelDatabase}).
+	\item \textbf{Estensioni:} l’utente ha ricercato una città non presente nel database, il sistema rileva questo errore e di conseguenza viene visualizzato un messaggio relativo all’errore riscontrato (UC13, sezione \ref{CasiDUsoCasiDUsoTraUnUtenteEIlFrontEndElencoCasiDUsoUC7VisualizzazioneMessaggioDiMancanzaCittàNelDatabase}).
 \end{itemize}
 
 
@@ -393,13 +398,18 @@ L'elenco dei casi d'uso in questa sezione individuano requisiti sviluppabili suc
 	\item \textbf{Precondizione}: il front end$_{\scaleto{G}{3pt}}$ dispone degli indici relativi ai dati reali e predetti;
 	\item \textbf{Postcondizione}: l'utente visualizza correttamente gli indici di affidabilità dei dati reali e predetti.
 \end{itemize}
-
+\begin{center}
+	\begin{figure}[H]
+		\centering\includegraphics[scale=0.8]{../immagini/attori_casi/UC_19.png}
+		\caption{Schema generale delle impostazioni avanzate sui dati}
+	\end{figure}
+\end{center}
 \subsubsection{UC19 - Impostazioni avanzate sui dati}\label{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC11ImpostazioniAvanzateSuiDati}
 
 \begin{center}
 	\begin{figure}[H]
-		\centering\includegraphics[scale=0.7]{../immagini/attori_casi/UC_19.png}
-		\caption{Schema generale delle impostazioni avanzate sui dati}
+		\centering\includegraphics[scale=0.7]{../immagini/attori_casi/UC_19_1_2.png}
+		\caption{Schema sotto-casi delle impostazioni avanzate sui dati}
 	\end{figure}
 \end{center}
 
@@ -441,13 +451,13 @@ L'elenco dei casi d'uso in questa sezione individuano requisiti sviluppabili suc
 
 \begin{center}
 	\begin{figure}[H]
-		\centering\includegraphics[scale=0.7]{../immagini/attori_casi/uc12.png}
-		\caption{UC12 - Recupero manuale utente}
+		\centering\includegraphics[scale=0.8]{../immagini/attori_casi/UC_20.png}
+		\caption{Schema generale recupero manuale utente}
 	\end{figure}
 \end{center}
 
 
-\subsubsection{UC12 - Recupero manuale utente}\label{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC12RecuperoManualeUtente}
+\subsubsection{UC20 - Recupero manuale utente}\label{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC12RecuperoManualeUtente}
 
 
 \begin{itemize}
@@ -461,33 +471,47 @@ L'elenco dei casi d'uso in questa sezione individuano requisiti sviluppabili suc
 
 \begin{center}
 	\begin{figure}[H]
-		\centering\includegraphics[scale=0.7]{../immagini/attori_casi/uc13.png}
-		\caption{UC13 - Visualizzazione di dati a confronto di due città differenti}
+		\centering\includegraphics[scale=0.7]{../immagini/attori_casi/UC_21.png}
+		\caption{Schema generale visualizzazione delle città a confronto}
 	\end{figure}
 \end{center}
 
 
-\subsubsection{UC13 - Visualizzazione di dati a confronto di due città differenti}\label{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC13VisualizzazioneDiDatiAConfrontoDiDueCittaDifferenti}
+\subsubsection{UC21 - Visualizzazione di dati a confronto di due città differenti}\label{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC13VisualizzazioneDiDatiAConfrontoDiDueCittaDifferenti}
+\begin{center}
+	\begin{figure}[H]
+		\centering\includegraphics[scale=0.7]{../immagini/attori_casi/UC_21_1.png}
+		\caption{Schema sotto-casi della visualizzazione delle città a confronto}
+	\end{figure}
+\end{center}
 
 \begin{itemize}
 	\item \textbf{Attori primari}: utente generico;
 	\item \textbf{Descrizione}: l’utente può selezionare due città per poter mettere a confronto i loro dati;
-	\item \textbf{Scenario principale}: l’utente seleziona le due città;
+	\item \textbf{Scenario principale}: l’utente seleziona le due città e visualizza i dati a confronto;
 	\item \textbf{Precondizione}: il sistema dispone le informazioni riguardanti le città;
 	\item \textbf{Postcondizione}: l'utente visualizza i dati di entrambe le città per poterli mettere a confronto.
 \end{itemize}
 
+\subsubsection{UC21.1 - Scelta delle due città}
+\begin{itemize}
+	\item \textbf{Attori primari}: utente generico;
+	\item \textbf{Descrizione}: l'utente seleziona le due città da mettere a confronto per la visualizzazione dei dati;
+	\item \textbf{Scenario principale}: l’utente seleziona le due città;
+	\item \textbf{Precondizione}: il sistema ha informazioni su diverse città;
+	\item \textbf{Postcondizione}: l'utente ha scelto le due città da confrontare.
+\end{itemize}
 
 
 \begin{center}
 	\begin{figure}[H]
-		\centering\includegraphics[scale=0.7]{../immagini/attori_casi/uc14.png}
-		\caption{UC14 - Salvataggio dei dati di una città in un file esterno}
+		\centering\includegraphics[scale=0.7]{../immagini/attori_casi/UC_22_23_24.png}
+		\caption{Schema generale del salvataggio dei dati in un file esterno}
 	\end{figure}
 \end{center}
 
 
-\subsubsection{UC14 - Salvataggio dei dati di una città in un file esterno}\label{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC14SalvataggioDeiDatiDiUnaCittaInUnFileEsterno}
+\subsubsection{UC22 - Salvataggio dei dati di una città in un file esterno}\label{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC14SalvataggioDeiDatiDiUnaCittaInUnFileEsterno}
 
 
 \begin{itemize}
@@ -498,57 +522,57 @@ L'elenco dei casi d'uso in questa sezione individuano requisiti sviluppabili suc
 	\item \textbf{Postcondizione}: il sistema ha salvato localmente i dati della città che sta visualizzando.
 \end{itemize}
 
-\subsubsection{UC14.1 - Salvataggio dei dati di una città in un file esterno di tipo pdf}\label{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC141SalvataggioDeiDatiDiUnaCittaInUnFileEsternoDiTipoPdf}
+\subsubsection{UC23 - Salvataggio dei dati di una città in un file esterno di tipo PDF}\label{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC141SalvataggioDeiDatiDiUnaCittaInUnFileEsternoDiTipoPdf}
 
 \begin{itemize}
 	\item \textbf{Attori primari}: utente generico;
-	\item \textbf{Descrizione}: l’utente può selezionare l’estensione del file in pdf;
-	\item \textbf{Scenario principale}: l’utente seleziona l’estensione del file in pdf;
+	\item \textbf{Descrizione}: l’utente può selezionare l’estensione del file in PDF;
+	\item \textbf{Scenario principale}: l’utente seleziona l’estensione del file in PDF;
 	\item \textbf{Precondizione}: il sistema dispone delle informazioni riguardanti le città e  l’utente sta visualizzando la heat map$_{\scaleto{G}{3pt}}$ di una città in particolare;
-	\item \textbf{Postcondizione}: il sistema ha salvato localmente i dati in formato pdf.
+	\item \textbf{Postcondizione}: il sistema ha salvato localmente i dati in formato PDF.
 \end{itemize}
 
-\subsubsection{UC14.2 - Salvataggio dei dati di una città in un file esterno di tipo csv}\label{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC142SalvataggioDeiDatiDiUnaCittaInUnFileEsternoDiTipoCsv}
+\subsubsection{UC24 - Salvataggio dei dati di una città in un file esterno di tipo CSV}\label{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC142SalvataggioDeiDatiDiUnaCittaInUnFileEsternoDiTipoCsv}
 
 \begin{itemize}
 	\item \textbf{Attori primari}: utente generico;
-	\item \textbf{Descrizione}: l’utente può selezionare l’estensione del file in csv;
-	\item \textbf{Scenario principale}: l’utente seleziona l’estensione del file in csv;
+	\item \textbf{Descrizione}: l’utente può selezionare l’estensione del file in CSV;
+	\item \textbf{Scenario principale}: l’utente seleziona l’estensione del file in CSV;
 	\item \textbf{Precondizione}: il sistema dispone delle informazioni riguardanti le città e  l’utente sta visualizzando la heat map$_{\scaleto{G}{3pt}}$ di una città in particolare;
-	\item \textbf{Postcondizione}: il sistema ha salvato localmente i dati in formato csv.
+	\item \textbf{Postcondizione}: il sistema ha salvato localmente i dati in formato CSV.
 \end{itemize}
 
 
 \begin{center}
 	\begin{figure}[H]
-		\centering\includegraphics[scale=0.7]{../immagini/attori_casi/UC15.png}
+		\centering\includegraphics[scale=0.7]{../immagini/attori_casi/UC_25_26.png}
 		\caption{Schema generale sulla scelta di notifica via email di una città selezionata}
 	\end{figure}
 \end{center}
 
-\subsubsection{UC15 - Scelta notifica via email }\label{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC15NotificaViaEmailDiUnaCittaSelezionata}
+\subsubsection{UC25 - Scelta notifica via e-mail }\label{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC15NotificaViaEmailDiUnaCittaSelezionata}
 
 \begin{center}
 	\begin{figure}[H]
-		\centering\includegraphics[scale=0.7]{../immagini/attori_casi/UC15_1_2.png}
-		\caption{UC15 - Scelta notifica via email}
+		\centering\includegraphics[scale=0.7]{../immagini/attori_casi/UC_25_1_2.png}
+		\caption{Schema sotto-casi della scelta di notifica via e-mail}
 	\end{figure}
 \end{center}
 
 \begin{itemize}
 	\item \textbf{Attori primari}: utente generico;
-	\item \textbf{Descrizione}: l'utente decide di voler essere notificato via email riguardo gli aggiornamenti relativi ad una determinata città;
+	\item \textbf{Descrizione}: l'utente decide di voler essere notificato via e-mail riguardo gli aggiornamenti relativi ad una determinata città;
 	\item \textbf{Scenario principale}:
 		\begin{itemize}
-			\item inserisce la propria mail (UC15.1, sezione \ref{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC15.1InserimentoEmail});
-			\item seleziona la città di interesse (UC15.2, sezione \ref{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC15.2SelezioneCitta}).
+			\item inserisce la propria mail (UC25.1, sezione \ref{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC15.1InserimentoEmail});
+			\item seleziona la città di interesse (UC25.2, sezione \ref{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC15.2SelezioneCitta}).
 		\end{itemize}
-	\item \textbf{Precondizione}: l'utente sta visualizzando la heat map$_{\scaleto{G}{3pt}}$ e richiede la notifica via email;
-	\item \textbf{Postcondizione}: il sistema aggiunge nel database l'email inserita dall'utente e la relativa città di interesse;
-	\item \textbf{Estensioni}: il sistema determina che l'email inserita non è valida, di conseguenza viene visualizzato un messaggio d'errore (UC16, sezione \ref{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC16VisualizzazioneMessaggioDiErroreEmailErrata}).
+	\item \textbf{Precondizione}: l'utente sta visualizzando la heat map$_{\scaleto{G}{3pt}}$ e richiede la notifica via e-mail;
+	\item \textbf{Postcondizione}: il sistema aggiunge nel database l'e-mail inserita dall'utente e la relativa città di interesse;
+	\item \textbf{Estensioni}: il sistema determina che l'e-mail inserita non è valida, di conseguenza viene visualizzato un messaggio d'errore (UC26, sezione \ref{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC16VisualizzazioneMessaggioDiErroreEmailErrata}).
 \end{itemize}
 
-\subsubsection{UC15.1 - Inserimento email}\label{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC15.1InserimentoEmail}
+\subsubsection{UC25.1 - Inserimento email}\label{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC15.1InserimentoEmail}
 
 \begin{itemize}
 	\item \textbf{Attori primari}: utente generico;
@@ -558,7 +582,7 @@ L'elenco dei casi d'uso in questa sezione individuano requisiti sviluppabili suc
 	\item \textbf{Postcondizione}: il sistema aggiunge nel database l'email inserita dall'utente;
 \end{itemize}
 
-\subsubsection{UC15.2 - Selezione della città}\label{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC15.2SelezioneCitta}
+\subsubsection{UC25.2 - Selezione della città}\label{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC15.2SelezioneCitta}
 
 \begin{itemize}
 	\item \textbf{Attori primari}: utente generico;
@@ -569,7 +593,7 @@ L'elenco dei casi d'uso in questa sezione individuano requisiti sviluppabili suc
 \end{itemize}
 
 
-\subsubsection{UC16 - Visualizzazione messaggio di errore inserimento email}\label{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC16VisualizzazioneMessaggioDiErroreEmailErrata}
+\subsubsection{UC26 - Visualizzazione messaggio di errore inserimento email}\label{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC16VisualizzazioneMessaggioDiErroreEmailErrata}
 
 \begin{itemize}
 	\item \textbf{Attori primari}: utente generico;
@@ -587,13 +611,13 @@ L'elenco dei casi d'uso in questa sezione individuano requisiti sviluppabili suc
 
 \begin{center}
 	\begin{figure}[H]
-		\centering\includegraphics[scale=0.7]{../immagini/attori_casi/uc17.png}
-		\caption{UC17 - Visualizzazione lista delle città più cercate}
+		\centering\includegraphics[scale=0.7]{../immagini/attori_casi/UC_27.png}
+		\caption{Schema generale della visualizzazione della lista delle città più cercate}
 	\end{figure}
 \end{center}
 
 
-\subsubsection{UC17 - Visualizzazione lista delle città più cercate}\label{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC17VisualizzazioneListaDelleCittaPiuCercate}
+\subsubsection{UC27 - Visualizzazione lista delle città più cercate}\label{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC17VisualizzazioneListaDelleCittaPiuCercate}
 
 \begin{itemize}
 	\item \textbf{Attori primari}: utente generico;
@@ -607,12 +631,12 @@ L'elenco dei casi d'uso in questa sezione individuano requisiti sviluppabili suc
 
 \begin{center}
 	\begin{figure}[H]
-		\centering\includegraphics[scale=0.7]{../immagini/attori_casi/uc18.png}
-		\caption{UC18 - Visualizzazione lista delle città presenti in ordine crescente per rischio}
+		\centering\includegraphics[scale=0.7]{../immagini/attori_casi/UC_28.png}
+		\caption{Schema generale visualizzazione delle città in ordine di rischio}
 	\end{figure}
 \end{center}
 
-\subsubsection{UC18 - Visualizzazione lista delle città presenti in ordine crescente per rischio}\label{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC18VisualizzazioneListaDelleCittaPresentiInOrdineCrescentePerRischio}
+\subsubsection{UC28 - Visualizzazione lista delle città presenti in ordine crescente per rischio}\label{CasiDUsoCasiDUsoFacoltativiTraUnUtenteEIlFrontEndElencoCasiDUsoUC18VisualizzazioneListaDelleCittaPresentiInOrdineCrescentePerRischio}
 
 
 \begin{itemize}
