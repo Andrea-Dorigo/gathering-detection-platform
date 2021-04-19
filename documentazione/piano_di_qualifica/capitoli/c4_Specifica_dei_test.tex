@@ -306,8 +306,94 @@ Sono stati individuati i seguenti test di integrazione per garantire il funziona
 		\end{longtable}
 	\end{center}
 
-\subsection{Tracciamento dei test}\label{SpecificaDeiTestTestDiIntegrazioneTracciamentoDeiTest}
 
 \section{Test di unità}\label{SpecificaDeiTestTestDiUnita}
+Sono stati individuati i seguenti test di unità per garantire il funzionamento di ogni minimo componente autonomo del sistema. \\
+\\
+\textbf{Test di unità front end} %%margheee non voglio mettere una sezione ma un titoletto ma non so come si fa :(
+\begin{center}
+	\renewcommand{\arraystretch}{1.4}
+	\begin{longtable}{|p{3cm}|p{8cm}|p{2cm}|p{2cm}|}
+		\hline
+		\rowcolor{airforceblue}
+		\makecell[c]{\textbf{Id Test}} & \makecell[c]{\textbf{Descrizione}} & \makecell[c]{\textbf{Esito}} & \makecell[c]{\textbf{Qualità}} \\
+		\hline
+		\centering \textit{TU01} & Verifica che il metodo in cui viene eseguita la query per il recupero della lista delle città presenti nel database ritorni effettivamente il tipo di ritorno corretto, ovvero List$<$String$>$ & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}} \\
+		\hline
+		\centering \textit{TU02} & Verifica che il metodo in cui viene eseguita la query per il recupero del'ultimo dato presente nel database ritorni effettivamente il tipo di ritorno corretto, ovvero un Detection & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+		\hline
+		\centering \textit{TU03} &  Verifica che il metodo in cui viene eseguita la query per il recupero dei dati presente nel database in base alla città, alla data e all'orario, ritorni effettivamente il tipo di ritorno corretto, ovvero un List$<$Detection$>$ &\makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+		\hline
+		\centering \textit{TU04} &  Verifica che il metodo in cui viene eseguita la query per il recupero della latitudine e/o longitudine relativa a una città dal database ritorni effettivamente il tipo di ritorno corretto, ovvero List$<$String$>$.
+		 &\makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+		\hline
+		\rowcolor{white}
+		\caption{\textbf{Elenco test di unità - Front End}}
+	\end{longtable}
+\end{center}
+%mancano quelli di vue 
+
+\textbf{Test di unità back end} %%margheee non voglio mettere una sezione ma un titoletto ma non so come si fa :(
+\\
+\\
+\begin{center}
+	\renewcommand{\arraystretch}{1.4}
+	\begin{longtable}{|p{3cm}|p{8cm}|p{2cm}|p{2cm}|}
+		\hline
+		\rowcolor{airforceblue}
+		\makecell[c]{\textbf{Id Test}} & \makecell[c]{\textbf{Descrizione}} & \makecell[c]{\textbf{Esito}} & \makecell[c]{\textbf{Qualità}} \\
+		\hline
+		\centering \textit{TU05} & Verifica che il metodo get{\_}onecall{\_}api{\_}response in weather{\_}forecast.py ottenga i dati delle 48 ore successive & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}} \\
+		\hline
+		\centering \textit{TU06} & Verifica che il metodo fetch{\_}read{\_}m3u8 in detect.py scarichi e legga correttamente un file m3u8& \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+		\hline
+		\centering \textit{TU07} &  Verifica che il metodo extract{\_}frame{\_}from{\_}video{\_}url in get{\_}frames.py estragga e legga correttamente un frame da un video di cui viene fornito il link &\makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+		\hline
+		\rowcolor{white}
+		\caption{\textbf{Elenco test di unità - Back End}}
+	\end{longtable}
+\end{center}
 
 \subsection{Tracciamento dei test}\label{SpecificaDeiTestTestDiUnitaTracciamentoDeiTest}
+\textbf{Tracciamento test di unità front end} %%margheee non voglio mettere una sezione ma un titoletto ma non so come si fa :(
+\begin{center}
+	\renewcommand{\arraystretch}{1.4}
+	\begin{longtable}{|p{3cm}|p{15cm}|}
+		\hline
+		\rowcolor{airforceblue}
+		\makecell[c]{\textbf{Id Test}} & \makecell[c]{\textbf{Metodo}} \\
+		\hline
+		\hline
+		TU01	& proof{\_}of{\_}concept/webapp/webapp/src/test/java/com/webapp/data/mongodb/DetectionCustomRepositoryImplTest/getCitiesTest() \\
+		\hline
+		TU02 & proof{\_}of{\_}concept/webapp/webapp/src/test/java/com/webapp/data/mongodb/DetectionCustomRepositoryImplTest/ getLastValueTest() \\
+		\hline
+		TU03 & proof{\_}of{\_}concept/webapp/webapp/src/test/java/com/webapp/data/mongodb/DetectionCustomRepositoryImplTest/getDataRTTest()  \\
+		\hline
+		TU04 & proof{\_}of{\_}concept/webapp/webapp/src/test/java/com/webapp/data/mongodb/DetectionCustomRepositoryImplTest/getLatLngsTest() \\
+		\hline
+		\rowcolor{white}
+		\caption{\textbf{Tracciamento dei test di unità - Front End}}
+	\end{longtable}
+	
+\end{center}
+\textbf{Tracciamento test di unità back end} %%margheee non voglio mettere una sezione ma un titoletto ma non so come si fa :(
+\begin{center}
+	\renewcommand{\arraystretch}{1.4}
+	\begin{longtable}{|p{3cm}|p{10cm}|}
+		\hline
+		\rowcolor{airforceblue}
+		\makecell[c]{\textbf{Id Test}} & \makecell[c]{\textbf{Metodo}} \\
+		\hline
+		\hline
+		TU05	& test{\_}weather{\_}forecast.py/test{\_}response \\
+		\hline
+		TU06 & test{\_}detect.py/test{\_}fetch{\_}read{\_}m3u8 \\
+		\hline
+		TU07 & test{\_}detect.py/test{\_}extract{\_}frame{\_}from{\_}video{\_}url  \\
+		\hline
+		\rowcolor{white}
+		\caption{\textbf{Tracciamento dei test di unità - Back end}}
+	\end{longtable}
+	
+\end{center}
