@@ -8,21 +8,31 @@ Come prima fase bisogna clonare la repo relativa al progetto \textit{Gathering-D
 \end{center}
 
 \section{Installazione dipendenze}\label{ProceduraDiInstallazioneInstallazioneDipendenze}
+Dopo eseguito il passo sopra descritto, è obbligatorio installare le dipendenze necessarie a far eseguire il prodotto software adeguatamente.
+Per fare ciò sarà necessario aprire il terminale, all'interno della cartella \textit{gathering-detection-platform}, e copiare il seguente comando:
+  \begin{lstlisting}
+    sudo apt install python3-opencv python3-pip mongo maven npm Git Git-LFS
+    && pip3 install mongoengine
+  \end{lstlisting}
+
+Una volta conclusa questa operazione sarà possibile utilizzare il software con tutte le sue funzionalità.
+
+\begin{comment}
 Dopo aver clonato la repo nella propria macchina, bisogna accedervi.
-Ci sono due modi per farlo:
+Vi sono due modi per farlo:
 
 \begin{itemize}
   \item mediante il terminale: \textit{cd Path/To/File};
   \item mediante lo spostamento all'interno delle cartelle tramite mouse.
 \end{itemize}
 
-Una volta nella cartella del software basterà eseguire il file da terminale
+Una volta nella cartella del software bisogna eseguire il file da terminale
 
 \begin{center}
   \textit{dipendenze.sh}
-
 \end{center}
-Successivamente bisognerà aspettare che vengano installate tutte le dipendenze necessarie per poter permettere al software di funzionare adeguatamente.
+
+Successivamente bisogna aspettare che vengano installate tutte le dipendenze necessarie per poter permettere al software di funzionare adeguatamente.
 
 \section{Lancio del software}\label{ProceduraDiInstallazioneLancioDelSoftware}
 Finita l'installazione non rimane che eseguire effettivamente il software completo.
@@ -33,3 +43,4 @@ Per fare ciò basterà eseguire il file
 \end{center}
 
 Ciò farà iniziare la corretta esecuzione del prodotto.
+\end{comment}
