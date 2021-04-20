@@ -10,37 +10,48 @@ Come prima fase bisogna clonare la repo relativa al progetto \textit{Gathering-D
 \section{Installazione dipendenze}\label{ProceduraDiInstallazioneInstallazioneDipendenze}
 Dopo eseguito il passo sopra descritto, è obbligatorio installare le dipendenze necessarie a far eseguire il prodotto software adeguatamente.
 Per fare ciò sarà necessario aprire il terminale, all'interno della cartella \textit{gathering-detection-platform}, e copiare il seguente comando:
+\begin{lstlisting}
+  sudo apt install python3-opencv python3-pip mongo maven npm Git Git-LFS
+  && pip3 install mongoengine
+\end{lstlisting}
+
+Una volta conclusa questa operazione il programma potrà essere eseguito senza problemi.
+
+\section{Inizializzazione modulo Acquisition}\label{ProceduraDiInstallazioneInizializzazioneModuloAcquisition}
+Per eseguire il modulo di acquisizione, in modo da iniziare a raccogliere i dati dalle webcam salvate, basterà posizionarsi all'interno della cartella "acquisition", dopodiché nella cartella "main" e da terminale eseguire il comando:
+\begin{lstlisting}
+    python3 detect.py
+\end{lstlisting}
+Se i passi precedenti sono stati eseguiti correttamente allora si vedranno comparire sul terminale i vari passi che svolge il modulo.
+
+\subsection{Aggiunta di una webcam}
+Per aggiungere una webcam al modulo Acquisition è molto semplice.
+Per una questione di codifica, il link della webcam dev'essere conforme a quelle già presenti, ovvero provenire da \url{https://www.whatsupcams.com/}.
+Dopo aver aggiunto il link tratta di accedere al file \textit{webcams.json} ed inserire la webcam prendendo spunto dallo schema delle altre già inserite.
+
+
+\section{Inizializzazione modulo Prediction}\label{ProceduraDiInstallazioneInizializzazioneModuloPrediction}
+Per eseguire il modulo di predizione, che tramite il machina-learning si occupa di calcolare, appunto, le predizioni per lassi di tempo futuri, bisognerà posizionarsi all'interno della cartella "prediction" ed eseguire il seguente comando da terminale:
+
+\begin{lstlisting}
+    python3 DataPrediction.py
+\end{lstlisting}
+In tal modo verrà attivato il modulo per le predizioni sui dati.
+
+
+\section{Inizializzazione modulo Web-App}\label{ProceduraDiInstallazioneInizializzazioneModuloWebApp}
+Per avviare la web-app, e le sue funzioni, si devono eseguire alcuni comandi, sempre da terminale, a partire dalla cartella webapp.
+\begin{enumerate}
+  \item posizionarsi all'interno della cartella "webapp" ed eseguire:
   \begin{lstlisting}
-    sudo apt install python3-opencv python3-pip mongo maven npm Git Git-LFS
-    && pip3 install mongoengine
+    mvn spring-boot:run
   \end{lstlisting}
-
-Una volta conclusa questa operazione sarà possibile utilizzare il software con tutte le sue funzionalità.
-
-\begin{comment}
-Dopo aver clonato la repo nella propria macchina, bisogna accedervi.
-Vi sono due modi per farlo:
-
-\begin{itemize}
-  \item mediante il terminale: \textit{cd Path/To/File};
-  \item mediante lo spostamento all'interno delle cartelle tramite mouse.
-\end{itemize}
-
-Una volta nella cartella del software bisogna eseguire il file da terminale
-
-\begin{center}
-  \textit{dipendenze.sh}
-\end{center}
-
-Successivamente bisogna aspettare che vengano installate tutte le dipendenze necessarie per poter permettere al software di funzionare adeguatamente.
-
-\section{Lancio del software}\label{ProceduraDiInstallazioneLancioDelSoftware}
-Finita l'installazione non rimane che eseguire effettivamente il software completo.
-Per fare ciò basterà eseguire il file
-
-\begin{center}
-  \textit{start.sh}
-\end{center}
-
-Ciò farà iniziare la corretta esecuzione del prodotto.
-\end{comment}
+  \item posizionarsi all'interno della cartella "vue-js-client-crud" ed eseguire:
+  \begin{lstlisting}
+    npm install
+  \end{lstlisting}
+  \item infine, all'interno della stessa cartella bisogna eseguire:
+  \begin{lstlisting}
+    npm run
+  \end{lstlisting}
+\end{enumerate}
