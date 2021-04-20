@@ -465,6 +465,21 @@ Il diagramma di attività è un tipo di diagramma che permette di descrivere un 
 	\end{figure}
 \end{itemize}
 
+\paragraph{Diagrammi dei casi d'uso:}\label{ProcessiPrimariProgettazioneUMLDiagrammiDiSequenza}
+I diagrammi di dei casi d'uso descrivono le funzionalità del sistema attraverso una visione esterna. Nello specifico, un caso d'uso è un'insieme di scenari e sequenze di azioni che hanno lo stesso obiettivo per l'utente. Un diagramma non deve rappresentare alcun dettaglio implementativo, permettendo una descrizione delle funzionalità coinvolte con una visione esterna al sistema, come se fosse percepita dall'utente. Gli elementi presenti all'interno di un caso d'uso sono i seguenti:
+\begin{itemize}
+	\item \textbf{Attore:} viene disegnato come un omino stilizzato e sotto viene posto il nome;
+	\item \textbf{Caso d'uso:} rappresentato con un ovale e al suo interno viene inserita la descrizione dello stesso. Ogni caso d'uso viene associato ad un attore e viceversa per mezzo di una linea semplice;	
+\end{itemize}
+Gli elementi contenuti all'interno di un diagramma in base alle funzionalità che devono essere rappresentate, le seguenti relazioni:
+\begin{itemize}
+\item \textbf{Associazione:} è la comunicazione diretta tra attore ed use case. Rappresenta la partecipazione dell'attore al caso d'uso a cui è collegato. Un'associazione viene rappresentata mediante una linea che collega l'attore al caso d'uso;
+\item \textbf{Inclusione:} L'inclusione è un legame diretto stretto tra due use case. Dati due casi d'uso A e B, si dice che A include B se ogni istanza di A esegue B. B è incluso nell'esecuzione di A e la responsabilità di esecuzione di B è unicamente di A. Un inclusione viene rappresentata con una freccia tratteggiata, che collega i casi d'uso coinvolti, in direzione del caso d'uso incluso;
+\item \textbf{Estensione:} L'estensione aumenta le funzionalità di uno use case. Dati due casi d'uso A e B, si dice che B estende A se A esegue B solo a determinate condizioni. L'esecuzione di B interrompe A e per questo motivo viene utilizzata prevalentemente per gestire errori ed eccezzioni. Un estensione viene rappresentata con una freccia tratteggiata, che collega i casi d'uso coinvolti, dal caso d'uso che estende a quello che viene esteso, e un quadrato con l'angolo in alto a destra piegato, contenente le condizioni necessarie per il verificarsi dell'estensione e il nome della stessa;
+\item \textbf{Generalizzazione:} La generalizzazione è un legame tra attori o più raramente tra use case. Dati due casi d'uso A e B, A è generalizzata di B se condivide almeno le funzionalità di A. B può modificare le funzionalità di A, mentre tutte le funzionalità non ridefinite si mantengono identiche a quelle di A. Le generalizzazioni vengono rappresentate con una freccia continua vuota dall'elemento figlio all'elemento padre.
+\end{itemize}
+
+
 \paragraph{Diagrammi di sequenza:}\label{ProcessiPrimariProgettazioneUMLDiagrammiDiSequenza}
 I diagrammi di sequenza rappresentano dettagliatamente come gli oggetti interagiscono tra di loro tramite messaggi. Ogni entità del diagramma è collegata mediante una linea tratteggiata ad un'altra entità con lo stesso contenuto. Tale linea indica il passare del tempo. Le entità del diagramma si scambiano messaggi sotto forma di frecce che assumono una diversa struttura a seconda del tipo di messaggio che si sta inviando. \\
 I costrutti utilizzati in questi diagrammi sono i seguenti:
@@ -482,8 +497,8 @@ I costrutti utilizzati in questi diagrammi sono i seguenti:
 	\item \textbf{sincorno}: messaggio di chiamata in cui il partecipante chiamante attende la risposta del partecipante chiamato prima di proseguire la sua esecuzione. Viene utilizzata una freccia piena e sopra tale freccia va specificato il metodo invocato;
 	\item \textbf{asincrono}: messaggio di chiamata in cui il partecipante chiamante non attende la risposta del partecipante chiamato, ma prosegue la sua esecuzione subito dopo la chiamata. Viene utilizzata una freccia e sopra tale freccia va specificato il metodo invocato;
 	\item \textbf{ritorno}: messaggio di ritorno riferito ad un precedente messaggio di chiamata. Viene utilizzata una freccia tratteggiata e sopra tale freccia va indicato il tipo di ritorno;
-	\item \textbf{creazione}: messaggio di creazione di un nuovo partecipante da parte del partecipante chiamante. Viene utilizzata una freccia tratteggiata accompagnata dalla parola create;
-	\item \textbf{distruzione}: messaggio di distruzione di un partecipante da parte del partecipante chiamante. Viene utilizzata una freccia piena accompagnata dalla parola destroy.
+	\item \textbf{creazione}: messaggio di creazione di un nuovo partecipante da parte del partecipante chiamante. Viene utilizzata una freccia tratteggiata accompagnata dalla parola $<<create>>$;
+	\item \textbf{distruzione}: messaggio di distruzione di un partecipante da parte del partecipante chiamante. Viene utilizzata una freccia piena accompagnata dalla parola $<<destroy>>$.
 \end{itemize}
 	\item \textbf{frame di interazione}: rappresenta un ciclo o una condizione che coinvolge più messaggi e parti delle barre di attivazione di più partecipanti. \\
 	Un frame è caratterizzato dalle proprietà di:
