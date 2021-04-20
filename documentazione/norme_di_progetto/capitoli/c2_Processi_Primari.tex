@@ -330,14 +330,14 @@ L'utilizzo dei diagrammi UML 2.0 è necessario per rendere più chiare le scelte
 	\item \textbf{diagrammi di sequenza}: rappresentano l'interazione logica tra diverse classi/oggetti;
 \end{itemize}
 
-\paragraph{Diagrammi dei package:}  \label{ProcessiPrimariProgettazioneUMLDiagrammiDeiPackage}
+\paragraph{Diagrammi dei package:}\label{ProcessiPrimariProgettazioneUMLDiagrammiDeiPackage}
 Ogni package$_{\scaleto{G}{3pt}}$ viene individuato tramite un rettangolo con un'etichetta per il nome. Il package$_{\scaleto{G}{3pt}}$ contiene al suo interno i diagramma delle classi relative al package$_{\scaleto{G}{3pt}}$ e possibili sotto-package$_{\scaleto{G}{3pt}}$. Le dipendenze tra i package$_{\scaleto{G}{3pt}}$ vengono rappresentate attraverso una freccia tratteggiata che collega due package$_{\scaleto{G}{3pt}}$. Si dovrà evitare che le dipendenze dei package$_{\scaleto{G}{3pt}}$ così collegati formino una dipendenza ciclica.
 
 \begin{figure}[H]
 		\centering\includegraphics{../immagini/normeUML/pk_uml.png}
 		\caption{Rappresentazione grafica dei diagrammi dei package}
 \end{figure}
-\paragraph{Diagrammi delle classi:}\label{ProcessiPrimariProgettazioneUMLDiagrammiDelle Classi}
+\paragraph{Diagrammi delle classi:}\label{ProcessiPrimariProgettazioneUMLDiagrammiDelleClassi}
 Le classi vengono individuate da un rettangolo suddiviso in tre sezioni orizzontali. Ciascuna sezione partendo dall'alto individuano:
 \begin{enumerate}
 	\item \textbf{Nome della classe}: deve essere univoco ed esplicativo. Il nome sarà scritto in lingua inglese, se la classe raffigurata è una classe astratta il suo nome verrà preceduto da $<<abstract>>$, mentre se è un'interfaccia verrà preceduto da $<<interface>>$.
@@ -465,7 +465,7 @@ Il diagramma di attività è un tipo di diagramma che permette di descrivere un 
 	\end{figure}
 \end{itemize}
 
-\paragraph{Diagrammi dei casi d'uso:}\label{ProcessiPrimariProgettazioneUMLDiagrammiDiSequenza}
+\paragraph{Diagrammi dei casi d'uso:}\label{ProcessiPrimariProgettazioneUMLDiagrammiCasiUso}
 I diagrammi di dei casi d'uso descrivono le funzionalità del sistema attraverso una visione esterna. Nello specifico, un caso d'uso è un'insieme di scenari e sequenze di azioni che hanno lo stesso obiettivo per l'utente. Un diagramma non deve rappresentare alcun dettaglio implementativo, permettendo una descrizione delle funzionalità coinvolte con una visione esterna al sistema, come se fosse percepita dall'utente. Gli elementi presenti all'interno di un caso d'uso sono i seguenti:
 \begin{itemize}
 	\item \textbf{Attore:} viene disegnato come un omino stilizzato e sotto viene posto il nome;
@@ -596,3 +596,19 @@ Si tratta di un Open-Source basato su Javascript$_{\scaleto{G}{3pt}}$.
 	\begin{center}
 		\url{https://maven.apache.org/}
 	\end{center}
+\subsubsection{PostMan}\label{ProcessiPrimariStrumentiPostMan}
+È un’applicazione che consente di costruire, testare e documentare API più velocemente. Nel nostro caso è stato utilizzato per testare la connessione con il database e la correttezza delle query.
+\begin{center}
+	\url{https://www.postman.com/}
+\end{center}
+\subsubsection{Jupyter Notebook}\label{ProcessiPrimariStrumentiJupyterNotebook}
+Si tratta di un’applicazione web open-source$_{\scaleto{G}{3pt}}$ che ti permette di creare e condividere documenti che contengono codice, equazioni, visualizzazioni e testo narrativo, è particolarmente indicato per la pulizia dei dati e la loro trasformazione per l’utilizzo per il machine learning$_{\scaleto{G}{3pt}}$.
+\begin{center}
+	\url{https://jupyter.org/index.html/}
+\end{center}
+\subsubsection{Anaconda}\label{ProcessiPrimariStrumentiAnaconda}
+Ambiente di distribuzione Python$_{\scaleto{G}{3pt}}$ che raccoglie molti pacchetti open source$_{\scaleto{G}{3pt}}$ e facili da installare, il vantaggio di usare questo strumento è la semplicità con cui si può creare il proprio ambiente di sviluppo.
+\begin{center}
+	\url{https://www.anaconda.com/}
+\end{center}
+
