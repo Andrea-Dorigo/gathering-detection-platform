@@ -1,0 +1,99 @@
+<!--
+  Project Name: GDP- Gathering Detection Platform
+  File Name: autocompleteSearch.vue
+  Author: Margherita Mitillo
+  Creation Date: 2021-03-24
+  Summary: the file containes the code related to all the components presents in the webapp.
+  Last change date: 2021-04-01
+-->
+
+<template>
+  <div id="mainPage">
+    <div id="mc">
+      <date-picker />
+      <div id="sliderMap">
+        <div id="sb">
+          <slider id="slider" />
+          <button
+            type="button"
+            class="btn btn-outline-primary"
+            value="Reload Map"
+            @click="getRetrieveCoordinate"
+          >
+            Reload map
+          </button>
+        </div>
+        <div id="mapList">
+        <heatMap id="map" />
+         <listCity />
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import heatMap from "./heatMap.vue";
+import slider from "./slider.vue";
+import listCity from "./listCity.vue";
+import datePicker from "./datePicker.vue";
+
+export default {
+  name: "mainPage",
+  components: {
+    datePicker,
+    heatMap,
+    slider,
+    listCity,
+  },
+  methods: {
+    //Quando si preme ReloadMap
+    getRetrieveCoordinate: function() {
+      this.$root.$refs.datePicker_component.resetDate();
+      this.$root.$refs.slider_component.reloadMap();
+      var date = this.$root.$refs.datePicker_component.getDate();
+      this.$root.$refs.basicExample_component.retrieveCoordinate(date);
+    },
+  },
+  created() {
+    this.$root.$refs.mainPage_component = this;
+  },
+};
+</script>
+
+<style scope>
+#mapList {
+  display: flex;
+}
+#mainPage {
+  z-index: -2;
+}
+#slider {
+  z-index: 0;
+  margin-left: 30px;
+  margin-right: 20px;
+  width: 80%;
+}
+#sb > button {
+  margin-top: 30px;
+  margin-left: 60px;
+  margin-right: 0px;
+  height: 35%;
+  width: 15%;
+}
+#sb {
+  z-index: -1;
+  display: flex;
+  width: 95%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#map {
+  width: 1200px;
+  height: 600px;
+}
+#mc {
+  padding-top: 10px;
+  display: flex;
+}
+</style>

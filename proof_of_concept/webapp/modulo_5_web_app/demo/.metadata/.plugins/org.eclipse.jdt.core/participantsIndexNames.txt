@@ -1,3 +1,0 @@
-INDEX VERSION 1.131
-C:\Users\Emma\Desktop\roba a caso\demo\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3263293191.index
-\mongodbapp\src\main\java
