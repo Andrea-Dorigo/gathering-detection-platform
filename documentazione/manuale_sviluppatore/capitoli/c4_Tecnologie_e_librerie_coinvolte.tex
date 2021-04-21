@@ -1,11 +1,11 @@
 \chapter{Tecnologie coinvolte}\label{TecnologieCoinvolte}
-In questa sezione vengono elencate le tecnologie, e librerie di terze parti, utilizzate per sviluppare il prodotto software \textit{Gathering-Detection-Platform}.
+In questa sezione vengono elencate le tecnologie, e librerie di terze parti, utilizzate per sviluppare il prodotto software$_{\scaleto{G}{3pt}}$ \textit{Gathering-Detection-Platform}.
 
 \section{Tecnologie}\label{Tecnologie}
 \subsection{Python}\label{TecnologiePython}
 Si tratta di un linguaggio di programmazione definito "ad alto livello" rispetto alla maggior parte di essi.
-Si tratta di un linguaggio orientato ad oggetti, utile a sviluppare script, computazione numerica e sviluppare software.
-Nel progetto \textit{Gathering-Detection-Platform}, Python$_G$ è il linguaggio su cui si basa tutto il backend$_G$, compreso il modulo del machine-learning$_G$.
+Si tratta di un linguaggio orientato ad oggetti, utile a sviluppare script$_G$, computazione numerica e sviluppare software$_{\scaleto{G}{3pt}}$.
+Nel progetto \textit{Gathering-Detection-Platform}, Python$_G$ è il linguaggio su cui si basa tutto il backend$_G$, compreso il modulo del machine-learning$_{\scaleto{G}{3pt}}$.
 
 \begin{itemize}
   \item versione utilizzata: 3.8.x;
@@ -13,8 +13,8 @@ Nel progetto \textit{Gathering-Detection-Platform}, Python$_G$ è il linguaggio 
 \end{itemize}
 
 \subsection{Kafka}\label{TecnologieKafka}
-Kafka$_G$ viene utilizzato, dal modulo Acquisition, come tramite per inviare i dati al database.
-È stato scelto in quanto acquisisce flussi di dati da diverse fonti e permette a molte applicazioni di scambiarsi dati mediante esso, che fa da "centro smistamento" dei dati.
+Kafka$_G$ viene utilizzato, dal modulo acquisizione, come tramite per inviare i dati ad altre applicazioni utilizzando uno standard di comunicazione comune.
+È stato scelto in quanto acquisisce flussi di dati da diverse fonti e permette a molte applicazioni di scambiarsi dati mediante esso, il suo scopo è quello di "centro smistamento" dei dati.
 
 \begin{itemize}
   \item versione utilizzata: 2.8.0;
@@ -24,7 +24,7 @@ Kafka$_G$ viene utilizzato, dal modulo Acquisition, come tramite per inviare i d
 \subsection{MongoDB}\label{TecnologieMongoDB}
 MongoDB$_G$ è stato scelto come database$_G$ nel quale salvare i dati ottenuti dal modulo di acquisizione e dal modulo di machine-learning$_{\scaleto{G}{3pt}}$.
 Si tratta di un database$_{\scaleto{G}{3pt}}$ non relazionale e orientato ai documenti.
-Classificato come tipo NoSQL$_G$, MongoDB$_{\scaleto{G}{3pt}}$ non utilizza la classica struttura basata su tabelle ma invece si basa su tipi di documenti JSON$_G$, facilitando così l'integrazioni di alcuni tipi di dati.
+Classificato come tipo NoSQL$_G$, MongoDB$_{\scaleto{G}{3pt}}$ non utilizza la classica struttura basata su tabelle, invece si basa sui tipi di documenti JSON$_G$, facilitando così l'integrazioni di alcuni tipi di dati.
 
 \begin{itemize}
     \item versione utilizzata: 4.4.4;
@@ -32,7 +32,7 @@ Classificato come tipo NoSQL$_G$, MongoDB$_{\scaleto{G}{3pt}}$ non utilizza la c
 \end{itemize}
 
 \subsection{Spring Boot} \label{TecnologieSpring}
-Spring è un framework open source per lo sviluppo di applicazioni su piattaforma Java$_G$. A  questo framework sono associati altri progetti, in particolare Spring Boot che permette di creare una applicazione avente un metodo main che lancia l'intera applicazione web, compreso il web server integrato.
+Spring$_{\scaleto{G}{3pt}}$ è un framework$_G$ open source$_G$ per lo sviluppo di applicazioni su piattaforma Java$_G$. A  questo framework$_{\scaleto{G}{3pt}}$ sono associati altri progetti, in particolare Spring Boot$_G$ che permette di creare una applicazione autoconfigurata che avvia un server$_G$, il quale mette a disposizione i servizi sviluppati attraverso il codice.
 \begin{itemize}
 	\item versione utilizzata: 2.4.4;
 	\item link al sito: \url{https://spring.io/projects/spring-boot} .
@@ -40,8 +40,8 @@ Spring è un framework open source per lo sviluppo di applicazioni su piattaform
 \end{itemize}
 
 \subsection{Apache Maven}\label{TecnologieMaven}
-È una tecnologia utilizza per la gestione software basati su Java e build automation$_G$.
-Per la gestione si serve di un costrutto denominato POM (Project Object Model), ovvero un file XML$_G$ in cui vengono dichiarate le dipendenze necessarie fra il progetto e le varie librerie utilizzate.
+È una tecnologia utilizza per la gestione software$_{\scaleto{G}{3pt}}$ basati su Java$_{\scaleto{G}{3pt}}$ e build automation$_G$.
+Per la gestione si serve di un costrutto denominato POM (Project Object Model)$_G$, ovvero un file XML$_G$ in cui vengono dichiarate le dipendenze necessarie fra il progetto e le varie librerie utilizzate.
 Maven$_G$ si occupa di scaricare automaticamente eventuali librerie o plug-in$_G$ mancanti in una cartella predefinita.
 
 \begin{itemize}
@@ -51,8 +51,8 @@ Maven$_G$ si occupa di scaricare automaticamente eventuali librerie o plug-in$_G
 \end{itemize}
 
 \subsection{Java}\label{TecnologieJava}
-Si tratta di una piattaforma che ha come caratteristica principale il fatto di rendere possibile scrittura ed esecuzione di applicazioni indipendenti dall'hardware di esecuzione.
-Il risultato è una virtualizzazione dalla piattaforma stessa, che rende così il linguaggio Java$_{\scaleto{G}{3pt}}$, e i relativi programmi, portabili su piattaforme hardware diverse.
+Si tratta di una piattaforma che ha come caratteristica principale il fatto di rendere possibile scrittura ed esecuzione di applicazioni indipendenti dall'hardware$_G$ di esecuzione.
+Il risultato è una virtualizzazione dalla piattaforma stessa, che rende così il linguaggio Java$_{\scaleto{G}{3pt}}$, e i relativi programmi, portabili su piattaforme hardware$_{\scaleto{G}{3pt}}$ diverse.
 
 \begin{itemize}
 	\item versione utilizzata: 11.x;
@@ -63,16 +63,16 @@ Il risultato è una virtualizzazione dalla piattaforma stessa, che rende così i
 HTML$_G$, acronimo di HyperText Markup Language, è un linguaggio di mark up per siti web.
 Era stato ideato per la formattazione e impaginazione di pagine ipertestuali sul web.
 Oggi giorno viene utilizzato soprattutto per gestire la separazione tra la struttura logica della pagina web e la sua rappresentazione, gestita dal CSS$_G$.
-Nel progetto questo linguaggio viene utilizzato per sviluppare la parte di web-app$_{\scaleto{G}{3pt}}$, interagendo con anche Java$_{\scaleto{G}{3pt}}$, CSS$_{\scaleto{G}{3pt}}$, Bootstrap$_G$ e Vue.js$_G$.
+Nel progetto questo linguaggio viene utilizzato per sviluppare la parte di web-app$_{\scaleto{G}{3pt}}$, interagendo con anche Java$_{\scaleto{G}{3pt}}$, CSS$_G$, Bootstrap$_G$ e Vue.js$_G$.
 
 
 \subsection{CSS 3}\label{TecnologieCSS}
-Il CSS$_G$ è il principale linguaggio utilizzato per definire la formattazione dei siti e pagine web.
-L'utilizzo del CSS$_{\scaleto{G}{3pt}}$ permette di separare i contenuti della pagina HTML$_{\scaleto{G}{3pt}}$ dal proprio layout ma anche di rendere la programmazione più chiara e facile da utilizzare, garantendo il riutilizzo di codice e facilitando la manutenzione.
-Nel progetto viene utilizzato per formattare il layout estetico della web-app$_{\scaleto{G}{3pt}}$.
+Il CSS$_{\scaleto{G}{3pt}}$ è il principale linguaggio utilizzato per definire la formattazione dei siti e pagine web.
+L'utilizzo del CSS$_{\scaleto{G}{3pt}}$ permette di separare i contenuti della pagina HTML$_{\scaleto{G}{3pt}}$ dal proprio layout$_G$, ma anche di rendere la programmazione più chiara e facile da utilizzare, garantendo il riutilizzo di codice e facilitando la manutenzione.
+Nel progetto viene utilizzato per formattare il layout$_{\scaleto{G}{3pt}}$ estetico della web-app$_{\scaleto{G}{3pt}}$.
 
 \subsection{Leaflet} \label{TecnologieLeaflet}
-Leaflet è una libreria JavaScript per sviluppare mappe geografiche, utilizzata nel progetto per realizzare la heat-map.
+Leaflet$_G$ è una libreria JavaScript$_G$ per sviluppare mappe geografiche, utilizzata nel progetto per realizzare la heat-map$_G$.
 \begin{itemize}
 	\item versione utilizzata: 1.7.1;
 	\item link al sito: \url{https://leafletjs.com/} .
@@ -80,7 +80,7 @@ Leaflet è una libreria JavaScript per sviluppare mappe geografiche, utilizzata 
 
 
 \subsection{Vue.js}\label{TecnologieVue}
-È un framework JavaScript$_G$, configurato come Model-Control-View per la creazione di interfacce utente e applicazione single-page.
+È un framework JavaScript$_{\scaleto{G}{3pt}}$, configurato come Model-Control-View$_G$ per la creazione di interfacce utente e applicazione single-page$_G$.
 Supporta molte funzionalità, anche avanzate, grazie ad una serie di librerie di supporto dedicate che sono ufficialmente mantenute.
 
 \begin{itemize}
@@ -89,9 +89,9 @@ Supporta molte funzionalità, anche avanzate, grazie ad una serie di librerie di
 \end{itemize}
 
 \subsection{Node.js}\label{TecnologieNode}
-È un runtime system open-source$_G$, orientato ad oggetti, per l'esecuzione di codice JavaScript$_{\scaleto{G}{3pt}}$.
+È un runtime system open-source$_{\scaleto{G}{3pt}}$, orientato ad oggetti, per l'esecuzione di codice JavaScript$_{\scaleto{G}{3pt}}$.
 Molti moduli di questa tecnologia sono proprio scritti in JavaScript$_{\scaleto{G}{3pt}}$, ed essendo appunto open-source$_{\scaleto{G}{3pt}}$, programmatori esterni possono crearne ed aggiungerne altri.
-A differenza di JavaScript$_{\scaleto{G}{3pt}}$ che in origine era lato client$_G$, Node.js$_G$ viene utilizzato lato server$_G$, ad esempio per produzioni di pagine dinamiche.
+A differenza di JavaScript$_{\scaleto{G}{3pt}}$ che in origine era lato client$_G$, Node.js$_G$ viene utilizzato lato server$_{\scaleto{G}{3pt}}$, ad esempio per produzioni di pagine dinamiche.
 Implementa il paradigma "JavaScript everywhere" in modo da unificare lo sviluppo di applicazioni web intorno ad un unico linguaggio di programmazione, JavaScript$_{\scaleto{G}{3pt}}$.
 
 \begin{itemize}
@@ -100,7 +100,7 @@ Implementa il paradigma "JavaScript everywhere" in modo da unificare lo sviluppo
 \end{itemize}
 
 \subsection{Bootstrap}\label{TecnologieBootstrap}
-Framework open-source che, mediante le proprie librerie, viene utilizzato per uniformare i vari componenti che compongono un'interfaccia web, oltre che per crearli.
+Framework$_{\scaleto{G}{3pt}}$ open-source$_{\scaleto{G}{3pt}}$ che, mediante le proprie librerie, viene utilizzato per uniformare i vari componenti che compongono un'interfaccia web, oltre che per crearli.
 
 \begin{itemize}
   \item versione utilizzata: 4.3.1;
@@ -118,7 +118,7 @@ Basato su oggetti, ovvero coppie chiave/valore, e supporta una moltitudine di da
 Insieme alle tecnologie sopra citate, sono state anche integrate delle librerie di terze parti.
 
 \subsection{OpenCV}\label{LibrerieOpenCV}
-OpenCV è una libreria software multipiattaforma specializzata nella visione artificiale in tempo reale.
+OpenCV è una libreria software$_{\scaleto{G}{3pt}}$ multipiattaforma specializzata nella visione artificiale in tempo reale.
 È stata integrata nel \textit{modulo} adibito alla cattura immagini in tempo reale, in linguaggio python$_{\scaleto{G}{3pt}}$.
 
 \begin{itemize}
@@ -127,7 +127,7 @@ OpenCV è una libreria software multipiattaforma specializzata nella visione art
 \end{itemize}
 
 \subsection{Yolo V3}\label{LibrerieYoloV3}
-Si tratta di uno script in linguaggio python$_{\scaleto{G}{3pt}}$ per il riconoscimento real-time di oggetti in una foto.
+Si tratta di uno script$_{\scaleto{G}{3pt}}$ in linguaggio python$_{\scaleto{G}{3pt}}$ per il riconoscimento real-time$_G$ di oggetti in una foto.
 Viene utilizzato nel \textit{modulo} di acquisizione dati per il riconoscimento e conteggio delle persone presenti in un singolo frame.
 
 \begin{itemize}
@@ -135,7 +135,7 @@ Viene utilizzato nel \textit{modulo} di acquisizione dati per il riconoscimento 
 \end{itemize}
 
 \subsection{Pandas}\label{LibreriePandas}
-È una libreria veloce, potente e flessibile creata appositamente per analizzare dati e manipolarli mediante appositi strumenti.
+È una libreria veloce, potente e flessibile creata appositamente per modellare dati e manipolarli mediante appositi strumenti.
 Utilizzata nel \textit{modulo} di machine-learning$_{\scaleto{G}{3pt}}$, basata su python$_{\scaleto{G}{3pt}}$.
 
 \begin{itemize}
@@ -144,7 +144,7 @@ Utilizzata nel \textit{modulo} di machine-learning$_{\scaleto{G}{3pt}}$, basata 
 \end{itemize}
 
 \subsection{Scikit-learn}\label{LibrerieScikitLearn}
-È una libreria open source di apprendimento automatico per il linguaggio di programmazione Python.
+È una libreria open source di apprendimento automatico per il linguaggio di programmazione Python$_{\scaleto{G}{3pt}}$.
 Al suo interno sono presenti numerosi algoritmi, per la manipolazione dati, tra cui quelli di regressione, utilizzati nel \textit{modulo} di machine-learning$_{\scaleto{G}{3pt}}$.
 
 \begin{itemize}
@@ -153,7 +153,7 @@ Al suo interno sono presenti numerosi algoritmi, per la manipolazione dati, tra 
 \end{itemize}
 
 \subsection{Mongoengine}\label{LibrerieMongoengine}
-Si tratta di un document-object mapper basato su python$_{\scaleto{G}{3pt}}$ ed ideato per lavorare assieme a MongoDB$_{\scaleto{G}{3pt}}$ da python$_{\scaleto{G}{3pt}}$.
+Si tratta di un document-object mapper$_G$ basato su python$_{\scaleto{G}{3pt}}$ ed ideato per lavorare assieme a MongoDB$_{\scaleto{G}{3pt}}$ da python$_{\scaleto{G}{3pt}}$.
 
 \begin{itemize}
   \item versione utilizzata: 0.24.1;
@@ -178,7 +178,7 @@ Strumento utilizzato per l’analisi statica del codice sorgente Python$_{\scale
 \end{itemize}
 
 \subsection{Checkstyle}\label{LibrerieCheckstyle}
-Strumento che permette di eseguire l’analisi statica del codice java$_{\scaleto{G}{3pt}}$ utilizzato nello sviluppo di un progetto software.
+Strumento che permette di eseguire l’analisi statica del codice java$_{\scaleto{G}{3pt}}$ utilizzato nello sviluppo di un progetto software$_{\scaleto{G}{3pt}}$.
 
 \begin{itemize}
   \item versione utilizzata: 2.17;
