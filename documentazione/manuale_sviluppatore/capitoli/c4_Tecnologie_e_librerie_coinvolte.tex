@@ -12,6 +12,15 @@ Nel progetto \textit{Gathering-Detection-Platform}, Python$_G$ è il linguaggio 
   \item link download: \url{https://www.python.org/downloads/} .
 \end{itemize}
 
+\subsection{Kafka}\label{TecnologieKafka}
+Kafka$_G$ viene utilizzato, dal modulo Acquisition, come tramite per inviare i dati al database.
+È stato scelto in quanto acquisisce flussi di dati da diverse fonti e permette a molte applicazioni di scambiarsi dati mediante esso, che fa da "centro smistamento" dei dati.
+
+\begin{itemize}
+  \item versione utilizzata: 2.8.0;
+  \item link download: \url{https://kafka.apache.org/downloads} .
+\end{itemize}
+
 \subsection{MongoDB}\label{TecnologieMongoDB}
 MongoDB$_G$ è stato scelto come database$_G$ nel quale salvare i dati ottenuti dal modulo di acquisizione e dal modulo di machine-learning$_{\scaleto{G}{3pt}}$.
 Si tratta di un database$_{\scaleto{G}{3pt}}$ non relazionale e orientato ai documenti.
@@ -19,14 +28,25 @@ Classificato come tipo NoSQL$_G$, MongoDB$_{\scaleto{G}{3pt}}$ non utilizza la c
 
 \begin{itemize}
     \item versione utilizzata: 4.4.4;
-    \item link al sito: \url{https://www.mongodb.com/it }.
+    \item link al sito: \url{https://www.mongodb.com/it} .
 \end{itemize}
 
 \subsection{Spring Boot} \label{TecnologieSpring}
 Spring è un framework open source per lo sviluppo di applicazioni su piattaforma Java$_G$. A  questo framework sono associati altri progetti, in particolare Spring Boot che permette di creare una applicazione avente un metodo main che lancia l'intera applicazione web, compreso il web server integrato.
 \begin{itemize}
 	\item versione utilizzata: 2.4.4;
-	\item link al sito: \url{https://spring.io/projects/spring-boot}.
+	\item link al sito: \url{https://spring.io/projects/spring-boot} .
+	%\item link download: \url{https://start.spring.io/}??
+\end{itemize}
+
+\subsection{Apache Maven}\label{TecnologieMaven}
+È una tecnologia utilizza per la gestione software basati su Java e build automation$_G$.
+Per la gestione si serve di un costrutto denominato POM (Project Object Model), ovvero un file XML$_G$ in cui vengono dichiarate le dipendenze necessarie fra il progetto e le varie librerie utilizzate.
+Maven$_G$ si occupa di scaricare automaticamente eventuali librerie o plug-in$_G$ mancanti in una cartella predefinita.
+
+\begin{itemize}
+	\item versione utilizzata: 3.6.3;
+	\item link al sito: \url{https://maven.apache.org/download.cgi} .
 	%\item link download: \url{https://start.spring.io/}??
 \end{itemize}
 
@@ -36,7 +56,7 @@ Il risultato è una virtualizzazione dalla piattaforma stessa, che rende così i
 
 \begin{itemize}
 	\item versione utilizzata: 11.x;
-	\item link download: \url{https://www.java.com/it/download/}.
+	\item link download: \url{https://www.java.com/it/download/} .
 \end{itemize}
 
 \subsection{HTML 5}\label{TecnologieHTML}
@@ -55,7 +75,7 @@ Nel progetto viene utilizzato per formattare il layout estetico della web-app$_{
 Leaflet è una libreria JavaScript per sviluppare mappe geografiche, utilizzata nel progetto per realizzare la heat-map.
 \begin{itemize}
 	\item versione utilizzata: 1.7.1;
-	\item link al sito: \url{https://leafletjs.com/}.
+	\item link al sito: \url{https://leafletjs.com/} .
 \end{itemize}
 
 
@@ -65,7 +85,7 @@ Supporta molte funzionalità, anche avanzate, grazie ad una serie di librerie di
 
 \begin{itemize}
   \item versione utilizzata: 2.6.12;
-  \item link al sito: \url{https://vuejs.org/}.
+  \item link al sito: \url{https://vuejs.org/} .
 \end{itemize}
 
 \subsection{Node.js}\label{TecnologieNode}
@@ -76,7 +96,7 @@ Implementa il paradigma "JavaScript everywhere" in modo da unificare lo sviluppo
 
 \begin{itemize}
   \item versione utilizzata: 14.16.x;
-  \item link download: \url{https://nodejs.org/it/download/}.
+  \item link download: \url{https://nodejs.org/it/download/} .
 \end{itemize}
 
 \subsection{Bootstrap}\label{TecnologieBootstrap}
@@ -84,7 +104,7 @@ Framework open-source che, mediante le proprie librerie, viene utilizzato per un
 
 \begin{itemize}
   \item versione utilizzata: 4.3.1;
-  \item link download: \url{https://getbootstrap.com/docs/5.0/getting-started/download/}.
+  \item link download: \url{https://getbootstrap.com/docs/5.0/getting-started/download/} .
 \end{itemize}
 
 
@@ -103,7 +123,7 @@ OpenCV è una libreria software multipiattaforma specializzata nella visione art
 
 \begin{itemize}
   \item versione utilizzata: 4.2.0;
-  \item link al sito: \url{https://opencv.org/}.
+  \item link al sito: \url{https://opencv.org/} .
 \end{itemize}
 
 \subsection{Yolo V3}\label{LibrerieYoloV3}
@@ -111,7 +131,7 @@ Si tratta di uno script in linguaggio python$_{\scaleto{G}{3pt}}$ per il riconos
 Viene utilizzato nel \textit{modulo} di acquisizione dati per il riconoscimento e conteggio delle persone presenti in un singolo frame.
 
 \begin{itemize}
-  \item link al sito: \url{https://pjreddie.com/darknet/yolo/}.
+  \item link al sito: \url{https://pjreddie.com/darknet/yolo/} .
 \end{itemize}
 
 \subsection{Pandas}\label{LibreriePandas}
@@ -120,7 +140,7 @@ Utilizzata nel \textit{modulo} di machine-learning$_{\scaleto{G}{3pt}}$, basata 
 
 \begin{itemize}
   \item versione utilizzata: 1.2.1;
-  \item link all'installazione: \url{https://pandas.pydata.org/getting_started.html}.
+  \item link all'installazione: \url{https://pandas.pydata.org/getting_started.html} .
 \end{itemize}
 
 \subsection{Scikit-learn}\label{LibrerieScikitLearn}
@@ -129,7 +149,7 @@ Al suo interno sono presenti numerosi algoritmi, per la manipolazione dati, tra 
 
 \begin{itemize}
   \item versione utilizzata: 0.24.1;
-  \item link all'installazione: \url{https://scikit-learn.org/stable/install.html}.
+  \item link all'installazione: \url{https://scikit-learn.org/stable/install.html} .
 \end{itemize}
 
 \subsection{Mongoengine}\label{LibrerieMongoengine}
@@ -137,7 +157,7 @@ Si tratta di un document-object mapper basato su python$_{\scaleto{G}{3pt}}$ ed 
 
 \begin{itemize}
   \item versione utilizzata: 0.24.1;
-  \item link alla repo$_{\scaleto{G}{3pt}}$: \url{https://github.com/MongoEngine/mongoengine}.
+  \item link alla repo$_{\scaleto{G}{3pt}}$: \url{https://github.com/MongoEngine/mongoengine} .
 \end{itemize}
 
 \subsection{NumPy}\label{LibrerieNumpy}
@@ -146,7 +166,7 @@ Fornisce un grosso supporto a grandi matrici e array multidimensionli, inoltre i
 
 \begin{itemize}
   \item versione utilizzata: 1.20.1;
-  \item link all'installazione: \url{https://numpy.org/install/}.
+  \item link all'installazione: \url{https://numpy.org/install/} .
 \end{itemize}
 
 \subsection{Pylint}\label{LibreriePylint}
@@ -154,7 +174,7 @@ Strumento utilizzato per l’analisi statica del codice sorgente Python$_{\scale
 
 \begin{itemize}
   \item versione utilizzata: 2.7.3;
-  \item link al sito: \url{https://pypi.org/project/pylint/}.
+  \item link al sito: \url{https://pypi.org/project/pylint/} .
 \end{itemize}
 
 \subsection{Checkstyle}\label{LibrerieCheckstyle}
@@ -162,7 +182,7 @@ Strumento che permette di eseguire l’analisi statica del codice java$_{\scalet
 
 \begin{itemize}
   \item versione utilizzata: 2.17;
-  \item link alla repo$_{\scaleto{G}{3pt}}$: \url{https://github.com/checkstyle/checkstyle}.
+  \item link alla repo$_{\scaleto{G}{3pt}}$: \url{https://github.com/checkstyle/checkstyle} .
 \end{itemize}
 
 \subsection{ESLint}\label{LibrerieESLint}
@@ -170,7 +190,7 @@ Strumento di analisi del codice statico per identificare i le problematiche trov
 
 \begin{itemize}
   \item versione utilizzata: 2.1.19;
-  \item link alla repo: \url{https://www.npmjs.com/package/eslint}.
+  \item link alla repo: \url{https://www.npmjs.com/package/eslint} .
 \end{itemize}
 
 \subsection{Prettier}\label{LibreriePrettier}
@@ -178,5 +198,5 @@ Strumento per il controllo automatico della formattazione del codice scritto in 
 
 \begin{itemize}
   \item versione utilizzata: 6.3.2;
-  \item link al sito: \url{https://prettier.io/}.
+  \item link al sito: \url{https://prettier.io/} .
 \end{itemize}
