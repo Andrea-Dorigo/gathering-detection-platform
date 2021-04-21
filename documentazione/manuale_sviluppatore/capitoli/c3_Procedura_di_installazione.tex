@@ -25,13 +25,17 @@ Per eseguire il modulo di acquisizione, in modo da iniziare a raccogliere i dati
 Se i passi precedenti sono stati eseguiti correttamente allora si visualizzeranno sul terminale i vari passaggi che svolge il modulo.
 
 \subsection{Aggiunta di una webcam}
-Per aggiungere una webcam al modulo Acquisition è molto semplice.
+L'aggiunta di una nuova webcam al modulo di acquisizione è possibile attraverso dei pochi semplici passi:
+\begin{enumerate}
+	\item Trovare una webcam disponibile all'interno del sito \url{https://www.whatsupcams.com/};
+	\item Inserire il link all'interno del file \textit{webcams.json} seguendo lo schema prestabilito per impostare i parametri della webcam;
+	\item Salvare il file e l'aggiunta è ultimata.
+\end{enumerate}
 Per una questione di codifica, il link della webcam dev'essere conforme a quelle già presenti, ovvero provenire da \url{https://www.whatsupcams.com/}.
-Dopo aver aggiunto il link tratta di accedere al file \textit{webcams.json} ed inserire la webcam prendendo spunto dallo schema delle altre già inserite.
 
 
 \section{Inizializzazione modulo Prediction}\label{ProceduraDiInstallazioneInizializzazioneModuloPrediction}
-Per eseguire il modulo di predizione, che tramite il machina-learning si occupa di calcolare, appunto, le predizioni per lassi di tempo futuri, bisognerà posizionarsi all'interno della cartella "prediction" ed eseguire il seguente comando da terminale:
+Per eseguire il modulo di predizione, che tramite il machine-learning$_G$ si occupa di calcolare, appunto, le predizioni del periodo di tempo futuro, bisogna posizionarsi all'interno della cartella "prediction" ed eseguire il seguente comando da terminale:
 
 \begin{lstlisting}
     python3 DataPrediction.py
@@ -40,7 +44,7 @@ In tal modo verrà attivato il modulo per le predizioni sui dati.
 
 
 \section{Inizializzazione modulo Web-App}\label{ProceduraDiInstallazioneInizializzazioneModuloWebApp}
-Per avviare la web-app, e le sue funzioni, si devono eseguire alcuni comandi, sempre da terminale, a partire dalla cartella webapp.
+Per avviare la web-app$_G$, e le sue funzioni, si devono eseguire alcuni comandi, sempre da terminale, a partire dalla cartella webapp.
 \begin{enumerate}
   \item posizionarsi all'interno della cartella "webapp" ed eseguire:
   \begin{lstlisting}
@@ -55,3 +59,4 @@ Per avviare la web-app, e le sue funzioni, si devono eseguire alcuni comandi, se
     npm run
   \end{lstlisting}
 \end{enumerate}
+Il primo comando inizializza il server di Spring$_G$ che fornisce i servizi per prelevare le informazioni dal database, mentre i comandi successivi installano prima npm$_G$ e successivamente le dipendenze di ogni file necessarie alla web-app$_{\scaleto{G}{3pt}}$.
