@@ -11,8 +11,66 @@ Il funzionamento della web application richiede che nella macchina siano install
 \begin{itemize}
 	\item la piattaforma \textit{Node.js}$_G$;
 	\item la versione 11 o superiore di \textit{Java}$_G$;
-	\item versione??? di Vue.js $_G$.
+	\item versione 2.6.1 di Vue.js $_G$.
 	\item mongo??
 \end{itemize}
 
-\subsection{Installazione}\label{RequisitiDiSistemaEdInstallazioneRequisitiInstallazione}
+\section{Installazione}\label{RequisitiDiSistemaEdInstallazioneInstallazione}
+
+Essendo GDP-Gathering Detection Platform un progetto universitario la web application non è presente online con un link internet funzionante(??). Di conseguenza l'utente, per poter visualizzare il prodotto software finale, deve svolgere gli stessi passaggi di installazione di uno sviluppatore.\\
+Questa sezione terrà conto delle procedure di installazione all'interno del sistema operativo Linux$_G$, più precisamente Ubuntu$_G$, in quanto utilizzato anche per lo sviluppo del software stesso.
+
+\subsection{Download repo}\label{RequisitiDiSistemaEdInstallazioneInstallazioneDownloadRepo}
+Come prima fase bisogna dublicare$_G$ la repository$_G$ relativa al progetto \textit{Gathering-Detection-Platform$_{\scaleto{G}{3pt}}$} al seguente sito:
+\begin{center}
+	\item \url{https://github.com/Andrea-Dorigo/gathering-detection-platform}
+\end{center}
+
+\subsection{Installazione dipendenze}\label{RequisitiDiSistemaEdInstallazioneInstallazioneInstallazioneDipendenze}
+Dopo eseguito il passo sopra descritto, è obbligatorio installare le dipendenze necessarie per eseguire il prodotto software$_{\scaleto{G}{3pt}}$ adeguatamente.
+Per fare ciò sarà necessario aprire il terminale, all'interno della cartella \textit{gathering-detection-platform$_{\scaleto{G}{3pt}}$}, e copiare il seguente comando:
+\begin{lstlisting}
+sudo apt install python3-opencv python3-pip mongo maven npm Git Git-LFS 
+&& pip3 install mongoengine
+\end{lstlisting}
+
+Una volta conclusa questa operazione il programma potrà essere eseguito senza problemi.
+
+\subsection{Inizializzazione modulo Acquisition}\label{RequisitiDiSistemaEdInstallazioneInstallazioneInizializzazioneModuloAcquisition}
+Per eseguire il modulo di acquisizione, in modo da iniziare a raccogliere i dati dalle webcam salvate, basterà posizionarsi all'interno della cartella "acquisition", dopodiché nella cartella "main" e da terminale eseguire il comando:
+\begin{lstlisting}
+python3 detect.py
+\end{lstlisting}
+Se i passi precedenti sono stati eseguiti correttamente allora si vedranno comparire sul terminale i vari passaggi che svolge il modulo.
+
+%\subsubsection{Aggiunta di una webcam}
+%Per aggiungere una webcam al modulo Acquisition è molto semplice.
+%Per una questione di codifica, il link della webcam dev'essere conforme a quelle già presenti, ovvero provenire da \url{https://www.whatsupcams.com/}.
+%Dopo aver aggiunto il link tratta di accedere al file \textit{webcams.json} ed inserire la webcam prendendo spunto dallo schema delle altre già inserite.
+
+
+\subsection{Inizializzazione modulo Prediction}\label{RequisitiDiSistemaEdInstallazioneInstallazioneInizializzazioneModuloPrediction}
+Per eseguire il modulo di predizione, che tramite il machina-learning si occupa di calcolare, appunto, le predizioni per lassi di tempo futuri, bisognerà posizionarsi all'interno della cartella "prediction" ed eseguire il seguente comando da terminale:
+
+\begin{lstlisting}
+python3 DataPrediction.py
+\end{lstlisting}
+In tal modo verrà attivato il modulo per le predizioni sui dati.
+
+
+\subsection{Inizializzazione modulo Web-App}\label{RequisitiDiSistemaEdInstallazioneInstallazioneInizializzazioneModuloWebApp}
+Per avviare la web-app, e le sue funzioni, si devono eseguire alcuni comandi, sempre da terminale, a partire dalla cartella webapp.
+\begin{enumerate}
+	\item posizionarsi all'interno della cartella "webapp" ed eseguire:
+	\begin{lstlisting}
+	mvn spring-boot:run
+	\end{lstlisting}
+	\item posizionarsi all'interno della cartella "vue-js-client-crud" ed eseguire:
+	\begin{lstlisting}
+	npm install
+	\end{lstlisting}
+	\item infine, all'interno della stessa cartella bisogna eseguire:
+	\begin{lstlisting}
+	npm run
+	\end{lstlisting}
+\end{enumerate}
