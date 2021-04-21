@@ -1,5 +1,5 @@
 \chapter{Architettura del Prodotto}\label{ArchitetturaDelProdotto}
-L'architettura generale del software$_{\scaleto{G}{3pt}}$ \textit{Gathering-Detection-Platform} è molto semplice ed intuitiva.
+L'architettura generale del software$_{\scaleto{G}{3pt}}$ \textit{Gathering-Detection-Platform} è un'architettura monolitica distribuita.
 Si tratta di due file eseguibili, scritti in Python$_{\scaleto{G}{3pt}}$, che sono rispettivamente il modulo Acquisition e il modulo Prediction.
 Il primo viene utilizzato per acquisire le informazione estrapolate dalle live webcams delle città, il secondo invece viene utilizzato per calcolare predizioni su periodi di tempo futuri, utilizzando il machine-learning$_{\scaleto{G}{3pt}}$.
 Entrambi sono collegati ad un database, il quale serve per salvare ed esportare i dati in esso.
