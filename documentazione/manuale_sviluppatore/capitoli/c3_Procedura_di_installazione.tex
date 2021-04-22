@@ -8,14 +8,15 @@ Su Ubuntu$_{\scaleto{G}{3pt}}$ 20.04, questo è possibile eseguendo il comando:
 \begin{lstlisting}
   sudo apt install git git-lfs
 \end{lstlisting}
-assumendo che le principali repository per i pacchetti di Ubuntu siano attive (Universe, Multiverse).
+assumendo che le principali repository$_{\scaleto{G}{3pt}}$ per i pacchetti di Ubuntu$_{\scaleto{G}{3pt}}$ siano attive (Universe, Multiverse).
 
-Questo passaggio è richiesto poiché GitHub (il sito che ospita la repository del progetto) consente l'upload di file con dimensioni massime fino a 100MB.
-L'utilizzo di \textit{Git Large File Storage} permette l'upload e il download di file che superano questo limite,  ed in particolare permette l'upload e download dei pesi necessari all'algoritmo YOLOv3 per il rilevamento di oggetti (più precisamente per il rilevamento delle persone in un'immagine), il quale ha una dimensione maggiore di 200MB. Maggiori informazioni riguardo \textit{Git Large File Storage} sono reperibili all'indirizzo:
-\newline
-\url{https://git-lfs.github.com}.
+Questo passaggio è richiesto poiché GitHub$_G$ (il sito che ospita la repository del progetto) consente l'upload di file con dimensioni massime fino a 100MB.
+L'utilizzo di \textit{Git Large File Storage} permette l'upload e il download di file che superano questo limite, ed in particolare permette l'upload e download dei pesi necessari all'algoritmo YOLOv3 per il rilevamento di oggetti (più precisamente per il rilevamento delle persone in un'immagine), il quale ha una dimensione maggiore di 200MB. Maggiori informazioni riguardo \textit{Git Large File Storage} sono reperibili all'indirizzo:
+\begin{center}
+  \item \url{https://git-lfs.github.com} .
+\end{center}
 
-È dunque possibile clonare correttamente la repository$_{\scaleto{G}{3pt}}$ relativa al progetto \textit{Gathering-Detection-Platform} con il seguente comando:
+È dunque possibile scaricare correttamente la repository$_{\scaleto{G}{3pt}}$ relativa al progetto \textit{Gathering-Detection-Platform} con il seguente comando:
 \begin{lstlisting}
   git clone https://github.com/Andrea-Dorigo/gathering-detection-platform.git
 \end{lstlisting}
@@ -44,7 +45,7 @@ L'aggiunta di una nuova webcam al modulo di acquisizione è possibile attraverso
 \begin{enumerate}
 	\item Trovare una webcam disponibile all'interno del sito \url{https://www.whatsupcams.com/};
 	\item Inserire il link all'interno del file \textit{webcams.json} seguendo lo schema prestabilito per impostare i parametri della webcam;
-	\item Salvare il file e l'aggiunta è ultimata.
+	\item Salvare il file per ultimare l'aggiunta.
 \end{enumerate}
 Per una questione di codifica, il link della webcam dev'essere conforme a quelle già presenti, ovvero provenire da \url{https://www.whatsupcams.com/}.
 
@@ -59,7 +60,7 @@ In tal modo verrà attivato il modulo per le predizioni sui dati.
 
 
 \section{Inizializzazione modulo Web-App}\label{ProceduraDiInstallazioneInizializzazioneModuloWebApp}
-Per avviare la web-app$_G$, e le sue funzioni, si devono eseguire alcuni comandi, sempre da terminale, a partire dalla cartella webapp.
+Per avviare la web-app$_G$, e le sue funzioni, si devono eseguire alcuni comandi, sempre da terminale, a partire dalla cartella \textit{webapp}.
 \begin{enumerate}
   \item posizionarsi all'interno della cartella "webapp" ed eseguire:
   \begin{lstlisting}
