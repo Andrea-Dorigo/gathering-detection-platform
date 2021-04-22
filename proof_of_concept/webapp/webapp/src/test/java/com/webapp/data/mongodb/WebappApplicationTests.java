@@ -6,17 +6,11 @@
   Summary: the file is the repository that extends MongoRepository 
   Last change date: 2021-03-26
 */
-/*package com.webapp.data.mongodb;
+package com.webapp.data.mongodb;
 
-import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class WebappApplicationTests {
 
-@Test
-	void contextLoads() {
-
 }
-
-}*/

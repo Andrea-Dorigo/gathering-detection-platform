@@ -29,9 +29,9 @@ import com.webapp.spring.data.mongodb.customRepository.DetectionCustomRepository
 public class IndexController {
 
     private DetectionCustomRepository detectionCustomRepository;
-    
+
     @Autowired
-    public IndexController(DetectionCustomRepository detectionCustomRepository){
+    public IndexController(DetectionCustomRepository detectionCustomRepository) {
         this.detectionCustomRepository = detectionCustomRepository;
     }
 
