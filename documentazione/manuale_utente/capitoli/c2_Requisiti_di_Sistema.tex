@@ -1,34 +1,44 @@
 \chapter{Requisiti di sistema ed installazione}\label{RequisitiDiSistemaEdInstallazione}
 
 \section{Requisiti}\label{RequisitiDiSistemaEdInstallazioneRequisiti}
-GDP - Gathering Detection Platform è un'applicazione web per dispositivi desktop.
+GDP - Gathering Detection Platform è un'applicazione web$_G$ per dispositivi desktop. 
+%sul cell no, bisogna dire perché?
 
 \subsection{Browser supportati}\label{RequisitiDiSistemaEdInstallazioneRequisitiBrowserSupportati}
-
+Perché l'applicazione funzioni in modo corretto è necessario che Javascript sia abilitato sul browser. 
+Qui di seguito sono riportati i browser per i quali si garantisce la compatibilità. 
+\begin{itemize}
+	\item \textit{Google Chrome} versione 89;
+	\item \textit{Microsoft Edge} versione 87;
+	\item \textit{Mozzilla Firefox Developer} versione 89;
+\end{itemize}
+L'applicazione web$_G$ potrebbe funzionare correttamente anche su versioni precedenti e/o successive o su altri browser, ma non si garantisce il supporto. 
+ 
 \subsection{Requisiti di sistema}\label{RequisitiDiSistemaEdInstallazioneRequisitiRequisitiDiSistema}
 
-Il funzionamento della web application richiede che nella macchina siano installate:
+Il funzionamento della web application$_{\scaleto{G}{3pt}}$ richiede che nella macchina siano installate:
 \begin{itemize}
 	\item la piattaforma \textit{Node.js}$_G$;
 	\item la versione 11 o superiore di \textit{Java}$_G$;
 	\item versione 2.6.1 di Vue.js $_G$.
-	\item mongo??
+	%\item mongo??
 \end{itemize}
+Infine, deve essere disponibile un browser attraverso il quale poter visualizzare l'interfaccia delll'applicazione.
 
 \section{Installazione}\label{RequisitiDiSistemaEdInstallazioneInstallazione}
 
-Essendo GDP-Gathering Detection Platform un progetto universitario la web application non è presente online con un link internet funzionante(??). Di conseguenza l'utente, per poter visualizzare il prodotto software finale, deve svolgere gli stessi passaggi di installazione di uno sviluppatore.\\
+ GDP-Gathering Detection Platform è un progetto universitario, per tale motivo la web application$_{\scaleto{G}{3pt}}$ non è raggiungibile online tramite un link internet. Di conseguenza l'utente, per poter visualizzare il prodotto software finale, deve svolgere gli stessi passaggi di installazione di uno sviluppatore.\\
 Questa sezione terrà conto delle procedure di installazione all'interno del sistema operativo Linux$_G$, più precisamente Ubuntu$_G$, in quanto utilizzato anche per lo sviluppo del software stesso.
 
 \subsection{Download repo}\label{RequisitiDiSistemaEdInstallazioneInstallazioneDownloadRepo}
-Come prima fase bisogna dublicare$_G$ la repository$_G$ relativa al progetto \textit{Gathering-Detection-Platform$_{\scaleto{G}{3pt}}$} al seguente sito:
+Come prima fase bisogna scaricare la repository$_G$ relativa al progetto \textit{Gathering-Detection-Platform} al seguente link:
 \begin{center}
 	\item \url{https://github.com/Andrea-Dorigo/gathering-detection-platform}
 \end{center}
 
 \subsection{Installazione dipendenze}\label{RequisitiDiSistemaEdInstallazioneInstallazioneInstallazioneDipendenze}
 Dopo eseguito il passo sopra descritto, è obbligatorio installare le dipendenze necessarie per eseguire il prodotto software$_{\scaleto{G}{3pt}}$ adeguatamente.
-Per fare ciò sarà necessario aprire il terminale, all'interno della cartella \textit{gathering-detection-platform$_{\scaleto{G}{3pt}}$}, e copiare il seguente comando:
+Per fare ciò sarà necessario aprire il terminale, all'interno della cartella \textit{gathering-detection-platform}, e copiare il seguente comando:
 \begin{lstlisting}
 sudo apt install python3-opencv python3-pip mongo maven npm Git Git-LFS 
 && pip3 install mongoengine
@@ -59,7 +69,7 @@ In tal modo verrà attivato il modulo per le predizioni sui dati.
 
 
 \subsection{Inizializzazione modulo Web-App}\label{RequisitiDiSistemaEdInstallazioneInstallazioneInizializzazioneModuloWebApp}
-Per avviare la web-app, e le sue funzioni, si devono eseguire alcuni comandi, sempre da terminale, a partire dalla cartella webapp.
+Per avviare la web-app$_{\scaleto{G}{3pt}}$, e le sue funzioni, si devono eseguire alcuni comandi, sempre da terminale, a partire dalla cartella webapp.
 \begin{enumerate}
 	\item posizionarsi all'interno della cartella "webapp" ed eseguire:
 	\begin{lstlisting}
@@ -69,8 +79,9 @@ Per avviare la web-app, e le sue funzioni, si devono eseguire alcuni comandi, se
 	\begin{lstlisting}
 	npm install
 	\end{lstlisting}
-	\item infine, all'interno della stessa cartella bisogna eseguire:
+	\item successivamente, all'interno della stessa cartella, bisogna eseguire:
 	\begin{lstlisting}
 	npm run
 	\end{lstlisting}
+	\item infine, la piattaforma \textit{Gathering-Detection-Platform} sarà disponibile all'indirizzo di default \url{http://localhost:8081} 
 \end{enumerate}
