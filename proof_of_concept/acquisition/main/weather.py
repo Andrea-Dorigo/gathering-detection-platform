@@ -1,20 +1,13 @@
-
-# import required modules
 import requests, json
 
 def get_current_weather(latitude,longitude):
-    # Enter your API key here
+    # compose API url
     api_key = "550617cb3af649e1d6729a3f78b24e17"
-
-    # base_url variable to store url
     base_url = "http://api.openweathermap.org/data/2.5/weather?"
-
-    # complete url address
     complete_url = base_url + "lat=" + str(latitude) + "&lon=" + str(longitude) + "&units=metric" + "&appid=" + api_key
 
     response = requests.get(complete_url)
     x = response.json()
-    # print(x)
 
     if x["cod"] == 200:
         y = x["main"]
