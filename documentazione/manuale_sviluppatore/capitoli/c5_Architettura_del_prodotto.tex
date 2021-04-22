@@ -2,9 +2,10 @@
 L'architettura generale del software$_{\scaleto{G}{3pt}}$ \textit{Gathering-Detection-Platform} è un'architettura monolitica distribuita.
 Si tratta di due file eseguibili, scritti in Python$_{\scaleto{G}{3pt}}$, che sono rispettivamente il modulo Acquisition e il modulo Prediction.
 Il primo viene utilizzato per acquisire le informazione estrapolate dalle live webcams delle città, il secondo invece viene utilizzato per calcolare predizioni su periodi di tempo futuri, utilizzando il machine-learning$_{\scaleto{G}{3pt}}$.
-Entrambi sono collegati ad un database, il quale serve per salvare ed esportare i dati in esso.
+Entrambi sono collegati ad un database, il quale serve per archiviare ed esportare i dati in esso.
 Il terzo, ed ultimo, modulo riguarda la web-app$_{\scaleto{G}{3pt}}$ vera e propria, che permette all'utente utilizzatore di visualizzare la heat-map$_{\scaleto{G}{3pt}}$ relativa alla città.
-
+La web-app$_{\scaleto{G}{3pt}}$ è composta da due sotto-moduli definiti rispettivamente back-end$_{\scaleto{G}{3pt}}$ e front-end$_{\scaleto{G}{3pt}}$, all'interno del primo è presente l'applicazione di Spring, la quale imposta un server per eseguire i servizi per il front end, mentre la seconda è la parte dell'applicazione che mostra i dati all'utente finale. Il back-end$_{\scaleto{G}{3pt}}$ e front-end$_{\scaleto{G}{3pt}}$ dialogano attraverso richieste di tipo HTTP, il back-end$_{\scaleto{G}{3pt}}$ mette a disposizione un server$_{\scaleto{G}{3pt}}$ con servizi di tipo REST che effettuano solo query al database di tipo GET. Il front-end$_{\scaleto{G}{3pt}}$ una volta ottenuta l'informazione modifica attraverso metodi javascript$_{\scaleto{G}{3pt}}$ la mappa che l'utente visualizza insieme alle sue componenti.
+Nella sezione successiva vengono inseriti i diagrammi di ogni modulo descritto, questo permette di avere una visione globale di ogni modulo nelle sue dipendenze a librerie esterne, nelle sue attività che svolgono e nelle sue componenti. Questi diagrammi sono stati scritti seguendo i principi UML.
 
 \section{Architettura modulo Acquisition}
 \subsection{Diagramma dei Package}
