@@ -9,6 +9,7 @@ Nella sezione successiva vengono inseriti i diagrammi di ogni modulo descritto, 
 
 \section{Architettura modulo Acquisition}
 \subsection{Diagramma dei Package}
+Il modulo Acquisition utilizza due librerie esterne a Python$_{\scaleto{G}{3pt}}$, la prima è la libreria di Kafka$_{\scaleto{G}{3pt}}$ per creare applicativi di tipo consumer e producer e la seconda è MongoEngine$_{\scaleto{G}{3pt}}$ per creare una connessione ad un database di MongoDB$_{\scaleto{G}{3pt}}$.
 \begin{figure}[H]
   \begin{center}
     \includegraphics[scale=0.6]{../immagini/diag_PB/diag_pack_acqui.png}
@@ -17,6 +18,7 @@ Nella sezione successiva vengono inseriti i diagrammi di ogni modulo descritto, 
 \end{figure}
 
 \subsection{Diagrammi di attività}
+Di seguito vengono descritte le attività più importanti svolte nel modulo Acquisition.
 \begin{figure}[H]
   \begin{center}
     \includegraphics[scale=0.8]{../immagini/diag_PB/detection.png}
@@ -51,6 +53,7 @@ Nella sezione successiva vengono inseriti i diagrammi di ogni modulo descritto, 
 
 \section{Architettura modulo Prediction}
 \subsection{Diagramma dei package}
+Nel modulo Prediction vengono utilizzate le librerie esterne Pandas$_{\scaleto{G}{3pt}}$, MongoEngine$_{\scaleto{G}{3pt}}$ e Scikit-Learn$_{\scaleto{G}{3pt}}$ (abbreviato in Sklearn nella libreria). La libreria più importante è Scikit-Learn$_{\scaleto{G}{3pt}}$ della quale utilizziamo i metodi per il Preprocessing dei dati, la creazione di modelli con Model\_selection e il tipo di modello per generare le predizioni, il Random Forest Regression.
 \begin{figure}[H]
   \begin{center}
     \includegraphics[scale=0.8]{../immagini/diag_PB/diag_pack_pred.png}
@@ -70,6 +73,7 @@ Nella sezione successiva vengono inseriti i diagrammi di ogni modulo descritto, 
 
 \section{Architettura modulo Web-app}
 \subsection{Diagrammi dei package}
+Il modulo della web-app$_{\scaleto{G}{3pt}}$, come descritto in precedenza, è diviso in due sotto-moduli rispettivamente per il back-end$_{\scaleto{G}{3pt}}$ e front-end$_{\scaleto{G}{3pt}}$. Di seguito vengono visualizzate le dipendenze dei due sotto-moduli, per il back-end$_{\scaleto{G}{3pt}}$ è solo necessaria la libreria del framework$_{\scaleto{G}{3pt}}$ Spring$_{\scaleto{G}{3pt}}$, mentre per il front-end$_{\scaleto{G}{3pt}}$ sono necessarie varie librerie per ogni componente della web-app$_{\scaleto{G}{3pt}}$.
 \begin{figure}[H]
   \begin{center}
     \includegraphics[scale=0.8]{../immagini/diag_PB/diag_pack_spring.png}
