@@ -51,265 +51,30 @@ dove:
 \section{Tipi di test} \label{SpecificaDeiTestTipiDiTest}
 I test che verranno effettuati sul prodotto software sono così divisi:
 \begin{itemize}
+	\item \textbf{Test di unità}: i test di unità servono per verificare le singole unità del software, ovvero le componenti con funzionamento autonomo.
+	Il superamento di tali test non implica il corretto funzionamento del software.
+	Viene contrassegnata da \textbf{[TU]}.
+	
+	\item \textbf{Test di integrazione}: questa tipologia di test verifica i singoli moduli del software come fossero un gruppo unico.
+	Vengono svolti successivamente ai \textit{TU} e prima dei \textit{TS}.
+	Sono contrassegnati da \textbf{[TI]};
+	
+	\item \textbf{Test di sistema}: i test di sistema vengono eseguiti per verificare che i requisiti$_{\scaleto{G}{3pt}}$, scritti nel documento \textit{Analisi dei Requisiti}, siano stati implementati e funzionanti.
+	Viene rappresentato mediante la sigla \textbf{[TS]};
+	
 	\item \textbf{Test di accettazione}: i test di accettazione hanno come scopo la verifica che il software sviluppato soddisfi i requisiti$_{\scaleto{G}{3pt}}$ presenti nel capitolato d’appalto$_G$ e concordati col proponente$_{\scaleto{G}{3pt}}$.
 	Questi saranno eseguiti durante il collaudo finale del prodotto software sotto l'osservazione sia dell'azienda proponente$_{\scaleto{G}{3pt}}$ sia del gruppo di lavoro.
 	Rappresentati mediante la sigla \textbf{[TA]};
 
-	\item \textbf{Test di sistema}: i test di sistema vengono eseguiti per verificare che i requisiti$_{\scaleto{G}{3pt}}$, scritti nel documento \textit{Analisi dei Requisiti}, siano stati implementati e funzionanti.
-	Viene rappresentato mediante la sigla \textbf{[TS]};
-
-	\item \textbf{Test di integrazione}: questa tipologia di test verifica i singoli moduli del software come fossero un gruppo unico.
-	Vengono svolti successivamente ai \textit{TU} e prima dei \textit{TS}.
-	Sono contrassegnati da \textbf{[TI]};
-
 	\item \textbf{Test di regressione}: Servono a garantire il corretto funzionamento del prodotto a seguito di modifiche del codice o di inserimento di nuove funzionalità.
 	Vengono etichettati nel seguente modo \textbf{[TR]};
 
-	\item \textbf{Test di unità}: i test di unità servono per verificare le singole unità del software, ovvero le componenti con funzionamento autonomo.
-	Il superamento di tali test non implica il corretto funzionamento del software.
-	Viene contrassegnata da \textbf{[TU]}.
 \end{itemize}
 
-\section{Test di accettazione}\label{SpecificaDeiTestTestDiAccettazione}
-\subsection{Tracciamento dei test}\label{SpecificaDeiTestTestDiAccettazioneTracciamentoDeiTest}
-
-\section{Test di sistema}\label{SpecificaDeiTestTestDiSistema}
-Sono stati individuati i seguenti test di sistema per garantire il funzionamento del prodotto sviluppato. I test di sistema sono stati identificati attraverso i requisiti indicati nel documento \textit{Analisi dei Requisiti 3.0.0}. 
-\def\tabularxcolumn#1{m{#1}}
-{\rowcolors{2}{RawSienna!90!RawSienna!20}{RawSienna!70!RawSienna!40}
-	
-	\begin{center}
-		\renewcommand{\arraystretch}{1.4}
-		\begin{longtable}{|p{3cm}|p{8cm}|p{2cm}|p{2cm}|}
-			\hline
-			\rowcolor{airforceblue}
-			\makecell[c]{\textbf{Id Test}} & \makecell[c]{\textbf{Descrizione}} & \makecell[c]{\textbf{Esito}} & \makecell[c]{\textbf{Qualità}} \\
-			\hline
-			\textit{TSRSFO1} & Verifica che il sistema utilizzi motori software 'contapersone' & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}} \\
-			\hline
-			\textit{TSRSFF2} & Verifica che il sistema utilizzi simulatori di dati storici & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\textit{TSRSFO3} & Verifica della visualizzazione di un messaggio d'errore in caso mancanza dati nella generazione della heat-map$_G$ &\makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\textit{TSRSFO4} & Verifica che il sistema archivi tutti i dati nel database & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\textit{TSRSFO5} & Verifica che il sistema elabori i dati dalle sorgenti esterne in tempo reale & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\textit{TSRSFO7} & Verifica della visualizzazione dei dati elaborati attraverso heat map$_{\scaleto{G}{3pt}}$ & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\textit{TSRSFO9} & Verifica che l’utente possa poter visualizzare i dati in tempo reale tramite heat map$_{\scaleto{G}{3pt}}$ & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\textit{TSRSFO10} & Verifica che l’utente possa poter visualizzare i dati storicizzati tramite heat map$_{\scaleto{G}{3pt}}$ & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\textit{TSRSFO11} & Verifica che l’utente possa poter visualizzare una previsione tramite heat map$_{\scaleto{G}{3pt}}$ & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\textit{TSRSFF12} & Verifica che l'utente possa poter distinguere tra i dati simulati e quelli reali & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\textit{TSRSFD13} & Verfica che l’utente possa poter visualizzare un indice di affidabilità della previsione nella mappa & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\textit{TSRSFD14} & Verifica che l’utente possa poter visualizzare un indice di affidabilità dei dati in tempo reale nella mappa & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\textit{TSRSFF15} & Verifica che l’utente possa poter applicare dei filtri ai dati (reali, simulati) & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\textit{TSRSFF16} & Verifica che l’utente abbia la possibilità di scegliere le sorgenti dati da cui prelevare dati tempo reale & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\textit{TSRSFO17} & Verifica che il sistema aggiorni la mappa automaticamente ogni 10 minuti & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\textit{TSRSFO18} & Verifica che il modello di machine learning salvi i pesi e le predizioni in un file & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\textit{TSRSFO19} & Verifica che venga inviato un messaggio di errore al front end , dal backend, se non ci sono i dati richiesti & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\textit{TSRSFO20} & Verifica che l’utente possa selezionare una città tra quelle disponibili & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\textit{TSRSFO21} & Verifica che l'utente visualizzi le zone delle città rispettivamente alle zone utilizzate & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\textit{TSRSFO22} & Verifica che il sistema archivi i dati in tempo reale con la data e orario di riferimento associata & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\textit{TSRSFF23} & Verifica che il sistema utilizzi i dati delle predizioni in caso di mancanza di dati in tempo reale & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\textit{TSRSFO24} & Verifica che l'utente possa selezionare l'intervallo orario in fasce orarie & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\textit{TSRSFO25} & Verifica che il sistema utilizzi in modo prioritario i dati reali se presenti anche quelli determinati per le predizioni & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\textit{TSRSFO26} & Verifica che il sistema aggiorni automaticamente la mappa alla selezione di un diverso orario & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\textit{TSRSFO27} & Verifica che l’utente possa poter selezionare la data del giorno di cui vuole visualizzare i dati & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\textit{TSRSFO28} & Verifica che l’utente possa poter ripristinare la visione in tempo reale tramite un pulsante di ripristino & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\textit{TSRSFF31} & Verifica che l’utente possa poter reperire il manuale d'uso & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\textit{TSRSFO32} & Verifica che l’utente possa poter variare il livello di zoom della heat map$_{\scaleto{G}{3pt}}$ & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\textit{TSRSFO32.1} & Verifica che l’utente possa poter aumentare il livello di zoom della heat map$_{\scaleto{G}{3pt}}$ & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\textit{TSRSFO32.1.1} & Verifica che l’utente possa poter attuare il drag$_{\scaleto{G}{3pt}}$ della heat map$_{\scaleto{G}{3pt}}$ & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\textit{TSRSFO32.1.2} & Verifica che l’utente possa poter visualizzare il pop-up$_{\scaleto{G}{3pt}}$ legato ad un punto di interesse & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\textit{TSRSFO32.1.3} & Verifica che l’utente possa poter chiudere il pop-up$_{\scaleto{G}{3pt}}$ legato ad un punto di interesse & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\textit{TSRSFO32.2} & Verifica che l’utente possa poter diminuire il livello di zoom della heat map$_{\scaleto{G}{3pt}}$ & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\textit{TSRSFD33} & Verifica che l’utente possa poter ricercare tramite una barra di ricerca le città presenti nel database & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\textit{TSRSFD34} & Verifica che l’utente possa poter visualizzare il messaggio d'errore relativo alla mancanza dei dati ricercati attraverso la barra di ricerca nel database & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\textit{TSRSFD35} & Verifica che l’utente possa poter visualizzare il confronto dei dati di due città selezionate dall'utente & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\textit{TSRSFD36} & Verifica che l’utente possa poter salvare in un file locale i dati della città della mappa che sta visualizzando & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\textit{TSRSFD37} & Verifica che l’utente possa poter inserire l'email per il ricevimento delle informazioni delle informazioni della città selezionata & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\textit{TSRSFD37.1} & Verifica che l’utente possa poter visualizzare un messaggio di errore nel caso l'email inserita sia scritta in modo errato & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\textit{TSRSFD38} & Verifica che il sistema abbia inserito correttamente l'email e la città correlata nel database & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\textit{TSRSFD39} & Verifica che il sistema invii correttamente l'email all'utente & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\textit{TSRSFD40} & Verifica che l’utente possa poter visualizzare la lista delle città più ricercate & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\textit{TSRSFD41} & Verifica che l’utente possa poter visualizzare la lista di tutte le città presenti nel database & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\rowcolor{white}
-			\caption{\textbf{Elenco test di sistema}}\\
-		\end{longtable}
-	
-	\end{center}
-\def\tabularxcolumn#1{m{#1}}
-{\rowcolors{2}{RawSienna!90!RawSienna!20}{RawSienna!70!RawSienna!40}
-	
-\subsection{Tracciamento dei test}\label{SpecificaDeiTestTestDiSistemaTracciamentoDeiTest}
-	
-	\begin{center}
-		\renewcommand{\arraystretch}{1.4}
-		\begin{longtable}{|p{3cm}|p{3cm}|}
-			\hline
-			\rowcolor{airforceblue}
-			\makecell[c]{\textbf{Id Test}} & \makecell[c]{\textbf{Id Requisito}} \\
-			\hline
-			\hline
-			TSRSFO1	& \makecell{RSFO1} \\
-			\hline
-			TSRSFF2 & \makecell{RSFF2} \\
-			\hline
-			TSRSFO3 & \makecell{RSFO3}  \\
-			\hline
-			TSRSFO4 & \makecell{RSFO4 \\ RSFO4.1 \\ RSFO4.2} \\
-			\hline
-			TSRSFO5 & \makecell{RSFO5} \\
-			\hline
-			TSRSFO7 & \makecell{RSFO7} \\
-			\hline
-			TSRSFO9 & \makecell{RSFO9} \\
-			\hline
-			TSRSFO10 & \makecell{RSFO10} \\
-			\hline
-			TSRSFO11 & \makecell{RSFO11} \\
-			\hline
-			TSRSFF12 & \makecell{RSFF12} \\
-			\hline
-			TSRSFD13 & \makecell{RSFD13} \\
-			\hline
-			TSRSFD14 & \makecell{RSFD14} \\
-			\hline
-			TSRSFF15 & \makecell{RSFF15} \\
-			\hline
-			TSRSFF16 & \makecell{RSFF16} \\
-			\hline
-			TSRSFO17 & \makecell{RSFO17} \\
-			\hline
-			TSRSFO18 & \makecell{RSFO18 \\ RSFO18.1 }\\
-			\hline
-			TSRSFO19 & \makecell{RSFO19} \\
-			\hline
-			TSRSFO20 & \makecell{RSFO20} \\
-			\hline
-			TSRSFO21 & \makecell{RSFO21} \\
-			\hline
-			TSRSFO22 & \makecell{RSFO22} \\
-			\hline
-			TSRSFF23 & \makecell{RSFF23} \\
-			\hline
-			TSRSFO24 & \makecell{RSFO24} \\
-			\hline
-			TSRSFO25 & \makecell{RSFO25} \\
-			\hline
-			TSRSFO26 & \makecell{RSFO26} \\
-			\hline
-			TSRSFO27 & \makecell{RSFO27} \\
-			\hline
-			TSRSFO28 & \makecell{RSFO28} \\
-			\hline
-			TSRSFF31 & \makecell{RSFF31} \\
-			\hline
-			TSRSFO32 & \makecell{RSFO32} \\
-			\hline
-			TSRSFO32.1 & \makecell{RSFO32.1} \\
-			\hline
-			TSRSFO32.1.1 & \makecell{RSFO32.1.1} \\
-			\hline
-			TSRSFO32.1.2 & \makecell{RSFO32.1.2} \\
-			\hline
-			TSRSFO32.1.3 & \makecell{RSFO32.1.3} \\
-			\hline
-			TSRSFO32.2 & \makecell{RSFO32.2}\\
-			\hline
-			TSRSFD33 & \makecell{RSFD33 \\RSFD33.1 \\ RSFD33.2}\\
-			\hline
-			TSRSFD34 & \makecell{RSFD34} \\
-			\hline
-			TSRSFD35 & \makecell{RSFD35} \\
-			\hline
-			TSRSFD36 & \makecell{RSFD36 \\ RSFD36.1 \\ RSFD36.2}\\
-			\hline
-			TSRSFD37 & \makecell{RSFD37}\\
-			\hline
-			TSRSFD37.1 & \makecell{RSFD37.1}\\
-			\hline
-			TSRSFD38 & \makecell{RSFD38}\\
-			\hline
-			TSRSFD39 & \makecell{RSFD39}\\
-			\hline
-			TSRSFD40 & \makecell{RSFD40} \\
-			\hline
-			TSRSFD41 & \makecell{RSFD41} \\
-			\hline
-			\rowcolor{white}
-			\caption{\textbf{Tracciamento dei test di sistema con i requisiti}}
-	\end{longtable}
-
-\end{center}
-
-\section{Test di integrazione}\label{SpecificaDeiTestTestDiIntegrazione}
-Sono stati individuati i seguenti test di integrazione per garantire il funzionamento dei diversi moduli nel momento in cui vengono messi in relazione tra di loro.
-\def\tabularxcolumn#1{m{#1}}
-{\rowcolors{2}{RawSienna!90!RawSienna!20}{RawSienna!70!RawSienna!40}
-	
-	\begin{center}
-		\renewcommand{\arraystretch}{1.4}
-		\begin{longtable}{|p{3cm}|p{8cm}|p{2cm}|p{2cm}|}
-			\hline
-			\rowcolor{airforceblue}
-			\makecell[c]{\textbf{Id Test}} & \makecell[c]{\textbf{Descrizione}} & \makecell[c]{\textbf{Esito}} & \makecell[c]{\textbf{Qualità}} \\
-			\hline
-			\centering \textit{TI01} & Verifica che il sistema acquisica i dati attraverso il modulo contapersone che utlizza l'algoritmo di Yolo v3 & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}} \\
-			\hline
-			\centering \textit{TI02} & Verifica che il sistema invii i dati ottenuti dal modulo contapersone al database in modo corretto & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\centering \textit{TI03} &  Verifica che il sistema invii i dati ottenuti dal modulo di machine learning al database in modo corretto &\makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\centering \textit{TI04} &  Verifica che il sistema invii i dati presenti nel  database alla web application in modo corretto &\makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\rowcolor{white}
-			\caption{\textbf{Elenco test di accettazione}}
-		\end{longtable}
-	\end{center}
-
-
+\clearpage
 \section{Test di unità}\label{SpecificaDeiTestTestDiUnita}
-Sono stati individuati i seguenti test di unità per garantire il funzionamento di ogni minimo componente autonomo del sistema. \\ 
-	
+Sono stati individuati i seguenti test di unità per garantire il funzionamento di ogni minimo componente autonomo del sistema. 
+
 \begin{center}
 	\renewcommand{\arraystretch}{1.4}
 	\begin{longtable}{|p{3cm}|p{8cm}|p{2cm}|p{2cm}|}
@@ -327,14 +92,12 @@ Sono stati individuati i seguenti test di unità per garantire il funzionamento 
 		\centering \textit{TU03} &  Verifica che il metodo in cui viene eseguita la query per il recupero dei dati presente nel database in base alla città, alla data e all'orario, ritorni effettivamente il tipo di ritorno corretto, ovvero un List$<$Detection$>$ &\makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
 		\hline
 		\centering \textit{TU04} &  Verifica che il metodo in cui viene eseguita la query per il recupero della latitudine e/o longitudine relativa a una città dal database ritorni effettivamente il tipo di ritorno corretto, ovvero List$<$String$>$.
-		 &\makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+		&\makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
 		\hline
 		\rowcolor{white}
 		\caption{\textbf{Elenco test di unità - Spring}}
 	\end{longtable}
 \end{center}
-%mancano quelli di vue 
-
 
 \begin{center}
 	\renewcommand{\arraystretch}{1.4}
@@ -407,3 +170,239 @@ Sono stati individuati i seguenti test di unità per garantire il funzionamento 
 	\end{longtable}
 	
 \end{center}
+
+\section{Test di integrazione}\label{SpecificaDeiTestTestDiIntegrazione}
+Sono stati individuati i seguenti test di integrazione per garantire il funzionamento dei diversi moduli nel momento in cui vengono messi in relazione tra di loro.
+\def\tabularxcolumn#1{m{#1}}
+{\rowcolors{2}{RawSienna!90!RawSienna!20}{RawSienna!70!RawSienna!40}
+	
+	\begin{center}
+		\renewcommand{\arraystretch}{1.4}
+		\begin{longtable}{|p{3cm}|p{8cm}|p{2cm}|p{2cm}|}
+			\hline
+			\rowcolor{airforceblue}
+			\makecell[c]{\textbf{Id Test}} & \makecell[c]{\textbf{Descrizione}} & \makecell[c]{\textbf{Esito}} & \makecell[c]{\textbf{Qualità}} \\
+			\hline
+			\centering \textit{TI01} & Verifica che il sistema acquisica i dati attraverso il modulo contapersone che utlizza l'algoritmo di Yolo v3 & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}} \\
+			\hline
+			\centering \textit{TI02} & Verifica che il sistema invii i dati ottenuti dal modulo contapersone al database in modo corretto & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\hline
+			\centering \textit{TI03} &  Verifica che il sistema invii i dati ottenuti dal modulo di machine learning al database in modo corretto &\makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\hline
+			\centering \textit{TI04} &  Verifica che il sistema invii i dati presenti nel  database alla web application in modo corretto &\makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\hline
+			\rowcolor{white}
+			\caption{\textbf{Elenco test di accettazione}}
+		\end{longtable}
+	\end{center}
+
+\section{Test di sistema}\label{SpecificaDeiTestTestDiSistema}
+Sono stati individuati i seguenti test di sistema per garantire il funzionamento del prodotto sviluppato. I test di sistema sono stati identificati attraverso i requisiti indicati nel documento \textit{Analisi dei Requisiti 3.0.0}. 
+\def\tabularxcolumn#1{m{#1}}
+{\rowcolors{2}{RawSienna!90!RawSienna!20}{RawSienna!70!RawSienna!40}
+	
+	\begin{center}
+		\renewcommand{\arraystretch}{1.4}
+		\begin{longtable}{|p{3cm}|p{8cm}|p{2cm}|p{2cm}|}
+			\hline
+			\rowcolor{airforceblue}
+			\makecell[c]{\textbf{Id Test}} & \makecell[c]{\textbf{Descrizione}} & \makecell[c]{\textbf{Esito}} & \makecell[c]{\textbf{Qualità}} \\
+			\hline
+			\textit{TSRSFO1} & Verifica che il sistema utilizzi motori software 'contapersone' & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}} \\
+			\hline
+			\textit{TSRSFF2} & Verifica che il sistema utilizzi simulatori di dati storici & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
+			\hline
+			\textit{TSRSFO3} & Verifica della visualizzazione di un messaggio d'errore in caso mancanza dati nella generazione della heat-map$_G$ &\makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\hline
+			\textit{TSRSFO4} & Verifica che il sistema archivi tutti i dati nel database & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\hline
+			\textit{TSRSFO5} & Verifica che il sistema elabori i dati dalle sorgenti esterne in tempo reale & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\hline
+			\textit{TSRSFD6} & Verifica che il sistema effettui una previsione dell’insorgenza futura di variazioni significative di flussi di persone & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
+			\hline
+			\textit{TSRSFO7} & Verifica che l’utente possa poter visualizzare i dati in tempo reale tramite heat map$_{\scaleto{G}{3pt}}$ & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\hline
+			\textit{TSRSFO8} & Verifica che l’utente possa poter visualizzare i dati storicizzati tramite heat map$_{\scaleto{G}{3pt}}$ & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\hline
+			\textit{TSRSFO9} & Verifica che l’utente possa poter visualizzare una previsione tramite heat map$_{\scaleto{G}{3pt}}$ & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\hline
+			\textit{TSRSFF10} & Verifica che l'utente possa poter distinguere tra i dati simulati e quelli reali & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
+			\hline
+			\textit{TSRSFD11} & Verfica che l’utente possa poter visualizzare un indice di affidabilità della previsione nella mappa & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
+			\hline
+			\textit{TSRSFD12} & Verifica che l’utente possa poter visualizzare un indice di affidabilità dei dati in tempo reale nella mappa & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
+			\hline
+			\textit{TSRSFF13} & Verifica che l’utente possa poter applicare dei filtri ai dati (reali, simulati) & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
+			\hline
+			\textit{TSRSFF14} & Verifica che l’utente abbia la possibilità di scegliere le sorgenti dati da cui prelevare dati tempo reale & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
+			\hline
+			\textit{TSRSFO15} & Verifica che il sistema aggiorni la mappa automaticamente ogni 10 minuti & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\hline
+			\textit{TSRSFO16} & Verifica che il modello di machine learning salvi i pesi e le predizioni in un file & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\hline
+			\textit{TSRSFO17} & Verifica che venga inviato un messaggio di errore al front end , dal backend, se non ci sono i dati richiesti & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\hline
+			\textit{TSRSFO18} & Verifica che l’utente possa selezionare una città tra quelle disponibili & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\hline
+			\textit{TSRSFO19} & Verifica che l'utente visualizzi le zone delle città rispettivamente alle zone utilizzate & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\hline
+			\textit{TSRSFO20} & Verifica che il sistema archivi i dati in tempo reale con la data e orario di riferimento associata & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\hline
+			\textit{TSRSFF21} & Verifica che il sistema utilizzi i dati delle predizioni in caso di mancanza di dati in tempo reale & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\hline
+			\textit{TSRSFO22} & Verifica che l'utente possa selezionare l'intervallo orario in fasce orarie & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\hline
+			\textit{TSRSFO23} & Verifica che il sistema utilizzi in modo prioritario i dati reali se presenti anche quelli determinati per le predizioni & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\hline
+			\textit{TSRSFO24} & Verifica che il sistema aggiorni automaticamente la mappa alla selezione di un diverso orario & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\hline
+			\textit{TSRSFO25} & Verifica che l’utente possa poter selezionare la data del giorno di cui vuole visualizzare i dati & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\hline
+			\textit{TSRSFO26} & Verifica che l’utente possa poter ripristinare la visione in tempo reale tramite un pulsante di ripristino & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\hline
+			\textit{TSRSFF27} & Verifica che l’utente possa poter reperire il manuale d'uso & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
+			\hline
+			\textit{TSRSFO28} & Verifica che l’utente possa poter variare il livello di zoom della heat map$_{\scaleto{G}{3pt}}$ & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\hline
+			\textit{TSRSFO28.1} & Verifica che l’utente possa poter aumentare il livello di zoom della heat map$_{\scaleto{G}{3pt}}$ & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\hline
+			\textit{TSRSFO28.1.1} & Verifica che l’utente possa poter attuare il drag$_{\scaleto{G}{3pt}}$ della heat map$_{\scaleto{G}{3pt}}$ & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\hline
+			\textit{TSRSFO28.1.2} & Verifica che l’utente possa poter visualizzare il pop-up$_{\scaleto{G}{3pt}}$ legato ad un punto di interesse & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\hline
+			\textit{TSRSFO28.1.3} & Verifica che l’utente possa poter chiudere il pop-up$_{\scaleto{G}{3pt}}$ legato ad un punto di interesse & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\hline
+			\textit{TSRSFO28.2} & Verifica che l’utente possa poter diminuire il livello di zoom della heat map$_{\scaleto{G}{3pt}}$ & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\hline
+			\textit{TSRSFD29} & Verifica che l’utente possa poter ricercare tramite una barra di ricerca le città presenti nel database & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\hline
+			\textit{TSRSFD30} & Verifica che l’utente possa poter visualizzare il messaggio d'errore relativo alla mancanza dei dati ricercati attraverso la barra di ricerca nel database & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
+			\hline
+			\textit{TSRSFD31} & Verifica che l’utente possa poter visualizzare il confronto dei dati di due città selezionate dall'utente & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
+			\hline
+			\textit{TSRSFD32} & Verifica che l’utente possa poter salvare in un file locale i dati della città della mappa che sta visualizzando & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
+			\hline
+			\textit{TSRSFD33} & Verifica che l’utente possa poter inserire l'email per il ricevimento delle informazioni delle informazioni della città selezionata & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
+			\hline
+			\textit{TSRSFD33.1} & Verifica che l’utente possa poter visualizzare un messaggio di errore nel caso l'email inserita sia scritta in modo errato & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
+			\hline
+			\textit{TSRSFD34} & Verifica che il sistema abbia inserito correttamente l'email e la città correlata nel database & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
+			\hline
+			\textit{TSRSFD35} & Verifica che il sistema invii correttamente l'email all'utente & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
+			\hline
+			\textit{TSRSFD36} & Verifica che l’utente possa poter visualizzare la lista delle città più ricercate & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
+			\hline
+			\textit{TSRSFD37} & Verifica che l’utente possa poter visualizzare la lista di tutte le città presenti nel database & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
+			\hline
+			\rowcolor{white}
+			\caption{\textbf{Elenco test di sistema}}\\
+		\end{longtable}
+		
+	\end{center}
+	\def\tabularxcolumn#1{m{#1}}
+	{\rowcolors{2}{RawSienna!90!RawSienna!20}{RawSienna!70!RawSienna!40}
+		
+		\subsection{Tracciamento dei test}\label{SpecificaDeiTestTestDiSistemaTracciamentoDeiTest}
+		
+		\begin{center}
+			\renewcommand{\arraystretch}{1.4}
+			\begin{longtable}{|p{3cm}|p{3cm}|}
+				\hline
+				\rowcolor{airforceblue}
+				\makecell[c]{\textbf{Id Test}} & \makecell[c]{\textbf{Id Requisito}} \\
+				\hline
+				\hline
+				TSRSFO1	& \makecell{RSFO1} \\
+				\hline
+				TSRSFF2 & \makecell{RSFF2} \\
+				\hline
+				TSRSFO3 & \makecell{RSFO3}  \\
+				\hline
+				TSRSFO4 & \makecell{RSFO4 \\ RSFO4.1 \\ RSFO4.2} \\
+				\hline
+				TSRSFO5 & \makecell{RSFO5} \\
+				\hline
+				TSRSFD6 & \makecell{RSFD6} \\
+				\hline
+				TSRSFO7 & \makecell{RSFO9} \\
+				\hline
+				TSRSFO8 & \makecell{RSFO10} \\
+				\hline
+				TSRSFO9 & \makecell{RSFO7 \\ RSFO11} \\
+				\hline
+				TSRSFF10 & \makecell{RSFF12} \\
+				\hline
+				TSRSFD11 & \makecell{RSFD13} \\
+				\hline
+				TSRSFD12 & \makecell{RSFD14} \\
+				\hline
+				TSRSFF13 & \makecell{RSFF15} \\
+				\hline
+				TSRSFF14 & \makecell{RSFF16} \\
+				\hline
+				TSRSFO15 & \makecell{RSFO17} \\
+				\hline
+				TSRSFO16 & \makecell{RSFO18 \\ RSFO18.1 }\\
+				\hline
+				TSRSFO17 & \makecell{RSFO19} \\
+				\hline
+				TSRSFO18 & \makecell{RSFO20} \\
+				\hline
+				TSRSFO19 & \makecell{RSFO21} \\
+				\hline
+				TSRSFO20 & \makecell{RSFO22 \\ RSFO22.1} \\
+				\hline
+				TSRSFF21 & \makecell{RSFF23} \\
+				\hline
+				TSRSFO22 & \makecell{RSFO24} \\
+				\hline
+				TSRSFO23 & \makecell{RSFO25} \\
+				\hline
+				TSRSFO24 & \makecell{RSFO26} \\
+				\hline
+				TSRSFO25 & \makecell{RSFO27} \\
+				\hline
+				TSRSFO26 & \makecell{RSFO28} \\
+				\hline
+				TSRSFF27 & \makecell{RSFF31} \\
+				\hline
+				TSRSFO28 & \makecell{RSFO32} \\
+				\hline
+				TSRSFO28.1 & \makecell{RSFO32.1} \\
+				\hline
+				TSRSFO28.1.1 & \makecell{RSFO32.1.1} \\
+				\hline
+				TSRSFO28.1.2 & \makecell{RSFO32.1.2} \\
+				\hline
+				TSRSFO28.1.3 & \makecell{RSFO32.1.3} \\
+				\hline
+				TSRSFO28.2 & \makecell{RSFO32.2}\\
+				\hline
+				TSRSFD29 & \makecell{RSFD33 \\RSFD33.1 \\ RSFD33.2}\\
+				\hline
+				TSRSFD30 & \makecell{RSFD34} \\
+				\hline
+				TSRSFD31 & \makecell{RSFD35} \\
+				\hline
+				TSRSFD32 & \makecell{RSFD36 \\ RSFD36.1 \\ RSFD36.2}\\
+				\hline
+				TSRSFD33 & \makecell{RSFD37}\\
+				\hline
+				TSRSFD33.1 & \makecell{RSFD37.1}\\
+				\hline
+				TSRSFD34 & \makecell{RSFD38}\\
+				\hline
+				TSRSFD35 & \makecell{RSFD39}\\
+				\hline
+				TSRSFD36 & \makecell{RSFD40} \\
+				\hline
+				TSRSFD37 & \makecell{RSFD41} \\
+				\hline
+				\rowcolor{white}
+				\caption{\textbf{Tracciamento dei test di sistema con i requisiti}}
+			\end{longtable}
+			
+		\end{center}
+
+\section{Test di accettazione}\label{SpecificaDeiTestTestDiAccettazione}
+\textit{Essendo una tipologia di test che verrà eseguita in periodo di accettazione il gruppo si impegna a completare questa sezione in previsione della Revsione di Accettazione.}
