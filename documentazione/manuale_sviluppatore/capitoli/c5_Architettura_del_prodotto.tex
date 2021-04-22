@@ -25,6 +25,13 @@ Di seguito vengono descritte le attività più importanti svolte nel modulo Acqu
     \caption{Diagramma di attività dell'eseguibile Detection}
   \end{center}
 \end{figure}
+
+
+Da questo diagramma si può notare come il ciclo venga ripetuto ogni 5 minuti e per ogni webcam presente all'interno del file JSON associato.
+Il lasso di tempo pari a 5 minuti è stato deciso arbitrariamente dopo aver testato la velocità di riconoscimento persone effettuato da YOLO v3.
+È stato riscontrato che per elaborare 6 frame vengono impiegati circa 2 secondi per ciascuno.
+
+
 \begin{figure}[H]
   \begin{center}
     \includegraphics[scale=0.8]{../immagini/diag_PB/detection.png}
