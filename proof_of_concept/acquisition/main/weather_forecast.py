@@ -23,13 +23,8 @@ class weather_forecast(Document):
     weather_description = StringField()
     temperature = FloatField()
 
-# OpenWeather API key
 API_KEY = "550617cb3af649e1d6729a3f78b24e17"
-
-# Base OpenWeatherMap api url
 BASE_URL = "https://api.openweathermap.org/data/2.5/onecall?"
-
-# Webcams json path
 PATH_WEBCAM_JSON = "../webcams.json"
 
 
@@ -49,7 +44,6 @@ def get_onecall_api_response(latitude,longitude,API_KEY):
 
     # Api request to get weather data, save it into a json
     return requests.get(complete_url).json()
-    # print(response)
 
 
 def get_hourly_forecast(latitude,longitude):
@@ -71,7 +65,6 @@ def get_hourly_forecast(latitude,longitude):
         weather_description = hourly_forecast["weather"][0]["description"]
         temperature = hourly_forecast["temp"]
 
-        # print values for that hour
         print(" temperature = " + str(temperature) +
               "\n forecast_hour = " + str(forecast_hour) +
               "\n description = " + str(weather_description))
@@ -106,8 +99,6 @@ def main():
 
     time.sleep((midnight - datetime.now()).total_seconds())
 
-    # infinite loop
-    #MODIFICATO! NON CHIAMA PIU' LA FUNZIONE OGNI 2 GIORNI, MA 1
     while True:
 
         tomorrow = datetime.today() + timedelta(days=1)
@@ -117,16 +108,7 @@ def main():
         for webcam in json_data["webcams"]:
             get_hourly_forecast(webcam["latitude"], webcam["longitude"])
 
-        # sleep 30 minutes (1800 seconds)
-        # time.sleep(1800)
-        #
-        # # repeat (could be a repeat twice loop)
-        # for webcam in json_data["webcams"]:
-        #     get_hourly_forecast(webcam["latitude"], webcam["longitude"])
-
-        # sleep until the next midnight
         time.sleep((midnight - datetime.now()).total_seconds())
 
 
 main()
-# get_hourly_forecast(45.309812,18.410428)

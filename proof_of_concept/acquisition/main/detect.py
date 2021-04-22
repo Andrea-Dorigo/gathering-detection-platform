@@ -1,4 +1,3 @@
-#start with python3 get_video.py
 import urllib.request
 import requests
 from urllib.request import urlopen, Request
@@ -28,9 +27,6 @@ PATH_M3U8 = "../m3u8/"
 PATH_VIDEOS = "../videos/"
 PATH_FRAMES = "../frames/"
 PATH_FRAMES_PIECES= "../frames_pieces/"
-# path_video = "../m3u8/"
-
-# TODO: aggiungere le costanti che indicano i path (come quella qui sopra)
 
 DETECTIONS_INTERVAL = 300
 
@@ -63,9 +59,6 @@ def fetch_read_m3u8(webcam_link, webcam_prefix):
 
 
 def main():
-    # A fini di testing, viene fatta una sola detection (loops < 1);
-    # sostituisci "while loops < 1:" con "while True:" per l'esecuzione continua
-    #loops = 0
     while True :
 
         # imposta il tempo di attesa fra un conteggio di persone e l'altro
@@ -110,26 +103,8 @@ def main():
                 logging.error(sys.exc_info())
                 continue
 
-                # estrai un frame dal video
-                #exec(open('get_frames.py').read())
-            # try:
-            #     get_frames(PATH_VIDEOS, PATH_FRAMES)
-            #     if get_frames(PATH_VIDEOS, PATH_FRAMES):
-            #         print("Acquisizione Frame completata")
-            # except:
-            #     print('Exception')
-            #     logging.info('Eccezione ore: ' + str(datetime.now()) )
-            #     logging.error(sys.exc_info())
-            #     continue
-                # dividi il frame in 6 per un migliore affidabilita' nel riconoscimento
-                #exec(open('cut_frame.py').read())
-
             try:
-                # cut_frames(PATH_FRAMES, PATH_FRAMES_PIECES)
-                # if cut_frames(PATH_FRAMES, PATH_FRAMES_PIECES):
-                #     print("Taglio dei frame in foto completata")
                 frame_part = cut_frame_in_six(frame)
-                # cv2.imwrite("test.jpg", frame_part[0])
 
             except:
                 print('Exception')
@@ -160,9 +135,7 @@ def main():
                 temperature = temperature,
                 day_of_week =  datetime.now().date().weekday()
                 ).save()
-                #time.sleep((t_end - datetime.now()).total_seconds())
 
-        #loops = loops + 1
         print("waiting for: " + str((t_end - datetime.now()).total_seconds()))
         time.sleep((t_end - datetime.now()).total_seconds())
 
