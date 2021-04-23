@@ -3,7 +3,7 @@ Questa sezione esporrà le procedure di installazione all'interno del sistema op
 Rimane comunque possibile installare il software su altri sistemi operativi soddisfando le dipendenze necessarie, ma non verrà qui esplicitato.
 
 \section{Download della repository}\label{ProceduraDiInstallazioneDownloadRepo}
-Per scaricare correttamente i contenuti della repository$_G$ è necessario installare \texttt{git} e \texttt{git-lfs}(\textit{Git Large File Storage}).
+Per scaricare correttamente i contenuti della repository$_G$ è necessario installare \texttt{git} e \texttt{git-lfs} (\textit{Git Large File Storage}).
 Su Ubuntu$_{\scaleto{G}{3pt}}$ 20.04, questo è possibile eseguendo il comando:
 \begin{lstlisting}
   sudo apt install git git-lfs
@@ -26,12 +26,15 @@ L'utilizzo di \textit{Git Large File Storage} permette l'upload e il download di
 
 \section{Installazione delle dipendenze}\label{ProceduraDiInstallazioneInstallazioneDipendenze}
 Dopo aver eseguito il passo sopra descritto, è necessario installare le dipendenze necessarie a far eseguire il prodotto software$_{\scaleto{G}{3pt}}$ adeguatamente.
-Per fare ciò è sufficiente aprire il terminale all'interno della cartella \textit{gathering-detection-platform$_{\scaleto{G}{3pt}}$}, ed eseguire il seguente comando:
+Per fare ciò è sufficiente aprire il terminale all'interno della cartella \textit{gathering-detection-platform$_{\scaleto{G}{3pt}}$}, ed eseguire i seguenti comandi:
 \begin{lstlisting}
-  sudo apt install python3-opencv python3-pip mongo maven npm && pip3 install mongoengine
+  sudo apt install python3-opencv python3-pip mongo maven npm
+\end{lstlisting}
+\begin{lstlisting}
+  pip3 install mongoengine
 \end{lstlisting}
 
-Una volta conclusa questa operazione con esito positivo, il programma potrà essere eseguito.
+Una volta concluse queste operazioni con esito positivo, il programma potrà essere eseguito.
 
 \section{Inizializzazione del modulo di acquisizione}\label{ProceduraDiInstallazioneInizializzazioneModuloAcquisition}
 Per eseguire il modulo di acquisizione, in modo da iniziare a raccogliere i dati dalle webcam salvate, basterà posizionarsi all'interno della cartella \texttt{acquisition/main/}, e da terminale eseguire il comando:
@@ -51,18 +54,19 @@ Per una questione di codifica, il link della webcam dev'essere conforme a quelle
 
 
 \section{Inizializzazione modulo Prediction}\label{ProceduraDiInstallazioneInizializzazioneModuloPrediction}
-Per eseguire il modulo di predizione, che tramite il machine-learning$_G$ si occupa di calcolare, appunto, le predizioni del periodo di tempo futuro, bisogna posizionarsi all'interno della cartella "prediction" ed eseguire il seguente comando da terminale:
+Per eseguire il modulo di predizione, che tramite il machine-learning$_G$ si occupa di calcolare, appunto, le predizioni del periodo di tempo futuro, bisogna posizionarsi all'interno della cartella \texttt{prediction/} ed eseguire il seguente comando da terminale:
 
 \begin{lstlisting}
     python3 DataPrediction.py
 \end{lstlisting}
 In tal modo verrà attivato il modulo per le predizioni sui dati.
+Saranno visibili sul terminale gli step eseguiti dal programma.
 
 
 \section{Inizializzazione modulo Web-App}\label{ProceduraDiInstallazioneInizializzazioneModuloWebApp}
 Per avviare la web-app$_G$, e le sue funzioni, si devono eseguire alcuni comandi, sempre da terminale, a partire dalla cartella \textit{webapp}.
 \begin{enumerate}
-  \item posizionarsi all'interno della cartella "webapp" ed eseguire:
+  \item posizionarsi all'interno della cartella \texttt{webapp/} ed eseguire:
   \begin{lstlisting}
     mvn spring-boot:run
   \end{lstlisting}
@@ -75,4 +79,4 @@ Per avviare la web-app$_G$, e le sue funzioni, si devono eseguire alcuni comandi
     npm run
   \end{lstlisting}
 \end{enumerate}
-Il primo comando inizializza il server di Spring$_G$ che fornisce i servizi per prelevare le informazioni dal database, mentre i comandi successivi installano prima npm$_G$ e successivamente le dipendenze di ogni file necessarie alla web-app$_{\scaleto{G}{3pt}}$.
+Il primo comando inizializza il server di Spring$_G$ che fornisce i servizi per prelevare le informazioni dal database, mentre i comandi successivi installano i moduli necessari tramite npm$_G$ ed eseguono l'applicazione.
