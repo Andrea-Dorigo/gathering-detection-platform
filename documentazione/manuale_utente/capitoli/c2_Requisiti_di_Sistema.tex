@@ -31,10 +31,27 @@ L'applicazione web$_G$ potrebbe funzionare correttamente anche su versioni prece
 Questa sezione terrà conto delle procedure di installazione all'interno del sistema operativo Linux$_G$, più precisamente Ubuntu$_G$ 20.04 LTS, in quanto utilizzato anche per lo sviluppo del software stesso.
 
 \subsection{Download della  repository}\label{RequisitiDiSistemaEdInstallazioneInstallazioneDownloadRepo}
-Come prima fase bisogna scaricare la repository$_G$ relativa al progetto \textit{Gathering-Detection-Platform} al seguente link:
-\begin{center}
-	\item \url{https://github.com/Andrea-Dorigo/gathering-detection-platform}
+Come prima fase bisogna scaricare la repository$_G$ relativa al progetto \textit{Gathering-Detection-Platform}, presente al seguente link:
+\begin{center} \url{https://github.com/Andrea-Dorigo/gathering-detection-platform}
 \end{center}
+
+Per scaricare correttamente i contenuti della repository$_{\scaleto{G}{3pt}}$ è necessario installare \texttt{git} e \texttt{git-lfs}(\textit{Git Large File Storage}).
+Su Ubuntu$_{\scaleto{G}{3pt}}$ 20.04, questo è possibile eseguendo il comando:
+\begin{lstlisting}
+	sudo apt install git git-lfs
+\end{lstlisting}
+assumendo che le principali repository$_{\scaleto{G}{3pt}}$ per i pacchetti di Ubuntu$_{\scaleto{G}{3pt}}$ siano attive (Universe, Multiverse).
+
+Questo passaggio è richiesto poiché GitHub$_G$ (il sito che ospita la repository del progetto) consente l'upload di file con dimensioni massime fino a 100MB.
+L'utilizzo di \textit{Git Large File Storage} permette l'upload e il download di file che superano questo limite, ed in particolare permette l'upload e download dei pesi necessari all'algoritmo YOLOv3 per il rilevamento di oggetti (più precisamente per il rilevamento delle persone in un'immagine), il quale ha una dimensione maggiore di 200MB. Maggiori informazioni riguardo \textit{Git Large File Storage} sono reperibili all'indirizzo:
+\begin{center}
+	 \url{https://git-lfs.github.com} .
+\end{center}
+
+È dunque possibile scaricare correttamente la repository$_{\scaleto{G}{3pt}}$ relativa al progetto \textit{Gathering-Detection-Platform} con il seguente comando:
+\begin{lstlisting}
+git clone https://github.com/Andrea-Dorigo/gathering-detection- platform.git
+\end{lstlisting}
 
 \subsection{Installazione dipendenze}\label{RequisitiDiSistemaEdInstallazioneInstallazioneInstallazioneDipendenze}
 Dopo eseguito il passo sopra descritto, è obbligatorio installare le dipendenze necessarie per eseguire il prodotto software$_{\scaleto{G}{3pt}}$ adeguatamente.
@@ -81,7 +98,7 @@ Per avviare la web-app$_{\scaleto{G}{3pt}}$, e le sue funzioni, si devono esegui
 	\end{lstlisting}
 	\item successivamente, all'interno della stessa cartella, bisogna eseguire:
 	\begin{lstlisting}
-	npm run
+	npm run serve
 	\end{lstlisting}
 	\item infine, la piattaforma \textit{Gathering-Detection-Platform} sarà disponibile all'indirizzo di default \url{http://localhost:8081} 
 \end{enumerate}
