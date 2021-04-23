@@ -73,11 +73,32 @@ I test che verranno effettuati sul prodotto software sono così divisi:
 
 \clearpage
 \section{Test di unità}\label{SpecificaDeiTestTestDiUnita}
-Sono stati individuati i seguenti test di unità per garantire il funzionamento di ogni minimo componente autonomo del sistema. 
+Sono stati individuati i seguenti test di unità per garantire il funzionamento di ogni minimo componente autonomo del sistema.
 
 \begin{center}
 	\renewcommand{\arraystretch}{1.4}
-	\begin{longtable}{|p{3cm}|p{8cm}|p{2cm}|p{2cm}|}
+	\begin{longtable}{|p{3cm}|p{9cm}|p{2cm}|p{2cm}|}
+		\hline
+		\rowcolor{airforceblue}
+		\multicolumn{4}{|c|}{\textbf{Test di unità Python}} \\
+		\hline
+		\rowcolor{airforceblue}
+		\makecell[c]{\textbf{Id Test}} & \makecell[c]{\textbf{Descrizione}} & \makecell[c]{\textbf{Esito}} & \makecell[c]{\textbf{Qualità}} \\
+		\hline
+		\centering \textit{TU01} & Verifica che il metodo get{\_}onecall{\_}api{\_}response in weather{\_}forecast.py ottenga i dati delle 48 ore successive & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}} \\
+		\hline
+		\centering \textit{TU02} & Verifica che il metodo fetch{\_}read{\_}m3u8 in detect.py scarichi e legga correttamente un file m3u8& \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+		\hline
+		\centering \textit{TU03} &  Verifica che il metodo extract{\_}frame{\_}from{\_}video{\_}url in get{\_}frames.py estragga e legga correttamente un frame da un video di cui viene fornito il link &\makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+		\hline
+		\rowcolor{white}
+		\caption{\textbf{Elenco test di unità - Python}}
+	\end{longtable}
+\end{center}
+
+\begin{center}
+	\renewcommand{\arraystretch}{1.4}
+	\begin{longtable}{|p{3cm}|p{9cm}|p{2cm}|p{2cm}|}
 		\hline
 		\rowcolor{airforceblue}
 		\multicolumn{4}{|c|}{\textbf{Test di unità Spring}} \\
@@ -85,13 +106,13 @@ Sono stati individuati i seguenti test di unità per garantire il funzionamento 
 		\rowcolor{airforceblue}
 		\makecell[c]{\textbf{Id Test}} & \makecell[c]{\textbf{Descrizione}} & \makecell[c]{\textbf{Esito}} & \makecell[c]{\textbf{Qualità}} \\
 		\hline
-		\centering \textit{TU01} & Verifica che il metodo in cui viene eseguita la query per il recupero della lista delle città presenti nel database ritorni effettivamente il tipo di ritorno corretto, ovvero List$<$String$>$ & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}} \\
+		\centering \textit{TU04} & Verifica che il metodo in cui viene eseguita la query per il recupero della lista delle città presenti nel database ritorni effettivamente il tipo di ritorno corretto, ovvero List$<$String$>$ & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}} \\
 		\hline
-		\centering \textit{TU02} & Verifica che il metodo in cui viene eseguita la query per il recupero del'ultimo dato presente nel database ritorni effettivamente il tipo di ritorno corretto, ovvero un Detection & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+		\centering \textit{TU05} & Verifica che il metodo in cui viene eseguita la query per il recupero del'ultimo dato presente nel database ritorni effettivamente il tipo di ritorno corretto, ovvero un Detection & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
 		\hline
-		\centering \textit{TU03} &  Verifica che il metodo in cui viene eseguita la query per il recupero dei dati presente nel database in base alla città, alla data e all'orario, ritorni effettivamente il tipo di ritorno corretto, ovvero un List$<$Detection$>$ &\makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+		\centering \textit{TU06} &  Verifica che il metodo in cui viene eseguita la query per il recupero dei dati presente nel database in base alla città, alla data e all'orario, ritorni effettivamente il tipo di ritorno corretto, ovvero un List$<$Detection$>$ &\makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
 		\hline
-		\centering \textit{TU04} &  Verifica che il metodo in cui viene eseguita la query per il recupero della latitudine e/o longitudine relativa a una città dal database ritorni effettivamente il tipo di ritorno corretto, ovvero List$<$String$>$.
+		\centering \textit{TU07} &  Verifica che il metodo in cui viene eseguita la query per il recupero della latitudine e/o longitudine relativa a una città dal database ritorni effettivamente il tipo di ritorno corretto, ovvero List$<$String$>$.
 		&\makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
 		\hline
 		\rowcolor{white}
@@ -101,74 +122,125 @@ Sono stati individuati i seguenti test di unità per garantire il funzionamento 
 
 \begin{center}
 	\renewcommand{\arraystretch}{1.4}
-	\begin{longtable}{|p{3cm}|p{8cm}|p{2cm}|p{2cm}|}
+	\begin{longtable}{|p{3cm}|p{9cm}|p{2cm}|p{2cm}|}
 		\hline
 		\rowcolor{airforceblue}
-		\multicolumn{4}{|c|}{\textbf{Test di unità Python}} \\
+		\multicolumn{4}{|c|}{\textbf{Test di unità Vue.js}} \\
 		\hline
 		\rowcolor{airforceblue}
 		\makecell[c]{\textbf{Id Test}} & \makecell[c]{\textbf{Descrizione}} & \makecell[c]{\textbf{Esito}} & \makecell[c]{\textbf{Qualità}} \\
 		\hline
-		\centering \textit{TU05} & Verifica che il metodo get{\_}onecall{\_}api{\_}response in weather{\_}forecast.py ottenga i dati delle 48 ore successive & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}} \\
+		\centering \textit{TU08} & Verifica che la componente "aboutUs.vue" esista & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}} \\
 		\hline
-		\centering \textit{TU06} & Verifica che il metodo fetch{\_}read{\_}m3u8 in detect.py scarichi e legga correttamente un file m3u8& \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+		\centering \textit{TU09} & Verifica che il file "httpcommon.js" esista & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}} \\
 		\hline
-		\centering \textit{TU07} &  Verifica che il metodo extract{\_}frame{\_}from{\_}video{\_}url in get{\_}frames.py estragga e legga correttamente un frame da un video di cui viene fornito il link &\makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+		\centering \textit{TU10} & Verifica che il metodo "getCities" presente nel file "httprequest.js" esista & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}} \\
+		\hline
+		\centering \textit{TU11} & Verifica che il metodo "getCoo" presente nel file "httprequest.js" esista & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}} \\
+		\hline
+		\centering \textit{TU12} & Verifica che il metodo "getDataRT" presente nel file "httprequest.js" esista & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}} \\
+		\hline
+		\centering \textit{TU13} & Verifica che il metodo "getLastValue" presente nel file "httprequest.js" esista & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}} \\
+		\hline
+		\centering \textit{TU14} & Verifica che la componente "autocompleteSearch.vue" esista & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}} \\
+		\hline
+		\centering \textit{TU15} & Verifica che il tag di input della componente "autocompleteSearch.vue" sia vuoto & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}} \\
+		\hline
+		\centering \textit{TU16} & Verifica che il tag di input della componente "autocompleteSearch.vue" non sia vuoto dopo che l'utente interagisce scrivendo & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}} \\
+		\hline
+		\centering \textit{TU17} & Verifica che il metodo "getNameCity" presente nel file "autocompleteSearch.vue" esista & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}} \\
+		\hline
+		\centering \textit{TU18} & Verifica che il metodo "getNameCity" presente nel file "autocompleteSearch.vue" venga chiamato almeno una volta & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}} \\
+		\hline
+		\centering \textit{TU19} & Verifica che il metodo "itemSelected" presente nel file "autocompleteSearch.vue" esista & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}} \\
+		\hline
+		\centering \textit{TU20} & Verifica che la componente "datePicker.vue" esista & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{NS}} \\
+		\hline
+		\centering \textit{TU21} & Verifica che la componente "slider.vue" esista & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{NS}} \\
+		\hline
+		\centering \textit{TU22} & Verifica che il metodo "getTime" presente nel file "slider.vue" esista & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{NS}} \\
+		\hline
+		\centering \textit{TU23} & Verifica che la componente "app.vue" esista & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}} \\
+		\hline
+		\centering \textit{TU24} & Verifica che la componente "listCity.vue" esista & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{NS}} \\
+		\hline
+		\centering \textit{TU25} & Verifica che la componente "heatmap.vue" esista & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{NS}} \\
+		\hline
+		\centering \textit{TU26} & Verifica che la componente "vue2LeafletHeatmap.vue" esista & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{NS}} \\
+		\hline
+		\centering \textit{TU27} & Verifica che la componente "mainPage.vue" esista & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}} \\
+		\hline
+		\centering \textit{TU28} & Verifica che il metodo "getRetrieveCoordinate" presente nel file "mainPage.vue" venga chiamato dopo il click dell'utente sul bottone & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}} \\
+		\hline
+		\centering \textit{TU29} & Verifica che la componente "heatmap.vue" presente nel file "mainPage.vue" esista & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}} \\
 		\hline
 		\rowcolor{white}
-		\caption{\textbf{Elenco test di unità - Python}}
+		\caption{\textbf{Elenco test di unità - Vue.js}}
 	\end{longtable}
 \end{center}
+
 
 \subsection{Tracciamento dei test}\label{SpecificaDeiTestTestDiUnitaTracciamentoDeiTest}
 
 \begin{center}
 	\renewcommand{\arraystretch}{1.4}
-	\begin{longtable}{|p{1.5cm}|p{15cm}|}
+	\begin{longtable}{|p{1.5cm}|p{9cm}|p{6cm}|}
 		\hline
 		\rowcolor{airforceblue}
-		\multicolumn{2}{|c|}{\textbf{Tracciamento test di unità Spring}} \\
+		\multicolumn{3}{|c|}{\textbf{Tracciamento test di unità Python}} \\
 		\hline
 		\rowcolor{airforceblue}
-		\makecell[c]{\textbf{Id Test}} & \makecell[c]{\textbf{Metodo}} \\
+		\makecell[c]{\textbf{Id Test}} & \makecell[c]{\textbf{Percorso file}} & \makecell[c]{\textbf{Metodo}} \\
 		\hline
+		\centering TU01	& \makecell[c]{acquisition/main/test/test{\_}weather{\_}forecast.py} & \makecell[c]{test{\_}response}\\
 		\hline
-		\centering TU01	& \makecell[c]{proof{\_}of{\_}concept/webapp/webapp/src/test/java/com/webapp/\\data/mongodb/DetectionCustomRepositoryImplTest/\\DetectionCustomRepositoryImplTest.java:getCitiesTest()}\\
+		\centering TU02 & \makecell[c]{acquisition/main/test/test{\_}detect.py} & \makecell[c]{test{\_}fetch{\_}read{\_}m3u8}\\
 		\hline
-		\centering TU02 & \makecell[c]{proof{\_}of{\_}concept/webapp/webapp/src/test/java/com/webapp/\\data/mongodb/DetectionCustomRepositoryImplTest/\\DetectionCustomRepositoryImplTest.java:getLastValueTest()}\\
-		\hline
-		\centering TU03 & \makecell[c]{proof{\_}of{\_}concept/webapp/webapp/src/test/java/com/webapp/\\data/mongodb/DetectionCustomRepositoryImplTest/\\DetectionCustomRepositoryImplTest.java:getDataRTTest()}\\
-		\hline
-		\centering TU04 & \makecell[c]{proof{\_}of{\_}concept/webapp/webapp/src/test/java/com/webapp/\\data/mongodb/DetectionCustomRepositoryImplTest/\\DetectionCustomRepositoryImplTest.java:getLatLngsTest()}\\
-		\hline
-		\rowcolor{white}
-		\caption{\textbf{Tracciamento dei test di unità - Spring}}
-	\end{longtable}
-	
-\end{center}
-
-
-\begin{center}
-	\renewcommand{\arraystretch}{1.4}
-	\begin{longtable}{|p{1.5cm}|p{15cm}|}
-		\hline
-		\rowcolor{airforceblue}
-		\multicolumn{2}{|c|}{\textbf{Tracciamento test di unità Python}} \\
-		\hline
-		\rowcolor{airforceblue}
-		\makecell[c]{\textbf{Id Test}} & \makecell[c]{\textbf{Metodo}} \\
-		\hline
-		\hline
-		\centering TU05	& \makecell[c]{acquisition/main/test/test{\_}weather{\_}forecast.py:test{\_}response}\\
-		\hline
-		\centering TU06 & \makecell[c]{acquisition/main/test/test{\_}detect.py:test{\_}fetch{\_}read{\_}m3u8}\\
-		\hline
-		\centering TU07 & \makecell[c]{acquisition/main/test/test{\_}detect.py:test{\_}extract{\_}frame{\_}from{\_}video{\_}url}\\
+		\centering TU03 & \makecell[c]{acquisition/main/test/test{\_}detect.py} & \makecell[c]{test{\_}extract{\_}frame{\_}from{\_}video{\_}url}\\
 		\hline
 		\rowcolor{white}
 		\caption{\textbf{Tracciamento dei test di unità - Python}}
 	\end{longtable}
-	
+\end{center}
+
+\begin{center}
+	\renewcommand{\arraystretch}{1.4}
+	\begin{longtable}{|p{1.5cm}|p{11.5cm}|p{3.5cm}|}
+		\hline
+		\rowcolor{airforceblue}
+		\multicolumn{3}{|c|}{\textbf{Tracciamento test di unità Spring}} \\
+		\hline
+		\rowcolor{airforceblue}
+		\makecell[c]{\textbf{Id Test}} & \makecell[c]{\textbf{Percorso file}} & \makecell[c]{\textbf{Metodo}} \\
+		\hline
+		\centering TU04	& \makecell[c]{proof{\_}of{\_}concept/webapp/webapp/src/test/java/com/webapp/\\data/mongodb/DetectionCustomRepositoryImplTest/\\DetectionCustomRepositoryImplTest.java} & \makecell[c]{getCitiesTest()}\\
+		\hline
+		\centering TU05 & \makecell[c]{proof{\_}of{\_}concept/webapp/webapp/src/test/java/com/webapp/\\data/mongodb/DetectionCustomRepositoryImplTest/\\DetectionCustomRepositoryImplTest.java} & \makecell[c]{getLastValueTest()}\\
+		\hline
+		\centering TU06 & \makecell[c]{proof{\_}of{\_}concept/webapp/webapp/src/test/java/com/webapp/\\data/mongodb/DetectionCustomRepositoryImplTest/\\DetectionCustomRepositoryImplTest.java} & \makecell[c]{getDataRTTest()}\\
+		\hline
+		\centering TU07 & \makecell[c]{proof{\_}of{\_}concept/webapp/webapp/src/test/java/com/webapp/\\data/mongodb/DetectionCustomRepositoryImplTest/\\DetectionCustomRepositoryImplTest.java} & \makecell[c]{getLatLngsTest()}\\
+		\hline
+		\rowcolor{white}
+		\caption{\textbf{Tracciamento dei test di unità - Spring}}
+	\end{longtable}	
+\end{center}
+
+\begin{center}
+	\renewcommand{\arraystretch}{1.4}
+	\begin{longtable}{|p{1.5cm}|p{11.5cm}|p{3.5cm}|}
+		\hline
+		\rowcolor{airforceblue}
+		\multicolumn{3}{|c|}{\textbf{Tracciamento test di unità Vue.js}} \\
+		\hline
+		\rowcolor{airforceblue}
+		\makecell[c]{\textbf{Id Test}} & \makecell[c]{\textbf{Percorso file}} & \makecell[c]{\textbf{Metodo}} \\
+		\hline
+		\centering TU08 & \makecell[c]{proof{\_}of{\_}concept/webapp/vue-js-client-crud/src/tests/unit/\\appTest.spec.js} & \makecell[c]{}\\
+		\hline
+		\rowcolor{white}
+		\caption{\textbf{Tracciamento dei test di unità - Vue.js}}
+	\end{longtable}	
 \end{center}
 
 \section{Test di integrazione}\label{SpecificaDeiTestTestDiIntegrazione}
@@ -187,7 +259,7 @@ Sono stati individuati i seguenti test di integrazione per garantire il funziona
 			\hline
 			\centering \textit{TI02} & Verifica che il sistema invii i dati ottenuti dal modulo contapersone al database in modo corretto & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
 			\hline
-			\centering \textit{TI03} &  Verifica che il sistema invii i dati ottenuti dal modulo di machine learning al database in modo corretto &\makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\centering \textit{TI03} &  Verifica che il sistema invii i dati ottenuti dal modulo di machine learning$_{\scaleto{G}{3pt}}$ al database in modo corretto &\makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
 			\hline
 			\centering \textit{TI04} &  Verifica che il sistema invii i dati presenti nel  database alla web application in modo corretto &\makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
 			\hline
@@ -238,7 +310,7 @@ Sono stati individuati i seguenti test di sistema per garantire il funzionamento
 			\hline
 			\textit{TSRSFO15} & Verifica che il sistema aggiorni la mappa automaticamente ogni 10 minuti & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
 			\hline
-			\textit{TSRSFO16} & Verifica che il modello di machine learning salvi i pesi e le predizioni in un file & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\textit{TSRSFO16} & Verifica che il modello di machine learning$_{\scaleto{G}{3pt}}$ salvi i pesi e le predizioni in un file & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
 			\hline
 			\textit{TSRSFO17} & Verifica che venga inviato un messaggio di errore al front end , dal backend, se non ci sono i dati richiesti & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
 			\hline

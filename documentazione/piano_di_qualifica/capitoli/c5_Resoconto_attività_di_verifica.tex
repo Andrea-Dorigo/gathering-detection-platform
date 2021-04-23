@@ -242,7 +242,7 @@ Il numero di requisiti$_{\scaleto{G}{3pt}}$ e la loro suddivisione in implementa
 		\begin{longtable}[c]{|p{4cm}|p{3cm}|}
 			\hline
 			\rowcolor{airforceblue}
-			\textbf{Realizzazione} & \textbf{Quantità}\\
+			\makecell[c]{\textbf{Realizzazione}} & \makecell[c]{\textbf{Quantità}}\\
 			\hline
 			\textit{Implementato} & \makecell[c]{45}\\
 			\hline
@@ -269,7 +269,7 @@ Il numero di requisiti$_{\scaleto{G}{3pt}}$ \textit{funzionali} e la loro suddiv
 		\begin{longtable}[c]{|p{4cm}|p{3cm}|}
 			\hline
 			\rowcolor{airforceblue}
-			\textbf{Realizzazione} & \textbf{Quantità}\\
+			\makecell[c]{\textbf{Realizzazione}} & \makecell[c]{\textbf{Quantità}}\\
 			\hline
 			\textit{Implementato} & \makecell[c]{35}\\
 			\hline
@@ -284,9 +284,58 @@ Effettuando il calcolo di questa metrica otteniamo una percentuale di totalità 
 
 \subsubsection{MQPD03}\label{ResocontoAttivitàDiVerificaRevisioneDiQualificaVerificheDiProcessoMQPD03}
 
+Il gruppo ha iniziato a svolgere i primi test di unità dei differenti moduli sviluppati. Di seguito è presente una tabella che indica il numero dei test eseguiti, i test che passano e i test che generano errori.\\
+\textit{Nel caso in cui il gruppo riesca a trovare un'implementazione dei test di unità del modulo legato al machine learning$_{\scaleto{G}{3pt}}$, la metrica verrà aggiornata nella fase successiva}
+
+\quad
+\def\tabularxcolumn#1{m{#1}}
+{\rowcolors{2}{RawSienna!90!RawSienna!20}{RawSienna!70!RawSienna!40}
+	\begin{center}
+		\renewcommand{\arraystretch}{1.4}
+		\begin{longtable}[c]{|p{3cm}|p{3cm}|p{3cm}|p{4cm}|}
+			\hline
+			\rowcolor{airforceblue}
+			\makecell[c]{\textbf{Modulo}} & \makecell[c]{\textbf{Test totali}} & \makecell[c]{\textbf{Test passati}} & \makecell[c]{\textbf{Test non passati}} \\
+			\hline
+			\textit{Acquisizione} & \makecell[c]{3} & \makecell[c]{3} & \makecell[c]{0} \\
+			\hline
+			\textit{Back-end} & \makecell[c]{21} & \makecell[c]{18} & \makecell[c]{3}\\
+			\hline
+			\textit{Front-end} & \makecell[c]{4} & \makecell[c]{4} & \makecell[c]{0} \\
+			\hline
+		\end{longtable}
+		\captionof{table}{\textbf{Tabella dei test di unità effettuati}}
+	\end{center}
+
+Di seguito è presente una tabella che indica il valore di questa metrica per ogni modulo sviluppato ed infine il valore somma di ogni modulo. L'unico modulo ancora non testato è quello di predizione, legato al machine learning$_G$, in quanto varia ad ogni esecuzione.
+
+\quad
+\def\tabularxcolumn#1{m{#1}}
+{\rowcolors{2}{RawSienna!90!RawSienna!20}{RawSienna!70!RawSienna!40}
+	\begin{center}
+		\renewcommand{\arraystretch}{1.4}
+		\begin{longtable}[c]{|p{4cm}|p{4cm}|}
+			\hline
+			\rowcolor{airforceblue}
+			\makecell[c]{\textbf{Modulo}} & \makecell[c]{\textbf{Valore metrica}}\\
+			\hline
+			\textit{Acquisizione} & \makecell[c]{0\%} \\
+			\hline
+			\textit{Back-end} &  \makecell[c]{14\%}\\
+			\hline
+			\textit{Front-end} & \makecell[c]{0\%} \\
+			\hline
+			\textit{Totale} & \makecell[c]{11\%}\\
+			\hline
+		\end{longtable}
+		\captionof{table}{\textbf{MQPD03}}
+	\end{center}
+
+Il valore totale di questa metrica risulta non accettabile in quanto superiore al 10\%. Il gruppo si propone di raggiungere il valore accettabile riducendo i test con errore presenti.
+
 \subsubsection{MQPD04}\label{ResocontoAttivitàDiVerificaRevisioneDiQualificaVerificheDiProcessoMQPD04}
 
-Il calcolo di questa metrica non è possibile automatizzarlo in quanto è relativo al numero di persone contate dal software contapersone. Il controllo e il calcolo della metrica avvengono in intervalli di tempo periodici programmati. La media ottenuta è pari al MEDIA DA CHIEDERE A DORIGO.
+Il calcolo di questa metrica non è possibile automatizzarlo in quanto è relativo al numero di persone contate dal software contapersone. Il controllo e il calcolo della metrica avvengono in intervalli di tempo periodici programmati. La media ottenuta è circa pari al 75\%.
 
 \subsubsection{MQPD05}\label{ResocontoAttivitàDiVerificaRevisioneDiQualificaVerificheDiProcessoMQPD05}
 
@@ -297,10 +346,10 @@ Essendo questa metrica legata alla comprensione del codice, il gruppo ha deciso 
 {\rowcolors{2}{RawSienna!90!RawSienna!20}{RawSienna!70!RawSienna!40}
 	\begin{center}
 	\renewcommand{\arraystretch}{1.4}
-	\begin{longtable}[c]{|p{3cm}|p{3cm}|}
+	\begin{longtable}[c]{|p{4cm}|p{4cm}|}
 			\hline
 			\rowcolor{airforceblue}
-			\textbf{Modulo} & \textbf{Valore metrica}\\
+			\makecell[c]{\textbf{Modulo}} & \makecell[c]{\textbf{Valore metrica}}\\
 			\hline
 			\textit{Acquisizione} & \makecell[c]{27\%} \\
 			\hline
@@ -330,7 +379,7 @@ Di seguito è presente la tabella che indica il numero di volte che ogni modulo 
 		\begin{longtable}[c]{|p{3cm}|p{5cm}|p{5cm}|}
 			\hline
 			\rowcolor{airforceblue}
-			\textbf{Modulo} & \textbf{Numero di chiamate} & \textbf{Modulo chiamante}\\
+			\makecell[c]{\textbf{Modulo}} & \makecell[c]{\textbf{Numero di chiamate}} & \makecell[c]{\textbf{Modulo chiamante}}\\
 			\hline
 			\textit{Acquisizione} & \makecell[c]{0} & \makecell[c]{-}\\
 			\hline
