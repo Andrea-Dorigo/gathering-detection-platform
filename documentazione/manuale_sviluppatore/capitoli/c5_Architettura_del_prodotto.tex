@@ -79,8 +79,10 @@ Nel modulo Prediction vengono utilizzate le librerie esterne Pandas$_{\scaleto{G
 
 
 \section{Architettura modulo Web-app}\label{ArchitetturaModuloWebApp}
+Il modulo della web-app$_{\scaleto{G}{3pt}}$, come descritto in precedenza, è diviso in due sotto-moduli rispettivamente per il back-end$_{\scaleto{G}{3pt}}$ e front-end$_{\scaleto{G}{3pt}}$.
+Il front-end è stato sviluppato seguendo le \textit{best practices} definite dalla documentazione di Vue.js e data la nostra poca conoscenza di questo linguaggio di programmmazione non è stato possibile definire un pattern strutturale per il modulo sviluppato. 
 \subsection{Diagrammi dei package}\label{ArchitetturaModuloWebAppDiagrammiDeiPackage}
-Il modulo della web-app$_{\scaleto{G}{3pt}}$, come descritto in precedenza, è diviso in due sotto-moduli rispettivamente per il back-end$_{\scaleto{G}{3pt}}$ e front-end$_{\scaleto{G}{3pt}}$. Di seguito vengono visualizzate le dipendenze dei due sotto-moduli, per il back-end$_{\scaleto{G}{3pt}}$ è solo necessaria la libreria del framework$_{\scaleto{G}{3pt}}$ Spring$_{\scaleto{G}{3pt}}$, mentre per il front-end$_{\scaleto{G}{3pt}}$ sono necessarie varie librerie per ogni componente della web-app$_{\scaleto{G}{3pt}}$.
+Di seguito vengono visualizzate le dipendenze dei due sotto-moduli, per il back-end$_{\scaleto{G}{3pt}}$ è solo necessaria la libreria del framework$_{\scaleto{G}{3pt}}$ Spring$_{\scaleto{G}{3pt}}$, mentre per il front-end$_{\scaleto{G}{3pt}}$ sono necessarie varie librerie per ogni componente della web-app$_{\scaleto{G}{3pt}}$.
 \begin{figure}[H]
   \begin{center}
     \includegraphics[scale=0.8]{../immagini/diag_PB/diag_pack_spring.png}
