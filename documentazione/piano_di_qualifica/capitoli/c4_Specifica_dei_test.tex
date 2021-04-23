@@ -146,7 +146,7 @@ Sono stati individuati i seguenti test di unità per garantire il funzionamento 
 		\hline
 		\centering \textit{TU15} & Verifica che il tag di input della componente "autocompleteSearch.vue" sia vuoto & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}} \\
 		\hline
-		\centering \textit{TU16} & Verifica che il tag di input della componente "autocompleteSearch.vue" non sia vuoto dopo che l'utente interagisce scrivendo & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}} \\
+		\centering \textit{TU16} & Verifica che il tag di input della componente "autocompleteSearch.vue" non sia vuoto dopo che l'utente ha interagito scrivendo & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}} \\
 		\hline
 		\centering \textit{TU17} & Verifica che il metodo "getNameCity" presente nel file "autocompleteSearch.vue" esista & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}} \\
 		\hline
@@ -236,7 +236,50 @@ Sono stati individuati i seguenti test di unità per garantire il funzionamento 
 		\rowcolor{airforceblue}
 		\makecell[c]{\textbf{Id Test}} & \makecell[c]{\textbf{Percorso file}} & \makecell[c]{\textbf{Metodo}} \\
 		\hline
-		\centering TU08 & \makecell[c]{proof{\_}of{\_}concept/webapp/vue-js-client-crud/src/tests/unit/\\appTest.spec.js} & \makecell[c]{}\\
+		\centering TU08 & \makecell[c]{proof{\_}of{\_}concept/webapp/vue-js-client-crud/src/tests/unit/\\appTest.spec.js} & 
+		aboutUs:check if exist\\
+		\hline
+		\centering TU09 & \makecell[c]{proof{\_}of{\_}concept/webapp/vue-js-client-crud/src/tests/unit/\\appTest.spec.js} & httpcommon:check if exist\\
+		\hline
+		\centering TU010 & \makecell[c]{proof{\_}of{\_}concept/webapp/vue-js-client-crud/src/tests/unit/\\appTest.spec.js} & httpRequest:check if getCities work\\
+		\hline
+		\centering TU011 & \makecell[c]{proof{\_}of{\_}concept/webapp/vue-js-client-crud/src/tests/unit/\\appTest.spec.js} & httpRequest:check if getCoo work\\
+		\hline
+		\centering TU012 & \makecell[c]{proof{\_}of{\_}concept/webapp/vue-js-client-crud/src/tests/unit/\\appTest.spec.js} & httpRequest:check if getDataRT work\\
+		\hline
+		\centering TU013 & \makecell[c]{proof{\_}of{\_}concept/webapp/vue-js-client-crud/src/tests/unit/\\appTest.spec.js} & httpRequest:check if getLastValue work\\
+		\hline
+		\centering TU014 & \makecell[c]{proof{\_}of{\_}concept/webapp/vue-js-client-crud/src/tests/unit/\\appTest.spec.js} & {autocompleteSearch: check if exist}\\
+		\hline
+		\centering TU015 & \makecell[c]{proof{\_}of{\_}concept/webapp/vue-js-client-crud/src/tests/unit/\\appTest.spec.js} & {autocompleteSearch: check if search bar is empty}\\
+		\hline
+		\centering TU016 & \makecell[c]{proof{\_}of{\_}concept/webapp/vue-js-client-crud/src/tests/unit/\\appTest.spec.js} & {autocompleteSearch: user should have written something}\\
+		\hline
+		\centering TU017 & \makecell[c]{proof{\_}of{\_}concept/webapp/vue-js-client-crud/src/tests/unit/\\appTest.spec.js} & {autocompleteSearch: check if the get work}\\
+		\hline
+		\centering TU018 & \makecell[c]{proof{\_}of{\_}concept/webapp/vue-js-client-crud/src/tests/unit/\\appTest.spec.js} & {autocompleteSearch: check if the get is called}\\
+		\hline
+		\centering TU019 & \makecell[c]{proof{\_}of{\_}concept/webapp/vue-js-client-crud/src/tests/unit/\\appTest.spec.js} & {autocompleteSearch: check if the itemSelected work}\\
+		\hline
+		\centering TU020 & \makecell[c]{proof{\_}of{\_}concept/webapp/vue-js-client-crud/src/tests/unit/\\appTest.spec.js} & {datePicker:check if exist}\\
+		\hline
+		\centering TU021 & \makecell[c]{proof{\_}of{\_}concept/webapp/vue-js-client-crud/src/tests/unit/\\appTest.spec.js} & \makecell[c]{slider:check if exist}\\
+		\hline
+		\centering TU022 & \makecell[c]{proof{\_}of{\_}concept/webapp/vue-js-client-crud/src/tests/unit/\\appTest.spec.js} & {slider: the get should work}\\
+		\hline
+		\centering TU023 & \makecell[c]{proof{\_}of{\_}concept/webapp/vue-js-client-crud/src/tests/unit/\\appTest.spec.js} & \makecell[c]{App:check if exist}\\
+		\hline
+		\centering TU024 & \makecell[c]{proof{\_}of{\_}concept/webapp/vue-js-client-crud/src/tests/unit/\\appTest.spec.js} & {listCity:check if exist}\\
+		\hline
+		\centering TU025 & \makecell[c]{proof{\_}of{\_}concept/webapp/vue-js-client-crud/src/tests/unit/\\appTest.spec.js} & {heatMap:check if exist}\\
+		\hline
+		\centering TU026 & \makecell[c]{proof{\_}of{\_}concept/webapp/vue-js-client-crud/src/tests/unit/\\appTest.spec.js} & {vue2LeafletHeatmap :check if exist}\\
+		\hline
+		\centering TU027 & \makecell[c]{proof{\_}of{\_}concept/webapp/vue-js-client-crud/src/tests/unit/\\appTest.spec.js} & {mainPage:check if exist}\\
+		\hline
+		\centering TU028 & \makecell[c]{proof{\_}of{\_}concept/webapp/vue-js-client-crud/src/tests/unit/\\appTest.spec.js} & {mainPage:check if getRetrieveCoordinate is called}\\
+		\hline
+		\centering TU029 & \makecell[c]{proof{\_}of{\_}concept/webapp/vue-js-client-crud/src/tests/unit/\\appTest.spec.js} & mainPage:check if component heatmap exixst\\
 		\hline
 		\rowcolor{white}
 		\caption{\textbf{Tracciamento dei test di unità - Vue.js}}
