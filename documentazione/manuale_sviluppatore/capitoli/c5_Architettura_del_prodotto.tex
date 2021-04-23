@@ -69,6 +69,7 @@ Nel modulo Prediction vengono utilizzate le librerie esterne Pandas$_{\scaleto{G
 \end{figure}
 
 \subsection{Diagramma di attività}\label{ArchitetturaDelProdottoArchitetturaModuloPredictionDiagrammaDiAttività}
+Il diagramma dell'attività del modulo Prediction descrive le operazioni eseguite dal programma per generare le predizioni della zona presa in esame. Il programma legge dal file \textit{webcams.json} la lista di zone di cui bisogna effettuare le predizioni. Utilizzando le zone si prelevano i dati reali elaborati dal modulo Acquisition dal database, una volta ottenuti si controllano e vengono eliminati i dati ritenuti difettosi. Viene creato un dataset con i valori riferiti alle predizioni nel quale verranno inseriti i risultati del modello machine learning. Successivamente viene definito un modello utilizzando il tipo di regressione \textit{Random Forest Regression} e viene allenato con i valori prelevati dal database. Infine si utilizza il dataset creato precedentemente per ricavare le predizioni usando il modello allenato, a questo punto si archivia il dataset con i risultati del modello nel database.
 \begin{figure}[H]
   \begin{center}
     \includegraphics[scale=0.6]{../immagini/diag_PB/prediction_activity.png}
