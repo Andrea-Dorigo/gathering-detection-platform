@@ -485,8 +485,8 @@ I diagrammi di dei casi d'uso descrivono le funzionalità del sistema attraverso
 Gli elementi contenuti all'interno di un diagramma in base alle funzionalità che devono essere rappresentate, le seguenti relazioni:
 \begin{itemize}
 \item \textbf{Associazione:} è la comunicazione diretta tra attore ed use case. Rappresenta la partecipazione dell'attore al caso d'uso a cui è collegato. Un'associazione viene rappresentata mediante una linea che collega l'attore al caso d'uso;
-\item \textbf{Inclusione:} L'inclusione è un legame diretto stretto tra due use case. Dati due casi d'uso A e B, si dice che A include B se ogni istanza di A esegue B. B è incluso nell'esecuzione di A e la responsabilità di esecuzione di B è unicamente di A. Un inclusione viene rappresentata con una freccia tratteggiata, che collega i casi d'uso coinvolti, in direzione del caso d'uso incluso;
-\item \textbf{Estensione:} L'estensione aumenta le funzionalità di uno use case. Dati due casi d'uso A e B, si dice che B estende A se A esegue B solo a determinate condizioni. L'esecuzione di B interrompe A e per questo motivo viene utilizzata prevalentemente per gestire errori ed eccezzioni. Un estensione viene rappresentata con una freccia tratteggiata, che collega i casi d'uso coinvolti, dal caso d'uso che estende a quello che viene esteso, e un quadrato con l'angolo in alto a destra piegato, contenente le condizioni necessarie per il verificarsi dell'estensione e il nome della stessa;
+\item \textbf{Inclusione:} L'inclusione è un legame diretto stretto tra due use case. Dati due casi d'uso A e B, si dice che A include B se ogni istanza di A esegue B. B è incluso nell'esecuzione di A e la responsabilità di esecuzione di B è unicamente di A. Un'inclusione viene rappresentata con una freccia tratteggiata, che collega i casi d'uso coinvolti, in direzione del caso d'uso incluso;
+\item \textbf{Estensione:} L'estensione aumenta le funzionalità di uno use case. Dati due casi d'uso A e B, si dice che B estende A se A esegue B solo a determinate condizioni. L'esecuzione di B interrompe A e per questo motivo viene utilizzata prevalentemente per gestire errori ed eccezzioni. Un'estensione viene rappresentata con una freccia tratteggiata, che collega i casi d'uso coinvolti, dal caso d'uso che estende a quello che viene esteso, e un quadrato con l'angolo in alto a destra piegato, contenente le condizioni necessarie per il verificarsi dell'estensione e il nome della stessa;
 \item \textbf{Generalizzazione:} La generalizzazione è un legame tra attori o più raramente tra use case. Dati due casi d'uso A e B, A è generalizzata di B se condivide almeno le funzionalità di A. B può modificare le funzionalità di A, mentre tutte le funzionalità non ridefinite si mantengono identiche a quelle di A. Le generalizzazioni vengono rappresentate con una freccia continua vuota dall'elemento figlio all'elemento padre.
 \end{itemize}
 
@@ -569,7 +569,7 @@ All'interno di questo paragrafo vengono elencate le norme da rispettare da ogni 
 \subsubsection{Python}\label{ProcessiPrimariCodificaPython}
 Si tratta di un linguaggio di programmazione definito "ad alto livello" rispetto alla maggior parte di essi.
 Si tratta di un linguaggio orientato ad oggetti, utile a sviluppare script, computazione numerica e sviluppare software.
-Nel progetto \textit{Gathering-Detection-Platform}, Python$_G$ è il linguaggio su cui si basa tutto il backend$_G$, compreso il modulo del machine-learning$_G$.
+Nel progetto \textit{Gathering-Detection-Platform}, Python$_G$ è il linguaggio su cui si basa il modulo Prediction e Acquisition.
 
 \begin{itemize}
 	\item versione utilizzata: 3.8.x;
@@ -578,7 +578,7 @@ Nel progetto \textit{Gathering-Detection-Platform}, Python$_G$ è il linguaggio 
 
 \subsubsection{Java}\label{ProcessiPrimariCodificaJava}
 Si tratta di una piattaforma che ha come caratteristica principale il fatto di rendere possibile scrittura ed esecuzione di applicazioni indipendenti dall'hardware di esecuzione.
-Il risultato è una virtualizzazione dalla piattaforma stessa, che rende così il linguaggio Java$_{\scaleto{G}{3pt}}$, e i relativi programmi, portabili su piattaforme hardware diverse.
+Il risultato è una virtualizzazione dalla piattaforma stessa, che rende così il linguaggio Java$_{\scaleto{G}{3pt}}$, e i relativi programmi, portabili su piattaforme hardware diverse. Questo linguaggio viene utilizzato per la codifica del applicativo con framework Spring$_{\scaleto{G}{3pt}}$ del modulo back-end$_{\scaleto{G}{3pt}}$ della web-app$_{\scaleto{G}{3pt}}$.
 
 \begin{itemize}
 	\item versione utilizzata: 11.x;
@@ -589,7 +589,7 @@ Il risultato è una virtualizzazione dalla piattaforma stessa, che rende così i
 HTML$_G$, acronimo di HyperText Markup Language, è un linguaggio di mark up per siti web.
 Era stato ideato per la formattazione e impaginazione di pagine ipertestuali sul web.
 Oggi giorno viene utilizzato soprattutto per gestire la separazione tra la struttura logica della pagina web e la sua rappresentazione, gestita dal CSS$_G$.
-Nel progetto questo linguaggio viene utilizzato per sviluppare la parte di web-app${\scaleto{G}{3pt}}$, interagendo con anche Java${\scaleto{G}{3pt}}$, CSS${\scaleto{G}{3pt}}$, Bootstrap$_G$ e Vue.js$_G$.
+Nel progetto questo linguaggio viene utilizzato per sviluppare la parte di web-app${\scaleto{G}{3pt}}$, interagendo con anche JavaScript${\scaleto{G}{3pt}}$, CSS${\scaleto{G}{3pt}}$, Bootstrap$_G$ e Vue.js$_G$.
 
 \subsubsection{CSS}\label{ProcessiPrimariCodificaCSS}
 Il CSS$_{\scaleto{G}{3pt}}$ è il principale linguaggio utilizzato per definire la formattazione dei siti e pagine web.
@@ -597,7 +597,7 @@ L'utilizzo del CSS${\scaleto{G}{3pt}}$ permette di separare i contenuti della pa
 Nel progetto viene utilizzato per formattare il layout estetico della web-app${\scaleto{G}{3pt}}$.
 
 \subsubsection{Vue.js}\label{ProcessiPrimariCodificaVue}
-È un framework JavaScript$_G$, configurato come Model-Control-View per la creazione di interfacce utente e applicazione single-page.
+È un framework JavaScript$_G$, utilizzato per la creazione di interfacce utente e applicazione single-page.
 Supporta molte funzionalità, anche avanzate, grazie ad una serie di librerie di supporto dedicate che sono ufficialmente mantenute.
 
 \begin{itemize}
@@ -637,7 +637,7 @@ Non prevede alcuna configurazione da parte dell'utente.
 \end{center}
 \subsubsection{LeafLet}\label{ProcessiPrimariStrumentiLeafLet}
 Utilizzato per la realizzazione delle Heat-map.
-Si tratta di un Open-Source basato su Javascript$_{\scaleto{G}{3pt}}$.
+Si tratta di una libreria Open-Source basato su Javascript$_{\scaleto{G}{3pt}}$.
 \begin{center}
 	\url{https://leafletjs.com/}
 \end{center}
@@ -647,7 +647,7 @@ Si tratta di un Open-Source basato su Javascript$_{\scaleto{G}{3pt}}$.
 		\url{https://maven.apache.org/}
 	\end{center}
 \subsubsection{PostMan}\label{ProcessiPrimariStrumentiPostMan}
-È un’applicazione che consente di costruire, testare e documentare API più velocemente. Nel nostro caso è stato utilizzato per testare la connessione con il database e la correttezza delle query.
+È un’applicazione che consente di costruire, testare e documentare API più velocemente. Nel nostro caso è stato utilizzato per testare la connessione e il funzionamento dei servizi creati nell'applicativo di Spring.
 \begin{center}
 	\url{https://www.postman.com/}
 \end{center}
@@ -657,7 +657,7 @@ Si tratta di un’applicazione web open-source$_{\scaleto{G}{3pt}}$ che ti perme
 	\url{https://jupyter.org/index.html/}
 \end{center}
 \subsubsection{Anaconda}\label{ProcessiPrimariStrumentiAnaconda}
-Ambiente di distribuzione Python$_{\scaleto{G}{3pt}}$ che raccoglie molti pacchetti open source$_{\scaleto{G}{3pt}}$ e facili da installare, il vantaggio di usare questo strumento è la semplicità con cui si può creare il proprio ambiente di sviluppo.
+Ambiente di distribuzione Python$_{\scaleto{G}{3pt}}$ che raccoglie molti pacchetti open source$_{\scaleto{G}{3pt}}$ e facili da installare, il vantaggio di usare questo strumento è la semplicità con cui si può creare il proprio ambiente di sviluppo virtuale.
 \begin{center}
 	\url{https://www.anaconda.com/}
 \end{center}
