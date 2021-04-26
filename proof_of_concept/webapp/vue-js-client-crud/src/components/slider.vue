@@ -166,10 +166,21 @@ export default {
         datePicker === dateNow
       ) {
         this.reloadMap();
-        console.log("qua entro?");
-        setInterval(() => this.refreshSlider(), 6000);
+        console.log("entro e dovrebbe cambiare");
+        console.log(globalTimeCheck);
+        console.log("date picker  "+datePicker);
+        console.log("date now  "+dateNow);
+        console.log("time picker  "+timeSlider);
+        console.log("time now  "+timeNow);
+        setInterval(() => this.refreshSlider(), 120000);
       } else {
-        setInterval(() => this.refreshSlider(), 6000);
+        console.log("entro e non dovrebbe cambiare");
+        console.log(globalTimeCheck);
+        console.log("date picker  "+datePicker);
+        console.log("date now  "+dateNow);
+        console.log("time picker  "+timeSlider);
+        console.log("time now  "+timeNow);
+        setInterval(() => this.refreshSlider(), 120000);
       }
     },
   },
