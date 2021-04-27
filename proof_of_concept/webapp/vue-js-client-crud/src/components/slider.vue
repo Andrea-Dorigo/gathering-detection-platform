@@ -161,17 +161,17 @@ export default {
       var timeSlider = this.getTime();
       if (timeSlider.length == 1) timeSlider = "0" + timeSlider;
       var datePicker = this.$root.$refs.datePicker_component.getDate();
+      datePicker = datePicker.split("T");
       var dateNow = new Date().toISOString().substr(0, 10);
-      dateNow = dateNow + "T" + timeNow;
       if (
         timeNow !== timeSlider &&
         globalTimeCheck === true &&
-        datePicker !== dateNow
+        datePicker[0] === dateNow
       ) {
         this.reloadMap();
         console.log("entro e dovrebbe cambiare");
         console.log(globalTimeCheck);
-        console.log("date picker  " + datePicker);
+        console.log("date picker  " + datePicker[0]);
         console.log("date now  " + dateNow);
         console.log("time picker  " + timeSlider);
         console.log("time now  " + timeNow);
@@ -179,7 +179,7 @@ export default {
       } else {
         console.log("entro e non dovrebbe cambiare");
         console.log(globalTimeCheck);
-        console.log("date picker  " + datePicker);
+        console.log("date picker  " + datePicker[0]);
         console.log("date now  " + dateNow);
         console.log("time picker  " + timeSlider);
         console.log("time now  " + timeNow);
