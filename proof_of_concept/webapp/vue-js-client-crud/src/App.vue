@@ -35,6 +35,9 @@
               <li>
                 <a href="https://www.synclab.it/" class="text-dark">Sync Lab</a>
               </li>
+              <li>
+                <a :href="pdfLink" download="download">Manuale Utente</a>
+              </li>
             </ul>
           </div>
           <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
@@ -65,6 +68,11 @@ import router from "./router.js";
 export default {
   name: "app",
   router: router,
+  data() {
+    return {
+      pdfLink: require("@/assets/manuale_utente.pdf"),
+    };
+  },
   components: {
     autosearch,
   },
