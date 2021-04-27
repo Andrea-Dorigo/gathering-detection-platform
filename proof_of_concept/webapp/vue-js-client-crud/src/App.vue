@@ -59,7 +59,6 @@
 </template>
 
 <script>
-
 import autosearch from "./components/autocompleteSearch.vue";
 import router from "./router.js";
 

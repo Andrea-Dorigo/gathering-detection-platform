@@ -133,11 +133,13 @@ export default {
   },
   methods: {
     callbackRange: function(val) {
+      console.log(globalCounter);
       if (globalCounter !== 0) {
         globalTimeCheck = false;
       } else {
         globalCounter = globalCounter + 1;
       }
+      console.log(globalTimeCheck);
       this.rangeValue = val;
       var date = this.$root.$refs.datePicker_component.getDate();
       this.$root.$refs.basicExample_component.retrieveCoordinate(date);
@@ -148,6 +150,7 @@ export default {
       this.slider.value = time;
       globalTimeCheck = true;
       globalCounter = 0;
+      console.log("sono nel reload");
       return time;
     },
     getTime: function() {
@@ -163,23 +166,23 @@ export default {
       if (
         timeNow !== timeSlider &&
         globalTimeCheck === true &&
-        datePicker === dateNow
+        datePicker !== dateNow
       ) {
         this.reloadMap();
         console.log("entro e dovrebbe cambiare");
         console.log(globalTimeCheck);
-        console.log("date picker  "+datePicker);
-        console.log("date now  "+dateNow);
-        console.log("time picker  "+timeSlider);
-        console.log("time now  "+timeNow);
+        console.log("date picker  " + datePicker);
+        console.log("date now  " + dateNow);
+        console.log("time picker  " + timeSlider);
+        console.log("time now  " + timeNow);
         setInterval(() => this.refreshSlider(), 120000);
       } else {
         console.log("entro e non dovrebbe cambiare");
         console.log(globalTimeCheck);
-        console.log("date picker  "+datePicker);
-        console.log("date now  "+dateNow);
-        console.log("time picker  "+timeSlider);
-        console.log("time now  "+timeNow);
+        console.log("date picker  " + datePicker);
+        console.log("date now  " + dateNow);
+        console.log("time picker  " + timeSlider);
+        console.log("time now  " + timeNow);
         setInterval(() => this.refreshSlider(), 120000);
       }
     },
