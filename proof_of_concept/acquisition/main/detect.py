@@ -18,7 +18,15 @@ from get_frames import get_frames, extract_frame_from_video_url
 from cut_frame import cut_frames, cut_frame_in_six
 from yolo import detect
 
-connect("GDP-test", host = "localhost", port = 27017)
+from json import dumps
+from kafka import KafkaProducer
+
+producer = KafkaProducer(bootstrap_servers=['localhost:9092'],
+                         value_serializer=lambda x: 
+                         dumps(x).encode('utf-8')
+                         )
+
+
 logging.basicConfig(filename='test.log', level=logging.DEBUG)
 
 statement = True
@@ -30,19 +38,6 @@ PATH_FRAMES_PIECES= "../frames_pieces/"
 
 DETECTIONS_INTERVAL = 300
 
-class Detection(Document):
-    id_webcam = IntField(required=True)
-    city = StringField(required=True)
-    location = StringField(required=True)
-    latitude = FloatField(required=True)
-    longitude = FloatField(required=True)
-    numPeople = IntField(required=True)
-    date = DateTimeField(required=True)
-    time = DateTimeField(required=True)
-    type = IntField(required=True)
-    weather_description = StringField()
-    temperature = FloatField()
-    day_of_week = IntField()
 
 
 def fetch_read_m3u8(webcam_link, webcam_prefix):
@@ -119,22 +114,23 @@ def main():
                 persone_contate = persone_contate + detect(frame)
 
             print("Persone: " + str(persone_contate))
-
+            
+            data = { 'id_webcam': webcam["id_webcam"], 
+            		'city': webcam["city"], 
+            		'location': webcam["location"],
+            		'latitude': webcam["latitude"],
+            		'longitude': webcam["longitude"], 
+            		'numPeople': persone_contate, 
+            		'date': current_date.strftime('%Y-%m-%d %H:%M:%S.%f'), 
+            		'time': current_time.strftime('%Y-%m-%d %H:%M:%S.%f'), 
+            		'type': 0, 
+            		'weather_description': weather_description, 
+            		'temperature': temperature, 
+            		'day_of_week': datetime.now().date().weekday()}
+            producer.send('gdp', value=data)
+            print("ho fatto kafka")
                 # inserisci i risultati nel db
-            detection = Detection(
-                id_webcam = webcam["id_webcam"],
-                city = webcam["city"],
-                location = webcam["location"],
-                latitude = webcam["latitude"],
-                longitude = webcam["longitude"],
-                numPeople = persone_contate,
-                date = current_date,
-                time = current_time,
-                type = 0,
-                weather_description = weather_description,
-                temperature = temperature,
-                day_of_week =  datetime.now().date().weekday()
-                ).save()
+
 
         print("waiting for: " + str((t_end - datetime.now()).total_seconds()))
         time.sleep((t_end - datetime.now()).total_seconds())
