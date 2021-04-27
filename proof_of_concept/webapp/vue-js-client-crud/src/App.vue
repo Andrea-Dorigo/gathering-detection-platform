@@ -79,7 +79,11 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
+* {
+  box-sizing: border-box;
+}
+
 h1 {
   position: relative;
   text-align: center;
