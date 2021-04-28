@@ -67,13 +67,18 @@ sudo apt install python3-opencv python3-pip mongo maven npm
 \begin{lstlisting}
 pip3 install mongoengine
 \end{lstlisting}
-
+Per installare la dipendenza concernente a Kafka$_G$ si sono seguiti i passaggi presenti al seguente link:
+\begin{center}
+	\url{https://kafka.apache.org/quickstart}
+\end{center}
+Durante il suo processo di configurazione il nome del topic$_G$ da inserire è \textbf{gdp}.
 Una volta concluse queste operazioni con esito positivo, il programma potrà essere eseguito.
 
 \subsection{Inizializzazione modulo Acquisition}\label{RequisitiDiSistemaEdInstallazioneInstallazioneInizializzazioneModuloAcquisition}
 Per eseguire il modulo di acquisizione, in modo da iniziare a raccogliere i dati dalle webcam salvate, basterà posizionarsi all'interno della cartella \texttt{acquisition/main/}, e da terminale eseguire il comando:
 \begin{lstlisting}
 python3 detect.py
+python3 kafkaConsumer.py
 \end{lstlisting}
 Se i passi precedenti sono stati eseguiti correttamente, allora si visualizzeranno sul terminale i vari passaggi che svolge il modulo.
 
