@@ -33,24 +33,22 @@ Per fare ciò è sufficiente aprire il terminale all'interno della cartella \tex
 \begin{lstlisting}
   pip3 install mongoengine
 \end{lstlisting}
+Per installare la dipendenza concernente a Kafka$_G$ si sono seguiti i passaggi presenti al seguente link:
+\begin{centering}
+    \url{https://kafka.apache.org/quickstart}
+\end{centering}
 
+Durante il suo processo di configurazione il nome del topic$_G$ da inserire è \textbf{gdp}.
 Una volta concluse queste operazioni con esito positivo, il programma potrà essere eseguito.
 
 \section{Inizializzazione del modulo di acquisizione}\label{ProceduraDiInstallazioneInizializzazioneModuloAcquisition}
-Per eseguire il modulo di acquisizione, in modo da iniziare a raccogliere i dati dalle webcam salvate, basterà posizionarsi all'interno della cartella \texttt{acquisition/main/}, e da terminale eseguire il comando:
+Per eseguire il modulo di acquisizione, in modo da iniziare a raccogliere i dati dalle webcam salvate, basterà posizionarsi all'interno della cartella \texttt{acquisition/main/}, e da terminale eseguire i seguenti comandi:
 \begin{lstlisting}
     python3 detect.py
+    python3 kafkaConsumer.py
 \end{lstlisting}
 Se i passi precedenti sono stati eseguiti correttamente allora si visualizzeranno sul terminale i vari passaggi che svolge il modulo.
 
-\subsection{Aggiunta di una webcam}\label{ProceduraDiInstallazioneAggiuntaDiUnaWebcam}
-L'aggiunta di una nuova webcam al modulo di acquisizione è possibile attraverso dei pochi semplici passi:
-\begin{enumerate}
-	\item Trovare una webcam disponibile all'interno del sito \url{https://www.whatsupcams.com/};
-	\item Inserire il link all'interno del file \textit{webcams.json} seguendo lo schema prestabilito per impostare i parametri della webcam;
-	\item Salvare il file per ultimare l'aggiunta.
-\end{enumerate}
-Per una questione di codifica, il link della webcam dev'essere conforme a quelle già presenti, ovvero provenire da \url{https://www.whatsupcams.com/}.
 
 
 \section{Inizializzazione modulo Prediction}\label{ProceduraDiInstallazioneInizializzazioneModuloPrediction}

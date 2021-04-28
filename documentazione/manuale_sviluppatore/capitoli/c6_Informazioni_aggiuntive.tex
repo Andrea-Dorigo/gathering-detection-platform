@@ -1,0 +1,19 @@
+\chapter{Informazione aggiuntive}\label{InformazioniAggiuntive}
+
+\section{Aggiunta di una webcam}\label{InformazioniAggiuntiveAggiuntaDiUnaWebcam}
+L'aggiunta di una nuova webcam al \textit{modulo di acquisizione} è possibile attraverso dei pochi semplici passi:
+\begin{enumerate}
+	\item Trovare una webcam disponibile all'interno del sito \url{https://www.whatsupcams.com/};
+	\item Inserire il link all'interno del file \textit{webcams.json}, presente nella cartella \textit{acquisition} seguendo lo schema prestabilito per impostare i parametri della webcam;
+	\item Salvare il file per ultimare l'aggiunta.
+\end{enumerate}
+Per una questione di codifica, il link della webcam dev'essere conforme a quelle già presenti, ovvero provenire da \url{https://www.whatsupcams.com/}.
+
+\section{Tracciamento degli errori}\label{InformazioniAggiuntiveTracciamentoDegliErrori}
+Per tracciare gli errori è stato creato il file \textit{test.log}, presente nel percorso \textit{/acquisition/main/test/}, che tiene traccia delle eventuali eccezioni che si verificano all'interno del file \textit{detect.py}.
+In \textit{test.log} vengono rappresentati dei messaggi quali:
+\begin{itemize}
+  \item \textit{Debug}: rappresenta la richiesta effettuata all'\textit{API Weather Forecast} per prelevare le informazioni meteo;
+  \item \textit{INFO}: rappresenta il verificarsi di un'eccezione specificando data e ora di quest'ultima;
+  \item \textit{Error}: specifica il tipo di errore e in quale locazione si è verificato.
+\end{itemize}
