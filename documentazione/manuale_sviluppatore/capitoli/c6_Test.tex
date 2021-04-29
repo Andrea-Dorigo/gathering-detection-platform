@@ -12,8 +12,9 @@ Si può verificare la correttezza dei metodi eseguendo i programmi all'interno d
 Per testare il back-end dell'applicazione web sono presenti alcuni test di unità; si consiglia di utilizzare un IDE con la possibilità di eseguire test in Java direttamente dall'interfaccia grafica.
 Nel caso si preferisse utilizzare il terminale, è sufficiente posizionarsi all'interno della cartella \texttt{webapp/webapp/} ed eseguire il comando:
 \begin{lstlisting}
-  mvn test
+  mvn clean install
 \end{lstlisting}
+che eseguirà tutti i test necessari.
 Tali test vengono comunque eseguiti all'avvio del back-end dell'applicativo.
 
 \section{Test Front-end Webapp}\label{TestFrontendWebapp}
@@ -21,4 +22,4 @@ Per testare il frontend dell'applicazione basta posizionarsi all'interno della c
 \begin{lstlisting}
   npm run test:unit
 \end{lstlisting}
-che esguirà tutti i test riguardanti il front-end con Vue.
+che eseguirà tutti i test riguardanti il front-end con Vue.
