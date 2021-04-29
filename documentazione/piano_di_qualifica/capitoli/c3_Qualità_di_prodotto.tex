@@ -86,8 +86,28 @@ La correttezza ortografica della lingua italiana è verificata attraverso l’ap
 
 \section{Efficienza} \label{QualitàDelProdottoEfficienza}
 Si tratta della capacità di un prodotto software di realizzare le funzioni richieste nel minor tempo possibile e sfruttando al meglio le risorse necessarie, quando opera in determinate condizioni.
-\subsection{Valutazione sulla Caratteristica} \label{QualitàDelProdottoEfficienzaValutazioneSullaCaratteristica}
-\textit{I membri del gruppo non hanno valutato opportuno stabilire già delle metriche di qualità riguardo questa sezione in quanto il proponente$_G$ non ha ancora espresso requisiti$_{\scaleto{G}{3pt}}$ in termini di efficienza. Se ritenuto necessario, successivamente, dopo una conoscenza più approfondita della gestione delle risorse e dell’ambiente di rilascio del prodotto software, il gruppo si preoccuperà di integrare efficacemente la suddetta sezione.}
+% \subsection{Valutazione sulla Caratteristica} \label{QualitàDelProdottoEfficienzaValutazioneSullaCaratteristica}
+% \textit{I membri del gruppo non hanno valutato opportuno stabilire già delle metriche di qualità riguardo questa sezione in quanto il proponente$_G$ non ha ancora espresso requisiti$_{\scaleto{G}{3pt}}$ in termini di efficienza. Se ritenuto necessario, successivamente, dopo una conoscenza più approfondita della gestione delle risorse e dell’ambiente di rilascio del prodotto software, il gruppo si preoccuperà di integrare efficacemente la suddetta sezione.}
+\subsection{Metriche} \label{QualitàDelProdottoFunzionalitàMetriche}
+\subsubsection{MQPD02 Efficienza raggiunta} \label{QualitàDelProdottoFunzionalitàMetricheMQPD02}
+Indice riportante l'efficienza del prodotto software, rispetto ai requisiti$_G$ \textit{prestazionali} posti, mediante un valore in percentuale:
+\begin{center}
+	\textbf{T=($1-\frac{RnI}{RI}$)*100}
+\end{center}
+Dove:
+\begin{itemize}
+	\item \textbf{T} sta per \textit{Totalità}, riferito ai requisiti$_{\scaleto{G}{3pt}}$ \textit{prestazionali} da implementare;
+	\item \textbf{RnI} sta per \textit{Requisito prestazionale non Implementato};
+	\item \textbf{RI} sta per \textit{Requisito prestazionale Implementato}.
+\end{itemize}
+I range accettabili per il risultato di \textbf{T} sono così suddivisi:
+\begin{itemize}
+	\item 90\% $<$ \textbf{T} $\leq$ 100\% indica che la copertura dei requisiti$_{\scaleto{G}{3pt}}$ proposti è quasi totale;
+	\item 80\% $<$ \textbf{T} $\leq$ 80\% indica che la copertura dei requisiti$_{\scaleto{G}{3pt}}$ proposti è sufficiente, buona;
+	\item \textbf{T} $\leq$ 60\% indica che la copertura dei requisiti$_{\scaleto{G}{3pt}}$ proposti è insufficiente;
+	\item \textbf{Valore Preferibile:} 90\%;
+	\item \textbf{Valore  Accettabile:} $\geq$ 60\%.
+\end{itemize}
 
 \section{Portabilità} \label{QualitàDelProdottoPortabilità}
 La portabilità è definita come la capacità di un software nell’essere “trasportato” da un ambiente di lavoro, inteso sia come organizzativo che tecnologico,  ad un altro.
@@ -97,7 +117,7 @@ Il gruppo, dopo aver preso visione degli obbietti riguardanti questa caratterist
 Questo perché il prodotto software, essendo una web-app, dovrà essere capace di funzionare su qualsiasi piattaforma internet senza problemi.
 Inoltre si sta sviluppando e testando un Docker$_G$ in modo da poter rendere portabile il software anche su altri sistemi operativi.
 
-\section{Manutenibilità} \label{QualitàDelProdottoManutenibilità}
+\section{Mantenibilità} \label{QualitàDelProdottoManutenibilità}
 E' la capacità di un prodotto software di essere modificato. Le modifiche possono includere correzioni, adattamenti o miglioramenti del software.
 \subsection{Metriche}  \label{QualitàDelProdottoManutenibilitàMetriche}
 \subsubsection{MQPD05 Comprensione del codice}\label{QualitàDelProdottoManutenibilitàMetricheMQPD05}
@@ -118,7 +138,7 @@ Dove:
 \end{itemize}
 
 \subsubsection{MQPD06 Structural fan-in} \label{QualitàDelProdottoManutenibilitàMetricheMQPD06}
-Indice che misura il numero di moduli che utilizzano un dato modulo. Un elevato valore di tale indice significa un alto uso del modulo in questione. 
+Indice che misura il numero di moduli che utilizzano un dato modulo. Un elevato valore di tale indice significa un alto uso del modulo in questione.
 \begin{itemize}
 	\item \textbf{Valore Preferibile:} $\geq$ 1;
 	\item \textbf{Valore  Accettabile:} $\geq$ 0.
