@@ -1,12 +1,12 @@
-import Vue from 'vue'
-import App from './App.vue'
-import Trend from 'vuetrend'
-import router from './router'
+import Vue from "vue";
+import App from "./App.vue";
+import Trend from "vuetrend";
+import router from "./router.js";
 
-Vue.config.productionTip = false
-Vue.use(Trend)
+Vue.config.productionTip = false;
+Vue.use(Trend);
 
 new Vue({
-  router,
-  render: h => h(App),
-}).$mount('#app')
+  router : router,
+  render: (h) => h(App),
+}).$mount("#app");
