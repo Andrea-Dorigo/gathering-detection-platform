@@ -3,7 +3,7 @@
   File Name: autocompleteSearch.vue
   Author: Andrea Dorigo
   Creation Date: 2021-03-28
-  Summary: the file containes the code related to implementation of the heat map. 
+  Summary: the file containes the code related to implementation of the heat map.
   Last change date: 2021-03-31
 -->
 
@@ -77,8 +77,10 @@ export default {
       var modal = document.getElementById("myModal");
       Elements.getLastValue(city).then((res) => {
         var temp = res.data.time;
+
         if (new Date(date + ":00:00") <= new Date(temp.replace(" CEST", ""))) {
           var numPeople = 0;
+          console.log("DATE: " + date);
           Elements.getDataRT(city, date).then((res1) => {
             if (res1.data != 0) {
               this.visibility = true;
