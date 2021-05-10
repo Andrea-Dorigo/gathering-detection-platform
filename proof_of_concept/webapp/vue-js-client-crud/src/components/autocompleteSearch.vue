@@ -9,12 +9,26 @@
 
 <template>
   <div id="autosearch">
+    <div id="mymodalAutocompleteSearch" class="modal">
+      <div class="modal-content">
+        <span class="close" @click="closeModal">&times;</span>
+        <p>La città selezionata non è disponibile</p>
+        <button
+          type="button"
+          class="btn btn-outline-primary"
+          @click="closeModal"
+        >
+          OK
+        </button>
+      </div>
+    </div>
     <div id="noButton">
       <input
         type="text"
         placeholder="Cerca la città.."
         v-model="searchText"
         @keyup="retireveCities"
+        @keyup.enter="searchClicked"
         autocomplete="on"
       />
       <div class="suggestion_list" v-if="searchText.length">
@@ -30,7 +44,13 @@
         </ul>
       </div>
     </div>
-    <button class="btn btn-outline-primary" type="submit">Search</button>
+    <button
+      class="btn btn-outline-primary"
+      type="submit"
+      @click="searchClicked"
+    >
+      Search
+    </button>
   </div>
 </template>
 
@@ -66,8 +86,45 @@ export default {
     },
     itemSelected: function(index) {
       this.name = this.suggestiondata[index];
-      var date = new Date().toISOString().substr(0, 10);
-      Elements.getCoo(this.name).then((res) => {
+      this.$root.$refs.listCity_component.updateCity(this.name);
+      this.searchText = "";
+      this.updateMap(this.name);
+    },
+    getNameCity: function() {
+      return this.name;
+    },
+    updateCity: function(city) {
+      this.name = city;
+    },
+    searchClicked: function() {
+      var modal = document.getElementById("mymodalAutocompleteSearch");
+      Elements.getCities().then((res) => {
+        var place;
+        this.cit = res.data;
+        place = this.cit;
+        var present = false;
+        var i;
+        var city;
+        for (i = 0; i < place.length; i++) {
+          if (this.searchText.toLowerCase() === place[i].toLowerCase()) {
+            present = true;
+            city = place[i];
+          }
+        }
+        if (present === false) {
+          this.searchText = "";
+          modal.style.display = "block";
+        } else {
+          this.name = city;
+          this.$root.$refs.listCity_component.updateCity(this.name);
+          this.searchText = "";
+          this.updateMap(this.name);
+        }
+      });
+    },
+    updateMap: function(city) {
+      var date = this.$root.$refs.datePicker_component.getDate();
+      Elements.getCoo(city).then((res) => {
         this.latlngs = res.data;
         this.$root.$refs.LHeatmap_component.setHeatLayer(this.latlngs);
         this.$root.$refs.basicExample_component.setCenter(res.data[0]);
@@ -76,8 +133,9 @@ export default {
         this.$root.$refs.basicExample_component.retrieveCoordinate(date);
       });
     },
-    getNameCity: function() {
-      return this.name;
+    closeModal: function() {
+      var modal = document.getElementById("mymodalAutocompleteSearch");
+      modal.style.display = "none";
     },
   },
   created() {
@@ -116,6 +174,37 @@ export default {
   color: blue;
 }
 #autosearch ul li:hover {
+  cursor: pointer;
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
   cursor: pointer;
 }
 </style>

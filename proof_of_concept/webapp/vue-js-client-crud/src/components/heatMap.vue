@@ -74,6 +74,7 @@ export default {
   methods: {
     retrieveCoordinate: function(date) {
       var city = this.$root.$refs.autocompleteSearch_component.getNameCity();
+      console.log(city);
       var modal = document.getElementById("myModal");
       Elements.getLastValue(city).then((res) => {
         var temp = res.data.time;
