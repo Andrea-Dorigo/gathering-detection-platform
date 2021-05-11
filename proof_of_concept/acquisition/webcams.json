@@ -1,0 +1,44 @@
+{
+ "webcams":[
+    {
+      "link" : "https://cdn-002.whatsupcams.com/hls/it_roma02.m3u8",
+    	"id_webcam" : 1,
+      "city" : "Roma",
+    	"location" : "PiazzaNavona",
+    	"latitude" : 41.899139,
+    	"longitude" : 12.473311,
+      "split_frame_in" : 6,
+      "url_prefix" : "https://cdn-002.whatsupcams.com/hls/"
+    },
+    {
+      "link" : "https://cdn-004.whatsupcams.com/hls/hr_novska01.m3u8",
+      "id_webcam" : 2,
+      "city" : "Novska",
+      "location" : "GradNovska",
+      "latitude" : 45.3397,
+      "longitude" : 16.9787,
+      "split_frame_in" : 6,
+      "url_prefix" : "https://cdn-004.whatsupcams.com/hls/"
+    },
+    {
+      "link" : "https://cdn-004.whatsupcams.com/hls/hr_djakovo02.m3u8",
+      "id_webcam" : 3,
+      "city" : "Djakovo",
+      "location" : "DjakovoKorzo",
+      "latitude" : 45.309812,
+      "longitude" :  18.410428,
+      "split_frame_in" : 6,
+      "url_prefix" : "https://cdn-004.whatsupcams.com/hls/"
+    },
+    {
+      "link" : "https://cdn-001.whatsupcams.com/hls/hr_krk03.m3u8",
+      "id_webcam" : 4,
+      "city" : "Krk",
+      "location" : "VelaPlaca",
+      "latitude" : 45.026200,
+      "longitude" : 14.573700,
+      "split_frame_in" : 6,
+      "url_prefix" : "https://cdn-001.whatsupcams.com/hls/"
+    }
+  ]
+}

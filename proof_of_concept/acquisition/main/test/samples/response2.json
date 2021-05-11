@@ -1,0 +1,41 @@
+{
+  "coord": {
+    "lon": 12.4733,
+    "lat": 41.8991
+  },
+  "weather": [{
+    "id": 800,
+    "main": "Clear",
+    "description": "clear sky",
+    "icon": "01d"
+  }],
+  "base": "stations",
+  "main": {
+    "temp": 19.97,
+    "feels_like": 19.84,
+    "temp_min": 18,
+    "temp_max": 21.67,
+    "pressure": 1025,
+    "humidity": 55
+  },
+  "visibility": 10000,
+  "wind": {
+    "speed": 0.51,
+    "deg": 0
+  },
+  "clouds": {
+    "all": 0
+  },
+  "dt": 1617184186,
+  "sys": {
+    "type": 1,
+    "id": 6796,
+    "country": "IT",
+    "sunrise": 1617166465,
+    "sunset": 1617212026
+  },
+  "timezone": 7200,
+  "id": 6545151,
+  "name": "Pigna",
+  "cod": 200
+}

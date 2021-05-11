@@ -1,112 +1,118 @@
 \chapter{Qualità di processo}\label{QualitàDelProcesso}
-Per garantire un prodotto di qualità, che rispetti i costi ed i tempi stabiliti dal \textit{Piano di Progetto 1.0.0}, il nostro gruppo ha deciso di aderire allo standard ISO/IEC 15504$_G$, anche noto come SPICE (\textit{Software Process Improvement and Capability Determination}).
-Lo standard ISO/IEC 15504$_{\scaleto{G}{3pt}}$ garantisce la qualità di tutti i processi che compongono il prodotto attraverso una definizione chiara degli obiettivi di ognuno di essi e delle soglie prestabilite. 
+Per garantire un prodotto di qualità, che rispetti i costi ed i tempi stabiliti dal \textit{Piano di Progetto 2.0.0}, il nostro gruppo ha deciso di aderire allo standard ISO/IEC 15504$_G$, anche noto come SPICE (\textit{Software Process Improvement and Capability Determination}).
+Lo standard ISO/IEC 15504$_{\scaleto{G}{3pt}}$ garantisce la qualità di tutti i processi che compongono il prodotto attraverso una definizione chiara degli obiettivi di ognuno di essi e delle soglie prestabilite.
 Per una descrizione più dettagliata dello standard ISO/IEC 15504$_{\scaleto{G}{3pt}}$
-riferirsi al capitolo §6 nel documento \textit{Norme di Progetto 1.0.0}.
-\section{Processo di pianificazione}\label{QualitàDelProcessoProcessoDiPianificazione}
-La pianificazione è un’attività significativa della gestione di progetto. 
-Consiste nel governare le risorse a disposizione, ovvero tempi, costi e ruoli, monitorarle nel tempo e reagire efficacemente ai cambiamenti. 
+riferirsi al capitolo §6 nel documento \textit{Norme di Progetto 2.0.0}.
+\section{Processi di sviluppo}\label{QualitàDelProcessoProcessoDiPianificazione}
+La pianificazione è un’attività significativa della gestione di progetto.
+Consiste nel governare le risorse a disposizione, ovvero tempi, costi e ruoli, monitorarle nel tempo e reagire efficacemente ai cambiamenti.
 
-\subsection{Obiettivi}\label{QualitàDelProcessoProcessoDiPianificazioneObiettivi}
-Gli obiettivi relativi a questo processo sono:
-\begin{itemize}
-	\item avere a disposizioni piani ben definiti;
-	\item aver definito ruoli, responsabilità, obblighi e autorità a cui rispondere;
-	\item aver allocato le risorse ed i beni necessari;
-	\item attivare il piano per sostenere il progetto.
-\end{itemize}
-
-\subsection{Strategia}\label{QualitàDelProcessoProcessoDiPianificazioneStrategia}
-La strategia messa in atto per il raggiungimento di tali obiettivi consiste nei seguenti punti:
-\begin{itemize}
-	\item produrre la pianificazione delle attività$_{\scaleto{G}{3pt}}$;
-	\item mantenerla aggiornata mentre esse vengono svolte;
-	\item usarla come riferimento e supporto.
-\end{itemize}
-
-\subsection{Metriche}\label{QualitàDelProcessoProcessoDiPianificazioneMetriche}
+\section{Processi di supporto}\label{QualitàDelProcessoProcessiDiSupporto}
 Di seguito si presentano le metriche relative alla qualità dei processi, come stabilito nel
-documento \textit{Norme di Progetto 1.0.0}, indispensabili per ottenere gli obiettivi di qualità.
+documento \textit{Norme di Progetto 2.0.0}, indispensabili per ottenere gli obiettivi di qualità.
+\subsection{Pianificazione}\label{QualitàDelProcessoProcessiDiSupportoPianificazione}
+\subsubsection{Metriche}\label{MetricheProcessiDiSupporto}
 
-\subsubsection{MQPS01 Budget at Completion}\label{QualitàDelProcessoProcessoDiPianificazioneMetricheMQPS01}
-Quantità di budget totale allocato per il progetto.
-La misurazione viene effettuata tramite un numero intero.
 \begin{itemize}
-	\item \textbf{valore preferibile:} corrispondente al preventivo;
-	\item \textbf{valore accettabile:} il valore del preventivo con un errore massimo del 5\%, ossia:
+	\item[] \textbf{MQPS01 Budget at Completion} \\
+	Quantità di budget totale allocato per il progetto.
+	La misurazione viene effettuata tramite un numero intero.
+	\begin{itemize}
+		\item \textbf{valore preferibile:} corrispondente al preventivo;
+		\item \textbf{valore accettabile:} il valore del preventivo con un errore massimo del 5\%, ossia:
+		\begin{center}
+			\textit{preventivo -5\% $\leq$ BAC $\leq$ preventivo + 5\%}
+		\end{center}
+	\end{itemize}
+
+	\item[] \textbf{MQPS02 Planned value} \\
+	Si tratta del valore del lavoro pianificato al momento del calcolo.
+	La formula adottata è:
 	\begin{center}
-		\textit{preventivo -5\% $\leq$ BAC $\leq$ preventivo + 5\%}
+		\textbf{PV = BAC *\% di lavoro pianificato}
 	\end{center}
+	\begin{itemize}
+		\item \textbf{valore preferibile:} $>$ 0;
+		\item \textbf{valore accettabile:} $\geq$ 0.
+	\end{itemize}
+
+	\item[] \textbf{MQPS03 Actual cost} \\
+	Il denaro speso fino al momento del calcolo per lo svolgimento del progetto.
+	E’ necessario un monitoramento continuo per avere un Actual Cost al di sotto della soglia del Planned Value.
+	Il valore è dato da un numero intero.
+	\begin{itemize}
+		\item \textbf{valore preferibile:} 0 $\leq$ AC $<$ PV;
+		\item \textbf{valore accettabile:}  0 $\leq$ AC $\leq$  budget totale.
+	\end{itemize}
+
+	\item[] \textbf{MQPS04 Earned value} \\
+	Si tratta del valore del lavoro fatto fino al momento del calcolo.
+	La formula corrispondente è:
+	\begin{center}
+		\textbf{BAC * \% di lavoro completato}
+	\end{center}
+	\begin{itemize}
+		\item \textbf{valore preferibile:} $\geq$ PV;
+		\item \textbf{valore accettabile:} $\geq$ 0.
+	\end{itemize}
+
+	\item[] \textbf{MQPS05 Schedule Variance} \\
+	Indica lo stato di avanzamento nello svolgimento del progetto rispetto a quanto pianificato.
+	La formula adottata è:
+	\begin{center}
+		\textbf{SV = EV - PV}
+	\end{center}
+	\begin{itemize}
+		\item \textbf{valore preferibile:} $>$ 0;
+		\item \textbf{valore accettabile:} $\geq$ 0.
+	\end{itemize}
+	In base al risultato ottenuto:
+	\begin{itemize}
+		\item SV $>$ 0  indica che il gruppo è in anticipo rispetto alla pianificazione; in futuro,
+		le previsioni dovranno essere eseguite con più precisione e tenendo conto di questo
+		risultato;
+		\item SV = 0  indica che il gruppo è in linea con la pianificazione; i criteri adottati per
+		fare la pianificazione sono quindi efficaci, e dovranno essere usati anche per previsioni
+		future;
+		\item SV $<$ 0 indica che il gruppo è in ritardo rispetto alla pianificazione: è necessaria
+		una revisione delle pianificazioni da quel momento in poi, in modo da ridistribuire le
+		risorse ed evitare di accumulare ulteriori ritardi.
+	\end{itemize}
+
+	\item[] \textbf{MQPS06 Cost variance} \\
+	Indica la differenza tra il costo di lavoro effettivamente completato ed il costo attualmente sostenuto.
+	La formula adottata è:
+	\begin{center}
+		\textbf{CV = EV - AC}
+	\end{center}
+	\begin{itemize}
+		\item \textbf{valore preferibile:} $>$ 0;
+		\item \textbf{valore accettabile:} $\geq$ 0.
+	\end{itemize}
+	In base al risultato ottenuto:
+	\begin{itemize}
+		\item CV $>$ 0 indica che lo svolgimento del progetto si mantiene al di sotto del budget;
+		\item CV = 0 indica che il progetto è al pari con il budget;
+		\item CV $<$ 0 indica che il progetto è al di sopra del budget a disposizione, si devono correggere i metodi di lavoro.
+	\end{itemize}
+
 \end{itemize}
 
-\subsubsection{MQPS02 Planned value}\label{QualitàDelProcessoProcessoDiPianificazioneMetricheMQPS02}
-Si tratta del valore del lavoro pianificato al momento del calcolo.
-La formula adottata è:
-\begin{center}
-	\textbf{PV = BAC *\% di lavoro pianificato}
-\end{center}
+\section{Processi di sviluppo}\label{QualitàDelProcessoProcessiDiSviluppo}
+\subsection{Analisi dei requisiti}\label{ProcessiDiSviluppoAnalisiDeiRequisiti}
+\subsubsection{Metriche}\label{MetricheProcessiDiSviluppo}
 \begin{itemize}
-	\item \textbf{valore preferibile:} $>$ 0;
-	\item \textbf{valore accettabile:} $\geq$ 0.
-\end{itemize}
-
-\subsubsection{MQPS03 Actual cost}\label{QualitàDelProcessoProcessoDiPianificazioneMetrichePQPS03}
-Il denaro speso fino al momento del calcolo per lo svolgimento del progetto.
-E’ necessario un monitoramento continuo per avere un Actual Cost al di sotto della soglia del Planned Value. 
-Il valore è dato da un numero intero.
-\begin{itemize}
-	\item \textbf{valore preferibile:} 0 $\leq$ AC $<$ PV;
-	\item \textbf{valore accettabile:}  0 $\leq$ AC $\leq$  budget totale.
-\end{itemize}
-
-\subsubsection{MQPS04 Earned value}\label{QualitàDelProcessoProcessoDiPianificazioneMetricheMQPS04}
-Si tratta del valore del lavoro fatto fino al momento del calcolo.
-La formula corrispondente è:
-\begin{center}
-	\textbf{BAC * \% di lavoro completato}
-\end{center}
-\begin{itemize}
-	\item \textbf{valore preferibile:} $\geq$ PV;
-	\item \textbf{valore accettabile:} $\geq$ 0.
-\end{itemize}
-
-\subsubsection{MQPS05 Schedule Variance}\label{QualitàDelProcessoProcessoDiPianificazioneMetricheMQPS05}
-Indica lo stato di avanzamento nello svolgimento del progetto rispetto a quanto pianificato.
-La formula adottata è:
-\begin{center}
-	\textbf{SV = EV - PV}
-\end{center}
-\begin{itemize}
-	\item \textbf{valore preferibile:} $>$ 0;
-	\item \textbf{valore accettabile:} $\geq$ 0.
-\end{itemize}
-In base al risultato ottenuto:
-\begin{itemize}
-	\item SV $>$ 0  indica che il gruppo è in anticipo rispetto alla pianificazione; in futuro,
-	le previsioni dovranno essere eseguite con più precisione e tenendo conto di questo
-	risultato;
-	\item SV = 0  indica che il gruppo è in linea con la pianificazione; i criteri adottati per
-	fare la pianificazione sono quindi efficaci, e dovranno essere usati anche per previsioni
-	future;
-	\item SV $<$ 0 indica che il gruppo è in ritardo rispetto alla pianificazione: è necessaria
-	una revisione delle pianificazioni da quel momento in poi, in modo da ridistribuire le
-	risorse ed evitare di accumulare ulteriori ritardi.
-\end{itemize}
-
-\subsubsection{MQPS06 Cost variance}\label{QualitàDelProcessoProcessoDiPianificazioneMetricheMQPS06}
-
-Indica la differenza tra il costo di lavoro effettivamente completato ed il costo attualmente sostenuto.
-La formula adottata è:
-\begin{center}
-	\textbf{CV = EV - AC}
-\end{center}
-\begin{itemize}
-	\item \textbf{valore preferibile:} $>$ 0;
-	\item \textbf{valore accettabile:} $\geq$ 0.
-\end{itemize}
-In base al risultato ottenuto:
-\begin{itemize}
-	\item CV $>$ 0 indica che lo svolgimento del progetto si mantiene al di sotto del budget;
-	\item CV = 0 indica che il progetto è al pari con il budget;
-	\item CV $<$ 0 indica che il progetto è al di sopra del budget a disposizione, si devono correggere i metodi di lavoro.
+	\item[] \textbf{PROI: Percentuale Requisiti Obbligatori Implementati}
+	Indicatore, mediante percentuale, dei requisiti$_{\scaleto{G}{3pt}}$ obbligatori che sono stati implementati nel software.
+	\begin{center}
+		\textbf{PROI = $\frac{ROI}{ROT}$*100}
+	\end{center}
+	Dove:
+	\begin{itemize}
+		\item \textbf{ROI:} requisiti obbligatori implementati;
+		\item \textbf{ROT:} requisiti obbligatori totali.
+	\end{itemize}
+	I range accettabili per il risultato di \textbf{PROI} sono così suddivisi:
+	\item \textbf{valore preferibile:} 100\%;
+	\item \textbf{valore accettabile:} 100\%.
 \end{itemize}
