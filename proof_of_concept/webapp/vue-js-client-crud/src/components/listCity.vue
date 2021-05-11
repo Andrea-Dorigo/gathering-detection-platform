@@ -54,6 +54,7 @@ export default {
     itemSelected: function(index) {
       var date = this.$root.$refs.datePicker_component.getDate();
       this.name = this.suggestiondata[index];
+      this.$root.$refs.autocompleteSearch_component.updateCity(this.name);
       Elements.getCoo(this.name).then((res) => {
         this.latlngs = res.data;
         this.$root.$refs.LHeatmap_component.setHeatLayer(this.latlngs);
@@ -66,9 +67,12 @@ export default {
     getNameCity: function() {
       return this.name;
     },
+    updateCity: function(city) {
+      this.name = city;
+    },
   },
   created() {
-    this.$root.$refs.autocompleteSearch_component = this;
+    this.$root.$refs.listCity_component = this;
   },
   mounted() {
     this.retireveCities();

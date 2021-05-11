@@ -48,6 +48,7 @@ public class DetectionCustomRepositoryImpl implements DetectionCustomRepository 
             coo.add(lon.get(i));
             cooList.add(coo);
         }
+        System.out.println(cooList);
         return cooList;
     }
 
@@ -55,43 +56,55 @@ public class DetectionCustomRepositoryImpl implements DetectionCustomRepository 
         String temptime = startDate.substring(startDate.length() - 2);
         String tempDate = startDate.substring(0, startDate.length() - 2);
         int temp = Integer.valueOf(temptime);
-        temp = temp - 1;
+        temp = temp + 1;
         String t;
+        System.out.println("TEMPDATE1: ");
+        System.out.println(tempDate);
         if (temp < 10) {
             t = "0" + temp;
         } else {
             t = Integer.toString(temp);
         }
+
         tempDate = tempDate + t;
 
         Query query = new Query();
-        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH");
-        query.addCriteria(Criteria.where("date").lte(dateFormat.parseObject(startDate)));
-        query.addCriteria(Criteria.where("time").gte(dateFormat.parseObject(tempDate)));
+        startDate = startDate + ":00:00.000-0000";
+        tempDate = tempDate + ":00:00.000-0000";
+
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ");
+        query.addCriteria(Criteria.where("date").lte(dateFormat.parseObject(tempDate)));
+        query.addCriteria(Criteria.where("time").gte(dateFormat.parseObject(startDate)));
         query.addCriteria(Criteria.where("city").is(city));
         query.addCriteria(Criteria.where("type").is(0));
         query.with(Sort.by("time").descending());
         query.limit(1);
+
         List<Detection> numPeople = mongoTemplate.find(query, Detection.class, "detection");
         if (numPeople.isEmpty()) {
             Query query1 = new Query();
-            query1.addCriteria(Criteria.where("date").lte(dateFormat.parseObject(startDate)));
-            query1.addCriteria(Criteria.where("time").gte(dateFormat.parseObject(tempDate)));
+
+            query1.addCriteria(Criteria.where("date").lte(dateFormat.parseObject(tempDate)));
+            query1.addCriteria(Criteria.where("time").gte(dateFormat.parseObject(startDate)));
             query1.addCriteria(Criteria.where("city").is(city));
             query1.addCriteria(Criteria.where("type").is(1));
-            query1.with(Sort.by("time").descending());
+            query1.with(Sort.by("time").ascending());
             query1.limit(1);
+
             numPeople = mongoTemplate.find(query1, Detection.class, "detection");
         }
+
         return numPeople;
     }
 
     public Detection getLastValue(String city) throws Exception {
         Query query = new Query();
         query.addCriteria(Criteria.where("city").is(city));
+        // query.addCriteria(Criteria.where("type").is(0));
         query.limit(1);
         query.with(Sort.by("time").descending());
         Detection LastValue = mongoTemplate.find(query, Detection.class, "detection").get(0);
+
         return LastValue;
     }
 }
