@@ -69,17 +69,15 @@ export default {
       markerLatLng: [41.899139, 12.473311],
       message,
       visibility: true,
-      bgc: { backgroundColor: "" },
+      //bgc: { backgroundColor: "" },
     };
   },
   methods: {
     retrieveCoordinate: function(date) {
       var city = this.$root.$refs.autocompleteSearch_component.getNameCity();
-      console.log(city);
       var modal = document.getElementById("myModal");
       Elements.getLastValue(city).then((res) => {
         var temp = res.data.time;
-
         if (new Date(date + ":00:00") <= new Date(temp.replace(" CEST", ""))) {
           var numPeople = 0;
           console.log("DATE: " + date);
@@ -98,10 +96,12 @@ export default {
                 numPeople +
                 " persone";
               if (res1.data[0].type === 1) {
-                this.bgc.backgroundColor = "#06c8c2";
+                this.message = this.message + " [Dati predetti]";
+                //this.bgc.backgroundColor = "#06c8c2";
               }
               if (res1.data[0].type === 0) {
-                this.bgc.backgroundColor = "#FF9F9F";
+                this.message = this.message + " [Dati reali]";
+                //this.bgc.backgroundColor = "#FF9F9F";
               }
               this.latlngs = [res1.data[0].latitude, res1.data[0].longitude];
               var geoPoints = this.generateRandomPoints(

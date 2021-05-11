@@ -65,56 +65,46 @@ public class DetectionCustomRepositoryImpl implements DetectionCustomRepository 
         } else {
             t = Integer.toString(temp);
         }
-        System.out.println("T: ");
-        System.out.println(t);
+
         tempDate = tempDate + t;
-        System.out.println("TEMPTIME: ");
-        System.out.println(temptime);
-        System.out.println("TEMPDATE: ");
-        System.out.println(tempDate);
+
         Query query = new Query();
         startDate = startDate + ":00:00.000-0000";
         tempDate = tempDate + ":00:00.000-0000";
 
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ");
-        System.out.println(startDate);
-        System.out.println("AAAAAAAAAAAAAAA ");
-        System.out.println(dateFormat.parseObject(startDate));
         query.addCriteria(Criteria.where("date").lte(dateFormat.parseObject(tempDate)));
         query.addCriteria(Criteria.where("time").gte(dateFormat.parseObject(startDate)));
         query.addCriteria(Criteria.where("city").is(city));
         query.addCriteria(Criteria.where("type").is(0));
         query.with(Sort.by("time").descending());
         query.limit(1);
-        System.out.println(query);
+
         List<Detection> numPeople = mongoTemplate.find(query, Detection.class, "detection");
         if (numPeople.isEmpty()) {
             Query query1 = new Query();
-            System.out.println("numPeople MPTY");
+
             query1.addCriteria(Criteria.where("date").lte(dateFormat.parseObject(tempDate)));
             query1.addCriteria(Criteria.where("time").gte(dateFormat.parseObject(startDate)));
             query1.addCriteria(Criteria.where("city").is(city));
             query1.addCriteria(Criteria.where("type").is(1));
             query1.with(Sort.by("time").ascending());
             query1.limit(1);
-            System.out.println(query1);
+
             numPeople = mongoTemplate.find(query1, Detection.class, "detection");
         }
-        System.out.println("DATA RT (numPeople): ");
-        System.out.println(numPeople);
+
         return numPeople;
     }
 
     public Detection getLastValue(String city) throws Exception {
         Query query = new Query();
         query.addCriteria(Criteria.where("city").is(city));
-        query.addCriteria(Criteria.where("type").is(0));
-
+        // query.addCriteria(Criteria.where("type").is(0));
         query.limit(1);
         query.with(Sort.by("time").descending());
         Detection LastValue = mongoTemplate.find(query, Detection.class, "detection").get(0);
-        System.out.println("LAST VALUE: ");
-        System.out.println(LastValue);
+
         return LastValue;
     }
 }
