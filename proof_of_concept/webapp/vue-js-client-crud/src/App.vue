@@ -12,6 +12,9 @@
               <li class="nav-item">
                 <router-link to="/chiSiamo">Chi siamo</router-link>
               </li>
+              <li>
+                <a :href="pdfLink" download="download">Manuale Utente</a>
+              </li>
             </ul>
             <autosearch />
           </div>
@@ -34,9 +37,6 @@
             <ul class="list-unstyled mb-0">
               <li>
                 <a href="https://www.synclab.it/" class="text-dark">Sync Lab</a>
-              </li>
-              <li>
-                <a :href="pdfLink" download="download">Manuale Utente</a>
               </li>
             </ul>
           </div>
@@ -104,7 +104,7 @@ footer {
 }
 #noFooter {
   position: relative;
-  min-height: 100vh;
+  min-height: 70vh;
   padding-bottom: 10em;
   display: block;
   z-index: 0;
