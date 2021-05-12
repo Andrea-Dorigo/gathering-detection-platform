@@ -12,11 +12,12 @@ from datetime import datetime,timedelta
 from mongoengine import *
 import logging
 import cv2
+import numpy as np
 
 from weather import get_current_weather
 from get_frames import get_frames, extract_frame_from_video_url
-from cut_frame import cut_frames, cut_frame_in_six
-from yolo import detect
+from cut_frame import cut_frame_in_six
+from yolo import count_objects_in_frame
 
 from json import dumps
 # from kafka import KafkaProducer
@@ -54,7 +55,7 @@ def fetch_read_m3u8(webcam_link, webcam_prefix):
 
 
 def main():
-    while True :
+    #while True :
 
         # imposta il tempo di attesa fra un conteggio di persone e l'altro
         print("Orario di inizio detection: " + str(datetime.now()) )
@@ -71,6 +72,7 @@ def main():
             # ottieni la temperatura e il meteo al tempo dell'acquisizione;
             try:
                 temperature, weather_description = get_current_weather(webcam["latitude"], webcam["longitude"])
+                print('Condizioni meteo ottenute con successo')
             except:
                 print('Exception nel weather')
                 logging.info('Eccezione ore: ' + str(datetime.now()) )
@@ -91,7 +93,8 @@ def main():
             try:
                 #urllib.request.urlretrieve(video_link, PATH_VIDEOS+"Video" + ".ts")
                 frame_is_read, frame = extract_frame_from_video_url(video_link)
-                print(frame_is_read)
+                #print(frame_is_read)
+                print('Frame estratto con successo')
             except:
                 print('Exception: video non disponibile: ' + webcam["location"])
                 logging.info('Eccezione ore: ' + str(datetime.now()) )
@@ -110,29 +113,47 @@ def main():
             persone_contate = 0
 
             # conta le persone in ogni sottoframe
-            for frame in frame_part:
-                persone_contate = persone_contate + detect(frame)
+            # for frame in frame_part:
+            #     persone_contate = persone_contate + count_objects_in_frame(frame)
+
+            #Passo il frame intero a yolo
+            persone_contate = count_objects_in_frame(frame_part)
 
             print("Persone: " + str(persone_contate))
 
-            data = { 'id_webcam': webcam["id_webcam"],
-            		'city': webcam["city"],
-            		'location': webcam["location"],
-            		'latitude': webcam["latitude"],
-            		'longitude': webcam["longitude"],
-            		'numPeople': persone_contate,
-            		'date': current_date.strftime('%Y-%m-%d %H:%M:%S.%f'),
-            		'time': current_time.strftime('%Y-%m-%d %H:%M:%S.%f'),
-            		'type': 0,
-            		'weather_description': weather_description,
-            		'temperature': temperature,
-            		'day_of_week': datetime.now().date().weekday()}
+            #unisco i frame con i riquadri
+
+            img1 = cv2.imread("detection0.jpg")
+            img2 = cv2.imread("detection1.jpg")
+            img3 = cv2.imread("detection2.jpg")
+            img4 = cv2.imread("detection3.jpg")
+            img5 = cv2.imread("detection4.jpg")
+            img6 = cv2.imread("detection5.jpg")
+            col1 = np.concatenate((img1, img2), axis=0)
+            col2 = np.concatenate((img3, img4), axis=0)
+            col3 = np.concatenate((img5, img6), axis=0)
+            col12 = np.concatenate((col1, col2), axis=1)
+            col123 = np.concatenate((col12, col3), axis=1)
+            cv2.imwrite('complete.jpg', col123)
+
+            # data = { 'id_webcam': webcam["id_webcam"],
+            # 		'city': webcam["city"],
+            # 		'location': webcam["location"],
+            # 		'latitude': webcam["latitude"],
+            # 		'longitude': webcam["longitude"],
+            # 		'numPeople': persone_contate,
+            # 		'date': current_date.strftime('%Y-%m-%d %H:%M:%S.%f'),
+            # 		'time': current_time.strftime('%Y-%m-%d %H:%M:%S.%f'),
+            # 		'type': 0,
+            # 		'weather_description': weather_description,
+            # 		'temperature': temperature,
+            # 		'day_of_week': datetime.now().date().weekday()}
             # producer.send('gdp', value=data)
             # print("ho fatto kafka")
                 # inserisci i risultati nel db
 
 
-        print("waiting for: " + str((t_end - datetime.now()).total_seconds()))
-        time.sleep((t_end - datetime.now()).total_seconds())
+        # print("waiting for: " + str((t_end - datetime.now()).total_seconds()))
+        # time.sleep((t_end - datetime.now()).total_seconds())
 
 main()

@@ -172,3 +172,536 @@ DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweatherma
 DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.0262&lon=14.5737&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 466
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-001.whatsupcams.com:443
 DEBUG:urllib3.connectionpool:https://cdn-001.whatsupcams.com:443 "GET /hls/hr_krk03.m3u8 HTTP/1.1" 200 175
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=41.899139&lon=12.473311&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 469
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-002.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-002.whatsupcams.com:443 "GET /hls/it_roma02.m3u8 HTTP/1.1" 404 169
+INFO:root:Eccezione ore: 2021-05-12 11:14:32.389677
+ERROR:root:(<class 'NameError'>, NameError("name 'count' is not defined"), <traceback object at 0x7f4a97ebe340>)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.3397&lon=16.9787&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 482
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-004.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-004.whatsupcams.com:443 "GET /hls/hr_novska01.m3u8 HTTP/1.1" 200 185
+DEBUG:kafka.client:Sending metadata request MetadataRequest_v1(topics=['gdp']) to node 0
+DEBUG:kafka.protocol.parser:Sending request MetadataRequest_v1(topics=['gdp'])
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Request 24: MetadataRequest_v1(topics=['gdp'])
+DEBUG:kafka.protocol.parser:Received correlation id: 24
+DEBUG:kafka.protocol.parser:Processing response MetadataResponse_v1
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Response 24 (13.123273849487305 ms): MetadataResponse_v1(brokers=[(node_id=0, host='alfredo-VirtualBox', port=9092, rack=None)], controller_id=0, topics=[(error_code=0, topic='gdp', is_internal=False, partitions=[(error_code=0, partition=0, leader=0, replicas=[0], isr=[0])])])
+DEBUG:kafka.cluster:Updated cluster metadata to ClusterMetadata(brokers: 1, topics: 1, groups: 0)
+DEBUG:kafka.producer.kafka:Sending (key=None value={'id_webcam': 2, 'city': 'Novska', 'location': 'GradNovska', 'latitude': 45.3397, 'longitude': 16.9787, 'numPeople': 4, 'date': '2021-05-12 11:14:32.489139', 'time': '2021-05-12 11:14:32.489139', 'type': 0, 'weather_description': 'moderate rain', 'temperature': 15.45, 'day_of_week': 2} headers=[]) to TopicPartition(topic='gdp', partition=0)
+DEBUG:kafka.producer.record_accumulator:Allocating a new 16384 byte message buffer for TopicPartition(topic='gdp', partition=0)
+DEBUG:kafka.producer.kafka:Waking up the sender since TopicPartition(topic='gdp', partition=0) is either full or getting a new batch
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:kafka.producer.sender:Nodes with data ready to send: {0}
+DEBUG:kafka.producer.sender:Created 1 produce requests: {0: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01X\x00\x00\x00\x00\x02\x9a\x98VA\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xdbu\xfc\x00\x00\x01y_\xdbu\xfc\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xca\x04\x00\x00\x00\x01\xbc\x04{"id_webcam": 2, "city": "Novsk...')])])}
+DEBUG:kafka.producer.sender:Sending Produce Request: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01X\x00\x00\x00\x00\x02\x9a\x98VA\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xdbu\xfc\x00\x00\x01y_\xdbu\xfc\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xca\x04\x00\x00\x00\x01\xbc\x04{"id_webcam": 2, "city": "Novsk...')])])
+DEBUG:kafka.protocol.parser:Sending request ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01X\x00\x00\x00\x00\x02\x9a\x98VA\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xdbu\xfc\x00\x00\x01y_\xdbu\xfc\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xca\x04\x00\x00\x00\x01\xbc\x04{"id_webcam": 2, "city": "Novsk...')])])
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Request 25: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01X\x00\x00\x00\x00\x02\x9a\x98VA\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xdbu\xfc\x00\x00\x01y_\xdbu\xfc\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xca\x04\x00\x00\x00\x01\xbc\x04{"id_webcam": 2, "city": "Novsk...')])])
+DEBUG:kafka.protocol.parser:Received correlation id: 25
+DEBUG:kafka.protocol.parser:Processing response ProduceResponse_v7
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Response 25 (10.633230209350586 ms): ProduceResponse_v7(topics=[(topic='gdp', partitions=[(partition=0, error_code=0, offset=12, timestamp=-1, log_start_offset=0)])], throttle_time_ms=0)
+DEBUG:kafka.producer.sender:Parsing produce response: ProduceResponse_v7(topics=[(topic='gdp', partitions=[(partition=0, error_code=0, offset=12, timestamp=-1, log_start_offset=0)])], throttle_time_ms=0)
+DEBUG:kafka.producer.record_accumulator:Produced messages to topic-partition TopicPartition(topic='gdp', partition=0) with base offset 12 log start offset 0 and error None.
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.309812&lon=18.410428&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 487
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-004.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-004.whatsupcams.com:443 "GET /hls/hr_djakovo02.m3u8 HTTP/1.1" 404 169
+INFO:root:Eccezione ore: 2021-05-12 11:14:48.997283
+ERROR:root:(<class 'NameError'>, NameError("name 'count' is not defined"), <traceback object at 0x7f4a97f1e7c0>)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.0262&lon=14.5737&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 462
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-001.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-001.whatsupcams.com:443 "GET /hls/hr_krk03.m3u8 HTTP/1.1" 200 180
+DEBUG:kafka.producer.kafka:Sending (key=None value={'id_webcam': 4, 'city': 'Krk', 'location': 'VelaPlaca', 'latitude': 45.0262, 'longitude': 14.5737, 'numPeople': 11, 'date': '2021-05-12 11:14:49.155937', 'time': '2021-05-12 11:14:49.155937', 'type': 0, 'weather_description': 'broken clouds', 'temperature': 14.93, 'day_of_week': 2} headers=[]) to TopicPartition(topic='gdp', partition=0)
+DEBUG:kafka.producer.record_accumulator:Allocating a new 16384 byte message buffer for TopicPartition(topic='gdp', partition=0)
+DEBUG:kafka.producer.kafka:Waking up the sender since TopicPartition(topic='gdp', partition=0) is either full or getting a new batch
+DEBUG:kafka.producer.sender:Nodes with data ready to send: {0}
+DEBUG:kafka.producer.sender:Created 1 produce requests: {0: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01U\x00\x00\x00\x00\x02;t;\r\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xdb\xae\xe1\x00\x00\x01y_\xdb\xae\xe1\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xc4\x04\x00\x00\x00\x01\xb6\x04{"id_webcam": 4, "city": "Krk",...')])])}
+DEBUG:kafka.producer.sender:Sending Produce Request: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01U\x00\x00\x00\x00\x02;t;\r\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xdb\xae\xe1\x00\x00\x01y_\xdb\xae\xe1\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xc4\x04\x00\x00\x00\x01\xb6\x04{"id_webcam": 4, "city": "Krk",...')])])
+DEBUG:kafka.protocol.parser:Sending request ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01U\x00\x00\x00\x00\x02;t;\r\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xdb\xae\xe1\x00\x00\x01y_\xdb\xae\xe1\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xc4\x04\x00\x00\x00\x01\xb6\x04{"id_webcam": 4, "city": "Krk",...')])])
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Request 26: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01U\x00\x00\x00\x00\x02;t;\r\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xdb\xae\xe1\x00\x00\x01y_\xdb\xae\xe1\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xc4\x04\x00\x00\x00\x01\xb6\x04{"id_webcam": 4, "city": "Krk",...')])])
+DEBUG:kafka.protocol.parser:Received correlation id: 26
+DEBUG:kafka.protocol.parser:Processing response ProduceResponse_v7
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Response 26 (9.46807861328125 ms): ProduceResponse_v7(topics=[(topic='gdp', partitions=[(partition=0, error_code=0, offset=13, timestamp=-1, log_start_offset=0)])], throttle_time_ms=0)
+DEBUG:kafka.producer.sender:Parsing produce response: ProduceResponse_v7(topics=[(topic='gdp', partitions=[(partition=0, error_code=0, offset=13, timestamp=-1, log_start_offset=0)])], throttle_time_ms=0)
+DEBUG:kafka.producer.record_accumulator:Produced messages to topic-partition TopicPartition(topic='gdp', partition=0) with base offset 13 log start offset 0 and error None.
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=41.899139&lon=12.473311&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 462
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-002.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-002.whatsupcams.com:443 "GET /hls/it_roma02.m3u8 HTTP/1.1" 404 169
+INFO:root:Eccezione ore: 2021-05-12 11:19:32.452072
+ERROR:root:(<class 'NameError'>, NameError("name 'count' is not defined"), <traceback object at 0x7f4a97648080>)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.3397&lon=16.9787&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 482
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-004.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-004.whatsupcams.com:443 "GET /hls/hr_novska01.m3u8 HTTP/1.1" 200 185
+DEBUG:kafka.producer.kafka:Sending (key=None value={'id_webcam': 2, 'city': 'Novska', 'location': 'GradNovska', 'latitude': 45.3397, 'longitude': 16.9787, 'numPeople': 4, 'date': '2021-05-12 11:19:32.550295', 'time': '2021-05-12 11:19:32.550295', 'type': 0, 'weather_description': 'moderate rain', 'temperature': 15.45, 'day_of_week': 2} headers=[]) to TopicPartition(topic='gdp', partition=0)
+DEBUG:kafka.producer.record_accumulator:Allocating a new 16384 byte message buffer for TopicPartition(topic='gdp', partition=0)
+DEBUG:kafka.producer.kafka:Waking up the sender since TopicPartition(topic='gdp', partition=0) is either full or getting a new batch
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:kafka.producer.sender:Nodes with data ready to send: {0}
+DEBUG:kafka.producer.sender:Created 1 produce requests: {0: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01X\x00\x00\x00\x00\x02\xbd\xebi;\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xdf\xf1:\x00\x00\x01y_\xdf\xf1:\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xca\x04\x00\x00\x00\x01\xbc\x04{"id_webcam": 2, "city": "Novsk...')])])}
+DEBUG:kafka.producer.sender:Sending Produce Request: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01X\x00\x00\x00\x00\x02\xbd\xebi;\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xdf\xf1:\x00\x00\x01y_\xdf\xf1:\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xca\x04\x00\x00\x00\x01\xbc\x04{"id_webcam": 2, "city": "Novsk...')])])
+DEBUG:kafka.protocol.parser:Sending request ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01X\x00\x00\x00\x00\x02\xbd\xebi;\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xdf\xf1:\x00\x00\x01y_\xdf\xf1:\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xca\x04\x00\x00\x00\x01\xbc\x04{"id_webcam": 2, "city": "Novsk...')])])
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Request 27: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01X\x00\x00\x00\x00\x02\xbd\xebi;\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xdf\xf1:\x00\x00\x01y_\xdf\xf1:\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xca\x04\x00\x00\x00\x01\xbc\x04{"id_webcam": 2, "city": "Novsk...')])])
+DEBUG:kafka.protocol.parser:Received correlation id: 27
+DEBUG:kafka.protocol.parser:Processing response ProduceResponse_v7
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Response 27 (11.048316955566406 ms): ProduceResponse_v7(topics=[(topic='gdp', partitions=[(partition=0, error_code=0, offset=14, timestamp=-1, log_start_offset=0)])], throttle_time_ms=0)
+DEBUG:kafka.producer.sender:Parsing produce response: ProduceResponse_v7(topics=[(topic='gdp', partitions=[(partition=0, error_code=0, offset=14, timestamp=-1, log_start_offset=0)])], throttle_time_ms=0)
+DEBUG:kafka.producer.record_accumulator:Produced messages to topic-partition TopicPartition(topic='gdp', partition=0) with base offset 14 log start offset 0 and error None.
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.309812&lon=18.410428&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 487
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-004.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-004.whatsupcams.com:443 "GET /hls/hr_djakovo02.m3u8 HTTP/1.1" 404 169
+INFO:root:Eccezione ore: 2021-05-12 11:19:42.697705
+ERROR:root:(<class 'NameError'>, NameError("name 'count' is not defined"), <traceback object at 0x7f4a97665dc0>)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.0262&lon=14.5737&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 462
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-001.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-001.whatsupcams.com:443 "GET /hls/hr_krk03.m3u8 HTTP/1.1" 200 180
+DEBUG:kafka.client:Sending metadata request MetadataRequest_v1(topics=['gdp']) to node 0
+DEBUG:kafka.protocol.parser:Sending request MetadataRequest_v1(topics=['gdp'])
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Request 28: MetadataRequest_v1(topics=['gdp'])
+DEBUG:kafka.protocol.parser:Received correlation id: 28
+DEBUG:kafka.protocol.parser:Processing response MetadataResponse_v1
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Response 28 (4.295110702514648 ms): MetadataResponse_v1(brokers=[(node_id=0, host='alfredo-VirtualBox', port=9092, rack=None)], controller_id=0, topics=[(error_code=0, topic='gdp', is_internal=False, partitions=[(error_code=0, partition=0, leader=0, replicas=[0], isr=[0])])])
+DEBUG:kafka.cluster:Updated cluster metadata to ClusterMetadata(brokers: 1, topics: 1, groups: 0)
+DEBUG:kafka.producer.kafka:Sending (key=None value={'id_webcam': 4, 'city': 'Krk', 'location': 'VelaPlaca', 'latitude': 45.0262, 'longitude': 14.5737, 'numPeople': 3, 'date': '2021-05-12 11:19:42.788682', 'time': '2021-05-12 11:19:42.788682', 'type': 0, 'weather_description': 'broken clouds', 'temperature': 14.93, 'day_of_week': 2} headers=[]) to TopicPartition(topic='gdp', partition=0)
+DEBUG:kafka.producer.record_accumulator:Allocating a new 16384 byte message buffer for TopicPartition(topic='gdp', partition=0)
+DEBUG:kafka.producer.kafka:Waking up the sender since TopicPartition(topic='gdp', partition=0) is either full or getting a new batch
+DEBUG:kafka.producer.sender:Nodes with data ready to send: {0}
+DEBUG:kafka.producer.sender:Created 1 produce requests: {0: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01T\x00\x00\x00\x00\x02\xca\x1d5\xb4\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xe0\x18\x9e\x00\x00\x01y_\xe0\x18\x9e\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xc2\x04\x00\x00\x00\x01\xb4\x04{"id_webcam": 4, "city": "Krk",...')])])}
+DEBUG:kafka.producer.sender:Sending Produce Request: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01T\x00\x00\x00\x00\x02\xca\x1d5\xb4\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xe0\x18\x9e\x00\x00\x01y_\xe0\x18\x9e\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xc2\x04\x00\x00\x00\x01\xb4\x04{"id_webcam": 4, "city": "Krk",...')])])
+DEBUG:kafka.protocol.parser:Sending request ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01T\x00\x00\x00\x00\x02\xca\x1d5\xb4\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xe0\x18\x9e\x00\x00\x01y_\xe0\x18\x9e\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xc2\x04\x00\x00\x00\x01\xb4\x04{"id_webcam": 4, "city": "Krk",...')])])
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Request 29: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01T\x00\x00\x00\x00\x02\xca\x1d5\xb4\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xe0\x18\x9e\x00\x00\x01y_\xe0\x18\x9e\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xc2\x04\x00\x00\x00\x01\xb4\x04{"id_webcam": 4, "city": "Krk",...')])])
+DEBUG:kafka.protocol.parser:Received correlation id: 29
+DEBUG:kafka.protocol.parser:Processing response ProduceResponse_v7
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Response 29 (4.800319671630859 ms): ProduceResponse_v7(topics=[(topic='gdp', partitions=[(partition=0, error_code=0, offset=15, timestamp=-1, log_start_offset=0)])], throttle_time_ms=0)
+DEBUG:kafka.producer.sender:Parsing produce response: ProduceResponse_v7(topics=[(topic='gdp', partitions=[(partition=0, error_code=0, offset=15, timestamp=-1, log_start_offset=0)])], throttle_time_ms=0)
+DEBUG:kafka.producer.record_accumulator:Produced messages to topic-partition TopicPartition(topic='gdp', partition=0) with base offset 15 log start offset 0 and error None.
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=41.899139&lon=12.473311&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 462
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-002.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-002.whatsupcams.com:443 "GET /hls/it_roma02.m3u8 HTTP/1.1" 404 169
+INFO:root:Eccezione ore: 2021-05-12 11:24:32.443589
+ERROR:root:(<class 'NameError'>, NameError("name 'count' is not defined"), <traceback object at 0x7f4a9764c5c0>)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.3397&lon=16.9787&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 466
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-004.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-004.whatsupcams.com:443 "GET /hls/hr_novska01.m3u8 HTTP/1.1" 200 185
+DEBUG:kafka.producer.kafka:Sending (key=None value={'id_webcam': 2, 'city': 'Novska', 'location': 'GradNovska', 'latitude': 45.3397, 'longitude': 16.9787, 'numPeople': 2, 'date': '2021-05-12 11:24:32.557526', 'time': '2021-05-12 11:24:32.557526', 'type': 0, 'weather_description': 'broken clouds', 'temperature': 16.03, 'day_of_week': 2} headers=[]) to TopicPartition(topic='gdp', partition=0)
+DEBUG:kafka.producer.record_accumulator:Allocating a new 16384 byte message buffer for TopicPartition(topic='gdp', partition=0)
+DEBUG:kafka.producer.kafka:Waking up the sender since TopicPartition(topic='gdp', partition=0) is either full or getting a new batch
+DEBUG:kafka.producer.sender:Nodes with data ready to send: {0}
+DEBUG:kafka.producer.sender:Created 1 produce requests: {0: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01X\x00\x00\x00\x00\x02\x94)\x91\x90\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xe4\x8c\xf9\x00\x00\x01y_\xe4\x8c\xf9\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xca\x04\x00\x00\x00\x01\xbc\x04{"id_webcam": 2, "city": "Novsk...')])])}
+DEBUG:kafka.producer.sender:Sending Produce Request: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01X\x00\x00\x00\x00\x02\x94)\x91\x90\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xe4\x8c\xf9\x00\x00\x01y_\xe4\x8c\xf9\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xca\x04\x00\x00\x00\x01\xbc\x04{"id_webcam": 2, "city": "Novsk...')])])
+DEBUG:kafka.protocol.parser:Sending request ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01X\x00\x00\x00\x00\x02\x94)\x91\x90\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xe4\x8c\xf9\x00\x00\x01y_\xe4\x8c\xf9\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xca\x04\x00\x00\x00\x01\xbc\x04{"id_webcam": 2, "city": "Novsk...')])])
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Request 30: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01X\x00\x00\x00\x00\x02\x94)\x91\x90\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xe4\x8c\xf9\x00\x00\x01y_\xe4\x8c\xf9\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xca\x04\x00\x00\x00\x01\xbc\x04{"id_webcam": 2, "city": "Novsk...')])])
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:kafka.protocol.parser:Received correlation id: 30
+DEBUG:kafka.protocol.parser:Processing response ProduceResponse_v7
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Response 30 (5.532741546630859 ms): ProduceResponse_v7(topics=[(topic='gdp', partitions=[(partition=0, error_code=0, offset=16, timestamp=-1, log_start_offset=0)])], throttle_time_ms=0)
+DEBUG:kafka.producer.sender:Parsing produce response: ProduceResponse_v7(topics=[(topic='gdp', partitions=[(partition=0, error_code=0, offset=16, timestamp=-1, log_start_offset=0)])], throttle_time_ms=0)
+DEBUG:kafka.producer.record_accumulator:Produced messages to topic-partition TopicPartition(topic='gdp', partition=0) with base offset 16 log start offset 0 and error None.
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.309812&lon=18.410428&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 487
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-004.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-004.whatsupcams.com:443 "GET /hls/hr_djakovo02.m3u8 HTTP/1.1" 404 169
+INFO:root:Eccezione ore: 2021-05-12 11:24:44.801017
+ERROR:root:(<class 'NameError'>, NameError("name 'count' is not defined"), <traceback object at 0x7f4a97ed9880>)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.0262&lon=14.5737&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 462
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-001.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-001.whatsupcams.com:443 "GET /hls/hr_krk03.m3u8 HTTP/1.1" 200 180
+DEBUG:kafka.client:Sending metadata request MetadataRequest_v1(topics=['gdp']) to node 0
+DEBUG:kafka.protocol.parser:Sending request MetadataRequest_v1(topics=['gdp'])
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Request 31: MetadataRequest_v1(topics=['gdp'])
+DEBUG:kafka.protocol.parser:Received correlation id: 31
+DEBUG:kafka.protocol.parser:Processing response MetadataResponse_v1
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Response 31 (2.9480457305908203 ms): MetadataResponse_v1(brokers=[(node_id=0, host='alfredo-VirtualBox', port=9092, rack=None)], controller_id=0, topics=[(error_code=0, topic='gdp', is_internal=False, partitions=[(error_code=0, partition=0, leader=0, replicas=[0], isr=[0])])])
+DEBUG:kafka.cluster:Updated cluster metadata to ClusterMetadata(brokers: 1, topics: 1, groups: 0)
+DEBUG:kafka.producer.kafka:Sending (key=None value={'id_webcam': 4, 'city': 'Krk', 'location': 'VelaPlaca', 'latitude': 45.0262, 'longitude': 14.5737, 'numPeople': 5, 'date': '2021-05-12 11:24:44.899425', 'time': '2021-05-12 11:24:44.899425', 'type': 0, 'weather_description': 'broken clouds', 'temperature': 14.93, 'day_of_week': 2} headers=[]) to TopicPartition(topic='gdp', partition=0)
+DEBUG:kafka.producer.record_accumulator:Allocating a new 16384 byte message buffer for TopicPartition(topic='gdp', partition=0)
+DEBUG:kafka.producer.kafka:Waking up the sender since TopicPartition(topic='gdp', partition=0) is either full or getting a new batch
+DEBUG:kafka.producer.sender:Nodes with data ready to send: {0}
+DEBUG:kafka.producer.sender:Created 1 produce requests: {0: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01T\x00\x00\x00\x00\x02\x86\x11\x90\xf7\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xe4\xb9\xbe\x00\x00\x01y_\xe4\xb9\xbe\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xc2\x04\x00\x00\x00\x01\xb4\x04{"id_webcam": 4, "city": "Krk",...')])])}
+DEBUG:kafka.producer.sender:Sending Produce Request: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01T\x00\x00\x00\x00\x02\x86\x11\x90\xf7\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xe4\xb9\xbe\x00\x00\x01y_\xe4\xb9\xbe\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xc2\x04\x00\x00\x00\x01\xb4\x04{"id_webcam": 4, "city": "Krk",...')])])
+DEBUG:kafka.protocol.parser:Sending request ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01T\x00\x00\x00\x00\x02\x86\x11\x90\xf7\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xe4\xb9\xbe\x00\x00\x01y_\xe4\xb9\xbe\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xc2\x04\x00\x00\x00\x01\xb4\x04{"id_webcam": 4, "city": "Krk",...')])])
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Request 32: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01T\x00\x00\x00\x00\x02\x86\x11\x90\xf7\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xe4\xb9\xbe\x00\x00\x01y_\xe4\xb9\xbe\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xc2\x04\x00\x00\x00\x01\xb4\x04{"id_webcam": 4, "city": "Krk",...')])])
+DEBUG:kafka.protocol.parser:Received correlation id: 32
+DEBUG:kafka.protocol.parser:Processing response ProduceResponse_v7
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Response 32 (14.655590057373047 ms): ProduceResponse_v7(topics=[(topic='gdp', partitions=[(partition=0, error_code=0, offset=17, timestamp=-1, log_start_offset=0)])], throttle_time_ms=0)
+DEBUG:kafka.producer.sender:Parsing produce response: ProduceResponse_v7(topics=[(topic='gdp', partitions=[(partition=0, error_code=0, offset=17, timestamp=-1, log_start_offset=0)])], throttle_time_ms=0)
+DEBUG:kafka.producer.record_accumulator:Produced messages to topic-partition TopicPartition(topic='gdp', partition=0) with base offset 17 log start offset 0 and error None.
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=41.899139&lon=12.473311&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 462
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-002.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-002.whatsupcams.com:443 "GET /hls/it_roma02.m3u8 HTTP/1.1" 404 169
+INFO:root:Eccezione ore: 2021-05-12 11:29:32.427271
+ERROR:root:(<class 'NameError'>, NameError("name 'count' is not defined"), <traceback object at 0x7f4a97f1e140>)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.3397&lon=16.9787&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 466
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-004.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-004.whatsupcams.com:443 "GET /hls/hr_novska01.m3u8 HTTP/1.1" 200 185
+DEBUG:kafka.client:Sending metadata request MetadataRequest_v1(topics=['gdp']) to node 0
+DEBUG:kafka.protocol.parser:Sending request MetadataRequest_v1(topics=['gdp'])
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Request 33: MetadataRequest_v1(topics=['gdp'])
+DEBUG:kafka.protocol.parser:Received correlation id: 33
+DEBUG:kafka.protocol.parser:Processing response MetadataResponse_v1
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Response 33 (20.162582397460938 ms): MetadataResponse_v1(brokers=[(node_id=0, host='alfredo-VirtualBox', port=9092, rack=None)], controller_id=0, topics=[(error_code=0, topic='gdp', is_internal=False, partitions=[(error_code=0, partition=0, leader=0, replicas=[0], isr=[0])])])
+DEBUG:kafka.cluster:Updated cluster metadata to ClusterMetadata(brokers: 1, topics: 1, groups: 0)
+DEBUG:kafka.producer.kafka:Sending (key=None value={'id_webcam': 2, 'city': 'Novska', 'location': 'GradNovska', 'latitude': 45.3397, 'longitude': 16.9787, 'numPeople': 4, 'date': '2021-05-12 11:29:32.539364', 'time': '2021-05-12 11:29:32.539364', 'type': 0, 'weather_description': 'broken clouds', 'temperature': 16.03, 'day_of_week': 2} headers=[]) to TopicPartition(topic='gdp', partition=0)
+DEBUG:kafka.producer.record_accumulator:Allocating a new 16384 byte message buffer for TopicPartition(topic='gdp', partition=0)
+DEBUG:kafka.producer.kafka:Waking up the sender since TopicPartition(topic='gdp', partition=0) is either full or getting a new batch
+DEBUG:kafka.producer.sender:Nodes with data ready to send: {0}
+DEBUG:kafka.producer.sender:Created 1 produce requests: {0: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01X\x00\x00\x00\x00\x02\x08\xc0\xddD\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xe9?\x04\x00\x00\x01y_\xe9?\x04\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xca\x04\x00\x00\x00\x01\xbc\x04{"id_webcam": 2, "city": "Novsk...')])])}
+DEBUG:kafka.producer.sender:Sending Produce Request: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01X\x00\x00\x00\x00\x02\x08\xc0\xddD\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xe9?\x04\x00\x00\x01y_\xe9?\x04\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xca\x04\x00\x00\x00\x01\xbc\x04{"id_webcam": 2, "city": "Novsk...')])])
+DEBUG:kafka.protocol.parser:Sending request ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01X\x00\x00\x00\x00\x02\x08\xc0\xddD\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xe9?\x04\x00\x00\x01y_\xe9?\x04\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xca\x04\x00\x00\x00\x01\xbc\x04{"id_webcam": 2, "city": "Novsk...')])])
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Request 34: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01X\x00\x00\x00\x00\x02\x08\xc0\xddD\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xe9?\x04\x00\x00\x01y_\xe9?\x04\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xca\x04\x00\x00\x00\x01\xbc\x04{"id_webcam": 2, "city": "Novsk...')])])
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:kafka.protocol.parser:Received correlation id: 34
+DEBUG:kafka.protocol.parser:Processing response ProduceResponse_v7
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Response 34 (23.131608963012695 ms): ProduceResponse_v7(topics=[(topic='gdp', partitions=[(partition=0, error_code=0, offset=18, timestamp=-1, log_start_offset=0)])], throttle_time_ms=0)
+DEBUG:kafka.producer.sender:Parsing produce response: ProduceResponse_v7(topics=[(topic='gdp', partitions=[(partition=0, error_code=0, offset=18, timestamp=-1, log_start_offset=0)])], throttle_time_ms=0)
+DEBUG:kafka.producer.record_accumulator:Produced messages to topic-partition TopicPartition(topic='gdp', partition=0) with base offset 18 log start offset 0 and error None.
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.309812&lon=18.410428&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 487
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-004.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-004.whatsupcams.com:443 "GET /hls/hr_djakovo02.m3u8 HTTP/1.1" 404 169
+INFO:root:Eccezione ore: 2021-05-12 11:29:52.578964
+ERROR:root:(<class 'NameError'>, NameError("name 'count' is not defined"), <traceback object at 0x7f4a97ed9d00>)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.0262&lon=14.5737&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 462
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-001.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-001.whatsupcams.com:443 "GET /hls/hr_krk03.m3u8 HTTP/1.1" 200 180
+DEBUG:kafka.producer.kafka:Sending (key=None value={'id_webcam': 4, 'city': 'Krk', 'location': 'VelaPlaca', 'latitude': 45.0262, 'longitude': 14.5737, 'numPeople': 6, 'date': '2021-05-12 11:29:52.704984', 'time': '2021-05-12 11:29:52.704984', 'type': 0, 'weather_description': 'broken clouds', 'temperature': 14.92, 'day_of_week': 2} headers=[]) to TopicPartition(topic='gdp', partition=0)
+DEBUG:kafka.producer.record_accumulator:Allocating a new 16384 byte message buffer for TopicPartition(topic='gdp', partition=0)
+DEBUG:kafka.producer.kafka:Waking up the sender since TopicPartition(topic='gdp', partition=0) is either full or getting a new batch
+DEBUG:kafka.producer.sender:Nodes with data ready to send: {0}
+DEBUG:kafka.producer.sender:Created 1 produce requests: {0: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01T\x00\x00\x00\x00\x02\x04\xb7\xee.\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xe9\x8a\xe3\x00\x00\x01y_\xe9\x8a\xe3\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xc2\x04\x00\x00\x00\x01\xb4\x04{"id_webcam": 4, "city": "Krk",...')])])}
+DEBUG:kafka.producer.sender:Sending Produce Request: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01T\x00\x00\x00\x00\x02\x04\xb7\xee.\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xe9\x8a\xe3\x00\x00\x01y_\xe9\x8a\xe3\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xc2\x04\x00\x00\x00\x01\xb4\x04{"id_webcam": 4, "city": "Krk",...')])])
+DEBUG:kafka.protocol.parser:Sending request ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01T\x00\x00\x00\x00\x02\x04\xb7\xee.\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xe9\x8a\xe3\x00\x00\x01y_\xe9\x8a\xe3\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xc2\x04\x00\x00\x00\x01\xb4\x04{"id_webcam": 4, "city": "Krk",...')])])
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Request 35: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01T\x00\x00\x00\x00\x02\x04\xb7\xee.\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xe9\x8a\xe3\x00\x00\x01y_\xe9\x8a\xe3\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xc2\x04\x00\x00\x00\x01\xb4\x04{"id_webcam": 4, "city": "Krk",...')])])
+DEBUG:kafka.protocol.parser:Received correlation id: 35
+DEBUG:kafka.protocol.parser:Processing response ProduceResponse_v7
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Response 35 (8.35275650024414 ms): ProduceResponse_v7(topics=[(topic='gdp', partitions=[(partition=0, error_code=0, offset=19, timestamp=-1, log_start_offset=0)])], throttle_time_ms=0)
+DEBUG:kafka.producer.sender:Parsing produce response: ProduceResponse_v7(topics=[(topic='gdp', partitions=[(partition=0, error_code=0, offset=19, timestamp=-1, log_start_offset=0)])], throttle_time_ms=0)
+DEBUG:kafka.producer.record_accumulator:Produced messages to topic-partition TopicPartition(topic='gdp', partition=0) with base offset 19 log start offset 0 and error None.
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=41.899139&lon=12.473311&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 459
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-002.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-002.whatsupcams.com:443 "GET /hls/it_roma02.m3u8 HTTP/1.1" 404 169
+INFO:root:Eccezione ore: 2021-05-12 11:34:32.559198
+ERROR:root:(<class 'NameError'>, NameError("name 'count' is not defined"), <traceback object at 0x7f4a97665d40>)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.3397&lon=16.9787&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 466
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-004.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-004.whatsupcams.com:443 "GET /hls/hr_novska01.m3u8 HTTP/1.1" 200 185
+DEBUG:kafka.producer.kafka:Sending (key=None value={'id_webcam': 2, 'city': 'Novska', 'location': 'GradNovska', 'latitude': 45.3397, 'longitude': 16.9787, 'numPeople': 7, 'date': '2021-05-12 11:34:32.655232', 'time': '2021-05-12 11:34:32.655232', 'type': 0, 'weather_description': 'broken clouds', 'temperature': 16.03, 'day_of_week': 2} headers=[]) to TopicPartition(topic='gdp', partition=0)
+DEBUG:kafka.producer.record_accumulator:Allocating a new 16384 byte message buffer for TopicPartition(topic='gdp', partition=0)
+DEBUG:kafka.producer.kafka:Waking up the sender since TopicPartition(topic='gdp', partition=0) is either full or getting a new batch
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:kafka.producer.sender:Nodes with data ready to send: {0}
+DEBUG:kafka.producer.sender:Created 1 produce requests: {0: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01X\x00\x00\x00\x00\x02\xa1\x9dt\x1f\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xed\xb8\x8a\x00\x00\x01y_\xed\xb8\x8a\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xca\x04\x00\x00\x00\x01\xbc\x04{"id_webcam": 2, "city": "Novsk...')])])}
+DEBUG:kafka.producer.sender:Sending Produce Request: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01X\x00\x00\x00\x00\x02\xa1\x9dt\x1f\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xed\xb8\x8a\x00\x00\x01y_\xed\xb8\x8a\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xca\x04\x00\x00\x00\x01\xbc\x04{"id_webcam": 2, "city": "Novsk...')])])
+DEBUG:kafka.protocol.parser:Sending request ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01X\x00\x00\x00\x00\x02\xa1\x9dt\x1f\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xed\xb8\x8a\x00\x00\x01y_\xed\xb8\x8a\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xca\x04\x00\x00\x00\x01\xbc\x04{"id_webcam": 2, "city": "Novsk...')])])
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Request 36: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01X\x00\x00\x00\x00\x02\xa1\x9dt\x1f\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xed\xb8\x8a\x00\x00\x01y_\xed\xb8\x8a\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xca\x04\x00\x00\x00\x01\xbc\x04{"id_webcam": 2, "city": "Novsk...')])])
+DEBUG:kafka.protocol.parser:Received correlation id: 36
+DEBUG:kafka.protocol.parser:Processing response ProduceResponse_v7
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Response 36 (39.49332237243652 ms): ProduceResponse_v7(topics=[(topic='gdp', partitions=[(partition=0, error_code=0, offset=20, timestamp=-1, log_start_offset=0)])], throttle_time_ms=0)
+DEBUG:kafka.producer.sender:Parsing produce response: ProduceResponse_v7(topics=[(topic='gdp', partitions=[(partition=0, error_code=0, offset=20, timestamp=-1, log_start_offset=0)])], throttle_time_ms=0)
+DEBUG:kafka.producer.record_accumulator:Produced messages to topic-partition TopicPartition(topic='gdp', partition=0) with base offset 20 log start offset 0 and error None.
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.309812&lon=18.410428&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 487
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-004.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-004.whatsupcams.com:443 "GET /hls/hr_djakovo02.m3u8 HTTP/1.1" 404 169
+INFO:root:Eccezione ore: 2021-05-12 11:34:45.857979
+ERROR:root:(<class 'NameError'>, NameError("name 'count' is not defined"), <traceback object at 0x7f4a97648140>)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.0262&lon=14.5737&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 462
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-001.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-001.whatsupcams.com:443 "GET /hls/hr_krk03.m3u8 HTTP/1.1" 200 180
+DEBUG:kafka.client:Sending metadata request MetadataRequest_v1(topics=['gdp']) to node 0
+DEBUG:kafka.protocol.parser:Sending request MetadataRequest_v1(topics=['gdp'])
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Request 37: MetadataRequest_v1(topics=['gdp'])
+DEBUG:kafka.protocol.parser:Received correlation id: 37
+DEBUG:kafka.protocol.parser:Processing response MetadataResponse_v1
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Response 37 (4.907131195068359 ms): MetadataResponse_v1(brokers=[(node_id=0, host='alfredo-VirtualBox', port=9092, rack=None)], controller_id=0, topics=[(error_code=0, topic='gdp', is_internal=False, partitions=[(error_code=0, partition=0, leader=0, replicas=[0], isr=[0])])])
+DEBUG:kafka.cluster:Updated cluster metadata to ClusterMetadata(brokers: 1, topics: 1, groups: 0)
+DEBUG:kafka.producer.kafka:Sending (key=None value={'id_webcam': 4, 'city': 'Krk', 'location': 'VelaPlaca', 'latitude': 45.0262, 'longitude': 14.5737, 'numPeople': 10, 'date': '2021-05-12 11:34:45.956381', 'time': '2021-05-12 11:34:45.956381', 'type': 0, 'weather_description': 'broken clouds', 'temperature': 14.92, 'day_of_week': 2} headers=[]) to TopicPartition(topic='gdp', partition=0)
+DEBUG:kafka.producer.record_accumulator:Allocating a new 16384 byte message buffer for TopicPartition(topic='gdp', partition=0)
+DEBUG:kafka.producer.kafka:Waking up the sender since TopicPartition(topic='gdp', partition=0) is either full or getting a new batch
+DEBUG:kafka.producer.sender:Nodes with data ready to send: {0}
+DEBUG:kafka.producer.sender:Created 1 produce requests: {0: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01U\x00\x00\x00\x00\x02e\xe4$\x08\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xed\xe2\xcf\x00\x00\x01y_\xed\xe2\xcf\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xc4\x04\x00\x00\x00\x01\xb6\x04{"id_webcam": 4, "city": "Krk",...')])])}
+DEBUG:kafka.producer.sender:Sending Produce Request: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01U\x00\x00\x00\x00\x02e\xe4$\x08\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xed\xe2\xcf\x00\x00\x01y_\xed\xe2\xcf\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xc4\x04\x00\x00\x00\x01\xb6\x04{"id_webcam": 4, "city": "Krk",...')])])
+DEBUG:kafka.protocol.parser:Sending request ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01U\x00\x00\x00\x00\x02e\xe4$\x08\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xed\xe2\xcf\x00\x00\x01y_\xed\xe2\xcf\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xc4\x04\x00\x00\x00\x01\xb6\x04{"id_webcam": 4, "city": "Krk",...')])])
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Request 38: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01U\x00\x00\x00\x00\x02e\xe4$\x08\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xed\xe2\xcf\x00\x00\x01y_\xed\xe2\xcf\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xc4\x04\x00\x00\x00\x01\xb6\x04{"id_webcam": 4, "city": "Krk",...')])])
+DEBUG:kafka.protocol.parser:Received correlation id: 38
+DEBUG:kafka.protocol.parser:Processing response ProduceResponse_v7
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Response 38 (5.272388458251953 ms): ProduceResponse_v7(topics=[(topic='gdp', partitions=[(partition=0, error_code=0, offset=21, timestamp=-1, log_start_offset=0)])], throttle_time_ms=0)
+DEBUG:kafka.producer.sender:Parsing produce response: ProduceResponse_v7(topics=[(topic='gdp', partitions=[(partition=0, error_code=0, offset=21, timestamp=-1, log_start_offset=0)])], throttle_time_ms=0)
+DEBUG:kafka.producer.record_accumulator:Produced messages to topic-partition TopicPartition(topic='gdp', partition=0) with base offset 21 log start offset 0 and error None.
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=41.899139&lon=12.473311&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 459
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-002.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-002.whatsupcams.com:443 "GET /hls/it_roma02.m3u8 HTTP/1.1" 404 169
+INFO:root:Eccezione ore: 2021-05-12 11:39:32.437094
+ERROR:root:(<class 'NameError'>, NameError("name 'count' is not defined"), <traceback object at 0x7f4a97648d40>)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.3397&lon=16.9787&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 466
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-004.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-004.whatsupcams.com:443 "GET /hls/hr_novska01.m3u8 HTTP/1.1" 200 185
+DEBUG:kafka.producer.kafka:Sending (key=None value={'id_webcam': 2, 'city': 'Novska', 'location': 'GradNovska', 'latitude': 45.3397, 'longitude': 16.9787, 'numPeople': 7, 'date': '2021-05-12 11:39:32.591908', 'time': '2021-05-12 11:39:32.591908', 'type': 0, 'weather_description': 'broken clouds', 'temperature': 16.05, 'day_of_week': 2} headers=[]) to TopicPartition(topic='gdp', partition=0)
+DEBUG:kafka.producer.record_accumulator:Allocating a new 16384 byte message buffer for TopicPartition(topic='gdp', partition=0)
+DEBUG:kafka.producer.kafka:Waking up the sender since TopicPartition(topic='gdp', partition=0) is either full or getting a new batch
+DEBUG:kafka.producer.sender:Nodes with data ready to send: {0}
+DEBUG:kafka.producer.sender:Created 1 produce requests: {0: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01X\x00\x00\x00\x00\x02\\\xaa#"\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xf2G\xfd\x00\x00\x01y_\xf2G\xfd\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xca\x04\x00\x00\x00\x01\xbc\x04{"id_webcam": 2, "city": "Novsk...')])])}
+DEBUG:kafka.producer.sender:Sending Produce Request: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01X\x00\x00\x00\x00\x02\\\xaa#"\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xf2G\xfd\x00\x00\x01y_\xf2G\xfd\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xca\x04\x00\x00\x00\x01\xbc\x04{"id_webcam": 2, "city": "Novsk...')])])
+DEBUG:kafka.protocol.parser:Sending request ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01X\x00\x00\x00\x00\x02\\\xaa#"\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xf2G\xfd\x00\x00\x01y_\xf2G\xfd\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xca\x04\x00\x00\x00\x01\xbc\x04{"id_webcam": 2, "city": "Novsk...')])])
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Request 39: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01X\x00\x00\x00\x00\x02\\\xaa#"\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xf2G\xfd\x00\x00\x01y_\xf2G\xfd\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xca\x04\x00\x00\x00\x01\xbc\x04{"id_webcam": 2, "city": "Novsk...')])])
+DEBUG:kafka.protocol.parser:Received correlation id: 39
+DEBUG:kafka.protocol.parser:Processing response ProduceResponse_v7
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Response 39 (35.03274917602539 ms): ProduceResponse_v7(topics=[(topic='gdp', partitions=[(partition=0, error_code=0, offset=22, timestamp=-1, log_start_offset=0)])], throttle_time_ms=0)
+DEBUG:kafka.producer.sender:Parsing produce response: ProduceResponse_v7(topics=[(topic='gdp', partitions=[(partition=0, error_code=0, offset=22, timestamp=-1, log_start_offset=0)])], throttle_time_ms=0)
+DEBUG:kafka.producer.record_accumulator:Produced messages to topic-partition TopicPartition(topic='gdp', partition=0) with base offset 22 log start offset 0 and error None.
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.309812&lon=18.410428&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 487
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-004.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-004.whatsupcams.com:443 "GET /hls/hr_djakovo02.m3u8 HTTP/1.1" 404 169
+INFO:root:Eccezione ore: 2021-05-12 11:39:44.591805
+ERROR:root:(<class 'NameError'>, NameError("name 'count' is not defined"), <traceback object at 0x7f4a97665f80>)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.0262&lon=14.5737&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 462
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-001.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-001.whatsupcams.com:443 "GET /hls/hr_krk03.m3u8 HTTP/1.1" 200 180
+DEBUG:kafka.client:Sending metadata request MetadataRequest_v1(topics=['gdp']) to node 0
+DEBUG:kafka.protocol.parser:Sending request MetadataRequest_v1(topics=['gdp'])
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Request 40: MetadataRequest_v1(topics=['gdp'])
+DEBUG:kafka.protocol.parser:Received correlation id: 40
+DEBUG:kafka.protocol.parser:Processing response MetadataResponse_v1
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Response 40 (4.186868667602539 ms): MetadataResponse_v1(brokers=[(node_id=0, host='alfredo-VirtualBox', port=9092, rack=None)], controller_id=0, topics=[(error_code=0, topic='gdp', is_internal=False, partitions=[(error_code=0, partition=0, leader=0, replicas=[0], isr=[0])])])
+DEBUG:kafka.cluster:Updated cluster metadata to ClusterMetadata(brokers: 1, topics: 1, groups: 0)
+DEBUG:kafka.producer.kafka:Sending (key=None value={'id_webcam': 4, 'city': 'Krk', 'location': 'VelaPlaca', 'latitude': 45.0262, 'longitude': 14.5737, 'numPeople': 8, 'date': '2021-05-12 11:39:44.705303', 'time': '2021-05-12 11:39:44.705303', 'type': 0, 'weather_description': 'broken clouds', 'temperature': 14.92, 'day_of_week': 2} headers=[]) to TopicPartition(topic='gdp', partition=0)
+DEBUG:kafka.producer.record_accumulator:Allocating a new 16384 byte message buffer for TopicPartition(topic='gdp', partition=0)
+DEBUG:kafka.producer.kafka:Waking up the sender since TopicPartition(topic='gdp', partition=0) is either full or getting a new batch
+DEBUG:kafka.producer.sender:Nodes with data ready to send: {0}
+DEBUG:kafka.producer.sender:Created 1 produce requests: {0: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01T\x00\x00\x00\x00\x02S\xa0\xdb\xf6\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xf2ue\x00\x00\x01y_\xf2ue\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xc2\x04\x00\x00\x00\x01\xb4\x04{"id_webcam": 4, "city": "Krk",...')])])}
+DEBUG:kafka.producer.sender:Sending Produce Request: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01T\x00\x00\x00\x00\x02S\xa0\xdb\xf6\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xf2ue\x00\x00\x01y_\xf2ue\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xc2\x04\x00\x00\x00\x01\xb4\x04{"id_webcam": 4, "city": "Krk",...')])])
+DEBUG:kafka.protocol.parser:Sending request ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01T\x00\x00\x00\x00\x02S\xa0\xdb\xf6\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xf2ue\x00\x00\x01y_\xf2ue\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xc2\x04\x00\x00\x00\x01\xb4\x04{"id_webcam": 4, "city": "Krk",...')])])
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Request 41: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01T\x00\x00\x00\x00\x02S\xa0\xdb\xf6\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xf2ue\x00\x00\x01y_\xf2ue\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xc2\x04\x00\x00\x00\x01\xb4\x04{"id_webcam": 4, "city": "Krk",...')])])
+DEBUG:kafka.protocol.parser:Received correlation id: 41
+DEBUG:kafka.protocol.parser:Processing response ProduceResponse_v7
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Response 41 (7.155656814575195 ms): ProduceResponse_v7(topics=[(topic='gdp', partitions=[(partition=0, error_code=0, offset=23, timestamp=-1, log_start_offset=0)])], throttle_time_ms=0)
+DEBUG:kafka.producer.sender:Parsing produce response: ProduceResponse_v7(topics=[(topic='gdp', partitions=[(partition=0, error_code=0, offset=23, timestamp=-1, log_start_offset=0)])], throttle_time_ms=0)
+DEBUG:kafka.producer.record_accumulator:Produced messages to topic-partition TopicPartition(topic='gdp', partition=0) with base offset 23 log start offset 0 and error None.
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=41.899139&lon=12.473311&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 459
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-002.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-002.whatsupcams.com:443 "GET /hls/it_roma02.m3u8 HTTP/1.1" 404 169
+INFO:root:Eccezione ore: 2021-05-12 11:44:32.453275
+ERROR:root:(<class 'NameError'>, NameError("name 'count' is not defined"), <traceback object at 0x7f4a97ed9800>)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.3397&lon=16.9787&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 466
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-004.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-004.whatsupcams.com:443 "GET /hls/hr_novska01.m3u8 HTTP/1.1" 200 185
+DEBUG:kafka.producer.kafka:Sending (key=None value={'id_webcam': 2, 'city': 'Novska', 'location': 'GradNovska', 'latitude': 45.3397, 'longitude': 16.9787, 'numPeople': 5, 'date': '2021-05-12 11:44:32.590099', 'time': '2021-05-12 11:44:32.590099', 'type': 0, 'weather_description': 'broken clouds', 'temperature': 16.05, 'day_of_week': 2} headers=[]) to TopicPartition(topic='gdp', partition=0)
+DEBUG:kafka.producer.record_accumulator:Allocating a new 16384 byte message buffer for TopicPartition(topic='gdp', partition=0)
+DEBUG:kafka.producer.kafka:Waking up the sender since TopicPartition(topic='gdp', partition=0) is either full or getting a new batch
+DEBUG:kafka.producer.sender:Nodes with data ready to send: {0}
+DEBUG:kafka.producer.sender:Created 1 produce requests: {0: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01X\x00\x00\x00\x00\x02\x9a&6%\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xf6\xd6\xf4\x00\x00\x01y_\xf6\xd6\xf4\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xca\x04\x00\x00\x00\x01\xbc\x04{"id_webcam": 2, "city": "Novsk...')])])}
+DEBUG:kafka.producer.sender:Sending Produce Request: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01X\x00\x00\x00\x00\x02\x9a&6%\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xf6\xd6\xf4\x00\x00\x01y_\xf6\xd6\xf4\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xca\x04\x00\x00\x00\x01\xbc\x04{"id_webcam": 2, "city": "Novsk...')])])
+DEBUG:kafka.protocol.parser:Sending request ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01X\x00\x00\x00\x00\x02\x9a&6%\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xf6\xd6\xf4\x00\x00\x01y_\xf6\xd6\xf4\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xca\x04\x00\x00\x00\x01\xbc\x04{"id_webcam": 2, "city": "Novsk...')])])
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Request 42: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01X\x00\x00\x00\x00\x02\x9a&6%\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xf6\xd6\xf4\x00\x00\x01y_\xf6\xd6\xf4\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xca\x04\x00\x00\x00\x01\xbc\x04{"id_webcam": 2, "city": "Novsk...')])])
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:kafka.protocol.parser:Received correlation id: 42
+DEBUG:kafka.protocol.parser:Processing response ProduceResponse_v7
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Response 42 (13.315677642822266 ms): ProduceResponse_v7(topics=[(topic='gdp', partitions=[(partition=0, error_code=0, offset=24, timestamp=-1, log_start_offset=0)])], throttle_time_ms=0)
+DEBUG:kafka.producer.sender:Parsing produce response: ProduceResponse_v7(topics=[(topic='gdp', partitions=[(partition=0, error_code=0, offset=24, timestamp=-1, log_start_offset=0)])], throttle_time_ms=0)
+DEBUG:kafka.producer.record_accumulator:Produced messages to topic-partition TopicPartition(topic='gdp', partition=0) with base offset 24 log start offset 0 and error None.
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.309812&lon=18.410428&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 499
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-004.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-004.whatsupcams.com:443 "GET /hls/hr_djakovo02.m3u8 HTTP/1.1" 404 169
+INFO:root:Eccezione ore: 2021-05-12 11:44:43.377137
+ERROR:root:(<class 'NameError'>, NameError("name 'count' is not defined"), <traceback object at 0x7f4a97668ac0>)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.0262&lon=14.5737&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 463
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-001.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-001.whatsupcams.com:443 "GET /hls/hr_krk03.m3u8 HTTP/1.1" 200 180
+DEBUG:kafka.client:Sending metadata request MetadataRequest_v1(topics=['gdp']) to node 0
+DEBUG:kafka.protocol.parser:Sending request MetadataRequest_v1(topics=['gdp'])
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Request 43: MetadataRequest_v1(topics=['gdp'])
+DEBUG:kafka.protocol.parser:Received correlation id: 43
+DEBUG:kafka.protocol.parser:Processing response MetadataResponse_v1
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Response 43 (10.732650756835938 ms): MetadataResponse_v1(brokers=[(node_id=0, host='alfredo-VirtualBox', port=9092, rack=None)], controller_id=0, topics=[(error_code=0, topic='gdp', is_internal=False, partitions=[(error_code=0, partition=0, leader=0, replicas=[0], isr=[0])])])
+DEBUG:kafka.cluster:Updated cluster metadata to ClusterMetadata(brokers: 1, topics: 1, groups: 0)
+DEBUG:kafka.producer.kafka:Sending (key=None value={'id_webcam': 4, 'city': 'Krk', 'location': 'VelaPlaca', 'latitude': 45.0262, 'longitude': 14.5737, 'numPeople': 4, 'date': '2021-05-12 11:44:43.503491', 'time': '2021-05-12 11:44:43.503491', 'type': 0, 'weather_description': 'broken clouds', 'temperature': 14.66, 'day_of_week': 2} headers=[]) to TopicPartition(topic='gdp', partition=0)
+DEBUG:kafka.producer.record_accumulator:Allocating a new 16384 byte message buffer for TopicPartition(topic='gdp', partition=0)
+DEBUG:kafka.producer.kafka:Waking up the sender since TopicPartition(topic='gdp', partition=0) is either full or getting a new batch
+DEBUG:kafka.producer.sender:Nodes with data ready to send: {0}
+DEBUG:kafka.producer.sender:Created 1 produce requests: {0: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01T\x00\x00\x00\x00\x02x\x86\x85p\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xf6\xfd\xae\x00\x00\x01y_\xf6\xfd\xae\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xc2\x04\x00\x00\x00\x01\xb4\x04{"id_webcam": 4, "city": "Krk",...')])])}
+DEBUG:kafka.producer.sender:Sending Produce Request: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01T\x00\x00\x00\x00\x02x\x86\x85p\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xf6\xfd\xae\x00\x00\x01y_\xf6\xfd\xae\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xc2\x04\x00\x00\x00\x01\xb4\x04{"id_webcam": 4, "city": "Krk",...')])])
+DEBUG:kafka.protocol.parser:Sending request ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01T\x00\x00\x00\x00\x02x\x86\x85p\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xf6\xfd\xae\x00\x00\x01y_\xf6\xfd\xae\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xc2\x04\x00\x00\x00\x01\xb4\x04{"id_webcam": 4, "city": "Krk",...')])])
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Request 44: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01T\x00\x00\x00\x00\x02x\x86\x85p\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xf6\xfd\xae\x00\x00\x01y_\xf6\xfd\xae\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xc2\x04\x00\x00\x00\x01\xb4\x04{"id_webcam": 4, "city": "Krk",...')])])
+DEBUG:kafka.protocol.parser:Received correlation id: 44
+DEBUG:kafka.protocol.parser:Processing response ProduceResponse_v7
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Response 44 (11.020421981811523 ms): ProduceResponse_v7(topics=[(topic='gdp', partitions=[(partition=0, error_code=0, offset=25, timestamp=-1, log_start_offset=0)])], throttle_time_ms=0)
+DEBUG:kafka.producer.sender:Parsing produce response: ProduceResponse_v7(topics=[(topic='gdp', partitions=[(partition=0, error_code=0, offset=25, timestamp=-1, log_start_offset=0)])], throttle_time_ms=0)
+DEBUG:kafka.producer.record_accumulator:Produced messages to topic-partition TopicPartition(topic='gdp', partition=0) with base offset 25 log start offset 0 and error None.
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=41.899139&lon=12.473311&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 461
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-002.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-002.whatsupcams.com:443 "GET /hls/it_roma02.m3u8 HTTP/1.1" 404 169
+INFO:root:Eccezione ore: 2021-05-12 11:49:32.413597
+ERROR:root:(<class 'NameError'>, NameError("name 'count' is not defined"), <traceback object at 0x7f4a9765bcc0>)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.3397&lon=16.9787&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 466
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-004.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-004.whatsupcams.com:443 "GET /hls/hr_novska01.m3u8 HTTP/1.1" 200 185
+DEBUG:kafka.producer.kafka:Sending (key=None value={'id_webcam': 2, 'city': 'Novska', 'location': 'GradNovska', 'latitude': 45.3397, 'longitude': 16.9787, 'numPeople': 9, 'date': '2021-05-12 11:49:32.533875', 'time': '2021-05-12 11:49:32.533875', 'type': 0, 'weather_description': 'broken clouds', 'temperature': 16.04, 'day_of_week': 2} headers=[]) to TopicPartition(topic='gdp', partition=0)
+DEBUG:kafka.producer.record_accumulator:Allocating a new 16384 byte message buffer for TopicPartition(topic='gdp', partition=0)
+DEBUG:kafka.producer.kafka:Waking up the sender since TopicPartition(topic='gdp', partition=0) is either full or getting a new batch
+DEBUG:kafka.producer.sender:Nodes with data ready to send: {0}
+DEBUG:kafka.producer.sender:Created 1 produce requests: {0: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01X\x00\x00\x00\x00\x02\xbd\xd1\xf5a\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xfbp\x1d\x00\x00\x01y_\xfbp\x1d\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xca\x04\x00\x00\x00\x01\xbc\x04{"id_webcam": 2, "city": "Novsk...')])])}
+DEBUG:kafka.producer.sender:Sending Produce Request: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01X\x00\x00\x00\x00\x02\xbd\xd1\xf5a\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xfbp\x1d\x00\x00\x01y_\xfbp\x1d\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xca\x04\x00\x00\x00\x01\xbc\x04{"id_webcam": 2, "city": "Novsk...')])])
+DEBUG:kafka.protocol.parser:Sending request ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01X\x00\x00\x00\x00\x02\xbd\xd1\xf5a\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xfbp\x1d\x00\x00\x01y_\xfbp\x1d\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xca\x04\x00\x00\x00\x01\xbc\x04{"id_webcam": 2, "city": "Novsk...')])])
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Request 45: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01X\x00\x00\x00\x00\x02\xbd\xd1\xf5a\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xfbp\x1d\x00\x00\x01y_\xfbp\x1d\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xca\x04\x00\x00\x00\x01\xbc\x04{"id_webcam": 2, "city": "Novsk...')])])
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:kafka.protocol.parser:Received correlation id: 45
+DEBUG:kafka.protocol.parser:Processing response ProduceResponse_v7
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Response 45 (15.874147415161133 ms): ProduceResponse_v7(topics=[(topic='gdp', partitions=[(partition=0, error_code=0, offset=26, timestamp=-1, log_start_offset=0)])], throttle_time_ms=0)
+DEBUG:kafka.producer.sender:Parsing produce response: ProduceResponse_v7(topics=[(topic='gdp', partitions=[(partition=0, error_code=0, offset=26, timestamp=-1, log_start_offset=0)])], throttle_time_ms=0)
+DEBUG:kafka.producer.record_accumulator:Produced messages to topic-partition TopicPartition(topic='gdp', partition=0) with base offset 26 log start offset 0 and error None.
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.309812&lon=18.410428&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 487
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-004.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-004.whatsupcams.com:443 "GET /hls/hr_djakovo02.m3u8 HTTP/1.1" 404 169
+INFO:root:Eccezione ore: 2021-05-12 11:49:44.804158
+ERROR:root:(<class 'NameError'>, NameError("name 'count' is not defined"), <traceback object at 0x7f4a9764c140>)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.0262&lon=14.5737&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 460
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-001.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-001.whatsupcams.com:443 "GET /hls/hr_krk03.m3u8 HTTP/1.1" 200 180
+DEBUG:kafka.client:Sending metadata request MetadataRequest_v1(topics=['gdp']) to node 0
+DEBUG:kafka.protocol.parser:Sending request MetadataRequest_v1(topics=['gdp'])
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Request 46: MetadataRequest_v1(topics=['gdp'])
+DEBUG:kafka.protocol.parser:Received correlation id: 46
+DEBUG:kafka.protocol.parser:Processing response MetadataResponse_v1
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Response 46 (7.311582565307617 ms): MetadataResponse_v1(brokers=[(node_id=0, host='alfredo-VirtualBox', port=9092, rack=None)], controller_id=0, topics=[(error_code=0, topic='gdp', is_internal=False, partitions=[(error_code=0, partition=0, leader=0, replicas=[0], isr=[0])])])
+DEBUG:kafka.cluster:Updated cluster metadata to ClusterMetadata(brokers: 1, topics: 1, groups: 0)
+DEBUG:kafka.producer.kafka:Sending (key=None value={'id_webcam': 4, 'city': 'Krk', 'location': 'VelaPlaca', 'latitude': 45.0262, 'longitude': 14.5737, 'numPeople': 10, 'date': '2021-05-12 11:49:44.913188', 'time': '2021-05-12 11:49:44.913188', 'type': 0, 'weather_description': 'broken clouds', 'temperature': 14.37, 'day_of_week': 2} headers=[]) to TopicPartition(topic='gdp', partition=0)
+DEBUG:kafka.producer.record_accumulator:Allocating a new 16384 byte message buffer for TopicPartition(topic='gdp', partition=0)
+DEBUG:kafka.producer.kafka:Waking up the sender since TopicPartition(topic='gdp', partition=0) is either full or getting a new batch
+DEBUG:kafka.producer.sender:Nodes with data ready to send: {0}
+DEBUG:kafka.producer.sender:Created 1 produce requests: {0: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01U\x00\x00\x00\x00\x02@&X\x96\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xfb\x98\x11\x00\x00\x01y_\xfb\x98\x11\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xc4\x04\x00\x00\x00\x01\xb6\x04{"id_webcam": 4, "city": "Krk",...')])])}
+DEBUG:kafka.producer.sender:Sending Produce Request: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01U\x00\x00\x00\x00\x02@&X\x96\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xfb\x98\x11\x00\x00\x01y_\xfb\x98\x11\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xc4\x04\x00\x00\x00\x01\xb6\x04{"id_webcam": 4, "city": "Krk",...')])])
+DEBUG:kafka.protocol.parser:Sending request ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01U\x00\x00\x00\x00\x02@&X\x96\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xfb\x98\x11\x00\x00\x01y_\xfb\x98\x11\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xc4\x04\x00\x00\x00\x01\xb6\x04{"id_webcam": 4, "city": "Krk",...')])])
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Request 47: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01U\x00\x00\x00\x00\x02@&X\x96\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xfb\x98\x11\x00\x00\x01y_\xfb\x98\x11\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xc4\x04\x00\x00\x00\x01\xb6\x04{"id_webcam": 4, "city": "Krk",...')])])
+DEBUG:kafka.protocol.parser:Received correlation id: 47
+DEBUG:kafka.protocol.parser:Processing response ProduceResponse_v7
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Response 47 (4.326105117797852 ms): ProduceResponse_v7(topics=[(topic='gdp', partitions=[(partition=0, error_code=0, offset=27, timestamp=-1, log_start_offset=0)])], throttle_time_ms=0)
+DEBUG:kafka.producer.sender:Parsing produce response: ProduceResponse_v7(topics=[(topic='gdp', partitions=[(partition=0, error_code=0, offset=27, timestamp=-1, log_start_offset=0)])], throttle_time_ms=0)
+DEBUG:kafka.producer.record_accumulator:Produced messages to topic-partition TopicPartition(topic='gdp', partition=0) with base offset 27 log start offset 0 and error None.
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=41.899139&lon=12.473311&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 462
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-002.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-002.whatsupcams.com:443 "GET /hls/it_roma02.m3u8 HTTP/1.1" 404 169
+INFO:root:Eccezione ore: 2021-05-12 11:54:32.423979
+ERROR:root:(<class 'NameError'>, NameError("name 'count' is not defined"), <traceback object at 0x7f4a97ed9ac0>)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.3397&lon=16.9787&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 466
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-004.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-004.whatsupcams.com:443 "GET /hls/hr_novska01.m3u8 HTTP/1.1" 200 185
+DEBUG:kafka.producer.kafka:Sending (key=None value={'id_webcam': 2, 'city': 'Novska', 'location': 'GradNovska', 'latitude': 45.3397, 'longitude': 16.9787, 'numPeople': 11, 'date': '2021-05-12 11:54:32.518497', 'time': '2021-05-12 11:54:32.518497', 'type': 0, 'weather_description': 'broken clouds', 'temperature': 16.04, 'day_of_week': 2} headers=[]) to TopicPartition(topic='gdp', partition=0)
+DEBUG:kafka.producer.record_accumulator:Allocating a new 16384 byte message buffer for TopicPartition(topic='gdp', partition=0)
+DEBUG:kafka.producer.kafka:Waking up the sender since TopicPartition(topic='gdp', partition=0) is either full or getting a new batch
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:kafka.producer.sender:Nodes with data ready to send: {0}
+DEBUG:kafka.producer.sender:Created 1 produce requests: {0: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01Y\x00\x00\x00\x00\x02\x81\xaf\xffZ\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xff\xffz\x00\x00\x01y_\xff\xffz\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xcc\x04\x00\x00\x00\x01\xbe\x04{"id_webcam": 2, "city": "Novsk...')])])}
+DEBUG:kafka.producer.sender:Sending Produce Request: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01Y\x00\x00\x00\x00\x02\x81\xaf\xffZ\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xff\xffz\x00\x00\x01y_\xff\xffz\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xcc\x04\x00\x00\x00\x01\xbe\x04{"id_webcam": 2, "city": "Novsk...')])])
+DEBUG:kafka.protocol.parser:Sending request ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01Y\x00\x00\x00\x00\x02\x81\xaf\xffZ\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xff\xffz\x00\x00\x01y_\xff\xffz\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xcc\x04\x00\x00\x00\x01\xbe\x04{"id_webcam": 2, "city": "Novsk...')])])
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Request 48: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01Y\x00\x00\x00\x00\x02\x81\xaf\xffZ\x00\x00\x00\x00\x00\x00\x00\x00\x01y_\xff\xffz\x00\x00\x01y_\xff\xffz\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xcc\x04\x00\x00\x00\x01\xbe\x04{"id_webcam": 2, "city": "Novsk...')])])
+DEBUG:kafka.protocol.parser:Received correlation id: 48
+DEBUG:kafka.protocol.parser:Processing response ProduceResponse_v7
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Response 48 (13.396739959716797 ms): ProduceResponse_v7(topics=[(topic='gdp', partitions=[(partition=0, error_code=0, offset=28, timestamp=-1, log_start_offset=0)])], throttle_time_ms=0)
+DEBUG:kafka.producer.sender:Parsing produce response: ProduceResponse_v7(topics=[(topic='gdp', partitions=[(partition=0, error_code=0, offset=28, timestamp=-1, log_start_offset=0)])], throttle_time_ms=0)
+DEBUG:kafka.producer.record_accumulator:Produced messages to topic-partition TopicPartition(topic='gdp', partition=0) with base offset 28 log start offset 0 and error None.
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.309812&lon=18.410428&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 487
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-004.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-004.whatsupcams.com:443 "GET /hls/hr_djakovo02.m3u8 HTTP/1.1" 404 169
+INFO:root:Eccezione ore: 2021-05-12 11:54:43.592975
+ERROR:root:(<class 'NameError'>, NameError("name 'count' is not defined"), <traceback object at 0x7f4a9765ba40>)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.0262&lon=14.5737&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 460
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-001.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-001.whatsupcams.com:443 "GET /hls/hr_krk03.m3u8 HTTP/1.1" 200 180
+DEBUG:kafka.client:Sending metadata request MetadataRequest_v1(topics=['gdp']) to node 0
+DEBUG:kafka.protocol.parser:Sending request MetadataRequest_v1(topics=['gdp'])
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Request 49: MetadataRequest_v1(topics=['gdp'])
+DEBUG:kafka.protocol.parser:Received correlation id: 49
+DEBUG:kafka.protocol.parser:Processing response MetadataResponse_v1
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Response 49 (5.006074905395508 ms): MetadataResponse_v1(brokers=[(node_id=0, host='alfredo-VirtualBox', port=9092, rack=None)], controller_id=0, topics=[(error_code=0, topic='gdp', is_internal=False, partitions=[(error_code=0, partition=0, leader=0, replicas=[0], isr=[0])])])
+DEBUG:kafka.cluster:Updated cluster metadata to ClusterMetadata(brokers: 1, topics: 1, groups: 0)
+DEBUG:kafka.producer.kafka:Sending (key=None value={'id_webcam': 4, 'city': 'Krk', 'location': 'VelaPlaca', 'latitude': 45.0262, 'longitude': 14.5737, 'numPeople': 3, 'date': '2021-05-12 11:54:43.719446', 'time': '2021-05-12 11:54:43.719446', 'type': 0, 'weather_description': 'broken clouds', 'temperature': 14.37, 'day_of_week': 2} headers=[]) to TopicPartition(topic='gdp', partition=0)
+DEBUG:kafka.producer.record_accumulator:Allocating a new 16384 byte message buffer for TopicPartition(topic='gdp', partition=0)
+DEBUG:kafka.producer.kafka:Waking up the sender since TopicPartition(topic='gdp', partition=0) is either full or getting a new batch
+DEBUG:kafka.producer.sender:Nodes with data ready to send: {0}
+DEBUG:kafka.producer.sender:Created 1 produce requests: {0: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01T\x00\x00\x00\x00\x02\x8co\xe5m\x00\x00\x00\x00\x00\x00\x00\x00\x01y`\x00\'u\x00\x00\x01y`\x00\'u\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xc2\x04\x00\x00\x00\x01\xb4\x04{"id_webcam": 4, "city": "Krk",...')])])}
+DEBUG:kafka.producer.sender:Sending Produce Request: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01T\x00\x00\x00\x00\x02\x8co\xe5m\x00\x00\x00\x00\x00\x00\x00\x00\x01y`\x00\'u\x00\x00\x01y`\x00\'u\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xc2\x04\x00\x00\x00\x01\xb4\x04{"id_webcam": 4, "city": "Krk",...')])])
+DEBUG:kafka.protocol.parser:Sending request ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01T\x00\x00\x00\x00\x02\x8co\xe5m\x00\x00\x00\x00\x00\x00\x00\x00\x01y`\x00\'u\x00\x00\x01y`\x00\'u\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xc2\x04\x00\x00\x00\x01\xb4\x04{"id_webcam": 4, "city": "Krk",...')])])
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Request 50: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01T\x00\x00\x00\x00\x02\x8co\xe5m\x00\x00\x00\x00\x00\x00\x00\x00\x01y`\x00\'u\x00\x00\x01y`\x00\'u\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xc2\x04\x00\x00\x00\x01\xb4\x04{"id_webcam": 4, "city": "Krk",...')])])
+DEBUG:kafka.protocol.parser:Received correlation id: 50
+DEBUG:kafka.protocol.parser:Processing response ProduceResponse_v7
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Response 50 (10.468721389770508 ms): ProduceResponse_v7(topics=[(topic='gdp', partitions=[(partition=0, error_code=0, offset=29, timestamp=-1, log_start_offset=0)])], throttle_time_ms=0)
+DEBUG:kafka.producer.sender:Parsing produce response: ProduceResponse_v7(topics=[(topic='gdp', partitions=[(partition=0, error_code=0, offset=29, timestamp=-1, log_start_offset=0)])], throttle_time_ms=0)
+DEBUG:kafka.producer.record_accumulator:Produced messages to topic-partition TopicPartition(topic='gdp', partition=0) with base offset 29 log start offset 0 and error None.
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=41.899139&lon=12.473311&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 462
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-002.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-002.whatsupcams.com:443 "GET /hls/it_roma02.m3u8 HTTP/1.1" 404 169
+INFO:root:Eccezione ore: 2021-05-12 11:59:32.351097
+ERROR:root:(<class 'NameError'>, NameError("name 'count' is not defined"), <traceback object at 0x7f4a97648e40>)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.3397&lon=16.9787&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 466
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-004.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-004.whatsupcams.com:443 "GET /hls/hr_novska01.m3u8 HTTP/1.1" 200 185
+DEBUG:kafka.client:Sending metadata request MetadataRequest_v1(topics=['gdp']) to node 0
+DEBUG:kafka.protocol.parser:Sending request MetadataRequest_v1(topics=['gdp'])
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Request 51: MetadataRequest_v1(topics=['gdp'])
+DEBUG:kafka.protocol.parser:Received correlation id: 51
+DEBUG:kafka.protocol.parser:Processing response MetadataResponse_v1
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Response 51 (5.182027816772461 ms): MetadataResponse_v1(brokers=[(node_id=0, host='alfredo-VirtualBox', port=9092, rack=None)], controller_id=0, topics=[(error_code=0, topic='gdp', is_internal=False, partitions=[(error_code=0, partition=0, leader=0, replicas=[0], isr=[0])])])
+DEBUG:kafka.cluster:Updated cluster metadata to ClusterMetadata(brokers: 1, topics: 1, groups: 0)
+DEBUG:kafka.producer.kafka:Sending (key=None value={'id_webcam': 2, 'city': 'Novska', 'location': 'GradNovska', 'latitude': 45.3397, 'longitude': 16.9787, 'numPeople': 11, 'date': '2021-05-12 11:59:32.491680', 'time': '2021-05-12 11:59:32.491680', 'type': 0, 'weather_description': 'broken clouds', 'temperature': 16.05, 'day_of_week': 2} headers=[]) to TopicPartition(topic='gdp', partition=0)
+DEBUG:kafka.producer.record_accumulator:Allocating a new 16384 byte message buffer for TopicPartition(topic='gdp', partition=0)
+DEBUG:kafka.producer.kafka:Waking up the sender since TopicPartition(topic='gdp', partition=0) is either full or getting a new batch
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:kafka.producer.sender:Nodes with data ready to send: {0}
+DEBUG:kafka.producer.sender:Created 1 produce requests: {0: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01Y\x00\x00\x00\x00\x02\x00S\xab\x93\x00\x00\x00\x00\x00\x00\x00\x00\x01y`\x04\xad\xd3\x00\x00\x01y`\x04\xad\xd3\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xcc\x04\x00\x00\x00\x01\xbe\x04{"id_webcam": 2, "city": "Novsk...')])])}
+DEBUG:kafka.producer.sender:Sending Produce Request: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01Y\x00\x00\x00\x00\x02\x00S\xab\x93\x00\x00\x00\x00\x00\x00\x00\x00\x01y`\x04\xad\xd3\x00\x00\x01y`\x04\xad\xd3\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xcc\x04\x00\x00\x00\x01\xbe\x04{"id_webcam": 2, "city": "Novsk...')])])
+DEBUG:kafka.protocol.parser:Sending request ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01Y\x00\x00\x00\x00\x02\x00S\xab\x93\x00\x00\x00\x00\x00\x00\x00\x00\x01y`\x04\xad\xd3\x00\x00\x01y`\x04\xad\xd3\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xcc\x04\x00\x00\x00\x01\xbe\x04{"id_webcam": 2, "city": "Novsk...')])])
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Request 52: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01Y\x00\x00\x00\x00\x02\x00S\xab\x93\x00\x00\x00\x00\x00\x00\x00\x00\x01y`\x04\xad\xd3\x00\x00\x01y`\x04\xad\xd3\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xcc\x04\x00\x00\x00\x01\xbe\x04{"id_webcam": 2, "city": "Novsk...')])])
+DEBUG:kafka.protocol.parser:Received correlation id: 52
+DEBUG:kafka.protocol.parser:Processing response ProduceResponse_v7
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Response 52 (22.00031280517578 ms): ProduceResponse_v7(topics=[(topic='gdp', partitions=[(partition=0, error_code=0, offset=30, timestamp=-1, log_start_offset=0)])], throttle_time_ms=0)
+DEBUG:kafka.producer.sender:Parsing produce response: ProduceResponse_v7(topics=[(topic='gdp', partitions=[(partition=0, error_code=0, offset=30, timestamp=-1, log_start_offset=0)])], throttle_time_ms=0)
+DEBUG:kafka.producer.record_accumulator:Produced messages to topic-partition TopicPartition(topic='gdp', partition=0) with base offset 30 log start offset 0 and error None.
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.309812&lon=18.410428&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 487
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-004.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-004.whatsupcams.com:443 "GET /hls/hr_djakovo02.m3u8 HTTP/1.1" 404 169
+INFO:root:Eccezione ore: 2021-05-12 11:59:50.548971
+ERROR:root:(<class 'NameError'>, NameError("name 'count' is not defined"), <traceback object at 0x7f4a97668a80>)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?lat=45.0262&lon=14.5737&units=metric&appid=550617cb3af649e1d6729a3f78b24e17 HTTP/1.1" 200 463
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-001.whatsupcams.com:443
+DEBUG:urllib3.connectionpool:https://cdn-001.whatsupcams.com:443 "GET /hls/hr_krk03.m3u8 HTTP/1.1" 200 180
+DEBUG:kafka.producer.kafka:Sending (key=None value={'id_webcam': 4, 'city': 'Krk', 'location': 'VelaPlaca', 'latitude': 45.0262, 'longitude': 14.5737, 'numPeople': 8, 'date': '2021-05-12 11:59:50.680154', 'time': '2021-05-12 11:59:50.680154', 'type': 0, 'weather_description': 'broken clouds', 'temperature': 14.36, 'day_of_week': 2} headers=[]) to TopicPartition(topic='gdp', partition=0)
+DEBUG:kafka.producer.record_accumulator:Allocating a new 16384 byte message buffer for TopicPartition(topic='gdp', partition=0)
+DEBUG:kafka.producer.kafka:Waking up the sender since TopicPartition(topic='gdp', partition=0) is either full or getting a new batch
+DEBUG:kafka.producer.sender:Nodes with data ready to send: {0}
+DEBUG:kafka.producer.sender:Created 1 produce requests: {0: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01T\x00\x00\x00\x00\x02r\x9c\xb9\x0c\x00\x00\x00\x00\x00\x00\x00\x00\x01y`\x04\xee\xc0\x00\x00\x01y`\x04\xee\xc0\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xc2\x04\x00\x00\x00\x01\xb4\x04{"id_webcam": 4, "city": "Krk",...')])])}
+DEBUG:kafka.producer.sender:Sending Produce Request: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01T\x00\x00\x00\x00\x02r\x9c\xb9\x0c\x00\x00\x00\x00\x00\x00\x00\x00\x01y`\x04\xee\xc0\x00\x00\x01y`\x04\xee\xc0\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xc2\x04\x00\x00\x00\x01\xb4\x04{"id_webcam": 4, "city": "Krk",...')])])
+DEBUG:kafka.protocol.parser:Sending request ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01T\x00\x00\x00\x00\x02r\x9c\xb9\x0c\x00\x00\x00\x00\x00\x00\x00\x00\x01y`\x04\xee\xc0\x00\x00\x01y`\x04\xee\xc0\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xc2\x04\x00\x00\x00\x01\xb4\x04{"id_webcam": 4, "city": "Krk",...')])])
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Request 53: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='gdp', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01T\x00\x00\x00\x00\x02r\x9c\xb9\x0c\x00\x00\x00\x00\x00\x00\x00\x00\x01y`\x04\xee\xc0\x00\x00\x01y`\x04\xee\xc0\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\xc2\x04\x00\x00\x00\x01\xb4\x04{"id_webcam": 4, "city": "Krk",...')])])
+DEBUG:kafka.protocol.parser:Received correlation id: 53
+DEBUG:kafka.protocol.parser:Processing response ProduceResponse_v7
+DEBUG:kafka.conn:<BrokerConnection node_id=0 host=alfredo-VirtualBox:9092 <connected> [IPv4 ('127.0.1.1', 9092)]> Response 53 (3.5419464111328125 ms): ProduceResponse_v7(topics=[(topic='gdp', partitions=[(partition=0, error_code=0, offset=31, timestamp=-1, log_start_offset=0)])], throttle_time_ms=0)
+DEBUG:kafka.producer.sender:Parsing produce response: ProduceResponse_v7(topics=[(topic='gdp', partitions=[(partition=0, error_code=0, offset=31, timestamp=-1, log_start_offset=0)])], throttle_time_ms=0)
+DEBUG:kafka.producer.record_accumulator:Produced messages to topic-partition TopicPartition(topic='gdp', partition=0) with base offset 31 log start offset 0 and error None.
+INFO:kafka.producer.kafka:Closing the Kafka producer with 0 secs timeout.
+INFO:kafka.producer.kafka:Proceeding to force close the producer since pending requests could not be completed within timeout 0.
+DEBUG:kafka.producer.kafka:The Kafka producer has closed.

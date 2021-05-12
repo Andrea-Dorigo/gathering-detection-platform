@@ -27,3 +27,5 @@
 /proof_of_concept/acquisition/main/test/test.log
 /proof_of_concept/prediction/.ipynb_checkpoints
 /proof_of_concept/prediction/*.pkl
+
+*.pyc
