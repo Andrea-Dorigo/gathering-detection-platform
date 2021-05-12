@@ -55,4 +55,10 @@ public class IndexController {
     public ResponseEntity<Detection> fetchLastValue(@PathVariable("city") String city) throws Exception {
         return new ResponseEntity<>(detectionCustomRepository.getLastValue(city), HttpStatus.OK);
     }
+
+    @GetMapping("/CityById/{id}")
+    public ResponseEntity<List<String>> fetchCityById(@PathVariable("id") String id) throws Exception {
+        return new ResponseEntity<>(detectionCustomRepository.getCityById(id), HttpStatus.OK);
+    }
+
 }

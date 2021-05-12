@@ -3,7 +3,7 @@
   File Name: WebappApplicationTests.java
   Author: Emma Roveroni
   Creation Date: 2021-04-12
-  Summary: the file is the repository that extends MongoRepository 
+  Summary: the file is the repository that extends MongoRepository
   Last change date: 2021-04-13
 */
 
@@ -37,12 +37,12 @@ public class DetectionCustomRepositoryImplTest {
 
   private DetectionCustomRepositoryImpl underTest;
   private @Mock MongoTemplate mongoTemplate;
-  
+
   @BeforeEach
   public void setup() {
 	  underTest = new DetectionCustomRepositoryImpl(mongoTemplate);
   }
-  
+
   @AfterEach
   public void reset() {
 	  Mockito.reset(mongoTemplate);
@@ -57,7 +57,7 @@ public class DetectionCustomRepositoryImplTest {
     underTest.getCities();
     verify(mongoTemplate).findDistinct("city", Detection.class, String.class);
   }
-  
+
   @Test
   public void getLastValueTest() throws Exception {
     String city = "Fake1";
@@ -71,37 +71,54 @@ public class DetectionCustomRepositoryImplTest {
 	underTest.getLastValue(city);
 	verify(mongoTemplate).find(query, Detection.class, "detection");
   }
-  
+
   @Test
   public void getDataRTTest() throws Exception {
-	  String date = "2021-04-16T10";
-	  String city = "Fake1";
-	  String temptime = date.substring(date.length() - 2);
-      String tempDate = date.substring(0, date.length() - 2);
+      // System.out.println("TEST----------------------------------- ");
+  	  String startDate = "2021-04-16T10";
+  	  String city = "Fake1";
+
+  	  String temptime = startDate.substring(startDate.length() - 2);
+      String tempDate = startDate.substring(0, startDate.length() - 2);
       int temp = Integer.valueOf(temptime);
-      temp = temp - 1;
+      temp = temp + 1;
+
+      // System.out.println(temp);
+
       String t;
+      // System.out.println("tempDate: ");
+      // System.out.println(tempDate);
       if (temp < 10) {
           t = "0" + temp;
       } else {
           t = Integer.toString(temp);
       }
       tempDate = tempDate + t;
+      // System.out.println("tempDate post if: ");
+      // System.out.println(tempDate);
+      // System.out.println("startDate post if: ");
+      // System.out.println(startDate);
+
       Query query = new Query();
-      DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH");
-      query.addCriteria(Criteria.where("date").lte(dateFormat.parseObject(date)));
-      query.addCriteria(Criteria.where("time").gte(dateFormat.parseObject(tempDate)));
+      String testDate = startDate;
+      startDate = startDate + ":00:00.000-0000";
+      tempDate = tempDate + ":00:00.000-0000";
+
+      DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ");
+      query.addCriteria(Criteria.where("date").lte(dateFormat.parseObject(tempDate)));
+      query.addCriteria(Criteria.where("time").gte(dateFormat.parseObject(startDate)));
       query.addCriteria(Criteria.where("city").is(city));
       query.addCriteria(Criteria.where("type").is(0));
       query.with(Sort.by("time").descending());
       query.limit(1);
+
       List<Detection> numPeople = new ArrayList<>();
   	  when(mongoTemplate.find(query, Detection.class, "detection")).thenReturn(numPeople);
-  	  underTest.getDataRT(city , date);
+  	  underTest.getDataRT(city , testDate);
   	  verify(mongoTemplate).find(query, Detection.class, "detection");
   }
-  
-  
+
+
   @Test
   public void getLatLngsTest() {
 	  String city = "Fake1";
@@ -110,6 +127,6 @@ public class DetectionCustomRepositoryImplTest {
 	  when(mongoTemplate.findDistinct(query, "latitude", Detection.class, Double.class)).thenReturn(lat);
   	  underTest.getLatLngs(city);
   	  verify(mongoTemplate).findDistinct(query, "latitude", Detection.class, Double.class);
-      
+
   }
 }

@@ -99,6 +99,15 @@ export default {
     searchClicked: function() {
       var modal = document.getElementById("mymodalAutocompleteSearch");
       Elements.getCities().then((res) => {
+        var check = Elements.getCityById(this.searchText).then((res1) => {
+          if (res1.data) {
+            this.searchText = res1.data[0];
+            console.log(this.searchText);
+            return this.searchText;
+          }
+        });
+        //console.log(this.searchText);
+        console.log(check[[0]]);
         var place;
         this.cit = res.data;
         place = this.cit;
