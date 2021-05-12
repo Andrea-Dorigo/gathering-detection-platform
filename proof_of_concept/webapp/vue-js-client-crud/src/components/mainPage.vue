@@ -57,7 +57,7 @@ export default {
     datePicker,
     heatMap,
     slider,
-    listCity
+    listCity,
   },
   methods: {
     //Quando si preme ReloadMap
@@ -70,26 +70,32 @@ export default {
     exportpdf: function() {
       var doc = new jsPDF();
       var text = new Array();
-      text[0] = "Dati della città di "+this.$root.$refs.autocompleteSearch_component.getNameCity();
-      text[1] = ""
-      Elements.getDataRT(this.$root.$refs.autocompleteSearch_component.getNameCity(),this.$root.$refs.datePicker_component.getDate()).then((res) => {
-      if(res.data!=0){
-      text[2] = "Id webcam: "+res.data[0].id_webcam;
-      console.log(res.data[0].id_webcam);
-      text[3]="Latitudine: "+res.data[0].latitude;
-      text[4]="Longitudine: "+res.data[0].longitude;
-      text[5]="Numero di persone: "+res.data[0].numPeople;
-      text[6]="Data e ora: "+res.data[0].date;
-      if(res.data[0].type==0) text[7]="Tipologia di dati: Reali";
-      else text[7]="Tipologia di dati: Predetti";
-      text[8]="Meteo: "+res.data[0].weather_description;
-      text[9]="Temperatura: "+res.data[0].temperature;
-      text[10]="Giorno della settimana: "+res.data[0].day_of_week;
-      doc.text(text, 10, 10);
-      doc.save("dati.pdf");
-      } else {
-        window.alert("rdrr");
-      }
+      text[0] =
+        "Dati della città di " +
+        this.$root.$refs.autocompleteSearch_component.getNameCity();
+      text[1] = "";
+      Elements.getDataRT(
+        this.$root.$refs.autocompleteSearch_component.getNameCity(),
+        this.$root.$refs.datePicker_component.getDate()
+      ).then((res) => {
+        if (res.data != 0) {
+          console.log(res.data);
+          text[2] = "Id webcam: " + res.data[0].id_webcam;
+          console.log(res.data[0].id_webcam);
+          text[3] = "Latitudine: " + res.data[0].latitude;
+          text[4] = "Longitudine: " + res.data[0].longitude;
+          text[5] = "Numero di persone: " + res.data[0].numPeople;
+          text[6] = "Data e ora: " + res.data[0].date;
+          if (res.data[0].type == 0) text[7] = "Tipologia di dati: Reali";
+          else text[7] = "Tipologia di dati: Predetti";
+          text[8] = "Meteo: " + res.data[0].weather_description;
+          text[9] = "Temperatura: " + res.data[0].temperature;
+          text[10] = "Giorno della settimana: " + res.data[0].day_of_week;
+          doc.text(text, 10, 10);
+          doc.save("dati.pdf");
+        } else {
+          window.alert("rdrr");
+        }
       });
     },
   },

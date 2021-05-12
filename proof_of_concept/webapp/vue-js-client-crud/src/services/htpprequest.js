@@ -14,6 +14,9 @@ class Elements {
   getLastValue(city) {
     return http.get(`/LV/${city}`);
   }
+  getCityById(id) {
+    return http.get(`/CityById/${id}`);
+  }
 }
 
 export default new Elements();

@@ -37,6 +37,12 @@ public class DetectionCustomRepositoryImpl implements DetectionCustomRepository 
         return mongoTemplate.findDistinct("city", Detection.class, String.class);
     }
 
+    public List<String> getCityById(String id) {
+        int temp = Integer.valueOf(id);
+        Query query = new Query(Criteria.where("id_webcam").is(temp));
+        return mongoTemplate.findDistinct(query, "city", Detection.class, String.class);
+    }
+
     public List<List<Double>> getLatLngs(String city) {
         Query query = new Query(Criteria.where("city").is(city));
         List<Double> lat = mongoTemplate.findDistinct(query, "latitude", Detection.class, Double.class);
