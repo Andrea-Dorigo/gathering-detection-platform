@@ -40,7 +40,7 @@
         :blur="60"
       ></Vue2LeafletHeatmap>
       <l-marker v-if="zoom > 16" :lat-lng="markerLatLng" :visible="visibility">
-        <l-popup>{{ message }}</l-popup>
+        <l-popup id="popup" v-bind:style="bgc">{{ message }}</l-popup>
       </l-marker>
     </l-map>
   </div>
@@ -69,11 +69,13 @@ export default {
       markerLatLng: [41.899139, 12.473311],
       message,
       visibility: true,
+      bgc: { backgroundColor: "" },
     };
   },
   methods: {
     retrieveCoordinate: function(date) {
       var city = this.$root.$refs.autocompleteSearch_component.getNameCity();
+      console.log(city);
       var modal = document.getElementById("myModal");
       Elements.getLastValue(city).then((res) => {
         var temp = res.data.time;
@@ -95,6 +97,12 @@ export default {
                 " ci sono " +
                 numPeople +
                 " persone";
+              if (res1.data[0].type === 1) {
+                this.bgc.backgroundColor = "#06c8c2";
+              }
+              if (res1.data[0].type === 0) {
+                this.bgc.backgroundColor = "#FF9F9F";
+              }
               this.latlngs = [res1.data[0].latitude, res1.data[0].longitude];
               var geoPoints = this.generateRandomPoints(
                 { lat: this.latlngs[0], lng: this.latlngs[1] },
@@ -213,5 +221,11 @@ export default {
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  background: white;
+
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.4);
 }
 </style>

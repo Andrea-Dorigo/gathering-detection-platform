@@ -133,11 +133,13 @@ export default {
   },
   methods: {
     callbackRange: function(val) {
+      console.log(globalCounter);
       if (globalCounter !== 0) {
         globalTimeCheck = false;
       } else {
         globalCounter = globalCounter + 1;
       }
+      console.log(globalTimeCheck);
       this.rangeValue = val;
       var date = this.$root.$refs.datePicker_component.getDate();
       this.$root.$refs.basicExample_component.retrieveCoordinate(date);
@@ -148,6 +150,7 @@ export default {
       this.slider.value = time;
       globalTimeCheck = true;
       globalCounter = 0;
+      console.log("sono nel reload");
       return time;
     },
     getTime: function() {
@@ -158,18 +161,29 @@ export default {
       var timeSlider = this.getTime();
       if (timeSlider.length == 1) timeSlider = "0" + timeSlider;
       var datePicker = this.$root.$refs.datePicker_component.getDate();
+      datePicker = datePicker.split("T");
       var dateNow = new Date().toISOString().substr(0, 10);
-      dateNow = dateNow + "T" + timeNow;
       if (
         timeNow !== timeSlider &&
         globalTimeCheck === true &&
-        datePicker === dateNow
+        datePicker[0] === dateNow
       ) {
         this.reloadMap();
-        console.log("qua entro?");
-        setInterval(() => this.refreshSlider(), 6000);
+        console.log("entro e dovrebbe cambiare");
+        console.log(globalTimeCheck);
+        console.log("date picker  " + datePicker[0]);
+        console.log("date now  " + dateNow);
+        console.log("time picker  " + timeSlider);
+        console.log("time now  " + timeNow);
+        setInterval(() => this.refreshSlider(), 120000);
       } else {
-        setInterval(() => this.refreshSlider(), 6000);
+        console.log("entro e non dovrebbe cambiare");
+        console.log(globalTimeCheck);
+        console.log("date picker  " + datePicker[0]);
+        console.log("date now  " + dateNow);
+        console.log("time picker  " + timeSlider);
+        console.log("time now  " + timeNow);
+        setInterval(() => this.refreshSlider(), 120000);
       }
     },
   },

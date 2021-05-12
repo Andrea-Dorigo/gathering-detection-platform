@@ -35,6 +35,9 @@
               <li>
                 <a href="https://www.synclab.it/" class="text-dark">Sync Lab</a>
               </li>
+              <li>
+                <a :href="pdfLink" download="download">Manuale Utente</a>
+              </li>
             </ul>
           </div>
           <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
@@ -59,20 +62,28 @@
 </template>
 
 <script>
-
 import autosearch from "./components/autocompleteSearch.vue";
 import router from "./router.js";
 
 export default {
   name: "app",
   router: router,
+  data() {
+    return {
+      pdfLink: require("@/assets/manuale_utente.pdf"),
+    };
+  },
   components: {
     autosearch,
   },
 };
 </script>
 
-<style scoped>
+<style>
+* {
+  box-sizing: border-box;
+}
+
 h1 {
   position: relative;
   text-align: center;

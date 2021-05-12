@@ -114,9 +114,6 @@ describe("vue2LeafletHeatmap", () => {
 
 describe("heatMap", () => {
   const wrapper = shallowMount(heatMap);
-  test('check if component Vue2LeafletHeatmap exixst', () => {
-    expect(wrapper.findComponent(vue2LeafletHeatmap).exists()).toBe(true);
-  });
   test('check if exist', () =>{
     expect(wrapper.exists()).toBe(true);
     expect(wrapper.find('does-not-exist').exists()).toBe(false);
