@@ -59,13 +59,15 @@ public class DetectionCustomRepositoryImpl implements DetectionCustomRepository 
     }
 
     public List<Detection> getDataRT(String city, String startDate) throws Exception {
+        // System.out.println("METODO----------------------------------- ");
         String temptime = startDate.substring(startDate.length() - 2);
         String tempDate = startDate.substring(0, startDate.length() - 2);
         int temp = Integer.valueOf(temptime);
         temp = temp + 1;
+
         String t;
-        System.out.println("TEMPDATE1: ");
-        System.out.println(tempDate);
+        // System.out.println("TEMPDATE1: ");
+        // System.out.println(tempDate);
         if (temp < 10) {
             t = "0" + temp;
         } else {
@@ -73,6 +75,10 @@ public class DetectionCustomRepositoryImpl implements DetectionCustomRepository 
         }
 
         tempDate = tempDate + t;
+        // System.out.println("tempDate post if: ");
+        // System.out.println(tempDate);
+        // System.out.println("startDate post if: ");
+        // System.out.println(startDate);
 
         Query query = new Query();
         startDate = startDate + ":00:00.000-0000";
