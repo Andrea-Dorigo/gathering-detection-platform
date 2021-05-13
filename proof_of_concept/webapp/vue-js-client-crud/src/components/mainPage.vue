@@ -9,14 +9,14 @@
 
 <template>
   <div id="mainPage">
-  <div id="myModalPDF" class="modalPDF">
+    <div id="myModalPDF" class="modalPDF">
       <div class="modal-contentPDF">
         <span class="closePDF" @click="closeModalPDF">&times;</span>
         <p>Non sono presenti dati per la data o l'ora selezionati</p>
         <button
           type="button"
           class="btn btn-outline-primary"
-          @click="closeModal"
+          @click="closeModalPDF"
         >
           OK
         </button>

@@ -99,36 +99,33 @@ export default {
     searchClicked: function() {
       var modal = document.getElementById("mymodalAutocompleteSearch");
       Elements.getCities().then((res) => {
-        var check = Elements.getCityById(this.searchText).then((res1) => {
-          if (res1.data) {
+        Elements.getCityById(this.searchText).then((res1) => {
+          console.log(res1.data[0]);
+          if (res1.data[0]) {
             this.searchText = res1.data[0];
-            console.log(this.searchText);
-            return this.searchText;
+          }
+          var place;
+          this.cit = res.data;
+          place = this.cit;
+          var present = false;
+          var i;
+          var city;
+          for (i = 0; i < place.length; i++) {
+            if (this.searchText.toLowerCase() === place[i].toLowerCase()) {
+              present = true;
+              city = place[i];
+            }
+          }
+          if (present === false) {
+            this.searchText = "";
+            modal.style.display = "block";
+          } else {
+            this.name = city;
+            this.$root.$refs.listCity_component.updateCity(this.name);
+            this.searchText = "";
+            this.updateMap(this.name);
           }
         });
-        //console.log(this.searchText);
-        console.log(check[[0]]);
-        var place;
-        this.cit = res.data;
-        place = this.cit;
-        var present = false;
-        var i;
-        var city;
-        for (i = 0; i < place.length; i++) {
-          if (this.searchText.toLowerCase() === place[i].toLowerCase()) {
-            present = true;
-            city = place[i];
-          }
-        }
-        if (present === false) {
-          this.searchText = "";
-          modal.style.display = "block";
-        } else {
-          this.name = city;
-          this.$root.$refs.listCity_component.updateCity(this.name);
-          this.searchText = "";
-          this.updateMap(this.name);
-        }
       });
     },
     updateMap: function(city) {
