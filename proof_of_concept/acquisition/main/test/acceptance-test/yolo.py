@@ -102,12 +102,17 @@ def count_objects_in_frame(frame_part):
                 (x, y) = (boxes[i][0], boxes[i][1])
                 (w, h) = (boxes[i][2], boxes[i][3])
 
-                # draw a bounding box rectangle and label on the image
-                cv2.rectangle(image, (x, y), (x + w, y + h), (0,255,0), 2)
-                text = "{}: {:.4f}".format(labels[class_ids[i]], confidences[i])
-                cv2.putText(image, text, (x, y - 5), cv2.FONT_HERSHEY_SIMPLEX,
-                    0.5, (255,0,0), 2)
-                # print(text)
+                text = "{}: {:.4f}".format("", confidences[i])
+                print(labels[class_ids[i]])
+                if labels[class_ids[i]] == "person":
+                    print("SONO DENTRO")
+
+                    # draw a bounding box rectangle and label on the image
+                    cv2.rectangle(image, (x, y), (x + w, y + h), (0,255,0), 2)
+                    cv2.putText(image, text, (x, y - 5), cv2.FONT_HERSHEY_SIMPLEX,
+                        0.9, (0,255,0), 2)
+
+                print(text)
                 if "person" in text:
                     count_person = count_person + 1
         # show the output image
