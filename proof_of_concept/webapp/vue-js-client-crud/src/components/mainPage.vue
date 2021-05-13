@@ -9,6 +9,19 @@
 
 <template>
   <div id="mainPage">
+    <div id="myModalPDF" class="modalPDF">
+      <div class="modal-contentPDF">
+        <span class="closePDF" @click="closeModalPDF">&times;</span>
+        <p>Non sono presenti dati per la data o l'ora selezionati</p>
+        <button
+          type="button"
+          class="btn btn-outline-primary"
+          @click="closeModalPDF"
+        >
+          OK
+        </button>
+      </div>
+    </div>
     <div id="mc">
       <div>
         <date-picker />
@@ -19,7 +32,7 @@
           value="Scarica i dati in formato pdf"
           @click="exportpdf"
         >
-          Scarica i dati
+          Scarica i dati in formato PDF
         </button>
       </div>
       <div id="sliderMap">
@@ -68,6 +81,7 @@ export default {
       this.$root.$refs.basicExample_component.retrieveCoordinate(date);
     },
     exportpdf: function() {
+      var modal = document.getElementById("myModalPDF");
       var doc = new jsPDF();
       var text = new Array();
       text[0] =
@@ -94,9 +108,13 @@ export default {
           doc.text(text, 10, 10);
           doc.save("dati.pdf");
         } else {
-          window.alert("rdrr");
+          modal.style.display = "block";
         }
       });
+    },
+    closeModalPDF: function() {
+      var modal = document.getElementById("myModalPDF");
+      modal.style.display = "none";
     },
   },
   created() {
@@ -106,8 +124,40 @@ export default {
 </script>
 
 <style scope>
+.modal-contentPDF {
+  z-index: 99;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+}
+.modalPDF {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+.closePDF {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.closePDF:hover,
+.closePDF:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
 #scaricaDati {
-  margin: 5% 0% 2% 40%;
+  margin: 5% 0% 2% 25%;
   padding: 1% 1% 1% 1%;
 }
 #mapList {

@@ -37,10 +37,23 @@ public class DetectionCustomRepositoryImpl implements DetectionCustomRepository 
         return mongoTemplate.findDistinct("city", Detection.class, String.class);
     }
 
+    public static boolean isInt(String str) {
+        try {
+            int x = Integer.parseInt(str);
+            return true; // String is an Integer
+        } catch (NumberFormatException e) {
+            return false; // String is not an Integer
+        }
+    }
+
     public List<String> getCityById(String id) {
-        int temp = Integer.valueOf(id);
-        Query query = new Query(Criteria.where("id_webcam").is(temp));
-        return mongoTemplate.findDistinct(query, "city", Detection.class, String.class);
+        if (isInt(id)) {
+            int temp = Integer.valueOf(id);
+            Query query = new Query(Criteria.where("id_webcam").is(temp));
+            return mongoTemplate.findDistinct(query, "city", Detection.class, String.class);
+        } else {
+            return new ArrayList<>();
+        }
     }
 
     public List<List<Double>> getLatLngs(String city) {
@@ -54,20 +67,16 @@ public class DetectionCustomRepositoryImpl implements DetectionCustomRepository 
             coo.add(lon.get(i));
             cooList.add(coo);
         }
-        System.out.println(cooList);
         return cooList;
     }
 
     public List<Detection> getDataRT(String city, String startDate) throws Exception {
-        // System.out.println("METODO----------------------------------- ");
         String temptime = startDate.substring(startDate.length() - 2);
         String tempDate = startDate.substring(0, startDate.length() - 2);
         int temp = Integer.valueOf(temptime);
         temp = temp + 1;
 
         String t;
-        // System.out.println("TEMPDATE1: ");
-        // System.out.println(tempDate);
         if (temp < 10) {
             t = "0" + temp;
         } else {
@@ -75,10 +84,6 @@ public class DetectionCustomRepositoryImpl implements DetectionCustomRepository 
         }
 
         tempDate = tempDate + t;
-        // System.out.println("tempDate post if: ");
-        // System.out.println(tempDate);
-        // System.out.println("startDate post if: ");
-        // System.out.println(startDate);
 
         Query query = new Query();
         startDate = startDate + ":00:00.000-0000";
@@ -112,7 +117,6 @@ public class DetectionCustomRepositoryImpl implements DetectionCustomRepository 
     public Detection getLastValue(String city) throws Exception {
         Query query = new Query();
         query.addCriteria(Criteria.where("city").is(city));
-        // query.addCriteria(Criteria.where("type").is(0));
         query.limit(1);
         query.with(Sort.by("time").descending());
         Detection LastValue = mongoTemplate.find(query, Detection.class, "detection").get(0);
