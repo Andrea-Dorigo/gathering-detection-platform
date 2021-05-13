@@ -8,7 +8,7 @@
 -->
 
 <template>
-  <div class="basic-example">
+  <div id="basic-example">
     <div id="myModal" class="modal">
       <div class="modal-content">
         <span class="close" @click="closeModal">&times;</span>
@@ -187,7 +187,7 @@ export default {
 </script>
 
 <style>
-.basic-example {
+#basic-example {
   width: 80%;
   height: 500px;
 }
