@@ -15,30 +15,19 @@ import cv2
 import numpy as np
 
 from weather import get_current_weather
-from get_frames import get_frames, extract_frame_from_video_url
+from get_frames import  extract_frame_from_video_url
 from cut_frame import cut_frame_in_six
 from yolo import count_objects_in_frame
 
 from json import dumps
-# from kafka import KafkaProducer
-
-# producer = KafkaProducer(bootstrap_servers=['localhost:9092'],
-#                          value_serializer=lambda x:
-#                          dumps(x).encode('utf-8')
-#                          )
 
 
 logging.basicConfig(filename='test.log', level=logging.DEBUG)
 
 statement = True
 PATH_WEBCAM_JSON = "../../../webcams.json"
-# PATH_M3U8 = "../m3u8/"
-# PATH_VIDEOS = "../videos/"
-# PATH_FRAMES = "../frames/"
-# PATH_FRAMES_PIECES= "../frames_pieces/"
 
 DETECTIONS_INTERVAL = 300
-
 
 
 def fetch_read_m3u8(webcam_link, webcam_prefix):
@@ -55,7 +44,6 @@ def fetch_read_m3u8(webcam_link, webcam_prefix):
 
 
 def main():
-    #while True :
 
         # imposta il tempo di attesa fra un conteggio di persone e l'altro
         print("Orario di inizio detection: " + str(datetime.now()) )
@@ -91,9 +79,8 @@ def main():
                 # scarica il video dal link appena ricavato
 
             try:
-                #urllib.request.urlretrieve(video_link, PATH_VIDEOS+"Video" + ".ts")
                 frame_is_read, frame = extract_frame_from_video_url(video_link)
-                #print(frame_is_read)
+                cv2.imwrite('frame' + str(webcam["city"]) + '.jpg', frame)
                 print('Frame estratto con successo')
             except:
                 print('Exception: video non disponibile: ' + webcam["location"])
@@ -112,11 +99,6 @@ def main():
 
             persone_contate = 0
 
-            # conta le persone in ogni sottoframe
-            # for frame in frame_part:
-            #     persone_contate = persone_contate + count_objects_in_frame(frame)
-
-            #Passo il frame intero a yolo
             persone_contate = count_objects_in_frame(frame_part)
 
             print("Persone: " + str(persone_contate))
@@ -134,26 +116,8 @@ def main():
             col3 = np.concatenate((img5, img6), axis=0)
             col12 = np.concatenate((col1, col2), axis=1)
             col123 = np.concatenate((col12, col3), axis=1)
-            cv2.imwrite('complete.jpg', col123)
-
-            # data = { 'id_webcam': webcam["id_webcam"],
-            # 		'city': webcam["city"],
-            # 		'location': webcam["location"],
-            # 		'latitude': webcam["latitude"],
-            # 		'longitude': webcam["longitude"],
-            # 		'numPeople': persone_contate,
-            # 		'date': current_date.strftime('%Y-%m-%d %H:%M:%S.%f'),
-            # 		'time': current_time.strftime('%Y-%m-%d %H:%M:%S.%f'),
-            # 		'type': 0,
-            # 		'weather_description': weather_description,
-            # 		'temperature': temperature,
-            # 		'day_of_week': datetime.now().date().weekday()}
-            # producer.send('gdp', value=data)
-            # print("ho fatto kafka")
-                # inserisci i risultati nel db
+            cv2.imwrite('complete' + str(webcam["city"])+'.jpg', col123)
 
 
-        # print("waiting for: " + str((t_end - datetime.now()).total_seconds()))
-        # time.sleep((t_end - datetime.now()).total_seconds())
 
 main()
