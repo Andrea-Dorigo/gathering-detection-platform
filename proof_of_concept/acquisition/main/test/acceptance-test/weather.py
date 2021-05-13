@@ -18,5 +18,3 @@ def get_current_weather(latitude,longitude):
 
     else:
         print(" Request didn't return 200 ")
-
-# get_current_weather(41.899139,12.473311)
