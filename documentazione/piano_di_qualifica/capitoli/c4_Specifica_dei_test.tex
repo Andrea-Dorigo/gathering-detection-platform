@@ -115,6 +115,9 @@ Sono stati individuati i seguenti test di unità per garantire il funzionamento 
 		\centering \textit{TU07} &  Verifica che il metodo in cui viene eseguita la query per il recupero della latitudine e/o longitudine relativa a una città dal database ritorni effettivamente il tipo di ritorno corretto, ovvero List$<$String$>$.
 		&\makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
 		\hline
+		\centering \textit{TU30} &  Verifica che il metodo in cui viene eseguita la query per il recupero della città in base all'id{\_}webcam dal database ritorni effettivamente il tipo di ritorno corretto, ovvero List$<$String$>$.
+		&\makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+		\hline
 		\rowcolor{white}
 		\caption{\textbf{Elenco test di unità - Spring}}
 	\end{longtable}
@@ -220,6 +223,8 @@ Sono stati individuati i seguenti test di unità per garantire il funzionamento 
 		\centering TU06 & \makecell[c]{proof{\_}of{\_}concept/webapp/webapp/src/test/java/com/webapp/\\data/mongodb/DetectionCustomRepositoryImplTest/\\DetectionCustomRepositoryImplTest.java} & \makecell[c]{getDataRTTest()}\\
 		\hline
 		\centering TU07 & \makecell[c]{proof{\_}of{\_}concept/webapp/webapp/src/test/java/com/webapp/\\data/mongodb/DetectionCustomRepositoryImplTest/\\DetectionCustomRepositoryImplTest.java} & \makecell[c]{getLatLngsTest()}\\
+		\hline
+		\centering TU30 & \makecell[c]{proof{\_}of{\_}concept/webapp/webapp/src/test/java/com/webapp/\\data/mongodb/DetectionCustomRepositoryImplTest/\\DetectionCustomRepositoryImplTest.java} & \makecell[c]{getCityByIdTest()}\\
 		\hline
 		\rowcolor{white}
 		\caption{\textbf{Tracciamento dei test di unità - Spring}}
