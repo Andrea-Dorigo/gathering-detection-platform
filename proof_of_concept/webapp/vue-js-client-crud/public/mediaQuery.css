@@ -1,4 +1,4 @@
-@media screen and (max-width: 1600px) {
+/* @media screen and (max-width: 1600px) {
     #errorResol {
       padding: 7%;
       display: block;
@@ -11,13 +11,13 @@
     #barAndFooter {
       display: none;
     }
-  }
+  } */
 
-  @media screen and (min-width: 1600px) {
+  /* @media screen and (min-width: 1600px) {
     #errorResol {
       display: none;
     }
-  }
+  } */
 
   @media screen and (max-width: 1770px) and (min-width: 1601px) {
     #barAndFooter {

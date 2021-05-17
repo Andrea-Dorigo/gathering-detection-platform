@@ -85,9 +85,18 @@ export default {
 }
 
 h1 {
+  font-weight: bold;
+  font-size: 3em;
+  padding: 0.3em;
   position: relative;
   text-align: center;
 }
+
+#barAndFooter {
+  max-width: none;
+  margin: auto;
+}
+
 #noFooter ul li {
   padding-left: 10%;
   padding-right: 10%;
@@ -98,12 +107,11 @@ h1 {
   margin-right: 1px !important;
 }
 footer {
-  bottom: 0em;
   width: 100%;
-  margin-bottom: 0em;
 }
+
 #noFooter {
-  position: relative;
+  /* position: relative; */
   min-height: 70vh;
   padding-bottom: 10em;
   display: block;
