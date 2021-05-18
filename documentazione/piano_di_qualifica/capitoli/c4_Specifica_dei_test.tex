@@ -54,14 +54,14 @@ I test che verranno effettuati sul prodotto software sono così divisi:
 	\item \textbf{Test di unità}: i test di unità servono per verificare le singole unità del software, ovvero le componenti con funzionamento autonomo.
 	Il superamento di tali test non implica il corretto funzionamento del software.
 	Viene contrassegnata da \textbf{[TU]}.
-	
+
 	\item \textbf{Test di integrazione}: questa tipologia di test verifica i singoli moduli del software come fossero un gruppo unico.
 	Vengono svolti successivamente ai \textit{TU} e prima dei \textit{TS}.
 	Sono contrassegnati da \textbf{[TI]};
-	
+
 	\item \textbf{Test di sistema}: i test di sistema vengono eseguiti per verificare che i requisiti$_{\scaleto{G}{3pt}}$, scritti nel documento \textit{Analisi dei Requisiti}, siano stati implementati e funzionanti.
 	Viene rappresentato mediante la sigla \textbf{[TS]};
-	
+
 	\item \textbf{Test di accettazione}: i test di accettazione hanno come scopo la verifica che il software sviluppato soddisfi i requisiti$_{\scaleto{G}{3pt}}$ presenti nel capitolato d’appalto$_G$ e concordati col proponente$_{\scaleto{G}{3pt}}$.
 	Questi saranno eseguiti durante il collaudo finale del prodotto software sotto l'osservazione sia dell'azienda proponente$_{\scaleto{G}{3pt}}$ sia del gruppo di lavoro.
 	Rappresentati mediante la sigla \textbf{[TA]};
@@ -228,7 +228,7 @@ Sono stati individuati i seguenti test di unità per garantire il funzionamento 
 		\hline
 		\rowcolor{white}
 		\caption{\textbf{Tracciamento dei test di unità - Spring}}
-	\end{longtable}	
+	\end{longtable}
 \end{center}
 
 \begin{center}
@@ -241,7 +241,7 @@ Sono stati individuati i seguenti test di unità per garantire il funzionamento 
 		\rowcolor{airforceblue}
 		\makecell[c]{\textbf{Id Test}} & \makecell[c]{\textbf{Percorso file}} & \makecell[c]{\textbf{Metodo}} \\
 		\hline
-		\centering TU08 & \makecell[c]{proof{\_}of{\_}concept/webapp/vue-js-client-crud/src/tests/unit/\\appTest.spec.js} & 
+		\centering TU08 & \makecell[c]{proof{\_}of{\_}concept/webapp/vue-js-client-crud/src/tests/unit/\\appTest.spec.js} &
 		aboutUs:check if exist\\
 		\hline
 		\centering TU09 & \makecell[c]{proof{\_}of{\_}concept/webapp/vue-js-client-crud/src/tests/unit/\\appTest.spec.js} & httpcommon:check if exist\\
@@ -288,14 +288,14 @@ Sono stati individuati i seguenti test di unità per garantire il funzionamento 
 		\hline
 		\rowcolor{white}
 		\caption{\textbf{Tracciamento dei test di unità - Vue.js}}
-	\end{longtable}	
+	\end{longtable}
 \end{center}
 
 \section{Test di integrazione}\label{SpecificaDeiTestTestDiIntegrazione}
 Sono stati individuati i seguenti test di integrazione per garantire il funzionamento dei diversi moduli nel momento in cui vengono messi in relazione tra di loro.
 \def\tabularxcolumn#1{m{#1}}
 {\rowcolors{2}{RawSienna!90!RawSienna!20}{RawSienna!70!RawSienna!40}
-	
+
 	\begin{center}
 		\renewcommand{\arraystretch}{1.4}
 		\begin{longtable}{|p{3cm}|p{8cm}|p{2cm}|p{2cm}|}
@@ -317,10 +317,10 @@ Sono stati individuati i seguenti test di integrazione per garantire il funziona
 	\end{center}
 
 \section{Test di sistema}\label{SpecificaDeiTestTestDiSistema}
-Sono stati individuati i seguenti test di sistema per garantire il funzionamento del prodotto sviluppato. I test di sistema sono stati identificati attraverso i requisiti indicati nel documento \textit{Analisi dei Requisiti 3.0.0}. 
+Sono stati individuati i seguenti test di sistema per garantire il funzionamento del prodotto sviluppato. I test di sistema sono stati identificati attraverso i requisiti indicati nel documento \textit{Analisi dei Requisiti 3.0.0}.
 \def\tabularxcolumn#1{m{#1}}
 {\rowcolors{2}{RawSienna!90!RawSienna!20}{RawSienna!70!RawSienna!40}
-	
+
 	\begin{center}
 		\renewcommand{\arraystretch}{1.4}
 		\begin{longtable}{|p{3cm}|p{8cm}|p{2cm}|p{2cm}|}
@@ -432,13 +432,13 @@ Sono stati individuati i seguenti test di sistema per garantire il funzionamento
 			\hline
 			\rowcolor{white}
 			\caption{\textbf{Elenco test di sistema}}\\
-		\end{longtable}		
+		\end{longtable}
 	\end{center}
 	\def\tabularxcolumn#1{m{#1}}
 	{\rowcolors{2}{RawSienna!90!RawSienna!20}{RawSienna!70!RawSienna!40}
-		
+
 		\subsection{Tracciamento dei test}\label{SpecificaDeiTestTestDiSistemaTracciamentoDeiTest}
-		
+
 		\begin{center}
 			\renewcommand{\arraystretch}{1.4}
 			\begin{longtable}{|p{3cm}|p{3cm}|}
@@ -552,16 +552,16 @@ Sono stati individuati i seguenti test di sistema per garantire il funzionamento
 				\rowcolor{white}
 				\caption{\textbf{Tracciamento dei test di sistema con i requisiti}}
 			\end{longtable}
-			
+
 		\end{center}
 
 \section{Test di accettazione}\label{SpecificaDeiTestTestDiAccettazione}
 I test di accettazione hanno lo scopo di dimostrare che il prodotto software realizzato soddifisfi i requisiti minimi concordati con il proponente. \\
-Questi test si compongono dei test di sistema e sono eseguiti durante il il collaudio finale sotto l'ooservazione sia del gruppo \textit{JawaDruids} che dell'azienda proponente \textit{SyncLab}.
+Questi test si compongono dei test di sistema e sono eseguiti durante il il collaudio finale sotto l'osservazione sia del gruppo \textit{JawaDruids} che dell'azienda proponente \textit{SyncLab}.
 
 \def\tabularxcolumn#1{m{#1}}
 {\rowcolors{2}{RawSienna!90!RawSienna!20}{RawSienna!70!RawSienna!40}
-	
+
 	\begin{center}
 		\renewcommand{\arraystretch}{1.4}
 		\begin{longtable}{|p{3cm}|p{8cm}|p{2cm}|p{2cm}|}
@@ -673,13 +673,13 @@ Questi test si compongono dei test di sistema e sono eseguiti durante il il coll
 			\hline
 			\rowcolor{white}
 			\caption{\textbf{Elenco test di accettazione}}\\
-		\end{longtable}		
+		\end{longtable}
 	\end{center}
 	\def\tabularxcolumn#1{m{#1}}
 	{\rowcolors{2}{RawSienna!90!RawSienna!20}{RawSienna!70!RawSienna!40}
-		
+
 		\subsection{Tracciamento dei test}\label{SpecificaDeiTestTestDiAccettazioneTracciamentoDeiTest}
-		
+
 		\begin{center}
 			\renewcommand{\arraystretch}{1.4}
 			\begin{longtable}{|p{3cm}|p{3cm}|}
@@ -793,5 +793,5 @@ Questi test si compongono dei test di sistema e sono eseguiti durante il il coll
 				\rowcolor{white}
 				\caption{\textbf{Tracciamento dei test di accettazione con i requisiti}}
 			\end{longtable}
-			
+
 		\end{center}
