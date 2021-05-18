@@ -125,7 +125,7 @@ public class DetectionCustomRepositoryImplTest {
   }
 
   @Test
-  public void getCityById() {
+  public void getCityByIdTest() {
     String i = "1";
     int x = Integer.parseInt(i);
     Query query = new Query(Criteria.where("id_webcam").is(x));
