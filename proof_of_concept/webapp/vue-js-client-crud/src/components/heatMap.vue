@@ -222,10 +222,10 @@ export default {
   text-decoration: none;
   cursor: pointer;
 }
+
 .leaflet-popup-content-wrapper,
 .leaflet-popup-tip {
   background: white;
-
   box-shadow: 0 3px 14px rgba(0, 0, 0, 0.4);
 }
 </style>

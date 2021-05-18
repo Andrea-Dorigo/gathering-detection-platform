@@ -34,6 +34,15 @@
         >
           Scarica i dati in formato PDF
         </button>
+        <button
+          id="scaricaDati"
+          type="button"
+          class="btn btn-outline-primary"
+          value="Scarica i dati in formato pdf"
+          @click="exportcsv"
+        >
+          Scarica i dati in formato CSV
+        </button>
       </div>
       <div id="sliderMap">
         <div id="sb">
@@ -63,6 +72,10 @@ import listCity from "./listCity.vue";
 import datePicker from "./datePicker.vue";
 import jsPDF from "jspdf";
 import Elements from "../services/htpprequest";
+import JsonCSV from "vue-json-csv";
+import Vue from "vue";
+
+Vue.component("downloadCsv", JsonCSV);
 
 export default {
   name: "mainPage",
@@ -112,6 +125,49 @@ export default {
         }
       });
     },
+    exportcsv: function() {
+      var modal = document.getElementById("myModalPDF");
+      Elements.getDataRT(
+        this.$root.$refs.autocompleteSearch_component.getNameCity(),
+        this.$root.$refs.datePicker_component.getDate()
+      ).then((res) => {
+        if (res.data != 0) {
+          var csv =
+            "ID webcam, Latitudine, Longitudine, Numero di persone, Data e ora, Tipologia di dati, Meteo, Temperatura, Giorno della settimana\n";
+          var tipo;
+          if (res.data[0].type == 0) tipo = "Tipologia di dati: Reali";
+          else tipo = "Tipologia di dati: Predetti";
+          var dati =
+            res.data[0].id_webcam +
+            "," +
+            res.data[0].latitude +
+            "," +
+            res.data[0].longitude +
+            "," +
+            res.data[0].numPeople +
+            "," +
+            res.data[0].date +
+            "," +
+            tipo +
+            "," +
+            res.data[0].weather_description +
+            "," +
+            res.data[0].temperature +
+            "," +
+            res.data[0].day_of_week +
+            "\n";
+          csv = csv + dati;
+          const anchor = document.createElement("a");
+          anchor.href =
+            "data:text/csv;charset=utf-8," + encodeURIComponent(csv);
+          anchor.target = "_blank";
+          anchor.download = "dati.csv";
+          anchor.click();
+        } else {
+          modal.style.display = "block";
+        }
+      });
+    },
     closeModalPDF: function() {
       var modal = document.getElementById("myModalPDF");
       modal.style.display = "none";
@@ -125,7 +181,6 @@ export default {
 
 <style scope>
 .modal-contentPDF {
-  z-index: 99;
   background-color: #fefefe;
   margin: auto;
   padding: 20px;
@@ -136,6 +191,7 @@ export default {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   padding-top: 100px; /* Location of the box */
+  z-index: 99;
   left: 0;
   top: 0;
   width: 100%; /* Full width */

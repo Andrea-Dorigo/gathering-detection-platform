@@ -12,6 +12,9 @@
               <li class="nav-item">
                 <router-link to="/chiSiamo">Chi siamo</router-link>
               </li>
+              <li class="nav-item">
+                <router-link to="/confrontoCittà">Confronto di città</router-link>
+              </li>
               <li>
                 <a :href="pdfLink" download="download">Manuale Utente</a>
               </li>
@@ -116,5 +119,11 @@ footer {
 
 #navsearch {
   display: flex;
+}
+
+#navbarSupportedContent ul li{
+  width: 40%;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 </style>
