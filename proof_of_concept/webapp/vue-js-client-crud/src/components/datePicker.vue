@@ -1,10 +1,10 @@
 <!--
   Project Name: GDP- Gathering Detection Platform
-  File Name: autocompleteSearch.vue
+  File Name: datePicker.vue
   Author: Margherita Mitillo
   Creation Date: 2021-04-12
   Summary: the file containes the code related to the date-picker.
-  Last change date: 2021-04-13
+  Last change date: 2021-04-30
 -->
 
 <template>

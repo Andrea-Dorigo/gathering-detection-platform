@@ -1,6 +1,6 @@
 <!--
   Project Name: GDP- Gathering Detection Platform
-  File Name: autocompleteSearch.vue
+  File Name: listCity.vue
   Author: Margherita Mitillo
   Creation Date: 2021-03-25
   Summary: the file is the component of the list of the cities.

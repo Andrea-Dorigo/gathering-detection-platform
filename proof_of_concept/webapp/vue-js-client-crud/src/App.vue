@@ -1,3 +1,13 @@
+<!--
+  Project Name: GDP- Gathering Detection Platform
+  File Name: mainPage.vue
+  Author: Margherita Mitillo
+  Creation Date: 2021-03-24
+  Summary: the file containes the code related to all the components presents in the webapp.
+  Last change date: 2021-05-16
+-->
+
+
 <template>
   <div id="barAndFooter">
     <div id="noFooter">

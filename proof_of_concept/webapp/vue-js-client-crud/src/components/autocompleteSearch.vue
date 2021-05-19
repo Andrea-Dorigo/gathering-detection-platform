@@ -1,10 +1,10 @@
 <!--
   Project Name: GDP- Gathering Detection Platform
   File Name: autocompleteSearch.vue
-  Author: Andrea Dorigo
+  Author: Emma Roveroni
   Creation Date: 2021-03-28
-  Summary: the file containes the necessary code to be able to implements the heat map.
-  Last change date: 2021-03-31
+  Summary: the file containes the necessary code that implements the search bar for the city, by name and by id.
+  Last change date: 2021-05-13
 -->
 
 <template>
@@ -82,7 +82,6 @@ export default {
           });
         }
       });
-      //var coo = Elements.getCoo();
     },
     itemSelected: function(index) {
       this.name = this.suggestiondata[index];
@@ -191,15 +190,15 @@ export default {
 }
 .modal {
   display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  padding-top: 100px; /* Location of the box */
+  position: fixed; 
+  padding-top: 100px; 
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  width: 100%; 
+  height: 100%;
+  overflow: auto; 
+  background-color: rgb(0, 0, 0); 
+  background-color: rgba(0, 0, 0, 0.4); 
 }
 .close {
   color: #aaaaaa;

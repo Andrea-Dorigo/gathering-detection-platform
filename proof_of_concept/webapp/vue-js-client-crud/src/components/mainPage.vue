@@ -1,6 +1,6 @@
 <!--
   Project Name: GDP- Gathering Detection Platform
-  File Name: autocompleteSearch.vue
+  File Name: mainPage.vue
   Author: Margherita Mitillo
   Creation Date: 2021-03-24
   Summary: the file containes the code related to all the components presents in the webapp.

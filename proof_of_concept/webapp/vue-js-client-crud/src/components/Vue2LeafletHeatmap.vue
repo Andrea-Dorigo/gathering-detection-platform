@@ -1,9 +1,9 @@
 <!--
   Project Name: GDP- Gathering Detection Platform
-  File Name: autocompleteSearch.vue
+  File Name: Vue2LeafletHeatMap.vue
   Author: Margherita Mitillo
   Creation Date: 2021-03-25
-  Summary: the file containes the code related to the search bar for the city
+  Summary: the file containes the leaflet code necessary to implement the heat-map.
   Last change date: 2021-03-31
 -->
 

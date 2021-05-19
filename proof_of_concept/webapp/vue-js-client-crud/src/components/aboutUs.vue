@@ -1,9 +1,9 @@
 <!--
   Project Name: GDP- Gathering Detection Platform
-  File Name: autocompleteSearch.vue
+  File Name: aboutUs.vue
   Author: Margherita Mitillo
   Creation Date: 2021-03-25
-  Summary: the file is the page "chi siamo" of the webapp.
+  Summary: the file is the page "about us" of the webapp with all the information about us, synclab and the webapp.
   Last change date: 2021-03-31
 -->
 

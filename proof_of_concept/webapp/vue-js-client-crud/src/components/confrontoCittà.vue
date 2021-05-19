@@ -1,3 +1,13 @@
+<!--
+  Project Name: GDP- Gathering Detection Platform
+  File Name: confrontoCittà.vue
+  Author: Margherita Mitillo
+  Creation Date: 2021-05-17
+  Summary: the file containes the necessary code that implements the comparison between two cities.
+  Last change date: 2021-05-19
+-->
+
+
 <template>
   <div>
     <div id="myModalC" class="modalC">
@@ -158,13 +168,23 @@ export default {
       var modal = document.getElementById("myModalC");
       if (this.itemSelected1 !== "" && this.itemSelected2 !== "") {
         Elements.getDataRT(this.itemSelected1, this.datePicked).then((res) => {
-          this.people1conf = res.data[0].numPeople;
+          if(res.data != 0){
+               this.people1conf = res.data[0].numPeople;
+          } else {
+            modal.style.display = "block";
+          }
+         
         });
         Elements.getDataRT(this.itemSelected2, this.datePicked).then((res) => {
-          this.people2conf = res.data[0].numPeople;
+          if(res.data!=0) {
+               this.people2conf = res.data[0].numPeople;
+          }
+         else {
+            modal.style.display = "block";
+          }
           var confScritta = document.getElementById("confrontoResult");
           confScritta.style.display = "block";
-          modal.style.display = "block";
+          //modal.style.display = "block";
         });
       } else {
         modal.style.display = "block";
@@ -237,6 +257,7 @@ export default {
 }
 
 #confrontoResult {
+  margin-top: 1em;
   display: none;
 }
 

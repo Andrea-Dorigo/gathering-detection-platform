@@ -1,10 +1,10 @@
 <!--
   Project Name: GDP- Gathering Detection Platform
-  File Name: autocompleteSearch.vue
+  File Name: heatMap.vue
   Author: Andrea Dorigo
   Creation Date: 2021-03-28
-  Summary: the file containes the code related to implementation of the heat map.
-  Last change date: 2021-03-31
+  Summary: the file containes the code related to the implementation of the heat map.
+  Last change date: 2021-05-12
 -->
 
 <template>
@@ -69,7 +69,6 @@ export default {
       markerLatLng: [41.899139, 12.473311],
       message,
       visibility: true,
-      //bgc: { backgroundColor: "" },
     };
   },
   methods: {
@@ -97,11 +96,9 @@ export default {
                 " persone";
               if (res1.data[0].type === 1) {
                 this.message = this.message + " [Dati predetti]";
-                //this.bgc.backgroundColor = "#06c8c2";
               }
               if (res1.data[0].type === 0) {
                 this.message = this.message + " [Dati reali]";
-                //this.bgc.backgroundColor = "#FF9F9F";
               }
               this.latlngs = [res1.data[0].latitude, res1.data[0].longitude];
               var geoPoints = this.generateRandomPoints(
@@ -200,15 +197,15 @@ export default {
 }
 .modal {
   display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  padding-top: 100px; /* Location of the box */
+  position: fixed; 
+  padding-top: 100px; 
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0, 0, 0); 
+  background-color: rgba(0, 0, 0, 0.4); 
 }
 .close {
   color: #aaaaaa;
