@@ -30,33 +30,35 @@ Di seguito vengono descritte le attività più importanti svolte nel modulo Acqu
 Da questo diagramma si può notare come il ciclo venga ripetuto ogni 5 minuti e per ogni webcam presente all'interno del file JSON associato.
 Il lasso di tempo pari a 5 minuti è stato deciso arbitrariamente dopo aver testato la velocità di riconoscimento persone effettuato da YOLO v3.
 È stato riscontrato che per elaborare 6 frame vengono impiegati circa 2 secondi per ciascuno.
-
-
+Successivamente vengono illustrate tutte le sotto-attività completate durante il ciclo di operazioni dell'attività principale di acquisizione.
 \begin{figure}[H]
   \begin{center}
     \includegraphics[scale=0.8]{../immagini/diag_PB/previsioni_del_tempo.png}
     \caption{Diagramma di sotto-attività dell'acquisizione delle previsioni meteo}
   \end{center}
 \end{figure}
+Nel diagramma in figura 5.3 viene illustrata la richiesta di informazioni all'API per le condizioni meteo in cui è posizionata la webcam. Il programma rimane in attesa della risposta dall'API, che alla sua ricezione completa l'attività salvando i dati forniti in una variabile.
 \begin{figure}[H]
   \begin{center}
     \includegraphics[scale=0.65]{../immagini/diag_PB/download_e_cut_frames.png}
     \caption{Diagramma di sotto-attività di download e taglio frame}
   \end{center}
 \end{figure}
+Nel diagramma in figura 5.4 vengono illustrate l'ordine di esecuzione delle attività di download del video, viene estrapolato un'immagine dal video e dividere l'immagine in 6 frame.
 \begin{figure}[H]
   \begin{center}
     \includegraphics[scale=0.7]{../immagini/diag_PB/conta_persone.png}
     \caption{Diagramma di sotto-attività del conta persone}
   \end{center}
 \end{figure}
+Nel diagramma in figura 5.5 vengono mostrate le operazioni ripetute all'interno di ogni frame$_{\scaleto{G}{3pt}}$ per ottenere il numero di persone in ognuno di essi. Completate queste operazioni iterative ogni conteggio viene sommato per trovare il totale delle persone presenti nell'immagine intera. 
 \begin{figure}[H]
   \begin{center}
     \includegraphics[scale=0.8]{../immagini/diag_PB/kafka.png}
     \caption{Diagramma di attività di Kafka}
   \end{center}
 \end{figure}
-
+Nel diagramma in figura 5.6 viene illustrato il funzionamento interno di Apache Kafka$_{\scaleto{G}{3pt}}$, il quale invia le informazioni al programma che consuma i dati inserendoli all'interno del database$_{\scaleto{G}{3pt}}$.
 
 \section{Architettura modulo Prediction}\label{ArchitetturaDelProdottoArchitetturaModuloPrediction}
 \subsection{Diagramma dei package}\label{ArchitetturaDelProdottoArchitetturaModuloPredictionDiagrammaDeiPackage}
@@ -131,6 +133,7 @@ Di seguito vengono visualizzate le dipendenze dei due sotto-moduli, per il back-
 \end{figure}
 
 \subsection{Diagramma di attività}\label{ArchitetturaModuloWebAppDiagrammaDiAttività}
+Il diagramma di attività mostrato in seguito descrive la modifica di un parametro attraverso l'interfaccia grafica del prodotto. L'utente all'interno del sito della web-app modifica l'istante di tempo visualizzato dalla mappa, attraverso i componenti dello slider, calendario e la selezione della città. Effettuata questa modifica vengono richiesti al back-end i dati relativi ai parametri inseriti. Il front-end a seguito della ricezione della risposta mostra all'utente la mappa aggiornata con i nuovi dati o un messaggio di errore della mancanza di informazioni per quei parametri inseriti. L'attività arriva al termine a seguito di una di queste due azioni.
 \begin{figure}[H]
   \begin{center}
     \includegraphics[scale=0.8]{../immagini/diag_PB/diag_act_front_back.png}
