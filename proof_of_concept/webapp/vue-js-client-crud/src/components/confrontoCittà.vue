@@ -184,7 +184,7 @@ export default {
       this.citiy2conf = "";
       this.people2conf = "";
       this.$root.$refs.datePicker_component.resetDate();
-      this.$root.$refs.slider_component.callbackRange();
+      this.$root.$refs.slider_component.reloadMap();
     },
     closeModalC: function() {
       var modal = document.getElementById("myModalC");
