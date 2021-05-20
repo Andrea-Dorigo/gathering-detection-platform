@@ -61,4 +61,8 @@ public class IndexController {
         return new ResponseEntity<>(detectionCustomRepository.getCityById(id), HttpStatus.OK);
     }
 
+    @GetMapping("/AllValue/{city}")
+    public ResponseEntity<List<Detection>> fetchAllValue(@PathVariable("city") String city) throws Exception {
+        return new ResponseEntity<>(detectionCustomRepository.getAllValue(city), HttpStatus.OK);
+    }
 }

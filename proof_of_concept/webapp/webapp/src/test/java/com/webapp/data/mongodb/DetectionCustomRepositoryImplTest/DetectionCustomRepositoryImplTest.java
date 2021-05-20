@@ -136,4 +136,19 @@ public class DetectionCustomRepositoryImplTest {
   }
 
 
+  
+  @Test
+  public void getAllValueTest() throws Exception {
+    String city = "Fake1";
+    Query query = new Query();
+    query.addCriteria(Criteria.where("city").is(city));
+    query.with(Sort.by("time").descending());
+    List<Detection> AllValue = new ArrayList<>();
+    AllValue.add(new Detection());
+    when(mongoTemplate.find(query, Detection.class, "detection")).thenReturn(AllValue);
+    underTest.getAllValue(city);
+    verify(mongoTemplate).find(query, Detection.class, "detection");
+  }
+
+
 }

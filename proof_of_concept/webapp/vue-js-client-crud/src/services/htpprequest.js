@@ -17,6 +17,9 @@ class Elements {
   getCityById(id) {
     return http.get(`/CityById/${id}`);
   }
+  getAllValue(city){
+    return http.get(`/AllValue/${city}`)
+  }
 }
 
 export default new Elements();

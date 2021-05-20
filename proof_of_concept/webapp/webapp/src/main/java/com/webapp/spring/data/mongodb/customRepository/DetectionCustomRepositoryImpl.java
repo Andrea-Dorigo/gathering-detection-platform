@@ -123,4 +123,13 @@ public class DetectionCustomRepositoryImpl implements DetectionCustomRepository 
 
         return LastValue;
     }
+
+    public List<Detection> getAllValue(String city) throws Exception {
+        Query query = new Query();
+        query.addCriteria(Criteria.where("city").is(city));
+        query.with(Sort.by("time").descending());
+        List<Detection> AllValue = mongoTemplate.find(query, Detection.class, "detection");
+        System.out.println(AllValue);
+        return AllValue;
+    }
 }

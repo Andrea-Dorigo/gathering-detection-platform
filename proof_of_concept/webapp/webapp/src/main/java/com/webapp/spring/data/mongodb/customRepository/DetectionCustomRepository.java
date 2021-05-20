@@ -21,4 +21,6 @@ public interface DetectionCustomRepository {
   public Detection getLastValue(String city) throws Exception;
 
   public List<String> getCityById(String id);
+
+  public  List<Detection> getAllValue(String city) throws Exception;
 }
