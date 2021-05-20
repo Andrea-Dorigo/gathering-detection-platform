@@ -23,7 +23,7 @@
                 <router-link to="/chiSiamo">Chi siamo</router-link>
               </li>
               <li class="nav-item">
-                <router-link to="/confrontoCittà">Confronto di città</router-link>
+                <router-link to="/confrontoCitta">Confronto di città</router-link>
               </li>
               <li>
                 <a :href="pdfLink" download="download">Manuale Utente</a>
