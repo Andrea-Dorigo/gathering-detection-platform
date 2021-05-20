@@ -4,7 +4,7 @@ import Router from "vue-router";
 
 import chiSiamo from "./components/aboutUs.vue";
 import mainPage from "./components/mainPage.vue";
-import confrontoCittà from "./components/confrontoCittà.vue"
+import confrontoCittà from "./components/confrontoCittà.vue";
 
 Vue.use(Router);
 

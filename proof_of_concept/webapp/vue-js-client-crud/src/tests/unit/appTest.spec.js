@@ -11,7 +11,7 @@ import vue2LeafletHeatmap from '../../components/vue2LeafletHeatmap.vue';
 import App from '../../App.vue';
 import httpRequest from '../../services/htpprequest.js';
 import httpcommon from '../../http-common.js';
-import confrontoCittà from '../../components/confrontoCittà.vue'
+import confrontoCittà from '../../components/confrontoCittà.vue';
 
 describe("chiSiamo", () => {
   const wrapper = mount(chiSiamo);

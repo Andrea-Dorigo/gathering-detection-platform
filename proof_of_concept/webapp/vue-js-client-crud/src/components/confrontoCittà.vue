@@ -184,7 +184,6 @@ export default {
           } else {
             modal.style.display = "block";
           }
-          //modal.style.display = "block";
         });
       } else {
         modal.style.display = "block";
