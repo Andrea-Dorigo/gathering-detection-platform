@@ -40,7 +40,7 @@
         :blur="60"
       ></Vue2LeafletHeatmap>
       <l-marker v-if="zoom > 16" :lat-lng="markerLatLng" :visible="visibility">
-        <l-popup id="popup" v-bind:style="bgc">{{ message }}</l-popup>
+        <l-popup id="popup">{{ message }}</l-popup>
       </l-marker>
     </l-map>
   </div>
