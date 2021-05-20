@@ -13,7 +13,7 @@
     <div id="noFooter">
       <h1>GDP: Gathering Detection Platform</h1>
       <div id="navsearch">
-        <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav id="navbar" class="navbar navbar-expand navbar-light bg-light"> <!-- -->
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item active">
@@ -49,13 +49,13 @@
             <h5 class="text-uppercase">Links</h5>
             <ul class="list-unstyled mb-0">
               <li>
-                <a href="https://www.synclab.it/" class="text-dark">Sync Lab</a>
+                <a href="https://www.synclab.it/">Sync Lab</a>
               </li>
             </ul>
           </div>
           <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase mb-0">Contatti</h5>
-            <ul class="list-unstyled">
+            <h5 class="text-uppercase ">Contatti</h5>
+            <ul class="list-unstyled mb-0">
               <li>
                 <a href="mailto: jawadruids@gmail.com">jawadruids@gmail.com</a>
               </li>
@@ -68,7 +68,7 @@
         style="background-color: rgba(0, 0, 0, 0.2);"
       >
         © 2020 Copyright:
-        <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        <a href="https://mdbootstrap.com/">MDBootstrap.com</a>
       </div>
     </footer>
   </div>
@@ -98,9 +98,20 @@ export default {
 }
 
 h1 {
+  font-weight: bold;
+  font-size: 2.5em;
+  padding: 0.3em;
   position: relative;
   text-align: center;
+  font-style: italic;
+  margin: auto;
 }
+
+#barAndFooter {
+  max-width: none;
+  margin: auto;
+}
+
 #noFooter ul li {
   padding-left: 10%;
   padding-right: 10%;
@@ -111,20 +122,22 @@ h1 {
   margin-right: 1px !important;
 }
 footer {
-  bottom: 0em;
+  /* bottom: 0em; */
   width: 100%;
-  margin-bottom: 0em;
+  /* margin-bottom: 0em; */
 }
 #noFooter {
-  position: relative;
+  /* position: relative; */
   min-height: 70vh;
-  padding-bottom: 10em;
+  padding-bottom: 2em;
   display: block;
   z-index: 0;
 }
 
 #navbar {
   width: 100%;
+  /* flex-flow: row nowrap;
+  justify-content: flex-start; */
 }
 
 #navsearch {
@@ -135,5 +148,9 @@ footer {
   width: 40%;
   padding-left: 2%;
   padding-right: 2%;
+}
+
+a {
+  color: blue;
 }
 </style>

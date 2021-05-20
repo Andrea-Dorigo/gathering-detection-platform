@@ -82,24 +82,25 @@ export default {
 
 <style scoped>
 #listCity ul {
-  background-color: white;
-  width: 10%;
-  position: absolute;
-  padding-left: 0px;
+  width: 100%;
+  position: relative;
+  margin: 0.5em;
+  padding: 0.5em;
 }
 #listCity ul li {
   border-radius: 2em;
   border: solid 1px black;
   list-style-type: none;
-  color: blue;
+  color: black;
   padding: 3% 2% 3% 2%;
   margin-bottom: 3%;
+  background-color: white;
 }
 #listCity ul li:hover {
   cursor: pointer;
 }
 #listCity {
-  padding-left: 20px;
-  padding-top: 30px;
+  width: 100%;
+  height: 100%;
 }
 </style>

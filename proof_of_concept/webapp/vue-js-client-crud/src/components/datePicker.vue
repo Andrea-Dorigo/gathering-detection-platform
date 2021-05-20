@@ -60,9 +60,19 @@ export default {
 
 <style scoped>
 #calendar {
-  z-index: 0;
+  /* z-index: 0;
   padding-right: 20px;
   padding-top: 150px;
-  margin-left: 50px;
+  margin-left: 50px; */
+  padding: 0.5em;
+  margin: 0.5em;
+}
+
+
+/**/
+.vdp-datePicker_calendar {
+  width: 100%;
+  height: 100%;
+  min-width: 280px;
 }
 </style>

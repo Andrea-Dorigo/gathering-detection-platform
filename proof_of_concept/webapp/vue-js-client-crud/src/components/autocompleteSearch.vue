@@ -49,7 +49,7 @@
       type="submit"
       @click="searchClicked"
     >
-      Search
+      Cerca
     </button>
   </div>
 </template>
@@ -154,7 +154,8 @@ export default {
 }
 #noButton {
   z-index: 0;
-  margin-right: 2%;
+  margin-right: 0.3em;
+  margin-top: 0.2em;
   width: 100%;
 }
 #autosearch {

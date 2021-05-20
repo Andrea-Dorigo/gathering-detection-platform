@@ -22,46 +22,58 @@
         </button>
       </div>
     </div>
-    <div id="mc">
-      <div>
-        <date-picker />
-        <button
+    <div class="wrapper">
+        <div class="topWrapper">
+          <div class="subTitle">
+            <h2>
+              Seleziona l'orario di cui vuoi visualizzare i dati
+            </h2>
+          </div>
+          <slider id="slider" />
+          <div class="bottoneRicarica">
+            <button
+              type="button"
+              class="btn btn-outline-primary"
+              value="Reload Map"
+              @click="getRetrieveCoordinate"
+            >
+              Ricarica mappa
+            </button>
+          </div>
+        </div>
+        <div class="main">
+          <heatMap id="map" />
+        </div>
+        <div class="aside aside-1">
+          <date-picker />
+        </div>
+        <div class="aside aside-2">
+          <listCity />
+        </div>
+        <div class="footer">
+          <button
           id="scaricaDati"
           type="button"
           class="btn btn-outline-primary"
           value="Scarica i dati in formato pdf"
           @click="exportpdf"
-        >
-          Scarica i dati in formato PDF
-        </button>
-        <button
-          id="scaricaDati"
-          type="button"
-          class="btn btn-outline-primary"
-          value="Scarica i dati in formato pdf"
-          @click="exportcsv"
-        >
-          Scarica i dati in formato CSV
-        </button>
-      </div>
-      <div id="sliderMap">
-        <div id="sb">
-          <slider id="slider" />
+          >
+            Scarica i dati in formato PDF
+          </button>
           <button
+            id="scaricaDati"
             type="button"
             class="btn btn-outline-primary"
-            value="Reload Map"
-            @click="getRetrieveCoordinate"
+            value="Scarica i dati in formato pdf"
+            @click="exportcsv"
           >
-            Reload map
+            Scarica i dati in formato CSV
           </button>
         </div>
-        <div id="mapList">
-          <heatMap id="map" />
-          <listCity />
-        </div>
-      </div>
     </div>
+    <!-- <div id="mc">
+
+    </div> -->
   </div>
 </template>
 
@@ -79,12 +91,12 @@ Vue.component("downloadCsv", JsonCSV);
 
 export default {
   name: "mainPage",
-  components: {
-    datePicker,
-    heatMap,
-    slider,
-    listCity,
-  },
+   components: {
+     datePicker,
+     heatMap,
+     slider,
+     listCity,
+   },
   methods: {
     getRetrieveCoordinate: function() {
       this.$root.$refs.datePicker_component.resetDate();
@@ -242,15 +254,15 @@ export default {
   display: flex;
 }
 #mainPage {
-  z-index: -2;
+  /* z-index: -2; */
 }
-#slider {
-  z-index: 0;
+/* #slider { */
+  /* z-index: 0;
   margin-left: 30px;
-  margin-right: 20px;
-  width: 80%;
-}
-#sb > button {
+  margin-right: 20px; */
+  /* width: 80%; */
+
+/* #sb > button {
   margin-top: 30px;
   margin-left: 60px;
   margin-right: 0px;
@@ -263,13 +275,142 @@ export default {
   width: 95%;
   padding-top: 10px;
   padding-bottom: 10px;
-}
+} */
 #map {
-  width: 1200px;
-  height: 600px;
+  width: 100%;
+  height: 100%;
+  min-width: 450px;
+  min-height: 240px;
 }
 #mc {
   padding-top: 10px;
   display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+  /* justify-content: space-around; */
+  /* align-content: flex-start; */
 }
+
+
+/*CSS NUOVO*/
+
+/* #mc > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+
+.header {
+  background: tomato;
+  margin: auto;
+}
+
+.main {
+  background: deepskyblue;
+  margin: auto;
+}
+.aside {
+  margin: auto;
+}
+
+.aside-1 {
+   background: gold;
+}
+
+.aside-2 {
+  background: hotpink;
+}
+
+.downloadButtons {
+    background: lightgreen;
+    margin: auto;
+} */
+
+.topWrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 3em 0 3em;
+
+  /* background: tomato; */
+}
+
+.subTitle {
+  margin-top: 1em;
+  padding: 0.3em;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-style: italic;
+}
+
+ #slider {
+   margin: 1em;
+   width: 80%;
+ }
+
+ .bottoneRicarica {
+   float: left;
+ }
+
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  font-weight: bold;
+  text-align: center;
+}
+
+.wrapper > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+
+.header {
+  /* background: tomato; */
+}
+
+.footer {
+  /* align-items: center; */
+  /* background: lightgreen; */
+}
+#scaricaDati {
+  margin: 0.5em;
+  padding: 0.5em;
+}
+
+.main {
+  text-align: left;
+  /* background: deepskyblue; */
+}
+
+.aside-1 {
+  align-items: center;
+  /* background: gold; */
+}
+
+.aside-2 {
+  /* background: hotpink; */
+}
+
+@media all and (min-width: 500px) {
+  .aside { flex: 1 0 0; }
+}
+
+@media all and (min-width: 1100px) {
+  .main    { flex: 3 0px; }
+  .aside-1 { order: 1; }
+  .main    { order: 2; }
+  .aside-2 { order: 3; }
+  .footer  { order: 4; }
+
+  #listCity ul li {
+    /* display: inline; */
+    padding: 1% 1% 1% 1% ;
+    width: 10%;
+    margin-right: 2% ;
+  }
+
+}
+
 </style>

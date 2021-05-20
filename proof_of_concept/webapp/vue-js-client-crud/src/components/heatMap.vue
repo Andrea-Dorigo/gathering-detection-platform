@@ -65,7 +65,7 @@ export default {
     return {
       latlngs: [[41.899139, 12.473311]],
       center: [41.899139, 12.473311],
-      zoom: 15,
+      zoom: 15.5,
       markerLatLng: [41.899139, 12.473311],
       message,
       visibility: true,
