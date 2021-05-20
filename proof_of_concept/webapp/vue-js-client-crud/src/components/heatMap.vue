@@ -79,7 +79,6 @@ export default {
         var temp = res.data.time;
         if (new Date(date + ":00:00") <= new Date(temp.replace(" CEST", ""))) {
           var numPeople = 0;
-          console.log("DATE: " + date);
           Elements.getDataRT(city, date).then((res1) => {
             if (res1.data != 0) {
               this.visibility = true;

@@ -22,8 +22,8 @@ export default new Router({
       component: chiSiamo,
     },
     {
-      path: "/confrontoCittà",
-      name: "confrontoCittà",
+      path: "/confrontoCitta",
+      name: "confrontoCitta",
       component: confrontoCittà,
     },
   ],

@@ -106,9 +106,7 @@ export default {
         this.$root.$refs.datePicker_component.getDate()
       ).then((res) => {
         if (res.data != 0) {
-          console.log(res.data);
           text[2] = "Id webcam: " + res.data[0].id_webcam;
-          console.log(res.data[0].id_webcam);
           text[3] = "Latitudine: " + res.data[0].latitude;
           text[4] = "Longitudine: " + res.data[0].longitude;
           text[5] = "Numero di persone: " + res.data[0].numPeople;
