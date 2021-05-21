@@ -3,8 +3,8 @@
   File Name: WebappApplicationTests.java
   Author: Andrea Cecchin
   Creation Date: 2021-03-26
-  Summary: the file is the repository that extends MongoRepository
-  Last change date: 2021-03-26
+  Summary: the file is the repository where are implemented all the query.
+  Last change date: 2021-05-12
 */
 package com.webapp.spring.data.mongodb.customRepository;
 
@@ -122,5 +122,14 @@ public class DetectionCustomRepositoryImpl implements DetectionCustomRepository 
         Detection LastValue = mongoTemplate.find(query, Detection.class, "detection").get(0);
 
         return LastValue;
+    }
+
+    public List<Detection> getAllValue(String city) throws Exception {
+        Query query = new Query();
+        query.addCriteria(Criteria.where("city").is(city));
+        query.with(Sort.by("time").descending());
+        List<Detection> AllValue = mongoTemplate.find(query, Detection.class, "detection");
+        System.out.println(AllValue);
+        return AllValue;
     }
 }
