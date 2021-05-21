@@ -3,8 +3,8 @@
   File Name: WebappApplicationTests.java
   Author: Emma Roveroni
   Creation Date: 2021-04-12
-  Summary: the file is the repository that extends MongoRepository
-  Last change date: 2021-04-13
+  Summary: the file containes all the unit tests.
+  Last change date: 2021-05-12
 */
 
 package com.webapp.data.mongodb.DetectionCustomRepositoryImplTest;
@@ -74,7 +74,7 @@ public class DetectionCustomRepositoryImplTest {
 
   @Test
   public void getDataRTTest() throws Exception {
-      // System.out.println("TEST----------------------------------- ");
+    
   	  String startDate = "2021-04-16T10";
   	  String city = "Fake1";
 
@@ -83,21 +83,15 @@ public class DetectionCustomRepositoryImplTest {
       int temp = Integer.valueOf(temptime);
       temp = temp + 1;
 
-      // System.out.println(temp);
+     
 
       String t;
-      // System.out.println("tempDate: ");
-      // System.out.println(tempDate);
       if (temp < 10) {
           t = "0" + temp;
       } else {
           t = Integer.toString(temp);
       }
       tempDate = tempDate + t;
-      // System.out.println("tempDate post if: ");
-      // System.out.println(tempDate);
-      // System.out.println("startDate post if: ");
-      // System.out.println(startDate);
 
       Query query = new Query();
       String testDate = startDate;
@@ -129,4 +123,32 @@ public class DetectionCustomRepositoryImplTest {
   	  verify(mongoTemplate).findDistinct(query, "latitude", Detection.class, Double.class);
 
   }
+
+  @Test
+  public void getCityByIdTest() {
+    String i = "1";
+    int x = Integer.parseInt(i);
+    Query query = new Query(Criteria.where("id_webcam").is(x));
+    List<String> cities = new ArrayList<>();
+    when(mongoTemplate.findDistinct(query,"city", Detection.class, String.class)).thenReturn(cities);
+    underTest.getCityById(i);
+    verify(mongoTemplate).findDistinct(query, "city", Detection.class, String.class);
+  }
+
+
+  
+  @Test
+  public void getAllValueTest() throws Exception {
+    String city = "Fake1";
+    Query query = new Query();
+    query.addCriteria(Criteria.where("city").is(city));
+    query.with(Sort.by("time").descending());
+    List<Detection> AllValue = new ArrayList<>();
+    AllValue.add(new Detection());
+    when(mongoTemplate.find(query, Detection.class, "detection")).thenReturn(AllValue);
+    underTest.getAllValue(city);
+    verify(mongoTemplate).find(query, Detection.class, "detection");
+  }
+
+
 }

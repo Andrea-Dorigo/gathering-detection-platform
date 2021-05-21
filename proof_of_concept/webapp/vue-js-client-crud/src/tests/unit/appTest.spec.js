@@ -11,6 +11,7 @@ import vue2LeafletHeatmap from '../../components/vue2LeafletHeatmap.vue';
 import App from '../../App.vue';
 import httpRequest from '../../services/htpprequest.js';
 import httpcommon from '../../http-common.js';
+import confrontoCittà from '../../components/confrontoCittà.vue';
 
 describe("chiSiamo", () => {
   const wrapper = mount(chiSiamo);
@@ -19,6 +20,15 @@ describe("chiSiamo", () => {
     expect(wrapper.find('does-not-exist').exists()).toBe(false);
   });
 });
+
+describe("confrontoCittà", () => {
+  const wrapper = mount(confrontoCittà);
+  test('check if exist', () =>{
+    expect(wrapper.exists()).toBe(true);
+    expect(wrapper.find('does-not-exist').exists()).toBe(false);
+  });
+});
+
 
 describe("httpcommon", () => {
   const wrapper = mount(httpcommon);
@@ -77,7 +87,7 @@ describe("datePicker", () => {
 });
 
 describe("slider", () => {
-  const wrapper = shallowMount(slider);
+  const wrapper = mount(slider);
   test('check if exist', () =>{
     expect(wrapper.exists()).toBe(true);
     expect(wrapper.find('does-not-exist').exists()).toBe(false);
@@ -128,12 +138,5 @@ describe("mainPage", () => {
   test('check if exist', () =>{
     expect(wrapper.exists()).toBe(true);
     expect(wrapper.find('does-not-exist').exists()).toBe(false);
-  });
-  test('check if getRetrieveCoordinate is called', () => {
-    const mockgetRetrieveCoordinate = jest.spyOn(wrapper.vm, "getRetrieveCoordinate");
-    wrapper.setMethods({toggleVisibility:jest.fn()});
-    expect(mockgetRetrieveCoordinate).not.toHaveBeenCalled();
-    wrapper.find('button').trigger('click');
-    expect(mockgetRetrieveCoordinate).toHaveBeenCalled();
   });
 });

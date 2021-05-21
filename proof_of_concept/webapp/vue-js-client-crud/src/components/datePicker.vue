@@ -1,10 +1,10 @@
 <!--
   Project Name: GDP- Gathering Detection Platform
-  File Name: autocompleteSearch.vue
+  File Name: datePicker.vue
   Author: Margherita Mitillo
   Creation Date: 2021-04-12
   Summary: the file containes the code related to the date-picker.
-  Last change date: 2021-04-13
+  Last change date: 2021-04-30
 -->
 
 <template>
@@ -60,9 +60,19 @@ export default {
 
 <style scoped>
 #calendar {
-  z-index: 0;
+  /* z-index: 0;
   padding-right: 20px;
   padding-top: 150px;
-  margin-left: 50px;
+  margin-left: 50px; */
+  padding: 0.5em;
+  margin: 0.5em;
+}
+
+
+/**/
+.vdp-datePicker_calendar {
+  width: 100%;
+  height: 100%;
+  min-width: 280px;
 }
 </style>

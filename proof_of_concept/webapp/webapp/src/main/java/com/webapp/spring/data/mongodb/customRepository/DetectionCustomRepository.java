@@ -4,7 +4,7 @@
   Author: Andrea Cecchin
   Creation Date: 2021-03-26
   Summary: the file is the repository that extends MongoRepository
-  Last change date: 2021-03-26
+  Last change date: 2021-05-12
 */
 package com.webapp.spring.data.mongodb.customRepository;
 
@@ -21,4 +21,6 @@ public interface DetectionCustomRepository {
   public Detection getLastValue(String city) throws Exception;
 
   public List<String> getCityById(String id);
+
+  public  List<Detection> getAllValue(String city) throws Exception;
 }

@@ -18,7 +18,7 @@
       display: none;
     }
   } */
-
+/*
   @media screen and (max-width: 1770px) and (min-width: 1601px) {
     #barAndFooter {
       display: block;
@@ -42,4 +42,13 @@
       width: 10% !important;
       margin-right: 2% !important;
     }
+  } */
+
+/* @media screen and (max-width: 1920px) and (min-width: 800px) {
+  #listCity ul li {
+    display: inline-block;
+    padding: 1% 1% 1% 1% !important;
+    width: 10% !important;
+    margin-right: 2% !important;
   }
+} */

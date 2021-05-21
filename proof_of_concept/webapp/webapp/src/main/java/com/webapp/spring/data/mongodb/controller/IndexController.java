@@ -3,8 +3,8 @@
   File Name: IndexController.java
   Author: Emma Roveroni
   Creation Date: 2021-03-07
-  Summary: the file containes the methods ??
-  Last change date: 2021-04-01
+  Summary: the file containes all the http request
+  Last change date: 2021-05-12
 */
 package com.webapp.spring.data.mongodb.controller;
 
@@ -61,4 +61,8 @@ public class IndexController {
         return new ResponseEntity<>(detectionCustomRepository.getCityById(id), HttpStatus.OK);
     }
 
+    @GetMapping("/AllValue/{city}")
+    public ResponseEntity<List<Detection>> fetchAllValue(@PathVariable("city") String city) throws Exception {
+        return new ResponseEntity<>(detectionCustomRepository.getAllValue(city), HttpStatus.OK);
+    }
 }
