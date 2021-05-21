@@ -23,7 +23,8 @@ La barra di navigazione dell'applicazione web$_{\scaleto{G}{3pt}}$ è quella rap
 \begin{enumerate}
 	\item \textit{Home}: link alla pagina iniziale;
 	\item \textit{Chi siamo}: link alla pagina "Chi siamo";
-	\item \textit{Manuale d'uso}: link per scaricare in formato pdf il manuale d'uso, in modo da conoscere tutte le funzionalità offerte dalla web-app$_G$ ed il loro funzionamento.
+	\item \textit{Manuale d'uso}: link per scaricare in formato pdf il manuale d'uso, in modo da conoscere tutte le funzionalità offerte dalla web-app$_G$ ed il loro funzionamento;
+	\item \textit{Confronto città}: link alla pagina in cui si può effettuare il confronto del flusso di persone fra due città. 
 	\item \textit{Barra di ricerca}: attraverso la barra di ricerca è possibile cercare, e quindi selezionare tra quelle disponibili, la città di cui si è interessati a visualizzare i dati sulla heat-map$_G$. La ricerca può avvenire sia in base al nome della città sia in base al codice numerico della webcam associata ad ogni città. \\ 
 	Per il codice numerico l'associazione città-codice attualemte è la seguente:
 	\begin{itemize}
@@ -33,7 +34,7 @@ La barra di navigazione dell'applicazione web$_{\scaleto{G}{3pt}}$ è quella rap
 		\item id{\_}webcam = 4, città = Krk.
 	\end{itemize}
 	\textit{Nel caso in cui vengano aggiunte città nel database, verrà aggiornato tale elenco che associa il codice alla città. Analogamente verrà aggiornato il manuale d'uso reperibile dalla web-app$_G$} \\
-	Nel caso in cui la città o il codice ricercato non è presente nel database, verrà visualizzato un messaggio d'errore che informa l'utente di ciò.
+	Infine, se la città o il codice ricercato non è presente nel database, verrà visualizzato un messaggio d'errore che informa l'utente di ciò.
 \end{enumerate}
 
 CAMBIO FOTO???
@@ -64,12 +65,7 @@ CAMBIO FOTO???
 
 \subsubsection{Elenco delle città} \label{UtilizzoDiGDPGatheringDetecionPlatformContenutoCentralePaginaInizialeHomeMenùATendina}
 L'elenco delle città, posizionato a destra della mappa, viene utilizzato per la selezione della città. Infatti, l'utente, quando apre l'applicazione web$_{\scaleto{G}{3pt}}$, visualizza la mappa centrata sulla città di Roma, la città di default, ma successivamente può scegliere di osservare il flusso di persone relativo ad un'altra città presente tra quelle messe a disposizione nella lista. 
-\begin{center}
-	\begin{figure}[h]
-		\centering\includegraphics[width=0.2\linewidth]{../immagini/manualeUtente/ElencoCittà.png}
-		\caption{\textbf{Elenco Città}}
-	\end{figure}
-\end{center}
+
 
 \subsubsection{Calendario e slider}\label{UtilizzoDiGDPGatheringDetecionPlatformContenutoCentralePaginaInizialeHomeCalendarioESlider}
 L'utente ha a disposizione, a sinistra della mappa, un calendario che gli permette di scegliere l'anno, il mese ed il giorno di cui desidera visualizzare i dati. Per selezionare il mese bisogna spostarsi usando le frecce poste ai lati (1), mentre per l'anno si seleziona sull'anno corrente (2).
@@ -103,33 +99,20 @@ Il bottone Download dati PDF permette all'utente di scaricare, in formato pdf, t
 \paragraph{Download dati csv} 
 Il bottone Download dati csv permette all'utente di scaricare, in formato csv, tutti i dati storicizzati nel database relativi alla città che si sta osservando. 
 
-\subsubsection{Bottone Confronto città} \label{UtilizzoDiGDPGatheringDetecionPlatformContenutoCentralePaginaInizialeHomeBottoneConfrontoCitta}
-?????
 \subsubsection{Messaggio d'errore} \label{UtilizzoDiGDPGatheringDetecionPlatformContenutoCentralePaginaInizialeHomeMessaggioDiErrore}
 Nel caso in cui non ci siano dati disponibili nel database per il luogo, il giorno e l'ora in questione, l'utente visualizzerà un messaggio di errore che lo informerà del disguido e la mappa non mostrerà nessun dato. L'utente potrà chiudere il messaggio d'errore premendo il pulsante "OK". 
-\begin{center}
-	\begin{figure}[H]
-		\centering\includegraphics[width=0.5\linewidth]{../immagini/manualeUtente/MessaggioErrore.png}
-		\caption{\textbf{Messaggio d'errore}}
-	\end{figure}
-\end{center}
+
 
 \subsection{Chi siamo} \label{UtilizzoDiGDPGatheringDetecionPlatformContenutoCentraleChiSiamo}
 In questa pagina è possibile visualizzare le informazioni che riguardano il team di sviluppo \textit{Jawa Druids}, l'azienda proponente \textit{Sync Lab} e il progetto \textit{GDP: Gathering Detection Platform}. 
 
-\begin{center}
-	\begin{figure}[H]
-		\centering\includegraphics[width=0.5\linewidth]{../immagini/manualeUtente/AboutUs.png}
-		\caption{\textbf{Chi siamo}}
-	\end{figure}
-\end{center} 
+
+\subsection{Confronto città} \label{UtilizzoDiGDPGatheringDetecionPlatformContenutoCentralePaginaInizialeHomeBottoneConfrontoCitta}
+In questa pagina l'utente ha la possibilità di confrontare il flusso di persone di due città. L'utente, infatti, deve selezionare, tramite i due appositi pulsanti, le due città, tra quelle presenti nel database, di cui desidera avere il confronto. \\
+ Premuto il pulsante "Confronta", apparirà sullo schermo una frase che riassume quante persone sono presenti nelle due città selezionate. \\
+ Se l'utente non specifica diversamente, egli vedrà il confronto dei dati delle due città in real time, ovvero del giorno e dell'ora attuali. Come nel caso della visualizzazione su heat-map, c'è la possibilità, per l'appunto, di selezionare un giorno ed un orario differenti da quelli correnti e di visualizzare quindi il confronto fra le due città relativo alle impostazioni scelte. \\
+ Nel caso in cui l'utente non ha selezionato una od entrambe le città, o se non ci sono dati disponibili nel database per le città, l'ora o il giorno scelto, verrà visualizzato un messaggio d'errore che informerà l'utente di tale problema (si veda \S~\ref{UtilizzoDiGDPGatheringDetecionPlatformContenutoCentralePaginaInizialeHomeMessaggioDiErrore} per maggiorni informazioni).
 
 \section{Footer}\label{UtilizzoDiGDPGatheringDetecionPlatformFooter}
 Il footer è presente in tutte le pagine dell'applicazione web$_{\scaleto{G}{3pt}}$ e riporta alcuni link utili, come quello del sito web dell'azienda \textit{Sync Lab} e la mail del team di sviluppo, da contattare in caso si riscontrino problemi con l'uso del prodotto software$_{\scaleto{G}{3pt}}$. 
 %da sistemare
-\begin{center}
-	\begin{figure}[H]
-		\centering\includegraphics[width=1\linewidth]{../immagini/manualeUtente/Footer.png}
-		\caption{\textbf{Footer}}
-	\end{figure}
-\end{center}
