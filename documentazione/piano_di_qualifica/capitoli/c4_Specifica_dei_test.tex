@@ -415,7 +415,7 @@ Sono stati individuati i seguenti test di sistema per garantire il funzionamento
 			\textit{TSRSFD33.2} & Verifica che l’utente possa poter ricercare tramite una barra di ricerca tramite codice identificativo le città presenti nel database & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
 			\textit{TSRSFD34} & Verifica che l’utente possa poter visualizzare il messaggio d'errore relativo alla mancanza dei dati ricercati attraverso la barra di ricerca nel database & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
 			\hline
-			\textit{TSRSFD35} & Verifica che l’utente possa poter visualizzare il confronto dei dati di due città selezionate dall'utente & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
+			\textit{TSRSFD35} & Verifica che l’utente possa poter visualizzare il confronto dei dati di due città selezionate dall'utente & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
 			\hline
 			\textit{TSRSFD36} & Verifica che l’utente possa poter salvare in un file locale i dati della città della mappa che sta visualizzando & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
 			\hline
@@ -574,107 +574,79 @@ Questi test si compongono dei test di sistema e sono eseguiti durante il il coll
 			\rowcolor{airforceblue}
 			\makecell[c]{\textbf{Id Test}} & \makecell[c]{\textbf{Descrizione}} & \makecell[c]{\textbf{Esito}} & \makecell[c]{\textbf{Qualità}} \\
 			\hline
-			\textit{TSRSFO1} & Verifica che il sistema utilizzi motori software 'contapersone' & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}} \\
+			\textit{TARSFO1} & Verifica che il sistema utilizzi motori software 'contapersone' & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}} \\
 			\hline
-			\textit{TSRSFF2} & Verifica che il sistema utilizzi simulatori di dati storici & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
+			\textit{TARSFF2} & Verifica che il sistema utilizzi simulatori di dati storici & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
 			\hline
-			\textit{TSRSFO3} & Verifica della visualizzazione di un messaggio d'errore in caso mancanza dati nella generazione della heat-map$_G$ &\makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\textit{TARSFO3} & Verifica della visualizzazione di un messaggio d'errore in caso mancanza dati nella generazione della heat-map$_G$ &\makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
 			\hline
-			\textit{TSRSFO4} & Verifica che il sistema archivi tutti i dati nel database & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\textit{TARSFO4} & Verifica che il sistema archivi tutti i dati nel database & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
 			\hline
-			\textit{TSRSFO5} & Verifica che il sistema elabori i dati dalle sorgenti esterne in tempo reale & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\textit{TARSFO5} & Verifica che il sistema elabori i dati dalle sorgenti esterne in tempo reale & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
 			\hline
-			\textit{TSRSFD6} & Verifica che il sistema effettui una previsione dell’insorgenza futura di variazioni significative di flussi di persone & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
+			\textit{TARSFD6} & Verifica che il sistema effettui una previsione dell’insorgenza futura di variazioni significative di flussi di persone & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
 			\hline
-			\textit{TSRSFO7} & Verifica che l’utente possa poter visualizzare i dati tramite heat map$_{\scaleto{G}{3pt}}$ & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\textit{TARSFO7} & Verifica che l’utente possa poter visualizzare i dati tramite heat map$_{\scaleto{G}{3pt}}$ & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
 			\hline
-			\textit{TSRSFO8} & Verifica che Apache kafka crei una comunicazione tra il programma con il software contapersone e il database & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\textit{TARSFO8} & Verifica che Apache kafka crei una comunicazione tra il programma con il software contapersone e il database & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
 			\hline
-			\textit{TSRSFO9} & Verifica che l’utente possa poter visualizzare i dati in tempo reale tramite heat map$_{\scaleto{G}{3pt}}$ & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\textit{TARSFF9} & Verifica che l'utente possa poter distinguere tra i dati simulati e quelli reali & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
 			\hline
-			\textit{TSRSFO10} & Verifica che l’utente possa poter visualizzare i dati storicizzati tramite heat map$_{\scaleto{G}{3pt}}$ & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\textit{TARSFD1O} & Verfica che l’utente possa poter visualizzare un indice di affidabilità dei dati nella mappa & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
 			\hline
-			\textit{TSRSFO11} & Verifica che l’utente possa poter visualizzare una previsione tramite heat map$_{\scaleto{G}{3pt}}$ & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\textit{TARSFF11} & Verifica che l’utente possa poter applicare dei filtri ai dati (reali, simulati) & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
 			\hline
-			\textit{TSRSFF12} & Verifica che l'utente possa poter distinguere tra i dati simulati e quelli reali & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\textit{TARSFF12} & Verifica che l’utente abbia la possibilità di scegliere le sorgenti dati da cui prelevare dati tempo reale & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
 			\hline
-			\textit{TSRSFD13} & Verfica che l’utente possa poter visualizzare un indice di affidabilità della previsione nella mappa & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
+			\textit{TARSFO13} & Verifica che il sistema aggiorni la mappa automaticamente ogni 10 minuti & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
 			\hline
-			\textit{TSRSFD14} & Verifica che l’utente possa poter visualizzare un indice di affidabilità dei dati in tempo reale nella mappa & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
+			\textit{TARSFO14} & Verifica che il modello di machine learning$_{\scaleto{G}{3pt}}$ salvi i pesi e le predizioni in un file & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
 			\hline
-			\textit{TSRSFF15} & Verifica che l’utente possa poter applicare dei filtri ai dati (reali, simulati) & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
+			\textit{TARSFO15} & Verifica che venga inviato un messaggio di errore al front end , dal backend, se non ci sono i dati richiesti & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
 			\hline
-			\textit{TSRSFF16} & Verifica che l’utente abbia la possibilità di scegliere le sorgenti dati da cui prelevare dati tempo reale & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
+			\textit{TARSFO16} & Verifica che l’utente possa selezionare una città tra quelle disponibili & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
 			\hline
-			\textit{TSRSFO17} & Verifica che il sistema aggiorni la mappa automaticamente ogni 10 minuti & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\textit{TARSFO17} & Verifica che l'utente visualizzi le zone delle città rispettivamente alle zone utilizzate & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
 			\hline
-			\textit{TSRSFO18} & Verifica che il modello di machine learning$_{\scaleto{G}{3pt}}$ salvi i pesi e le predizioni in un file & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\textit{TARSFO18} & Verifica che il sistema archivi i dati in tempo reale con la data e orario di riferimento associata & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
 			\hline
-			\textit{TSRSFO19} & Verifica che venga inviato un messaggio di errore al front end , dal backend, se non ci sono i dati richiesti & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\textit{TARSFF19} & Verifica che il sistema utilizzi i dati delle predizioni in caso di mancanza di dati in tempo reale & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
 			\hline
-			\textit{TSRSFO20} & Verifica che l’utente possa selezionare una città tra quelle disponibili & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\textit{TARSFO20} & Verifica che l'utente possa selezionare l'intervallo orario in fasce orarie & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
 			\hline
-			\textit{TSRSFO21} & Verifica che l'utente visualizzi le zone delle città rispettivamente alle zone utilizzate & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\textit{TARSFO21} & Verifica che il sistema utilizzi in modo prioritario i dati reali se presenti anche quelli determinati per le predizioni & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
 			\hline
-			\textit{TSRSFO22} & Verifica che il sistema archivi i dati in tempo reale con la data e orario di riferimento associata & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\textit{TARSFO22} & Verifica che il sistema aggiorni automaticamente la mappa alla selezione di un diverso orario & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
 			\hline
-			\textit{TSRSFF23} & Verifica che il sistema utilizzi i dati delle predizioni in caso di mancanza di dati in tempo reale & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\textit{TARSFO23} & Verifica che l’utente possa poter selezionare la data del giorno di cui vuole visualizzare i dati & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
 			\hline
-			\textit{TSRSFO24} & Verifica che l'utente possa selezionare l'intervallo orario in fasce orarie & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\textit{TARSFO24} & Verifica che l’utente possa poter ripristinare la visione in tempo reale tramite un pulsante di ripristino & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
 			\hline
-			\textit{TSRSFO25} & Verifica che il sistema utilizzi in modo prioritario i dati reali se presenti anche quelli determinati per le predizioni & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\textit{TARSFD25} & Verifica che il sistema prelevi dati da diverse fonti e le formatti nel tipo di default & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
 			\hline
-			\textit{TSRSFO26} & Verifica che il sistema aggiorni automaticamente la mappa alla selezione di un diverso orario & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\textit{TARSFO26} & Verifica che il sistema utilizzi un software contapersone già allenato & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
 			\hline
-			\textit{TSRSFO27} & Verifica che l’utente possa poter selezionare la data del giorno di cui vuole visualizzare i dati & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\textit{TARSFF27} & Verifica che l’utente possa poter reperire il manuale d'uso & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
 			\hline
-			\textit{TSRSFO28} & Verifica che l’utente possa poter ripristinare la visione in tempo reale tramite un pulsante di ripristino & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\textit{TARSFO28} & Verifica che l’utente possa poter variare il livello di zoom della heat map$_{\scaleto{G}{3pt}}$ & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
 			\hline
-			\textit{TSRSFD29} & Verifica che il sistema prelevi dati da diverse fonti e le formatti nel tipo di default & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\textit{TARSFD29} & Verifica che l’utente possa poter ricercare tramite una barra di ricerca le città presenti nel database & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
 			\hline
-			\textit{TSRSFO30} & Verifica che il sistema utilizzi un software contapersone già allenato & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\textit{TARSFD30} & Verifica che l’utente possa poter visualizzare il messaggio d'errore relativo alla mancanza dei dati ricercati attraverso la barra di ricerca nel database & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
 			\hline
-			\textit{TSRSFF31} & Verifica che l’utente possa poter reperire il manuale d'uso & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\textit{TARSFD31} & Verifica che l’utente possa poter visualizzare il confronto dei dati di due città selezionate dall'utente & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
 			\hline
-			\textit{TSRSFO32} & Verifica che l’utente possa poter variare il livello di zoom della heat map$_{\scaleto{G}{3pt}}$ & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\textit{TARSFD32} & Verifica che l’utente possa poter salvare in un file locale i dati della città della mappa che sta visualizzando & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
 			\hline
-			\textit{TSRSFO32.1} & Verifica che l’utente possa poter aumentare il livello di zoom della heat map$_{\scaleto{G}{3pt}}$ & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\textit{TARSFD33} & Verifica che l’utente possa poter inserire l'email per il ricevimento delle informazioni delle informazioni della città selezionata & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
 			\hline
-			\textit{TSRSFO32.1.1} & Verifica che l’utente possa poter attuare il drag$_{\scaleto{G}{3pt}}$ della heat map$_{\scaleto{G}{3pt}}$ & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\textit{TARSFD34} & Verifica che il sistema abbia inserito correttamente l'email e la città correlata nel database & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
 			\hline
-			\textit{TSRSFO32.1.2} & Verifica che l’utente possa poter visualizzare il pop-up$_{\scaleto{G}{3pt}}$ legato ad un punto di interesse & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\textit{TARSFD35} & Verifica che il sistema invii correttamente l'email all'utente & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
 			\hline
-			\textit{TSRSFO32.1.3} & Verifica che l’utente possa poter chiudere il pop-up$_{\scaleto{G}{3pt}}$ legato ad un punto di interesse & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
+			\textit{TARSFD36} & Verifica che l’utente possa poter visualizzare la lista delle città più ricercate & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
 			\hline
-			\textit{TSRSFO32.2} & Verifica che l’utente possa poter diminuire il livello di zoom della heat map$_{\scaleto{G}{3pt}}$ & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
-			\hline
-			\textit{TSRSFD33} & Verifica che l’utente possa poter ricercare tramite una barra di ricerca le città presenti nel database & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
-			\hline
-			\hline
-			\textit{TSRSFD33.1} & Verifica che l’utente possa poter ricercare tramite una barra di ricerca per nome le città presenti nel database & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
-			\hline
-			\textit{TSRSFD33.2} & Verifica che l’utente possa poter ricercare tramite una barra di ricerca tramite codice identificativo le città presenti nel database & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
-			\textit{TSRSFD34} & Verifica che l’utente possa poter visualizzare il messaggio d'errore relativo alla mancanza dei dati ricercati attraverso la barra di ricerca nel database & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
-			\hline
-			\textit{TSRSFD35} & Verifica che l’utente possa poter visualizzare il confronto dei dati di due città selezionate dall'utente & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\textit{TSRSFD36} & Verifica che l’utente possa poter salvare in un file locale i dati della città della mappa che sta visualizzando & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
-			\hline
-			\textit{TSRSFD36.1} & Verifica che l’utente possa poter salvare in un file formato PDF locale i dati della città della mappa che sta visualizzando & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
-			\hline
-			\textit{TSRSFD36.2} & Verifica che l’utente possa poter salvare in un file formato cvs locale i dati della città della mappa che sta visualizzando & \makecell[tc]{\textit{I}} & \makecell[tc]{\textit{S}}\\
-			\hline
-			\textit{TSRSFD37} & Verifica che l’utente possa poter inserire l'email per il ricevimento delle informazioni delle informazioni della città selezionata & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\textit{TSRSFD37.1} & Verifica che l’utente possa poter visualizzare un messaggio di errore nel caso l'email inserita sia scritta in modo errato & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\textit{TSRSFD38} & Verifica che il sistema abbia inserito correttamente l'email e la città correlata nel database & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\textit{TSRSFD39} & Verifica che il sistema invii correttamente l'email all'utente & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\textit{TSRSFD40} & Verifica che l’utente possa poter visualizzare la lista delle città più ricercate & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
-			\hline
-			\textit{TSRSFD41} & Verifica che l’utente possa poter visualizzare la lista di tutte le città presenti nel database in ordine crescente per rischio & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
+			\textit{TARSFD37} & Verifica che l’utente possa poter visualizzare la lista di tutte le città presenti nel database in ordine crescente per rischio & \makecell[tc]{\textit{NI}} & \makecell[tc]{\textit{-}}\\
 			\hline
 			\rowcolor{white}
 			\caption{\textbf{Elenco test di accettazione}}\\
@@ -693,107 +665,79 @@ Questi test si compongono dei test di sistema e sono eseguiti durante il il coll
 				\makecell[c]{\textbf{Id Test}} & \makecell[c]{\textbf{Id Requisito}} \\
 				\hline
 				\hline
-				TSRSFO1	& \makecell{RSFO1} \\
+				TARSFO1	& \makecell{RSFO1} \\
 				\hline
 				TSRSFF2 & \makecell{RSFF2} \\
 				\hline
-				TSRSFO3 & \makecell{RSFO3}  \\
+				TARSFO3 & \makecell{RSFO3}  \\
 				\hline
-				TSRSFO4 & \makecell{RSFO4 \\ RSFO4.1 \\ RSFO4.2} \\
+				TSRSFO4 & \makecell{RSFO4 \\ RAFO4.1 \\ RSFO4.2} \\
 				\hline
-				TSRSFO5 & \makecell{RSFO5} \\
+				TARSFO5 & \makecell{RSFO5} \\
 				\hline
-				TSRSFD6 & \makecell{RSFD6} \\
+				TARSFD6 & \makecell{RSFD6} \\
 				\hline
-				TSRSFO7 & \makecell{RSFO7} \\
+				TARSFO7 & \makecell{RSFO7 \\ RSFO9 \\ RSFO10 \\ RSFO11 } \\
 				\hline
-				TSRSFO8 & \makecell{RSFO8} \\
+				TARSFO8 & \makecell{RSFO8} \\
 				\hline
-				TSRSFO9 & \makecell{RSFO9} \\
+				TARSFF9 & \makecell{RSFF12} \\
 				\hline
-				TSRSFO10 & \makecell{RSFO10} \\
+				TARSFD10 & \makecell{RSFD13 \\ RSFD14} \\
 				\hline
-				TSRSFO11 & \makecell{RSFO11} \\
+				TARSFF11 & \makecell{RSFF15} \\
 				\hline
-				TSRSFF12 & \makecell{RSFF12} \\
+				TARSFF12 & \makecell{RSFF16}\\
 				\hline
-				TSRSFD13 & \makecell{RSFD13} \\
+				TARSFO13 & \makecell{RSFO17} \\
 				\hline
-				TSRSFD14 & \makecell{RSFD14} \\
+				TARSFO14 & \makecell{RSFO18 \\ RSFO18.1} \\
 				\hline
-				TSRSFF15 & \makecell{RSFF15} \\
+				TARSFO15 & \makecell{RSFO19} \\
 				\hline
-				TSRSFF16 & \makecell{RSFF16}\\
+				TARSFO16 & \makecell{RSFO20} \\
 				\hline
-				TSRSFO17 & \makecell{RSFO17} \\
+				TARSFO17 & \makecell{RSFO21} \\
 				\hline
-				TSRSFO18 & \makecell{RSFO18 \\ RSFO18.1} \\
+				TARSFO18 & \makecell{RSFO22 \\ RSFO22.1 \\ RSFO22.2} \\
 				\hline
-				TSRSFO19 & \makecell{RSFO19} \\
+				TARSFF19 & \makecell{RSFF23} \\
 				\hline
-				TSRSFO20 & \makecell{RSFO20} \\
+				TARSFO20 & \makecell{RSFO24} \\
 				\hline
-				TSRSFO21 & \makecell{RSFO21} \\
+				TARSFO21 & \makecell{RSFO25} \\
 				\hline
-				TSRSFO22 & \makecell{RSFO22 \\ RSFO22.1 \\ RSFO22.2} \\
+				TARSFO22 & \makecell{RSFO26} \\
 				\hline
-				TSRSFF23 & \makecell{RSFF23} \\
+				TARSFO23 & \makecell{RSFO27} \\
 				\hline
-				TSRSFO24 & \makecell{RSFO24} \\
+				TARSFO24 & \makecell{RSFO28} \\
 				\hline
-				TSRSFO25 & \makecell{RSFO25} \\
+				TARSFD25 & \makecell{RSFD29}\\
 				\hline
-				TSRSFO26 & \makecell{RSFO26} \\
+				TARSFO26 & \makecell{RSFO30} \\
 				\hline
-				TSRSFO27 & \makecell{RSFO27} \\
+				TARSFF27 & \makecell{RSFF31} \\
 				\hline
-				TSRSFO28 & \makecell{RSFO28} \\
+				TARSFO28 & \makecell{RSFO32 \\ RSFO32.1 \\ RSFO32.1.1 \\ RSFO32.1.2 \\ RSFO32.1.3 \\ RSFO32.2 }\\
 				\hline
-				TSRSFD29 & \makecell{RSFD29}\\
+				TARSFD29 & \makecell{RSFD33 \\ RSFD33.1 \\ RSFD33.2}\\
 				\hline
-				TSRSFO30 & \makecell{RSFO30} \\
+				TARSFD30 & \makecell{RSFD34}\\
 				\hline
-				TSRSFF31 & \makecell{RSFF31} \\
+				TARSFD31 & \makecell{RSFD35}\\
 				\hline
-				TSRSFO32 & \makecell{RSFO32}\\
+				TARSFD32 & \makecell{RSFD36 \\ RSFD36.1 \\ RSFD36.2} \\
 				\hline
-				TSRSFO32.1 & \makecell{RSFO32.1} \\
+				TARSFD33 & \makecell{RSFD37 \\ RSFD37.1} \\
 				\hline
-				TSRSFO32.1.1 & \makecell{RSFO32.1.1} \\
+				TARSFD34 & \makecell{RSFD38} \\
 				\hline
-				TSRSFO32.1.2 & \makecell{RSFO32.1.2} \\
+				TARSFD35 & \makecell{RSFD39} \\
 				\hline
-				TSRSFO32.1.3 & \makecell{RSFO32.1.3} \\
+				TARSFD36 & \makecell{RSFD40} \\
 				\hline
-				TSRSFO32.2 & \makecell{RSFO32.2}\\
-				\hline
-				TSRSFD33 & \makecell{RSFD33}\\
-				\hline
-				TSRSFD33.1 & \makecell{RSFD33.1}\\
-				\hline
-				TSRSFD33.2 & \makecell{RSFD33.2}\\
-				\hline
-				TSRSFD34 & \makecell{RSFD34}\\
-				\hline
-				TSRSFD35 & \makecell{RSFD35}\\
-				\hline
-				TSRSFD36 & \makecell{RSFD36} \\
-				\hline
-				TSRSFD36.1 & \makecell{RSFD36.1} \\
-				\hline
-				TSRSFD36.2 & \makecell{RSFD36.2} \\
-				\hline
-				TSRSFD37 & \makecell{RSFD37} \\
-				\hline
-				TSRSFD37.1 & \makecell{RSFD37.1} \\
-				\hline
-				TSRSFD38 & \makecell{RSFD38} \\
-				\hline
-				TSRSFD39 & \makecell{RSFD39} \\
-				\hline
-				TSRSFD40 & \makecell{RSFD40} \\
-				\hline
-				TSRSFD41 & \makecell{RSFD41} \\
+				TARSFD37 & \makecell{RSFD41} \\
 				\hline
 				\rowcolor{white}
 				\caption{\textbf{Tracciamento dei test di accettazione con i requisiti}}
