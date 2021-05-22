@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "webpack-defaults": "webpack-defaults"
   },
   "dependencies": {
     "@syncfusion/ej2-base": "^18.4.44",
@@ -14,6 +15,7 @@
     "@vueform/slider": "^1.0.3",
     "axios": "^0.21.1",
     "chokidar": "^3.5.1",
+    "cli-service": "^0.0.2",
     "core-js": "^3.6.5",
     "easy-vue-leaflet": "^1.1.4",
     "extglob": "^2.0.4",

@@ -102,7 +102,7 @@ export default {
               this.latlngs = [res1.data[0].latitude, res1.data[0].longitude];
               var geoPoints = this.generateRandomPoints(
                 { lat: this.latlngs[0], lng: this.latlngs[1] },
-                10,
+                1,
                 numPeople
               );
               this.$root.$refs.LHeatmap_component.setHeatLayer(geoPoints);
@@ -196,15 +196,15 @@ export default {
 }
 .modal {
   display: none; /* Hidden by default */
-  position: fixed; 
-  padding-top: 100px; 
+  position: fixed;
+  padding-top: 100px;
   left: 0;
   top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
-  background-color: rgb(0, 0, 0); 
-  background-color: rgba(0, 0, 0, 0.4); 
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 .close {
   color: #aaaaaa;
