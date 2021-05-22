@@ -28,16 +28,22 @@ L'utilizzo di \textit{Git Large File Storage} permette l'upload e il download di
 Dopo aver eseguito il passo sopra descritto, è necessario installare le dipendenze necessarie a far eseguire il prodotto software$_{\scaleto{G}{3pt}}$ adeguatamente.
 Per fare ciò è sufficiente aprire il terminale all'interno della cartella \textit{gathering-detection-platform$_{\scaleto{G}{3pt}}$}, ed eseguire i seguenti comandi:
 \begin{lstlisting}
-  sudo apt install python3-opencv python3-pip mongo maven npm
+  sudo apt install python3-opencv python3-pip mongodb maven npm
 \end{lstlisting}
 \begin{lstlisting}
   pip3 install mongoengine
+\end{lstlisting}
+\begin{lstlisting}
+  pip3 install kafka-python
+\end{lstlisting}
+\begin{lstlisting}
+  pip3 install image_slicer
 \end{lstlisting}
 Per installare la dipendenza concernente a Kafka$_G$ si sono seguiti i passaggi presenti al seguente link:
 \begin{center}
     \url{https://kafka.apache.org/quickstart}
 \end{center}
-Durante il suo processo di configurazione il nome del topic$_G$ da inserire è \textbf{gdp}.
+Durante il suo processo di configurazione il nome del topic$_G$ da inserire è \textbf{numtest}.
 Una volta concluse queste operazioni con esito positivo, il programma potrà essere eseguito.
 
 \section{Inizializzazione del modulo di acquisizione}\label{ProceduraDiInstallazioneInizializzazioneModuloAcquisition}
