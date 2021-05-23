@@ -36,12 +36,12 @@
     </p>
     <ul id="loghi">
       <li id="synclab">
-        <img src="../assets/synclab.png" alt="Sync Lab"  />
+        <img src="../assets/synclab.png" alt="Sync Lab" />
       </li>
       <li>
-        <img src="../assets/DRUIDSLOGO.jpg" alt="Jawa Druids"  />
+        <img src="../assets/DRUIDSLOGO.jpg" alt="Jawa Druids" />
       </li>
-      <li class="unipd"><img src="../assets/unipd.png" alt="Unipd"  /></li>
+      <li class="unipd"><img src="../assets/unipd.png" alt="Unipd" /></li>
     </ul>
   </div>
 </template>
@@ -61,7 +61,6 @@ export default {
 #chiSiamo ul {
   display: flex;
   list-style-type: none;
-  
 }
 #chiSiamo #loghi li {
   padding-left: 3%;
@@ -72,21 +71,19 @@ export default {
   padding-bottom: 5%;
 }
 
-img{
-max-width: 200px;
-max-height: 200px;
-width:100%;
-height: 100%;
-margin: auto;
+img {
+  max-width: 200px;
+  max-height: 200px;
+  width: 100%;
+  height: 100%;
+  margin: auto;
 }
 
-.unipd{
-  padding:1em;
+.unipd {
+  padding: 1em;
 }
 
-#loghi{
+#loghi {
   text-align: center;
 }
-
-
 </style>
