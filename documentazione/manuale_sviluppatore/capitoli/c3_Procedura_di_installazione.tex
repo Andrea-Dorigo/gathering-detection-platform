@@ -47,10 +47,13 @@ Durante il suo processo di configurazione il nome del topic$_G$ da inserire è \
 Una volta concluse queste operazioni con esito positivo, il programma potrà essere eseguito.
 
 \section{Inizializzazione del modulo di acquisizione}\label{ProceduraDiInstallazioneInizializzazioneModuloAcquisition}
-Per eseguire il modulo di acquisizione, in modo da iniziare a raccogliere i dati dalle webcam salvate, basterà posizionarsi all'interno della cartella \texttt{acquisition/main/}, e da terminale eseguire i seguenti comandi:
+Per eseguire il modulo di acquisizione, in modo da iniziare a raccogliere i dati dalle webcam salvate, bisognerà posizionarsi all'interno della cartella \texttt{acquisition/main/} e da terminale eseguire il comando:
 \begin{lstlisting}
     python3 detect.py
-    python3 kafkaConsumer.py
+\end{lstlisting}
+Infine, tramite un'altra finestra del terminale, posizionarsi nella cartella \texttt{acquisition/kafka/} ed eseguire il comando:
+\begin{lstlisting}
+	python3 kafkaConsumer.py
 \end{lstlisting}
 Se i passi precedenti sono stati eseguiti correttamente allora si visualizzeranno sul terminale i vari passaggi che svolge il modulo.
 
