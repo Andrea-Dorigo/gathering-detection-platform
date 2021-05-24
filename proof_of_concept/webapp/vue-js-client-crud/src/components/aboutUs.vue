@@ -61,15 +61,16 @@ export default {
 #chiSiamo ul {
   display: flex;
   list-style-type: none;
+  align-items: center;
 }
-#chiSiamo #loghi li {
+/* #chiSiamo #loghi li {
   padding-left: 3%;
   padding-right: 3%;
 }
 #chiSiamo #synclab {
   padding-top: 9%;
   padding-bottom: 5%;
-}
+} */
 
 img {
   max-width: 200px;
@@ -79,11 +80,13 @@ img {
   margin: auto;
 }
 
-.unipd {
-  padding: 1em;
-}
 
-#loghi {
+
+/* .unipd {
+  width: 800%;
+  height: 80%;;
+}  */
+/* #loghi {
   text-align: center;
-}
+} */
 </style>
