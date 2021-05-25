@@ -283,14 +283,14 @@ export default {
   min-width: 450px;
   min-height: 240px;
 }
-#mc {
+/* #mc {
   padding-top: 10px;
   display: flex;
   flex-flow: row wrap;
-  text-align: center;
+  text-align: center; */
   /* justify-content: space-around; */
-  /* align-content: flex-start; */
-}
+  /* align-content: flex-start; 
+} */
 
 
 /*CSS NUOVO*/
