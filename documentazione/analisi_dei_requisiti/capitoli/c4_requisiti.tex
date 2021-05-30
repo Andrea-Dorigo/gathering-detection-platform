@@ -1,5 +1,5 @@
 \chapter{Requisiti}\label{Requisiti}
-In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{\scaleto{G}{3pt}}$ individuati dal proponente$_{\scaleto{G}{3pt}}$ e dal gruppo \textit{Jawa Druids}. Ogni requisito viene individuato da un codice identificativo, una sua descrizione, la tipologia di requisito e la fonte di riferimento, la spiegazione di ogni parte è descritta nel documento \textit{Norme del Progetto v2.0.0}. Nella sezione successiva viene illustrato attraverso una tabella il tracciamento dei requisiti alla loro fonte e viceversa.\\
+In questa sezione vengono illustrati attraverso una tabella tutti i requisiti$_{\scaleto{G}{3pt}}$ individuati dal proponente$_{\scaleto{G}{3pt}}$ e dal gruppo \textit{Jawa Druids}. Ogni requisito viene individuato da un codice identificativo, una sua descrizione, la tipologia di requisito e la fonte di riferimento, la spiegazione di ogni parte è descritta nel documento \textit{Norme del Progetto v3.0.0}. Nella sezione successiva viene illustrato attraverso una tabella il tracciamento dei requisiti alla loro fonte e viceversa.\\
 I requisiti$_{\scaleto{G}{3pt}}$ sono stati individuati utilizzando la seguente codifica:
 \begin{center}
 	\textbf{RS[classificazione][tipo\_di\_requisito][codice\_requisito]}
@@ -37,18 +37,18 @@ La descrizione della classificazione è la seguente:
 			\makecell[c]{\textbf{Codice RS}} & \makecell[c]{\textbf{Descrizione}} & \makecell[c]{\textbf{Tipo di requisito}} & \makecell[c]{\textbf{Fonte}} \\
 			%fase 1
 			\hline
-			\centering RSFO1 & Utilizzo di motori software ‘contapersone’  &\centering  Obbligatorio & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$ \\ V. esterno 17-12-2020 } \\
+			\centering RSFO1 & Utilizzo di motori software ‘contapersone’  &\centering  Obbligatorio & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$ \\ V. esterno 2020-12-17 } \\
 			% \shortstack{Capitolato\\Verbale esterno 17-12-2020}   \\
 			\hline
 			\centering RSFF2 & Realizzazione di simulatori di altre sorgenti dati sia dei dati storici/in monitoraggio che dati previsionali & \centering Facoltativo & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$ } \\
 			\hline
-			\centering RSFO3  & Viene visualizzato un messaggio di errore per la mancanza dati nella generazione della heat map$_{\scaleto{G}{3pt}}$  &\centering  Obbligatorio & \makecell[tc]{UC2}  \\
+			\centering RSFO3  & Viene visualizzato un  errore per la mancanza dati nella generazione della heat map$_{\scaleto{G}{3pt}}$  &\centering  Obbligatorio & \makecell[tc]{UC2}  \\
 			\hline
-			\centering RSFO4 & Archiviazione di tutti i dati nel database & \centering Obbligatorio & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$ \\ UC8}  \\
+			\centering RSFO4 & Archiviazione di tutti i dati nel database & \centering Obbligatorio & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$ \\ UC14  \\ UC15 \\ UC16} \\
 			\hline
-			\centering RSFO4.1 & Archiviazione di tutti i dati reali nel database & \centering Obbligatorio & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$ \\ UC8.1 \\ UC8.2}  \\
+			\centering RSFO4.1 & Archiviazione di tutti i dati reali nel database & \centering Obbligatorio & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$ \\ UC14 \\ UC15}  \\
 			\hline
-			\centering RSFO4.2 & Archiviazione di tutti i dati elaborati dal modello ML nel database & \centering Obbligatorio & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$ \\ UC8.3}  \\
+			\centering RSFO4.2 & Archiviazione di tutti i dati elaborati dal modello ML nel database & \centering Obbligatorio & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$ \\ UC16}  \\
 			%fase 2
 			\hline
 			\centering RSFO5 & Elaborazione in tempo reale dei dati acquisiti da flussi esterni &\centering  Obbligatorio & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$}  \\
@@ -70,23 +70,23 @@ La descrizione della classificazione è la seguente:
 			\hline
 			\centering RSFF12 & L'utente deve poter distinguere fra i dati simulati e quelli reali  &\centering  Facoltativo &  \makecell[tc]{Interno} 	\\
 			\hline
-			\centering RSFD13 & L'utente deve poter visualizzare un indice di affidabilità della previsione nella mappa  &\centering  Desiderabile &  \makecell[tc]{Interno \\ UC10} 	\\
+			\centering RSFD13 & L'utente deve poter visualizzare un indice di affidabilità della previsione nella mappa  &\centering  Desiderabile &  \makecell[tc]{Interno \\ UC18} 	\\
 			\hline
-			\centering RSFD14 & L'utente deve poter visualizzare un indice di affidabilità dei dati in tempo reale nella mappa  &\centering  Desiderabile &  \makecell[tc]{Interno \\ UC10} 	\\
+			\centering RSFD14 & L'utente deve poter visualizzare un indice di affidabilità dei dati in tempo reale nella mappa  &\centering  Desiderabile &  \makecell[tc]{Interno \\ UC18} 	\\
 			\hline
-			\centering RSFF15 & L'utente deve poter applicare dei filtri ai dati (reali, simulati)  &\centering  Facoltativo &  \makecell[tc]{Interno \\ UC11.1 } 	\\
+			\centering RSFF15 & L'utente deve poter applicare dei filtri ai dati (reali, simulati)  &\centering  Facoltativo &  \makecell[tc]{Interno \\ UC19.1 } 	\\
 			\hline
-			\centering RSFF16 & L'utente ha la possibilità di scegliere le sorgenti dati da cui prelevare dati  &\centering  Facoltativo &  \makecell[tc]{Interno \\ UC11.2} 	\\
+			\centering RSFF16 & L'utente ha la possibilità di scegliere le sorgenti dati da cui prelevare dati  &\centering  Facoltativo &  \makecell[tc]{Interno \\ UC19.2} 	\\
 			\hline
 			\centering RSFO17 & Il sistema deve aggiornare la mappa automaticamente ogni 10 minuti &\centering Obbligatorio & \makecell[tc]{Interno} \\
 			\hline
-			\centering RSFO18 & Il modello di machine learning$_{\scaleto{G}{3pt}}$ deve poter salvare i pesi e le predizioni in un file & \centering Obbligatorio &  \makecell[tc]{V. esterno 2-02-2021} \\
+			\centering RSFO18 & Il modello di machine learning$_{\scaleto{G}{3pt}}$ deve poter salvare i pesi e le predizioni in un file & \centering Obbligatorio &  \makecell[tc]{V. esterno 2021-02-02} \\
 			\hline
-			\centering RSFO18.1 & Il formato di file prodotto deve essere .h5 & \centering Obbligatorio & \makecell[tc]{V. esterno 2-02-2021} \\
+			\centering RSFO18.1 & Il formato di file prodotto deve essere .pkl & \centering Obbligatorio & \makecell[tc]{V. esterno 2021-02-02} \\
 			\hline
-			\centering RSFO19 & Viene inviato un messaggio di errore al front end$_{\scaleto{G}{3pt}}$, dal back end, se non ci sono i dati richiesti &\centering Obbligatorio & \makecell[tc]{Interno \\ UC9} \\
+			\centering RSFO19 & Viene inviato un errore al front end$_{\scaleto{G}{3pt}}$, dal back end, se non ci sono i dati richiesti &\centering Obbligatorio & \makecell[tc]{Interno \\ UC17} \\
 			\hline
-			\centering RSFO20 & L'utente può selezionare una città tra quelle disponibili &\centering Obbligatorio & \makecell[tc]{Interno \\ UC4} \\
+			\centering RSFO20 & L'utente può selezionare una città tra quelle disponibili &\centering Obbligatorio & \makecell[tc]{Interno \\ UC8} \\
 			\hline
 			\centering RSFO21 & Le zone visualizzate della città dipendono dalle sorgenti esterne utilizzate &\centering Obbligatorio & \makecell[tc]{Interno} \\
 			\hline
@@ -98,61 +98,61 @@ La descrizione della classificazione è la seguente:
 			\hline
 			\centering RSFF23 & Possibilità da parte del sistema di scegliere di mostrare i dati predetti in caso di mancanza di quelli reali &\centering Facoltativo & \makecell[tc]{Interno} \\
 			\hline
-			\centering RSFO24 & La selezione dell'orario è effettuata su intervalli di tempo di ora in ora &\centering Obbligatorio & \makecell[tc]{UC5.1} \\
+			\centering RSFO24 & La selezione dell'orario è effettuata su intervalli di tempo di ora in ora &\centering Obbligatorio & \makecell[tc]{UC9.1} \\
 			\hline
 			\centering RSFO25 & Il sistema dà priorità ai dati reali presenti nel database per la visualizzazione della mappa su periodi di tempo storici &\centering Obbligatorio & \makecell[tc]{Interno} \\
 			\hline
-			\centering RSFO26 & Il sistema aggiorna automaticamente la mappa alla selezione di un diverso orario &\centering Obbligatorio & \makecell[tc]{UC5.1} \\
+			\centering RSFO26 & Il sistema aggiorna automaticamente la mappa alla selezione di un diverso orario &\centering Obbligatorio & \makecell[tc]{UC9.1} \\
 			\hline
-			\centering RSFO27 & L'utente deve poter selezionare la data del giorno di cui vuole visualizzare i dati   &\centering Obbligatorio & \makecell[tc]{UC5.2} \\
+			\centering RSFO27 & L'utente deve poter selezionare la data del giorno di cui vuole visualizzare i dati   &\centering Obbligatorio & \makecell[tc]{UC9.2} \\
 			\hline
-			\centering RSFO28 & L'utente deve poter ripristinare la visione in tempo reale tramite un pulsante di ripristino &\centering Obbligatorio & \makecell[tc]{UC5.3} \\
+			\centering RSFO28 & L'utente deve poter ripristinare la visione in tempo reale tramite un pulsante di ripristino &\centering Obbligatorio & \makecell[tc]{UC9.3} \\
 			\hline
 			\centering RSFD29 & Il sistema deve poter prelevare dati da diverse fonti e formattarle nel tipo di default &\centering Desiderabile & \makecell[tc]{Interno} \\
 			\hline
-			\centering RSFO30 & Il sistema deve utilizzare un software 'contapersone' già allenato &\centering Obbligatorio & \makecell[tc]{V. esterno 02-02-2021} \\
+			\centering RSFO30 & Il sistema deve utilizzare un software 'contapersone' già allenato &\centering Obbligatorio & \makecell[tc]{V. esterno 2021-02-02} \\
 			\hline
-			\centering RSFF31 & L'utente può reperire il manuale d'uso  &\centering Facoltativo & \makecell[tc]{Interno \\ UC12} \\
+			\centering RSFF31 & L'utente può reperire il manuale d'uso  &\centering Facoltativo & \makecell[tc]{Interno \\ UC20} \\
 			\hline
 			\centering RSFO32 & L'utente deve poter variare il livello di zoom della heat map$_{\scaleto{G}{3pt}}$  &\centering Obbligatorio & \makecell[tc]{UC3} \\
 			\hline
-			\centering RSFO32.1 & L'utente deve poter aumentare il livello di zoom della heat map$_{\scaleto{G}{3pt}}$  &\centering Obbligatorio & \makecell[tc]{UC3.1} \\
+			\centering RSFO32.1 & L'utente deve poter aumentare il livello di zoom della heat map$_{\scaleto{G}{3pt}}$  &\centering Obbligatorio & \makecell[tc]{UC4} \\
 			\hline
-			\centering RSFO32.1.1 & L'utente deve poter attuare il drag$_{\scaleto{G}{3pt}}$ della heat map$_{\scaleto{G}{3pt}}$  &\centering Obbligatorio & \makecell[tc]{UC3.1.1} \\
+			\centering RSFO32.1.1 & L'utente deve poter attuare il drag$_{\scaleto{G}{3pt}}$ della heat map$_{\scaleto{G}{3pt}}$  &\centering Obbligatorio & \makecell[tc]{UC6} \\
 			\hline
-			\centering RSFO32.1.2 & L'utente deve poter visualizzare il pop-up$_{\scaleto{G}{3pt}}$ legato ad un punto di interesse  &\centering Obbligatorio & \makecell[tc]{UC3.1.2} \\
+			\centering RSFO32.1.2 & L'utente deve poter visualizzare il pop-up$_{\scaleto{G}{3pt}}$ legato ad un punto di interesse  &\centering Obbligatorio & \makecell[tc]{UC7} \\
 			\hline
-			\centering RSFO32.1.3 & L'utente deve poter chiudere il pop-up$_{\scaleto{G}{3pt}}$ legato ad un punto di interesse &\centering Obbligatorio & \makecell[tc]{UC3.1.2} \\
+			\centering RSFO32.1.3 & L'utente deve poter chiudere il pop-up$_{\scaleto{G}{3pt}}$ legato ad un punto di interesse &\centering Obbligatorio & \makecell[tc]{UC7} \\
 			\hline
-			\centering RSFO32.2 & L'utente deve poter diminuire il livello di zoom della heat map$_{\scaleto{G}{3pt}}$  &\centering Obbligatorio & \makecell[tc]{UC3.2} \\
+			\centering RSFO32.2 & L'utente deve poter diminuire il livello di zoom della heat map$_{\scaleto{G}{3pt}}$  &\centering Obbligatorio & \makecell[tc]{UC5} \\
 			\hline			
-			\centering RSFD33 & L'utente deve poter ricercare in una barra di ricerca le città presenti nel database &\centering Desiderabile & \makecell[tc]{UC6} \\
+			\centering RSFD33 & L'utente deve poter cercare, in una barra di ricerca, le città presenti nel database &\centering Desiderabile & \makecell[tc]{UC10} \\
 			\hline
-			\centering RSFD33.1 & L'utente deve poter ricercare tramite nome in una barra di ricerca le città presenti nel database &\centering Desiderabile & \makecell[tc]{UC6.1} \\
+			\centering RSFD33.1 & L'utente deve poter cercare tramite nome, in una barra di ricerca, le città presenti nel database &\centering Desiderabile & \makecell[tc]{UC11} \\
 			\hline
-			\centering RSFD33.2 & L'utente deve poter ricercare tramite codice identificativo in una barra di ricerca le città presenti nel database &\centering Desiderabile & \makecell[tc]{UC6.2} \\
+			\centering RSFD33.2 & L'utente deve poter cercare tramite codice identificativo, in una barra di ricerca, le città presenti nel database &\centering Desiderabile & \makecell[tc]{UC12} \\
 			\hline
-			\centering RSFD34 & Viene visualizzato un messaggio di errore all'utente che non sono presenti i dati richiesti nel database attraverso la barra di ricerca &\centering Desiderabile & \makecell[tc]{UC7} \\
+			\centering RSFD34 & L'utente visualizza un errore poiché non sono presenti nel database i dati richiesti attraverso la barra di ricerca &\centering Desiderabile & \makecell[tc]{UC13} \\
 			\hline
-			\centering RSFD35 & L'utente deve poter selezionare due città per poter mettere i loro dati a confronto &\centering Desiderabile & \makecell[tc]{UC13} \\
+			\centering RSFD35 & L'utente deve poter selezionare due città per poter mettere i loro dati a confronto &\centering Desiderabile & \makecell[tc]{UC21} \\
 			\hline
-			\centering RSFD36 & L'utente deve poter salvare in un file locale i dati della città della mappa che sta visualizzando &\centering Desiderabile & \makecell[tc]{UC14} \\
+			\centering RSFD36 & L'utente deve poter salvare in un file locale i dati della città della mappa che sta visualizzando &\centering Desiderabile & \makecell[tc]{UC22} \\
 			\hline
-			\centering RSFD36.1 & L'utente deve poter salvare in un file locale di tipo pdf i dati della città della mappa che sta visualizzando &\centering Desiderabile & \makecell[tc]{UC14.1} \\
+			\centering RSFD36.1 & L'utente deve poter salvare in un file locale di tipo pdf i dati della città della mappa che sta visualizzando &\centering Desiderabile & \makecell[tc]{UC23} \\
 			\hline
-			\centering RSFD36.2 & L'utente deve poter salvare in un file locale di tipo csv i dati della città della mappa che sta visualizzando &\centering Desiderabile & \makecell[tc]{UC14.2} \\
+			\centering RSFD36.2 & L'utente deve poter salvare in un file locale di tipo csv i dati della città della mappa che sta visualizzando &\centering Desiderabile & \makecell[tc]{UC24} \\
 			\hline
-			\centering RSFD37 & L'utente deve poter inserire l'e-mail per il ricevimento delle informazioni della città selezionata &\centering Desiderabile & \makecell[tc]{UC15} \\
+			\centering RSFD37 & L'utente deve poter inserire l'e-mail per il ricevimento delle informazioni della città selezionata &\centering Desiderabile & \makecell[tc]{UC25} \\
 			\hline
-			\centering RSFD37.1 & Viene visualizzato un messaggio di errore all'utente dal front end$_{\scaleto{G}{3pt}}$ se l'email inserita è scritta in modo errato  &\centering Desiderabile & \makecell[tc]{UC16} \\
+			\centering RSFD37.1 & Viene visualizzato un errore all'utente dal front end$_{\scaleto{G}{3pt}}$ se l'email inserita è scritta in modo errato  &\centering Desiderabile & \makecell[tc]{UC26} \\
 			\hline
-			\centering RSFD38 & Il sistema salva nel database l'e-mail e la città selezionata &\centering Desiderabile & \makecell[tc]{UC15} \\
+			\centering RSFD38 & Il sistema salva nel database l'e-mail e la città selezionata &\centering Desiderabile & \makecell[tc]{UC25} \\
 			\hline
-			\centering RSFD39 & Il sistema invia l'email all'utente &\centering Desiderabile & \makecell[tc]{UC15} \\
+			\centering RSFD39 & Il sistema invia l'email all'utente &\centering Desiderabile & \makecell[tc]{UC25} \\
 			\hline
-			\centering RSFD40 & L'utente deve poter visualizzare la lista delle città più cercate &\centering Desiderabile & \makecell[tc]{UC17} \\
+			\centering RSFD40 & L'utente deve poter visualizzare la lista delle città più cercate &\centering Desiderabile & \makecell[tc]{UC27} \\
 			\hline
-			\centering RSFD41 & L'utente deve poter visualizzare la lista di tutte le città presenti nel database &\centering Desiderabile & \makecell[tc]{UC18} \\
+			\centering RSFD41 & L'utente deve poter visualizzare la lista di tutte le città  &\centering Desiderabile & \makecell[tc]{UC28} \\
 			\hline
 			\rowcolor{white}
 			\caption[Requisiti funzionali]{Requisiti funzionali}\label{4.1}\\
@@ -198,7 +198,7 @@ La descrizione della classificazione è la seguente:
 			\rowcolor{airforceblue}
 			\makecell[c]{\textbf{Codice RS}} & \makecell[c]{\textbf{Descrizione}} & \makecell[c]{\textbf{Tipo di requisito}} & \makecell[c]{\textbf{Fonte}} \\
 			\hline
-		\centering RSQO1  & La progettazione e la codifica dei requisiti devono rispettare le norme e le metriche definite nel documento \textit{Norme di Progetto 2.0.0}&\centering  Obbligatorio & \makecell[tc]{Interno} \\
+		\centering RSQO1  & La progettazione e la codifica dei requisiti devono rispettare le norme e le metriche definite nel documento \textit{Norme di Progetto 3.0.0}&\centering  Obbligatorio & \makecell[tc]{Interno} \\
 		\hline
 		\centering RSQF2  & Il codice sorgente del software deve essere disponibile in una repository$_G$ pubblica su Github$_G$  &\centering  Facoltativo & \makecell[tc]{Interno} \\
 		\hline
@@ -236,9 +236,9 @@ La descrizione della classificazione è la seguente:
 		\hline
 		\centering RSVF1.1  & Utilizzo di leaflet.js$_{\scaleto{G}{3pt}}$ per la creazione di heat map$_{\scaleto{G}{3pt}}$ &\centering  Facoltativo & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$} \\
 		\hline
-		\centering RSVO1.2  & Utilizzo di vue.js$_{\scaleto{G}{3pt}}$ per la creazione della wep-app$_{\scaleto{G}{3pt}}$  &\centering  Obbligatorio  & \makecell[tc]{V. esterno 02-02-2021} \\
+		\centering RSVO1.2  & Utilizzo di vue.js$_{\scaleto{G}{3pt}}$ per la creazione della web-app$_{\scaleto{G}{3pt}}$  &\centering  Obbligatorio  & \makecell[tc]{V. esterno 2021-02-02} \\
 		\hline
-		\centering RSVF2 & Utilizzo di Pandas come strumento per la manipolazione dei dati & \centering Facoltativo & \makecell[tc]{V. esterno 02-02-2021} \\
+		\centering RSVF2 & Utilizzo di Pandas come strumento per la manipolazione dei dati & \centering Facoltativo & \makecell[tc]{V. esterno 2021-02-02} \\
 		\hline
 		\centering RSVO3  & Il sistema deve far uso dell'ecosistema Apache Kafka$_{\scaleto{G}{3pt}}$ &\centering  Obbligatorio  & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$} \\
 		\hline
@@ -246,11 +246,11 @@ La descrizione della classificazione è la seguente:
 		\hline
 		\centering RSVO5  & Supporto browser Chrome, Firefox con versioni massimo di 3 anni &\centering  Obbligatorio  & \makecell[tc]{Interno} \\
 		\hline
-		\centering RSVF6  & Supporto browser Safari, Microsoft Edge &\centering  Facoltativo  & \makecell[tc]{Interno} \\
+		\centering RSVF6  & Supporto browser Safari versione 14.0.3, Microsoft Edge versione 87.0.664 &\centering  Facoltativo  & \makecell[tc]{Interno} \\
 		\hline
 		\centering RSVO7  & La web application dev'essere disponibile in un ambiente locale, di sviluppo, e di produzione & \centering  Obbligatorio  & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$} \\
 		\hline
-		\centering RSVF8 & Utilizzo di Keras per lo sviluppo del modello machine learning$_{\scaleto{G}{3pt}}$ & \centering Facoltativo & \makecell[tc]{V. esterno 02-02-2021} \\
+		\centering RSVF8 & Utilizzo di Sci-kit Learn per lo sviluppo del modello machine learning$_{\scaleto{G}{3pt}}$ & \centering Facoltativo & \makecell[tc]{V. esterno 2021-02-02} \\
 		\hline
 		\centering RSVO9 & Il codice identificativo della città deve essere solo numerico & \centering Obbligatorio & \makecell[tc]{Interno} \\
 		\hline
@@ -275,17 +275,17 @@ La descrizione della classificazione è la seguente:
 		\rowcolor{airforceblue}
 		\makecell[tc]{\textbf{Codice RS}} & \makecell[c]{\textbf{Fonte}}  \\
 		\hline
-		\makecell[tc]{RSFO1} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$\\V. esterno 17-12-2020} \\
+		\makecell[tc]{RSFO1} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$\\V. esterno 2020-12-17} \\
 		\hline
 		\makecell[tc]{RSFF2} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$}\\
 		\hline
 		\makecell[tc]{RSFO3} & \makecell[tc]{UC2}\\
 		\hline
-		\makecell[tc]{RSFO4} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$\\UC8}\\
+		\makecell[tc]{RSFO4} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$\\UC14\\UC15\\ UC16}\\
 		\hline
-		\makecell[tc]{RSFO4.1} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$\\UC8.1 \\ UC8.2}\\
+		\makecell[tc]{RSFO4.1} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$\\UC14 \\ UC15}\\
 		\hline
-		\makecell[tc]{RSFO4.2} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$\\UC8.3}\\
+		\makecell[tc]{RSFO4.2} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$\\UC16}\\
 		\hline
 		\makecell[tc]{RSFO5} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$}\\
 		\hline
@@ -305,23 +305,23 @@ La descrizione della classificazione è la seguente:
 		\hline
 		\makecell[tc]{RSFF12} & \makecell[tc]{Interno}\\
 		\hline
-		\makecell[tc]{RSFD13} & \makecell[tc]{Interno \\ UC10}\\
+		\makecell[tc]{RSFD13} & \makecell[tc]{Interno \\ UC18}\\
 		\hline
-		\makecell[tc]{RSFD14} & \makecell[tc]{Interno \\ UC10}\\
+		\makecell[tc]{RSFD14} & \makecell[tc]{Interno \\ UC18}\\
 		\hline
-		\makecell[tc]{RSFF15} & \makecell[tc]{Interno \\ UC11.1}\\
+		\makecell[tc]{RSFF15} & \makecell[tc]{Interno \\ UC19.1}\\
 		\hline
-		\makecell[tc]{RSFF16} & \makecell[tc]{Interno \\ UC11.2}\\
+		\makecell[tc]{RSFF16} & \makecell[tc]{Interno \\ UC19.2}\\
 		\hline
 		\makecell[tc]{RSFO17} & \makecell[tc]{Interno}\\
 		\hline
-		\makecell[tc]{RSFO18} & \makecell[tc]{V. esterno 02-02-2021}\\
+		\makecell[tc]{RSFO18} & \makecell[tc]{V. esterno 2021-02-02}\\
 		\hline
-		\makecell[tc]{RSFO18.1} & \makecell[tc]{V. esterno 02-02-2021}\\
+		\makecell[tc]{RSFO18.1} & \makecell[tc]{V. esterno 2021-02-02}\\
 		\hline
-		\makecell[tc]{RSFO19} & \makecell[tc]{Interno \\ UC9}\\
+		\makecell[tc]{RSFO19} & \makecell[tc]{Interno \\ UC17}\\
 		\hline
-		\makecell[tc]{RSFO20} & \makecell[tc]{Interno \\ UC4}\\
+		\makecell[tc]{RSFO20} & \makecell[tc]{Interno \\ UC8}\\
 		\hline
 		\makecell[tc]{RSFO21} & \makecell[tc]{Interno}\\
 		\hline
@@ -333,61 +333,61 @@ La descrizione della classificazione è la seguente:
 		\hline
 		\makecell[tc]{RSFF23} & \makecell[tc]{Interno}\\
 		\hline
-		\makecell[tc]{RSFO24} & \makecell[tc]{UC5.1}\\
+		\makecell[tc]{RSFO24} & \makecell[tc]{UC9.1}\\
 		\hline
 		\makecell[tc]{RSFO25} & \makecell[tc]{Interno}\\
 		\hline
-		\makecell[tc]{RSFO26} & \makecell[tc]{UC5.1}\\
+		\makecell[tc]{RSFO26} & \makecell[tc]{UC9.1}\\
 		\hline
-		\makecell[tc]{RSFO27} & \makecell[tc]{UC5.2}\\
+		\makecell[tc]{RSFO27} & \makecell[tc]{UC9.2}\\
 		\hline
-		\makecell[tc]{RSFO28} & \makecell[tc]{UC5.3}\\
+		\makecell[tc]{RSFO28} & \makecell[tc]{UC9.3}\\
 		\hline
 		\makecell[tc]{RSFD29} & \makecell[tc]{Interno}\\
 		\hline
-		\makecell[tc]{RSFO30} & \makecell[tc]{V. esterno 02-02-2021}\\
+		\makecell[tc]{RSFO30} & \makecell[tc]{V. esterno 2021-02-02}\\
 		\hline
-		\makecell[tc]{RSFF31} & \makecell[tc]{Interno \\ UC12}\\
+		\makecell[tc]{RSFF31} & \makecell[tc]{Interno \\ UC20}\\
 		\hline
 		\makecell[tc]{RSFO32} & \makecell[tc]{UC3}\\
 		\hline
-		\makecell[tc]{RSFO32.1} & \makecell[tc]{UC3.1}\\
+		\makecell[tc]{RSFO32.1} & \makecell[tc]{UC4}\\
 		\hline
-		\makecell[tc]{RSFO32.1.1} & \makecell[tc]{UC3.1.1}\\
+		\makecell[tc]{RSFO32.1.1} & \makecell[tc]{UC6}\\
 		\hline
-		\makecell[tc]{RSFO32.1.2} & \makecell[tc]{UC3.1.2}\\
+		\makecell[tc]{RSFO32.1.2} & \makecell[tc]{UC7}\\
 		\hline
-		\makecell[tc]{RSFO32.1.3} & \makecell[tc]{UC3.1.2}\\
+		\makecell[tc]{RSFO32.1.3} & \makecell[tc]{UC7}\\
 		\hline
-		\makecell[tc]{RSFO32.2} & \makecell[tc]{UC3.2}\\
+		\makecell[tc]{RSFO32.2} & \makecell[tc]{UC5}\\
 		\hline
-		\makecell[tc]{RSFD33} & \makecell[tc]{UC6}\\
+		\makecell[tc]{RSFD33} & \makecell[tc]{UC10}\\
 		\hline
-		\makecell[tc]{RSFD33.1} & \makecell[tc]{UC6.1}\\
+		\makecell[tc]{RSFD33.1} & \makecell[tc]{UC11}\\
 		\hline
-		\makecell[tc]{RSFD33.2} & \makecell[tc]{UC6.2}\\
+		\makecell[tc]{RSFD33.2} & \makecell[tc]{UC12}\\
 		\hline
-		\makecell[tc]{RSFD34} & \makecell[tc]{UC7}\\
+		\makecell[tc]{RSFD34} & \makecell[tc]{UC13}\\
 		\hline
-		\makecell[tc]{RSFD35} & \makecell[tc]{UC13}\\
+		\makecell[tc]{RSFD35} & \makecell[tc]{UC21}\\
 		\hline
-		\makecell[tc]{RSFD36} & \makecell[tc]{UC14}\\
+		\makecell[tc]{RSFD36} & \makecell[tc]{UC22}\\
 		\hline
-		\makecell[tc]{RSFD36.1} & \makecell[tc]{UC14.1}\\
+		\makecell[tc]{RSFD36.1} & \makecell[tc]{UC23}\\
 		\hline
-		\makecell[tc]{RSFD36.2} & \makecell[tc]{UC14.2}\\
+		\makecell[tc]{RSFD36.2} & \makecell[tc]{UC24}\\
 		\hline
-		\makecell[tc]{RSFD37} & \makecell[tc]{UC15}\\
+		\makecell[tc]{RSFD37} & \makecell[tc]{UC25}\\
 		\hline
-		\makecell[tc]{RSFD37.1} & \makecell[tc]{UC16}\\
+		\makecell[tc]{RSFD37.1} & \makecell[tc]{UC26}\\
 		\hline
-		\makecell[tc]{RSFD38} & \makecell[tc]{UC15}\\
+		\makecell[tc]{RSFD38} & \makecell[tc]{UC25}\\
 		\hline
-		\makecell[tc]{RSFD39} & \makecell[tc]{UC15}\\
+		\makecell[tc]{RSFD39} & \makecell[tc]{UC25}\\
 		\hline
-		\makecell[tc]{RSFD40} & \makecell[tc]{UC17}\\
+		\makecell[tc]{RSFD40} & \makecell[tc]{UC27}\\
 		\hline
-		\makecell[tc]{RSFD41} & \makecell[tc]{UC18}\\
+		\makecell[tc]{RSFD41} & \makecell[tc]{UC28}\\
 		\hline
 		\rowcolor{white}
 		\caption[Tabella tracciamento requisito-fonte]{Tabella tracciamento requisito-fonte (Requisiti funzionali)}\label{4.5}\\
@@ -466,9 +466,9 @@ La descrizione della classificazione è la seguente:
 		\hline	
 		\makecell[tc]{RSVO1.1} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$}\\
 		\hline
-		\makecell[tc]{RSVO1.2} & \makecell[tc]{V. esterno 02-02-2021}\\
+		\makecell[tc]{RSVO1.2} & \makecell[tc]{V. esterno 2021-02-02}\\
 		\hline
-		\makecell[tc]{RSVF2} & \makecell[tc]{V. esterno 02-02-2021}\\
+		\makecell[tc]{RSVF2} & \makecell[tc]{V. esterno 2021-02-02}\\
 		\hline
 		\makecell[tc]{RSVO3} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$}\\
 		\hline
@@ -480,7 +480,7 @@ La descrizione della classificazione è la seguente:
 		\hline
 		\makecell[tc]{RSVO7} & \makecell[tc]{Capitolato$_{\scaleto{G}{3pt}}$}\\
 		\hline
-		\makecell[tc]{RSVF8} & \makecell[tc]{V. esterno 02-02-2021}\\
+		\makecell[tc]{RSVF8} & \makecell[tc]{V. esterno 2021-02-02}\\
 		\hline
 		\makecell[tc]{RSVO9} & \makecell[tc]{Interno}\\
 		\hline
@@ -504,9 +504,9 @@ La descrizione della classificazione è la seguente:
 		\makecell[c]{Capitolato$_{\scaleto{G}{3pt}}$} & \makecell[c]{RSFO1\\RSFF2\\RSFO4\\RSFO4.1\\RSFO4.2\\RSFO5\\RSFD5.1\\RSFD6\\RSFO7\\RSPO1\\RSQO5\\RSQO6\\RSQO7\\RSVO1\\RSVF1.1\\RSVO3\\RSVO4\\RSVO7} \\
 		\hline
 		\hline
-		\makecell[c]{Verbale esterno 17-12-2020} & \makecell[c]{RSFO1} \\
+		\makecell[c]{Verbale esterno 2020-12-17} & \makecell[c]{RSFO1} \\
 		\hline
-		\makecell[c]{Verbale esterno 02-02-2021} & \makecell[c]{RSFO18\\RSFO18.1\\RSFO30\\RSVO1.2\\RSVF2\\RSVF8} \\
+		\makecell[c]{Verbale esterno 2021-02-02} & \makecell[c]{RSFO18\\RSFO18.1\\RSFO30\\RSVO1.2\\RSVF2\\RSVF8} \\
 		\hline
 		\makecell[c]{Interno} &\makecell[c]{RSFO8\\RSFO9\\RSFO10\\RSFO11\\RSFF12\\RSFD13\\RSFD14\\RSFF15\\RSFF16\\RSFO17\\RSFO19\\RSFO20\\RSFO21\\RSFO22\\RSFO22.1\\RSFO22.2\\RSFF23\\RSFO25\\RSFD29\\RSFF31\\RSPO2\\RSPO3\\RSPO4\\RSPF5\\RSQO1\\RSQF2\\RSQF3\\RSQF4\\RSVO5\\RSVF6\\RSVO9} \\
 		\hline
@@ -516,63 +516,63 @@ La descrizione della classificazione è la seguente:
 		\hline
 		\makecell[c]{UC3} & \makecell[c]{RSFO32} \\
 		\hline
-		\makecell[c]{UC3.1} & \makecell[c]{RSFO32.1} \\
+		\makecell[c]{UC4} & \makecell[c]{RSFO32.1} \\
 		\hline
-		\makecell[c]{UC3.1.1} & \makecell[c]{RSFO32.1.1} \\
+		\makecell[c]{UC6} & \makecell[c]{RSFO32.1.1} \\
 		\hline
-		\makecell[c]{UC3.1.2} & \makecell[c]{RSFO32.1.2\\RSFO32.1.3} \\
+		\makecell[c]{UC7} & \makecell[c]{RSFO32.1.2\\RSFO32.1.3} \\
 		\hline
-		\makecell[c]{UC3.2} & \makecell[c]{RSFO32.2} \\
+		\makecell[c]{UC5} & \makecell[c]{RSFO32.2} \\
 		\hline
-		\makecell[c]{UC4} & \makecell[c]{RSFO20} \\ % UC3.2 RSFO18, UC3.3 RSFO19
+		\makecell[c]{UC8} & \makecell[c]{RSFO20} \\ % UC3.2 RSFO18, UC3.3 RSFO19
 		\hline
-		\makecell[c]{UC5.1} & \makecell[c]{RSFO24 \\ RSFO26} \\
+		\makecell[c]{UC9.1} & \makecell[c]{RSFO24 \\ RSFO26} \\
 		\hline
-		\makecell[c]{UC5.2} & \makecell[c]{RSFO27} \\
+		\makecell[c]{UC9.2} & \makecell[c]{RSFO27} \\
 		\hline
-		\makecell[c]{UC5.3} & \makecell[c]{RSFO28} \\
+		\makecell[c]{UC9.3} & \makecell[c]{RSFO28} \\
 		\hline
-		\makecell[c]{UC6} & \makecell[c]{RSFD33} \\
+		\makecell[c]{UC10} & \makecell[c]{RSFD33} \\
 		\hline
-		\makecell[c]{UC6.1} & \makecell[c]{RSFD33.1} \\
+		\makecell[c]{UC11} & \makecell[c]{RSFD33.1} \\
 		\hline
-		\makecell[c]{UC6.2} & \makecell[c]{RSFD33.2} \\
+		\makecell[c]{UC12} & \makecell[c]{RSFD33.2} \\
 		\hline
-		\makecell[c]{UC7} & \makecell[c]{RSFD34} \\
+		\makecell[c]{UC13} & \makecell[c]{RSFD34} \\
 		\hline
-		\makecell[c]{UC8} & \makecell[c]{RSFO4} \\
+		\makecell[c]{UC14\\UC15\\UC16\\} & \makecell[c]{RSFO4} \\
 		\hline
-		\makecell[c]{UC8.1} & \makecell[c]{RSFO4.1} \\
+		\makecell[c]{UC14} & \makecell[c]{RSFO4.1} \\
 		\hline
-		\makecell[c]{UC8.2} & \makecell[c]{RSFO4.1} \\
+		\makecell[c]{UC15} & \makecell[c]{RSFO4.1} \\
 		\hline
-		\makecell[c]{UC8.3} & \makecell[c]{RSFO4.2} \\
+		\makecell[c]{UC16} & \makecell[c]{RSFO4.2} \\
 		\hline
-		\makecell[c]{UC9} & \makecell[c]{RSFO19} \\
+		\makecell[c]{UC17} & \makecell[c]{RSFO19} \\
 		\hline
-		\makecell[c]{UC10} & \makecell[c]{RSFD13 \\ RSFD14} \\
+		\makecell[c]{UC18} & \makecell[c]{RSFD13 \\ RSFD14} \\
 		\hline
-		\makecell[c]{UC11.1} & \makecell[c]{RSFF15} \\
+		\makecell[c]{UC19.1} & \makecell[c]{RSFF15} \\
 		\hline
-		\makecell[c]{UC11.2} & \makecell[c]{RSFF16} \\
+		\makecell[c]{UC19.2} & \makecell[c]{RSFF16} \\
 		\hline
-		\makecell[c]{UC12} & \makecell[c]{RSFF31} \\
+		\makecell[c]{UC20} & \makecell[c]{RSFF31} \\
 		\hline
-		\makecell[c]{UC13} & \makecell[c]{RSFD35} \\
+		\makecell[c]{UC21} & \makecell[c]{RSFD35} \\
 		\hline
-		\makecell[c]{UC14} & \makecell[c]{RSFD36} \\
+		\makecell[c]{UC22} & \makecell[c]{RSFD36} \\
 		\hline
-		\makecell[c]{UC14.1} & \makecell[c]{RSFD36.1} \\
+		\makecell[c]{UC23} & \makecell[c]{RSFD36.1} \\
 		\hline
-		\makecell[c]{UC14.2} & \makecell[c]{RSFD36.2} \\
+		\makecell[c]{UC24} & \makecell[c]{RSFD36.2} \\
 		\hline\
-		\makecell[c]{UC15} & \makecell[c]{RSFD37\\RSFD38\\RSFD39} \\
+		\makecell[c]{UC25} & \makecell[c]{RSFD37\\RSFD38\\RSFD39} \\
 		\hline
-		\makecell[c]{UC16} & \makecell[c]{RSFD37.1} \\
+		\makecell[c]{UC26} & \makecell[c]{RSFD37.1} \\
 		\hline
-		\makecell[c]{UC17} & \makecell[c]{RSFD40} \\
+		\makecell[c]{UC27} & \makecell[c]{RSFD40} \\
 		\hline
-		\makecell[c]{UC18} & \makecell[c]{RSFD41} \\
+		\makecell[c]{UC28} & \makecell[c]{RSFD41} \\
 		\hline
 		\rowcolor{white}
 
