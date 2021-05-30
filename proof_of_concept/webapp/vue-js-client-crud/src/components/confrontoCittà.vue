@@ -25,70 +25,83 @@
         </button>
       </div>
     </div>
-    <div id="ds">
-      <date-picker id="datepicker" />
-      <div id="sliderCity">
-        <div id="sb">
+    <div id="ds" class="wrapper">
+
+      <!-- <date-picker id="datepicker" /> -->
+      <div class="aside aside-1">
+          <date-picker />
+        </div>
+      <!-- <div id="sliderCity"> -->
+        <div id="sb" class="topWrapper">
+          <div class="subTitle">
+            <h2>
+              Seleziona l'orario di cui vuoi visualizzare i dati
+            </h2>
+          </div>
           <slider id="slider" />
+          <div class="bottoneRicarica">
+            <button
+              @click="refreshAll"
+              type="button"
+              class="btn btn-outline-primary"
+              value="Ricarica dati"
+            >
+              Ricarica dati
+            </button>
+          </div>
+        </div>
+        <div class="main">
+          <div>
+            <button
+              @click="changeFirstCity"
+              id="firstButton"
+              type="button"
+              class="btn btn-outline-primary"
+              value="Scegli la città"
+            >
+              Scegli la prima città
+              <div
+                :key="item"
+                v-for="(item, index) in suggestiondata1"
+                @click="itemSelection1(index)"
+              >
+                {{ item }}
+              </div>
+            </button>
+            <button
+              @click="changeSecondCity"
+              id="secondButton"
+              type="button"
+              class="btn btn-outline-primary"
+              value="Scegli la città"
+            >
+              Scegli la seconda città
+              <div
+                :key="item"
+                v-for="(item, index) in suggestiondata2"
+                @click="itemSelection2(index)"
+              >
+                {{ item }}
+              </div>
+            </button>
+          </div>
+          <p>La prima città è: {{ itemSelected1 }}</p>
+          <p>La seconda città è: {{ itemSelected2 }}</p>
           <button
-            @click="refreshAll"
+            @click="startComparison"
             type="button"
             class="btn btn-outline-primary"
             value="Ricarica dati"
           >
-            Ricarica dati
+            Confronto
           </button>
+          <p id="confrontoResult">
+            Nella città di {{ citiy1conf }} ci sono {{ people1conf }} persone
+            mentre nella città di {{ citiy2conf }} ci sono
+            {{ people2conf }} persone
+          </p>
         </div>
-        <div>
-          <button
-            @click="changeFirstCity"
-            id="firstButton"
-            type="button"
-            class="btn btn-outline-primary"
-            value="Scegli la città"
-          >
-            Scegli la prima città
-            <div
-              :key="item"
-              v-for="(item, index) in suggestiondata1"
-              @click="itemSelection1(index)"
-            >
-              {{ item }}
-            </div>
-          </button>
-          <button
-            @click="changeSecondCity"
-            id="secondButton"
-            type="button"
-            class="btn btn-outline-primary"
-            value="Scegli la città"
-          >
-            Scegli la seconda città
-            <div
-              :key="item"
-              v-for="(item, index) in suggestiondata2"
-              @click="itemSelection2(index)"
-            >
-              {{ item }}
-            </div>
-          </button>
-        </div>
-        <p>La prima città è: {{ itemSelected1 }}</p>
-        <p>La seconda città è: {{ itemSelected2 }}</p>
-        <button
-          @click="startComparison"
-          type="button"
-          class="btn btn-outline-primary"
-          value="Ricarica dati"
-        >
-          Confronto
-        </button>
-        <p id="confrontoResult">
-          Nella città di {{ citiy1conf }} ci sono {{ people1conf }} persone
-          mentre nella città di {{ citiy2conf }} ci sono
-          {{ people2conf }} persone
-        </p>
-      </div>
+      <!-- </div> -->
     </div>
   </div>
 </template>
@@ -217,7 +230,7 @@ export default {
 </script>
 
 <style>
-#slider {
+/* #slider {
   z-index: 0;
   margin-left: 30px;
   margin-right: 20px;
@@ -230,21 +243,65 @@ export default {
   padding-top: 150px;
   margin-left: 50px;
   width: 22%;
-}
+} */
 
-#sb {
+/* #sb {
+  
   display: flex;
   width: 95%;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 10px; 
+} */
+
+.subTitle {
+  margin-top: 1em;
+  padding: 0.3em;
 }
 
+#slider {
+   margin: 1em;
+   width: 80%;
+ }
+
+ .bottoneRicarica {
+   float: left;
+ }
+/* 
 #sliderCity {
   width: 75%;
+} */
+
+/* #ds {
+  display: flex;
+  flex-flow: row wrap;
+  font-weight: bold;
+  text-align: center;
 }
 
-#ds {
+#ds > * {
+  padding: 10px;
+  flex: 1 100%;
+} */
+.topWrapper {
   display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 3em 0 3em;
+
+  /* background: tomato; */
+}
+
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  font-weight: bold;
+  text-align: center;
+}
+
+.wrapper > * {
+  padding: 10px;
+  flex: 1 100%;
 }
 
 #firstButton {
@@ -292,4 +349,21 @@ export default {
   text-decoration: none;
   cursor: pointer;
 }
+
+@media all and (min-width: 500px) {
+  .aside { flex: 1 0 0; }
+  .topWrapper { order: 1;}
+  .main {order: 3; }
+  .aside-1{ order: 2;}
+}
+
+@media all and (min-width: 900px) {
+  
+  .main    { flex: 4; }
+  .topWrapper { order: 1;}
+  .aside-1 { order: 2; }
+  .main    { order: 2; }
+}
+
+
 </style>

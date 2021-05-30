@@ -9,7 +9,7 @@
 
 <template>
   <div id="chiSiamo">
-    <h1>Il gruppo</h1>
+    <h2>Il gruppo</h2>
     <p>
       Il gruppo Jawa Druids è composto da sette studenti dell'università di
       studio di Padova del corso di laurea triennale di Informatica.
@@ -36,12 +36,12 @@
     </p>
     <ul id="loghi">
       <li id="synclab">
-        <img src="../assets/synclab.png" alt="Sync Lab" width="400" />
+        <img src="../assets/synclab.png" alt="Sync Lab" />
       </li>
       <li>
-        <img src="../assets/DRUIDSLOGO.jpg" alt="Jawa Druids" width="400" />
+        <img src="../assets/DRUIDSLOGO.jpg" alt="Jawa Druids" />
       </li>
-      <li><img src="../assets/unipd.png" alt="Unipd" width="400" /></li>
+      <li class="unipd"><img src="../assets/unipd.png" alt="Unipd" /></li>
     </ul>
   </div>
 </template>
@@ -61,13 +61,32 @@ export default {
 #chiSiamo ul {
   display: flex;
   list-style-type: none;
+  align-items: center;
 }
-#chiSiamo #loghi li {
+/* #chiSiamo #loghi li {
   padding-left: 3%;
   padding-right: 3%;
 }
 #chiSiamo #synclab {
   padding-top: 9%;
   padding-bottom: 5%;
+} */
+
+img {
+  max-width: 200px;
+  max-height: 200px;
+  width: 100%;
+  height: 100%;
+  margin: auto;
 }
+
+
+
+/* .unipd {
+  width: 800%;
+  height: 80%;;
+}  */
+/* #loghi {
+  text-align: center;
+} */
 </style>

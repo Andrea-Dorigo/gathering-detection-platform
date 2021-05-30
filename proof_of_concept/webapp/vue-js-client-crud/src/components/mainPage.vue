@@ -23,6 +23,9 @@
       </div>
     </div>
     <div class="wrapper">
+        <div class="aside aside-1">
+          <date-picker />
+        </div>
         <div class="topWrapper">
           <div class="subTitle">
             <h2>
@@ -44,9 +47,7 @@
         <div class="main">
           <heatMap id="map" />
         </div>
-        <div class="aside aside-1">
-          <date-picker />
-        </div>
+        
         <div class="aside aside-2">
           <listCity />
         </div>
@@ -282,14 +283,14 @@ export default {
   min-width: 450px;
   min-height: 240px;
 }
-#mc {
+/* #mc {
   padding-top: 10px;
   display: flex;
   flex-flow: row wrap;
-  text-align: center;
+  text-align: center; */
   /* justify-content: space-around; */
-  /* align-content: flex-start; */
-}
+  /* align-content: flex-start; 
+} */
 
 
 /*CSS NUOVO*/
@@ -395,14 +396,28 @@ h2 {
 
 @media all and (min-width: 500px) {
   .aside { flex: 1 0 0; }
-}
-
-@media all and (min-width: 1100px) {
-  .main    { flex: 3 0px; }
+  .topWrapper { order: 1;}
+  .main {order: 2; }
+  .aside-1{ order: 3;}
+  .aside-2 { order: 3;}
+  .footer { order: 4;}
+  
+  /* .main    { flex: 3 0px; }
   .aside-1 { order: 1; }
   .main    { order: 2; }
   .aside-2 { order: 3; }
-  .footer  { order: 4; }
+  .footer  { order: 4; } */
+
+}
+
+@media all and (min-width: 900px) {
+  
+  .main    { flex: 4; }
+  .topWrapper { order: 1;}
+  .aside-1 { order: 2; }
+  .main    { order: 3; }
+  .aside-2 { order: 4; }
+  .footer  { order: 5; }
 
   #listCity ul li {
     /* display: inline; */
