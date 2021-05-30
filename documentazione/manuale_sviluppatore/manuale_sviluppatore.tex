@@ -1,0 +1,54 @@
+\input{packages}
+\input{config}
+
+\begin{document}
+\makeatletter
+\begin{titlepage}
+	\begin{center}
+		\vspace*{-4cm}
+		\author{Jawa Druids}
+		\title{Manuale Sviluppatore}
+		\date{} %LASCIARE QUESTO CAMPO VUOTO, SE LO TOLGO STAMPA LA DATA CORRENTE
+		\includegraphics[width=0.5\linewidth]{../immagini/DRUIDSLOGO.jpg}\\[4ex]
+		{\huge \bfseries  \@title }\\[2ex]
+		{\LARGE  \@author}\\[50ex]
+		\vspace*{-9cm}
+		\begin{table}[H]
+			\renewcommand{\arraystretch}{1.4}
+			\centering
+			\begin{tabular}{r | l}
+				\textbf{Versione} & 1.0.0 \\%RIGA PER INSERIRE LA VERSIONE ULTIMA DEL DOCUMENTO
+				\textbf{Data approvazione} & 2021-05-23 \\
+				\textbf{Responsabile} & Andrea Cecchin \\
+				\textbf{Redattori} & \makecell[tl]{Mattia Cocco} \\
+				\textbf{Verificatori} & \makecell[tl]{Andrea Cecchin \\ Alfredo Graziano} \\
+				%MAKECELL SERVE PER POI ANDARE A CAPO ALL'INTERNO DELLA CELLA
+				\textbf{Stato} & Approvato\\
+				\textbf{Lista distribuzione} & \makecell[tl]{Jawa Druids \\ Prof. Tullio Vardanega \\ Prof. Riccardo Cardin}\\
+				\textbf{Uso} & Esterno
+			\end{tabular}
+		\end{table}
+		\vspace{0.1cm}
+		\hfill \break
+		\fontsize{17}{10}\textbf{Sommario} \\
+		\vspace{0.1cm}
+		Il documento ha lo scopo di presentare le tecnologie e l'architettura del sistema agli sviluppatori interessati al software \emph{\normalsize{\textit{GDP - Gathering Detection Platform}}}.
+	\end{center}
+\end{titlepage}
+\makeatother
+	\input{Registro}
+
+	\tableofcontents{}
+	\listoffigures{}
+	\input{capitoli/c1_Introduzione}
+	\input{capitoli/c2_Requisiti_di_sistema}
+	\input{capitoli/c3_Procedura_di_installazione}
+	\input{capitoli/c4_Tecnologie_e_librerie_coinvolte}
+	\input{capitoli/c5_Architettura_del_prodotto}
+	\input{capitoli/c6_Test}
+	\input{capitoli/c7_Informazioni_aggiuntive}
+	\input{capitoli/c8_Glossario}
+
+	%  glossary would go here
+
+\end{document}

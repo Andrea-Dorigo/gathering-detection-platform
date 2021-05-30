@@ -1,0 +1,88 @@
+\chapter{Procedure di installazione}\label{ProceduraDiInstallazione}
+Questa sezione esporrà le procedure di installazione all'interno del sistema operativo Linux$_G$, più precisamente Ubuntu$_G$ 20.04 LTS, in quanto utilizzato anche per lo sviluppo del software stesso.
+Rimane comunque possibile installare il software su altri sistemi operativi soddisfando le dipendenze necessarie, ma non verrà qui esplicitato.
+
+\section{Download della repository}\label{ProceduraDiInstallazioneDownloadRepo}
+Per scaricare correttamente i contenuti della repository$_G$ è necessario installare \texttt{git} e \texttt{git-lfs} (\textit{Git Large File Storage}).
+Su Ubuntu$_{\scaleto{G}{3pt}}$ 20.04, questo è possibile eseguendo il comando:
+\begin{lstlisting}
+  sudo apt install git git-lfs
+\end{lstlisting}
+assumendo che le principali repository$_{\scaleto{G}{3pt}}$ per i pacchetti di Ubuntu$_{\scaleto{G}{3pt}}$ siano attive (Universe, Multiverse).
+
+Questo passaggio è richiesto poiché GitHub$_G$ (il sito che ospita la repository del progetto) consente l'upload di file con dimensioni massime fino a 100MB.
+L'utilizzo di \textit{Git Large File Storage} permette l'upload e il download di file che superano questo limite, ed in particolare permette l'upload e download dei pesi necessari all'algoritmo YOLOv3 per il rilevamento di oggetti (più precisamente per il rilevamento delle persone in un'immagine), il quale ha una dimensione maggiore di 200MB. Maggiori informazioni riguardo \textit{Git Large File Storage} sono reperibili all'indirizzo:
+\begin{center}
+  \item \url{https://git-lfs.github.com} .
+\end{center}
+
+È dunque possibile scaricare correttamente la repository$_{\scaleto{G}{3pt}}$ relativa al progetto \textit{Gathering-Detection-Platform} con il seguente comando:
+\begin{lstlisting}
+  git clone https://github.com/Andrea-Dorigo/gathering-detection-platform.git
+\end{lstlisting}
+% \begin{center}
+%   \item \url{https://github.com/Andrea-Dorigo/gathering-detection-platform}
+% \end{center}
+
+\section{Installazione delle dipendenze}\label{ProceduraDiInstallazioneInstallazioneDipendenze}
+Dopo aver eseguito il passo sopra descritto, è necessario installare le dipendenze necessarie a far eseguire il prodotto software$_{\scaleto{G}{3pt}}$ adeguatamente.
+Per fare ciò è sufficiente aprire il terminale all'interno della cartella \textit{gathering-detection-platform$_{\scaleto{G}{3pt}}$}, ed eseguire i seguenti comandi:
+\begin{lstlisting}
+  sudo apt install python3-opencv python3-pip mongodb maven npm
+\end{lstlisting}
+\begin{lstlisting}
+  pip3 install mongoengine
+\end{lstlisting}
+\begin{lstlisting}
+  pip3 install kafka-python
+\end{lstlisting}
+\begin{lstlisting}
+  pip3 install image_slicer
+\end{lstlisting}
+Per installare la dipendenza concernente a Kafka$_G$ si sono seguiti i passaggi presenti al seguente link:
+\begin{center}
+    \url{https://kafka.apache.org/quickstart}
+\end{center}
+Durante il suo processo di configurazione il nome del topic$_G$ da inserire è \textbf{numtest}.
+Una volta concluse queste operazioni con esito positivo, il programma potrà essere eseguito.
+
+\section{Inizializzazione del modulo di acquisizione}\label{ProceduraDiInstallazioneInizializzazioneModuloAcquisition}
+Per eseguire il modulo di acquisizione, in modo da iniziare a raccogliere i dati dalle webcam salvate, bisognerà posizionarsi all'interno della cartella \texttt{acquisition/main/} e da terminale eseguire il comando:
+\begin{lstlisting}
+    python3 detect.py
+\end{lstlisting}
+Infine, tramite un'altra finestra del terminale, posizionarsi nella cartella \texttt{acquisition/kafka/} ed eseguire il comando:
+\begin{lstlisting}
+	python3 kafkaConsumer.py
+\end{lstlisting}
+Se i passi precedenti sono stati eseguiti correttamente allora si visualizzeranno sul terminale i vari passaggi che svolge il modulo.
+
+
+
+\section{Inizializzazione modulo Prediction}\label{ProceduraDiInstallazioneInizializzazioneModuloPrediction}
+Per eseguire il modulo di predizione, che tramite il machine-learning$_G$ si occupa di calcolare, appunto, le predizioni del periodo di tempo futuro, bisogna posizionarsi all'interno della cartella \texttt{prediction/} ed eseguire il seguente comando da terminale:
+
+\begin{lstlisting}
+    python3 DataPrediction.py
+\end{lstlisting}
+In tal modo verrà attivato il modulo per le predizioni sui dati.
+Saranno visibili sul terminale gli step eseguiti dal programma.
+
+
+\section{Inizializzazione modulo Web-App}\label{ProceduraDiInstallazioneInizializzazioneModuloWebApp}
+Per avviare la web-app$_G$, e le sue funzioni, si devono eseguire alcuni comandi, sempre da terminale, a partire dalla cartella \textit{webapp}.
+\begin{enumerate}
+  \item posizionarsi all'interno della cartella \texttt{webapp/} ed eseguire:
+  \begin{lstlisting}
+    mvn spring-boot:run
+  \end{lstlisting}
+  \item posizionarsi all'interno della cartella "vue-js-client-crud" ed eseguire:
+  \begin{lstlisting}
+    npm install
+  \end{lstlisting}
+  \item infine, all'interno della stessa cartella bisogna eseguire:
+  \begin{lstlisting}
+    npm run serve
+  \end{lstlisting}
+\end{enumerate}
+Il primo comando inizializza il server di Spring$_G$ che fornisce i servizi per prelevare le informazioni dal database, mentre i comandi successivi installano i moduli necessari tramite npm$_G$ ed eseguono l'applicazione.

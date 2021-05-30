@@ -1,0 +1,236 @@
+\chapter{Tecnologie coinvolte}\label{TecnologieCoinvolte}
+In questa sezione vengono elencate le tecnologie, e librerie di terze parti, utilizzate per sviluppare il prodotto software$_G$ \textit{Gathering-Detection-Platform}.
+
+\section{Tecnologie}\label{Tecnologie}
+\subsection{Python}\label{TecnologiePython}
+Si tratta di un linguaggio di programmazione definito "ad alto livello" rispetto alla maggior parte di essi.
+Si tratta di un linguaggio orientato ad oggetti, utile a sviluppare script$_G$, computazione numerica e sviluppare software$_{\scaleto{G}{3pt}}$.
+Nel progetto \textit{Gathering-Detection-Platform}, Python è il linguaggio su cui si basa tutto il backend$_G$, compreso il modulo del machine-learning$_G$.
+
+\begin{itemize}
+  \item versione utilizzata: 3.8.x;
+  \item link download: \url{https://www.python.org/downloads/} .
+\end{itemize}
+
+\subsection{API Weather Forecast}\label{APIWeatherForecast}
+Si tratta di una Web-API$_G$ che permette la raccolta dati delle previsioni del meteo, sia presenti che future.
+Viene utilizzata nel modulo Acquisition per associare i dati raccolti dalle webcams con i dati meteo della giornata, così da ottenere più informazioni relative ad una determinata città.
+Queste previsioni possono essere anche scaricate come file CSV$_G$ o JSON.
+\begin{itemize}
+  \item link: \url{https://openweathermap.org/history} .
+\end{itemize}
+
+
+\subsection{Kafka}\label{TecnologieKafka}
+Kafka viene utilizzato, dal modulo acquisizione, come tramite per inviare i dati ad altre applicazioni utilizzando uno standard di comunicazione comune.
+È stato scelto in quanto acquisisce flussi di dati da diverse fonti e permette a molte applicazioni di scambiarsi dati mediante esso, il suo scopo è quello di "centro smistamento" dei dati.
+
+\begin{itemize}
+  \item versione utilizzata: 2.8.0;
+  \item link download: \url{https://kafka.apache.org/downloads} .
+\end{itemize}
+
+\subsection{MongoDB}\label{TecnologieMongoDB}
+MongoDB è stato scelto come database$_G$ nel quale salvare i dati ottenuti dal modulo di acquisizione e dal modulo di machine-learning$_{\scaleto{G}{3pt}}$.
+Si tratta di un database$_{\scaleto{G}{3pt}}$ non relazionale e orientato ai documenti.
+Classificato come tipo NoSQL$_G$, MongoDB non utilizza la classica struttura basata su tabelle, invece si basa sui tipi di documenti JSON, facilitando così l'integrazioni di alcuni tipi di dati.
+
+\begin{itemize}
+    \item versione utilizzata: 4.4.4;
+    \item link al sito: \url{https://www.mongodb.com/it} .
+\end{itemize}
+
+\subsection{Spring Boot} \label{TecnologieSpring}
+Spring$_G$ è un framework$_G$ open source$_G$ per lo sviluppo di applicazioni su piattaforma Java. A  questo framework$_{\scaleto{G}{3pt}}$ sono associati altri progetti, in particolare Spring Boot che permette di creare una applicazione autoconfigurata che avvia un server$_G$, il quale mette a disposizione i servizi sviluppati attraverso il codice.
+\begin{itemize}
+	\item versione utilizzata: 2.4.4;
+	\item link al sito: \url{https://spring.io/projects/spring-boot} .
+	%\item link download: \url{https://start.spring.io/}??
+\end{itemize}
+
+\subsection{Apache Maven}\label{TecnologieMaven}
+È una tecnologia utilizza per la gestione software$_{\scaleto{G}{3pt}}$ basati su Java e build automation$_G$.
+Per la gestione si serve di un costrutto denominato POM (Project Object Model)$_G$, ovvero un file XML$_G$ in cui vengono dichiarate le dipendenze necessarie fra il progetto e le varie librerie utilizzate.
+Maven si occupa di scaricare automaticamente eventuali librerie o plug-in$_G$ mancanti in una cartella predefinita.
+
+\begin{itemize}
+	\item versione utilizzata: 3.6.3;
+	\item link al sito: \url{https://maven.apache.org/download.cgi} .
+	%\item link download: \url{https://start.spring.io/}??
+\end{itemize}
+
+\subsection{Java}\label{TecnologieJava}
+Si tratta di una piattaforma che ha come caratteristica principale il fatto di rendere possibile scrittura ed esecuzione di applicazioni indipendenti dall'hardware$_G$ di esecuzione.
+Il risultato è una virtualizzazione dalla piattaforma stessa, che rende così il linguaggio Java, e i relativi programmi, portabili su piattaforme hardware$_{\scaleto{G}{3pt}}$ diverse.
+
+\begin{itemize}
+	\item versione utilizzata: 11.x;
+	\item link download: \url{https://www.java.com/it/download/} .
+\end{itemize}
+
+\subsection{HTML 5}\label{TecnologieHTML}
+HTML, acronimo di HyperText Markup Language, è un linguaggio di mark up per siti web.
+Era stato ideato per la formattazione e impaginazione di pagine ipertestuali sul web.
+Oggi giorno viene utilizzato soprattutto per gestire la separazione tra la struttura logica della pagina web e la sua rappresentazione, gestita dal CSS.
+Nel progetto questo linguaggio viene utilizzato per sviluppare la parte di web-app$_{\scaleto{G}{3pt}}$, interagendo con anche Java, CSS, Bootstrap e Vue.js.
+
+
+\subsection{CSS 3}\label{TecnologieCSS}
+Il CSS è il principale linguaggio utilizzato per definire la formattazione dei siti e pagine web.
+L'utilizzo del CSS permette di separare i contenuti della pagina HTML dal proprio layout$_G$, ma anche di rendere la programmazione più chiara e facile da utilizzare, garantendo il riutilizzo di codice e facilitando la manutenzione.
+Nel progetto viene utilizzato per formattare il layout$_{\scaleto{G}{3pt}}$ estetico della web-app$_{\scaleto{G}{3pt}}$.
+
+\subsection{Leaflet} \label{TecnologieLeaflet}
+Leaflet è una libreria JavaScript$_G$ per sviluppare mappe geografiche, utilizzata nel progetto per realizzare la heat-map$_G$.
+\begin{itemize}
+	\item versione utilizzata: 1.7.1;
+	\item link al sito: \url{https://leafletjs.com/} .
+\end{itemize}
+
+
+\subsection{Vue.js}\label{TecnologieVue}
+È un framework$_{\scaleto{G}{3pt}}$ JavaScript, configurato come Model-Control-View$_G$ per la creazione di interfacce utente e applicazione single-page$_G$.
+Supporta molte funzionalità, anche avanzate, grazie ad una serie di librerie di supporto dedicate che sono ufficialmente mantenute.
+
+\begin{itemize}
+  \item versione utilizzata: 2.6.12;
+  \item link al sito: \url{https://vuejs.org/} .
+\end{itemize}
+
+\subsection{Node.js}\label{TecnologieNode}
+È un runtime system open-source$_{\scaleto{G}{3pt}}$, orientato ad oggetti, per l'esecuzione di codice JavaScript.
+Molti moduli di questa tecnologia sono proprio scritti in JavaScript, ed essendo appunto open-source$_{\scaleto{G}{3pt}}$, programmatori esterni possono crearne ed aggiungerne altri.
+A differenza di JavaScript che in origine era lato client$_G$, Node.js$_G$ viene utilizzato lato server$_{\scaleto{G}{3pt}}$, ad esempio per produzioni di pagine dinamiche.
+Implementa il paradigma "JavaScript everywhere" in modo da unificare lo sviluppo di applicazioni web intorno ad un unico linguaggio di programmazione, JavaScript.
+
+\begin{itemize}
+  \item versione utilizzata: 14.16.x;
+  \item link download: \url{https://nodejs.org/it/download/} .
+\end{itemize}
+
+\subsection{Bootstrap}\label{TecnologieBootstrap}
+Framework$_{\scaleto{G}{3pt}}$ open-source$_{\scaleto{G}{3pt}}$ che, mediante le proprie librerie, viene utilizzato per uniformare i vari componenti che compongono un'interfaccia web, oltre che per crearli.
+
+\begin{itemize}
+  \item versione utilizzata: 4.3.1;
+  \item link download: \url{https://getbootstrap.com/docs/5.0/getting-started/download/} .
+\end{itemize}
+
+
+\subsection{JSON}\label{TecnologieJson}
+Si tratta di un formato testuale necessario per l'esportazione ed importazione dei dati presenti nel \textit{modulo} di salvataggio dati, mediante MongoDB, ed esterni al database$_{\scaleto{G}{3pt}}$.
+È un formato dati diffuso per lo scambio di essi in applicazioni client-server$_G$.
+Basato su oggetti, ovvero coppie chiave/valore, e supporta una moltitudine di dati diversi. Infine è di facile lettura per l'utente e non necessita particolari procedure per modificarlo.
+
+
+\section{Librerie di terze parti}\label{LibrerieDiTerzeParti}
+Insieme alle tecnologie sopra citate, sono state anche integrate delle librerie di terze parti.
+
+\subsection{OpenCV}\label{LibrerieOpenCV}
+OpenCV è una libreria software$_{\scaleto{G}{3pt}}$ multipiattaforma specializzata nella visione artificiale in tempo reale.
+È stata integrata nel \textit{modulo} adibito alla cattura immagini in tempo reale, in linguaggio python.
+
+\begin{itemize}
+  \item versione utilizzata: 4.2.0;
+  \item link al sito: \url{https://opencv.org/} .
+\end{itemize}
+
+\subsection{Yolo V3}\label{LibrerieYoloV3}
+Si tratta di uno script$_{\scaleto{G}{3pt}}$ in linguaggio python per il riconoscimento real-time$_G$ di oggetti in una foto.
+Viene utilizzato nel \textit{modulo} di acquisizione dati per il riconoscimento e conteggio delle persone presenti in un singolo frame.
+
+\begin{itemize}
+  \item link al sito: \url{https://pjreddie.com/darknet/yolo/} .
+\end{itemize}
+
+\subsection{Pandas}\label{LibreriePandas}
+È una libreria veloce, potente e flessibile creata appositamente per modellare dati e manipolarli mediante appositi strumenti.
+Utilizzata nel \textit{modulo} di machine-learning$_{\scaleto{G}{3pt}}$, basata su python.
+
+\begin{itemize}
+  \item versione utilizzata: 1.2.1;
+  \item link all'installazione: \url{https://pandas.pydata.org/getting_started.html} .
+\end{itemize}
+
+\subsection{Scikit-learn}\label{LibrerieScikitLearn}
+È una libreria open source di apprendimento automatico per il linguaggio di programmazione Python.
+Al suo interno sono presenti numerosi algoritmi, per la manipolazione dati, tra cui quelli di regressione, utilizzati nel \textit{modulo} di machine-learning$_{\scaleto{G}{3pt}}$.
+
+\begin{itemize}
+  \item versione utilizzata: 0.24.1;
+  \item link all'installazione: \url{https://scikit-learn.org/stable/install.html} .
+\end{itemize}
+
+\subsection{Mongoengine}\label{LibrerieMongoengine}
+Si tratta di un document-object mapper$_G$ basato su python ed ideato per lavorare assieme a MongoDB da Python.
+
+\begin{itemize}
+  \item versione utilizzata: 0.24.1;
+  \item link alla repo$_G$: \url{https://github.com/MongoEngine/mongoengine} .
+\end{itemize}
+
+\subsection{NumPy}\label{LibrerieNumpy}
+Libreria open-source$_{\scaleto{G}{3pt}}$, basata sul linguaggio python.
+Fornisce un grosso supporto a grandi matrici e array multidimensionli, inoltre integra molte funzioni matematiche adatte a lavorare su tali strutture dati.
+
+\begin{itemize}
+  \item versione utilizzata: 1.20.1;
+  \item link all'installazione: \url{https://numpy.org/install/} .
+\end{itemize}
+
+\subsection{Pylint}\label{LibreriePylint}
+Strumento utilizzato per l’analisi statica del codice sorgente Python. Viene quindi adottato per controllare la presenza di errori nel codice, con l’obiettivo di applicare uno standard codifica e di promuovere buone prassi di scrittura del codice
+
+\begin{itemize}
+  \item versione utilizzata: 2.7.3;
+  \item link al sito: \url{https://pypi.org/project/pylint/} .
+\end{itemize}
+
+\subsection{PyUnit}\label{LibreriePyUnit}
+Si tratta di una libreria per Python dedicata a creare e testare unit-test per programmi scritti con tale linguaggio.
+
+\begin{itemize}
+  \item versione utilizzata: segue la stessa versione del linguaggio Python essendo una sua libreria integrata.
+  \item link  alla documentazione: \url{https://docs.python.org/3/library/unittest.html} .
+\end{itemize}
+
+
+\subsection{Checkstyle}\label{LibrerieCheckstyle}
+Strumento che permette di eseguire l’analisi statica del codice java utilizzato nello sviluppo di un progetto software$_{\scaleto{G}{3pt}}$.
+
+\begin{itemize}
+  \item versione utilizzata: 2.17;
+  \item link alla repo$_{\scaleto{G}{3pt}}$: \url{https://github.com/checkstyle/checkstyle} .
+\end{itemize}
+
+\subsection{ESLint}\label{LibrerieESLint}
+Strumento di analisi del codice statico per identificare i le problematiche trovate nel codice JavaScript.
+
+\begin{itemize}
+  \item versione utilizzata: 2.1.19;
+  \item link alla repo$_{\scaleto{G}{3pt}}$: \url{https://www.npmjs.com/package/eslint} .
+\end{itemize}
+
+\subsection{Prettier}\label{LibreriePrettier}
+Strumento per il controllo automatico della formattazione del codice scritto in linguaggio JavaScript.
+
+\begin{itemize}
+  \item versione utilizzata: 6.3.2;
+  \item link al sito: \url{https://prettier.io/} .
+\end{itemize}
+
+\subsection{JUnit}\label{LibrerieJUnit}
+È un semplice framework$_{\scaleto{G}{3pt}}$ per scrivere unit-test ripetibili.
+
+\begin{itemize}
+  \item versione utilizzata: 4.12;
+  \item link al sito: \url{https://junit.org/junit5/} .
+\end{itemize}
+
+\subsection{Mockito}\label{LibrerieMockito}
+Si tratta di un framework$_{\scaleto{G}{3pt}}$ open-source$_{\scaleto{G}{3pt}}$ di testing per Java. Consente la creazione di doppi oggetti di test in unit test automatici.
+
+\begin{itemize}
+  \item versione utilizzata: 3.9.0;
+  \item link al sito: \url{https://site.mockito.org/} .
+\end{itemize}

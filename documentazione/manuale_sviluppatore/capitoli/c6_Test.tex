@@ -1,0 +1,25 @@
+\chapter{Test}\label{Test}
+Vengono di seguito elencati gli strumenti per effettuare i test che il gruppo ha sviluppato sul prodotto.
+
+\section{Test modulo Acquisition}\label{TestModuloAcquisition}
+Per il modulo di acquisizione dati sono presenti degli Unit Test all'interno della cartella \\ \texttt{acquisition/main/test}, che verificano il corretto funzionamento di alcuni metodi contenuti dagli eseguibili \texttt{detect.py} e \texttt{weather\_forecast.py}.
+Si può verificare la correttezza dei metodi eseguendo i programmi all'interno della cartella, ad esempio:
+\begin{lstlisting}
+  python3 test_detect.py
+\end{lstlisting}
+
+\section{Test Back-end Webapp}\label{TestBackendWebapp}
+Per testare il back-end$_{\scaleto{G}{3pt}}$ dell'applicazione web sono presenti alcuni test di unità; si consiglia di utilizzare un IDE con la possibilità di eseguire test in Java direttamente dall'interfaccia grafica.
+Nel caso si preferisse utilizzare il terminale, è sufficiente posizionarsi all'interno della cartella \texttt{webapp/webapp/} ed eseguire il comando:
+\begin{lstlisting}
+  mvn clean install
+\end{lstlisting}
+che eseguirà tutti i test necessari.
+Tali test vengono comunque eseguiti all'avvio del back-end$_{\scaleto{G}{3pt}}$ dell'applicativo.
+
+\section{Test Front-end Webapp}\label{TestFrontendWebapp}
+Per testare il frontend dell'applicazione basta posizionarsi all'interno della cartella \\ \texttt{webapp/vue-js-client-crud/} e lanciare il comando:
+\begin{lstlisting}
+  npm run test:unit
+\end{lstlisting}
+che eseguirà tutti i test riguardanti il front-end$_{\scaleto{G}{3pt}}$ con Vue.
