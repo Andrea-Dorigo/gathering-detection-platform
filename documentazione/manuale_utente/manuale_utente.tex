@@ -1,0 +1,52 @@
+\input{packages}
+\input{config}
+
+\begin{document}
+
+	\makeatletter
+	\begin{titlepage}
+		\begin{center}
+			\vspace*{-4cm}
+			\author{Jawa Druids}
+			\title{Manuale Utente}
+			\date{} %LASCIARE QUESTO CAMPO VUOTO, SE LO TOLGO STAMPA LA DATA CORRENTE
+			\includegraphics[width=0.5\linewidth]{../immagini/DRUIDSLOGO.jpg}\\[4ex]
+			{\huge \bfseries  \@title }\\[2ex]
+			{\LARGE  \@author}\\[50ex]
+			\vspace*{-9cm}
+			\begin{table}[H]
+				\renewcommand{\arraystretch}{1.4}
+				\centering
+				\begin{tabular}{r | l}
+					\textbf{Versione} & 1.0.0 \\%RIGA PER INSERIRE LA VERSIONE ULTIMA DEL DOCUMENTO
+					\textbf{Data approvazione} & 2021-05-22\\
+					\textbf{Responsabile} & Emma Roveroni\\
+					\textbf{Redattori} & \makecell[tl]{ Emma Roveroni \\ Margherita Mitillo} \\
+					\textbf{Verificatori} & \makecell[tl]{Mattia Cocco \\ Andrea Cecchin} \\
+					%MAKECELL SERVE PER POI ANDARE A CAPO ALL'INTERNO DELLA CELLA
+					\textbf{Stato} & Approvato\\
+					\textbf{Lista distribuzione} & \makecell[tl]{Jawa Druids \\ Prof. Tullio Vardanega \\ Prof. Riccardo Cardin \\ Sync Lab}\\
+					\textbf{Uso} & Esterno
+				\end{tabular}
+			\end{table}
+			\vspace{0.1cm}
+			\hfill \break
+			\fontsize{17}{10}\textbf{Sommario} \\
+			\vspace{0.1cm}
+			Il documento contiene il manuale destinato all'utente
+		\end{center}
+	\end{titlepage}
+	\makeatother
+
+	\input{registro_delle_modifiche}
+	\tableofcontents{}
+	\listoffigures
+	%\listoftables
+
+	\input{capitoli/c1_Introduzione}
+	\input{capitoli/c2_Requisiti_di_Sistema}
+	\input{capitoli/c3_Utilizzo_di_GDP}
+	\input{capitoli/c5_Malfunzionamenti}
+	\input{capitoli/c4_Glossario}
+
+\end{document}

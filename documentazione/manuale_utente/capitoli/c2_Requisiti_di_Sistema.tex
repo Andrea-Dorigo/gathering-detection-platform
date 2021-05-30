@@ -1,0 +1,113 @@
+\chapter{Requisiti di sistema ed installazione}\label{RequisitiDiSistemaEdInstallazione}
+
+\section{Requisiti di sistema}\label{RequisitiDiSistemaEdInstallazioneRequisiti}
+\textit{GDP - Gathering Detection Platform} è un'applicazione web$_{\scaleto{G}{3pt}}$ per dispositivi desktop ed è quindi utilizzabile con qualsiasi sistema operativo che supporti l'installazione dei broswer supportati(vedi \S~\ref{RequisitiDiSistemaEdInstallazioneRequisitiBrowserSupportati}). Tuttavia, per poter installare i moduli interni del nostro software$_{\scaleto{G}{3pt}}$, è consigliabile rispettare i seguenti requisiti hardware e software$_{\scaleto{G}{3pt}}$:
+
+\subsection{Requisiti hardware}\label{RequisitiDiSistemaEdInstallazioneRequisitiRequisitiHardware}
+
+Il software$_{\scaleto{G}{3pt}}$ è stato testato, con esito positivo, su una macchina con le seguenti caratteristiche:
+\begin{itemize}
+	\item RAM: 4Gb;
+	\item hard disk: 10Gb;
+	\item processore: Intel(R) Core(TM) i7-4710HQ CPU @ 2.50GHz CPU.
+\end{itemize}
+e su di un MacBook Air (early 2015) con le seguenti caratteristiche:
+\begin{itemize}
+	\item RAM: 4Gb;
+	\item Solid State Drive: 128Gb;
+	\item processore: Intel(R) Core(TM) i5 Dual Core @ 1.6GHz CPU.
+	\item Mac OS v11.2.3
+\end{itemize}
+
+Nonostante non sia stato possibile fornire i requisiti minimi esatti a causa di mancanza di macchine fisiche, possiamo garantire che il software funzioni correttamente su macchine di specifiche simili o migliori.
+
+\subsection{Browser supportati}\label{RequisitiDiSistemaEdInstallazioneRequisitiBrowserSupportati}
+Perché l'applicazione funzioni in modo corretto, è necessario che Javascript$_G$ sia abilitato sul browser. 
+Qui di seguito sono riportati i browser per i quali si garantisce la compatibilità. 
+\begin{itemize}
+	\item \textit{Google Chrome} versione 88 o superiore;
+	\item \textit{Microsoft Edge} versione 87;
+	\item \textit{Mozzilla Firefox Developer} versione 89;
+	\item \textit{Safari} versione 14.0.3 o superiore.
+\end{itemize}
+L'applicazione web$_G$ potrebbe funzionare correttamente anche su versioni precedenti e/o successive o su altri browser, ma non si garantisce il supporto. 
+
+\section{Procedure di installazione}\label{RequisitiDiSistemaEdInstallazioneInstallazione}
+Questa sezione esporrà le procedure di installazione all'interno del sistema operativo Linux$_G$, più precisamente Ubuntu$_G$ 20.04 LTS, in quanto utilizzato anche per lo sviluppo del software$_{\scaleto{G}{3pt}}$ stesso.
+Rimane comunque possibile installare il software$_{\scaleto{G}{3pt}}$ su altri sistemi operativi soddisfacendo le dipendenze necessarie, ma non verrà qui esplicitato.
+
+\subsection{Download della  repository}\label{RequisitiDiSistemaEdInstallazioneInstallazioneDownloadRepo}
+Per scaricare correttamente i contenuti della repository$_G$ è necessario installare \texttt{git} e \texttt{git-lfs} (\textit{Git Large File Storage}).
+Su Ubuntu$_{\scaleto{G}{3pt}}$ 20.04 LTS, questo è possibile eseguendo il comando:
+\begin{lstlisting}
+sudo apt install git git-lfs
+\end{lstlisting}
+assumendo che le principali repository$_{\scaleto{G}{3pt}}$ per i pacchetti di Ubuntu$_{\scaleto{G}{3pt}}$ siano attive (Universe, Multiverse).
+
+Questo passaggio è richiesto poiché GitHub$_G$ (il sito che ospita la repository$_{\scaleto{G}{3pt}}$ del progetto) consente l'upload di file con dimensioni massime fino a 100MB.
+L'utilizzo di \textit{Git Large File Storage} permette l'upload e il download di file che superano questo limite, ed in particolare permette l'upload e download dei pesi necessari all'algoritmo YOLOv3 per il rilevamento di oggetti (più precisamente per il rilevamento delle persone in un'immagine), il quale ha una dimensione maggiore di 200MB. Maggiori informazioni riguardo \textit{Git Large File Storage} sono reperibili all'indirizzo:
+\begin{center}
+ \url{https://git-lfs.github.com} .
+\end{center}
+
+È dunque possibile scaricare correttamente la repository$_{\scaleto{G}{3pt}}$ relativa al progetto \textit{Gathering-Detection-Platform} con il seguente comando:
+\begin{lstlisting}
+git clone https://github.com/Andrea-Dorigo/gathering-detection-platform.git
+\end{lstlisting}
+% \begin{center}
+%   \item \url{https://github.com/Andrea-Dorigo/gathering-detection-platform}
+% \end{center}
+
+\subsection{Installazione dipendenze}\label{RequisitiDiSistemaEdInstallazioneInstallazioneInstallazioneDipendenze}
+Dopo aver eseguito il passo sopra descritto, bisogna installare le dipendenze necessarie a far eseguire il prodotto software$_{\scaleto{G}{3pt}}$ adeguatamente.
+Per fare ciò è sufficiente aprire il terminale all'interno della cartella \textit{gathering-detection-platform}, ed eseguire i seguenti comandi:
+\begin{lstlisting}
+sudo apt install python3-opencv python3-pip mongodb maven npm
+\end{lstlisting}
+\begin{lstlisting}
+pip3 install mongoengine
+\end{lstlisting}
+Per installare la dipendenza concernente a Kafka$_G$ si sono seguiti i passaggi presenti al seguente link:
+\begin{center}
+	\url{https://kafka.apache.org/quickstart}
+\end{center}
+Durante il suo processo di configurazione il nome del topic$_G$ da inserire è \textbf{gdp}.
+Una volta concluse queste operazioni con esito positivo, il programma potrà essere eseguito.
+
+\subsection{Inizializzazione modulo Acquisition}\label{RequisitiDiSistemaEdInstallazioneInstallazioneInizializzazioneModuloAcquisition}
+Per eseguire il modulo di acquisizione, in modo da iniziare a raccogliere i dati dalle webcam salvate, basterà posizionarsi all'interno della cartella \texttt{acquisition/main/}, e da terminale eseguire il comando:
+\begin{lstlisting}
+python3 detect.py
+python3 kafkaConsumer.py
+\end{lstlisting}
+Se i passi precedenti sono stati eseguiti correttamente, allora si visualizzeranno sul terminale i vari passaggi che svolge il modulo.
+
+
+\subsection{Inizializzazione modulo Prediction}\label{RequisitiDiSistemaEdInstallazioneInstallazioneInizializzazioneModuloPrediction}
+Per eseguire il modulo di predizione, che tramite il machine-learning$_G$ si occupa di calcolare le predizioni del periodo di tempo futuro, bisogna posizionarsi all'interno della cartella \texttt{prediction/} ed eseguire il seguente comando da terminale:
+
+\begin{lstlisting}
+python3 DataPrediction.py
+\end{lstlisting}
+In tal modo verrà attivato il modulo per le predizioni sui dati.
+Saranno visibili sul terminale gli step eseguiti dal programma.
+
+\subsection{Inizializzazione modulo Web-App}\label{RequisitiDiSistemaEdInstallazioneInstallazioneInizializzazioneModuloWebApp}
+Per avviare la web-app$_G$, e le sue funzioni, si devono eseguire alcuni comandi, sempre da terminale, a partire dalla cartella \textit{webapp}.
+\begin{enumerate}
+	\item posizionarsi all'interno della cartella \texttt{webapp/} ed eseguire:
+\begin{lstlisting}
+mvn spring-boot:run
+\end{lstlisting}
+\item posizionarsi all'interno della cartella "vue-js-client-crud" ed eseguire:
+\begin{lstlisting}
+npm install
+\end{lstlisting}
+\item all'interno della stessa cartella bisogna eseguire:
+\begin{lstlisting}
+npm run serve
+\end{lstlisting}
+\item infine, la piattaforma \textit{Gathering-Detection-Platform} sarà disponibile all'indirizzo di default \url{http://localhost:8081} 
+\end{enumerate}
+Il primo comando inizializza il server di Spring$_G$ che fornisce i servizi per prelevare le informazioni dal database, mentre i comandi successivi installano i moduli necessari tramite npm$_G$ ed eseguono l'applicazione.
+
