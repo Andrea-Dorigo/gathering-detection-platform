@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="webapp/.mvn/wrapper"/>
+	<classpathentry kind="src" path="webapp/src/main/java"/>
+	<classpathentry excluding="com/webapp/data/mongodb/" kind="src" path="webapp/src/test/java"/>
+	<classpathentry kind="src" path="webapp/src/test/java/com/webapp/data/mongodb"/>
+	<classpathentry kind="src" path="webapp/target/test-classes"/>
+	<classpathentry kind="lib" path="webapp/bin/.mvn/wrapper/maven-wrapper.jar"/>
+	<classpathentry kind="output" path="webapp/target/classes"/>
+</classpath>

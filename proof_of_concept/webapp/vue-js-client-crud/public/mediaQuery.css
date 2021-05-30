@@ -1,0 +1,54 @@
+/* @media screen and (max-width: 1600px) {
+    #errorResol {
+      padding: 7%;
+      display: block;
+      background-color: black;
+      height: 100vh;
+    }
+    #errorResol h1 {
+      color: white;
+    }
+    #barAndFooter {
+      display: none;
+    }
+  } */
+
+  /* @media screen and (min-width: 1600px) {
+    #errorResol {
+      display: none;
+    }
+  } */
+/*
+  @media screen and (max-width: 1770px) and (min-width: 1601px) {
+    #barAndFooter {
+      display: block;
+    }
+    #calendar {
+      padding-right: 10px;
+      padding-top: 150px;
+      margin-left: 30px;
+    }
+    #mapList {
+      display: block !important;
+    }
+
+    #listCity ul {
+      width: 100% !important;
+    }
+
+    #listCity ul li {
+      display: inline-block;
+      padding: 1% 1% 1% 1% !important;
+      width: 10% !important;
+      margin-right: 2% !important;
+    }
+  } */
+
+/* @media screen and (max-width: 1920px) and (min-width: 800px) {
+  #listCity ul li {
+    display: inline-block;
+    padding: 1% 1% 1% 1% !important;
+    width: 10% !important;
+    margin-right: 2% !important;
+  }
+} */
